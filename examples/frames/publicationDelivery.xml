@@ -16,7 +16,7 @@
     <dataObjects>
 
         <!-- CompositeFrame brukes å samle ulike frames inn i objekt -->
-        <CompositeFrame version="any" created="2016-05-30T12:00:00Z" id="NSR:cf:NUMBER">
+        <CompositeFrame version="any" created="2016-05-30T12:00:00Z" id="NSR:CompositeFrame:NUMBER">
             <codespaces>
                 <!-- Codespace, f.eks. for Nasjonalt Stoppestedsregister -->
                 <Codespace id="nhr">
@@ -27,7 +27,7 @@
 
             <frames>
 
-                <ResourceFrame id="NSR:resourceframe:NUMBER" version="any">
+                <ResourceFrame id="NSR:ResourceFrame:NUMBER" version="any">
                     <FrameDefaults>
                         <!-- Alle elementer med id-attributt blir prefixet med dette codespacet (dvs RUT:) -->
                         <DefaultCodespaceRef ref="NSR"/>
@@ -41,7 +41,7 @@
                         <DefaultLocationSystem>EPSG:4326</DefaultLocationSystem>
                     </FrameDefaults>
                     <organisations>
-                        <Authority version="any" id="NSR:authority">
+                        <Authority version="any" id="NSR:Authority">
                             <CompanyNumber>NUMBER</CompanyNumber>
                             <Name>Nasjonalt stoppestedsregister</Name>
                             <LegalName>RUTEBANKEN AS</LegalName>
@@ -54,113 +54,104 @@
                 </ResourceFrame>
 
                 <!-- SiteFrame innholder stops, quays og PoI (point of interest) -->
-                <SiteFrame id="NSR:siteframe" version="any">
+                <SiteFrame id="NSR:SiteFrame" version="any">
                     <stopPlaces>
                         <!-- Merk at her brukes det codespace NSR som viser at disse elementene eies av Nasjonalt Stoppestedsregister -->
-                        <StopPlace version="any" id="NSR:stopplace:NUMBER">
+                        <StopPlace version="any" id="NSR:StopPlace:NUMBER">
                             <Name>Navn</Name>
                             <quays>
-                                <Quay version="any" id="NSR:quay:NUMBER"/>
+                                <Quay version="any" id="NSR:Quay:NUMBER"/>
                             </quays>
                         </StopPlace>
                     </stopPlaces>
                 </SiteFrame>
 
                 <!-- ServiceFrame definerer en service, som networks, routePoints, routes, lines, schedulesStopPoints, stop assignments og destinationDisplays som brukes av et Service Pattern -->
-                <ServiceFrame id="NSR:serviceframe" version="any">
+                <ServiceFrame id="NSR:ServiceFrame" version="any">
                     <!-- Beskrivelse av nettverk, hvis relevant -->
-                    <Network version="any" id="NSR:n:NUMBER"/>
-                    <!-- Konseptuell kjøreretning -->
-                    <directions>
-                        <Direction version="any" id="NSR:direction:NUMBER"/>
-                    </directions>
+                    <Network version="any" id="NSR:Network:NUMBER"/>
                     <!-- Beskrivelse av linjen(e) som leveres i filen -->
                     <routePoints>
-                        <RoutePoint version="any" id="NSR:routepoint:NUMBER">
+                        <RoutePoint version="any" id="NSR:RoutePoint:NUMBER">
                             <projections>
-                                <PointProjection version="any" id="NSR:pontprojection:NUMBER"/>
+                                <PointProjection version="any" id="NSR:PointProjection:NUMBER"/>
                             </projections>
                         </RoutePoint>
                     </routePoints>
                     <!-- Beskrivelse av overordnet rute -->
                     <routes>
-                        <Route version="any" id="NSR:route:NUMBER">
+                        <Route version="any" id="NSR:Route:NUMBER">
                             <Name>NAME</Name>
-                            <DirectionRef version="any" ref="NSR:direction:NUMBER"/>
+                            <DirectionType>outbound</DirectionType>
                             <!-- rutepunkter (minimum to) -->
                             <pointsInSequence>
-                                <PointOnRoute version="any" id="NSR:pointonroute:NUMBER-1" order="1">
-                                    <RoutePointRef version="any" ref="NSR:routepoint:NUMBER"/>
+                                <PointOnRoute version="any" id="NSR:PointOnRoute:NUMBER-1" order="1">
+                                    <RoutePointRef version="any" ref="NSR:RoutePoint:NUMBER"/>
                                 </PointOnRoute>
-                                <PointOnRoute version="any" id="NSR:pointonroute:NUMBER-2" order="2">
-                                    <RoutePointRef version="any" ref="NSR:routepoint:NUMBER"/>
+                                <PointOnRoute version="any" id="NSR:PointOnRoute:NUMBER-2" order="2">
+                                    <RoutePointRef version="any" ref="NSR:RoutePoint:NUMBER"/>
                                 </PointOnRoute>
                             </pointsInSequence>
                         </Route>
                     </routes>
                     <!-- Beskrive av linjen ruten tilhører -->
                     <lines>
-                        <Line version="any" id="NSR:line:NUMBER">
+                        <Line version="any" id="NSR:Line:NUMBER">
                             <Name>LINJENAVN</Name>
                             <PublicCode>LINJENUMMER/KODE</PublicCode>
-                            <OperatorRef ref="NSR:authority"/>
+                            <OperatorRef ref="NSR:Authority"/>
                             <routes>
-                                <RouteRef version="any" ref="NSR:route:NUMBER"/>
+                                <RouteRef version="any" ref="NSR:Route:NUMBER"/>
                             </routes>
                         </Line>
                     </lines>
                     <!-- Skiltkasser -->
                     <destinationDisplays>
-                        <DestinationDisplay version="any" id="NSR:destinationdisplay:NAME"/>
+                        <DestinationDisplay version="any" id="NSR:DestinationDisplay:NAME"/>
                     </destinationDisplays>
                     <!-- Definisjon av rutens stoppunkter -->
                     <scheduledStopPoints>
-                        <ScheduledStopPoint version="any" id="NSR:scheduledstoppoint:NUMBER"/>
+                        <ScheduledStopPoint version="any" id="NSR:ScheduledStopPoint:NUMBER"/>
                     </scheduledStopPoints>
                     <!-- Knytting av rutens stoppunkter til fysisk stoppested -->
                     <stopAssignments>
-                        <PassengerStopAssignment version="any" id="NSR:passengerstopassignment:NUMBER" order="1">
-                            <ScheduledStopPointRef version="any" ref="NSR:scheduledstoppoint:NUMBER"/>
-                            <StopPlaceRef version="any" ref="NSR:stopplace:NUMBER"/>
-                            <QuayRef version="any" ref="NSR:quay:NUMBER"/>
+                        <PassengerStopAssignment version="any" id="NSR:PassengerStopAssignment:NUMBER" order="1">
+                            <ScheduledStopPointRef version="any" ref="NSR:ScheduledStopPoint:NUMBER"/>
+                            <StopPlaceRef version="any" ref="NSR:StopPlace:NUMBER"/>
+                            <QuayRef version="any" ref="NSR:Quay:NUMBER"/>
                         </PassengerStopAssignment>
                     </stopAssignments>
                     <!-- Turmønster -->
                     <journeyPatterns>
-                        <JourneyPattern version="any" id="NRH:journeypattern:NUMBER"/>
+                        <JourneyPattern version="any" id="NRH:JourneyPattern:NUMBER"/>
                     </journeyPatterns>
                 </ServiceFrame>
 
                 <!-- ServiceCalendarFrame definerer kalenderobjekter (dager, dagtyper, operasjonsperioder, tidspunkt etc.) -->
-                <ServiceCalendarFrame id="NRH:servicecalendarframe" version="any">
-                    <ServiceCalendar version="any" id="RUT:servicecalendar:NUMBER"/>
+                <ServiceCalendarFrame id="NRH:ServiceCalendarFrame" version="any">
+                    <ServiceCalendar version="any" id="RUT:ServiceCalendar:NUMBER"/>
                     <dayTypes>
-                        <DayType version="any" id="NSR:daytype:NAME"/>
+                        <DayType version="any" id="NSR:DayType:NAME"/>
                     </dayTypes>
                 </ServiceCalendarFrame>
 
                 <!-- TimetableFrame definerer ServiceJourney, dvs avgang(er) for en gitt dag/periode. -->
-                <TimetableFrame id="NSR:timetableframe:NUMBER" version="any">
+                <TimetableFrame id="NSR:TimetableFrame:NUMBER" version="any">
                     <!-- Gyldighetsperiode -->
                     <validityConditions>
-                        <AvailabilityCondition version="any" id="NSR:availabilitycondition:NUMBER"/>
+                        <AvailabilityCondition version="any" id="NSR:AvailabilityCondition:NUMBER"/>
                     </validityConditions>
                     <!-- Turer -->
                     <vehicleJourneys>
-                        <ServiceJourney version="any" id="NRH:servicejourney:NUMBER">
+                        <ServiceJourney version="any" id="NRH:ServiceJourney:NUMBER">
                             <dayTypes>
-                                <DayTypeRef ref="NRH:journeypattern:NUMBER"/>
+                                <DayTypeRef ref="NRH:JourneyPattern:NUMBER"/>
                             </dayTypes>
-                            <JourneyPatternRef ref="NRH:journeypattern:NUMBER"/>
+                            <JourneyPatternRef ref="NRH:JourneyPattern:NUMBER"/>
                             <!-- turens stopp (minimum to) -->
-                            <calls>
-                                <Call>
-                                    <ScheduledStopPointRef version="any" ref="NSR:scheduledstoppoint:NUMBER"/>
-                                </Call>
-                                <Call>
-                                    <ScheduledStopPointRef version="any" ref="NSR:scheduledstoppoint:NUMBER"/>
-                                </Call>
-                            </calls>
+                            <passingTimes>
+                                <TimetabledPassingTime version="any" id="NSR:TimetabledPassingTime:NUMBER"/>
+                            </passingTimes>
                         </ServiceJourney>
                     </vehicleJourneys>
                 </TimetableFrame>
