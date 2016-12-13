@@ -53,7 +53,7 @@
 						<ResponsibilitySet version="any" id="UNI:ResponsibilitySet:Planning">
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="UNI:ResponsibilityRoleAssignment:Planning">
-									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<StakeholderRoleType>Operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef version="any" ref="authority:ruter"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
