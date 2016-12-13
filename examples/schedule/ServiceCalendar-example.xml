@@ -68,6 +68,7 @@
 						<Timeband version="any" id="RUT:Timeband:TM15">
 							<!--Name>15 minutes past the hour</Name-->
 							<StartTime>00:15:00</StartTime>
+							<EndTime>00:15:00</EndTime>
 						</Timeband>
 					</timebands>
 					<operatingDays>
