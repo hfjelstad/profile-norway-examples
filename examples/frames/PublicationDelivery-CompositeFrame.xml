@@ -15,8 +15,13 @@
     <!-- Relevante frames legges under dataObjects, bør legges inn i enklest mulig lesbar rekkefølge -->
     <dataObjects>
 
-        <!-- CompositeFrame brukes å samle ulike frames inn i objekt -->
+        <!-- CompositeFrame brukes å samle ulike frames med samme ValidityCondition -->
         <CompositeFrame version="any" created="2016-05-30T12:00:00Z" id="NSR:CompositeFrame:NUMBER">
+            <!-- Gyldighetsperiode (gjelder implisitt for ALLE frames i CompositeFrame) -->
+            <validityConditions>
+                <AvailabilityCondition version="any" id="NSR:AvailabilityCondition:NUMBER"/>
+            </validityConditions>
+            
             <codespaces>
                 <!-- Codespace, f.eks. for Nasjonalt Stoppestedsregister -->
                 <Codespace id="nhr">
@@ -26,7 +31,6 @@
             </codespaces>
 
             <frames>
-
                 <ResourceFrame id="NSR:ResourceFrame:NUMBER" version="any">
                     <FrameDefaults>
                         <!-- Alle elementer med id-attributt blir prefixet med dette codespacet (dvs RUT:) -->
@@ -135,10 +139,6 @@
 
                 <!-- TimetableFrame definerer ServiceJourney, dvs avgang(er) for en gitt dag/periode. -->
                 <TimetableFrame id="NSR:TimetableFrame:NUMBER" version="any">
-                    <!-- Gyldighetsperiode -->
-                    <validityConditions>
-                        <AvailabilityCondition version="any" id="NSR:AvailabilityCondition:NUMBER"/>
-                    </validityConditions>
                     <!-- Turer -->
                     <vehicleJourneys>
                         <ServiceJourney version="any" id="NRH:ServiceJourney:NUMBER">
