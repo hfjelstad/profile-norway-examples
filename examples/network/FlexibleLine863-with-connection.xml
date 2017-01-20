@@ -19,7 +19,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
   xmlns="http://www.netex.org.uk/netex" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xmlns:gml="http://www.opengis.net/gml/3.2"
-  xsi:schemaLocation="http://www.netex.org.uk/netex ../../xsd/NeTEx_publication.xsd">
+  xsi:schemaLocation="http://www.netex.org.uk/netex /data/github/NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
 	
 	<PublicationTimestamp>2016-07-07T16:07:07Z</PublicationTimestamp>
 	<ParticipantRef>RUT</ParticipantRef>

@@ -7,7 +7,7 @@
   version="1.0" 
   xmlns="http://www.netex.org.uk/netex" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.netex.org.uk/netex ../../xsd/NeTEx_publication.xsd">
+  xsi:schemaLocation="http://www.netex.org.uk/netex /data/github/NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
     <PublicationTimestamp>2016-05-20T15:03:03Z</PublicationTimestamp>
     <ParticipantRef>RUT</ParticipantRef>
     <!-- Description er frivillig -->

@@ -11,7 +11,7 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 	version="1.0" 
 	xmlns="http://www.netex.org.uk/netex"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.netex.org.uk/netex ../../xsd/NeTEx_publication.xsd">
+	xsi:schemaLocation="http://www.netex.org.uk/netex /data/github/NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
 	<!-- Når denne dataleveransen ble generert -->
 	<PublicationTimestamp>2016-05-18T15:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NHR</ParticipantRef>
