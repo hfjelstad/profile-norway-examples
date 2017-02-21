@@ -6,7 +6,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:siri="http://www.siri.org.uk/siri"
-  xsi:schemaLocation="http://www.netex.org.uk/netex /data/github/NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
+  xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2016-06-28T12:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NHR</ParticipantRef>
 	<dataObjects>
@@ -51,7 +51,7 @@
 								<PropertyOfDay>
 									<DaysOfWeek>Sunday</DaysOfWeek>
 									<WeeksOfMonth>3 4</WeeksOfMonth>
-									<MonthOfYear>--04</MonthOfYear>									
+									<MonthOfYear>--04</MonthOfYear>
 								</PropertyOfDay>
 							</properties>
 						</DayType>
