@@ -13,6 +13,10 @@
 		<CompositeFrame version="any" id="RUT:CompositeFrame:1">
 			<frames>
 				
+				
+				<!-- TODO: Eksempelet er ikke komplett -->
+				
+				
 				<ServiceCalendarFrame version="any" id="RUT:ServiceCalendarFrame:1">
 					<dayTypes>
 						<DayType version="any" id="RUT:DayType:ukedag-normaldrift">
@@ -79,10 +83,10 @@
 							<OperatingPeriodRef version="any" ref="RUT:OperatingPeriod:desember-for-jul"/>
 							<DayTypeRef version="any" ref="RUT:DayType:helg-normaldrift"/>
 						</DayTypeAssignment>
-						<!-- Julen -->
+						<!-- 
 						<DayTypeAssignment version="any" order="1" id="RUT:DayTypeAssignment:julaften">
 							<Date>2017-12-24</Date>
-							<DayTypeRef version="any" ref="RUT:DayType:weekend"/>
+							<DayTypeRef version="any" ref="RUT:DayType:ukedag-normaldrift"/>
 						</DayTypeAssignment>
 						<DayTypeAssignment version="any" order="1" id="RUT:DayTypeAssignment:forste-juledag">
 							<Date>2017-12-25</Date>
@@ -92,17 +96,18 @@
 							<Date>2017-12-26</Date>
 							<DayTypeRef version="any" ref="RUT:DayType:weekend"/>
 						</DayTypeAssignment>
-						<!-- Romjulen -->
+						
 						<DayTypeAssignment version="any" order="1" id="RUT:DayTypeAssignment:romjul">
 							<OperatingPeriodRef ref="RUT:OperatingPeriod:romjul"/>
 							<DayTypeRef version="any" ref="RUT:DayType:ukedag-romjul"/>
 						</DayTypeAssignment>
-						<!-- Nyttår -->
+						
 						<DayTypeAssignment version="any" order="1" id="RUT:DayTypeAssignment:nyttarsaften-ikke">
 							<Date>2017-12-31</Date>
 							<DayTypeRef version="any" ref="RUT:DayType:nyttar"/>
 							<isAvailable>false</isAvailable>
 						</DayTypeAssignment>
+						-->
 					</dayTypeAssignments>
 				</ServiceCalendarFrame>
 
@@ -113,7 +118,7 @@
 						<ServiceJourney version="any" id="RUT:ServiceJourney:0800">
 							<dayTypes>
 								<DayTypeRef version="any" ref="RUT:DayType:ukedag-normaldrift"/>
-								<DayTypeRef version="any" ref="RUT:DayType:helg-normaldrift"/>
+								<DayTypeRef version="any" ref="RUT:DayType:ukedag-romjul"/>
 							</dayTypes>
 						</ServiceJourney>
 						
@@ -121,31 +126,29 @@
 							<dayTypes>
 								<DayTypeRef version="any" ref="RUT:DayType:ukedag-normaldrift"/>
 								<DayTypeRef version="any" ref="RUT:DayType:helg-normaldrift"/>
-								<DayTypeRef version="any" ref="RUT:DayType:romjul"/>
-								<DayTypeRef version="any" ref="RUT:DayType:nyttar"/>
+
 							</dayTypes>
 						</ServiceJourney>
 						
 						<ServiceJourney version="any" id="RUT:ServiceJourney:1200">
 							<dayTypes>
-								<DayTypeRef version="any" ref="RUT:DayType:uke"/>
-								<DayTypeRef version="any" ref="RUT:DayType:jul"/>
-								<DayTypeRef version="any" ref="RUT:DayType:nyttar"/>
+								<DayTypeRef version="any" ref="RUT:DayType:ukedag-normaldrift"/>
+								<DayTypeRef version="any" ref="RUT:DayType:ukedag-romjul"/>
 							</dayTypes>
 						</ServiceJourney>
 						
 						<ServiceJourney version="any" id="RUT:ServiceJourney:1800">
 							<dayTypes>
-								<DayTypeRef version="any" ref="RUT:DayType:jul"/>
-								<DayTypeRef version="any" ref="RUT:DayType:romjul"/>
-								<DayTypeRef version="any" ref="RUT:DayType:nyttar"/>
+								<DayTypeRef version="any" ref="RUT:DayType:ukedag-normaldrift"/>
+								<DayTypeRef version="any" ref="RUT:DayType:ukedag-romjul"/>
+								<DayTypeRef version="any" ref="RUT:DayType:helg-normaldrift"/>
+								<DayTypeRef version="any" ref="RUT:DayType:helg-nyttar"/>
 							</dayTypes>
 						</ServiceJourney>
 						
 						<ServiceJourney version="any" id="RUT:ServiceJourney:2200">
 							<dayTypes>
-								<DayTypeRef version="any" ref="RUT:DayType:uke"/>
-								<DayTypeRef version="any" ref="RUT:DayType:helg"/>
+								<DayTypeRef version="any" ref="RUT:DayType:helg-nyttar"/>
 							</dayTypes>
 						</ServiceJourney>
 					</vehicleJourneys>
