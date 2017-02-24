@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- ==== Bare minimum Stop Example ====== 
+<!-- 
+==== Minimumseksempel for et stoppested med ett stopp ====== 
 Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enkleste type stoppested for buss, uten fasiliteter, i en enveiskjørt gate i Oslo.
     Denne består av:
-    - STOP PLACE	nhr:sp:1			Krokstien
-	- QUAY			nhr:sp:1:q:1		(uten navn)
+    - STOP PLACE	NSR:StopPlace:1			Krokstien
+	- QUAY			NSR:StopPlace:1:Quay:1		(uten navn)
 	Frames / gruppering:
 	- SITE FRAME inneholder STOP PLACE og QUAY
 -->
@@ -11,51 +12,87 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 	version="1.0" 
 	xmlns="http://www.netex.org.uk/netex"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.netex.org.uk/netex /data/github/NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
-	<!-- Når denne dataleveransen ble generert -->
-	<PublicationTimestamp>2016-05-18T15:00:00.0Z</PublicationTimestamp>
-	<ParticipantRef>NHR</ParticipantRef>
+	xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2017-02-13T15:00:00.0Z</PublicationTimestamp>
+	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
-		<SiteFrame version="any" id="nhr:sf:1">
+		<SiteFrame version="any" id="NSR:SiteFrame:1">
 			<stopPlaces>
-				<!--===Stop=== -->
-				<!-- Merk: Holdeplass-ID vil komme fra Holdeplassregisteret -->
-				<StopPlace version="any" created="2016-04-21T09:00:00.0Z" id="nhr:sp:1">
-					<Name lang="no-NO">Krokstien</Name>
+				<!-- ===Stop=== -->
+				<!-- Alle objekter skal ha nasjonal ID fra stoppestedsregisteret -->
+				<StopPlace version="any" id="NSR:StopPlace:10000000">
+					<Name>Krokstien</Name>
+					
+					
 					<!-- Generelt tilgjengelig med rullestol -->
-					<AccessibilityAssessment version="any" id="nhr:aa:1">
+					<AccessibilityAssessment version="any" id="NSR:AccessibilityAssessment:1">
 						<MobilityImpairedAccess>true</MobilityImpairedAccess>
+						<limitations>
+							<!-- Minimumskrav til UU-informasjon -->
+							<AccessibilityLimitation>
+								<WheelchairAccess>true</WheelchairAccess>
+								<StepFreeAccess>true</StepFreeAccess>
+							</AccessibilityLimitation>
+						</limitations>
 					</AccessibilityAssessment>
-					<!-- Comment: Foreløpig uavklart på hvilket detaljnivå dette skal modelleres i Holdeplassregisteret. -->
-					<facilities>
-						<SiteFacilitySet version="any" id="nhr:sfs:1">
-							<!-- Tidtabell publisert på holdeplass -->
-							<PassengerInformationEquipmentList>stopTimetable</PassengerInformationEquipmentList>
-						</SiteFacilitySet>
-					</facilities>
+					<!-- Ingen leskur -->
+					<Covered>outdoors</Covered>
+					<placeEquipments>
+						<TicketingEquipment id="NHR:TicketingEquipment:1" version="any">
+							<VehicleModes>rail bus</VehicleModes>
+							<NumberOfMachines>4</NumberOfMachines>
+							<TicketingFacilityList>ticketOffice mobileTicketing
+								ticketMachines</TicketingFacilityList>
+							<TicketingServiceFacilityList>reservations purchase</TicketingServiceFacilityList>
+						</TicketingEquipment>
+						<SanitaryEquipment id="NHR:SanitaryEquipment:1" version="any">
+
+							<SanitaryFacilityList>none</SanitaryFacilityList>
+						</SanitaryEquipment>
+					</placeEquipments>
+					
+					
+					
+<!-- Todo: SLETTMEG!
+
+Hvor legger vi:
+
+luggagelockerfacility - bikeRack
+place equipment - cycle parking equipment
+-->					
+					
+					<localServices>
+						<LeftLuggageService id="leftluggageservice" version="any">
+							<LockerFee>true</LockerFee>
+						</LeftLuggageService>
+					</localServices>
 					<TransportMode>bus</TransportMode>
 					<StopPlaceType>onstreetBus</StopPlaceType>
 					<quays>
-						<Quay version="any" created="2016-04-21T09:01:00.0Z" id="nhr:sp:1:q:1">
+						<Quay version="any" id="NSR:Quay:11111111">
 							<Centroid>
-								<!-- Vil alltid være WGS84 -->
+								<!-- Alltid WGS84 -->
 								<Location srsName="WGS84">
 									<Longitude>10.8577903</Longitude>
 									<Latitude>59.910579</Latitude>
 								</Location>
 							</Centroid>
-							<!-- Gateadresse. Ikke postadresse -->
-							<RoadAddress version="any" id="nhr:ra:rundtjernveien68">
-								<RoadNumber>68</RoadNumber>
-								<RoadName>Rundtjernveien</RoadName>
-							</RoadAddress>
 							<Covered>outdoors</Covered>
 							<Lighting>wellLit</Lighting>
-							<QuayType>busStop</QuayType>
 						</Quay>
 					</quays>
+					
+					
 				</StopPlace>
 			</stopPlaces>
+			
+			
+			<siteFacilitySets>
+				<SiteFacilitySet id="sitefacilityset" version="any">
+					
+				</SiteFacilitySet>
+			</siteFacilitySets>
+			
 		</SiteFrame>
 	</dataObjects>
 </PublicationDelivery>
