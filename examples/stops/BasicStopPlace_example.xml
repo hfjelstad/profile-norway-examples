@@ -52,10 +52,8 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 					</placeEquipments>
 					
 					
-					
-<!-- Todo: SLETTMEG!
-
-Hvor legger vi:
+<!-- 
+TODO - modelling of:
 
 luggagelockerfacility - bikeRack
 place equipment - cycle parking equipment
