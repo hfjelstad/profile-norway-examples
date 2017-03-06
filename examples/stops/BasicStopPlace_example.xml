@@ -48,8 +48,6 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 							<TicketingServiceFacilityList>reservations purchase</TicketingServiceFacilityList>
 						</TicketingEquipment>
 						<SanitaryEquipment id="NHR:SanitaryEquipment:1" version="any">
-							<!-- TODO: Remove 'Gender' element, only required for validation against previous version of XSD -->
-							<Gender>both</Gender>
 							<SanitaryFacilityList>none</SanitaryFacilityList>
 						</SanitaryEquipment>
 					</placeEquipments>
