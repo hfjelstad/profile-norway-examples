@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 
 ==== Minimumseksempel for et stoppested med ett stopp ====== 
-Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enkleste type stoppested for buss, uten fasiliteter, i en enveiskjørt gate i Oslo.
+Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enkleste type stoppested for buss, uten fasiliteter, i en enveiskjørt gate-sløyfe.
     Denne består av:
-    - STOP PLACE	NSR:StopPlace:1			Krokstien
-	- QUAY			NSR:StopPlace:1:Quay:1		(uten navn)
+    - STOP PLACE	NSR:StopPlace:10000000			Blystalia
+	- QUAY			NSR:Quay:11111111		Plattform 2
 	Frames / gruppering:
 	- SITE FRAME inneholder STOP PLACE og QUAY
 -->
@@ -16,13 +16,12 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 	<PublicationTimestamp>2017-02-13T15:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
-		<SiteFrame version="any" id="NSR:SiteFrame:1">
+		<SiteFrame version="any" id="NSR:SiteFrame:1" >
 			<stopPlaces>
 				<!-- ===Stop=== -->
 				<!-- Alle objekter skal ha nasjonal ID fra stoppestedsregisteret -->
 				<StopPlace version="any" id="NSR:StopPlace:10000000">
-					<Name>Krokstien</Name>
-					
+					<Name>Blystadlia</Name>
 					
 					<!-- Generelt tilgjengelig med rullestol -->
 					<AccessibilityAssessment version="any" id="NSR:AccessibilityAssessment:1">
@@ -35,19 +34,20 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 							</AccessibilityLimitation>
 						</limitations>
 					</AccessibilityAssessment>
-					<!-- Ingen leskur -->
+					
 					<Covered>outdoors</Covered>
+					
 					<placeEquipments>
+						<PassengerInformationEquipment id="passengerinformationequipment" version="any">
+							<PassengerInformationFacilityList></PassengerInformationFacilityList>
+						</PassengerInformationEquipment>
 						<TicketingEquipment id="NHR:TicketingEquipment:1" version="any">
 							<VehicleModes>rail bus</VehicleModes>
-							<NumberOfMachines>4</NumberOfMachines>
-							<TicketingFacilityList>ticketOffice mobileTicketing
-								ticketMachines</TicketingFacilityList>
+							<NumberOfMachines>0</NumberOfMachines>
+							<TicketingFacilityList></TicketingFacilityList>
 							<TicketingServiceFacilityList>reservations purchase</TicketingServiceFacilityList>
 						</TicketingEquipment>
 						<SanitaryEquipment id="NHR:SanitaryEquipment:1" version="any">
-							<!-- TODO: Remove 'Gender' element, only required for validation against previous version of XSD -->
-							<Gender>both</Gender>
 							<SanitaryFacilityList>none</SanitaryFacilityList>
 						</SanitaryEquipment>
 					</placeEquipments>
@@ -65,18 +65,20 @@ place equipment - cycle parking equipment
 						</LeftLuggageService>
 					</localServices>
 					<TransportMode>bus</TransportMode>
+					
+
 					<StopPlaceType>onstreetBus</StopPlaceType>
 					<quays>
 						<Quay version="any" id="NSR:Quay:11111111">
 							<Centroid>
 								<!-- Alltid WGS84 -->
 								<Location srsName="WGS84">
-									<Longitude>10.8577903</Longitude>
-									<Latitude>59.910579</Latitude>
+									<Longitude>11.034508</Longitude>
+									<Latitude>59.931081</Latitude>
 								</Location>
 							</Centroid>
-							<Covered>outdoors</Covered>
 							<Lighting>wellLit</Lighting>
+							<PublicCode>2</PublicCode>
 						</Quay>
 					</quays>
 					
@@ -87,10 +89,13 @@ place equipment - cycle parking equipment
 			
 			<siteFacilitySets>
 				<SiteFacilitySet id="sitefacilityset" version="any">
-					
+					<PassengerInformationEquipmentList>interactiveKiosk </PassengerInformationEquipmentList>
+					<PassengerInformationFacilityList>passengerInformationDisplay nextStopIndicator</PassengerInformationFacilityList>
 				</SiteFacilitySet>
+				
 			</siteFacilitySets>
 			
 		</SiteFrame>
+		
 	</dataObjects>
 </PublicationDelivery>
