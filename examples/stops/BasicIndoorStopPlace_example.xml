@@ -21,7 +21,7 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 				<!-- ===Stop=== -->
 				<!-- Alle objekter skal ha nasjonal ID fra stoppestedsregisteret -->
 				<StopPlace version="any" id="NSR:StopPlace:10000000">
-					<Name>Blystadlia</Name>
+					<Name>TODO</Name>
 					
 					<!-- Generelt tilgjengelig med rullestol -->
 					<AccessibilityAssessment version="any" id="NSR:AccessibilityAssessment:1">

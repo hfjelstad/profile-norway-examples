@@ -83,6 +83,7 @@ Frames (gruppering)
 										<SiteFacilitySetRef ref="NSR:SiteFacilitySet:timetablePoster"/>
 										<SiteFacilitySetRef ref="NSR:SiteFacilitySet:fareInformation"/>
 									</facilities>
+									<PublicCode>Sør</PublicCode>
 									<CompassBearing>200</CompassBearing>
 								</Quay>
 								<Quay version="any" id="NSR:Quay:12345670">
@@ -96,6 +97,7 @@ Frames (gruppering)
 									<facilities>
 										<SiteFacilitySetRef ref="NSR:SiteFacilitySet:timetablePoster"/>
 									</facilities>
+									<PublicCode>Nord</PublicCode>
 									<CompassBearing>020</CompassBearing>
 								</Quay>
 							</quays>
