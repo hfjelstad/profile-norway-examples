@@ -54,7 +54,7 @@
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="UNI:ResponsibilityRoleAssignment:Planning">
 									<StakeholderRoleType>Operation</StakeholderRoleType>
-									<ResponsibleOrganisationRef version="any" ref="authority:ruter"/>
+									<ResponsibleOrganisationRef version="any" ref="RUT:authority:ruter"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
@@ -62,20 +62,20 @@
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="UNI:ResponsibilityRoleAssignment:Operation">
 									<StakeholderRoleType>Operation</StakeholderRoleType>
-									<ResponsibleOrganisationRef version="any" ref="operator:unibuss"/>
+									<ResponsibleOrganisationRef version="any" ref="RUT:operator:unibuss"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
 					</responsibilitySets>
 					<organisations>
-						<Authority version="any" id="authority:ruter">
+						<Authority version="any" id="RUT:authority:ruter">
 							<CompanyNumber>991609407</CompanyNumber> <!-- Organisasjonsnummer -->
 							<Name>Ruter#</Name>
 							<LegalName>RUTER AS</LegalName>
 							<OrganisationType>authority</OrganisationType>
 						</Authority>
 						<!-- Unibuss kjører ruten på vegne av Ruter# -->
-						<Operator version="any" id="operator:unibuss">
+						<Operator version="any" id="RUT:operator:unibuss">
 							<CompanyNumber>985615616</CompanyNumber>
 							<Name>Unibuss</Name>
 							<LegalName>UNIBUSS AS</LegalName>
@@ -241,7 +241,7 @@
 							<Name>109</Name>
 							<TransportMode>bus</TransportMode>
 							<PublicCode>109</PublicCode>
-							<OperatorRef ref="operator:unibuss"/>
+							<OperatorRef ref="RUT:operator:unibuss"/>
 							<!-- Optional: -->
 							<routes>
 								<RouteRef ref="UNI:Route:109"/>
