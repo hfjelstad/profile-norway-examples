@@ -15,7 +15,7 @@ Se også NeTEx-eksempel:
 example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 -->
 <PublicationDelivery 
-  version="1.0" 
+  version="1.04:NO-NeTEx-networktimetable:1.0"
   xmlns="http://www.netex.org.uk/netex" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xmlns:gml="http://www.opengis.net/gml/3.2"
