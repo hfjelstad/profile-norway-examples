@@ -7,7 +7,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:siri="http://www.siri.org.uk/siri"
-  xsi:schemaLocation="http://www.netex.org.uk/netex ../xsd/NeTEx_publication.xsd">
+  xsi:schemaLocation="http://www.netex.org.uk/netex ../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
 	
 	<PublicationTimestamp>2016-05-23T12:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
@@ -407,7 +407,7 @@
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" id="UNI:ServiceLinkInJourneyPattern:helsfyr_to_brynseng" order="1">	
+								<ServiceLinkInJourneyPattern version="any" id="UNI:ServiceLinkInJourneyPattern:helsfyr_to_brynseng" order="1">
 									<ServiceLinkRef version="any" ref="UNI:ServiceLink:helsfyr_to_brynseng"/>
 								</ServiceLinkInJourneyPattern>
 								<ServiceLinkInJourneyPattern version="any" id="UNI:ServiceLinkInJourneyPattern:brynseng_to_hoyenhall" order="2">
