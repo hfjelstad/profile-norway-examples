@@ -105,7 +105,7 @@
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>busStation</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:helsfyr_t:QUAYID">
+								<Quay version="any" id="NSR:Quay:helsfyr_t-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.800792</Longitude>
@@ -120,7 +120,7 @@
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>onstreetBus</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:brynseng_t:QUAYID">
+								<Quay version="any" id="NSR:Quay:brynseng_t-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.814013</Longitude>
@@ -135,7 +135,7 @@
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>onstreetBus</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:hoyenhall_t:QUAYID">
+								<Quay version="any" id="NSR:Quay:hoyenhall_t-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.819156</Longitude>
@@ -150,7 +150,7 @@
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>onstreetBus</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:manglerud_t:QUAYID">
+								<Quay version="any" id="NSR:Quay:manglerud_t-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.813655</Longitude>
@@ -165,7 +165,7 @@
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>onstreetBus</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:ryen_t:QUAYID">
+								<Quay version="any" id="NSR:Quay:ryen_t-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.805572</Longitude>
@@ -180,7 +180,7 @@
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>onstreetBus</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:holtet:QUAYID">
+								<Quay version="any" id="NSR:Quay:holtet-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.782948</Longitude>
@@ -225,10 +225,10 @@
 							<LineRef ref="UNI:line:109"/>
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
-								<PointOnRoute version="any" id="UNI:PointOnRoute:109:start">
+								<PointOnRoute version="any" id="UNI:PointOnRoute:109-start">
 									<RoutePointRef version="any" ref="UNI:RoutePoint:helsfyr"/>
 								</PointOnRoute>
-								<PointOnRoute version="any" id="UNI:PointOnRoute:109:end">
+								<PointOnRoute version="any" id="UNI:PointOnRoute:109-end">
 									<RoutePointRef version="any" ref="UNI:RoutePoint:holtet"/>
 								</PointOnRoute>
 							</pointsInSequence>
@@ -281,7 +281,7 @@
 					<serviceLinks>
 						<ServiceLink version="any" id="UNI:ServiceLink:helsfyr_to_brynseng">
 							<projections>
-								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109:helsfyr_to_brynseng">
+								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109-helsfyr_to_brynseng">
 									<gml:LineString srsName="WGS84" gml:id="helsfyr_to_brynseng">
 										<gml:pos>59.911925 10.807198</gml:pos>
 										<gml:pos>59.910395 10.813012</gml:pos>
@@ -293,7 +293,7 @@
 						</ServiceLink>
 						<ServiceLink version="any" id="UNI:ServiceLink:brynseng_to_hoyenhall">
 							<projections>
-								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109:brynseng_to_hoyenhall">
+								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109-brynseng_to_hoyenhall">
 									<gml:LineString srsName="WGS84" gml:id="brynseng_to_hoyenhall">
 										<gml:pos>59.908251 10.816363</gml:pos>
 										<gml:pos>59.907908 10.816819</gml:pos>
@@ -305,7 +305,7 @@
 						</ServiceLink>							
 						<ServiceLink version="any" id="UNI:ServiceLink:hoyenhall_to_manglerud">
 							<projections>
-								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109:hoyenhall_to_manglerud">
+								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109-hoyenhall_to_manglerud">
 									<gml:LineString srsName="WGS84" gml:id="hoyenhall_to_manglerud">
 										<gml:pos>59.904645 10.820626</gml:pos>
 										<gml:pos>59.899678 10.815965</gml:pos>
@@ -317,7 +317,7 @@
 						</ServiceLink>
 						<ServiceLink version="any" id="UNI:ServiceLink:manglerud_to_ryen">
 							<projections>
-								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109:manglerud_to_ryen">
+								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109-manglerud_to_ryen">
 									<gml:LineString srsName="WGS84" gml:id="manglerud_to_ryen">
 										<gml:pos>59.896709 10.810350</gml:pos>
 										<gml:pos>59.895940 10.807332</gml:pos>
@@ -329,7 +329,7 @@
 						</ServiceLink>	
 						<ServiceLink version="any" id="UNI:ServiceLink:ryen_to_holtet">
 							<projections>
-								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109:ryen_to_holtet">
+								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109-ryen_to_holtet">
 									<gml:LineString srsName="WGS84" gml:id="ryen_to_holtet">
 										<gml:pos>59.894780 10.804309</gml:pos>
 										<gml:pos>59.892531 10.804000</gml:pos>
@@ -354,27 +354,27 @@
 					<stopAssignments>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:helsfyr_t" order="1">
 							<ScheduledStopPointRef ref="UNI:ScheduledStopPoint:helfyr_t"/>
-							<QuayRef ref="NSR:Quay:helsfyr_t:QUAYID"/>
+							<QuayRef ref="NSR:Quay:helsfyr_t-QUAYID"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:brynseng_t" order="2">
 							<ScheduledStopPointRef ref="UNI:ScheduledStopPoint:brynseng_t"/>
-							<QuayRef ref="NSR:Quay:brynseng_t:QUAYID"/>
+							<QuayRef ref="NSR:Quay:brynseng_t-QUAYID"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:hoyenhall_t" order="3">
 							<ScheduledStopPointRef ref="UNI:ScheduledStopPoint:hoytnehall_t"/>
-							<QuayRef ref="NSR:Quay:hoyenhall_t:QUAYID"/>
+							<QuayRef ref="NSR:Quay:hoyenhall_t-QUAYID"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:manglerud_t" order="4">
 							<ScheduledStopPointRef ref="UNI:ScheduledStopPoint:manglerud_t"/>
-							<QuayRef ref="NSR:Quay:manglerud_t:QUAYID"/>
+							<QuayRef ref="NSR:Quay:manglerud_t-QUAYID"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:ryen_t" order="5">
 							<ScheduledStopPointRef ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
-							<QuayRef ref="NSR:Quay:ryen_t:QUAYID"/>
+							<QuayRef ref="NSR:Quay:ryen_t-QUAYID"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:holtet" order="6">
 							<ScheduledStopPointRef ref="UNI:ScheduledStopPoint:holtet"/>
-							<QuayRef ref="NSR:Quay:holtet:QUAYID"/>
+							<QuayRef ref="NSR:Quay:holtet-QUAYID"/>
 						</PassengerStopAssignment>
 					</stopAssignments>
 					
@@ -438,7 +438,7 @@
 					</validityConditions>
 					<vehicleJourneys>
 						<!-- TODO: Legg inn korrekte koder for #Ruter/Unibuss service -->
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109:CODE-0430">
+						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0430">
 							<DepartureTime>04:30:00</DepartureTime>
 							<dayTypes>
 								<DayTypeRef ref="UNI:DayType:weekday"/>
@@ -480,7 +480,7 @@
 							</passingTimes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109:CODE-0500">
+						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0500">
 							<dayTypes>
 								<DayTypeRef ref="UNI:DayType:weekday"/>
 							</dayTypes>
@@ -515,7 +515,7 @@
 							</passingTimes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109:CODE-0530">
+						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0530">
 							<DepartureTime>05:30:00</DepartureTime>
 							<dayTypes>
 								<DayTypeRef ref="UNI:DayType:weekday"/>
@@ -558,7 +558,7 @@
 							</passingTimes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109:CODE-0600">
+						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0600">
 							<dayTypes>
 								<DayTypeRef ref="UNI:DayType:saturday"/>
 								<DayTypeRef ref="UNI:DayType:sunday"/>
@@ -594,7 +594,7 @@
 							</passingTimes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109:CODE-0630">
+						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0630">
 							<DepartureTime>06:30:00</DepartureTime>
 							<dayTypes>
 								<DayTypeRef ref="UNI:DayType:saturday"/>
@@ -637,7 +637,7 @@
 							</passingTimes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109:CODE-0700">
+						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0700">
 							<dayTypes>
 								<DayTypeRef ref="UNI:DayType:sunday"/>
 							</dayTypes>
@@ -675,7 +675,7 @@
 						<!-- ########################### -->
 						<!-- ALTERNATE DESCRIPTION pt. 1 -->
 						<!-- ########################### -->
-						<TemplateServiceJourney version="any" id="UNI:TemplateServiceJourney:109:weekdays">
+						<TemplateServiceJourney version="any" id="UNI:TemplateServiceJourney:109-weekdays">
 							<dayTypes>
 								<DayTypeRef ref="UNI:DayType:weekday"/>
 							</dayTypes>
