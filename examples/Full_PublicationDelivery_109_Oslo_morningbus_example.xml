@@ -49,6 +49,7 @@
 			
 			<frames>
 				<ResourceFrame version="any" id="UNI:ResourceFrame:1">
+					<!-- Optional, konseptet tas ikke i bruk i initiell versjon av Rutebanken
 					<responsibilitySets>
 						<ResponsibilitySet version="any" id="UNI:ResponsibilitySet:Planning">
 							<roles>
@@ -67,6 +68,7 @@
 							</roles>
 						</ResponsibilitySet>
 					</responsibilitySets>
+					-->
 					<organisations>
 						<Authority version="any" id="RUT:authority:ruter">
 							<CompanyNumber>991609407</CompanyNumber> <!-- Organisasjonsnummer -->
@@ -195,8 +197,17 @@
 				
 				<!-- ===SERVICE FRAME=== -->
 				<ServiceFrame version="any" id="UNI:SiteFrame:1">
-					<Network version="any" id="RUT:GroupOfLine:RuterBuss">
-						<Name>Ruter#</Name>
+					<Network version="any" id="RUT:Network:RuterBuss">
+						<Name>Ruter# buss</Name>
+						<!-- Ikke obligatorisk med groupsOfLines (Network er implisitt en gruppering), implementeres kun hvis relevant -->
+						<groupsOfLines>
+							<GroupOfLines id="RUT:GroupOfLines:Ruter-Buss-Oslo" version="1">
+								<Name>Ruter# buss Oslo</Name>
+							</GroupOfLines>
+							<GroupOfLines id="RUT:GroupOfLines:Ruter-Buss-Akershus" version="1">
+								<Name>Ruter# buss Akershus</Name>
+							</GroupOfLines>
+						</groupsOfLines>
 					</Network>
 					
 					<routePoints>
@@ -246,6 +257,8 @@
 							<routes>
 								<RouteRef ref="UNI:Route:109"/>
 							</routes>
+							<RepresentedByGroupRef ref="RUT:Network:RuterBuss"/>
+							<!-- alternativt kunne dette settes enda mer presist 'RepresentedByGroupRef ref="RUT:GroupOfLines:Ruter-Buss-Oslo' om implementert -->
 						</Line>
 					</lines>
 					<!-- ===DESTINATION DISPLAYs=== -->
