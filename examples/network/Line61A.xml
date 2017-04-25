@@ -132,7 +132,7 @@
                         <RoutePoint version="any" id="RUT:RoutePoint:0061101A0A0061101001">
                             <projections>
                                 <PointProjection version="any" id="RUT:PointProjection:0061101A0A0061101001">
-                                    <ProjectedPointRef version="any" ref="RUT:ScheduledStopPoint:0061101001"/>
+                                    <ProjectToPointRef version="any" ref="RUT:ScheduledStopPoint:0061101001"/>
                                 </PointProjection>
                             </projections>
                         </RoutePoint>
@@ -140,7 +140,7 @@
                         <RoutePoint version="any" id="RUT:RoutePoint:0061101A2A0061101003">
                             <projections>
                                 <PointProjection version="any" id="RUT:PointProjection:0061101A2A0061101003">
-                                    <ProjectedPointRef version="any" ref="RUT:ScheduledStopPoint:0061101003"/>
+                                    <ProjectToPointRef version="any" ref="RUT:ScheduledStopPoint:0061101003"/>
                                 </PointProjection>
                             </projections>
                         </RoutePoint>
@@ -148,7 +148,7 @@
                         <RoutePoint version="any" id="RUT:RoutePoint:0061101A3A0061101004">
                             <projections>
                                 <PointProjection version="any" id="RUT:PointProjection:0061101A3A0061101004">
-                                    <ProjectedPointRef version="any" ref="RUT:ScheduledStopPoint:0061101004"/>
+                                    <ProjectToPointRef version="any" ref="RUT:ScheduledStopPoint:0061101004"/>
                                 </PointProjection>
                             </projections>
                         </RoutePoint>
@@ -156,7 +156,7 @@
                         <RoutePoint version="any" id="RUT:RoutePoint:0061101A6A0061101007">
                             <projections>
                                 <PointProjection version="any" id="RUT:PointProjection:0061101A6A0061101007">
-                                    <ProjectedPointRef version="any" ref="RUT:ScheduledStopPoint:0061101007"/>
+                                    <ProjectToPointRef version="any" ref="RUT:ScheduledStopPoint:0061101007"/>
                                 </PointProjection>
                             </projections>
                         </RoutePoint>
@@ -195,6 +195,12 @@
                                 <!-- Denne linjen kjøres bare på 1 måte -->
                                 <RouteRef version="any" ref="RUT:Route:0061101"/>
                             </routes>
+                            <Presentation>
+                                <infoLinks>
+                                    <InfoLink typeOfInfoLink="resource">http://test.com</InfoLink>
+                                    <InfoLink typeOfInfoLink="info">http://test.com</InfoLink>
+                                </infoLinks>
+                            </Presentation>
                         </Line>
                     </lines>
 
@@ -310,6 +316,10 @@
                                     <ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:0061101007"/>
                                     <ForBoarding>false</ForBoarding>
                                 </StopPointInJourneyPattern>
+                                <StopPointInJourneyPattern version="any" id="RUT:StopPointInJourneyPattern:0061101007" order="8">
+                                    <ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:0061101007"/>
+                                    <ForBoarding>false</ForBoarding>
+                                </StopPointInJourneyPattern>
                             </pointsInSequence>
                         </JourneyPattern>
                     </journeyPatterns>
@@ -377,7 +387,7 @@
                             <passingTimes>
                                 <TimetabledPassingTime>
                                     <!-- Tveita T -->
-                                    <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101001"/>
+                                    <StopPointInJourneyPatternRef version="any" ref="RUT:StopPointInJourneyPattern:0061101001" />
                                     <DepartureTime>00:15:00</DepartureTime>
                                 </TimetabledPassingTime>
                                 <TimetabledPassingTime>

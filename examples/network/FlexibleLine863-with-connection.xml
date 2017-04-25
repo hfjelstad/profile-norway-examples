@@ -81,31 +81,31 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 				<SiteFrame version="any" id="RUT:SiteFrame:1">
 					<stopPlaces>
 						<!-- Codespace NHR pga data fra sentralt stoppestedregister -->
-						<StopPlace version="any" id="NHR:StopPlace:CODE-HANABORG_ST">
+						<StopPlace version="any" id="NHR:StopPlace:ID-HANABORG_ST">
 							<!-- Hanaborg stasjon (59.938586, 10.966605) -->
 							<Name lang="NO-NB">Hanaborg stasjon</Name>
 							<quays>
-								<Quay version="any" id="NHR:Quay:CODE-HANABORG_ST-QUAY"/>
+								<Quay version="any" id="NHR:Quay:ID-HANABORG_ST-QUAY"/>
 							</quays>
 						</StopPlace>
-						<StopPlace version="any" id="NHR:StopPlace:CODE-LORENSKOGSENTRUM">
+						<StopPlace version="any" id="NHR:StopPlace:ID-LORENSKOGSENTRUM">
 							<!-- Lørenskog sentrum (59.927963, 10.954812) -->
 							<Name>Lørenskog sentrum</Name>
 							<quays>
-								<Quay version="any" id="NHR:Quay:CODE-LORENSKOGSENTRUM-QUAY"/>
+								<Quay version="any" id="NHR:Quay:ID-LORENSKOGSENTRUM-QUAY"/>
 							</quays>
 						</StopPlace>
-						<StopPlace version="any" id="NHR:StopPlace:CODE-TRIADEN-ENTRANCE">
+						<StopPlace version="any" id="NHR:StopPlace:ID-TRIADEN-ENTRANCE">
 							<Name>Triaden</Name>
 							<!-- Gamleveien 88C, 1476 Rasta (utenfor hovdeinngang Triaden: 59.919880, 10.953399) -->
 							<quays>
-								<Quay version="any" id="NHR:Quay:CODE-TRIADEN-ENTRANCE-QUAY"/>
+								<Quay version="any" id="NHR:Quay:ID-TRIADEN-ENTRANCE-QUAY"/>
 							</quays>
 						</StopPlace>
 					</stopPlaces>				
 					
 					<flexibleStopPlaces>
-						<FlexibleStopPlace version="any" id="NHR:FlexibleStopPlace:CODE-HANABORG-NORD">
+						<FlexibleStopPlace version="any" id="NHR:FlexibleStopPlace:ID-HANABORG-NORD">
 							<Name>Fleksisone for linje 863</Name>
 							<Description>
 								Bestillingslinjen kjøres i områdene nord for toglinjen i Lørenskog; 
@@ -114,7 +114,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 							</Description>
 							<TransportMode>bus</TransportMode>
 							<areas>
-								<FlexibleArea version="any" id="NHR:FlexibleArea:CODE-HANABORG-NORD-AREA">
+								<FlexibleArea version="any" id="NHR:FlexibleArea:ID-HANABORG-NORD-AREA">
 									<Polygon srsName="wgs84" gml:id="hanaborg" xmlns="http://www.opengis.net/gml/3.2">
 										<exterior>
 											<LinearRing>
@@ -153,8 +153,8 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						<!-- Flexi-sone Hanaborg Nord -->
 						<RoutePoint version="any" id="RUT:RoutePoint:ID-HANABORG-NORD">
 							<projections>
-								<ZoneProjection version="any" id="NHR:ZoneProjection:CODE-HANABORG-NORD-ZONE">
-									<ProjectedZoneRef ref="NHR:FlexibleArea:CODE-HANABORG-NORD-AREA"/>
+								<ZoneProjection version="any" id="NHR:ZoneProjection:ID-HANABORG-NORD-ZONE">
+									<ProjectedZoneRef ref="NHR:FlexibleArea:ID-HANABORG-NORD-AREA"/>
 								</ZoneProjection>
 							</projections>
 						</RoutePoint>
@@ -162,7 +162,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						<RoutePoint version="any" id="RUT:RoutePoint:ID-HANABORG">
 							<projections>
 								<PointProjection version="any" id="RUT:PointProjection:ID-HANABORG">
-									<ProjectedPointRef version="any" ref="NHR:StopPlace:CODE-HANABORG_ST"/>
+									<ProjectToPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 								</PointProjection>
 							</projections>
 						</RoutePoint>
@@ -170,7 +170,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						<RoutePoint version="any" id="RUT:RoutePoint:ID-LORENSKOGSENTRUM">
 							<projections>
 								<PointProjection version="any" id="RUT:PointProjection:ID-LORENSKOGSENTRUM">
-									<ProjectedPointRef version="any" ref="NHR:StopPlace:CODE-LORENSKOGSENTRUM"/>
+									<ProjectToPointRef version="any" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 								</PointProjection>
 							</projections>
 						</RoutePoint>
@@ -178,12 +178,12 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						<RoutePoint version="any" id="RUT:RoutePoint:ID-TRIADEN">
 							<projections>
 								<PointProjection version="any" id="RUT:PointProjection:ID-TRIADEN">
-									<ProjectedPointRef version="any" ref="NHR:StopPlace:CODE-TRIADEN"/>
+									<ProjectToPointRef version="any" ref="RUT:ScheduledStopPoint:ID-TRIADEN"/>
 								</PointProjection>
 							</projections>
 						</RoutePoint>
 					</routePoints>
-
+					
 					<routes>
 						<Route version="any" id="RUT:Route:863-TilLorenskog">
 							<Name>863 til Lørenskog sentrum</Name>
@@ -372,25 +372,25 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 
 
 					<stopAssignments>
-						<FlexibleStopAssignment version="any" id="RUT:PassengerStopAssignment:CODE-HANABORG">
+						<FlexibleStopAssignment version="any" id="RUT:PassengerStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD"/>
-							<FlexibleStopPlaceRef version="any" ref="NHR:FlexibleStopPlace:CODE-HANABORG-NORD"/>
+							<FlexibleStopPlaceRef version="any" ref="NHR:FlexibleStopPlace:ID-HANABORG-NORD"/>
 						</FlexibleStopAssignment>
 						
-						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:CODE-HANABORG">
+						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
-							<StopPlaceRef version="any" ref="NHR:StopPlace:CODE-HANABORG_ST"/>
-							<QuayRef version="any" ref="NHR:Quay:CODE-HANABORG_ST-QUAY"/>
+							<StopPlaceRef version="any" ref="NHR:StopPlace:ID-HANABORG_ST"/>
+							<QuayRef version="any" ref="NHR:Quay:ID-HANABORG_ST-QUAY"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:CODE-LORENSKOG">
+						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:ID-LORENSKOG">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
-							<StopPlaceRef version="any" ref="NHR:StopPlace:CODE-LORENSKOGSENTRUM"/>
-							<QuayRef version="any" ref="NHR:Quay:CODE-LORENSKOGSENTRUM-QUAY"/>
+							<StopPlaceRef version="any" ref="NHR:StopPlace:ID-LORENSKOGSENTRUM"/>
+							<QuayRef version="any" ref="NHR:Quay:ID-LORENSKOGSENTRUM-QUAY"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:CODE-TRIADEN">
+						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:ID-TRIADEN">
 							<ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:ID-TRIADEN"/>
-							<StopPlaceRef version="any" ref="NHR:StopPlace:CODE-TRIADEN-ENTRANCE"/>
-							<QuayRef version="any" ref="NHR:Quay:CODE-TRIADEN-ENTRANCE-QUAY"/>
+							<StopPlaceRef version="any" ref="NHR:StopPlace:ID-TRIADEN-ENTRANCE"/>
+							<QuayRef version="any" ref="NHR:Quay:ID-TRIADEN-ENTRANCE-QUAY"/>
 						</PassengerStopAssignment>
 					</stopAssignments>
 
@@ -582,7 +582,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 
 					<journeyInterchanges>
 						<!-- Overgang Tog -->
-						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:CODE-HANABORG_ST-863-to-L1-A">
+						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-863-to-L1-A">
 							<Description>2Ø Tog mot Lillestrøm 1019</Description>
 							<ConnectionRef version="any" ref="RUT:Connection:ID-HANABORG-tilLorenskog-ID-TOG-L1-A"/>
 							<Planned>true</Planned>
@@ -595,7 +595,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
 							<ToJourneyRef ref="NSB:ServiceJourney:L1-Spikkestad-1-ExternalRef"/>
 						</ServiceJourneyInterchange>
-						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:CODE-HANABORG_ST-863-to-L1-B">
+						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-863-to-L1-B">
 							<Description>2Ø Tog mot Lillestrøm 1031</Description>
 							<ConnectionRef version="any" ref="RUT:Connection:ID-HANABORG-tilLorenskog-ID-TOG-L1-B"/>
 							<Planned>true</Planned>
@@ -608,7 +608,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
 							<ToJourneyRef ref="NSB:ServiceJourney:L1-Lillestrom-1-ExtenalRef"/>
 						</ServiceJourneyInterchange>
-						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:CODE-HANABORG_ST-863-to-L1-C">
+						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-863-to-L1-C">
 							<Description>2Ø Tog fra Oslo 1219</Description>
 							<ConnectionRef version="any" ref="RUT:Connection:ID-HANABORG-fraLorenskog-ID-TOG-L1-C"/>
 							<Planned>true</Planned>
@@ -621,7 +621,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-FraLorenskog"/>
 							<ToJourneyRef ref="NSB:ServiceJourney:L1-Lillestrom-2-ExtenalRef"/>
 						</ServiceJourneyInterchange>
-						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:CODE-HANABORG_ST-863-to-L1-D">
+						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-863-to-L1-D">
 							<Description>2Ø Tog fra Lillestrøm 1231</Description>
 							<ConnectionRef version="any" ref="RUT:Connection:ID-HANABORG-fraLorenskog-ID-TOG-L1-D"/>
 							<Planned>true</Planned>
@@ -635,7 +635,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 							<ToJourneyRef ref="NSB:ServiceJourney:L1-Spikkestad-2-ExtenalRef"/>
 						</ServiceJourneyInterchange>
 						<!-- Overgang Buss -->
-						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:CODE-LORENSKOG-863-to-401-A">
+						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-863-to-401-A">
 							<Description>2Ø Buss 401 mot Oslo 1022</Description>
 							<ConnectionRef version="any" ref="RUT:Connection:ID-LORENSKOG-tilLorenskog-ID-BUSS-401-A"/>
 							<Planned>true</Planned>
@@ -648,7 +648,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
 							<ToJourneyRef ref="RUT:ServiceJourney:401-Oslo-1-ExtenalRef"/>
 						</ServiceJourneyInterchange>
-						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:CODE-LORENSKOG-863-to-401-B">
+						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-863-to-401-B">
 							<Description>2Ø Buss 401 mot Oslo 1022</Description>
 							<ConnectionRef version="any" ref="RUT:Connection:ID-LORENSKOG-tilLorenskog-ID-BUSS-401-B"/>
 							<Planned>true</Planned>
@@ -661,7 +661,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
 							<ToJourneyRef ref="RUT:ServiceJourney:401-Lillestrom-1-ExtenalRef"/>
 						</ServiceJourneyInterchange>
-						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:CODE-LORENSKOG-863-to-401-C">
+						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-863-to-401-C">
 							<Description>2Ø Buss 401 fra Oslo 1224</Description>
 							<ConnectionRef version="any" ref="RUT:Connection:ID-LORENSKOG-fraLorenskog-ID-BUSS-401-C"/>
 							<Planned>true</Planned>
@@ -674,7 +674,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
 							<ToJourneyRef ref="RUT:ServiceJourney:401-Lillestrom-1-ExtenalRef"/>
 						</ServiceJourneyInterchange>
-						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:CODE-LORENSKOG-863-to-401-D">
+						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-863-to-401-D">
 							<Description>2Ø Buss 401 fra Lillestrøm 1222</Description>
 							<ConnectionRef version="any" ref="RUT:Connection:ID-LORENSKOG-fraLorenskog-ID-BUSS-401-D"/>
 							<Planned>true</Planned>

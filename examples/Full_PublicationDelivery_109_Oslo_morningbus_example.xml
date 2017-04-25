@@ -204,7 +204,7 @@
 						<RoutePoint version="any" id="UNI:RoutePoint:helsfyr">
 							<projections>
 								<PointProjection version="any" id="UNI:pointprojection:departure">
-									<ProjectedPointRef version="any" ref="UNI:ScheduledStopPoint:helfyr_t"/>
+									<ProjectToPointRef version="any" ref="UNI:ScheduledStopPoint:helfyr_t"/>
 								</PointProjection>
 							</projections>
 						</RoutePoint>
@@ -212,7 +212,7 @@
 						<RoutePoint version="any" id="UNI:RoutePoint:holtet">
 							<projections>
 								<PointProjection version="any" id="RUT:PointProjection:arrival">
-									<ProjectedPointRef version="any" ref="UNI:ScheduledStopPoint:holtet"/>
+									<ProjectToPointRef version="any" ref="UNI:ScheduledStopPoint:holtet"/>
 								</PointProjection>
 							</projections>
 						</RoutePoint>
@@ -292,6 +292,7 @@
 							<ToPointRef version="any" ref="UNI:ScheduledStopPoint:brynseng_t"/>
 						</ServiceLink>
 						<ServiceLink version="any" id="UNI:ServiceLink:brynseng_to_hoyenhall">
+							<Distance>1</Distance>
 							<projections>
 								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109-brynseng_to_hoyenhall">
 									<gml:LineString srsName="WGS84" gml:id="brynseng_to_hoyenhall">
