@@ -66,16 +66,31 @@
 						</ResponsibilitySet>
 					</responsibilitySets>
 					-->
+					
 					<organisations>
-						<Authority version="any" id="RUT:authority:ruter">
+						<Authority version="any" id="RUT:Authority:Ruter">						
 							<!-- Organisasjonsnummer -->
 							<CompanyNumber>991609407</CompanyNumber>
 							<Name>Ruter#</Name>
 							<LegalName>RUTER AS</LegalName>
-							<OrganisationType>authority</OrganisationType>
+							<ContactDetails>
+								<Email>post@ruter.no</Email>
+								<Phone>22 08 43 00</Phone>
+								<Url>www.ruter.no</Url>								
+							</ContactDetails>
+							<PrivateContactDetails>
+								<Email>post@unibuss.no </Email>
+								<Phone> 400 06 700</Phone>
+								<Url>intern.ruter.no</Url>
+							</PrivateContactDetails>
+							<Address>
+								<AddressLine1>Dronningens gate 40, 4.etg.</AddressLine1>
+								<Town>Oslo</Town>
+								<PostCode>0154</PostCode>
+							</Address>
 						</Authority>
 						<!-- Unibuss kjører ruten på vegne av Ruter# -->
-						<Operator version="any" id="RUT:operator:unibuss">
+						<Operator version="any" id="RUT:Operator:Unibuss">
 							<CompanyNumber>985615616</CompanyNumber>
 							<Name>Unibuss</Name>
 							<LegalName>UNIBUSS AS</LegalName>
@@ -84,6 +99,8 @@
 								<Phone>22 08 43 00</Phone>
 								<Url>www.unibuss.no</Url>
 							</ContactDetails>
+							<PrimaryMode>air</PrimaryMode>
+							<OperatorActivities>passenger</OperatorActivities>
 							<CustomerServiceContactDetails>
 								<Phone>0047 177</Phone>
 								<Url>www.unibuss.no</Url>
@@ -209,6 +226,7 @@
 				<ServiceFrame version="any" id="UNI:SiteFrame:1">
 					<Network version="any" id="RUT:Network:RuterBuss">
 						<Name>Ruter# buss</Name>
+						<AuthorityRef ref="RUT:Authority:Ruter"/>
 						<!-- Ikke obligatorisk med groupsOfLines (Network er implisitt en gruppering), implementeres kun hvis relevant -->
 						<groupsOfLines>
 							<GroupOfLines version="any" id="RUT:GroupOfLines:Ruter-Buss-Oslo">
