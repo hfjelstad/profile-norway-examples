@@ -94,9 +94,20 @@
 
 				<!-- ===SITE FRAME=== -->
 				<SiteFrame version="any" id="UNI:SiteFrame:1">
+					<!-- MERKNAD: 
+						Stoppestedsobjekter er tatt med i eksempelet for å illustrere alle elementer i en PublicationDelivery, 
+						leveranser ihht. norsk profil skal skje ved at stoppestedsobjekter utveksles separat.
+						  (Innsendt i egen fil etter stops-profil, version="1.04:NO-NeTEx-stops:1.0")
+						  
+						Rutedata (networktimetable-profil, version="1.04:NO-NeTEx-networktimetable:1.0") skal alltid referere 
+						til (eksterne) stoppestedsobjekter ved bruk av nasjonal ID (da _uten_ versjonsattributt p.g.a. intern skjema-validering).
+					-->
+					<!-- Optional, konseptet tas ikke i bruk i initiell versjon av Rutebanken -->
+					<!--
 					<FrameDefaults>
 						<DefaultResponsibilitySetRef ref="UNI:ResponsibilitySet:Planning"/>
 					</FrameDefaults>
+					-->
 					<stopPlaces>
 						<!-- MERK: Kun definert quays i faktisk bruk for å forenkle eksempelet -->
 						<!-- TODO: Implement correct stop place and quay IDs -->
@@ -192,7 +203,8 @@
 						</StopPlace>
 					</stopPlaces>
 				</SiteFrame>
-
+				
+				
 				<!-- ===SERVICE FRAME=== -->
 				<ServiceFrame version="any" id="UNI:SiteFrame:1">
 					<Network version="any" id="RUT:Network:RuterBuss">
@@ -366,27 +378,27 @@
 					<stopAssignments>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:helsfyr_t" order="1">
 							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:helfyr_t"/>
-							<QuayRef version="any" ref="NSR:Quay:helsfyr_t-QUAYID"/>
+							<QuayRef ref="NSR:Quay:helsfyr_t-QUAYID"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:brynseng_t" order="2">
 							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:brynseng_t"/>
-							<QuayRef version="any" ref="NSR:Quay:brynseng_t-QUAYID"/>
+							<QuayRef ref="NSR:Quay:brynseng_t-QUAYID"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:hoyenhall_t" order="3">
 							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
-							<QuayRef version="any" ref="NSR:Quay:hoyenhall_t-QUAYID"/>
+							<QuayRef ref="NSR:Quay:hoyenhall_t-QUAYID"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:manglerud_t" order="4">
 							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:manglerud_t"/>
-							<QuayRef version="any" ref="NSR:Quay:manglerud_t-QUAYID"/>
+							<QuayRef ref="NSR:Quay:manglerud_t-QUAYID"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:ryen_t" order="5">
 							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
-							<QuayRef version="any" ref="NSR:Quay:ryen_t-QUAYID"/>
+							<QuayRef ref="NSR:Quay:ryen_t-QUAYID"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:holtet" order="6">
 							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:holtet"/>
-							<QuayRef version="any" ref="NSR:Quay:holtet-QUAYID"/>
+							<QuayRef ref="NSR:Quay:holtet-QUAYID"/>
 						</PassengerStopAssignment>
 					</stopAssignments>
 					
