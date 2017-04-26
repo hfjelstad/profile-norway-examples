@@ -102,8 +102,8 @@
 						Rutedata (networktimetable-profil, version="1.04:NO-NeTEx-networktimetable:1.0") skal alltid referere 
 						til (eksterne) stoppestedsobjekter ved bruk av nasjonal ID (da _uten_ versjonsattributt p.g.a. intern skjema-validering).
 					-->
-					<!-- Optional, konseptet tas ikke i bruk i initiell versjon av Rutebanken -->
 					<!--
+						Optional, konseptet tas ikke i bruk i initiell versjon av Rutebanken
 					<FrameDefaults>
 						<DefaultResponsibilitySetRef ref="UNI:ResponsibilitySet:Planning"/>
 					</FrameDefaults>
