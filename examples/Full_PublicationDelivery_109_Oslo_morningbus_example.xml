@@ -286,7 +286,7 @@
 								<RouteRef ref="UNI:Route:109"/>
 							</routes>
 							<RepresentedByGroupRef ref="RUT:Network:RuterBuss"/>
-							<!-- alternativt kunne dette settes enda mer presist 'RepresentedByGroupRef ref="RUT:GroupOfLines:Ruter-Buss-Oslo' om implementert -->
+							<!-- alternativt kan dette settes mer presist 'RepresentedByGroupRef ref="RUT:GroupOfLines:Ruter-Buss-Oslo' dersom implementert -->
 						</Line>
 					</lines>
 					<!-- ===DESTINATION DISPLAYs=== -->
