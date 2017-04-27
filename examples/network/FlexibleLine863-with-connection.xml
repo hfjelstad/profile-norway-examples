@@ -467,17 +467,17 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 					</notices>
 					<noticeAssignments>
 						<NoticeAssignment version="any" id="RUT:NoticeAssignment:863" order="0">
-							<NoticeRef ref="RUT:Notice:863"/>
+							<NoticeRef version="any" ref="RUT:Notice:863"/>
 							<NoticedObjectRef version="any" ref="RUT:StopPointInJourneyPattern:ID-TRIADEN-fraLorenskog"/>
 							<!--NoticedObjectRef ref="RUT:FlexibleLine:863"/-->
 						</NoticeAssignment>
 						<NoticeAssignment version="any" id="RUT:NoticeAssignment:863-TilLorenskog" order="0">
-							<NoticeRef ref="RUT:Notice:863-Henting"/>
-							<NoticedObjectRef ref="RUT:Route:863-TilLorenskog"/>
+							<NoticeRef version="any" ref="RUT:Notice:863-Henting"/>
+							<NoticedObjectRef version="any" ref="RUT:Route:863-TilLorenskog"/>
 						</NoticeAssignment>
 						<NoticeAssignment version="any" id="RUT:NoticeAssignment:863-FraLorenskog" order="0">
-							<NoticeRef ref="RUT:Notice:863-Levering"/>
-							<NoticedObjectRef ref="RUT:Route:863-FraLorenskog"/>
+							<NoticeRef version="any" ref="RUT:Notice:863-Levering"/>
+							<NoticedObjectRef version="any" ref="RUT:Route:863-FraLorenskog"/>
 						</NoticeAssignment>
 					</noticeAssignments>
 				</ServiceFrame>

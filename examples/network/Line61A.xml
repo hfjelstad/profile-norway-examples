@@ -323,17 +323,17 @@
                             </pointsInSequence>
                         </JourneyPattern>
                     </journeyPatterns>
-
+                    
                     <notices>
                         <!-- Denne fotnoten er modellert for hele linjen, ikke relatert spesifikt til noe stopp eller turer -->
-                        <Notice version="any" id="RUT:Notice:1">
+                        <Notice version="1" id="RUT:Notice:1">
                             <Text>I boligveiene kan buss 61A ogs&#229; stoppe utenom de faste holdeplassene. Husk &#229; gi stoppsignal!</Text>
                         </Notice>
                     </notices>
                     <noticeAssignments>
-                        <NoticeAssignment version="any" id="RUT:NoticeAssignment:1" order="1">
-                            <NoticeRef ref="RUT:Notice:1"/>
-                            <NoticedObjectRef ref="RUT:Route:0061101"/>
+                        <NoticeAssignment version="1" id="RUT:NoticeAssignment:1" order="1">
+                            <NoticeRef ref="RUT:Notice:1" version="1"/>
+                            <NoticedObjectRef ref="RUT:Route:0061101" version="1"/>
                         </NoticeAssignment>
                     </noticeAssignments>
                 </ServiceFrame>
