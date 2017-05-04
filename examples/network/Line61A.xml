@@ -288,7 +288,7 @@
                             <RouteRef version="any" ref="RUT:Route:0061101"/>
                             <!-- Rekkefølge på stopp -->
                             <pointsInSequence>
-                                <StopPointInJourneyPattern version="any" id="RUT:StopPointInJourneyPattern:0061101001" order="1">
+                                <StopPointInJourneyPattern version="any" id="RUT:StopPointInJourneyPattern:0061101002" order="1">
                                     <!-- Referanse til hvilket ScheduledStopPoint -->
                                     <ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:0061101001"/>
                                     <ForAlighting>false</ForAlighting>
@@ -366,12 +366,6 @@
 
                 <!-- Tidtabellen, dvs avgangstider -->
                 <TimetableFrame version="any" id="RUT:TimetableFrame:TF02">
-                    <validityConditions>
-                        <ValidBetween>
-                            <FromDate>2016-01-10T00:00:00</FromDate>
-                            <ToDate>2016-12-20T00:00:00</ToDate>
-                        </ValidBetween>
-                    </validityConditions>
                     <!-- Kjøres buss om ikke noe annet er spesifisert -->
                     <vehicleJourneys>
                         <!-- Her defineres en TemplateServiceJourney. Den sier at avgangstidene er de samme, men i dette tilfellet med et rytmisk mønster (hvert. 15 minutt over hel) -->
