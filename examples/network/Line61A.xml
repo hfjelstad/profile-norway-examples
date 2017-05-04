@@ -4,7 +4,7 @@
     https://ruter.no/globalassets/rutetabeller/oslo/oslo_syd_web_april2016.pdf
 -->
 <PublicationDelivery 
-  version="1.04:NO-NeTEx-networktimetable:1.0"
+  version="1.04:NO-NeTEx-networktimetable:1.1"
   xmlns="http://www.netex.org.uk/netex" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
@@ -72,7 +72,12 @@
                 </ResourceFrame>
 
 
-                <!-- Alt her vil verifiseres mot det som ligger i holdeplassregisteret. Finnes det ikke der blir hele denne filen avvist -->
+                <!-- 
+                Stoppestedsinformasjon skal IKKE sendes inn ihht. networktimetable profil, men som egen XML ihht. stops profil.
+                Objektene er likevel tatt med for å vise begge datasettene i samme eksempel.
+                
+                Alle stoppestedsreferanser vil i stedet verifiseres mot det som ligger i holdeplassregisteret. Finnes det ikke der blir hele denne filen avvist.
+                -->
                 <SiteFrame version="any" id="RUT:SiteFrame:SF01">
                     <stopPlaces>
                         <!-- Merk at her brukes det codespace NSR som viser at disse elementene eies av NasjonaltHoldeplassRegister -->

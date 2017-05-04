@@ -15,7 +15,7 @@ Se også NeTEx-eksempel:
 example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 -->
 <PublicationDelivery 
-  version="1.04:NO-NeTEx-networktimetable:1.0"
+  version="1.04:NO-NeTEx-networktimetable:1.1"
   xmlns="http://www.netex.org.uk/netex" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xmlns:gml="http://www.opengis.net/gml/3.2"
@@ -498,17 +498,6 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 
 
 				<TimetableFrame version="any" id="RUT:TimetableFrame:863-TilLorenskog">
-					<validityConditions>
-						<AvailabilityCondition version="any" id="availability">
-							<FromDate>2016-01-01T00:00:00</FromDate>
-							<ToDate>2016-12-31T00:00:00</ToDate>
-							<ValidDayBits>0001001110011100011</ValidDayBits>
-						</AvailabilityCondition>
-						<ValidBetween>
-							<FromDate>2016-01-01T00:00:00</FromDate>
-							<ToDate>2016-12-31T00:00:00</ToDate>
-						</ValidBetween>
-					</validityConditions>
 					<Name>Rute for 2016</Name>
 					<DefaultMode>bus</DefaultMode>
 					<bookingTimes>
