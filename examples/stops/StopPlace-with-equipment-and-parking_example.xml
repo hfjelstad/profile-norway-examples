@@ -17,6 +17,12 @@
 					<Name>Sample-stop</Name>
 					<Covered>indoors</Covered>
 					
+					<equipmentPlaces>
+						<EquipmentPlace id="tests" version="any">
+							<Centroid></Centroid>
+						</EquipmentPlace>
+					</equipmentPlaces>
+					
 					<placeEquipments>
 						<TicketingEquipment id="RUT:TicketingEquipment:1" version="any">
 							<VehicleModes>bus tram metro</VehicleModes>
@@ -47,11 +53,14 @@
 							<PrivateCode>512</PrivateCode>
 							<SignContentType>transportMode</SignContentType>
 						</GeneralSign>
-												
+						
 						<PassengerInformationEquipment id="RUT:PassengerInformationEquipment:1" version="any">
+							<!--PassengerInformationEquipmentList>realTimeDepartures lineNetworkPlan timetablePoster fareInformation interactiveKiosk</PassengerInformationEquipmentList1-->
+							<PassengerInformationFacilityList>nextStopIndicator passengerInformationDisplay realTimeConnections stopAnnouncements</PassengerInformationFacilityList>
 							<!-- IKKE I BRUK PDD. (ref. https://rutebanken.atlassian.net/wiki/display/REIS/Known+errors) -->
 						</PassengerInformationEquipment>
 					</placeEquipments>
+					
 			
 					<localServices>
 						<LuggageService id="NSR:LuggageService:1" version="any">
@@ -100,7 +109,6 @@
 							</placeEquipments>
 
 							<PublicCode>2</PublicCode>
-							
 						</Quay>
 					</quays>
 				</StopPlace>
@@ -142,7 +150,8 @@
 			<siteFacilitySets>
 				<SiteFacilitySet id="NSR:SiteFacilitySet:2" version="any">
 					<!-- se NeTEx part 1 s. 436 (7.7.14.2.3 Common Facility Values – Physical Model) -->
-					<PassengerInformationEquipmentList>interactiveKiosk</PassengerInformationEquipmentList>
+					<!--PassengerInformationEquipmentList>realTimeDepartures lineNetworkPlan</PassengerInformationEquipmentList -->
+					<PassengerInformationEquipmentList>lineNetworkPlan</PassengerInformationEquipmentList>
 					<PassengerInformationFacilityList>passengerInformationDisplay nextStopIndicator</PassengerInformationFacilityList>
 					<LuggageLockerFacilityList>lockers bikeRack</LuggageLockerFacilityList>
 					<LuggageServiceFacilityList>leftLuggage</LuggageServiceFacilityList>

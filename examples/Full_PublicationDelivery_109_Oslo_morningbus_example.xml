@@ -10,9 +10,9 @@
 	<ParticipantRef>NSR</ParticipantRef>
 
 	<dataObjects>
-		<CompositeFrame version="any" created="2016-08-22T00:00:00Z" id="UNI:CompositeFrame:1">
+		<CompositeFrame version="1" created="2016-08-22T00:00:00Z" id="UNI:CompositeFrame:1">
 			<validityConditions>
-				<AvailabilityCondition version="any" id="UNI:AvailabilityCondition:cf01">
+				<AvailabilityCondition version="1" id="UNI:AvailabilityCondition:cf01">
 					<FromDate>2016-03-04T00:00:00.0Z</FromDate>
 				</AvailabilityCondition>
 			</validityConditions>
@@ -45,22 +45,22 @@
 			</FrameDefaults>
 
 			<frames>
-				<ResourceFrame version="any" id="UNI:ResourceFrame:1">
+				<ResourceFrame version="1" id="UNI:ResourceFrame:1">
 					<!-- Optional, konseptet tas ikke i bruk i initiell versjon av Rutebanken
 					<responsibilitySets>
-						<ResponsibilitySet version="any" id="UNI:ResponsibilitySet:Planning">
+						<ResponsibilitySet version="1" id="UNI:ResponsibilitySet:Planning">
 							<roles>
-								<ResponsibilityRoleAssignment version="any" id="UNI:ResponsibilityRoleAssignment:Planning">
+								<ResponsibilityRoleAssignment version="1" id="UNI:ResponsibilityRoleAssignment:Planning">
 									<StakeholderRoleType>Operation</StakeholderRoleType>
-									<ResponsibleOrganisationRef version="any" ref="RUT:authority:ruter"/>
+									<ResponsibleOrganisationRef version="1" ref="RUT:Authority:Ruter"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
-						<ResponsibilitySet version="any" id="UNI:ResponsibilitySet:Operation">
+						<ResponsibilitySet version="1" id="UNI:ResponsibilitySet:Operation">
 							<roles>
-								<ResponsibilityRoleAssignment version="any" id="UNI:ResponsibilityRoleAssignment:Operation">
+								<ResponsibilityRoleAssignment version="1" id="UNI:ResponsibilityRoleAssignment:Operation">
 									<StakeholderRoleType>Operation</StakeholderRoleType>
-									<ResponsibleOrganisationRef version="any" ref="RUT:operator:unibuss"/>
+									<ResponsibleOrganisationRef version="1" ref="RUT:Operator:Unibuss"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
@@ -68,7 +68,7 @@
 					-->
 					
 					<organisations>
-						<Authority version="any" id="RUT:Authority:Ruter">						
+						<Authority version="1" id="RUT:Authority:Ruter">						
 							<!-- Organisasjonsnummer -->
 							<CompanyNumber>991609407</CompanyNumber>
 							<Name>Ruter#</Name>
@@ -90,7 +90,7 @@
 							</Address>
 						</Authority>
 						<!-- Unibuss kjører ruten på vegne av Ruter# -->
-						<Operator version="any" id="RUT:Operator:Unibuss">
+						<Operator version="1" id="RUT:Operator:Unibuss">
 							<CompanyNumber>985615616</CompanyNumber>
 							<Name>Unibuss</Name>
 							<LegalName>UNIBUSS AS</LegalName>
@@ -110,7 +110,7 @@
 				</ResourceFrame>
 
 				<!-- ===SITE FRAME=== -->
-				<SiteFrame version="any" id="UNI:SiteFrame:1">
+				<SiteFrame version="1" id="UNI:SiteFrame:1">
 					<!-- MERKNAD: 
 						Stoppestedsobjekter er tatt med i eksempelet for å illustrere alle elementer i en PublicationDelivery, 
 						leveranser ihht. norsk profil skal skje ved at stoppestedsobjekter utveksles separat.
@@ -128,12 +128,12 @@
 					<stopPlaces>
 						<!-- MERK: Kun definert quays i faktisk bruk for å forenkle eksempelet -->
 						<!-- TODO: Implement correct stop place and quay IDs -->
-						<StopPlace version="any" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:helsfyr_t">
+						<StopPlace version="1" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:helsfyr_t">
 							<Name>Helsfyr T</Name>
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>busStation</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:helsfyr_t-QUAYID">
+								<Quay version="1" id="NSR:Quay:helsfyr_t-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.800792</Longitude>
@@ -143,12 +143,12 @@
 								</Quay>
 							</quays>
 						</StopPlace>
-						<StopPlace version="any" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:brynseng_t">
+						<StopPlace version="1" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:brynseng_t">
 							<Name>Brynseng T</Name>
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>onstreetBus</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:brynseng_t-QUAYID">
+								<Quay version="1" id="NSR:Quay:brynseng_t-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.814013</Longitude>
@@ -158,12 +158,12 @@
 								</Quay>
 							</quays>
 						</StopPlace>
-						<StopPlace version="any" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:hoyenhall_t">
+						<StopPlace version="1" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:hoyenhall_t">
 							<Name>Høyenhall T</Name>
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>onstreetBus</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:hoyenhall_t-QUAYID">
+								<Quay version="1" id="NSR:Quay:hoyenhall_t-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.819156</Longitude>
@@ -173,12 +173,12 @@
 								</Quay>
 							</quays>
 						</StopPlace>
-						<StopPlace version="any" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:manglerud_t">
+						<StopPlace version="1" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:manglerud_t">
 							<Name>Manglerud T</Name>
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>onstreetBus</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:manglerud_t-QUAYID">
+								<Quay version="1" id="NSR:Quay:manglerud_t-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.813655</Longitude>
@@ -188,12 +188,12 @@
 								</Quay>
 							</quays>
 						</StopPlace>
-						<StopPlace version="any" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:ryen_t">
+						<StopPlace version="1" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:ryen_t">
 							<Name>Ryen T</Name>
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>onstreetBus</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:ryen_t-QUAYID">
+								<Quay version="1" id="NSR:Quay:ryen_t-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.805572</Longitude>
@@ -203,12 +203,12 @@
 								</Quay>
 							</quays>
 						</StopPlace>
-						<StopPlace version="any" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:holtet">
+						<StopPlace version="1" responsibilitySetRef="UNI:ResponsibilitySet:Planning" id="NSR:StopPlace:holtet">
 							<Name>Holtet stasjon</Name>
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>onstreetBus</StopPlaceType>
 							<quays>
-								<Quay version="any" id="NSR:Quay:holtet-QUAYID">
+								<Quay version="1" id="NSR:Quay:holtet-QUAYID">
 									<Centroid>
 										<Location srsName="WGS84">
 											<Longitude>10.782948</Longitude>
@@ -223,16 +223,16 @@
 				
 				
 				<!-- ===SERVICE FRAME=== -->
-				<ServiceFrame version="any" id="UNI:SiteFrame:1">
-					<Network version="any" id="RUT:Network:RuterBuss">
+				<ServiceFrame version="1" id="UNI:SiteFrame:1">
+					<Network version="1" id="RUT:Network:RuterBuss">
 						<Name>Ruter# buss</Name>
-						<AuthorityRef ref="RUT:Authority:Ruter"/>
+						<AuthorityRef version="1" ref="RUT:Authority:Ruter"/>
 						<!-- Ikke obligatorisk med groupsOfLines (Network er implisitt en gruppering), implementeres kun hvis relevant -->
 						<groupsOfLines>
-							<GroupOfLines version="any" id="RUT:GroupOfLines:Ruter-Buss-Oslo">
+							<GroupOfLines version="1" id="RUT:GroupOfLines:Ruter-Buss-Oslo">
 								<Name>Ruter# buss Oslo</Name>
 							</GroupOfLines>
-							<GroupOfLines version="any" id="RUT:GroupOfLines:Ruter-Buss-Akershus">
+							<GroupOfLines version="1" id="RUT:GroupOfLines:Ruter-Buss-Akershus">
 								<Name>Ruter# buss Akershus</Name>
 							</GroupOfLines>
 						</groupsOfLines>
@@ -240,18 +240,18 @@
 
 					<routePoints>
 						<!-- Helsfyr -->
-						<RoutePoint version="any" id="UNI:RoutePoint:helsfyr">
+						<RoutePoint version="1" id="UNI:RoutePoint:helsfyr">
 							<projections>
-								<PointProjection version="any" id="UNI:pointprojection:departure">
-									<ProjectToPointRef version="any" ref="UNI:ScheduledStopPoint:helfyr_t"/>
+								<PointProjection version="1" id="UNI:pointprojection:departure">
+									<ProjectToPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr_t"/>
 								</PointProjection>
 							</projections>
 						</RoutePoint>
 						<!-- Holtet -->
-						<RoutePoint version="any" id="UNI:RoutePoint:holtet">
+						<RoutePoint version="1" id="UNI:RoutePoint:holtet">
 							<projections>
-								<PointProjection version="any" id="RUT:PointProjection:arrival">
-									<ProjectToPointRef version="any" ref="UNI:ScheduledStopPoint:holtet"/>
+								<PointProjection version="1" id="RUT:PointProjection:arrival">
+									<ProjectToPointRef version="1" ref="UNI:ScheduledStopPoint:holtet"/>
 								</PointProjection>
 							</projections>
 						</RoutePoint>
@@ -259,16 +259,16 @@
 
 					<!-- ===ROUTE=== -->
 					<routes>
-						<Route version="any" id="UNI:Route:109">
+						<Route version="1" id="UNI:Route:109">
 							<Name>Morgenbuss Helsfyr - Holtet</Name>
-							<LineRef ref="UNI:line:109"/>
+							<LineRef version="1" ref="UNI:Line:109"/>
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
-								<PointOnRoute version="any" id="UNI:PointOnRoute:109-start">
-									<RoutePointRef version="any" ref="UNI:RoutePoint:helsfyr"/>
+								<PointOnRoute version="1" id="UNI:PointOnRoute:109-start">
+									<RoutePointRef version="1" ref="UNI:RoutePoint:helsfyr"/>
 								</PointOnRoute>
-								<PointOnRoute version="any" id="UNI:PointOnRoute:109-end">
-									<RoutePointRef version="any" ref="UNI:RoutePoint:holtet"/>
+								<PointOnRoute version="1" id="UNI:PointOnRoute:109-end">
+									<RoutePointRef version="1" ref="UNI:RoutePoint:holtet"/>
 								</PointOnRoute>
 							</pointsInSequence>
 						</Route>
@@ -276,22 +276,22 @@
 
 					<!-- ===LINEs=== -->
 					<lines>
-						<Line version="any" id="UNI:line:109">
+						<Line version="1" id="UNI:Line:109">
 							<Name>109</Name>
 							<TransportMode>bus</TransportMode>
 							<PublicCode>109</PublicCode>
-							<OperatorRef ref="RUT:operator:unibuss"/>
+							<OperatorRef version="1" ref="RUT:Operator:Unibuss"/>
 							<!-- Optional: -->
 							<routes>
-								<RouteRef ref="UNI:Route:109"/>
+								<RouteRef version="1" ref="UNI:Route:109"/>
 							</routes>
-							<RepresentedByGroupRef ref="RUT:Network:RuterBuss"/>
+							<RepresentedByGroupRef version="1" ref="RUT:Network:RuterBuss"/>
 							<!-- alternativt kan dette settes mer presist 'RepresentedByGroupRef ref="RUT:GroupOfLines:Ruter-Buss-Oslo' dersom implementert -->
 						</Line>
 					</lines>
 					<!-- ===DESTINATION DISPLAYs=== -->
 					<destinationDisplays>
-						<DestinationDisplay version="any" id="UNI:DestinationDisplay:holtet">
+						<DestinationDisplay version="1" id="UNI:DestinationDisplay:holtet">
 							<SideText>Holtet</SideText>
 							<FrontText>Holtet</FrontText>
 						</DestinationDisplay>
@@ -299,79 +299,79 @@
 
 					<!--- =========STOP POINTs============ -->
 					<scheduledStopPoints>
-						<ScheduledStopPoint version="any" id="UNI:ScheduledStopPoint:helfyr_t">
+						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:helfyr_t">
 							<Name>Helsfyr T</Name>
 						</ScheduledStopPoint>
-						<ScheduledStopPoint version="any" id="UNI:ScheduledStopPoint:brynseng_t">
+						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:brynseng_t">
 							<Name>Brynseng T</Name>
 						</ScheduledStopPoint>
-						<ScheduledStopPoint version="any" id="UNI:ScheduledStopPoint:hoyenhall_t">
+						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:hoyenhall_t">
 							<Name>H&#216;yenhall</Name>
 						</ScheduledStopPoint>
-						<ScheduledStopPoint version="any" id="UNI:ScheduledStopPoint:manglerud_t">
+						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:manglerud_t">
 							<Name>Manglerud T</Name>
 						</ScheduledStopPoint>
-						<ScheduledStopPoint version="any" id="UNI:ScheduledStopPoint:ryen_t">
+						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:ryen_t">
 							<Name>Ryen T</Name>
 						</ScheduledStopPoint>
-						<ScheduledStopPoint version="any" id="UNI:ScheduledStopPoint:holtet">
+						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:holtet">
 							<Name>Holtet</Name>
 						</ScheduledStopPoint>
 					</scheduledStopPoints>
 
 					<serviceLinks>
-						<ServiceLink version="any" id="UNI:ServiceLink:helsfyr_to_brynseng">
+						<ServiceLink version="1" id="UNI:ServiceLink:helsfyr_to_brynseng">
 							<projections>
-								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109-helsfyr_to_brynseng">
+								<LinkSequenceProjection version="1" id="UNI:LinkSequenceProjection:109-helsfyr_to_brynseng">
 									<gml:LineString srsName="WGS84" gml:id="helsfyr_to_brynseng">
 										<gml:pos>59.911925 10.807198</gml:pos>
 										<gml:pos>59.910395 10.813012</gml:pos>
 									</gml:LineString>
 								</LinkSequenceProjection>
 							</projections>
-							<FromPointRef version="any" ref="UNI:ScheduledStopPoint:helfyr_t"/>
-							<ToPointRef version="any" ref="UNI:ScheduledStopPoint:brynseng_t"/>
+							<FromPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr_t"/>
+							<ToPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng_t"/>
 						</ServiceLink>
-						<ServiceLink version="any" id="UNI:ServiceLink:brynseng_to_hoyenhall">
+						<ServiceLink version="1" id="UNI:ServiceLink:brynseng_to_hoyenhall">
 							<Distance>1</Distance>
 							<projections>
-								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109-brynseng_to_hoyenhall">
+								<LinkSequenceProjection version="1" id="UNI:LinkSequenceProjection:109-brynseng_to_hoyenhall">
 									<gml:LineString srsName="WGS84" gml:id="brynseng_to_hoyenhall">
 										<gml:pos>59.908251 10.816363</gml:pos>
 										<gml:pos>59.907908 10.816819</gml:pos>
 									</gml:LineString>
 								</LinkSequenceProjection>
 							</projections>
-							<FromPointRef version="any" ref="UNI:ScheduledStopPoint:brynseng_t"/>
-							<ToPointRef version="any" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
+							<FromPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng_t"/>
+							<ToPointRef version="1" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
 						</ServiceLink>
-						<ServiceLink version="any" id="UNI:ServiceLink:hoyenhall_to_manglerud">
+						<ServiceLink version="1" id="UNI:ServiceLink:hoyenhall_to_manglerud">
 							<projections>
-								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109-hoyenhall_to_manglerud">
+								<LinkSequenceProjection version="1" id="UNI:LinkSequenceProjection:109-hoyenhall_to_manglerud">
 									<gml:LineString srsName="WGS84" gml:id="hoyenhall_to_manglerud">
 										<gml:pos>59.904645 10.820626</gml:pos>
 										<gml:pos>59.899678 10.815965</gml:pos>
 									</gml:LineString>
 								</LinkSequenceProjection>
 							</projections>
-							<FromPointRef version="any" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
-							<ToPointRef version="any" ref="UNI:ScheduledStopPoint:manglerud_t"/>
+							<FromPointRef version="1" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
+							<ToPointRef version="1" ref="UNI:ScheduledStopPoint:manglerud_t"/>
 						</ServiceLink>
-						<ServiceLink version="any" id="UNI:ServiceLink:manglerud_to_ryen">
+						<ServiceLink version="1" id="UNI:ServiceLink:manglerud_to_ryen">
 							<projections>
-								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109-manglerud_to_ryen">
+								<LinkSequenceProjection version="1" id="UNI:LinkSequenceProjection:109-manglerud_to_ryen">
 									<gml:LineString srsName="WGS84" gml:id="manglerud_to_ryen">
 										<gml:pos>59.896709 10.810350</gml:pos>
 										<gml:pos>59.895940 10.807332</gml:pos>
 									</gml:LineString>
 								</LinkSequenceProjection>
 							</projections>
-							<FromPointRef version="any" ref="UNI:ScheduledStopPoint:manglerud_t"/>
-							<ToPointRef version="any" ref="UNI:ScheduledStopPoint:ryen_t"/>
+							<FromPointRef version="1" ref="UNI:ScheduledStopPoint:manglerud_t"/>
+							<ToPointRef version="1" ref="UNI:ScheduledStopPoint:ryen_t"/>
 						</ServiceLink>
-						<ServiceLink version="any" id="UNI:ServiceLink:ryen_to_holtet">
+						<ServiceLink version="1" id="UNI:ServiceLink:ryen_to_holtet">
 							<projections>
-								<LinkSequenceProjection version="any" id="UNI:LinkSequenceProjection:109-ryen_to_holtet">
+								<LinkSequenceProjection version="1" id="UNI:LinkSequenceProjection:109-ryen_to_holtet">
 									<gml:LineString srsName="WGS84" gml:id="ryen_to_holtet">
 										<gml:pos>59.894780 10.804309</gml:pos>
 										<gml:pos>59.892531 10.804000</gml:pos>
@@ -386,83 +386,83 @@
 									</gml:LineString>
 								</LinkSequenceProjection>
 							</projections>
-							<FromPointRef version="any" ref="UNI:ScheduledStopPoint:ryen_t"/>
-							<ToPointRef version="any" ref="UNI:ScheduledStopPoint:holtet"/>
+							<FromPointRef version="1" ref="UNI:ScheduledStopPoint:ryen_t"/>
+							<ToPointRef version="1" ref="UNI:ScheduledStopPoint:holtet"/>
 						</ServiceLink>
 					</serviceLinks>
 
 					<!-- ===STOP ASSIGNMENTs=== -->
 					<!-- Must be defined in order to assign Journey/Service Pattern stop point to actual StopPlace -->
 					<stopAssignments>
-						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:helsfyr_t" order="1">
-							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:helfyr_t"/>
+						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:helsfyr_t" order="1">
+							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr_t"/>
 							<QuayRef ref="NSR:Quay:helsfyr_t-QUAYID"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:brynseng_t" order="2">
-							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:brynseng_t"/>
+						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:brynseng_t" order="2">
+							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng_t"/>
 							<QuayRef ref="NSR:Quay:brynseng_t-QUAYID"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:hoyenhall_t" order="3">
-							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
+						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:hoyenhall_t" order="3">
+							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
 							<QuayRef ref="NSR:Quay:hoyenhall_t-QUAYID"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:manglerud_t" order="4">
-							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:manglerud_t"/>
+						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:manglerud_t" order="4">
+							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:manglerud_t"/>
 							<QuayRef ref="NSR:Quay:manglerud_t-QUAYID"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:ryen_t" order="5">
-							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
+						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:ryen_t" order="5">
+							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
 							<QuayRef ref="NSR:Quay:ryen_t-QUAYID"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="any" id="UNI:PassengerStopAssignment:holtet" order="6">
-							<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:holtet"/>
+						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:holtet" order="6">
+							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:holtet"/>
 							<QuayRef ref="NSR:Quay:holtet-QUAYID"/>
 						</PassengerStopAssignment>
 					</stopAssignments>
 					
 					<!-- ===JOURNEY PATTERNs=== -->
 					<journeyPatterns>
-						<JourneyPattern version="any" id="UNI:JourneyPattern:109">
-							<RouteRef ref="UNI:Route:109"/>
-							<DestinationDisplayRef ref="UNI:DestinationDisplay:holtet"/>
+						<JourneyPattern version="1" id="UNI:JourneyPattern:109">
+							<RouteRef version="1" ref="UNI:Route:109"/>
+							<DestinationDisplayRef version="1" ref="UNI:DestinationDisplay:holtet"/>
 							<pointsInSequence>
 								<!-- TODO: Legg inn korrekte holdeplasskoder -->
-								<StopPointInJourneyPattern version="any" id="UNI:StopPointInJourneyPattern:helfyr_t" order="1">
-									<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:helfyr_t"/>
+								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:helfyr_t" order="1">
+									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr_t"/>
 									<ForAlighting>false</ForAlighting>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="UNI:StopPointInJourneyPattern:brynseng_t" order="2">
-									<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:brynseng_t"/>
+								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:brynseng_t" order="2">
+									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng_t"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="UNI:StopPointInJourneyPattern:hoyenhall_t" order="3">
-									<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
+								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:hoyenhall_t" order="3">
+									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="UNI:StopPointInJourneyPattern:manglerud_t" order="4">
-									<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:manglerud_t"/>
+								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:manglerud_t" order="4">
+									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:manglerud_t"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="UNI:StopPointInJourneyPattern:ryen_t" order="5">
-									<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:ryen_t"/>
+								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:ryen_t" order="5">
+									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:ryen_t"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="UNI:StopPointInJourneyPattern:holtet" order="6">
-									<ScheduledStopPointRef version="any" ref="UNI:ScheduledStopPoint:holtet"/>
+								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:holtet" order="6">
+									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:holtet"/>
 									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" id="UNI:ServiceLinkInJourneyPattern:helsfyr_to_brynseng" order="1">
-									<ServiceLinkRef version="any" ref="UNI:ServiceLink:helsfyr_to_brynseng"/>
+								<ServiceLinkInJourneyPattern version="1" id="UNI:ServiceLinkInJourneyPattern:helsfyr_to_brynseng" order="1">
+									<ServiceLinkRef version="1" ref="UNI:ServiceLink:helsfyr_to_brynseng"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" id="UNI:ServiceLinkInJourneyPattern:brynseng_to_hoyenhall" order="2">
-									<ServiceLinkRef version="any" ref="UNI:ServiceLink:brynseng_to_hoyenhall"/>
+								<ServiceLinkInJourneyPattern version="1" id="UNI:ServiceLinkInJourneyPattern:brynseng_to_hoyenhall" order="2">
+									<ServiceLinkRef version="1" ref="UNI:ServiceLink:brynseng_to_hoyenhall"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" id="UNI:ServiceLinkInJourneyPattern:hoyenhall_to_manglerud" order="3">
-									<ServiceLinkRef version="any" ref="UNI:ServiceLink:hoyenhall_to_manglerud"/>
+								<ServiceLinkInJourneyPattern version="1" id="UNI:ServiceLinkInJourneyPattern:hoyenhall_to_manglerud" order="3">
+									<ServiceLinkRef version="1" ref="UNI:ServiceLink:hoyenhall_to_manglerud"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" id="UNI:ServiceLinkInJourneyPattern:manglerud_to_ryen" order="4">
-									<ServiceLinkRef version="any" ref="UNI:ServiceLink:manglerud_to_ryen"/>
+								<ServiceLinkInJourneyPattern version="1" id="UNI:ServiceLinkInJourneyPattern:manglerud_to_ryen" order="4">
+									<ServiceLinkRef version="1" ref="UNI:ServiceLink:manglerud_to_ryen"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" id="UNI:ServiceLinkInJourneyPattern:ryen_to_holtet" order="5">
-									<ServiceLinkRef version="any" ref="UNI:ServiceLink:ryen_to_holtet"/>
+								<ServiceLinkInJourneyPattern version="1" id="UNI:ServiceLinkInJourneyPattern:ryen_to_holtet" order="5">
+									<ServiceLinkRef version="1" ref="UNI:ServiceLink:ryen_to_holtet"/>
 								</ServiceLinkInJourneyPattern>
 							</linksInSequence>
 						</JourneyPattern>
@@ -471,244 +471,244 @@
 
 				<!-- TIMETABLE FRAME -->
 				<!-- Definert som et sett av avganger med referanse til dager (dagtyper) avgangen kjøres -->
-				<TimetableFrame version="any" id="UNI:TimetableFrame:1">
+				<TimetableFrame version="1" id="UNI:TimetableFrame:1">
 					<validityConditions>
-						<AvailabilityCondition version="any" id="UNI:AvailabilityCondition:1">
+						<AvailabilityCondition version="1" id="UNI:AvailabilityCondition:1">
 							<FromDate>2016-04-03T00:00:00</FromDate>
 							<IsAvailable>true</IsAvailable>
 						</AvailabilityCondition>
 					</validityConditions>
 					<vehicleJourneys>
 						<!-- TODO: Legg inn korrekte koder for #Ruter/Unibuss service -->
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0430">
+						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0430">
 							<DepartureTime>04:30:00</DepartureTime>
 							<dayTypes>
-								<DayTypeRef ref="UNI:DayType:weekday"/>
+								<DayTypeRef version="1" ref="UNI:DayType:weekday"/>
 							</dayTypes>
-							<JourneyPatternRef ref="UNI:JourneyPattern:109"/>
+							<JourneyPatternRef version="1" ref="UNI:JourneyPattern:109"/>
 							<!-- Optional: -->
-							<LineRef ref="UNI:line:109"/>
+							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
 								<TimetabledPassingTime>
 									<!-- Helsfyr T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>04:30:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Brynseng T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>04:32:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Høyenhall T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>04:33:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Manglerud T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>04:34:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Ryen T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>04:35:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Holtet -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:holtet"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>04:40:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
 						</ServiceJourney>
 
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0500">
+						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0500">
 							<dayTypes>
-								<DayTypeRef ref="UNI:DayType:weekday"/>
+								<DayTypeRef version="1" ref="UNI:DayType:weekday"/>
 							</dayTypes>
-							<JourneyPatternRef ref="UNI:JourneyPattern:109"/>
+							<JourneyPatternRef version="1" ref="UNI:JourneyPattern:109"/>
 							<!-- Optional: -->
-							<LineRef ref="UNI:line:109"/>
+							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>05:00:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>05:02:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>05:03:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>05:04:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>05:05:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:holtet"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>05:10:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
 						</ServiceJourney>
 
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0530">
+						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0530">
 							<DepartureTime>05:30:00</DepartureTime>
 							<dayTypes>
-								<DayTypeRef ref="UNI:DayType:weekday"/>
-								<DayTypeRef ref="UNI:DayType:saturday"/>
+								<DayTypeRef version="1" ref="UNI:DayType:weekday"/>
+								<DayTypeRef version="1" ref="UNI:DayType:saturday"/>
 							</dayTypes>
-							<JourneyPatternRef ref="UNI:JourneyPattern:109"/>
+							<JourneyPatternRef version="1" ref="UNI:JourneyPattern:109"/>
 							<!-- Optional: -->
-							<LineRef ref="UNI:line:109"/>
+							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
 								<TimetabledPassingTime>
 									<!-- Helsfyr T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>05:30:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Brynseng T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>05:32:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Høyenhall T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>05:33:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Manglerud T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>05:34:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Ryen T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>05:35:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Holtet -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:holtet"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>05:40:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
 						</ServiceJourney>
 
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0600">
+						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0600">
 							<dayTypes>
-								<DayTypeRef ref="UNI:DayType:saturday"/>
-								<DayTypeRef ref="UNI:DayType:sunday"/>
+								<DayTypeRef version="1" ref="UNI:DayType:saturday"/>
+								<DayTypeRef version="1" ref="UNI:DayType:sunday"/>
 							</dayTypes>
-							<JourneyPatternRef ref="UNI:JourneyPattern:109"/>
+							<JourneyPatternRef version="1" ref="UNI:JourneyPattern:109"/>
 							<!-- Optional: -->
-							<LineRef ref="UNI:line:109"/>
+							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>06:00:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>06:02:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>06:03:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>06:04:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>06:06:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:holtet"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>06:10:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
 						</ServiceJourney>
 
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0630">
+						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0630">
 							<DepartureTime>06:30:00</DepartureTime>
 							<dayTypes>
-								<DayTypeRef ref="UNI:DayType:saturday"/>
-								<DayTypeRef ref="UNI:DayType:sunday"/>
+								<DayTypeRef version="1" ref="UNI:DayType:saturday"/>
+								<DayTypeRef version="1" ref="UNI:DayType:sunday"/>
 							</dayTypes>
-							<JourneyPatternRef ref="UNI:JourneyPattern:109"/>
+							<JourneyPatternRef version="1" ref="UNI:JourneyPattern:109"/>
 							<!-- Optional: -->
-							<LineRef ref="UNI:line:109"/>
+							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
 								<TimetabledPassingTime>
 									<!-- Helsfyr T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>06:30:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Brynseng T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>06:32:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Høyenhall T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>06:33:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Manglerud T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>06:34:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Ryen T -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>06:35:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
 									<!-- Holtet -->
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:holtet"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>06:40:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
 						</ServiceJourney>
 
-						<ServiceJourney version="any" id="UNI:ServiceJourney:109-CODE-0700">
+						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0700">
 							<dayTypes>
-								<DayTypeRef ref="UNI:DayType:sunday"/>
+								<DayTypeRef version="1" ref="UNI:DayType:sunday"/>
 							</dayTypes>
-							<JourneyPatternRef ref="UNI:JourneyPattern:109"/>
+							<JourneyPatternRef version="1" ref="UNI:JourneyPattern:109"/>
 							<!-- Optional: -->
-							<LineRef ref="UNI:line:109"/>
+							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>07:00:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>07:02:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>07:03:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>07:04:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>07:07:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:holtet"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>07:10:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
@@ -717,37 +717,37 @@
 						<!-- ########################### -->
 						<!-- ALTERNATE DESCRIPTION pt. 1 -->
 						<!-- ########################### -->
-						<TemplateServiceJourney version="any" id="UNI:TemplateServiceJourney:109-weekdays">
+						<TemplateServiceJourney version="1" id="UNI:TemplateServiceJourney:109-weekdays">
 							<dayTypes>
-								<DayTypeRef ref="UNI:DayType:weekday"/>
+								<DayTypeRef version="1" ref="UNI:DayType:weekday"/>
 							</dayTypes>
-							<JourneyPatternRef ref="UNI:JourneyPattern:109"/>
-							<RhythmicalJourneyGroupRef ref="UNI:RhythmicalJourneyGroup:weekdays"/>
+							<JourneyPatternRef version="1" ref="UNI:JourneyPattern:109"/>
+							<RhythmicalJourneyGroupRef version="1" ref="UNI:RhythmicalJourneyGroup:weekdays"/>
 							<!-- Optional: -->
-							<LineRef ref="UNI:line:109"/>
+							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>00:30:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>00:32:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>00:33:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>00:34:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>00:37:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime>
-									<StopPointInJourneyPatternRef version="any" ref="UNI:StopPointInJourneyPattern:holtet"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>00:40:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
@@ -766,45 +766,45 @@
 					<!-- ALTERNATE DESCRIPTION pt. 2 -->
 					<!-- ########################### -->
 					<frequencyGroups>
-						<RhythmicalJourneyGroup version="any" id="UNI:RhythmicalJourneyGroup:weekdays">
+						<RhythmicalJourneyGroup version="1" id="UNI:RhythmicalJourneyGroup:weekdays">
 							<FirstDepartureTime>04:30:00</FirstDepartureTime>
 							<LastDepartureTime>05:30:00</LastDepartureTime>
 							<timebands>
-								<TimebandRef version="any" ref="UNI:Timeband:halfhour"/>
-								<TimebandRef version="any" ref="UNI:Timeband:fullhour"/>
+								<TimebandRef version="1" ref="UNI:Timeband:halfhour"/>
+								<TimebandRef version="1" ref="UNI:Timeband:fullhour"/>
 							</timebands>
 						</RhythmicalJourneyGroup>
-						<RhythmicalJourneyGroup version="any" id="UNI:RhythmicalJourneyGroup:saturday">
+						<RhythmicalJourneyGroup version="1" id="UNI:RhythmicalJourneyGroup:saturday">
 							<FirstDepartureTime>05:30:00</FirstDepartureTime>
 							<LastDepartureTime>06:30:00</LastDepartureTime>
 							<timebands>
-								<TimebandRef version="any" ref="UNI:Timeband:halfhour"/>
-								<TimebandRef version="any" ref="UNI:Timeband:fullhour"/>
+								<TimebandRef version="1" ref="UNI:Timeband:halfhour"/>
+								<TimebandRef version="1" ref="UNI:Timeband:fullhour"/>
 							</timebands>
 						</RhythmicalJourneyGroup>
-						<RhythmicalJourneyGroup version="any" id="UNI:RhythmicalJourneyGroup:sunday">
+						<RhythmicalJourneyGroup version="1" id="UNI:RhythmicalJourneyGroup:sunday">
 							<FirstDepartureTime>06:00:00</FirstDepartureTime>
 							<LastDepartureTime>07:00:00</LastDepartureTime>
 							<timebands>
-								<TimebandRef version="any" ref="UNI:Timeband:halfhour"/>
-								<TimebandRef version="any" ref="UNI:Timeband:fullhour"/>
+								<TimebandRef version="1" ref="UNI:Timeband:halfhour"/>
+								<TimebandRef version="1" ref="UNI:Timeband:fullhour"/>
 							</timebands>
 						</RhythmicalJourneyGroup>
 					</frequencyGroups>
 				</TimetableFrame>
 
 				<!-- ===SERVICE CALENDAR FRAME=== -->
-				<ServiceCalendarFrame version="any" id="UNI:ServiceCalendarFrame:01">
-					<ServiceCalendar version="any" id="UNI:ServiceCalendar:01">
+				<ServiceCalendarFrame version="1" id="UNI:ServiceCalendarFrame:01">
+					<ServiceCalendar version="1" id="UNI:ServiceCalendar:01">
 						<!-- ############################# -->
 						<!-- (for alternative description) -->
 						<!-- ############################# -->
 						<timebands>
-							<Timeband version="any" id="UNI:Timeband:fullhour">
+							<Timeband version="1" id="UNI:Timeband:fullhour">
 								<StartTime>00:00:00</StartTime>
 								<EndTime>00:00:00</EndTime>
 							</Timeband>
-							<Timeband version="any" id="UNI:Timeband:halfhour">
+							<Timeband version="1" id="UNI:Timeband:halfhour">
 								<StartTime>00:30:00</StartTime>
 								<EndTime>00:30:00</EndTime>
 							</Timeband>
@@ -812,7 +812,7 @@
 					</ServiceCalendar>
 
 					<dayTypes>
-						<DayType version="any" id="UNI:DayType:weekday">
+						<DayType version="1" id="UNI:DayType:weekday">
 							<Name>Ukedager (mandag til fredag)</Name>
 							<properties>
 								<PropertyOfDay>
@@ -820,7 +820,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="UNI:DayType:saturday">
+						<DayType version="1" id="UNI:DayType:saturday">
 							<Name>L&#216;rdag</Name>
 							<properties>
 								<PropertyOfDay>
@@ -828,7 +828,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="UNI:DayType:sunday">
+						<DayType version="1" id="UNI:DayType:sunday">
 							<Name>S&#216;ndag</Name>
 							<properties>
 								<PropertyOfDay>
