@@ -68,7 +68,7 @@
 					-->
 					
 					<organisations>
-						<Authority version="1" id="RUT:Authority:Ruter">						
+						<Authority version="1" id="RUT:Authority:Ruter">					
 							<!-- Organisasjonsnummer -->
 							<CompanyNumber>991609407</CompanyNumber>
 							<Name>Ruter#</Name>
@@ -76,7 +76,7 @@
 							<ContactDetails>
 								<Email>post@ruter.no</Email>
 								<Phone>22 08 43 00</Phone>
-								<Url>www.ruter.no</Url>								
+								<Url>www.ruter.no</Url>
 							</ContactDetails>
 							<PrivateContactDetails>
 								<Email>post@unibuss.no</Email>
@@ -472,12 +472,6 @@
 				<!-- TIMETABLE FRAME -->
 				<!-- Definert som et sett av avganger med referanse til dager (dagtyper) avgangen kjøres -->
 				<TimetableFrame version="1" id="UNI:TimetableFrame:1">
-					<validityConditions>
-						<AvailabilityCondition version="1" id="UNI:AvailabilityCondition:1">
-							<FromDate>2016-04-03T00:00:00</FromDate>
-							<IsAvailable>true</IsAvailable>
-						</AvailabilityCondition>
-					</validityConditions>
 					<vehicleJourneys>
 						<!-- TODO: Legg inn korrekte koder for #Ruter/Unibuss service -->
 						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0430">
