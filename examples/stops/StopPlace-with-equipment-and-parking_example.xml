@@ -60,6 +60,10 @@
 					
 					<Covered>indoors</Covered>
 					
+					<facilities>
+						<SiteFacilitySetRef ref="NSR:SiteFacilitySet:1"/>
+					</facilities>
+					
 					<equipmentPlaces>
 						<EquipmentPlace id="NSR:EquipmentPlace" version="1">
 							<Centroid>
@@ -136,10 +140,10 @@
 					</localServices>
 					
 					<TransportMode>bus</TransportMode>
-					
 					<StopPlaceType>busStation</StopPlaceType>
+					
 					<quays>
-						<Quay version="1" id="NSR:Quay:11111111">
+						<Quay version="1" id="NSR:Quay:1">
 							<Centroid>
 								<!-- WGS84 -->
 								<Location srsName="WGS84">
@@ -161,6 +165,10 @@
 							</AccessibilityAssessment>
 							
 							<Lighting>wellLit</Lighting>
+							
+							<facilities>
+								<SiteFacilitySetRef ref="NSR:SiteFacilitySet:2"/>
+							</facilities>
 							
 							<placeEquipments>
 								<ShelterEquipment id="NSR:ShelterEquipment:1" version="1">
@@ -185,7 +193,7 @@
 			
 			<parkings>
 				<!-- ParkAndRide -->
-				<Parking version="1" id="NSR:Parking:1">
+				<Parking id="NSR:Parking:1" version="1">
 					<ParkingType>parkAndRide</ParkingType>
 					<ParkingVehicleTypes>car motorcycle</ParkingVehicleTypes>
 					<PrincipalCapacity>100</PrincipalCapacity>
@@ -201,17 +209,30 @@
 				</Parking>
 				
 				<!-- Sykkelparkering (utendørs) -->
-				<Parking version="1" id="NSR:Parking:2">
+				<Parking id="NSR:Parking:2" version="1">
+					<Lighting>poorlyLit</Lighting>
 					<ParkingVehicleTypes>pedalCycle</ParkingVehicleTypes>
-					<PrincipalCapacity>20</PrincipalCapacity>
 					<TotalCapacity>20</TotalCapacity>
 					<OvernightParkingPermitted>true</OvernightParkingPermitted>
-					<RechargingAvailable>false</RechargingAvailable>
 					<ParkingReservation>noReservations</ParkingReservation>
 				</Parking>
 				
-				<!-- TODO: Sykkelhotell (registrering for tilgang til lukket sykkelparkeringsområde) -->
-				
+				<!-- Sykkelparkering (lukket) -->
+				<Parking id="NSR:Parking:3" version="1">
+					<Covered>covered</Covered>
+					<Gated>gatedArea</Gated>
+					<Lighting>wellLit</Lighting>
+					<entrances>
+						<Entrance id="NSR:Entrance:1" version="1">
+							<EntranceType>door</EntranceType>
+						</Entrance>
+					</entrances>
+					<ParkingVehicleTypes>pedalCycle</ParkingVehicleTypes>
+					<PrincipalCapacity>20</PrincipalCapacity>
+					<OvernightParkingPermitted>true</OvernightParkingPermitted>
+					<ParkingReservation>reservationRequired</ParkingReservation>
+					<BookingUrl>http://www.banenor.no/Jernbanen/Sykle-til-stasjonen-/</BookingUrl>
+				</Parking>
 			</parkings>
 			
 			<!-- Supplementary construction, can be automatically assessed from the pathLinks -->
@@ -237,11 +258,10 @@
 				</PathLink>
 			</pathLinks>
 			
-			<!-- TODO: Endelig verifikasjon at vi ikke trenger noen av disse datasettene? -->
+			<!-- NB: Enkelte redundante datasett (modellering som Equipment er foretrukket), kun tatt med for illustrasjon -->
 			<siteFacilitySets>
+				<!-- se NeTEx part 1 s. 436 (7.7.14.2.3 Common Facility Values – Physical Model) -->
 				<SiteFacilitySet id="NSR:SiteFacilitySet:1" version="1">
-					<!-- se NeTEx part 1 s. 436 (7.7.14.2.3 Common Facility Values – Physical Model) -->
-					<MobilityFacilityList>tactileGuidingStrips tactilePatformEdges</MobilityFacilityList>
 					<!-- NB: List issue for PassengerInformationEquipment -->
 					<!--PassengerInformationEquipmentList>realTimeDepartures lineNetworkPlan</PassengerInformationEquipmentList -->
 					<PassengerInformationEquipmentList>lineNetworkPlan</PassengerInformationEquipmentList>
@@ -249,6 +269,10 @@
 					<LuggageLockerFacilityList>lockers bikeRack</LuggageLockerFacilityList>
 					<LuggageServiceFacilityList>leftLuggage</LuggageServiceFacilityList>
 					<ParkingFacilityList>parkAndRidePark carPark cyclePark</ParkingFacilityList>
+				</SiteFacilitySet>
+				
+				<SiteFacilitySet id="NSR:SiteFacilitySet:2" version="1">
+					<MobilityFacilityList>tactileGuidingStrips tactilePatformEdges</MobilityFacilityList>
 				</SiteFacilitySet>
 			</siteFacilitySets>
 			
