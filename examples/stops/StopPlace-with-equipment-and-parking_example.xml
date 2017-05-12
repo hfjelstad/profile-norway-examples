@@ -11,7 +11,7 @@
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
 		
-		<!-- Test construction, to be discarded -->
+		<!-- GeneralFrame test construction, to be discarded -->
 		<GeneralFrame version="1" id="NSR:GeneralFrame:1">
 			<members>
 				<Zone version="1" id="NSR:Zone:1">
@@ -28,6 +28,7 @@
 				</Zone>
 			</members>
 		</GeneralFrame>
+		
 		
 		<SiteFrame version="1" id="NSR:SiteFrame:1">
 			<stopPlaces>
