@@ -5,41 +5,90 @@
 <PublicationDelivery
 	version="1.04:NO-NeTEx-stops:1.0" 
 	xmlns="http://www.netex.org.uk/netex"
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<PublicationTimestamp>2017-04-04T14:14:14.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
-		<SiteFrame version="any" id="NSR:SiteFrame:1" >
+		
+		<!-- Test construction, to be discarded -->
+		<GeneralFrame version="1" id="NSR:GeneralFrame:1">
+			<members>
+				<Zone version="1" id="NSR:Zone:1">
+					<gml:Polygon gml:id="PolygonID-1"> <!-- merk at GML er eksternt definert datatype med andre tekniske krav til ID en NeTEx profil Norge -->
+						<gml:exterior>
+							<gml:LinearRing>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+							</gml:LinearRing>
+						</gml:exterior>
+					</gml:Polygon>
+				</Zone>
+			</members>
+		</GeneralFrame>
+		
+		<SiteFrame version="1" id="NSR:SiteFrame:1">
 			<stopPlaces>
 				<!-- ===Stop=== -->
 				<!-- Nasjonal ID fra stoppestedsregisteret -->
-				<StopPlace version="any" id="NSR:StopPlace:10000000">
+				<StopPlace version="1" id="NSR:StopPlace:10000000">
 					<Name>Sample-stop</Name>
+					
+					<!-- Eksempler på mulig konstruksjon av omriss, vil normalt ikke benyttes -->
+					<gml:Polygon gml:id="PolygonID-2"> <!-- merk at GML er eksternt definert datatype med andre tekniske krav til ID en NeTEx profil Norge -->
+						<gml:exterior>
+							<gml:LinearRing>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+							</gml:LinearRing>
+						</gml:exterior>
+						<!-- interior tas kun med hvis relevant -->
+						<gml:interior>
+							<gml:LinearRing>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+								<gml:pos srsDimension="2">3.14159265358979E0 3.14159265358979E0</gml:pos>
+							</gml:LinearRing>
+						</gml:interior>	
+					</gml:Polygon>
+					
 					<Covered>indoors</Covered>
 					
 					<equipmentPlaces>
-						<EquipmentPlace id="tests" version="any">
-							<Centroid></Centroid>
+						<EquipmentPlace id="NSR:EquipmentPlace" version="1">
+							<Centroid>
+								<Location>
+									<gml:pos>3.14159265358979E0 3.14159265358979E0</gml:pos>
+								</Location>
+							</Centroid>
+							<placeEquipments>
+								<WaitingEquipmentRef version="1" ref="NSR:WaitingRoomEquipment:1"/>
+							</placeEquipments>
 						</EquipmentPlace>
 					</equipmentPlaces>
 					
 					<placeEquipments>
-						<TicketingEquipment id="RUT:TicketingEquipment:1" version="any">
+						<TicketingEquipment id="RUT:TicketingEquipment:1" version="1">
 							<VehicleModes>bus tram metro</VehicleModes>
 							<NumberOfMachines>2</NumberOfMachines>
 						</TicketingEquipment>
-						<TicketingEquipment id="ENT:TicketingEquipment:2" version="any">
+						<TicketingEquipment id="ENT:TicketingEquipment:2" version="1">
 							<VehicleModes>rail</VehicleModes>
 							<NumberOfMachines>1</NumberOfMachines>
 						</TicketingEquipment>
 						
-						<WaitingRoomEquipment id="NSR:WaitingRoomEquipment:1" version="any">
+						<WaitingRoomEquipment id="NSR:WaitingRoomEquipment:1" version="1">
 							<Seats>7</Seats>
 							<StepFree>true</StepFree>
 							<Heated>false</Heated>
 						</WaitingRoomEquipment>
 						
-						<SanitaryEquipment id="NSR:SanitaryEquipment:1" version="any">
+						<SanitaryEquipment id="NSR:SanitaryEquipment:1" version="1">
 							<Gender>both</Gender>							
 							<SanitaryFacilityList>toilet wheelChairAccessToilet</SanitaryFacilityList>
 						</SanitaryEquipment>
@@ -49,26 +98,38 @@
 							<CycleStorageType>racks</CycleStorageType>
 						</CycleStorageEquipment>
 
-						<GeneralSign id="NSR:GeneralSign:1" version="any">
+						<GeneralSign id="NSR:GeneralSign:1" version="1">
 							<PrivateCode>512</PrivateCode>
 							<SignContentType>transportMode</SignContentType>
 						</GeneralSign>
 						
-						<PassengerInformationEquipment id="RUT:PassengerInformationEquipment:1" version="any">
+						<PassengerInformationEquipment id="RUT:PassengerInformationEquipment:1" version="1">
 							<!--PassengerInformationEquipmentList>realTimeDepartures lineNetworkPlan timetablePoster fareInformation interactiveKiosk</PassengerInformationEquipmentList1-->
 							<PassengerInformationFacilityList>nextStopIndicator passengerInformationDisplay realTimeConnections stopAnnouncements</PassengerInformationFacilityList>
 							<!-- IKKE I BRUK PDD. (ref. https://rutebanken.atlassian.net/wiki/display/REIS/Known+errors) -->
 						</PassengerInformationEquipment>
+						
+						<!-- Pdd. ikke del av NeTEx profil Norge -->
+						<!--
+						<CrossingEquipment  id="NSR:CrossingEquipment:1" version="1">
+							<CrossingType>roadCrossing</CrossingType>
+							<ZebraCrossing>true</ZebraCrossing>
+							<PedestrianLights>true</PedestrianLights>
+							<AcousticCrossingAids>true</AcousticCrossingAids>
+							<TactileGuidanceStrips>true</TactileGuidanceStrips> <VisualGuidanceBands>true</VisualGuidanceBands> 	
+							<DroppedKerb>true</DroppedKerb>
+						</CrossingEquipment>
+						-->
 					</placeEquipments>
 					
 			
 					<localServices>
-						<LuggageService id="NSR:LuggageService:1" version="any">
+						<LuggageService id="NSR:LuggageService:1" version="1">
 							<LuggageTrolleys>true</LuggageTrolleys>
 							<FreeToUse>true</FreeToUse>
 						</LuggageService>
 						
-						<LeftLuggageService id="NSR:LeftLuggageService:1" version="any">
+						<LeftLuggageService id="NSR:LeftLuggageService:1" version="1">
 							<LockerFee>true</LockerFee>
 						</LeftLuggageService>
 					</localServices>
@@ -77,7 +138,7 @@
 					
 					<StopPlaceType>busStation</StopPlaceType>
 					<quays>
-						<Quay version="any" id="NSR:Quay:11111111">
+						<Quay version="1" id="NSR:Quay:11111111">
 							<Centroid>
 								<!-- WGS84 -->
 								<Location srsName="WGS84">
@@ -87,7 +148,7 @@
 							</Centroid>
 							
 							<!-- Generelt tilgjengelig med rullestol -->
-							<AccessibilityAssessment version="any" id="NSR:AccessibilityAssessment:1">
+							<AccessibilityAssessment version="1" id="NSR:AccessibilityAssessment:1">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
 									<!-- Minimumskrav til UU-informasjon -->
@@ -101,11 +162,17 @@
 							<Lighting>wellLit</Lighting>
 							
 							<placeEquipments>
-								<ShelterEquipment id="NSR:ShelterEquipment:1" version="any">
+								<ShelterEquipment id="NSR:ShelterEquipment:1" version="1">
 									<Seats>2</Seats>
 									<StepFree>true</StepFree>
 									<Enclosed>true</Enclosed>
 								</ShelterEquipment>
+								<CrossingEquipment  id="NSR:eq:1" version="1">
+									<TactileGuidanceStrips>true</TactileGuidanceStrips>
+								</CrossingEquipment>
+								<RoughSurface  id="NSR:eq:2" version="1">
+									<SurfaceType>asphalt</SurfaceType>
+								</RoughSurface>
 							</placeEquipments>
 
 							<PublicCode>2</PublicCode>
@@ -117,7 +184,7 @@
 			
 			<parkings>
 				<!-- ParkAndRide -->
-				<Parking version="any" id="NSR:Parking:1">
+				<Parking version="1" id="NSR:Parking:1">
 					<ParkingType>parkAndRide</ParkingType>
 					<ParkingVehicleTypes>car motorcycle</ParkingVehicleTypes>
 					<PrincipalCapacity>100</PrincipalCapacity>
@@ -133,7 +200,7 @@
 				</Parking>
 				
 				<!-- Sykkelparkering (utendørs) -->
-				<Parking version="any" id="NSR:Parking:2">
+				<Parking version="1" id="NSR:Parking:2">
 					<ParkingVehicleTypes>pedalCycle</ParkingVehicleTypes>
 					<PrincipalCapacity>20</PrincipalCapacity>
 					<TotalCapacity>20</TotalCapacity>
@@ -146,10 +213,35 @@
 				
 			</parkings>
 			
+			<!-- Supplementary construction, can be automatically assessed from the pathLinks -->
+			<navigationPaths>
+				<NavigationPath id="NSR:NavigationPath:1" version="1">
+					<Covered>indoors</Covered>
+					<pathLinksInSequence>
+						<PathLinkInSequence id="NSR:PathLinkInSequence:1" version="1" order="1">
+							<PathLinkRef ref="NSR:PathLink:1"></PathLinkRef>
+						</PathLinkInSequence>
+					</pathLinksInSequence>
+				</NavigationPath>
+			</navigationPaths>
+			
+			<pathLinks>
+				<PathLink id="NSR:PathLink:1" version="1">
+					<From>
+						<PlaceRef ref="NSR:StopPlace:10000000" version="1"/>
+					</From>
+					<To>
+						<PlaceRef ref="NSR:Parking:1" version="1"/>
+					</To>
+				</PathLink>
+			</pathLinks>
+			
 			<!-- TODO: Endelig verifikasjon at vi ikke trenger noen av disse datasettene? -->
 			<siteFacilitySets>
-				<SiteFacilitySet id="NSR:SiteFacilitySet:2" version="any">
+				<SiteFacilitySet id="NSR:SiteFacilitySet:1" version="1">
 					<!-- se NeTEx part 1 s. 436 (7.7.14.2.3 Common Facility Values – Physical Model) -->
+					<MobilityFacilityList>tactileGuidingStrips tactilePatformEdges</MobilityFacilityList>
+					<!-- NB: List issue for PassengerInformationEquipment -->
 					<!--PassengerInformationEquipmentList>realTimeDepartures lineNetworkPlan</PassengerInformationEquipmentList -->
 					<PassengerInformationEquipmentList>lineNetworkPlan</PassengerInformationEquipmentList>
 					<PassengerInformationFacilityList>passengerInformationDisplay nextStopIndicator</PassengerInformationFacilityList>
