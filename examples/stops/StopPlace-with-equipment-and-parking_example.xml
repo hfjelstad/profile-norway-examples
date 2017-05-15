@@ -219,6 +219,7 @@
 				
 				<!-- Sykkelparkering (lukket) -->
 				<Parking id="NSR:Parking:3" version="1">
+					<PublicUse>authorisedPublicOnly</PublicUse>
 					<Covered>covered</Covered>
 					<Gated>gatedArea</Gated>
 					<Lighting>wellLit</Lighting>
@@ -230,7 +231,7 @@
 					<ParkingVehicleTypes>pedalCycle</ParkingVehicleTypes>
 					<PrincipalCapacity>20</PrincipalCapacity>
 					<OvernightParkingPermitted>true</OvernightParkingPermitted>
-					<ParkingReservation>reservationRequired</ParkingReservation>
+					<ParkingReservation>registrationRequired</ParkingReservation>
 					<BookingUrl>http://www.banenor.no/Jernbanen/Sykle-til-stasjonen-/</BookingUrl>
 				</Parking>
 			</parkings>
