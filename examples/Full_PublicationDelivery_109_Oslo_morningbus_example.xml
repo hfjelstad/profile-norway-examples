@@ -424,12 +424,12 @@
 					<journeyPatterns>
 						<JourneyPattern version="1" id="UNI:JourneyPattern:109">
 							<RouteRef version="1" ref="UNI:Route:109"/>
-							<DestinationDisplayRef version="1" ref="UNI:DestinationDisplay:holtet"/>
 							<pointsInSequence>
 								<!-- TODO: Legg inn korrekte holdeplasskoder -->
 								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:helfyr_t" order="1">
 									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr_t"/>
 									<ForAlighting>false</ForAlighting>
+									<DestinationDisplayRef version="1" ref="UNI:DestinationDisplay:holtet"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:brynseng_t" order="2">
 									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng_t"/>
