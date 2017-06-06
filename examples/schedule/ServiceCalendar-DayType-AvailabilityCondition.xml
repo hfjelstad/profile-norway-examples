@@ -10,24 +10,24 @@
 	<PublicationTimestamp>2016-06-28T12:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
-		<CompositeFrame version="any" id="RUT:cf:1">
+		<CompositeFrame version="any" id="NSR:CompositeFrame:1">
 			<frames>
 				
-				<ServiceCalendarFrame version="any" id="RUT:ServiceCalendarFrame:default">
+				<ServiceCalendarFrame version="any" id="NSR:ServiceCalendarFrame:default">
 					
 					<validityConditions>
-						<AvailabilityCondition version="any" id="RUT:AvailabilityCondition:1">
+						<AvailabilityCondition version="any" id="NSR:AvailabilityCondition:1">
 							<FromDate>2016-12-01T00:00:00</FromDate>
 							<ToDate>2016-12-23T24:00:00</ToDate>
 						</AvailabilityCondition>
-						<AvailabilityCondition version="any" id="RUT:AvailabilityCondition:2">
+						<AvailabilityCondition version="any" id="NSR:AvailabilityCondition:2">
 							<FromDate>2016-12-24T00:00:00</FromDate>
 							<ToDate>2016-12-25T24:00:00</ToDate>
 						</AvailabilityCondition>
 					</validityConditions>
 
 					<dayTypes>
-						<DayType version="any" id="RUT:DayType:weekdays">
+						<DayType version="any" id="NSR:DayType:weekdays">
 							<validityConditions>
 								<AvailabilityConditionRef ref="AvailabilityCondition:1"/>
 							</validityConditions>
@@ -38,7 +38,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="RUT:DayType:weekend">
+						<DayType version="any" id="NSR:DayType:weekend">
 							<validityConditions>
 								<AvailabilityConditionRef ref="AvailabilityCondition:1"/>
 							</validityConditions>
@@ -50,7 +50,7 @@
 							</properties>
 						</DayType>
 						
-						<DayType version="any" id="RUT:DayType:Christmas">
+						<DayType version="any" id="NSR:DayType:Christmas">
 							<validityConditions>
 								<AvailabilityConditionRef ref="AvailabilityCondition:2"/>
 							</validityConditions>
@@ -69,23 +69,23 @@
 				</ServiceCalendarFrame>
 				
 				
-				<TimetableFrame version="any" id="RUT:TimetableFrame:1">
+				<TimetableFrame version="any" id="NSR:TimetableFrame:1">
 					<vehicleJourneys>
-						<ServiceJourney version="any" id="RUT:ServiceJourney:0700">
+						<ServiceJourney version="any" id="NSR:ServiceJourney:0700">
 							<dayTypes>
-								<DayTypeRef version="any" ref="RUT:DayType:weekdays"/>
-								<DayTypeRef version="any" ref="RUT:DayType:weekend"/>
+								<DayTypeRef version="any" ref="NSR:DayType:weekdays"/>
+								<DayTypeRef version="any" ref="NSR:DayType:weekend"/>
 							</dayTypes>
 							
 						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
 				
-				<TimetableFrame version="any" id="RUT:TimetableFrame:2">
+				<TimetableFrame version="any" id="NSR:TimetableFrame:2">
 					<vehicleJourneys>
-						<ServiceJourney version="any" id="RUT:ServiceJourney:0800">
+						<ServiceJourney version="any" id="NSR:ServiceJourney:0800">
 							<dayTypes>
-								<DayTypeRef version="any" ref="RUT:DayType:Christmas"/>
+								<DayTypeRef version="any" ref="NSR:DayType:Christmas"/>
 							</dayTypes>
 						</ServiceJourney>
 					</vehicleJourneys>

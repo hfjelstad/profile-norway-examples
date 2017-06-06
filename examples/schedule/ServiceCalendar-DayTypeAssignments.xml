@@ -10,20 +10,20 @@
 	<PublicationTimestamp>2016-06-28T12:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
-		<CompositeFrame version="any" id="RUT:CompositeFrame:1">
+		<CompositeFrame version="any" id="NSR:CompositeFrame:1">
 			<frames>
 				
-				<ServiceCalendarFrame version="any" id="RUT:ServiceCalendarFrame:default">
+				<ServiceCalendarFrame version="any" id="NSR:ServiceCalendarFrame:default">
 					<dayTypes>
-						<DayType version="any" id="RUT:DayType:uke">
-							<Name>ukeer</Name>
+						<DayType version="any" id="NSR:DayType:uke">
+							<Name>Ukedager</Name>
 							<properties>
 								<PropertyOfDay>
 									<DaysOfWeek>Weekdays</DaysOfWeek>
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="RUT:DayType:helg">
+						<DayType version="any" id="NSR:DayType:helg">
 							<Name>Helg</Name>
 							<properties>
 								<PropertyOfDay>
@@ -31,7 +31,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="RUT:DayType:jul">
+						<DayType version="any" id="NSR:DayType:jul">
 							<Name>Julen</Name>
 							<properties>
 								<PropertyOfDay>
@@ -42,7 +42,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="RUT:DayType:romjul">
+						<DayType version="any" id="NSR:DayType:romjul">
 							<Name>Romjulen</Name>
 							<properties>
 								<PropertyOfDay>
@@ -62,7 +62,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="RUT:DayType:nyttar">
+						<DayType version="any" id="NSR:DayType:nyttar">
 							<Name>Nyttår</Name>
 							<properties>
 								<PropertyOfDay>
@@ -76,19 +76,19 @@
 					</dayTypes>
 					
 					<operatingPeriods>
-						<OperatingPeriod version="any" id="RUT:OperatingPeriod:desember-for-jul">
+						<OperatingPeriod version="any" id="NSR:OperatingPeriod:desember-for-jul">
 							<FromDate>2016-12-01T00:00:00</FromDate>
 							<ToDate>2016-12-23T24:00:00</ToDate>
 						</OperatingPeriod>
-						<OperatingPeriod version="any" id="RUT:OperatingPeriod:jul">
+						<OperatingPeriod version="any" id="NSR:OperatingPeriod:jul">
 							<FromDate>2016-12-24T00:00:00</FromDate>
 							<ToDate>2016-12-26T24:00:00</ToDate>
 						</OperatingPeriod>
-						<OperatingPeriod version="any" id="RUT:OperatingPeriod:romjul">
+						<OperatingPeriod version="any" id="NSR:OperatingPeriod:romjul">
 							<FromDate>2016-12-27T00:00:00</FromDate>
 							<ToDate>2016-12-30T24:00:00</ToDate>
 						</OperatingPeriod>
-						<OperatingPeriod version="any" id="RUT:OperatingPeriod:nyttar">
+						<OperatingPeriod version="any" id="NSR:OperatingPeriod:nyttar">
 							<FromDate>2016-12-31T00:00:00</FromDate>
 							<ToDate>2017-01-01T24:00:00</ToDate>
 						</OperatingPeriod>
@@ -96,72 +96,72 @@
 					
 					<dayTypeAssignments>
 						<!-- Før jul -->
-						<DayTypeAssignment version="any" order="1" id="RUT:DayTypeAssignment:desember-for-jul:1">
-							<OperatingPeriodRef version="any" ref="RUT:OperatingPeriod:desember-for-jul"/>
-							<DayTypeRef version="any" ref="RUT:DayType:uke"/>
+						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:desember-for-jul:1">
+							<OperatingPeriodRef version="any" ref="NSR:OperatingPeriod:desember-for-jul"/>
+							<DayTypeRef version="any" ref="NSR:DayType:uke"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="RUT:DayTypeAssignment:desember-for-jul:2">
-							<OperatingPeriodRef version="any" ref="RUT:OperatingPeriod:desember-for-jul"/>
-							<DayTypeRef version="any" ref="RUT:DayType:helg"/>
+						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:desember-for-jul:2">
+							<OperatingPeriodRef version="any" ref="NSR:OperatingPeriod:desember-for-jul"/>
+							<DayTypeRef version="any" ref="NSR:DayType:helg"/>
 						</DayTypeAssignment>
 						<!-- Julen -->
-						<DayTypeAssignment version="any" order="1" id="RUT:DayTypeAssignment:jul">
-							<OperatingPeriodRef ref="RUT:OperatingPeriod:jul"/>
-							<DayTypeRef version="any" ref="RUT:DayType:jul"/>
+						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:jul">
+							<OperatingPeriodRef ref="NSR:OperatingPeriod:jul"/>
+							<DayTypeRef version="any" ref="NSR:DayType:jul"/>
 						</DayTypeAssignment>
 						<!-- Romjulen -->
-						<DayTypeAssignment version="any" order="1" id="RUT:DayTypeAssignment:romjul">
-							<OperatingPeriodRef ref="RUT:OperatingPeriod:romjul"/>
-							<DayTypeRef version="any" ref="RUT:DayType:romjul"/>
+						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:romjul">
+							<OperatingPeriodRef ref="NSR:OperatingPeriod:romjul"/>
+							<DayTypeRef version="any" ref="NSR:DayType:romjul"/>
 						</DayTypeAssignment>
 						<!-- Nyttår -->
-						<DayTypeAssignment version="any" order="1" id="RUT:DayTypeAssignment:nyttar">
-							<OperatingPeriodRef ref="RUT:OperatingPeriod:nyttar"/>
-							<DayTypeRef version="any" ref="RUT:DayType:nyttar"/>
+						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:nyttar">
+							<OperatingPeriodRef ref="NSR:OperatingPeriod:nyttar"/>
+							<DayTypeRef version="any" ref="NSR:DayType:nyttar"/>
 						</DayTypeAssignment>
 					</dayTypeAssignments>
 				</ServiceCalendarFrame>
 
 
-				<TimetableFrame version="any" id="RUT:TimetableFrame:desember-for-jul">
-					<ServiceCalendarFrameRef version="any" ref="RUT:ServiceCalendarFrame:default"/>
+				<TimetableFrame version="any" id="NSR:TimetableFrame:desember-for-jul">
+					<ServiceCalendarFrameRef version="any" ref="NSR:ServiceCalendarFrame:default"/>
 					<vehicleJourneys>
-						<ServiceJourney version="any" id="RUT:ServiceJourney:0700">
+						<ServiceJourney version="any" id="NSR:ServiceJourney:0700">
 							<dayTypes>
-								<DayTypeRef version="any" ref="RUT:DayType:uke"/>
-								<DayTypeRef version="any" ref="RUT:DayType:helg"/>
+								<DayTypeRef version="any" ref="NSR:DayType:uke"/>
+								<DayTypeRef version="any" ref="NSR:DayType:helg"/>
 							</dayTypes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="RUT:ServiceJourney:0800">
+						<ServiceJourney version="any" id="NSR:ServiceJourney:0800">
 							<dayTypes>
-								<DayTypeRef version="any" ref="RUT:DayType:helg"/>
-								<DayTypeRef version="any" ref="RUT:DayType:jul"/>
-								<DayTypeRef version="any" ref="RUT:DayType:romjul"/>
-								<DayTypeRef version="any" ref="RUT:DayType:nyttar"/>
+								<DayTypeRef version="any" ref="NSR:DayType:helg"/>
+								<DayTypeRef version="any" ref="NSR:DayType:jul"/>
+								<DayTypeRef version="any" ref="NSR:DayType:romjul"/>
+								<DayTypeRef version="any" ref="NSR:DayType:nyttar"/>
 							</dayTypes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="RUT:ServiceJourney:0900">
+						<ServiceJourney version="any" id="NSR:ServiceJourney:0900">
 							<dayTypes>
-								<DayTypeRef version="any" ref="RUT:DayType:uke"/>
-								<DayTypeRef version="any" ref="RUT:DayType:jul"/>
-								<DayTypeRef version="any" ref="RUT:DayType:nyttar"/>
+								<DayTypeRef version="any" ref="NSR:DayType:uke"/>
+								<DayTypeRef version="any" ref="NSR:DayType:jul"/>
+								<DayTypeRef version="any" ref="NSR:DayType:nyttar"/>
 							</dayTypes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="RUT:ServiceJourney:1200">
+						<ServiceJourney version="any" id="NSR:ServiceJourney:1200">
 							<dayTypes>
-								<DayTypeRef version="any" ref="RUT:DayType:jul"/>
-								<DayTypeRef version="any" ref="RUT:DayType:romjul"/>
-								<DayTypeRef version="any" ref="RUT:DayType:nyttar"/>
+								<DayTypeRef version="any" ref="NSR:DayType:jul"/>
+								<DayTypeRef version="any" ref="NSR:DayType:romjul"/>
+								<DayTypeRef version="any" ref="NSR:DayType:nyttar"/>
 							</dayTypes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="RUT:ServiceJourney:1600">
+						<ServiceJourney version="any" id="NSR:ServiceJourney:1600">
 							<dayTypes>
-								<DayTypeRef version="any" ref="RUT:DayType:uke"/>
-								<DayTypeRef version="any" ref="RUT:DayType:helg"/>
+								<DayTypeRef version="any" ref="NSR:DayType:uke"/>
+								<DayTypeRef version="any" ref="NSR:DayType:helg"/>
 							</dayTypes>
 						</ServiceJourney>
 					</vehicleJourneys>
