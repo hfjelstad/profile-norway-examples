@@ -3,9 +3,9 @@
 <!-- ==== Simple Stop Example ====== 
 Eksempelet er basert på offisielle NeTEx-XML eksempler og viser et stoppested med to quays i gaten uten spesielle fasiliteter 
     Objektet består av
-       (i)   STOP PLACE		NSR:StopPlace:12345678			Bryn skole (i Ole Deviks vei)
-       (ii)  QUAY			NSR:Quay:12345679		Bryn skole southbound (to city center)
-       (iii) QUAY			NSR:Quay:12345670		Bryn skole northbound (from city center)
+       (i)   STOP PLACE		NSR:StopPlace:12345678		Bryn skole (i Ole Deviks vei)
+       (ii)  QUAY			NSR:Quay:12345679			Bryn skole southbound (to city center)
+       (iii) QUAY			NSR:Quay:12345670			Bryn skole northbound (from city center)
 
 Frames (gruppering)
 	En COMPOSITE FRAME brukes for å gruppere (og versjonere) eksempelet
@@ -20,8 +20,7 @@ Frames (gruppering)
 	xmlns="http://www.netex.org.uk/netex"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:gml="http://www.opengis.net/gml/3.2"
-	xmlns:siri="http://www.siri.org.uk/siri"
-	xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
+	xmlns:siri="http://www.siri.org.uk/siri">
 	<PublicationTimestamp>2016-04-29T12:30:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
@@ -51,13 +50,24 @@ Frames (gruppering)
 								</Location>
 							</Centroid>
 							<AccessibilityAssessment version="any" id="NSR:AccessibilityAssessment:1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<MobilityImpairedAccess>unknown</MobilityImpairedAccess>
 								<limitations>
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
+										<LiftFreeAccess>false</LiftFreeAccess>
 									</AccessibilityLimitation>
 								</limitations>
+								<suitabilities>
+									<Suitability version="any" id="suitability">
+										<MobilityNeed>assistedWheelchair</MobilityNeed>
+										<Suitable>suitable</Suitable>
+									</Suitability>
+									<Suitability version="any" id="suitability2">
+										<MedicalNeed>allergic</MedicalNeed>
+										<Suitable>notSuitable</Suitable>
+									</Suitability>
+								</suitabilities>
 							</AccessibilityAssessment>
 
 							<placeEquipments>
@@ -102,8 +112,8 @@ Frames (gruppering)
 								</Quay>
 							</quays>
 						</StopPlace>
-						
 					</stopPlaces>
+					
 					
 					<siteFacilitySets>
 						<!-- TODO: Rapportert forslag til utvidelse av NeTEx slik at dette... -->
@@ -113,14 +123,11 @@ Frames (gruppering)
 						<SiteFacilitySet id="NSR:SiteFacilitySet:lineNetworkPlan" version="any">
 							<PassengerInformationEquipmentList>lineNetworkPlan</PassengerInformationEquipmentList>
 						</SiteFacilitySet>
-						<SiteFacilitySet id="NSR:SiteFacilitySet:realTimeDepartures" version="any">
-							<PassengerInformationEquipmentList>realTimeDepartures</PassengerInformationEquipmentList>
-						</SiteFacilitySet>
 						<SiteFacilitySet id="NSR:SiteFacilitySet:fareInformation" version="any">
 							<PassengerInformationEquipmentList>fareInformation</PassengerInformationEquipmentList>
 						</SiteFacilitySet>
 					</siteFacilitySets>
-					<!-- ...kan modellers mer eksplisitt/presist som Equipment:
+					<!-- ...kan modellers enda mer eksplisitt/presist som Equipment:
 							<placeEquipments>
 								<PassengerInformationEquipment id="passengerinformationequipment" version="any">
 									alt 1: <PassengerInformationFacilityList>[dataset]</PassengerInformationFacilityList>
@@ -128,7 +135,6 @@ Frames (gruppering)
 								</PassengerInformationEquipment>
 							</placeEquipments>
 							-->
-					
 				</SiteFrame>
 			</frames>
 		</CompositeFrame>

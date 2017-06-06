@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
+ <!-- 
 ==== Minimumseksempel for et stoppested med ett stopp ====== 
 Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enkleste type stoppested for buss, uten fasiliteter, i en enveiskjørt gate-sløyfe.
     Denne består av:
@@ -60,6 +60,17 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 									<Latitude>59.931081</Latitude>
 								</Location>
 							</Centroid>
+							<AccessibilityAssessment version="any" id="NSR:AccessibilityAssessment:2">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<!-- Minimumskrav til UU-informasjon -->
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>true</StepFreeAccess>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
+
 							<Lighting>wellLit</Lighting>
 							<PublicCode>2</PublicCode>
 						</Quay>

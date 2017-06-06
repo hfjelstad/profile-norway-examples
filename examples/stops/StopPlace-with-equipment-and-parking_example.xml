@@ -88,12 +88,15 @@
 						</TicketingEquipment>
 						
 						<WaitingRoomEquipment id="NSR:WaitingRoomEquipment:1" version="1">
+							<Name>Venterom</Name>
+							<PrivateCode>vente-inne</PrivateCode>
 							<Seats>7</Seats>
 							<StepFree>true</StepFree>
 							<Heated>false</Heated>
 						</WaitingRoomEquipment>
 						
 						<SanitaryEquipment id="NSR:SanitaryEquipment:1" version="1">
+							<!-- TODO: Remove 'Gender' element, only required for validation against old version of XSD -->
 							<Gender>both</Gender>							
 							<SanitaryFacilityList>toilet wheelChairAccessToilet</SanitaryFacilityList>
 						</SanitaryEquipment>
@@ -183,7 +186,7 @@
 									<SurfaceType>asphalt</SurfaceType>
 								</RoughSurface>
 							</placeEquipments>
-
+							
 							<PublicCode>2</PublicCode>
 						</Quay>
 					</quays>
@@ -259,7 +262,7 @@
 				</PathLink>
 			</pathLinks>
 			
-			<!-- NB: Enkelte redundante datasett (modellering som Equipment er foretrukket), kun tatt med for illustrasjon -->
+			<!-- NB: Enkelte redundante datasett (modellering som Equipment er foretrukket), FacilitySet vist pga tillatt alternativ -->
 			<siteFacilitySets>
 				<!-- se NeTEx part 1 s. 436 (7.7.14.2.3 Common Facility Values – Physical Model) -->
 				<SiteFacilitySet id="NSR:SiteFacilitySet:1" version="1">
