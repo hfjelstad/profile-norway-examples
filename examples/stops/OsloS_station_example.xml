@@ -53,13 +53,9 @@
                     </organisations>
                 </ResourceFrame>
                 <SiteFrame id="NSR:SiteFrame:1" version="any">
-                    
-                    
-                    
                     <stopPlaces>
                         <!-- Monomodal stop place for bus in front of Oslo S -->
                         <StopPlace id="NSR:StopPlace:1" version="any">
-                            
                             <Name>Jernbanetorget</Name>
                             <Description>Foran Oslo S</Description>
                             <Centroid>
