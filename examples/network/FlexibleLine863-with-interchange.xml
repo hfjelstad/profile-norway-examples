@@ -475,14 +475,15 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 
 
 					<journeyInterchanges>
-						<!-- Overgang Tog -->
+						<!-- Overganger Tog -->
 						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-863-to-L1-A">
 							<Description>2Ø Tog mot Lillestrøm 1019</Description>
+							<Priority>1</Priority>
+							<StaySeated>false</StaySeated>
 							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
 							<Advertised>true</Advertised>
-							<Controlled>false</Controlled>
-							<StandardWaitTime>PT16M</StandardWaitTime>
+							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<ToPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
@@ -490,11 +491,12 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						</ServiceJourneyInterchange>
 						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-863-to-L1-B">
 							<Description>2Ø Tog mot Lillestrøm 1031</Description>
+							<Priority>1</Priority>
+							<StaySeated>false</StaySeated>
 							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
 							<Advertised>true</Advertised>
-							<Controlled>false</Controlled>
-							<StandardWaitTime>PT16M</StandardWaitTime>
+							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<ToPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
@@ -502,36 +504,39 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						</ServiceJourneyInterchange>
 						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-863-to-L1-C">
 							<Description>2Ø Tog fra Oslo 1219</Description>
+							<Priority>1</Priority>
+							<StaySeated>false</StaySeated>
 							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
 							<Advertised>true</Advertised>
-							<Controlled>false</Controlled>
-							<StandardWaitTime>PT16M</StandardWaitTime>
+							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<ToPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
-							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-FraLorenskog"/>
-							<ToJourneyRef ref="NSB:ServiceJourney:L1-Lillestrom-2-ExtenalRef"/>
+							<FromJourneyRef ref="NSB:ServiceJourney:L1-Lillestrom-2-ExtenalRef"/>
+							<ToJourneyRef version="any" ref="RUT:ServiceJourney:0863-FraLorenskog"/>
 						</ServiceJourneyInterchange>
 						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-863-to-L1-D">
 							<Description>2Ø Tog fra Lillestrøm 1231</Description>
+							<Priority>1</Priority>
+							<StaySeated>false</StaySeated>
 							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
 							<Advertised>true</Advertised>
-							<Controlled>false</Controlled>
-							<StandardWaitTime>PT4M</StandardWaitTime>
+							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<ToPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
-							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-FraLorenskog"/>
-							<ToJourneyRef ref="NSB:ServiceJourney:L1-Spikkestad-2-ExtenalRef"/>
+							<FromJourneyRef ref="NSB:ServiceJourney:L1-Spikkestad-2-ExtenalRef"/>
+							<ToJourneyRef version="any" ref="RUT:ServiceJourney:0863-FraLorenskog"/>
 						</ServiceJourneyInterchange>
-						<!-- Overgang Buss -->
+						<!-- Overganger Buss -->
 						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-863-to-401-A">
 							<Description>2Ø Buss 401 mot Oslo 1022</Description>
+							<Priority>1</Priority>
+							<StaySeated>false</StaySeated>
 							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
 							<Advertised>true</Advertised>
-							<Controlled>false</Controlled>
-							<StandardWaitTime>PT2M</StandardWaitTime>
+							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="any" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<ToPointRef version="any" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
@@ -539,11 +544,12 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						</ServiceJourneyInterchange>
 						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-863-to-401-B">
 							<Description>2Ø Buss 401 mot Oslo 1022</Description>
+							<Priority>1</Priority>
+							<StaySeated>false</StaySeated>
 							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
 							<Advertised>true</Advertised>
-							<Controlled>false</Controlled>
-							<StandardWaitTime>PT4M</StandardWaitTime>
+							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="any" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<ToPointRef version="any" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
@@ -551,27 +557,29 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						</ServiceJourneyInterchange>
 						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-863-to-401-C">
 							<Description>2Ø Buss 401 fra Oslo 1224</Description>
+							<Priority>1</Priority>
+							<StaySeated>false</StaySeated>
 							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
 							<Advertised>true</Advertised>
-							<Controlled>false</Controlled>
-							<StandardWaitTime>PT6M</StandardWaitTime>
+							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="any" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<ToPointRef version="any" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
-							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
-							<ToJourneyRef ref="RUT:ServiceJourney:401-Lillestrom-1-ExtenalRef"/>
+							<FromJourneyRef ref="RUT:ServiceJourney:401-Lillestrom-1-ExtenalRef"/>
+							<ToJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
 						</ServiceJourneyInterchange>
 						<ServiceJourneyInterchange version="any" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-863-to-401-D">
 							<Description>2Ø Buss 401 fra Lillestrøm 1222</Description>
+							<Priority>1</Priority>
+							<StaySeated>false</StaySeated>
 							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
 							<Advertised>true</Advertised>
-							<Controlled>false</Controlled>
-							<StandardWaitTime>PT8M</StandardWaitTime>
+							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="any" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<ToPointRef version="any" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
-							<FromJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
-							<ToJourneyRef ref="RUT:ServiceJourney:401-Oslo-2-ExtenalRef"/>
+							<FromJourneyRef ref="RUT:ServiceJourney:401-Oslo-2-ExtenalRef"/>
+							<ToJourneyRef version="any" ref="RUT:ServiceJourney:0863-TilLorenskog"/>
 						</ServiceJourneyInterchange>
 					</journeyInterchanges>
 				</TimetableFrame>
