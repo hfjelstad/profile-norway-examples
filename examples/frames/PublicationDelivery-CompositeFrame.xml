@@ -13,23 +13,19 @@
     <Description>PublicationDelivery med CompositeFrame som setter ValidityCondition for -alle- underliggende frames</Description>
 
     <dataObjects>
-
         <!-- CompositeFrame brukes å samle ulike frames med samme ValidityCondition -->
-        <CompositeFrame version="any" created="2016-12-22T12:00:00Z" id="NSR:CompositeFrame:NUMBER">
+        <CompositeFrame version="1" created="2016-12-22T12:00:00Z" id="NSR:CompositeFrame:ID">
             <!-- Gyldighetsperiode (merk at denne gjelder implisitt for ALLE frames i CompositeFrame) -->
             <validityConditions>
-                <AvailabilityCondition version="any" id="NSR:AvailabilityCondition:NUMBER"/>
+                <AvailabilityCondition version="1" id="NSR:AvailabilityCondition:ID"/>
             </validityConditions>
-            
             <frames>
-                <ResourceFrame id="NSR:ResourceFrame:NUMBER" version="any"/>                
-                <SiteFrame id="NSR:SiteFrame" version="any"/>
-                <ServiceFrame id="NSR:ServiceFrame" version="any"/>
-                <ServiceCalendarFrame id="NRH:ServiceCalendarFrame" version="any"/>
-                <TimetableFrame id="NSR:TimetableFrame:NUMBER" version="any"/>
+                <ResourceFrame id="NSR:ResourceFrame:ID" version="1"/>                
+                <SiteFrame id="NSR:SiteFrame:ID" version="1"/>
+                <ServiceFrame id="NSR:ServiceFrame:ID" version="1"/>
+                <ServiceCalendarFrame id="NSR:ServiceCalendarFrame:ID" version="1"/>
+                <TimetableFrame id="NSR:TimetableFrame:ID" version="1"/>
             </frames>
-
         </CompositeFrame>
-
     </dataObjects>
 </PublicationDelivery>
