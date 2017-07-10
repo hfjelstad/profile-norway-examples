@@ -14,38 +14,38 @@
 
     <dataObjects>
 
-        <ResourceFrame id="NSR:ResourceFrame:NUMBER" version="any">
+        <ResourceFrame id="NSR:ResourceFrame:ID" version="1">
             <!-- Gyldighetsperiode ResourceFrame -->
             <validityConditions>
-                <AvailabilityCondition version="any" id="NSR:AvailabilityCondition:ResourceFrame"/>
+                <AvailabilityCondition version="1" id="NSR:AvailabilityCondition:1"/>
             </validityConditions>
         </ResourceFrame>
         
-        <SiteFrame id="NSR:SiteFrame" version="any">
+        <SiteFrame id="NSR:SiteFrame:ID" version="1">
             <!-- Gyldighetsperiode SiteFrame -->
             <validityConditions>
-                <AvailabilityCondition version="any" id="NSR:AvailabilityCondition:SiteFrame"/>
+                <AvailabilityCondition version="1" id="NSR:AvailabilityCondition:2"/>
             </validityConditions>
         </SiteFrame>
         
-        <ServiceFrame id="NSR:ServiceFrame" version="any">
+        <ServiceFrame id="NSR:ServiceFrame:ID" version="1">
             <!-- Gyldighetsperiode ServiceFrame -->
             <validityConditions>
-                <AvailabilityCondition version="any" id="NSR:AvailabilityCondition:ServiceFrame"/>
+                <AvailabilityCondition version="1" id="NSR:AvailabilityCondition:3"/>
             </validityConditions>
         </ServiceFrame>
         
-        <ServiceCalendarFrame id="NRH:ServiceCalendarFrame" version="any">
+        <ServiceCalendarFrame id="NRH:ServiceCalendarFrame:ID" version="1">
             <!-- Gyldighetsperiode CalendarFrame -->
             <validityConditions>
-                <AvailabilityCondition version="any" id="NSR:AvailabilityCondition:CalendarFrame"/>
+                <AvailabilityCondition version="1" id="NSR:AvailabilityCondition:4"/>
             </validityConditions>
         </ServiceCalendarFrame>
         
-        <TimetableFrame id="NSR:TimetableFrame:NUMBER" version="any">
+        <TimetableFrame id="NSR:TimetableFrame:ID" version="1">
             <!-- Gyldighetsperiode TimetableFrame -->
             <validityConditions>
-                <AvailabilityCondition version="any" id="NSR:AvailabilityCondition:NUMBER"/>
+                <AvailabilityCondition version="1" id="NSR:AvailabilityCondition:5"/>
             </validityConditions>
         </TimetableFrame>
 
