@@ -82,8 +82,7 @@ This example desceribes a simple on-street stop place with quays, but without sp
             <Covered>indoors</Covered>
             <Gated>gatedArea</Gated>
             <Lighting>wellLit</Lighting>
-            <AlightingUse>true</AlightingUse>
-            <Label lang="en-US">Label1</Label>
+            <Label lang="en-US">Label</Label>
             <CompassOctant>SW</CompassOctant>
             <QuayType>busStop</QuayType>
         </Quay>
