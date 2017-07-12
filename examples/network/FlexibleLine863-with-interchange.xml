@@ -2,7 +2,8 @@
 <!--
 Eksempel-implementasjon for enkel bestillingstransport (Flexible Journey).
 
-https://rutebanken.atlassian.net/wiki/display/PUBLIC/Korresponderende+bestillingstransport
+https://rutebanken.atlassian.net/wiki/display/PUBLIC/Bestillingstransport
+https://rutebanken.atlassian.net/wiki/display/PUBLIC/Multimodal+overgang
 
 Modellert som "Flexible zone without fixed stops"
 Ref. NetexStandardPart1 s 584: 
@@ -34,12 +35,12 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 				<!-- Codespace for Ruter -->
 				<Codespace id="ruter">
 					<Xmlns>RUT</Xmlns>
-					<XmlnsUrl>http://www.ruter.no/</XmlnsUrl>
+					<XmlnsUrl>http://www.rutebanken.org/ns/rut</XmlnsUrl>
 				</Codespace>
 				<!-- Codespace for nasjonalt stoppestedregister -->
-				<Codespace id="nhr">
-					<Xmlns>NHR</Xmlns>
-					<XmlnsUrl>http://www.rutebanken.no/nasjonltstoppestedregister</XmlnsUrl>
+				<Codespace id="NSR">
+					<Xmlns>NSR</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/nsr</XmlnsUrl>
 				</Codespace>
 			</codespaces>
 			<frames>
@@ -77,35 +78,35 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 				</ResourceFrame>
 
 
-				<!-- Referanser til stoppestedregisteret -->
+				<!-- Referanser til stoppestedregisteret (kun tatt med for å illustrere oppbygning av SiteFrame) -->
 				<SiteFrame version="any" id="RUT:SiteFrame:1">
 					<stopPlaces>
-						<!-- Codespace NHR pga data fra sentralt stoppestedregister -->
-						<StopPlace version="any" id="NHR:StopPlace:ID-HANABORG_ST">
+						<!-- Codespace NSR pga data fra sentralt stoppestedregister -->
+						<StopPlace version="any" id="NSR:StopPlace:ID-HANABORG_ST">
 							<!-- Hanaborg stasjon (59.938586, 10.966605) -->
 							<Name lang="NO-NB">Hanaborg stasjon</Name>
 							<quays>
-								<Quay version="any" id="NHR:Quay:ID-HANABORG_ST-QUAY"/>
+								<Quay version="any" id="NSR:Quay:ID-HANABORG_ST-QUAY"/>
 							</quays>
 						</StopPlace>
-						<StopPlace version="any" id="NHR:StopPlace:ID-LORENSKOGSENTRUM">
+						<StopPlace version="any" id="NSR:StopPlace:ID-LORENSKOGSENTRUM">
 							<!-- Lørenskog sentrum (59.927963, 10.954812) -->
 							<Name>Lørenskog sentrum</Name>
 							<quays>
-								<Quay version="any" id="NHR:Quay:ID-LORENSKOGSENTRUM-QUAY"/>
+								<Quay version="any" id="NSR:Quay:ID-LORENSKOGSENTRUM-QUAY"/>
 							</quays>
 						</StopPlace>
-						<StopPlace version="any" id="NHR:StopPlace:ID-TRIADEN-ENTRANCE">
+						<StopPlace version="any" id="NSR:StopPlace:ID-TRIADEN-ENTRANCE">
 							<Name>Triaden</Name>
 							<!-- Gamleveien 88C, 1476 Rasta (utenfor hovdeinngang Triaden: 59.919880, 10.953399) -->
 							<quays>
-								<Quay version="any" id="NHR:Quay:ID-TRIADEN-ENTRANCE-QUAY"/>
+								<Quay version="any" id="NSR:Quay:ID-TRIADEN-ENTRANCE-QUAY"/>
 							</quays>
 						</StopPlace>
 					</stopPlaces>				
 					
 					<flexibleStopPlaces>
-						<FlexibleStopPlace version="any" id="NHR:FlexibleStopPlace:ID-HANABORG-NORD">
+						<FlexibleStopPlace version="any" id="NSR:FlexibleStopPlace:ID-HANABORG-NORD">
 							<Name>Fleksisone for linje 863</Name>
 							<Description>
 								Bestillingslinjen kjøres i områdene nord for toglinjen i Lørenskog; 
@@ -114,7 +115,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 							</Description>
 							<TransportMode>bus</TransportMode>
 							<areas>
-								<FlexibleArea version="any" id="NHR:FlexibleArea:ID-HANABORG-NORD-AREA">
+								<FlexibleArea version="any" id="NSR:FlexibleArea:ID-HANABORG-NORD-AREA">
 									<Polygon srsName="wgs84" gml:id="hanaborg" xmlns="http://www.opengis.net/gml/3.2">
 										<exterior>
 											<LinearRing>
@@ -139,11 +140,11 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						<Name>Ruter# bestillingslinjer</Name>
 					</Network>
 					<directions>
-						<Direction version="any" id="NHR:Direction:TilLorenskog">
+						<Direction version="any" id="NSR:Direction:TilLorenskog">
 							<Name>Til Lørenskog sentrum</Name>
 							<DirectionType>inbound</DirectionType>
 						</Direction>
-						<Direction version="any" id="NHR:Direction:FraLorenskog">
+						<Direction version="any" id="NSR:Direction:FraLorenskog">
 							<Name>Til Hanaborg nord</Name>
 							<DirectionType>outbound</DirectionType>
 						</Direction>
@@ -153,8 +154,8 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						<!-- Flexi-sone Hanaborg Nord -->
 						<RoutePoint version="any" id="RUT:RoutePoint:ID-HANABORG-NORD">
 							<projections>
-								<ZoneProjection version="any" id="NHR:ZoneProjection:ID-HANABORG-NORD-ZONE">
-									<ProjectedZoneRef ref="NHR:FlexibleArea:ID-HANABORG-NORD-AREA"/>
+								<ZoneProjection version="any" id="NSR:ZoneProjection:ID-HANABORG-NORD-ZONE">
+									<ProjectedZoneRef ref="NSR:FlexibleArea:ID-HANABORG-NORD-AREA"/>
 								</ZoneProjection>
 							</projections>
 						</RoutePoint>
@@ -187,7 +188,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 					<routes>
 						<Route version="any" id="RUT:Route:863-TilLorenskog">
 							<Name>863 til Lørenskog sentrum</Name>
-							<DirectionRef version="any" ref="NHR:Direction:TilLorenskog"/>
+							<DirectionRef version="any" ref="NSR:Direction:TilLorenskog"/>
 							<pointsInSequence>
 								<PointOnRoute version="any" id="RUT:PointOnRoute:ID-HANABORG-NORD-HENTING" order="1">
 									<RoutePointRef version="any" ref="RUT:RoutePoint:ID-HANABORG-NORD"/>
@@ -207,7 +208,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						
 						<Route version="any" id="RUT:Route:863-FraLorenskog">
 							<Name>863 til Lørenskog sentrum</Name>
-							<DirectionRef version="any" ref="NHR:Direction:FraLorenskog"/>
+							<DirectionRef version="any" ref="NSR:Direction:FraLorenskog"/>
 							<pointsInSequence>
 								<PointOnRoute version="any" id="RUT:PointOnRoute:ID-TRIADEN-FRA" order="1">
 									<RoutePointRef version="any" ref="RUT:RoutePoint:ID-TRIADEN"/>
@@ -279,23 +280,23 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 					<stopAssignments>
 						<FlexibleStopAssignment version="any" id="RUT:PassengerStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD"/>
-							<FlexibleStopPlaceRef version="any" ref="NHR:FlexibleStopPlace:ID-HANABORG-NORD"/>
+							<FlexibleStopPlaceRef version="any" ref="NSR:FlexibleStopPlace:ID-HANABORG-NORD"/>
 						</FlexibleStopAssignment>
 						
 						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
-							<StopPlaceRef version="any" ref="NHR:StopPlace:ID-HANABORG_ST"/>
-							<QuayRef version="any" ref="NHR:Quay:ID-HANABORG_ST-QUAY"/>
+							<StopPlaceRef version="any" ref="NSR:StopPlace:ID-HANABORG_ST"/>
+							<QuayRef version="any" ref="NSR:Quay:ID-HANABORG_ST-QUAY"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:ID-LORENSKOG">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
-							<StopPlaceRef version="any" ref="NHR:StopPlace:ID-LORENSKOGSENTRUM"/>
-							<QuayRef version="any" ref="NHR:Quay:ID-LORENSKOGSENTRUM-QUAY"/>
+							<StopPlaceRef version="any" ref="NSR:StopPlace:ID-LORENSKOGSENTRUM"/>
+							<QuayRef version="any" ref="NSR:Quay:ID-LORENSKOGSENTRUM-QUAY"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:ID-TRIADEN">
 							<ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:ID-TRIADEN"/>
-							<StopPlaceRef version="any" ref="NHR:StopPlace:ID-TRIADEN-ENTRANCE"/>
-							<QuayRef version="any" ref="NHR:Quay:ID-TRIADEN-ENTRANCE-QUAY"/>
+							<StopPlaceRef version="any" ref="NSR:StopPlace:ID-TRIADEN-ENTRANCE"/>
+							<QuayRef version="any" ref="NSR:Quay:ID-TRIADEN-ENTRANCE-QUAY"/>
 						</PassengerStopAssignment>
 					</stopAssignments>
 
