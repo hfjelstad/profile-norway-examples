@@ -207,7 +207,7 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						</Route>
 						
 						<Route version="any" id="RUT:Route:863-FraLorenskog">
-							<Name>863 til Lørenskog sentrum</Name>
+							<Name>863 fra Lørenskog sentrum</Name>
 							<DirectionRef version="any" ref="NSR:Direction:FraLorenskog"/>
 							<pointsInSequence>
 								<PointOnRoute version="any" id="RUT:PointOnRoute:ID-TRIADEN-FRA" order="1">
