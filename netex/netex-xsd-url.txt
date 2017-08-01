@@ -1,0 +1,2 @@
+Official XSD repository:
+https://github.com/nick-knowles/NeTEx-XML

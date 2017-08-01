@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:ns2="http://www.ifopt.org.uk/acsb"
+    xmlns:ns3="http://www.ifopt.org.uk/ifopt" xmlns:ns4="http://datex2.eu/schema/2_0RC1/2_0"
+    version="2.0">
+    <ServiceDelivery>
+        <ResponseTimestamp>2017-07-11T11:29:31.173+02:00</ResponseTimestamp>
+        <SituationExchangeDelivery>
+            <ResponseTimestamp>2017-07-11T11:29:31.173+02:00</ResponseTimestamp>
+            <Situations>
+                <PtSituationElement>
+                    <CreationTime>2017-06-28T12:32:05.9987717+02:00</CreationTime>
+                    <ParticipantRef>rutersx</ParticipantRef>
+                    <SituationNumber>46197</SituationNumber>
+                    <Source>
+                        <SourceType>web</SourceType>
+                        <Phone>99127032</Phone>
+                        <AgentReference>unknown</AgentReference>
+                        <TimeOfCommunication>2017-06-30T20:30:11.2475086+02:00</TimeOfCommunication>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2017-07-01T02:00:00+02:00</StartTime>
+                        <EndTime>2017-08-16T02:00:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <PublicationWindow/>
+                    <UnknownReason>Unknown</UnknownReason>
+                    <Severity>normal</Severity>
+                    <ScopeType>line</ScopeType>
+                    <Keywords/>
+                    <Summary>Buss for tog mellom Asker og Spikkestad</Summary>
+                    <Description>Bane NOR utfører arbeid på strekningen, og NSB kjører buss for tog.
+                        Rutetidene kan bli endret.</Description>
+                    <Detail>Se nsb.no for mer informasjon</Detail>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:9101</LineRef>
+                                    <PublishedLineName>L1</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                    <Consequences>
+                        <Consequence>
+                            <Condition>altered</Condition>
+                            <Severity>normal</Severity>
+                        </Consequence>
+                    </Consequences>
+                    <Extensions>
+                        <LastUpdated xmlns:siri="http://www.siri.org.uk/siri"
+                            >2017-06-30T20:30:10.9975116+02:00</LastUpdated>
+                        <ForceResend xmlns:siri="http://www.siri.org.uk/siri">false</ForceResend>
+                        <TravelPlannerOff xmlns:siri="http://www.siri.org.uk/siri"
+                            >false</TravelPlannerOff>
+                        <InfoBox1Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox1 xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2 xmlns:siri="http://www.siri.org.uk/siri"/>
+                    </Extensions>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2017-06-28T13:11:08.246084+02:00</CreationTime>
+                    <ParticipantRef>rutersx</ParticipantRef>
+                    <SituationNumber>46199</SituationNumber>
+                    <Source>
+                        <SourceType>web</SourceType>
+                        <Phone>99127032</Phone>
+                        <AgentReference>Erik Røsaker</AgentReference>
+                        <TimeOfCommunication>2017-06-28T13:11:08.4179592+02:00</TimeOfCommunication>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2017-06-28T13:05:00+02:00</StartTime>
+                        <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
+                    </ValidityPeriod>
+                    <PublicationWindow/>
+                    <UnknownReason>Unknown</UnknownReason>
+                    <Severity>normal</Severity>
+                    <ScopeType>line</ScopeType>
+                    <Keywords/>
+                    <Summary>Endinger under buss for tog på Østfoldbanen</Summary>
+                    <Description>Avgangene på bestillingstransport er endret mellom 15:00 og
+                        19:00.</Description>
+                    <Detail>Avgangstider fra Vestby stasjon fra og med 15:00 er som følger: 15:25,
+                        16:25, 17:25, 18:25 og 19:25.  Avgangen kan bestilles på telefon 04144
+                        senest kl. 12 hverdagen i forveien</Detail>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:0531</LineRef>
+                                    <PublishedLineName>531</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                    <Consequences>
+                        <Consequence>
+                            <Condition>altered</Condition>
+                            <Severity>normal</Severity>
+                        </Consequence>
+                    </Consequences>
+                    <Extensions>
+                        <LastUpdated xmlns:siri="http://www.siri.org.uk/siri"
+                            >2017-06-28T13:11:08.246084+02:00</LastUpdated>
+                        <ForceResend xmlns:siri="http://www.siri.org.uk/siri">false</ForceResend>
+                        <TravelPlannerOff xmlns:siri="http://www.siri.org.uk/siri"
+                            >false</TravelPlannerOff>
+                        <InfoBox1Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox1 xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2 xmlns:siri="http://www.siri.org.uk/siri"/>
+                    </Extensions>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2016-09-20T09:51:03.1099393+02:00</CreationTime>
+                    <ParticipantRef>rutersx</ParticipantRef>
+                    <SituationNumber>38739</SituationNumber>
+                    <Source>
+                        <SourceType>web</SourceType>
+                        <Phone>99127032</Phone>
+                        <AgentReference>unknown</AgentReference>
+                        <TimeOfCommunication>2017-03-06T11:09:07.2315705+01:00</TimeOfCommunication>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2016-09-26T03:00:00+02:00</StartTime>
+                        <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
+                    </ValidityPeriod>
+                    <PublicationWindow/>
+                    <UnknownReason>Unknown</UnknownReason>
+                    <Severity>normal</Severity>
+                    <ScopeType>stopPoint</ScopeType>
+                    <Keywords/>
+                    <Summary>Stoppestedet Tullinløkka benyttes ikke</Summary>
+                    <Description>Nærmeste alternative stoppesteder er Holbergs plass og Tinghuset
+                        (Prof. Aschehougs plass for buss). Gangavstand ca. 300 meter.</Description>
+                    <Detail>Dette skyldes gravearbeider i Kristian Augusts gate. </Detail>
+                    <Affects>
+                        <StopPlaces>
+                            <AffectedStopPlace>
+                                <StopPlaceRef>3010055</StopPlaceRef>
+                            </AffectedStopPlace>
+                        </StopPlaces>
+                    </Affects>
+                    <Consequences>
+                        <Consequence>
+                            <Condition>altered</Condition>
+                            <Severity>normal</Severity>
+                        </Consequence>
+                    </Consequences>
+                    <Extensions>
+                        <LastUpdated xmlns:siri="http://www.siri.org.uk/siri"
+                            >2017-03-06T11:09:06.9503331+01:00</LastUpdated>
+                        <ForceResend xmlns:siri="http://www.siri.org.uk/siri">false</ForceResend>
+                        <TravelPlannerOff xmlns:siri="http://www.siri.org.uk/siri"
+                            >false</TravelPlannerOff>
+                        <InfoBox1Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox1 xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2 xmlns:siri="http://www.siri.org.uk/siri"/>
+                    </Extensions>
+                </PtSituationElement>
+                
+                
+                <PtSituationElement>
+                    <CreationTime>2017-07-10T15:13:05.0018551+02:00</CreationTime>
+                    <ParticipantRef>rutersx</ParticipantRef>
+                    <SituationNumber>46355</SituationNumber>
+                    <Source>
+                        <SourceType>web</SourceType>
+                        <Phone>99127032</Phone>
+                        <AgentReference>unknown</AgentReference>
+                        <TimeOfCommunication>2017-07-10T16:00:58.5069618+02:00</TimeOfCommunication>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2017-08-14T03:00:00+02:00</StartTime>
+                        <EndTime>2017-08-25T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <PublicationWindow/>
+                    <UnknownReason>Unknown</UnknownReason>
+                    <Severity>normal</Severity>
+                    <ScopeType>line</ScopeType>
+                    <Keywords/>
+                    <Summary>Buss for tog</Summary>
+                    <Description>I perioden mandag 14. august til fredag 25. august utfører Bane NOR
+                        arbeider på strekningen Kongsvinger - Årnes. Dette medfører et redusert
+                        togtilbud og vi ber deg om å se på detaljene for din
+                        strekning.</Description>
+                    <Detail>Asker-Kongsvinger: Mandag-fredag mellom kl. 08.30 og 13.30 14.-25.
+                        august Det kjøres tog mellom Asker og Årnes Det kjøres buss mellom Årnes og
+                        Kongsvinger. Bussene venter på togene fra Asker. Unntak: Tog fra Asker 08:39
+                        Det kjøres tog mellom Asker og Årnes Det kjøres buss mellom Årnes og
+                        Kongsvinger. Bussene venter på togene fra Asker.
+                        Kongsvinger-Asker: Mandag-fredag mellom kl. 08.00 og 14.00 14.-25. august
+                        Det kjøres buss mellom Kongsvinger og Årnes  Merk: Bussene kjører fra
+                        Kongsvinger 15 minutter før togets avgangstid, og fra Skarnes 10 minutter
+                        før togets avgangstid. Det kjøres tog mellom Årnes og Asker. Unntak: Tog fra
+                        Kongsvinger 09:37 Det kjøres buss mellom Kongsvinger og Årnes  Merk: Bussene
+                        kjører fra Kongsvinger 15 minutter før togets avgangstid, og fra Skarnes 10
+                        minutter før togets avgangstid. Det kjøres tog mellom Årnes og Asker. Les
+                        mer på https://www.nsb.no/sommerarbeid-oslo-s    </Detail>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:9114</LineRef>
+                                    <PublishedLineName>L14</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:9164</LineRef>
+                                    <PublishedLineName>L14X</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                    <Consequences>
+                        <Consequence>
+                            <Condition>altered</Condition>
+                            <Severity>normal</Severity>
+                        </Consequence>
+                    </Consequences>
+                    <Extensions>
+                        <LastUpdated xmlns:siri="http://www.siri.org.uk/siri"
+                            >2017-07-10T16:00:58.3664987+02:00</LastUpdated>
+                        <ForceResend xmlns:siri="http://www.siri.org.uk/siri">false</ForceResend>
+                        <TravelPlannerOff xmlns:siri="http://www.siri.org.uk/siri"
+                            >false</TravelPlannerOff>
+                        <InfoBox1Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox1 xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2 xmlns:siri="http://www.siri.org.uk/siri"/>
+                    </Extensions>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2017-07-11T09:44:41.55+02:00</CreationTime>
+                    <ParticipantRef>ITS4mobility</ParticipantRef>
+                    <SituationNumber>1001096</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                        <Name>CONCORDIABUS\tlnobina1 (ssoren01)</Name>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2017-07-11T09:44:00+02:00</StartTime>
+                        <EndTime>2017-07-12T03:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason>09:44:41</UndefinedReason>
+                    <Severity>normal</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>unknown</ReportType>
+                    <Keywords/>
+                    <Affects>
+                        <StopPoints>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:93903</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:93916</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:95110</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:90914</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:94674</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:92750</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:94878</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:93224</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:95649</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:92277</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:93642</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:94750</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:91261</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:91268</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:91625</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:95637</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:94680</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:91634</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:91967</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:95087</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:95715</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:97040</StopPointRef>
+                            </AffectedStopPoint>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:95538</StopPointRef>
+                            </AffectedStopPoint>
+                        </StopPoints>
+                        <VehicleJourneys>
+                            <AffectedVehicleJourney>
+                                <VehicleJourneyRef>19:1:42:1016</VehicleJourneyRef>
+                                <Route/>
+                            </AffectedVehicleJourney>
+                        </VehicleJourneys>
+                    </Affects>
+                    <Consequences>
+                        <Consequence>
+                            <Condition>cancelled</Condition>
+                            <Severity>normal</Severity>
+                            <Blocking>
+                                <JourneyPlanner>false</JourneyPlanner>
+                                <RealTime>false</RealTime>
+                            </Blocking>
+                        </Consequence>
+                    </Consequences>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2017-04-21T13:57:35.2078072+02:00</CreationTime>
+                    <ParticipantRef>rutersx</ParticipantRef>
+                    <SituationNumber>44801</SituationNumber>
+                    <Source>
+                        <SourceType>web</SourceType>
+                        <Phone>99127032</Phone>
+                        <AgentReference>Erik Røsaker</AgentReference>
+                        <TimeOfCommunication>2017-04-21T13:57:35.2703069+02:00</TimeOfCommunication>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2017-04-21T13:52:00+02:00</StartTime>
+                        <EndTime>2018-04-01T14:52:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <PublicationWindow/>
+                    <UnknownReason>Unknown</UnknownReason>
+                    <Severity>normal</Severity>
+                    <ScopeType>stopPoint</ScopeType>
+                    <Keywords/>
+                    <Summary>Stoppestedet Kalbakkstubben er flyttet</Summary>
+                    <Description>Stoppestedet er flyttet fra Kalbakkstubben til midlertidig
+                        stoppested Ca. 60 meter mot Bredtvet stoppested i Nedre
+                        Kalbakkvei.</Description>
+                    <Affects>
+                        <StopPlaces>
+                            <AffectedStopPlace>
+                                <StopPlaceRef>3011923</StopPlaceRef>
+                            </AffectedStopPlace>
+                        </StopPlaces>
+                    </Affects>
+                    <Consequences>
+                        <Consequence>
+                            <Condition>altered</Condition>
+                            <Severity>normal</Severity>
+                        </Consequence>
+                    </Consequences>
+                    <Extensions>
+                        <LastUpdated xmlns:siri="http://www.siri.org.uk/siri"
+                            >2017-04-21T13:57:35.2078072+02:00</LastUpdated>
+                        <ForceResend xmlns:siri="http://www.siri.org.uk/siri">false</ForceResend>
+                        <TravelPlannerOff xmlns:siri="http://www.siri.org.uk/siri"
+                            >false</TravelPlannerOff>
+                        <InfoBox1Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox1 xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2 xmlns:siri="http://www.siri.org.uk/siri"/>
+                    </Extensions>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2017-07-02T10:21:53.8033199+02:00</CreationTime>
+                    <ParticipantRef>rutersx</ParticipantRef>
+                    <SituationNumber>46252</SituationNumber>
+                    <Source>
+                        <SourceType>web</SourceType>
+                        <Phone>99127032</Phone>
+                        <AgentReference>unknown</AgentReference>
+                        <TimeOfCommunication>2017-07-05T07:15:24.0149722+02:00</TimeOfCommunication>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2017-07-02T10:18:00+02:00</StartTime>
+                        <EndTime>2017-08-06T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <PublicationWindow/>
+                    <UnknownReason>Unknown</UnknownReason>
+                    <Severity>normal</Severity>
+                    <ScopeType>line</ScopeType>
+                    <Keywords/>
+                    <Summary>Feil i reiseplanleggeren</Summary>
+                    <Description>Det dessverre sneket seg inn feil tider i reiseplanleggeren på buss
+                        for tog.</Description>
+                    <Detail>For korrekte tider se NSB sin reiseplanlegger. Vi beklager ulempene
+                        dette måtte medføre for deg. </Detail>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:2220</LineRef>
+                                    <PublishedLineName>R20B</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:2221</LineRef>
+                                    <PublishedLineName>L21B</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:2295</LineRef>
+                                    <PublishedLineName>P95</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:2296</LineRef>
+                                    <PublishedLineName>P96</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:9120</LineRef>
+                                    <PublishedLineName>R20</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:9121</LineRef>
+                                    <PublishedLineName>L21</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                    <Consequences>
+                        <Consequence>
+                            <Condition>unknown</Condition>
+                            <Severity>normal</Severity>
+                        </Consequence>
+                    </Consequences>
+                    <Extensions>
+                        <LastUpdated xmlns:siri="http://www.siri.org.uk/siri"
+                            >2017-07-05T07:15:23.7493602+02:00</LastUpdated>
+                        <ForceResend xmlns:siri="http://www.siri.org.uk/siri">false</ForceResend>
+                        <TravelPlannerOff xmlns:siri="http://www.siri.org.uk/siri"
+                            >false</TravelPlannerOff>
+                        <InfoBox1Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox1 xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2 xmlns:siri="http://www.siri.org.uk/siri"/>
+                    </Extensions>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2017-07-07T11:56:47.0557369+02:00</CreationTime>
+                    <ParticipantRef>rutersx</ParticipantRef>
+                    <SituationNumber>46319</SituationNumber>
+                    <Source>
+                        <SourceType>web</SourceType>
+                        <Phone>99127032</Phone>
+                        <AgentReference>unknown</AgentReference>
+                        <TimeOfCommunication>2017-07-10T13:55:19.2719046+02:00</TimeOfCommunication>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2017-07-14T20:00:00+02:00</StartTime>
+                        <EndTime>2017-07-17T05:30:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <PublicationWindow/>
+                    <UnknownReason>Unknown</UnknownReason>
+                    <Severity>normal</Severity>
+                    <ScopeType>line</ScopeType>
+                    <Keywords/>
+                    <Summary>Plattform endring</Summary>
+                    <Description>Grunnet vegarbeid vil bussen stoppe på plattform F</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:0034</LineRef>
+                                    <PublishedLineName>34</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:0037</LineRef>
+                                    <PublishedLineName>37</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:0074</LineRef>
+                                    <PublishedLineName>74</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:0309</LineRef>
+                                    <PublishedLineName>309</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:3901</LineRef>
+                                    <PublishedLineName>N1</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:3902</LineRef>
+                                    <PublishedLineName>N2</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>RUT:Line:3918</LineRef>
+                                    <PublishedLineName>N18</PublishedLineName>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                    <Consequences>
+                        <Consequence>
+                            <Condition>unknown</Condition>
+                            <Severity>normal</Severity>
+                        </Consequence>
+                    </Consequences>
+                    <Extensions>
+                        <LastUpdated xmlns:siri="http://www.siri.org.uk/siri"
+                            >2017-07-10T13:55:18.9918509+02:00</LastUpdated>
+                        <ForceResend xmlns:siri="http://www.siri.org.uk/siri">false</ForceResend>
+                        <TravelPlannerOff xmlns:siri="http://www.siri.org.uk/siri"
+                            >false</TravelPlannerOff>
+                        <InfoBox1Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2Header xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox1 xmlns:siri="http://www.siri.org.uk/siri"/>
+                        <InfoBox2 xmlns:siri="http://www.siri.org.uk/siri"/>
+                    </Extensions>
+                </PtSituationElement>
+            </Situations>
+        </SituationExchangeDelivery>
+    </ServiceDelivery>
+</Siri>
