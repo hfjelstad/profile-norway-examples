@@ -22,11 +22,11 @@
                         <StartTime>2017-07-01T02:00:00+02:00</StartTime>
                         <EndTime>2017-08-16T02:00:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss for tog mellom Asker og Spikkestad</Summary>
                     <Description>Bane NOR utfører arbeid på strekningen, og NSB kjører buss for tog.
                         Rutetidene kan bli endret.</Description>
@@ -74,11 +74,11 @@
                         <StartTime>2017-06-28T13:05:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Endinger under buss for tog på Østfoldbanen</Summary>
                     <Description>Avgangene på bestillingstransport er endret mellom 15:00 og
                         19:00.</Description>
@@ -128,11 +128,11 @@
                         <StartTime>2016-09-26T03:00:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Tullinløkka benyttes ikke</Summary>
                     <Description>Nærmeste alternative stoppesteder er Holbergs plass og Tinghuset
                         (Prof. Aschehougs plass for buss). Gangavstand ca. 300 meter.</Description>
@@ -179,11 +179,11 @@
                         <StartTime>2017-08-14T03:00:00+02:00</StartTime>
                         <EndTime>2017-08-25T23:59:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss for tog</Summary>
                     <Description>I perioden mandag 14. august til fredag 25. august utfører Bane NOR
                         arbeider på strekningen Kongsvinger - Årnes. Dette medfører et redusert
@@ -253,7 +253,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Affects>
                         <StopPoints>
                             <AffectedStopPoint>
@@ -359,11 +359,11 @@
                         <StartTime>2017-04-21T13:52:00+02:00</StartTime>
                         <EndTime>2018-04-01T14:52:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Kalbakkstubben er flyttet</Summary>
                     <Description>Stoppestedet er flyttet fra Kalbakkstubben til midlertidig
                         stoppested Ca. 60 meter mot Bredtvet stoppested i Nedre
@@ -408,11 +408,11 @@
                         <StartTime>2017-07-02T10:18:00+02:00</StartTime>
                         <EndTime>2017-08-06T23:59:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Feil i reiseplanleggeren</Summary>
                     <Description>Det dessverre sneket seg inn feil tider i reiseplanleggeren på buss
                         for tog.</Description>
@@ -491,11 +491,11 @@
                         <StartTime>2017-07-14T20:00:00+02:00</StartTime>
                         <EndTime>2017-07-17T05:30:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Plattform endring</Summary>
                     <Description>Grunnet vegarbeid vil bussen stoppe på plattform F</Description>
                     <Affects>
