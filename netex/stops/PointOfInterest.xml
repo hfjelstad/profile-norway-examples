@@ -98,24 +98,6 @@ The example  comprises
 					<ToDate>2012-08-12T00:00:00Z</ToDate>
 				</AvailabilityCondition>
 			</validityConditions>
-			<!-- ==  CODESPACEs = -->
-			<codespaces>
-				<Codespace id="napt">
-					<Xmlns>napt</Xmlns>
-					<XmlnsUrl>http://www.naptan.org.uk/naptan</XmlnsUrl>
-					<Description>UK NaPTAN Stop Place codes</Description>
-				</Codespace>
-				<Codespace id="nptg">
-					<Xmlns>nptg</Xmlns>
-					<XmlnsUrl>http://www.naptan.org.uk/naptan</XmlnsUrl>
-					<Description>NPTG TopographicPlace &amp;  Admin codes </Description>
-				</Codespace>
-				<Codespace id="tbd">
-					<Xmlns>tbd</Xmlns>
-					<XmlnsUrl>http://www.intdata.co.uk/data</XmlnsUrl>
-					<Description>Other interchange DATA SOURCE </Description>
-				</Codespace>
-			</codespaces>
 			<!--- =======FRAME DEFAULTS======== -->
 			<FrameDefaults>
 				<DefaultCodespaceRef ref="tbd"/>

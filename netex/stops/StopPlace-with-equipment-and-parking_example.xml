@@ -155,6 +155,11 @@
 								</Location>
 							</Centroid>
 							
+							<RoadAddress version="1" id="NSR:RoadAddress:1">
+								<RoadNumber>0</RoadNumber>
+								<RoadName lang="en">RoadName</RoadName>
+							</RoadAddress>
+							
 							<!-- Generelt tilgjengelig med rullestol -->
 							<AccessibilityAssessment version="1" id="NSR:AccessibilityAssessment:1">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
@@ -190,13 +195,48 @@
 							<PublicCode>2</PublicCode>
 						</Quay>
 					</quays>
-				</StopPlace>
-				
+				</StopPlace>				
 			</stopPlaces>
 			
 			<parkings>
 				<!-- ParkAndRide -->
 				<Parking id="NSR:Parking:1" version="1">
+					<levels>
+						<Level id="NSR:Level:1" version="1">
+							<Name>1</Name>
+							<Description>Bakkeplan</Description>
+							<PublicUse>true</PublicUse>
+							<AccessibilityAssessment id="NSR:AccessibilityAssessment:2" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>true</StepFreeAccess>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
+						</Level>
+						<Level id="NSR:Level:2" version="1">
+							<Name>2</Name>
+							<Description>Takparkering</Description>
+							<PublicUse>false</PublicUse>
+							<AccessibilityAssessment id="NSR:AccessibilityAssessment:3" version="1">
+								<MobilityImpairedAccess>false</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>false</WheelchairAccess>
+										<StepFreeAccess>false</StepFreeAccess>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
+						</Level>
+					</levels>
+					<entrances>
+						<Entrance id="NSR:Entrance:1" version="1">
+							<LevelRef ref="NSR:Level:1" version="1"/>
+							<EntranceType>opening</EntranceType>
+						</Entrance>
+					</entrances>
 					<ParkingType>parkAndRide</ParkingType>
 					<ParkingVehicleTypes>car motorcycle</ParkingVehicleTypes>
 					<PrincipalCapacity>100</PrincipalCapacity>
@@ -227,7 +267,7 @@
 					<Gated>gatedArea</Gated>
 					<Lighting>wellLit</Lighting>
 					<entrances>
-						<Entrance id="NSR:Entrance:1" version="1">
+						<Entrance id="NSR:Entrance:2" version="1">
 							<EntranceType>door</EntranceType>
 						</Entrance>
 					</entrances>
