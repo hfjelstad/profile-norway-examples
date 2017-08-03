@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- 
     Fragments of download from http://www.entur.org/sanntidsdata/ (http://api.entur.org/anshar/1.0/rest/sx)
-    (Have extracted only a few variants of each similar PtSituationElement type)
+    (Have kept only a few variants of similar PtSituationElement datasets)
     Other alterations ONLY made to enable validation of XML against SIRI Schema (siri.xsd)
     (I.e. have commented out empty elements "PublicationWindow" and "Keywords")
 -->

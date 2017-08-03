@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 
+    Fragments of download from http://www.entur.org/sanntidsdata/ (http://api.entur.org/anshar/1.0/rest/vm)
+    (Have kept only a few variants of similar VehicleActivity datasets)
+    Alterations ONLY made to enable validation of XML against SIRI Schema (siri.xsd)
+    (I.e. have commented out empty elements "MonitoringError" and replaced invalid [xsd:NMTOKEN] data values for "ItemIdentifier")
+-->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:ns2="http://www.ifopt.org.uk/acsb"
     xmlns:ns3="http://www.ifopt.org.uk/ifopt" xmlns:ns4="http://datex2.eu/schema/2_0RC1/2_0"
     version="2.0">
