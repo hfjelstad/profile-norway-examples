@@ -168,8 +168,6 @@
                         <InfoBox2 xmlns:siri="http://www.siri.org.uk/siri"/>
                     </Extensions>
                 </PtSituationElement>
-                
-                
                 <PtSituationElement>
                     <CreationTime>2017-07-10T15:13:05.0018551+02:00</CreationTime>
                     <ParticipantRef>rutersx</ParticipantRef>
