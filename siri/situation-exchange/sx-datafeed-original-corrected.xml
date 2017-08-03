@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+    As downloaded from http://www.entur.org/sanntidsdata/ (http://api.entur.org/anshar/1.0/rest/sx)
+    Alterations ONLY made to enable validation of XML against SIRI Schema (siri.xsd)
+    (I.e. have commented out empty elements "PublicationWindow" and "Keywords")
+-->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:ns2="http://www.ifopt.org.uk/acsb"
     xmlns:ns3="http://www.ifopt.org.uk/ifopt" xmlns:ns4="http://datex2.eu/schema/2_0RC1/2_0"
     version="2.0">
@@ -19,7 +24,7 @@
                         <EndTime>2017-07-14T22:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <UnknownReason/>
-                    <Keywords/>
+                        <!--Keywords/-->
                     <Summary>Blinkfestivalen fører til endringer på enkelte ruter. Les mer på
                         kolumbus.no</Summary>
                     <Affects>
@@ -47,11 +52,11 @@
                         <StartTime>2017-07-01T02:00:00+02:00</StartTime>
                         <EndTime>2017-08-16T02:00:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss for tog mellom Asker og Spikkestad</Summary>
                     <Description>Bane NOR utfører arbeid på strekningen, og NSB kjører buss for tog.
                         Rutetidene kan bli endret.</Description>
@@ -96,7 +101,7 @@
                         <EndTime>2017-07-14T22:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <UnknownReason/>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Blinkfestivalen fører til endringer på enkelte ruter. Les mer på
                         kolumbus.no</Summary>
                     <Affects>
@@ -124,11 +129,11 @@
                         <StartTime>2017-06-28T13:05:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Endinger under buss for tog på Østfoldbanen</Summary>
                     <Description>Avgangene på bestillingstransport er endret mellom 15:00 og
                         19:00.</Description>
@@ -178,11 +183,11 @@
                         <StartTime>2017-02-27T12:33:00+01:00</StartTime>
                         <EndTime>2017-08-15T23:59:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Minibuss på deler av trasé</Summary>
                     <Description>Det blir satt opp en minibuss som vil fungere som matebuss mellom
                         Fjellsrud skole og Solvangveien. Denne vil hete 872x.</Description>
@@ -231,11 +236,11 @@
                         <StartTime>2017-06-27T14:52:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Bestillingstransport</Summary>
                     <Description>Avgang kan bestilles på telefon 04144 senest kl. 12 hverdagen i
                         forveien.</Description>
@@ -313,11 +318,11 @@
                         <StartTime>2016-09-26T03:00:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Tullinløkka benyttes ikke</Summary>
                     <Description>Nærmeste alternative stoppesteder er Holbergs plass og Tinghuset
                         (Prof. Aschehougs plass for buss). Gangavstand ca. 300 meter.</Description>
@@ -362,11 +367,11 @@
                         <StartTime>2017-08-14T03:00:00+02:00</StartTime>
                         <EndTime>2017-08-25T23:59:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss for tog</Summary>
                     <Description>I perioden mandag 14. august til fredag 25. august utfører Bane NOR
                         arbeider på strekningen Kongsvinger - Årnes. Dette medfører et redusert
@@ -436,7 +441,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Affects>
                         <Networks>
                             <AffectedNetwork>
@@ -511,11 +516,11 @@
                         <StartTime>2017-06-28T07:49:00+02:00</StartTime>
                         <EndTime>2017-08-06T00:30:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Sporendring på Ellingsrudåsen</Summary>
                     <Description>Mandag til fredag er det endring fra tidligere plattform ved
                         Ellingsrudåsen.</Description>
@@ -563,11 +568,11 @@
                         <StartTime>2017-08-07T00:01:00+02:00</StartTime>
                         <EndTime>2017-08-16T02:00:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Omkjøring og nytt midlertidig stopp</Summary>
                     <Description>Grunnet Øyafestivalen vil Finnmarkgata stenges og bussen får
                         omkjøring og nytt midlertidig stopp i Sofienberggata (i Sars gate). Bussen
@@ -616,11 +621,11 @@
                         <StartTime>2017-06-22T09:34:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss 210 Lillehammer- Baklia - Svingvoll</Summary>
                     <Description>Tur fra Lillehammer 15:35 bestilles på tlf 06565 senest to timer
                         før rutestart.</Description>
@@ -667,11 +672,11 @@
                         <StartTime>2016-08-21T04:00:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Omkjøring</Summary>
                     <Description>Grunnet arbeider på vann- og avløpsnettet kjører buss 60 gjennom
                         Nordalveien begge retninger inntil videre.</Description>
@@ -723,7 +728,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Affects>
                         <StopPoints>
                             <AffectedStopPoint>
@@ -772,11 +777,11 @@
                         <StartTime>2017-06-23T08:37:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss 522 Vågåmo - Skårvangen</Summary>
                     <Description>Bestilles hos Vågå taxi, tlf. 95 95 09 80, senest 2 timer før
                         rutestart.</Description>
@@ -823,11 +828,11 @@
                         <StartTime>2017-02-06T05:30:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Rådhussvingen nedlegges f.o.m. 6. februar</Summary>
                     <Detail>Buss 510 og 515: Nærmeste alternative stoppested er Ski stasjon (i
                         Åsenveien). Gangavstand ca. 400 meter. Buss N81 og 512: Nærmeste alternative
@@ -875,7 +880,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Description overridden="true">Holdeplassen betjenes ikke pga
                         veiarbeid</Description>
                     <Affects>
@@ -918,7 +923,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Description overridden="true">Endring av holdeplasser, se akt.no for mer
                         info</Description>
                     <Affects>
@@ -971,11 +976,11 @@
                         <StartTime>2017-07-07T03:00:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Bussen stopper ikke her</Summary>
                     <Description>Buss 74 stopper inntil videre på Nationaltheatret (i
                         Stortingsgata). Dette skyldes anleggsarbeid.</Description>
@@ -1032,11 +1037,11 @@
                         <StartTime>2017-04-08T00:00:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Nattbuss N4 stopper ikke på Ryensvingen retning
                         Helsfyr/Jernbanetorget</Summary>
                     <Description>Nærmeste alternative stoppested er Ryen T. Gangavstand ca. 150
@@ -1087,7 +1092,7 @@
                         <EndTime>2017-07-14T22:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <UnknownReason/>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Blinkfestivalen fører til endringer på enkelte ruter. Les mer på
                         kolumbus.no</Summary>
                     <Affects>
@@ -1115,11 +1120,11 @@
                         <StartTime>2017-09-09T01:00:00+02:00</StartTime>
                         <EndTime>2017-09-10T13:50:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss for tog</Summary>
                     <Description>I perioden lørdag 09. september kl. 01.30 - søndag 10. september
                         kl. 13.50 utfører Bane NOR AS arbeider på strekningen Oslo S - Ski/
@@ -1193,11 +1198,11 @@
                         <StartTime>2017-06-26T03:30:00+02:00</StartTime>
                         <EndTime>2017-08-05T03:30:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Taxi for tog Bodung-Haga</Summary>
                     <Description>Mandag - fredag i perioden 26. juni til 4. august kjøres det
                         tilbringertjeneste, på strekningen Bodung-Haga-Bodung</Description>
@@ -1257,11 +1262,11 @@
                         <StartTime>2017-07-03T03:30:00+02:00</StartTime>
                         <EndTime>2017-07-17T03:30:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Enkelte stoppesteder benyttes ikke</Summary>
                     <Description>Trikk 19 stopper ikke på Inkognitogata, Riddervolds plass,
                         Briskeby, Rosenborg, Bogstadveien og Majorstuen i perioden 3.juli - 16.juli.
@@ -1308,7 +1313,7 @@
                         <EndTime>2017-07-14T22:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <UnknownReason/>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Blinkfestivalen fører til endringer på enkelte ruter. Les mer på
                         kolumbus.no</Summary>
                     <Affects>
@@ -1336,11 +1341,11 @@
                         <StartTime>2017-07-02T02:30:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Endret avgangstid fra Prof. Aschehougs plass</Summary>
                     <Description>Bussen har avgang 4 minutter senere enn oppsatt tid ved Prof.
                         Aschehougs plass.</Description>
@@ -1392,11 +1397,11 @@
                         <StartTime>2016-01-12T18:44:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Forhåndsbestilling av transport fra enkelte holdeplasser</Summary>
                     <Description>Skal du reise fra Olavsgaard, Kløfta, Gardermoen Park, eller
                         Nebbenes må du forhåndsbestille for at bussen skal stoppe for deg (se
@@ -1447,7 +1452,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Description overridden="true">Holdeplass innstil p.g.a Villvinmarkedet fra 13/7
                         kl 16:00 til 15/7 kl 20:00, se akt.no for mer info</Description>
                     <Affects>
@@ -1512,11 +1517,11 @@
                         <StartTime>2017-08-04T04:00:00+02:00</StartTime>
                         <EndTime>2017-08-07T02:30:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss for trikk</Summary>
                     <Description>Grunnet vedlikehold av skinnegangen erstattes trikk 17/18 av buss
                         for trikk mellom Jernbanetorget og Rikshospitalet. Bussen vil ha følgende
@@ -1578,7 +1583,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Description overridden="true">Holdeplass innstilt grunnet bygging av ny
                         Varoddbru, benytt Rona eller Sømsveien/Torsvikkleiva</Description>
                     <Affects>
@@ -1610,11 +1615,11 @@
                         <StartTime>2017-05-29T07:00:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Kantarellen terrasse er flyttet</Summary>
                     <Description>Stoppestedet Kantarellen terrasse, retning Helsfyr, er flyttet Ca.
                         40 meter mot Mortensrud.</Description>
@@ -1660,7 +1665,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Description overridden="true">Linje 163 innstilt grunnet Trebåtfestivalen fra
                         1/8 kl 14 -6/8 kl 12. Linje 150 kjører til/fra den gamle rutebilstasjonen,
                         se akt.no for mer info</Description>
@@ -1740,7 +1745,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Affects>
                         <StopPoints>
                             <AffectedStopPoint>
@@ -1807,11 +1812,11 @@
                         <StartTime>2017-01-23T17:05:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss 531 Otta-Sjoa-Heidal-Sjoa-Otta</Summary>
                     <Description>Tur fra Otta 11:00 med retur fra Leirflata 11:45 bestilles hos Otta
                         taxi, tlf 61 23 05 01, senest 2 timer før rutestart.</Description>
@@ -1858,11 +1863,11 @@
                         <StartTime>2017-06-23T08:48:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss 562 Bestillingsrute Bismo - Sota</Summary>
                     <Description>Bestilles hos Skjåk taxi, tlf 95 95 09 40, senest 2 timer før
                         rutestart. Tur fra Sota kl. 16:00 kjøres til Lom kun ved bestilling fra Sota
@@ -1912,7 +1917,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Description overridden="true">Endring av holdeplasser, se akt.no for mer
                         info</Description>
                     <Affects>
@@ -1967,7 +1972,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Affects>
                         <StopPoints>
                             <AffectedStopPoint>
@@ -2073,11 +2078,11 @@
                         <StartTime>2017-04-21T13:52:00+02:00</StartTime>
                         <EndTime>2018-04-01T14:52:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Kalbakkstubben er flyttet</Summary>
                     <Description>Stoppestedet er flyttet fra Kalbakkstubben til midlertidig
                         stoppested Ca. 60 meter mot Bredtvet stoppested i Nedre
@@ -2124,7 +2129,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Affects>
                         <VehicleJourneys>
                             <AffectedVehicleJourney>
@@ -2159,11 +2164,11 @@
                         <StartTime>2017-06-28T10:32:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Majorstuen (i Sørkedalsveien) er flyttet</Summary>
                     <Description>Stoppestedet er flyttet 50 meter frem.</Description>
                     <Affects>
@@ -2206,11 +2211,11 @@
                         <StartTime>2017-02-20T05:00:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Lillo gård (retning sentrum) er flyttet ca. 120 m.
                         frem</Summary>
                     <Affects>
@@ -2253,11 +2258,11 @@
                         <StartTime>2017-02-06T05:30:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Ski skole er flyttet til Sanderveien</Summary>
                     <Description>Stoppestedet er flyttet fra Kirkeveien til Sanderveien (ved
                         Sandertunet) i begge retninger. Gangavstand ca. 270 meter.</Description>
@@ -2302,11 +2307,11 @@
                         <StartTime>2017-07-10T03:00:00+02:00</StartTime>
                         <EndTime>2017-07-13T02:00:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Birkelunden er flyttet</Summary>
                     <Description>Stoppestedet er midlertidig flyttet på grunn av
                         veiarbeid.</Description>
@@ -2361,11 +2366,11 @@
                         <StartTime>2017-02-08T03:30:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Storo senter er flyttet</Summary>
                     <Description>Stoppestedet er flyttet ca. 75 meter mot Nycoveien, retning
                         Solemskogen. Det er forventet varighet på 2 år.</Description>
@@ -2409,11 +2414,11 @@
                         <StartTime>2017-09-11T07:00:00+02:00</StartTime>
                         <EndTime>2017-09-15T16:00:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss for tog</Summary>
                     <Description>I perioden mandag 11. september til fredag 15. september utfører
                         Bane NOR arbeider på strekningen Kongsvinger - Årnes. Dette medfører et
@@ -2478,7 +2483,7 @@
                         <EndTime>2017-07-14T22:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <UnknownReason/>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Blinkfestivalen fører til endringer på enkelte ruter. Les mer på
                         kolumbus.no</Summary>
                     <Affects>
@@ -2506,11 +2511,11 @@
                         <StartTime>2016-01-12T14:04:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Reise med buss 532 må bestilles hverdagen i forveien</Summary>
                     <Description>Ring telefon 04144 før kl. 12.00 hverdagen før du skal
                         reise.</Description>
@@ -2561,7 +2566,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Description overridden="true">Holdeplass stengt grunnet sykkelløp 23/7 fra kl
                         16:00 - 18:00, se akt.no for mer info</Description>
                     <Affects>
@@ -2623,11 +2628,11 @@
                         <StartTime>2017-04-21T07:00:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Til Tusenfryd? Kjøp billett på forhånd</Summary>
                     <Description>Kom deg raskere frem til Tusenfryd ved å kjøpe billett i
                         RuterBillett-appen, på billettautomat eller hos ett av våre salgssteder
@@ -2672,11 +2677,11 @@
                         <StartTime>2017-06-30T12:05:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Svensenga benyttes ikke</Summary>
                     <Description>Nærmeste alternative stoppested er Frysja eller
                         Stillatorvet.</Description>
@@ -2720,11 +2725,11 @@
                         <StartTime>2017-04-02T05:00:00+02:00</StartTime>
                         <EndTime>2017-10-10T23:59:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Omkjøring - enkelte stoppesteder benyttes ikke</Summary>
                     <Description>Bussene 520, 1436 og 1572 stopper ikke på Hakkespetten, Fossekallen
                         og Tiursvingen på grunn av veiarbeid i Toveien.</Description>
@@ -2793,7 +2798,7 @@
                         <EndTime>2017-07-14T22:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <UnknownReason/>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Blinkfestivalen fører til endringer på enkelte ruter. Les mer på
                         kolumbus.no</Summary>
                     <Affects>
@@ -2823,7 +2828,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Description overridden="true">Holdeplassen betjenes ikke pga
                         veiarbeid</Description>
                     <Affects>
@@ -2870,11 +2875,11 @@
                         <StartTime>2017-05-11T14:00:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>verySlight</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Tveita er flyttet</Summary>
                     <Description>Stoppestedet retning Grorud er flyttet 25 meter frem.</Description>
                     <Affects>
@@ -2917,11 +2922,11 @@
                         <StartTime>2017-07-11T10:21:00+02:00</StartTime>
                         <EndTime>2017-07-11T12:00:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Forsinkelser</Summary>
                     <Description>Det er for øyeblikket forsinkelser på enkelte avganger. Dette
                         skyldes tidligere stans.</Description>
@@ -2982,11 +2987,11 @@
                         <StartTime>2017-07-10T15:30:00+02:00</StartTime>
                         <EndTime>2017-08-25T16:30:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss for tog</Summary>
                     <Affects>
                         <Networks>
@@ -3031,11 +3036,11 @@
                         <StartTime>2017-06-23T08:56:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss 706 Gran - Granavollen</Summary>
                     <Description>Bestilles hos Gran taxi, tlf. 61 33 30 00, senest 2 timer før
                         rutestart.</Description>
@@ -3082,11 +3087,11 @@
                         <StartTime>2017-07-21T00:20:00+02:00</StartTime>
                         <EndTime>2017-07-21T05:30:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet benyttes ikke</Summary>
                     <Description>Vækerø retning sentrum vil være stengt mellom
                         00:30-05:30</Description>
@@ -3133,11 +3138,11 @@
                         <StartTime>2017-05-22T05:30:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Frogner stasjon er flyttet</Summary>
                     <Description>Stoppestedet Frogner stasjon i retning mot Lørenfallet er flyttet
                         ca. 50 meter bakover på grunn av anleggsarbeid.</Description>
@@ -3186,7 +3191,7 @@
                         <EndTime>2017-07-14T22:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <UnknownReason/>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Blinkfestivalen fører til endringer på enkelte ruter. Les mer på
                         kolumbus.no</Summary>
                     <Affects>
@@ -3214,11 +3219,11 @@
                         <StartTime>2017-07-02T10:18:00+02:00</StartTime>
                         <EndTime>2017-08-06T23:59:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Feil i reiseplanleggeren</Summary>
                     <Description>Det dessverre sneket seg inn feil tider i reiseplanleggeren på buss
                         for tog.</Description>
@@ -3297,11 +3302,11 @@
                         <StartTime>2016-01-12T18:37:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Torp-Ekspressen: Gjelder alle avganger</Summary>
                     <Description>Torp-Ekspressen kjører til alle Ryanair og Wizzairs avganger.
                         Endringer på kort varsel kan forekomme.</Description>
@@ -3344,11 +3349,11 @@
                         <StartTime>2017-03-27T08:32:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Nordstrand kirke er flyttet</Summary>
                     <Description>Stoppestedet er flyttet fra Nordstrand kirke og 70 meter retning
                         Holmlia.</Description>
@@ -3394,11 +3399,11 @@
                         <StartTime>2017-06-23T23:08:00+02:00</StartTime>
                         <EndTime>2017-08-06T23:59:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Alternativ reise / Stengt for togtrafikk</Summary>
                     <Description>Bane NOR utfører arbeid på Østfoldbanen, og buss og T-bane
                         erstatter tog på enkelte strekninger. Reiseplanleggeren er oppdatert med
@@ -3471,11 +3476,11 @@
                         <StartTime>2017-07-07T13:46:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Feilskilting</Summary>
                     <Description>Det er dessverre oppdaget en feil på skilting av linje 510 fra
                         Holstad til Bøleråsen. Bussen er skiltet til Ski men vil kjøre som normalt
@@ -3521,7 +3526,7 @@
                         <EndTime>2017-07-14T22:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <UnknownReason/>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Blinkfestivalen fører til endringer på enkelte ruter. Les mer på
                         kolumbus.no</Summary>
                     <Affects>
@@ -3549,11 +3554,11 @@
                         <StartTime>2017-03-08T05:00:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Kongens gate (i Tollbugata) benyttes ikke</Summary>
                     <Description>Nærmeste alternative stoppesteder er Jernbanetorget og
                         Tollboden.</Description>
@@ -3599,11 +3604,11 @@
                         <StartTime>2017-09-11T08:00:00+02:00</StartTime>
                         <EndTime>2017-09-29T14:00:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss for tog mellom Asker og Spikkestad</Summary>
                     <Description>Bane NOR utfører arbeid på strekningen, og NSB kjører buss for tog.
                         Rutetidene kan bli endret.</Description>
@@ -3651,11 +3656,11 @@
                         <StartTime>2016-09-01T12:09:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss 269 Lillehammer-Lismarka-Åsmarka-Moelv</Summary>
                     <Description>Tur fra Lillehammer 10:15 med retur fra Menkerud 10:25 bestilles på
                         tlf 06565 senest to timer før rutestart</Description>
@@ -3702,11 +3707,11 @@
                         <StartTime>2017-07-28T03:00:00+02:00</StartTime>
                         <EndTime>2017-07-31T03:00:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Omkjøring</Summary>
                     <Description>Trikk 11 vil kjøre som linje 19 over Briskeby og Nationaltheatret i
                         begge retninger. Fra jernbanetorget fortsetter den i vanlig trasé. Stopper
@@ -3759,7 +3764,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Description overridden="true">Holdeplass stengt inntil vidare.</Description>
                     <Affects>
                         <StopPoints>
@@ -3790,7 +3795,7 @@
                         <EndTime>2017-07-14T22:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <UnknownReason/>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Blinkfestivalen fører til endringer på enkelte ruter. Les mer på
                         kolumbus.no</Summary>
                     <Affects>
@@ -3818,11 +3823,11 @@
                         <StartTime>2016-09-01T11:25:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss 201 Lillehammer-Saksumdal-Forset</Summary>
                     <Description>Tur fra Kval 09:10 og fra Rinvoll 12:50 bestilles på tlf 06565
                         senest to timer før rutestart.</Description>
@@ -3871,7 +3876,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Affects>
                         <StopPoints>
                             <AffectedStopPoint>
@@ -3905,11 +3910,11 @@
                         <StartTime>2017-07-28T04:00:00+02:00</StartTime>
                         <EndTime>2017-07-31T03:00:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss for trikk</Summary>
                     <Description>Grunnet vedlikehold av skinnegangen erstattes trikk 17 av buss for
                         trikk mellom Jernbanetorget og Rikshospitalet. Bussen vil ha følgende
@@ -3969,11 +3974,11 @@
                         <StartTime>2017-06-23T15:08:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Feil pris i reiseplanleggeren</Summary>
                     <Description>Prisene som vises i reiseplanleggeren og RuterBillett er dessverre
                         ikke riktige.</Description>
@@ -4027,11 +4032,11 @@
                         <StartTime>2016-09-01T11:32:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss 800 Hov - Fall - Hasvoldseter/Trev - Gjøvik</Summary>
                     <Description>Tur fra Hov 18:50 og fra Gjøvik 20:40 kjøres av Hov
                         Taxisentral.</Description>
@@ -4078,11 +4083,11 @@
                         <StartTime>2016-09-01T11:28:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss 212 Lillehammer-Øverbygda-Svingvoll</Summary>
                     <Description>Tur fra Lillehammer 16:20 bestilles på tlf 06565 senest to timer
                         før rutestart</Description>
@@ -4126,7 +4131,7 @@
                         <EndTime>2017-07-14T22:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <UnknownReason/>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Blinkfestivalen fører til endringer på enkelte ruter. Les mer på
                         kolumbus.no</Summary>
                     <Affects>
@@ -4154,11 +4159,11 @@
                         <StartTime>2016-12-01T05:30:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Nycoveien (retning Nydalen) benyttes ikke</Summary>
                     <Description>Nærmeste alternative stoppested er Lillo gård (buss 30 og 58). I
                         retning Tveita og Bygdøy stopper bussene som normalt.</Description>
@@ -4200,7 +4205,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Affects>
                         <Networks>
                             <AffectedNetwork>
@@ -4251,11 +4256,11 @@
                         <StartTime>2017-07-14T20:00:00+02:00</StartTime>
                         <EndTime>2017-07-17T05:30:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Plattform endring</Summary>
                     <Description>Grunnet vegarbeid vil bussen stoppe på plattform F</Description>
                     <Affects>
@@ -4337,11 +4342,11 @@
                         <StartTime>2017-07-03T00:01:00+02:00</StartTime>
                         <EndTime>2017-08-06T23:59:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Omkjøring</Summary>
                     <Description>På grunn av anleggsarbeider vil bussene få en omkjøring og enkelte
                         stoppesteder vil ikke bli betjent.</Description>
@@ -4398,11 +4403,11 @@
                         <StartTime>2017-06-23T08:30:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Buss 200 Lillehammer - Forset - Skåbu</Summary>
                     <Description>Avgang fra Segalstad bru kl. 17.43 kjøres av taxi så langt det er
                         behov.</Description>
@@ -4451,7 +4456,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Description overridden="true">Disse holdeplassene betjenes ikke så lenge
                         skalldyrfestivalen pågår. Taxus kjøre over Halshaug.</Description>
                     <Affects>
@@ -4498,11 +4503,11 @@
                         <StartTime>2017-01-23T04:30:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Nordahl Bruns gate er flyttet</Summary>
                     <Description>Grunnet gravearbeid er stoppestedet retning sentrum, flyttet 50
                         meter mot sentrum.</Description>
@@ -4548,7 +4553,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Affects>
                         <Networks>
                             <AffectedNetwork>
@@ -4620,11 +4625,11 @@
                         <StartTime>2017-06-22T22:19:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Omkjøring</Summary>
                     <Description>Bussen vil ikke stoppe på Vallerudlia og Rasta senter grunnet
                         blokkert veibane. Varighet er ikke kjent</Description>
@@ -4679,11 +4684,11 @@
                         <StartTime>2016-05-04T09:26:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Reise med buss 551 må bestilles hverdagen i forveien</Summary>
                     <Description>Ring telefon 04144 før kl. 12.00 hverdagen før du skal
                         reise.</Description>
@@ -4732,11 +4737,11 @@
                         <StartTime>2016-10-31T05:30:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet Ljabru mot Grorud/sentrum er flyttet</Summary>
                     <Description>Stoppestedet er midlertidig flyttet ca. 70 meter frem. I retning
                         Holmlia stopper bussene som normalt.</Description>
@@ -4776,11 +4781,11 @@
                         <StartTime>2017-07-10T10:43:00+02:00</StartTime>
                         <EndTime>2017-07-14T23:59:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Holdeplassen er flyttet ca. 50 meter lengre frem</Summary>
                     <Description>Grunnet vannlekkasje vil bussen stoppe ca. 50 m. lengre frem (mot
                         Carl Berners plass)</Description>
@@ -4832,11 +4837,11 @@
                         <StartTime>2017-08-04T03:00:00+02:00</StartTime>
                         <EndTime>2017-08-07T02:30:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Omkjøring</Summary>
                     <Description>Trikk 11 vil kjøre som linje 19 over Briskeby og Nationaltheatret i
                         begge retninger. Fra jernbanetorget fortsetter den i vanlig trasé. Stopper
@@ -4887,11 +4892,11 @@
                         <StartTime>2017-02-28T10:28:00+01:00</StartTime>
                         <EndTime>2017-10-01T11:28:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Omkjøring</Summary>
                     <Description>Omkjøring om Bøn - Dønnumskia for alle linjer som normalt
                         trafikkerer fv. 502 over Tunelltoppen.</Description>
@@ -4976,11 +4981,11 @@
                         <StartTime>2017-07-10T05:30:00+02:00</StartTime>
                         <EndTime>2017-08-11T23:59:00+02:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Stoppestedet benyttes ikke</Summary>
                     <Description>Midlertidig stoppested er opprettet i Siggerudveien for bussene 515
                         og 516. Buss 516 stopper også ved stoppestedet Siggerud sentrum i
@@ -5027,7 +5032,7 @@
                     <Severity>normal</Severity>
                     <Audience>public</Audience>
                     <ReportType>unknown</ReportType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Description overridden="true">Linje 15 Kjører omvendt trasè pga
                         veiarbeid</Description>
                     <Affects>
@@ -5125,11 +5130,11 @@
                         <StartTime>2017-06-27T15:42:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Bestillingstransport</Summary>
                     <Description>Avgang kan bestilles på telefon 04144 senest kl. 12 hverdagen i
                         forveien.</Description>
@@ -5177,11 +5182,11 @@
                         <StartTime>2016-02-26T13:36:00+01:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>stopPoint</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Skolebuss 3771 og 3773: Omkjøring - Sundbykrysset,
                         Sundbyvegen</Summary>
                     <Description>Skolebuss 3771, 3773 har omkjøring og stopper ikke på stoppestedene
@@ -5248,11 +5253,11 @@
                         <StartTime>2016-06-24T09:19:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Feil i reiseplanleggeren</Summary>
                     <Description>De reisende vil få feil forslag for bytte mellom buss 831 og 838.
                         Bussbytte skal foretas på Rød.</Description>
@@ -5301,11 +5306,11 @@
                         <StartTime>2017-06-27T15:30:00+02:00</StartTime>
                         <EndTime>9999-12-31T23:59:59.9999999+01:00</EndTime>
                     </ValidityPeriod>
-                    <PublicationWindow/>
+                    <!--PublicationWindow/-->
                     <UnknownReason>Unknown</UnknownReason>
                     <Severity>normal</Severity>
                     <ScopeType>line</ScopeType>
-                    <Keywords/>
+                    <!--Keywords/-->
                     <Summary>Bestillingstransport</Summary>
                     <Description>Avgang kan bestilles på telefon 04144 senest kl. 12 hverdagen i
                         forveien.</Description>
