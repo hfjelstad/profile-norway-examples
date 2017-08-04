@@ -204,58 +204,6 @@
                 </MonitoredVehicleJourney>
             </VehicleActivity>
             <VehicleActivity>
-                <RecordedAtTime>2017-07-11T11:24:18.934+02:00</RecordedAtTime>
-                <ItemIdentifier>CORRECTION</ItemIdentifier>
-                <ValidUntilTime>2017-07-11T11:34:18.933+02:00</ValidUntilTime>
-                <ProgressBetweenStops>
-                    <LinkDistance>389</LinkDistance>
-                    <Percentage>0.00</Percentage>
-                </ProgressBetweenStops>
-                <MonitoredVehicleJourney>
-                    <LineRef>RUT:Line:0060</LineRef>
-                    <DirectionRef>2</DirectionRef>
-                    <FramedVehicleJourneyRef>
-                        <DataFrameRef>2017-07-11</DataFrameRef>
-                        <DatedVehicleJourneyRef>60:688:8-68809</DatedVehicleJourneyRef>
-                    </FramedVehicleJourneyRef>
-                    <JourneyPatternRef>60:802</JourneyPatternRef>
-                    <PublishedLineName>60</PublishedLineName>
-                    <OperatorRef>Norgesbuss_Oslo</OperatorRef>
-                    <OriginRef>NSR:Quay:11025</OriginRef>
-                    <OriginName>Tonsenhagen</OriginName>
-                    <DestinationRef>NSR:Quay:7638</DestinationRef>
-                    <DestinationName>Vippetangen</DestinationName>
-                    <HeadwayService>false</HeadwayService>
-                    <OriginAimedDepartureTime>2017-07-11T11:37:00+02:00</OriginAimedDepartureTime>
-                    <DestinationAimedArrivalTime>2017-07-11T12:18:00+02:00</DestinationAimedArrivalTime>
-                    <Monitored>true</Monitored>
-                    <!--MonitoringError/-->
-                    <InCongestion>false</InCongestion>
-                    <InPanic>false</InPanic>
-                    <VehicleLocation srsName="real">
-                        <Longitude>10.828150</Longitude>
-                        <Latitude>59.946300</Latitude>
-                    </VehicleLocation>
-                    <Delay>PT0S</Delay>
-                    <BlockRef>Norgesbuss:6003:79f</BlockRef>
-                    <VehicleRef>308066</VehicleRef>
-                    <MonitoredCall>
-                        <StopPointRef>NSR:Quay:11025</StopPointRef>
-                        <VisitNumber>1</VisitNumber>
-                        <StopPointName>Tonsenhagen</StopPointName>
-                        <VehicleAtStop>true</VehicleAtStop>
-                        <DestinationDisplay>Vippetangen</DestinationDisplay>
-                    </MonitoredCall>
-                    <OnwardCalls>
-                        <OnwardCall>
-                            <StopPointRef>NSR:Quay:10968</StopPointRef>
-                            <VisitNumber>2</VisitNumber>
-                            <StopPointName>Kolåsbakken</StopPointName>
-                        </OnwardCall>
-                    </OnwardCalls>
-                </MonitoredVehicleJourney>
-            </VehicleActivity>
-            <VehicleActivity>
                 <RecordedAtTime>2017-07-11T11:30:56+02:00</RecordedAtTime>
                 <ValidUntilTime>2017-07-11T12:31:06.798375+02:00</ValidUntilTime>
                 <ProgressBetweenStops>

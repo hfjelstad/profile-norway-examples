@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:ns2="http://www.ifopt.org.uk/acsb"
+    xmlns:ns3="http://www.ifopt.org.uk/ifopt" xmlns:ns4="http://datex2.eu/schema/2_0RC1/2_0"
+    version="2.0">
+    <ServiceDelivery>
+        <ResponseTimestamp>2017-08-07T11:31:39.027+02:00</ResponseTimestamp>
+        <VehicleMonitoringDelivery version="2.0">
+            <ResponseTimestamp>2017-08-07T11:31:39.027+02:00</ResponseTimestamp>
+            <VehicleActivity>
+                <RecordedAtTime>2017-08-07T11:29:55.56+02:00</RecordedAtTime>
+                <ItemIdentifier>CORRECTION</ItemIdentifier>
+                <ValidUntilTime>2017-08-07T11:39:55.559+02:00</ValidUntilTime>
+                <ProgressBetweenStops>
+                    <LinkDistance>500</LinkDistance>
+                    <Percentage>0.60</Percentage>
+                </ProgressBetweenStops>
+                <MonitoredVehicleJourney>
+                    <LineRef>RUT:Line:0018</LineRef>
+                    <DirectionRef>2</DirectionRef>
+                    <FramedVehicleJourneyRef>
+                        <DataFrameRef>2017-08-07</DataFrameRef>
+                        <DatedVehicleJourneyRef>18:4134:5-413406</DatedVehicleJourneyRef>
+                    </FramedVehicleJourneyRef>
+                    <JourneyPatternRef>18:508</JourneyPatternRef>
+                    <PublishedLineName>18</PublishedLineName>
+                    <OperatorRef>Sporvognsdrift</OperatorRef>
+                    <OriginRef>NSR:Quay:12368</OriginRef>
+                    <OriginName>Ljabru</OriginName>
+                    <DestinationRef>NSR:Quay:11500</DestinationRef>
+                    <DestinationName>Rikshospitalet</DestinationName>
+                    <HeadwayService>false</HeadwayService>
+                    <OriginAimedDepartureTime>2017-08-07T10:55:00+02:00</OriginAimedDepartureTime>
+                    <DestinationAimedArrivalTime>2017-08-07T11:34:00+02:00</DestinationAimedArrivalTime>
+                    <Monitored>true</Monitored>
+                    <MonitoringError>GPRS</MonitoringError>
+                    <InCongestion>false</InCongestion>
+                    <InPanic>false</InPanic>
+                    <VehicleLocation srsName="real">
+                        <Longitude>10.731900</Longitude>
+                        <Latitude>59.936350</Latitude>
+                    </VehicleLocation>
+                    <Delay>PT54S</Delay>
+                    <BlockRef>Sporvognsdrift:1707:780</BlockRef>
+                    <VehicleRef>200141</VehicleRef>
+                    <PreviousCalls>
+                        <PreviousCall>
+                            <StopPointRef>NSR:Quay:11587</StopPointRef>
+                            <VisitNumber>22</VisitNumber>
+                            <StopPointName>Ullevål sykehus</StopPointName>
+                        </PreviousCall>
+                    </PreviousCalls>
+                    <MonitoredCall>
+                        <StopPointRef>301035012</StopPointRef>
+                        <VisitNumber>23</VisitNumber>
+                        <StopPointName>John Colletts plass</StopPointName>
+                        <VehicleAtStop>false</VehicleAtStop>
+                        <DestinationDisplay>Rikshospitalet</DestinationDisplay>
+                    </MonitoredCall>
+                    <OnwardCalls>
+                        <OnwardCall>
+                            <StopPointRef>NSR:Quay:11650</StopPointRef>
+                            <VisitNumber>24</VisitNumber>
+                            <StopPointName>Universitetet Blindern</StopPointName>
+                        </OnwardCall>
+                    </OnwardCalls>
+                </MonitoredVehicleJourney>
+            </VehicleActivity>
+        </VehicleMonitoringDelivery>
+    </ServiceDelivery>
+</Siri>
