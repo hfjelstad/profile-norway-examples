@@ -237,6 +237,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 								<RouteRef version="1" ref="RUT:Route:863-TilLorenskog"/>
 								<RouteRef version="1" ref="RUT:Route:863-FraLorenskog"/>
 							</routes>
+							<RepresentedByGroupRef ref="RUT:Network:RuterBestillingslinjer"/>
 							<FlexibleLineType>mixedFlexibleAndFixed</FlexibleLineType>
 							<BookingContact>
 								<Phone>04144</Phone>
