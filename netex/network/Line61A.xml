@@ -50,7 +50,7 @@
                 <ResourceFrame version="any" id="RUT:ResourceFrame:RF1">
                     <organisations>
                         <!-- TODO her er ting kun splittet i authority og operator. Normalt er strukturen mer kompleks, og informasjon rundt f.eks hittegods må modelleres korrekt -->
-                        <Authority version="any" id="RUT:Company:0">
+                        <Authority version="any" id="RUT:Authority:1">
                             <CompanyNumber>991609407</CompanyNumber>
                             <!-- Organisasjonsnummer -->
                             <Name>Ruter#</Name>
@@ -58,7 +58,7 @@
                             <OrganisationType>authority</OrganisationType>
                         </Authority>
                         <!-- Antar her at Unibuss er selskapet som kjører turen. Ikke nødvendigvis korrekt, men fremgår ikke av rutetabellen -->
-                        <Operator version="any" id="RUT:Company:1">
+                        <Operator version="any" id="RUT:Operator:1">
                             <CompanyNumber>985615616</CompanyNumber>
                             <Name>Unibuss</Name>
                             <LegalName>UNIBUSS AS</LegalName>
@@ -195,7 +195,7 @@
                             <Name>Tveita T</Name>
                             <TransportMode>bus</TransportMode>
                             <PublicCode>61A</PublicCode>
-                            <OperatorRef ref="RUT:Company:1"/>
+                            <OperatorRef ref="RUT:Operator:1"/>
                             <routes>
                                 <!-- Denne linjen kjøres bare på 1 måte -->
                                 <RouteRef version="any" ref="RUT:Route:0061101"/>
