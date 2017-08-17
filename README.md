@@ -2,7 +2,7 @@
 
 Examples for the Norwegian NeTEx and SIRI profiles.
 
-The profile can be found (in Norwegian) at:
+The profiles can be found (in Norwegian) at:
 
 NeTEx - https://rutebanken.atlassian.net/wiki/display/PUBLIC/NeTEx+profil+Norge
 
