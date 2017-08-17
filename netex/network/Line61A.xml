@@ -194,6 +194,9 @@
                         <Line version="any" id="RUT:Line:0061">
                             <Name>Tveita T</Name>
                             <TransportMode>bus</TransportMode>
+                            <TransportSubmode>
+                                <BusSubmode>localBus</BusSubmode>
+                            </TransportSubmode>
                             <PublicCode>61A</PublicCode>
                             <OperatorRef ref="RUT:Operator:1"/>
                             <routes>

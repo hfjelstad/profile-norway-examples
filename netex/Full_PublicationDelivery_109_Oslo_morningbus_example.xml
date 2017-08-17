@@ -279,6 +279,9 @@
 						<Line version="1" id="UNI:Line:109">
 							<Name>109</Name>
 							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>localBus</BusSubmode>
+							</TransportSubmode>
 							<PublicCode>109</PublicCode>
 							<OperatorRef version="1" ref="RUT:Operator:Unibuss"/>
 							<!-- Optional: -->

@@ -231,6 +231,9 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 						<FlexibleLine version="1" id="RUT:FlexibleLine:863">
 							<Name>Bestillingslinje 863: Øvre Grønlia - Hanaborg - Lørenskog sentrum</Name>
 							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>shuttleBus</BusSubmode>
+							</TransportSubmode>
 							<PublicCode>863</PublicCode>
 							<OperatorRef ref="RUT:Company:Unibuss"/>
 							<routes>
