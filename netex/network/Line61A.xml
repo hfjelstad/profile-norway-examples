@@ -173,16 +173,16 @@
                             <LineRef ref="RUT:Line:0061"/>
                             <DirectionRef version="any" ref="RUT:Route:0061101:Direction"/>
                             <pointsInSequence>
-                                <PointOnRoute version="any" id="RUT:PointOnRoute:0061101001-0">
+                                <PointOnRoute version="any" id="RUT:PointOnRoute:0061101001-0" order="1">
                                     <RoutePointRef version="any" ref="RUT:RoutePoint:0061101A0A0061101001"/>
                                 </PointOnRoute>
-                                <PointOnRoute version="any" id="RUT:PointOnRoute:0061101003-2">
+                                <PointOnRoute version="any" id="RUT:PointOnRoute:0061101003-2" order="2">
                                     <RoutePointRef version="any" ref="RUT:RoutePoint:0061101A2A0061101003"/>
                                 </PointOnRoute>
-                                <PointOnRoute version="any" id="RUT:PointOnRoute:0061101004-3">
+                                <PointOnRoute version="any" id="RUT:PointOnRoute:0061101004-3" order="3">
                                     <RoutePointRef version="any" ref="RUT:RoutePoint:0061101A3A0061101004"/>
                                 </PointOnRoute>
-                                <PointOnRoute version="any" id="RUT:PointOnRoute:0061101007-6">
+                                <PointOnRoute version="any" id="RUT:PointOnRoute:0061101007-6" order="4">
                                     <RoutePointRef version="any" ref="RUT:RoutePoint:0061101A6A0061101007"/>
                                 </PointOnRoute>
                             </pointsInSequence>
