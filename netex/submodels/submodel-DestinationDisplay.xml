@@ -9,30 +9,47 @@ DestinationDisplay is used to specify text that is advertized to public, both on
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.netex.org.uk/netex ../../xsd/netex_part_1/part1_networkDescription/netex_line_version-v1.0.xsd">
     <destinationDisplays>
-        <DestinationDisplay version="1" id="DestinationDisplay">
-            <SideText>L23</SideText>
-            <FrontText>Linje 23</FrontText>
-            <PublicCode>Linje 23</PublicCode>
+        <!-- Metro Line 5 to Sognsvann -->
+        <DestinationDisplay version="1" id="RUT:DestinationDisplay:5-sognsvann">
+            <SideText>5 Sognsvann</SideText>
+            <FrontText>5 Sognsvann</FrontText>
+            <PublicCode>5</PublicCode>
             <vias>
                 <Via>
-                    <DestinationDisplayRef ref="Via-1" version="1"/>
-                </Via>
-                <Via>
-                    <DestinationDisplayRef ref="Via-2" version="1"/>
+                    <DestinationDisplayRef ref="RUT:DestinationDisplay:Ringen" version="1"/>
+                    <ViaType>name</ViaType>
                 </Via>
             </vias>
             <variants>
                 <DestinationDisplayVariant>
-                    <DestinationDisplayVariantMediaType>printed</DestinationDisplayVariantMediaType>
-                    <FrontText>Linje 23 (buss)</FrontText>
+                    <DestinationDisplayVariantMediaType>web</DestinationDisplayVariantMediaType>
+                    <FrontText>Sognsvann</FrontText>
                 </DestinationDisplayVariant>
             </variants>
         </DestinationDisplay>
-        <DestinationDisplay version="1" id="Via-1">
-            <FrontText>Gaustad</FrontText>
+        
+        <!-- Metro Line 5 to Vestli -->
+        <DestinationDisplay version="1" id="RUT:DestinationDisplay:5-sognsvann">
+            <SideText>5 Vestli</SideText>
+            <FrontText>5 Vestli</FrontText>
+            <PublicCode>5</PublicCode>
+            <vias>
+                <Via>
+                    <DestinationDisplayRef ref="RUT:DestinationDisplay:Ringen" version="1"/>
+                    <ViaType>name</ViaType>
+                </Via>
+            </vias>
+            <variants>
+                <DestinationDisplayVariant>
+                    <DestinationDisplayVariantMediaType>web</DestinationDisplayVariantMediaType>
+                    <FrontText>Vestli</FrontText>
+                </DestinationDisplayVariant>
+            </variants>
         </DestinationDisplay>
-        <DestinationDisplay version="1" id="Via-2">
-            <FrontText>Økern</FrontText>
+        
+        <!-- Via -->
+        <DestinationDisplay version="1" id="RUT:DestinationDisplay:Ringen">
+            <FrontText>Ringen</FrontText>
         </DestinationDisplay>
     </destinationDisplays>
 </ServiceFrame>
