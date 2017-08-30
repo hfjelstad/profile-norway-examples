@@ -7,25 +7,49 @@
   version="2.0">
     <ServiceDelivery>
         <ResponseTimestamp>2017-08-15T10:43:30.506+02:00</ResponseTimestamp>
+        
         <EstimatedTimetableDelivery version="2.0">
             <ResponseTimestamp>2017-12-17T09:30:46-05:00</ResponseTimestamp>
+            
             <EstimatedJourneyVersionFrame>
                 <RecordedAtTime>2017-08-15T10:43:21.826+02:00</RecordedAtTime>
-                
+                <VersionRef>TEST</VersionRef>
                 <EstimatedVehicleJourney>
                     <LineRef>SKY:Line:985</LineRef>
                     <DirectionRef>1</DirectionRef>
                     <DatedVehicleJourneyRef>6671390_94170</DatedVehicleJourneyRef>
-                    <Cancellation>false</Cancellation>
+                    <ExtraJourney>false</ExtraJourney>
+                    <JourneyPatternRef>placeholder</JourneyPatternRef>
+                    <JourneyPatternName>placeholder</JourneyPatternName>
                     <VehicleMode>bus</VehicleMode>
+                    <RouteRef>placeholder</RouteRef>
                     <OperatorRef>31</OperatorRef>
+                    <PublicContact>
+                        <PhoneNumber>00000000</PhoneNumber>
+                        <Url>http://www.placeholder.net</Url>
+                    </PublicContact>
+                    <SituationRef>
+                        <SituationSimpleRef>placeholder</SituationSimpleRef>
+                    </SituationRef>
+                    <SituationRef>
+                        <SituationSimpleRef>placeholder</SituationSimpleRef>
+                    </SituationRef>
                     <Monitored>false</Monitored>
-                    <!--MonitoringError/-->
-                    <BlockRef>86</BlockRef>
+                    <InCongestion>false</InCongestion>
+                    <PredictionInaccurate>false</PredictionInaccurate>
+                    <ConfidenceLevel>reliable</ConfidenceLevel>
+                    <Occupancy>full</Occupancy>
+                    
+                    <!-- BlockRef>86</BlockRef -->
+                    
+                    <VehicleJourneyRef>placeholder</VehicleJourneyRef>
+                    <VehicleRef>placeholder</VehicleRef>
+                    
                     <EstimatedCalls>
                         <EstimatedCall>
                             <StopPointRef>NSR:Quay:52930</StopPointRef>
                             <Order>1</Order>
+                            
                             <Cancellation>false</Cancellation>
                             <PredictionInaccurate>false</PredictionInaccurate>
                             <AimedDepartureTime>2017-08-15T15:00:00+02:00</AimedDepartureTime>
@@ -379,6 +403,7 @@
                             <VisitNumber>22</VisitNumber>
                             <Order>22</Order>
                             <StopPointName>Kongshavn</StopPointName>
+                            <ExtraCall>false</ExtraCall>
                             <DestinationDisplay>Oslo</DestinationDisplay>
                             <ExpectedArrivalTime>2017-08-15T11:27:00+02:00</ExpectedArrivalTime>
                             <AimedDepartureTime>2017-08-15T11:27:00+02:00</AimedDepartureTime>
@@ -409,7 +434,6 @@
                     </EstimatedCalls>
                     <IsCompleteStopSequence>true</IsCompleteStopSequence>
                 </EstimatedVehicleJourney>
-                
                 
 
             </EstimatedJourneyVersionFrame>
