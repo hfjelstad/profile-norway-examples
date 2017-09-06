@@ -31,6 +31,24 @@
 		
 		
 		<SiteFrame version="1" id="NSR:SiteFrame:1">
+			
+			<groupsOfStopPlaces>
+				<GroupOfStopPlaces version="1" id="NSR:GroupOfStopPlaces:1234">
+					<Name>Sample-group</Name>
+					<Description>Description-text</Description>
+					<members>
+						<StopPlaceRef ref="NSR:StopPlace:999"/>
+						<StopPlaceRef ref="NSR:StopPlace:888"/>
+						<StopPlaceRef ref="NSR:StopPlace:777"/>
+					</members>
+					<alternativeNames>
+						<AlternativeName>
+							<Name lang="en">Alternative-name</Name>
+						</AlternativeName>
+					</alternativeNames>
+				</GroupOfStopPlaces>
+			</groupsOfStopPlaces>			
+			
 			<stopPlaces>
 				<!-- ===Stop=== -->
 				<!-- Nasjonal ID fra stoppestedsregisteret -->
@@ -278,6 +296,7 @@
 					<BookingUrl>http://www.banenor.no/Jernbanen/Sykle-til-stasjonen-/</BookingUrl>
 				</Parking>
 			</parkings>
+			
 			
 			<!-- Supplementary construction, can be automatically assessed from the pathLinks -->
 			<navigationPaths>
