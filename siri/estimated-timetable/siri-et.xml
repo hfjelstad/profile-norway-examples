@@ -49,9 +49,52 @@
                         <EstimatedCall>
                             <StopPointRef>NSR:Quay:52930</StopPointRef>
                             <Order>1</Order>
+                            <ExtraCall>true</ExtraCall>
+                            <!-- PredictionInaccurate>false</PredictionInaccurate -->
+                            <RequestStop>true</RequestStop>
+                            <DestinationDisplay>placeholder</DestinationDisplay>
+                            <!--
+                            <FacilityConditionElement>
+                                <FacilityRef>placeholder</FacilityRef>
+                                <FacilityStatus>
+                                    <Status>notAvailable</Status>
+                                </FacilityStatus>
+                                <SituationRef>
+                                    <SituationSimpleRef>placeholder</SituationSimpleRef>
+                                </SituationRef>
+                                <Remedy>
+                                    <RemedyType>otherLocation</RemedyType>
+                                </Remedy>
+                            </FacilityConditionElement>
+                            -->
+                            <FacilityChangeElement>
+                                <EquipmentAvailability>
+                                    <EquipmentRef>placeholder</EquipmentRef>
+                                    <ValidityPeriod>
+                                        <StartTime>2017-06-28T12:32:05.9987717+02:00</StartTime>
+                                        <EndTime>2017-06-28T12:32:05.9987717+02:00</EndTime>
+                                    </ValidityPeriod>
+                                    <EquipmentStatus>notAvailable</EquipmentStatus>
+                                </EquipmentAvailability>
+                                <SituationRef>
+                                    <SituationSimpleRef></SituationSimpleRef>
+                                </SituationRef>
+                                <MobilityDisruption>
+                                    <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                                    <AccessFacility>lift</AccessFacility>
+                                    <AccessFacility>barrier</AccessFacility>
+                                    <AccessFacility>escalator</AccessFacility>
+                                </MobilityDisruption>
+                            </FacilityChangeElement>
+                            <SituationRef>
+                                <SituationSimpleRef>placeholder</SituationSimpleRef>
+                            </SituationRef>
                             
-                            <Cancellation>false</Cancellation>
-                            <PredictionInaccurate>false</PredictionInaccurate>
+                            
+                            <!-- se SIRI part 3 Table 46 — MonitoredStopArrivalStatusGroup — Elements -->
+                            <AimedArrivalTime>2017-08-15T15:00:00+02:00</AimedArrivalTime>
+                            <ArrivalStatus>arrived</ArrivalStatus>
+                            
                             <AimedDepartureTime>2017-08-15T15:00:00+02:00</AimedDepartureTime>
                             <ExpectedDepartureTime>2017-08-15T15:00:00+02:00</ExpectedDepartureTime>
                             <DepartureBoardingActivity>boarding</DepartureBoardingActivity>

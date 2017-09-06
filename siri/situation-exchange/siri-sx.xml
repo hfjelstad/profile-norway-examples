@@ -81,9 +81,24 @@
                                 </AffectedLine>
                             </AffectedNetwork>
                         </Networks>
+                        <!--StopPoints>
+                            <AffectedStopPoint>
+                                <StopCondition>additionalStop</StopCondition>
+                            </AffectedStopPoint>
+                        </StopPoints-->
+                        <StopPlaces>
+                            <AffectedStopPlace>
+                                <StopPlaceRef>placeholder</StopPlaceRef>
+                                <AffectedFacilities>
+                                    <AffectedFacility>
+                                        <FacilityRef>placeholder</FacilityRef>
+                                    </AffectedFacility>
+                                </AffectedFacilities>
+                            </AffectedStopPlace>
+                        </StopPlaces>
                         <Places>
                             <AffectedPlace>
-                                <PlaceRef>PlaceRef</PlaceRef>
+                                <PlaceRef>PaceRef</PlaceRef>
                                 <PlaceName>PlaceName</PlaceName>
                                 <Location>
                                     <Longitude>1</Longitude>
