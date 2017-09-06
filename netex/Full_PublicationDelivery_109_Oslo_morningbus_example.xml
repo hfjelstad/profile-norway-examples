@@ -278,7 +278,7 @@
 					<!-- ===LINEs=== -->
 					<lines>
 						<Line version="1" id="UNI:Line:109">
-							<Name>109</Name>
+							<Name>Morgenbuss Helsfyr - Holtet</Name>
 							<TransportMode>bus</TransportMode>
 							<TransportSubmode>
 								<BusSubmode>localBus</BusSubmode>

@@ -192,7 +192,7 @@
                     <lines>
                         <!-- Kun 1 linje definert; 61A -->
                         <Line version="any" id="RUT:Line:0061">
-                            <Name>Tveita T</Name>
+                            <Name>Tveita T - Solfjellet</Name>
                             <TransportMode>bus</TransportMode>
                             <TransportSubmode>
                                 <BusSubmode>localBus</BusSubmode>
