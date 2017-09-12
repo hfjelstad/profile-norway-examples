@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- ===Simple Timetable  Example=== -->
 <!-- This example show the timetable for route 109 morning express in Oslo. -->
-<PublicationDelivery version="1.04:NO-NeTEx-networktimetable:1.1"
+<PublicationDelivery version="1.07:NO-NeTEx-networktimetable:1.1"
 	xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri"
 	xsi:schemaLocation="http://www.netex.org.uk/netex ../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
@@ -115,9 +115,9 @@
 					<!-- MERKNAD: 
 						Stoppestedsobjekter er tatt med i eksempelet for å illustrere alle elementer i en PublicationDelivery, 
 						leveranser ihht. norsk profil skal skje ved at stoppestedsobjekter utveksles separat.
-						  (Innsendt i egen fil etter stops-profil, version="1.04:NO-NeTEx-stops:1.0")
+						  (Innsendt i egen fil etter stops-profil, version="1.07:NO-NeTEx-stops:1.0")
 						  
-						Rutedata (networktimetable-profil, version="1.04:NO-NeTEx-networktimetable:1.0") skal alltid referere 
+						Rutedata (networktimetable-profil, version="1.07:NO-NeTEx-networktimetable:1.0") skal alltid referere 
 						til (eksterne) stoppestedsobjekter ved bruk av nasjonal ID (da _uten_ versjonsattributt p.g.a. intern skjema-validering).
 					-->
 					<!--
@@ -126,6 +126,7 @@
 						<DefaultResponsibilitySetRef ref="UNI:ResponsibilitySet:Planning"/>
 					</FrameDefaults>
 					-->
+					
 					<stopPlaces>
 						<!-- MERK: Kun definert quays i faktisk bruk for å forenkle eksempelet -->
 						<!-- TODO: Implement correct stop place and quay IDs -->
@@ -477,9 +478,8 @@
 				<!-- Definert som et sett av avganger med referanse til dager (dagtyper) avgangen kjøres -->
 				<TimetableFrame version="1" id="UNI:TimetableFrame:1">
 					<vehicleJourneys>
-						<!-- TODO: Legg inn korrekte koder for #Ruter/Unibuss service -->
 						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0430">
-							<DepartureTime>04:30:00</DepartureTime>
+							<DepartureTime>04:30:00</DepartureTime> <!-- Optional -->
 							<dayTypes>
 								<DayTypeRef version="1" ref="UNI:DayType:weekday"/>
 							</dayTypes>
@@ -556,7 +556,6 @@
 						</ServiceJourney>
 
 						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0530">
-							<DepartureTime>05:30:00</DepartureTime>
 							<dayTypes>
 								<DayTypeRef version="1" ref="UNI:DayType:weekday"/>
 								<DayTypeRef version="1" ref="UNI:DayType:saturday"/>

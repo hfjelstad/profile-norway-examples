@@ -4,7 +4,7 @@
     https://ruter.no/globalassets/rutetabeller/oslo/oslo_syd_web_april2016.pdf
 -->
 <PublicationDelivery 
-  version="1.04:NO-NeTEx-networktimetable:1.1"
+  version="1.07:NO-NeTEx-networktimetable:1.1"
   xmlns="http://www.netex.org.uk/netex" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd">

@@ -3,7 +3,7 @@
 ==== Stoppested med utstyr (billetteringsutstyr, toalett og baggasje-/sykkel-oppbevaring) og parkering / sykkelparkering ======
 -->
 <PublicationDelivery
-	version="1.04:NO-NeTEx-stops:1.0" 
+	version="1.07:NO-NeTEx-stops:1.0" 
 	xmlns="http://www.netex.org.uk/netex"
 	xmlns:gml="http://www.opengis.net/gml/3.2" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
