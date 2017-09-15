@@ -31,7 +31,6 @@
 		
 		
 		<SiteFrame version="1" id="NSR:SiteFrame:1">
-			
 			<groupsOfStopPlaces>
 				<GroupOfStopPlaces version="1" id="NSR:GroupOfStopPlaces:1234">
 					<Name>Sample-group</Name>

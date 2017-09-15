@@ -48,7 +48,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 				<ResourceFrame version="1" id="RUT:ResourceFrame:1">
 					<organisations>
 						<!-- TODO her er ting kun splittet i authority og operator. Normalt er strukturen mer kompleks, og informasjon rundt f.eks hittegods må modelleres korrekt -->
-						<Authority version="1" id="RUT:Company:Ruter">
+						<Authority version="1" id="RUT:Authority:Ruter">
 							<CompanyNumber>991609407</CompanyNumber>
 							<!-- Organisasjonsnummer -->
 							<Name>Ruter#</Name>
@@ -56,7 +56,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							<OrganisationType>authority</OrganisationType>
 						</Authority>
 						<!-- Antar her at Unibuss er selskapet som kjører turen. Ikke nødvendigvis korrekt, men fremgår ikke av rutetabellen -->
-						<Operator version="1" id="RUT:Company:Unibuss">
+						<Operator version="1" id="RUT:Operator:Unibuss">
 							<CompanyNumber>985615616</CompanyNumber>
 							<Name>Unibuss</Name>
 							<LegalName>UNIBUSS AS</LegalName>
@@ -65,10 +65,16 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 								<Url>http://www.ruter.no</Url>
 							</CustomerServiceContactDetails>
 						</Operator>
-						<Operator version="1" id="RUT:Company:NSB">
+						<Operator version="1" id="RUT:Operator:NSB">
 							<CompanyNumber>0000000</CompanyNumber>
 							<Name>Norges Statsbaner</Name>
 							<LegalName>NSB AS</LegalName>
+							<PrivateContactDetails>
+								<Email></Email>
+								<Phone>0047 177</Phone>
+								<Url>http://www.ruter.no</Url>
+								<FurtherDetails>Kontaktskjema på websider</FurtherDetails>								
+							</PrivateContactDetails>
 							<CustomerServiceContactDetails>
 								<Phone>815 00 888</Phone>
 								<Url>http://www.nsb.no</Url>
@@ -235,7 +241,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 								<BusSubmode>shuttleBus</BusSubmode>
 							</TransportSubmode>
 							<PublicCode>863</PublicCode>
-							<OperatorRef ref="RUT:Company:Unibuss"/>
+							<OperatorRef ref="RUT:Operator:Unibuss"/>
 							<routes>
 								<RouteRef version="1" ref="RUT:Route:863-TilLorenskog"/>
 								<RouteRef version="1" ref="RUT:Route:863-FraLorenskog"/>

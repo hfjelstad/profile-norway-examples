@@ -89,15 +89,33 @@
                             <SituationRef>
                                 <SituationSimpleRef>placeholder</SituationSimpleRef>
                             </SituationRef>
-                            
-                            
-                            <!-- se SIRI part 3 Table 46 — MonitoredStopArrivalStatusGroup — Elements -->
                             <AimedArrivalTime>2017-08-15T15:00:00+02:00</AimedArrivalTime>
+                            <ExpectedArrivalTime>2017-08-15T15:00:01+02:00</ExpectedArrivalTime>
                             <ArrivalStatus>arrived</ArrivalStatus>
+                            <ArrivalBoardingActivity>passThru</ArrivalBoardingActivity>
+                            <ArrivalStopAssignment>
+                                <AimedQuayRef>placeholder</AimedQuayRef>
+                                <ExpectedQuayRef>placeholder</ExpectedQuayRef>
+                                <ActualQuayRef>placeholder</ActualQuayRef>
+                            </ArrivalStopAssignment>
                             
                             <AimedDepartureTime>2017-08-15T15:00:00+02:00</AimedDepartureTime>
                             <ExpectedDepartureTime>2017-08-15T15:00:00+02:00</ExpectedDepartureTime>
-                            <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
+                            <!-- <EarliestExpectedDepartureTime>2017-08-15T15:00:00+02:00</EarliestExpectedDepartureTime> -->
+                            
+                            
+                            <DepartureStatus>departed</DepartureStatus>
+                            <DepartureBoardingActivity>passThru</DepartureBoardingActivity>
+                            <DepartureStopAssignment>
+                                <AimedQuayRef>placeholder</AimedQuayRef>
+                                <ExpectedQuayRef>placeholder</ExpectedQuayRef>
+                                <ActualQuayRef>placeholder</ActualQuayRef>
+                            </DepartureStopAssignment>
+                            
+                            <!-- se SIRI part 3 Table 46 nederst side 30 (PassengerDepartureTimesGroup) -->
+                            
+                            
+                            
                         </EstimatedCall>
                         <EstimatedCall>
                             <StopPointRef>NSR:Quay:53158</StopPointRef>
@@ -208,7 +226,7 @@
                     <PublishedLineName>500</PublishedLineName>
                     <OperatorRef>Norgesbuss</OperatorRef>
                     <Monitored>true</Monitored>
-                    <!--MonitoringError/-->
+                    <!--MonitoringError/
                     <BlockRef>Norgesbuss:50003:3</BlockRef>
                     <EstimatedCalls>
                         <EstimatedCall>
