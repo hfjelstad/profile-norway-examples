@@ -122,6 +122,8 @@
 					-->
 					<!--
 						Optional, konseptet tas ikke i bruk i initiell versjon av Rutebanken
+					-->
+					<!--
 					<FrameDefaults>
 						<DefaultResponsibilitySetRef ref="UNI:ResponsibilitySet:Planning"/>
 					</FrameDefaults>

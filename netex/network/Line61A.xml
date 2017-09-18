@@ -423,6 +423,7 @@
                                     <ArrivalTime>00:31:00</ArrivalTime>
                                 </TimetabledPassingTime>
                             </passingTimes>
+                            
                             <frequencyGroups>
                                 <RhythmicalJourneyGroup version="any" id="RUT:RhythmicalJourneyGroup:1">
                                     <Name>Every hour, 15 minutes past the hour</Name>
