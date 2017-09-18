@@ -7,6 +7,7 @@
   version="2.0">
     <ServiceDelivery>
         <ResponseTimestamp>2017-08-15T10:43:30.506+02:00</ResponseTimestamp>
+        <ProducerRef>CODESPACE</ProducerRef>
         
         <EstimatedTimetableDelivery version="2.0">
             <ResponseTimestamp>2017-12-17T09:30:46-05:00</ResponseTimestamp>
@@ -39,12 +40,9 @@
                     <PredictionInaccurate>false</PredictionInaccurate>
                     <ConfidenceLevel>reliable</ConfidenceLevel>
                     <Occupancy>full</Occupancy>
-                    
                     <!-- BlockRef>86</BlockRef -->
-                    
                     <VehicleJourneyRef>placeholder</VehicleJourneyRef>
                     <VehicleRef>placeholder</VehicleRef>
-                    
                     <EstimatedCalls>
                         <EstimatedCall>
                             <StopPointRef>NSR:Quay:52930</StopPointRef>
@@ -86,9 +84,11 @@
                                     <AccessFacility>escalator</AccessFacility>
                                 </MobilityDisruption>
                             </FacilityChangeElement>
+                            
                             <SituationRef>
                                 <SituationSimpleRef>placeholder</SituationSimpleRef>
                             </SituationRef>
+                            
                             <AimedArrivalTime>2017-08-15T15:00:00+02:00</AimedArrivalTime>
                             <ExpectedArrivalTime>2017-08-15T15:00:01+02:00</ExpectedArrivalTime>
                             <ArrivalStatus>arrived</ArrivalStatus>
@@ -98,12 +98,12 @@
                                 <ExpectedQuayRef>placeholder</ExpectedQuayRef>
                                 <ActualQuayRef>placeholder</ActualQuayRef>
                             </ArrivalStopAssignment>
+                            <ArrivalOperatorRefs>placeholder</ArrivalOperatorRefs>
+                            <ArrivalOperatorRefs>placeholder</ArrivalOperatorRefs>
                             
                             <AimedDepartureTime>2017-08-15T15:00:00+02:00</AimedDepartureTime>
                             <ExpectedDepartureTime>2017-08-15T15:00:00+02:00</ExpectedDepartureTime>
                             <!-- <EarliestExpectedDepartureTime>2017-08-15T15:00:00+02:00</EarliestExpectedDepartureTime> -->
-                            
-                            
                             <DepartureStatus>departed</DepartureStatus>
                             <DepartureBoardingActivity>passThru</DepartureBoardingActivity>
                             <DepartureStopAssignment>
@@ -111,11 +111,13 @@
                                 <ExpectedQuayRef>placeholder</ExpectedQuayRef>
                                 <ActualQuayRef>placeholder</ActualQuayRef>
                             </DepartureStopAssignment>
+                            <DepartureOperatorRefs>placeholder</DepartureOperatorRefs>
+                            <DepartureOperatorRefs>placeholder</DepartureOperatorRefs>
                             
-                            <!-- se SIRI part 3 Table 46 nederst side 30 (PassengerDepartureTimesGroup) -->
+                            <AimedHeadwayInterval>PT5M</AimedHeadwayInterval>
+                            <ExpectedHeadwayInterval>PT12M</ExpectedHeadwayInterval>
                             
-                            
-                            
+                            <NumberOfStopsAway>1</NumberOfStopsAway>
                         </EstimatedCall>
                     </EstimatedCalls>
                     <IsCompleteStopSequence>true</IsCompleteStopSequence>
