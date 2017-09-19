@@ -337,7 +337,6 @@
 					<MobilityFacilityList>tactileGuidingStrips tactilePatformEdges</MobilityFacilityList>
 				</SiteFacilitySet>
 			</siteFacilitySets>
-			
 		</SiteFrame>
 		
 	</dataObjects>
