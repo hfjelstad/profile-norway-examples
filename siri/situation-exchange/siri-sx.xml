@@ -188,14 +188,8 @@
                                 <DelayType>delaysOfUncertainDuration</DelayType>
                                 <Delay>P20M</Delay>
                             </Delays>
-                            <Easements>
-                                <TicketRestrictions>noRestrictions</TicketRestrictions>
-                            </Easements>
                         </Consequence>           
                     </Consequences>
-                    <PublishingActions>
-                        <ManualAction/>
-                    </PublishingActions>
                     <Extensions>
                         <LastUpdated>2017-06-30T20:30:10.9975116+02:00</LastUpdated>
                         <ForceResend>false</ForceResend>
