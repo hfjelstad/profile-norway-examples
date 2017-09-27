@@ -10,6 +10,7 @@
         <ProducerRef>CODESPACE</ProducerRef>
         <SituationExchangeDelivery version="1.0">
             <ResponseTimestamp>2017-07-11T11:29:31.173+02:00</ResponseTimestamp>
+            <ValidUntil>2017-08-11T11:29:31.173+02:00</ValidUntil>
             <Situations>
                 <PtSituationElement>
                     <CreationTime>2017-06-28T12:32:05.9987717+02:00</CreationTime>
@@ -44,13 +45,16 @@
                     <Severity>normal</Severity>
                     <Audience>staff</Audience>
                     <ScopeType>line</ScopeType>
+                    
+                    <ReportType>incident</ReportType> <!-- general -->
+                    
                     <Planned>false</Planned>
-                    <Summary>Buss for tog mellom Asker og Spikkestad</Summary>
-                    <Description>Bane NOR utfører arbeid på strekningen, og NSB kjører buss for tog.
-                        Rutetidene kan bli endret.</Description>
-                    <Detail>Se nettsider for mer informasjon</Detail>
-                    <Advice>Benytt lokaltog</Advice>
-                    <Advice>ffda</Advice>
+                    <Summary>placeholder</Summary>
+                    <Description>placeholder</Description>
+                    <Detail>placeholder</Detail>
+                    <Advice>placeholder</Advice>
+                    <Advice>placeholder</Advice>
+                    
                     <InfoLinks>
                         <InfoLink>
                             <Uri>http://www.entur.org/1</Uri>
@@ -184,10 +188,14 @@
                                 <DelayType>delaysOfUncertainDuration</DelayType>
                                 <Delay>P20M</Delay>
                             </Delays>
-                            <Easements></Easements>
+                            <Easements>
+                                <TicketRestrictions>noRestrictions</TicketRestrictions>
+                            </Easements>
                         </Consequence>           
                     </Consequences>
-                    <PublishingActions></PublishingActions>
+                    <PublishingActions>
+                        <ManualAction/>
+                    </PublishingActions>
                     <Extensions>
                         <LastUpdated>2017-06-30T20:30:10.9975116+02:00</LastUpdated>
                         <ForceResend>false</ForceResend>

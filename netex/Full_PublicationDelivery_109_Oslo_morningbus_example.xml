@@ -836,6 +836,32 @@
 							</properties>
 						</DayType>
 					</dayTypes>
+					
+					<operatingPeriods>
+						<OperatingPeriod id="RUT:OperatingPeriod:2017" version="1">
+						</OperatingPeriod>
+					</operatingPeriods>
+					
+					<dayTypeAssignments>
+						<DayTypeAssignment id="RUT:DayTypeAssignment:1" version="1" order="1">
+							<OperatingPeriodRef ref="RUT:OperatingPeriod:2017"/>
+							<DayTypeRef ref="RUT:DayType:weekday"/>
+						</DayTypeAssignment>
+						<DayTypeAssignment id="RUT:DayTypeAssignment:2" version="1" order="2">
+							<OperatingPeriodRef ref="RUT:OperatingPeriod:2017"/>
+							<DayTypeRef ref="RUT:DayType:saturday"/>
+						</DayTypeAssignment>
+						<DayTypeAssignment id="RUT:DayTypeAssignment:3" version="1" order="3">
+							<OperatingPeriodRef ref="RUT:OperatingPeriod:2017"/>
+							<DayTypeRef ref="RUT:DayType:sunday"/>
+						</DayTypeAssignment>
+						<!-- override for day without service -->
+						<DayTypeAssignment id="RUT:DayTypeAssignment:X" version="1" order="3">
+							<Date>2017-05-17</Date>
+							<DayTypeRef ref="RUT:DayType:weekday"/>
+							<isAvailable>false</isAvailable>
+						</DayTypeAssignment>
+					</dayTypeAssignments>
 				</ServiceCalendarFrame>
 			</frames>
 		</CompositeFrame>

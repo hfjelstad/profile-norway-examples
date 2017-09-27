@@ -410,6 +410,16 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							</properties>
 						</DayType>
 					</dayTypes>
+					<operatingPeriods>
+						<OperatingPeriod id="RUT:OperatingPeriod:2017" version="1">
+						</OperatingPeriod>
+					</operatingPeriods>
+					<dayTypeAssignments>
+						<DayTypeAssignment id="RUT:DayTypeAssignment:1" version="1" order="1">
+							<OperatingPeriodRef ref="RUT:OperatingPeriod:2017"/>
+							<DayTypeRef ref="RUT:DayType:weekdays"/>
+						</DayTypeAssignment>
+					</dayTypeAssignments>
 				</ServiceCalendarFrame>
 
 

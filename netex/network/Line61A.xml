@@ -368,6 +368,16 @@
                                 <EndTime>00:15:00</EndTime>
                             </Timeband>
                         </timebands>
+                        <operatingPeriods>
+                            <OperatingPeriod id="RUT:OperatingPeriod:2017" version="1">
+                            </OperatingPeriod>
+                        </operatingPeriods>
+                        <dayTypeAssignments>
+                            <DayTypeAssignment id="RUT:DayTypeAssignment:1" version="1" order="1">
+                                <OperatingPeriodRef ref="RUT:OperatingPeriod:2017"/>
+                                <DayTypeRef ref="RUT:DayType:MonSat"/>
+                            </DayTypeAssignment>
+                        </dayTypeAssignments>
                     </ServiceCalendar>
                 </ServiceCalendarFrame>
 
