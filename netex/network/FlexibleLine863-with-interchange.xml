@@ -412,6 +412,8 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 					</dayTypes>
 					<operatingPeriods>
 						<OperatingPeriod id="RUT:OperatingPeriod:2017" version="1">
+							<FromDate>2017-01-01T01:02:03</FromDate>
+							<ToDate>2017-12-31T23:22:21</ToDate>
 						</OperatingPeriod>
 					</operatingPeriods>
 					<dayTypeAssignments>

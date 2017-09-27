@@ -839,6 +839,8 @@
 					
 					<operatingPeriods>
 						<OperatingPeriod id="RUT:OperatingPeriod:2017" version="1">
+							<FromDate>2017-01-01T04:00:00</FromDate>
+							<ToDate>2017-12-31T23:30:00</ToDate>
 						</OperatingPeriod>
 					</operatingPeriods>
 					
