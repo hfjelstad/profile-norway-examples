@@ -4,12 +4,15 @@
     version="2.0">
     <ServiceDelivery>
         <ResponseTimestamp>2017-08-07T11:31:39.027+02:00</ResponseTimestamp>
+        <ProducerRef>placeholder</ProducerRef>
         <VehicleMonitoringDelivery version="2.0">
             <ResponseTimestamp>2017-08-07T11:31:39.027+02:00</ResponseTimestamp>
+            <ValidUntil>2017-12-31T23:59:59+02:00</ValidUntil>
             <VehicleActivity>
                 <RecordedAtTime>2017-08-07T11:29:55.56+02:00</RecordedAtTime>
-                <ItemIdentifier>CORRECTION</ItemIdentifier>
                 <ValidUntilTime>2017-08-07T11:39:55.559+02:00</ValidUntilTime>
+                <VehicleMonitoringRef>placeholder</VehicleMonitoringRef>
+                <MonitoringName>placeholder</MonitoringName>
                 <ProgressBetweenStops>
                     <LinkDistance>500</LinkDistance>
                     <Percentage>0.60</Percentage>
@@ -19,29 +22,110 @@
                     <DirectionRef>2</DirectionRef>
                     <FramedVehicleJourneyRef>
                         <DataFrameRef>2017-08-07</DataFrameRef>
-                        <DatedVehicleJourneyRef>18:4134:5-413406</DatedVehicleJourneyRef>
+                        <DatedVehicleJourneyRef>placeholder</DatedVehicleJourneyRef>
                     </FramedVehicleJourneyRef>
-                    <JourneyPatternRef>18:508</JourneyPatternRef>
-                    <PublishedLineName>18</PublishedLineName>
-                    <OperatorRef>Sporvognsdrift</OperatorRef>
-                    <OriginRef>NSR:Quay:12368</OriginRef>
-                    <OriginName>Ljabru</OriginName>
-                    <DestinationRef>NSR:Quay:11500</DestinationRef>
-                    <DestinationName>Rikshospitalet</DestinationName>
+                    <JourneyPatternRef>placeholder</JourneyPatternRef>
+                    <VehicleMode>bus</VehicleMode>
+                    <GroupOfLinesRef>placeholder</GroupOfLinesRef>
+                    <ExternalLineRef>placeholder</ExternalLineRef>
+                    <OperatorRef>placeholder</OperatorRef>
+                    <OriginRef>placeholder</OriginRef>
+                    <Via>
+                        <PlaceRef>placeholder</PlaceRef>
+                        <ViaPriority>2</ViaPriority>
+                    </Via>
+                    <Via>
+                        <PlaceRef>placeholder</PlaceRef>
+                        <ViaPriority>2</ViaPriority>
+                    </Via>
+                    <DestinationRef>placeholder</DestinationRef>                    
+                    <JourneyNote>placeholder</JourneyNote>
+                    <PublicContact>
+                        <PhoneNumber>placeholder</PhoneNumber>
+                        <Url>placeholder</Url>
+                    </PublicContact>
+                    
+                    <OperationsContact>
+                        <PhoneNumber>placeholder</PhoneNumber>
+                        <Url>placeholder</Url>
+                    </OperationsContact>
                     <HeadwayService>false</HeadwayService>
+                    
+                    
                     <OriginAimedDepartureTime>2017-08-07T10:55:00+02:00</OriginAimedDepartureTime>
                     <DestinationAimedArrivalTime>2017-08-07T11:34:00+02:00</DestinationAimedArrivalTime>
+                    <FirstOrLastJourney>firstServiceOfDay</FirstOrLastJourney>
+                    
+                    <FacilityChangeElement>
+                        <EquipmentAvailability>
+                            <EquipmentRef>placeholder</EquipmentRef>
+                            <EquipmentStatus>available</EquipmentStatus>
+                        </EquipmentAvailability>
+                    </FacilityChangeElement>
+                    
+                    <SituationRef>
+                        <SituationSimpleRef>placeholder</SituationSimpleRef>
+                    </SituationRef>
+                    <SituationRef>
+                        <SituationSimpleRef>placeholder</SituationSimpleRef>
+                    </SituationRef>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!-- IKKE LAGT INN: part 3 s 86 JourneyProgressInfo - Part 2 page 123 (13.5.6) JourneyProgressGroup -->
                     <Monitored>true</Monitored>
                     <MonitoringError>GPRS</MonitoringError>
                     <InCongestion>false</InCongestion>
                     <InPanic>false</InPanic>
+                    <PredictionInaccurate>false</PredictionInaccurate>
+                    <DataSource>xsd:string</DataSource>
+                    <ConfidenceLevel>reliable</ConfidenceLevel>  
                     <VehicleLocation srsName="real">
                         <Longitude>10.731900</Longitude>
                         <Latitude>59.936350</Latitude>
                     </VehicleLocation>
+                    <Bearing>0.0</Bearing> <!-- xsd:float -->
+                    <ProgressRate>normalProgress</ProgressRate>
+                    <Velocity>100</Velocity>
+                    <Occupancy>full</Occupancy>
                     <Delay>PT54S</Delay>
-                    <BlockRef>Sporvognsdrift:1707:780</BlockRef>
+                    <ProgressStatus>placeholder</ProgressStatus>
+                    <VehicleStatus>completed</VehicleStatus>
+                    
+                    
+                    <!-- IKKE LAGT INN: TrainOperationalInfo + OperationalInfoGroup (redundante datasett)? -->
+                    <TrainBlockPart>
+                        <NumberOfBlockParts>1</NumberOfBlockParts>
+                        <TrainPartRef>placeholder</TrainPartRef>
+                    </TrainBlockPart>
+                    <BlockRef>placeholder</BlockRef>
+                    <CourseOfJourneyRef>placeholder</CourseOfJourneyRef>
+                    <VehicleJourneyRef>placeholder</VehicleJourneyRef>
                     <VehicleRef>200141</VehicleRef>
+                    <AdditionalVehicleJourneyRef>
+                        <DataFrameRef>SE-SIRI-ET-NEPPE-RELEVANT</DataFrameRef>
+                        <DatedVehicleJourneyRef>placeholder</DatedVehicleJourneyRef>
+                    </AdditionalVehicleJourneyRef>
+                    <DriverRef>placeholder</DriverRef>
+                    <DriverName>placeholder</DriverName>
+                    <TrainNumbers>
+                        <TrainNumberRef>placeholder</TrainNumberRef>
+                        <TrainNumberRef>placeholder</TrainNumberRef>
+                    </TrainNumbers>
+                    <JourneyParts>
+                        <JourneyPartInfo>
+                            <JourneyPartRef>placeholder</JourneyPartRef>
+                            <TrainNumberRef>placeholder</TrainNumberRef>
+                        </JourneyPartInfo>
+                        <JourneyPartInfo>
+                            <JourneyPartRef>placeholder</JourneyPartRef>
+                            <TrainNumberRef>placeholder</TrainNumberRef>
+                        </JourneyPartInfo>
+                    </JourneyParts>
+                    
                     <PreviousCalls>
                         <PreviousCall>
                             <StopPointRef>NSR:Quay:11587</StopPointRef>
@@ -63,6 +147,10 @@
                             <StopPointName>Universitetet Blindern</StopPointName>
                         </OnwardCall>
                     </OnwardCalls>
+                    <IsCompleteStopSequence>true</IsCompleteStopSequence>
+                    <!-- FIN -->
+                    
+                    
                 </MonitoredVehicleJourney>
             </VehicleActivity>
         </VehicleMonitoringDelivery>
