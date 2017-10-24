@@ -69,20 +69,18 @@
                     <SituationRef>
                         <SituationSimpleRef>placeholder</SituationSimpleRef>
                     </SituationRef>
-                    
-                    
-                    
-                    
-                    
-                    
-                    <!-- IKKE LAGT INN: part 3 s 86 JourneyProgressInfo - Part 2 page 123 (13.5.6) JourneyProgressGroup -->
+                                         
                     <Monitored>true</Monitored>
                     <MonitoringError>GPRS</MonitoringError>
                     <InCongestion>false</InCongestion>
                     <InPanic>false</InPanic>
                     <PredictionInaccurate>false</PredictionInaccurate>
                     <DataSource>xsd:string</DataSource>
-                    <ConfidenceLevel>reliable</ConfidenceLevel>  
+                    <ConfidenceLevel>reliable</ConfidenceLevel>
+                    
+                    
+                    
+                    <!-- IKKE LAGT INN: part 3 s 86 JourneyProgressInfo - Part 2 page 123 (13.5.6) JourneyProgressGroup -->
                     <VehicleLocation srsName="real">
                         <Longitude>10.731900</Longitude>
                         <Latitude>59.936350</Latitude>
