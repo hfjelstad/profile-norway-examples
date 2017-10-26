@@ -287,13 +287,16 @@
 								<BusSubmode>localBus</BusSubmode>
 							</TransportSubmode>
 							<PublicCode>109</PublicCode>
+							<ExternalLineRef ref="xfdsa"></ExternalLineRef>
 							<OperatorRef version="1" ref="RUT:Operator:Unibuss"/>
 							<!-- Optional: -->
 							<routes>
 								<RouteRef version="1" ref="UNI:Route:109"/>
 							</routes>
-							<RepresentedByGroupRef version="1" ref="RUT:Network:RuterBuss"/>
-							<!-- alternativt kan dette settes mer presist 'RepresentedByGroupRef ref="RUT:GroupOfLines:Ruter-Buss-Oslo' dersom implementert -->
+							<RepresentedByGroupRef version="1" ref="RUT:Network:RuterBuss"/> <!-- alternativt kan dette settes mer presist 'RepresentedByGroupRef ref="RUT:GroupOfLines:Ruter-Buss-Oslo' dersom implementert -->
+							<Presentation>
+								<Colour>FF0000</Colour>
+							</Presentation>
 						</Line>
 					</lines>
 					<!-- ===DESTINATION DISPLAYs=== -->
@@ -325,7 +328,7 @@
 							<Name>Holtet</Name>
 						</ScheduledStopPoint>
 					</scheduledStopPoints>
-
+					
 					<serviceLinks>
 						<ServiceLink version="1" id="UNI:ServiceLink:helsfyr_to_brynseng">
 							<projections>

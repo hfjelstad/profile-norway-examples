@@ -49,8 +49,6 @@
                         <PhoneNumber>placeholder</PhoneNumber>
                         <Url>placeholder</Url>
                     </OperationsContact>
-                    <HeadwayService>false</HeadwayService>
-                    
                     
                     <OriginAimedDepartureTime>2017-08-07T10:55:00+02:00</OriginAimedDepartureTime>
                     <DestinationAimedArrivalTime>2017-08-07T11:34:00+02:00</DestinationAimedArrivalTime>
@@ -78,24 +76,23 @@
                     <DataSource>xsd:string</DataSource>
                     <ConfidenceLevel>reliable</ConfidenceLevel>
                     
-                    
-                    
-                    
-                    <!-- IKKE LAGT INN: part 3 s 86 JourneyProgressInfo - Part 2 page 123 (13.5.6) JourneyProgressGroup -->
-                    <VehicleLocation srsName="real">
+                    <VehicleLocation>
                         <Longitude>10.731900</Longitude>
                         <Latitude>59.936350</Latitude>
+                        <Precision>1</Precision>
                     </VehicleLocation>
-                    <Bearing>0.0</Bearing> <!-- xsd:float -->
+                    <!-- Bearing>0.0</Bearing -->
                     <ProgressRate>normalProgress</ProgressRate>
                     <Velocity>100</Velocity>
                     <Occupancy>full</Occupancy>
                     <Delay>PT54S</Delay>
-                    <ProgressStatus>placeholder</ProgressStatus>
+                    <!--ProgressStatus>placeholder</ProgressStatus-->
+                                        
                     <VehicleStatus>completed</VehicleStatus>
                     
                     
-                    <!-- IKKE LAGT INN: TrainOperationalInfo + OperationalInfoGroup (redundante datasett)? -->
+                    
+                    <!-- Togdata er kanskje ikke relevant for profilen? -->
                     <TrainBlockPart>
                         <NumberOfBlockParts>1</NumberOfBlockParts>
                         <TrainPartRef>placeholder</TrainPartRef>
@@ -125,31 +122,32 @@
                         </JourneyPartInfo>
                     </JourneyParts>
                     
+                    
+                    
                     <PreviousCalls>
                         <PreviousCall>
                             <StopPointRef>NSR:Quay:11587</StopPointRef>
-                            <VisitNumber>22</VisitNumber>
-                            <StopPointName>Ullevål sykehus</StopPointName>
                         </PreviousCall>
                     </PreviousCalls>
                     <MonitoredCall>
                         <StopPointRef>301035012</StopPointRef>
-                        <VisitNumber>23</VisitNumber>
                         <StopPointName>John Colletts plass</StopPointName>
                         <VehicleAtStop>false</VehicleAtStop>
                         <DestinationDisplay>Rikshospitalet</DestinationDisplay>
+                        <AimedArrivalTime>2017-08-07T11:29:00</AimedArrivalTime>
+                        <ActualArrivalTime>2017-08-07T11:30:00</ActualArrivalTime>
+                        <LatestExpectedArrivalTime>2017-08-07T11:31:00</LatestExpectedArrivalTime>
+                        <ExpectedDeparturePredictionQuality>
+                            <PredictionLevel>certain</PredictionLevel>
+                        </ExpectedDeparturePredictionQuality>
+                        <DepartureStatus>delayed</DepartureStatus>
                     </MonitoredCall>
                     <OnwardCalls>
                         <OnwardCall>
                             <StopPointRef>NSR:Quay:11650</StopPointRef>
-                            <VisitNumber>24</VisitNumber>
-                            <StopPointName>Universitetet Blindern</StopPointName>
                         </OnwardCall>
                     </OnwardCalls>
                     <IsCompleteStopSequence>true</IsCompleteStopSequence>
-                    <!-- FIN -->
-                    
-                    
                 </MonitoredVehicleJourney>
             </VehicleActivity>
         </VehicleMonitoringDelivery>

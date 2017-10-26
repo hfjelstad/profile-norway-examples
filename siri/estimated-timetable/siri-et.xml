@@ -119,8 +119,8 @@
                             
                             <AimedHeadwayInterval>PT5M</AimedHeadwayInterval>
                             <ExpectedHeadwayInterval>PT12M</ExpectedHeadwayInterval>
-                            
-                            <NumberOfStopsAway>1</NumberOfStopsAway>
+                            <!--DistanceFromStop>500</DistanceFromStop>
+                            <NumberOfStopsAway>1</NumberOfStopsAway-->
                         </EstimatedCall>
                     </EstimatedCalls>
                     <IsCompleteStopSequence>true</IsCompleteStopSequence>
