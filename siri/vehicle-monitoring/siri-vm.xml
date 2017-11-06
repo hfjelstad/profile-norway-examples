@@ -38,10 +38,6 @@
                         <PlaceRef>placeholder</PlaceRef>
                         <ViaPriority>2</ViaPriority>
                     </Via>
-<<<<<<< HEAD
-                    <DestinationRef>placeholder</DestinationRef>
-                    <HeadwayService>false</HeadwayService>
-=======
                     <DestinationRef>placeholder</DestinationRef>                    
                     <JourneyNote>placeholder</JourneyNote>
                     <PublicContact>
@@ -53,8 +49,6 @@
                         <PhoneNumber>placeholder</PhoneNumber>
                         <Url>placeholder</Url>
                     </OperationsContact>
-                    
->>>>>>> 54fb914473773b0defe4dbf307f886367659357a
                     <OriginAimedDepartureTime>2017-08-07T10:55:00+02:00</OriginAimedDepartureTime>
                     <DestinationAimedArrivalTime>2017-08-07T11:34:00+02:00</DestinationAimedArrivalTime>
                     <FirstOrLastJourney>firstServiceOfDay</FirstOrLastJourney>
@@ -91,14 +85,7 @@
                     <Velocity>100</Velocity>
                     <Occupancy>full</Occupancy>
                     <Delay>PT54S</Delay>
-<<<<<<< HEAD
-                    <BlockRef>Sporvognsdrift:1707:780</BlockRef>
-=======
-                    <!--ProgressStatus>placeholder</ProgressStatus-->
-                                        
                     <VehicleStatus>completed</VehicleStatus>
-                    
-                    
                     
                     <!-- Togdata er kanskje ikke relevant for profilen? -->
                     <TrainBlockPart>
@@ -107,7 +94,6 @@
                     </TrainBlockPart>
                     <BlockRef>placeholder</BlockRef>
                     <CourseOfJourneyRef>placeholder</CourseOfJourneyRef>
->>>>>>> 54fb914473773b0defe4dbf307f886367659357a
                     <VehicleJourneyRef>placeholder</VehicleJourneyRef>
                     <VehicleRef>200141</VehicleRef>
                     <AdditionalVehicleJourneyRef>
@@ -131,15 +117,9 @@
                         </JourneyPartInfo>
                     </JourneyParts>
                     
-                    
-                    
                     <PreviousCalls>
                         <PreviousCall>
                             <StopPointRef>NSR:Quay:11587</StopPointRef>
-<<<<<<< HEAD
-                            <StopPointName>Ullevål sykehus</StopPointName>
-=======
->>>>>>> 54fb914473773b0defe4dbf307f886367659357a
                         </PreviousCall>
                     </PreviousCalls>
                     <MonitoredCall>
@@ -158,10 +138,6 @@
                     <OnwardCalls>
                         <OnwardCall>
                             <StopPointRef>NSR:Quay:11650</StopPointRef>
-<<<<<<< HEAD
-                            <StopPointName>Universitetet Blindern</StopPointName>
-=======
->>>>>>> 54fb914473773b0defe4dbf307f886367659357a
                         </OnwardCall>
                     </OnwardCalls>
                     <IsCompleteStopSequence>true</IsCompleteStopSequence>
