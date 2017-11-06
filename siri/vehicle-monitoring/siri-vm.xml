@@ -4,12 +4,15 @@
     version="2.0">
     <ServiceDelivery>
         <ResponseTimestamp>2017-08-07T11:31:39.027+02:00</ResponseTimestamp>
+        <ProducerRef>placeholder</ProducerRef>
         <VehicleMonitoringDelivery version="2.0">
             <ResponseTimestamp>2017-08-07T11:31:39.027+02:00</ResponseTimestamp>
+            <ValidUntil>2017-12-31T23:59:59+02:00</ValidUntil>
             <VehicleActivity>
                 <RecordedAtTime>2017-08-07T11:29:55.56+02:00</RecordedAtTime>
-                <ItemIdentifier>CORRECTION</ItemIdentifier>
                 <ValidUntilTime>2017-08-07T11:39:55.559+02:00</ValidUntilTime>
+                <VehicleMonitoringRef>placeholder</VehicleMonitoringRef>
+                <MonitoringName>placeholder</MonitoringName>
                 <ProgressBetweenStops>
                     <LinkDistance>500</LinkDistance>
                     <Percentage>0.60</Percentage>
@@ -19,15 +22,23 @@
                     <DirectionRef>2</DirectionRef>
                     <FramedVehicleJourneyRef>
                         <DataFrameRef>2017-08-07</DataFrameRef>
-                        <DatedVehicleJourneyRef>18:4134:5-413406</DatedVehicleJourneyRef>
+                        <DatedVehicleJourneyRef>placeholder</DatedVehicleJourneyRef>
                     </FramedVehicleJourneyRef>
-                    <JourneyPatternRef>18:508</JourneyPatternRef>
-                    <PublishedLineName>18</PublishedLineName>
-                    <OperatorRef>Sporvognsdrift</OperatorRef>
-                    <OriginRef>NSR:Quay:12368</OriginRef>
-                    <OriginName>Ljabru</OriginName>
-                    <DestinationRef>NSR:Quay:11500</DestinationRef>
-                    <DestinationName>Rikshospitalet</DestinationName>
+                    <JourneyPatternRef>placeholder</JourneyPatternRef>
+                    <VehicleMode>bus</VehicleMode>
+                    <GroupOfLinesRef>placeholder</GroupOfLinesRef>
+                    <ExternalLineRef>placeholder</ExternalLineRef>
+                    <OperatorRef>placeholder</OperatorRef>
+                    <OriginRef>placeholder</OriginRef>
+                    <Via>
+                        <PlaceRef>placeholder</PlaceRef>
+                        <ViaPriority>2</ViaPriority>
+                    </Via>
+                    <Via>
+                        <PlaceRef>placeholder</PlaceRef>
+                        <ViaPriority>2</ViaPriority>
+                    </Via>
+                    <DestinationRef>placeholder</DestinationRef>
                     <HeadwayService>false</HeadwayService>
                     <OriginAimedDepartureTime>2017-08-07T10:55:00+02:00</OriginAimedDepartureTime>
                     <DestinationAimedArrivalTime>2017-08-07T11:34:00+02:00</DestinationAimedArrivalTime>
@@ -41,17 +52,16 @@
                     </VehicleLocation>
                     <Delay>PT54S</Delay>
                     <BlockRef>Sporvognsdrift:1707:780</BlockRef>
+                    <VehicleJourneyRef>placeholder</VehicleJourneyRef>
                     <VehicleRef>200141</VehicleRef>
                     <PreviousCalls>
                         <PreviousCall>
                             <StopPointRef>NSR:Quay:11587</StopPointRef>
-                            <VisitNumber>22</VisitNumber>
                             <StopPointName>Ullevål sykehus</StopPointName>
                         </PreviousCall>
                     </PreviousCalls>
                     <MonitoredCall>
                         <StopPointRef>301035012</StopPointRef>
-                        <VisitNumber>23</VisitNumber>
                         <StopPointName>John Colletts plass</StopPointName>
                         <VehicleAtStop>false</VehicleAtStop>
                         <DestinationDisplay>Rikshospitalet</DestinationDisplay>
@@ -59,7 +69,6 @@
                     <OnwardCalls>
                         <OnwardCall>
                             <StopPointRef>NSR:Quay:11650</StopPointRef>
-                            <VisitNumber>24</VisitNumber>
                             <StopPointName>Universitetet Blindern</StopPointName>
                         </OnwardCall>
                     </OnwardCalls>

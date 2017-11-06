@@ -25,6 +25,7 @@
                     <RouteRef>placeholder</RouteRef>
                     <ExternalLineRef>placeholder</ExternalLineRef>
                     <OperatorRef>31</OperatorRef>
+                    <ServiceFeatureRef></ServiceFeatureRef>
                     <PublicContact>
                         <PhoneNumber>00000000</PhoneNumber>
                         <Url>http://www.placeholder.net</Url>
