@@ -38,26 +38,108 @@
                         <PlaceRef>placeholder</PlaceRef>
                         <ViaPriority>2</ViaPriority>
                     </Via>
+<<<<<<< HEAD
                     <DestinationRef>placeholder</DestinationRef>
                     <HeadwayService>false</HeadwayService>
+=======
+                    <DestinationRef>placeholder</DestinationRef>                    
+                    <JourneyNote>placeholder</JourneyNote>
+                    <PublicContact>
+                        <PhoneNumber>placeholder</PhoneNumber>
+                        <Url>placeholder</Url>
+                    </PublicContact>
+                    
+                    <OperationsContact>
+                        <PhoneNumber>placeholder</PhoneNumber>
+                        <Url>placeholder</Url>
+                    </OperationsContact>
+                    
+>>>>>>> 54fb914473773b0defe4dbf307f886367659357a
                     <OriginAimedDepartureTime>2017-08-07T10:55:00+02:00</OriginAimedDepartureTime>
                     <DestinationAimedArrivalTime>2017-08-07T11:34:00+02:00</DestinationAimedArrivalTime>
+                    <FirstOrLastJourney>firstServiceOfDay</FirstOrLastJourney>
+                    
+                    <FacilityChangeElement>
+                        <EquipmentAvailability>
+                            <EquipmentRef>placeholder</EquipmentRef>
+                            <EquipmentStatus>available</EquipmentStatus>
+                        </EquipmentAvailability>
+                    </FacilityChangeElement>
+                    
+                    <SituationRef>
+                        <SituationSimpleRef>placeholder</SituationSimpleRef>
+                    </SituationRef>
+                    <SituationRef>
+                        <SituationSimpleRef>placeholder</SituationSimpleRef>
+                    </SituationRef>
+                                         
                     <Monitored>true</Monitored>
                     <MonitoringError>GPRS</MonitoringError>
                     <InCongestion>false</InCongestion>
                     <InPanic>false</InPanic>
-                    <VehicleLocation srsName="real">
+                    <PredictionInaccurate>false</PredictionInaccurate>
+                    <DataSource>xsd:string</DataSource>
+                    <ConfidenceLevel>reliable</ConfidenceLevel>
+                    
+                    <VehicleLocation>
                         <Longitude>10.731900</Longitude>
                         <Latitude>59.936350</Latitude>
+                        <Precision>1</Precision>
                     </VehicleLocation>
+                    <!-- Bearing>0.0</Bearing -->
+                    <ProgressRate>normalProgress</ProgressRate>
+                    <Velocity>100</Velocity>
+                    <Occupancy>full</Occupancy>
                     <Delay>PT54S</Delay>
+<<<<<<< HEAD
                     <BlockRef>Sporvognsdrift:1707:780</BlockRef>
+=======
+                    <!--ProgressStatus>placeholder</ProgressStatus-->
+                                        
+                    <VehicleStatus>completed</VehicleStatus>
+                    
+                    
+                    
+                    <!-- Togdata er kanskje ikke relevant for profilen? -->
+                    <TrainBlockPart>
+                        <NumberOfBlockParts>1</NumberOfBlockParts>
+                        <TrainPartRef>placeholder</TrainPartRef>
+                    </TrainBlockPart>
+                    <BlockRef>placeholder</BlockRef>
+                    <CourseOfJourneyRef>placeholder</CourseOfJourneyRef>
+>>>>>>> 54fb914473773b0defe4dbf307f886367659357a
                     <VehicleJourneyRef>placeholder</VehicleJourneyRef>
                     <VehicleRef>200141</VehicleRef>
+                    <AdditionalVehicleJourneyRef>
+                        <DataFrameRef>SE-SIRI-ET-NEPPE-RELEVANT</DataFrameRef>
+                        <DatedVehicleJourneyRef>placeholder</DatedVehicleJourneyRef>
+                    </AdditionalVehicleJourneyRef>
+                    <DriverRef>placeholder</DriverRef>
+                    <DriverName>placeholder</DriverName>
+                    <TrainNumbers>
+                        <TrainNumberRef>placeholder</TrainNumberRef>
+                        <TrainNumberRef>placeholder</TrainNumberRef>
+                    </TrainNumbers>
+                    <JourneyParts>
+                        <JourneyPartInfo>
+                            <JourneyPartRef>placeholder</JourneyPartRef>
+                            <TrainNumberRef>placeholder</TrainNumberRef>
+                        </JourneyPartInfo>
+                        <JourneyPartInfo>
+                            <JourneyPartRef>placeholder</JourneyPartRef>
+                            <TrainNumberRef>placeholder</TrainNumberRef>
+                        </JourneyPartInfo>
+                    </JourneyParts>
+                    
+                    
+                    
                     <PreviousCalls>
                         <PreviousCall>
                             <StopPointRef>NSR:Quay:11587</StopPointRef>
+<<<<<<< HEAD
                             <StopPointName>Ullevål sykehus</StopPointName>
+=======
+>>>>>>> 54fb914473773b0defe4dbf307f886367659357a
                         </PreviousCall>
                     </PreviousCalls>
                     <MonitoredCall>
@@ -65,13 +147,24 @@
                         <StopPointName>John Colletts plass</StopPointName>
                         <VehicleAtStop>false</VehicleAtStop>
                         <DestinationDisplay>Rikshospitalet</DestinationDisplay>
+                        <AimedArrivalTime>2017-08-07T11:29:00</AimedArrivalTime>
+                        <ActualArrivalTime>2017-08-07T11:30:00</ActualArrivalTime>
+                        <LatestExpectedArrivalTime>2017-08-07T11:31:00</LatestExpectedArrivalTime>
+                        <ExpectedDeparturePredictionQuality>
+                            <PredictionLevel>certain</PredictionLevel>
+                        </ExpectedDeparturePredictionQuality>
+                        <DepartureStatus>delayed</DepartureStatus>
                     </MonitoredCall>
                     <OnwardCalls>
                         <OnwardCall>
                             <StopPointRef>NSR:Quay:11650</StopPointRef>
+<<<<<<< HEAD
                             <StopPointName>Universitetet Blindern</StopPointName>
+=======
+>>>>>>> 54fb914473773b0defe4dbf307f886367659357a
                         </OnwardCall>
                     </OnwardCalls>
+                    <IsCompleteStopSequence>true</IsCompleteStopSequence>
                 </MonitoredVehicleJourney>
             </VehicleActivity>
         </VehicleMonitoringDelivery>
