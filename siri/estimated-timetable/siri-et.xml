@@ -44,6 +44,21 @@
                     <!-- BlockRef>86</BlockRef -->
                     <VehicleJourneyRef>placeholder</VehicleJourneyRef>
                     <VehicleRef>placeholder</VehicleRef>
+                    
+                    <RecordedCalls>
+                        <RecordedCall>
+                            <StopPointRef>NSR:Quay:52930</StopPointRef>
+                            <Order>1</Order>
+                            <ExtraCall>true</ExtraCall>
+                            <Occupancy>full</Occupancy>
+                            <AimedArrivalTime>2017-11-07T12:03:00+01:00</AimedArrivalTime>
+                            <ActualArrivalTime>2017-11-07T12:03:00+01:00</ActualArrivalTime>
+                            <AimedDepartureTime>2017-11-07T12:03:00+01:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2017-11-07T12:03:00+01:00</ExpectedDepartureTime>
+                            <ActualDepartureTime>2017-11-07T12:03:00+01:00</ActualDepartureTime>
+                        </RecordedCall>
+                    </RecordedCalls>
+                    
                     <EstimatedCalls>
                         <EstimatedCall>
                             <StopPointRef>NSR:Quay:52930</StopPointRef>
@@ -108,7 +123,7 @@
                             <AimedDepartureTime>2017-08-15T15:00:00+02:00</AimedDepartureTime>
                             <ExpectedDepartureTime>2017-08-15T15:00:00+02:00</ExpectedDepartureTime>
                             <!-- <EarliestExpectedDepartureTime>2017-08-15T15:00:00+02:00</EarliestExpectedDepartureTime> -->
-                            <DepartureStatus>departed</DepartureStatus>
+                            <DepartureStatus>cancelled</DepartureStatus>
                             <DepartureBoardingActivity>passThru</DepartureBoardingActivity>
                             <DepartureStopAssignment>
                                 <AimedQuayRef>placeholder</AimedQuayRef>
