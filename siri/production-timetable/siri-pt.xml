@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2011 CEN SIRI -->
 <Siri 
-    xmlns="http://www.siri.org.uk/siri" 
-    xmlns:acsb="http://www.ifopt.org.uk/acsb" 
-    xmlns:ifopt="http://www.ifopt.org.uk/ifopt" 
+    xmlns="http://www.siri.org.uk/siri"
+    xmlns:acsb="http://www.ifopt.org.uk/acsb"
+    xmlns:ifopt="http://www.ifopt.org.uk/ifopt"
     xmlns:datex2="http://datex2.eu/schema/2_0RC1/2_0"
     version="2.0">
     <ServiceDelivery>
