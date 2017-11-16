@@ -50,13 +50,13 @@
                     
                     <Planned>false</Planned>
                     <Summary>placeholder</Summary>
-                    <Summary>placeholder</Summary>
+                    <Summary xml:lang="EN">placeholder</Summary>
                     <Description>placeholder</Description>
-                    <Description>placeholder</Description>
+                    <Description xml:lang="EN">placeholder</Description>
                     <Detail>placeholder</Detail>
-                    <Detail>placeholder</Detail>
-                    <Advice >placeholder</Advice>
+                    <Detail xml:lang="EN">placeholder</Detail>
                     <Advice>placeholder</Advice>
+                    <Advice xml:lang="EN">placeholder</Advice>
                     
                     <InfoLinks>
                         <InfoLink>
