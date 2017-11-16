@@ -11,14 +11,15 @@
         
         <EstimatedTimetableDelivery version="2.0">
             <ResponseTimestamp>2017-07-11T11:29:31.173+02:00</ResponseTimestamp>
-            <ValidUntil>2017-08-11T11:29:31.173+02:00</ValidUntil>
+            <!--ValidUntil>2017-08-11T11:29:31.173+02:00</ValidUntil-->
             <EstimatedJourneyVersionFrame>
                 <RecordedAtTime>2017-08-15T10:43:21.826+02:00</RecordedAtTime>
                 <VersionRef>TEST</VersionRef>
                 <EstimatedVehicleJourney>
                     <LineRef>SKY:Line:985</LineRef>
                     <DirectionRef>1</DirectionRef>
-                    <DatedVehicleJourneyRef>6671390_94170</DatedVehicleJourneyRef>
+                    <!--DatedVehicleJourneyRef>6671390_94170</DatedVehicleJourneyRef-->
+                    <EstimatedVehicleJourneyCode>test</EstimatedVehicleJourneyCode>
                     <ExtraJourney>false</ExtraJourney>
                     <JourneyPatternRef>placeholder</JourneyPatternRef>
                     <VehicleMode>bus</VehicleMode>
@@ -52,6 +53,7 @@
                             <ExtraCall>true</ExtraCall>
                             <Occupancy>full</Occupancy>
                             <AimedArrivalTime>2017-11-07T12:03:00+01:00</AimedArrivalTime>
+                            <ExpectedArrivalTime>2017-11-07T12:03:00+01:00</ExpectedArrivalTime>
                             <ActualArrivalTime>2017-11-07T12:03:00+01:00</ActualArrivalTime>
                             <AimedDepartureTime>2017-11-07T12:03:00+01:00</AimedDepartureTime>
                             <ExpectedDepartureTime>2017-11-07T12:03:00+01:00</ExpectedDepartureTime>
@@ -61,7 +63,7 @@
                     
                     <EstimatedCalls>
                         <EstimatedCall>
-                            <StopPointRef>NSR:Quay:52930</StopPointRef>
+                            <StopPointRef>0</StopPointRef>
                             <Order>1</Order>
                             <ExtraCall>true</ExtraCall>
                             <!-- PredictionInaccurate>false</PredictionInaccurate -->

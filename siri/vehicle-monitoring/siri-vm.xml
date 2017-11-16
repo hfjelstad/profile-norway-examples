@@ -28,6 +28,7 @@
                     </FramedVehicleJourneyRef>
                     <JourneyPatternRef>placeholder</JourneyPatternRef>
                     <VehicleMode>bus</VehicleMode>
+                    <RouteRef>placeholder</RouteRef>
                     <GroupOfLinesRef>placeholder</GroupOfLinesRef>
                     <ExternalLineRef>placeholder</ExternalLineRef>
                     <OperatorRef>placeholder</OperatorRef>
@@ -40,17 +41,19 @@
                         <PlaceRef>placeholder</PlaceRef>
                         <ViaPriority>2</ViaPriority>
                     </Via>
+                    
                     <DestinationRef>placeholder</DestinationRef>                    
+                    
                     <JourneyNote>placeholder</JourneyNote>
                     <PublicContact>
                         <PhoneNumber>placeholder</PhoneNumber>
                         <Url>placeholder</Url>
                     </PublicContact>
-                    
                     <OperationsContact>
                         <PhoneNumber>placeholder</PhoneNumber>
                         <Url>placeholder</Url>
                     </OperationsContact>
+                    
                     <OriginAimedDepartureTime>2017-08-07T10:55:00+02:00</OriginAimedDepartureTime>
                     <DestinationAimedArrivalTime>2017-08-07T11:34:00+02:00</DestinationAimedArrivalTime>
                     <FirstOrLastJourney>firstServiceOfDay</FirstOrLastJourney>
@@ -125,7 +128,7 @@
                         </PreviousCall>
                     </PreviousCalls>
                     <MonitoredCall>
-                        <StopPointRef>301035012</StopPointRef>
+                        <!--StopPointRef>301035012</StopPointRef-->
                         <StopPointName>John Colletts plass</StopPointName>
                         <VehicleAtStop>false</VehicleAtStop>
                         <DestinationDisplay>Rikshospitalet</DestinationDisplay>
