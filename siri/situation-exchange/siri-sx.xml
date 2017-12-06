@@ -43,6 +43,13 @@
                     <MiscellaneousReason>specialEvent</MiscellaneousReason>
                     <PublicEventReason>airShow</PublicEventReason>
                     <Severity>normal</Severity>
+                    
+                    
+                    <!-- med? -->
+                    <Priority>1</Priority>
+                   
+                    
+                    
                     <Audience>staff</Audience>
                     <ScopeType>line</ScopeType>
                     
@@ -69,33 +76,33 @@
                     <Affects>
                         <Networks>
                             <AffectedNetwork>
-                                <AffectedOperator>
-                                    <OperatorRef>OperatorRef1</OperatorRef>
-                                </AffectedOperator>
-                                <NetworkRef>NetworkRef1</NetworkRef>
-                                <NetworkName>NetworkName1</NetworkName>
-                                <AffectedLine>
-                                    <LineRef>LineRef1</LineRef>
-                                </AffectedLine>
+                                <AllLines/>
                             </AffectedNetwork>
                             <AffectedNetwork>
                                 <AffectedOperator>
                                     <OperatorRef>OperatorRef2</OperatorRef>
                                 </AffectedOperator>
                                 <NetworkRef>NetworkRef2</NetworkRef>
-                                <NetworkName>NetworkName2</NetworkName>
+                                
                                 <AffectedLine>
                                     <LineRef>LineRef2</LineRef>
                                 </AffectedLine>
                             </AffectedNetwork>
                         </Networks>
-                        <!--StopPoints>
+                        <!-- UTGÅR antakelig ikke likevel...!! (selv om det meste kan beskrives gjennom stopplace) -->
+                        <StopPoints> 
                             <AffectedStopPoint>
                                 <StopCondition>additionalStop</StopCondition>
+                                <Extensions>
+                                    <BoardingRelevance arrive="true" disembark="true" pass="false" transfer="false" />
+                                </Extensions>
                             </AffectedStopPoint>
-                        </StopPoints-->
+                        </StopPoints>
                         <StopPlaces>
                             <AffectedStopPlace>
+                                <AccessibilityAssessment>
+                                    <acsb:MobilityImpairedAccess>false</acsb:MobilityImpairedAccess>
+                                </AccessibilityAssessment>
                                 <StopPlaceRef>placeholder</StopPlaceRef>
                                 <AffectedFacilities>
                                     <AffectedFacility>
@@ -191,17 +198,8 @@
                                 <DelayType>delaysOfUncertainDuration</DelayType>
                                 <Delay>P20M</Delay>
                             </Delays>
-                        </Consequence>           
+                        </Consequence>
                     </Consequences>
-                    <Extensions>
-                        <LastUpdated>2017-06-30T20:30:10.9975116+02:00</LastUpdated>
-                        <ForceResend>false</ForceResend>
-                        <TravelPlannerOff>false</TravelPlannerOff>
-                        <InfoBox1Header/>
-                        <InfoBox2Header/>
-                        <InfoBox1/>
-                        <InfoBox2/>
-                    </Extensions>
                 </PtSituationElement>
             </Situations>
         </SituationExchangeDelivery>

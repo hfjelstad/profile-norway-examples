@@ -135,14 +135,26 @@
                         <AimedArrivalTime>2017-08-07T11:29:00</AimedArrivalTime>
                         <ActualArrivalTime>2017-08-07T11:30:00</ActualArrivalTime>
                         <LatestExpectedArrivalTime>2017-08-07T11:31:00</LatestExpectedArrivalTime>
+                        <ArrivalStatus>arrived</ArrivalStatus>
+                        <ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
+                        <ArrivalStopAssignment>
+                            <AimedQuayRef>placeholder</AimedQuayRef>
+                            <ActualQuayRef>placeholder</ActualQuayRef>
+                        </ArrivalStopAssignment>
                         <ExpectedDeparturePredictionQuality>
                             <PredictionLevel>certain</PredictionLevel>
                         </ExpectedDeparturePredictionQuality>
                         <DepartureStatus>delayed</DepartureStatus>
+                        <DepartureStopAssignment>
+                            <AimedQuayRef>placeholder</AimedQuayRef>
+                            <ActualQuayRef>placeholder</ActualQuayRef>
+                        </DepartureStopAssignment>
                     </MonitoredCall>
                     <OnwardCalls>
                         <OnwardCall>
                             <StopPointRef>NSR:Quay:11650</StopPointRef>
+                            <VehicleAtStop>false</VehicleAtStop>
+                            <ArrivalBoardingActivity></ArrivalBoardingActivity>
                         </OnwardCall>
                     </OnwardCalls>
                     <IsCompleteStopSequence>true</IsCompleteStopSequence>
