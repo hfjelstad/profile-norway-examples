@@ -3,9 +3,10 @@
 <!-- This example show the timetable for route 109 morning express in Oslo. -->
 <PublicationDelivery version="1.07:NO-NeTEx-networktimetable:1.1"
 	xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri"
-	xsi:schemaLocation="http://www.netex.org.uk/netex ../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
-
+	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri">
+<!--
+    xsi:schemaLocation="http://www.netex.org.uk/netex ../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd"
+-->
 	<PublicationTimestamp>2016-05-23T12:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 
@@ -331,6 +332,7 @@
 					
 					<serviceLinks>
 						<ServiceLink version="1" id="UNI:ServiceLink:helsfyr_to_brynseng">
+							<Distance>150</Distance>
 							<projections>
 								<LinkSequenceProjection version="1" id="UNI:LinkSequenceProjection:109-helsfyr_to_brynseng">
 									<gml:LineString srsName="WGS84" gml:id="helsfyr_to_brynseng">
@@ -343,7 +345,7 @@
 							<ToPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng_t"/>
 						</ServiceLink>
 						<ServiceLink version="1" id="UNI:ServiceLink:brynseng_to_hoyenhall">
-							<Distance>1</Distance>
+							<Distance>275</Distance>
 							<projections>
 								<LinkSequenceProjection version="1" id="UNI:LinkSequenceProjection:109-brynseng_to_hoyenhall">
 									<gml:LineString srsName="WGS84" gml:id="brynseng_to_hoyenhall">
@@ -356,6 +358,7 @@
 							<ToPointRef version="1" ref="UNI:ScheduledStopPoint:hoyenhall_t"/>
 						</ServiceLink>
 						<ServiceLink version="1" id="UNI:ServiceLink:hoyenhall_to_manglerud">
+							<Distance>100</Distance>
 							<projections>
 								<LinkSequenceProjection version="1" id="UNI:LinkSequenceProjection:109-hoyenhall_to_manglerud">
 									<gml:LineString srsName="WGS84" gml:id="hoyenhall_to_manglerud">
@@ -368,6 +371,7 @@
 							<ToPointRef version="1" ref="UNI:ScheduledStopPoint:manglerud_t"/>
 						</ServiceLink>
 						<ServiceLink version="1" id="UNI:ServiceLink:manglerud_to_ryen">
+							<Distance>150</Distance>
 							<projections>
 								<LinkSequenceProjection version="1" id="UNI:LinkSequenceProjection:109-manglerud_to_ryen">
 									<gml:LineString srsName="WGS84" gml:id="manglerud_to_ryen">
@@ -380,6 +384,7 @@
 							<ToPointRef version="1" ref="UNI:ScheduledStopPoint:ryen_t"/>
 						</ServiceLink>
 						<ServiceLink version="1" id="UNI:ServiceLink:ryen_to_holtet">
+							<Distance>300</Distance>
 							<projections>
 								<LinkSequenceProjection version="1" id="UNI:LinkSequenceProjection:109-ryen_to_holtet">
 									<gml:LineString srsName="WGS84" gml:id="ryen_to_holtet">
@@ -401,6 +406,7 @@
 						</ServiceLink>
 					</serviceLinks>
 
+					
 					<!-- ===STOP ASSIGNMENTs=== -->
 					<!-- Must be defined in order to assign Journey/Service Pattern stop point to actual StopPlace -->
 					<stopAssignments>
@@ -429,7 +435,7 @@
 							<QuayRef ref="NSR:Quay:holtet-QUAYID"/>
 						</PassengerStopAssignment>
 					</stopAssignments>
-					
+
 					<!-- ===JOURNEY PATTERNs=== -->
 					<journeyPatterns>
 						<JourneyPattern version="1" id="UNI:JourneyPattern:109">
