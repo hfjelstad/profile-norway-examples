@@ -83,7 +83,8 @@
                                     <OperatorRef>OperatorRef2</OperatorRef>
                                 </AffectedOperator>
                                 <NetworkRef>NetworkRef2</NetworkRef>
-                                
+                                <VehicleMode>bus</VehicleMode>
+                                <BusSubmode>railReplacementBus</BusSubmode>
                                 <AffectedLine>
                                     <LineRef>LineRef2</LineRef>
                                 </AffectedLine>
@@ -129,7 +130,33 @@
                                 <PlaceRef>ref</PlaceRef>
                             </AffectedPlace>
                         </Places>
+                        
+                        
+                        <!-- TODO -->
+                        
                         <VehicleJourneys>
+                            
+                            <!-- NB: NSB-caset bør nesten beskrives ca slik (da affected stopplace varierer mellom f.eks. lokaltog og regionaltog): -->
+                            <AffectedVehicleJourney>
+                                <VehicleJourneyRef>1634</VehicleJourneyRef>
+                                <Route>
+                                    <StopPoints>
+                                        <AffectedStopPoint>
+                                            <StopPointRef>NSR:StopPlace:288</StopPointRef>
+                                            <StopPointName>Nationaltheatret</StopPointName>
+                                        </AffectedStopPoint>
+                                        <AffectedStopPoint>
+                                            <StopPointRef>NSR:StopPlace:152</StopPointRef>
+                                            <StopPointName>Skøyen</StopPointName>
+                                        </AffectedStopPoint>
+                                    </StopPoints>
+                                </Route>
+                                <OriginAimedDepartureTime>2017-12-01T00:00:00+01:00</OriginAimedDepartureTime>
+                            </AffectedVehicleJourney>
+                        
+                        
+                        
+                        
                             <AffectedVehicleJourney>
                                 <VehicleJourneyRef>VehicleJourneyRef1</VehicleJourneyRef>
                                 <Operator>

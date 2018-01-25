@@ -19,8 +19,10 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
   version="1.07:NO-NeTEx-networktimetable:1.1"
   xmlns="http://www.netex.org.uk/netex" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:gml="http://www.opengis.net/gml/3.2">
+<!--
   xsi:schemaLocation="http://www.netex.org.uk/netex /data/github/NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
+-->
 	
 	<PublicationTimestamp>2016-07-07T16:07:07Z</PublicationTimestamp>
 	<ParticipantRef>RUT</ParticipantRef>
@@ -375,9 +377,23 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							</Text>
 						</Notice>
 						<Notice version="1" id="RUT:Notice:863-Henting">
+							<alternativeTexts>
+								<AlternativeText>
+									<Text lang="eng">
+										Exact place and time of pick-up will be assigned at booking
+									</Text>
+								</AlternativeText>
+							</alternativeTexts>
 							<Text>Eksakt hentested og -tidspunkt avtales ved bestilling</Text>
 						</Notice>
 						<Notice version="1" id="RUT:Notice:863-Levering">
+							<alternativeTexts>
+								<AlternativeText>
+									<Text lang="eng">
+										Exact place for drop-off will be assigned at booking
+									</Text>
+								</AlternativeText>
+							</alternativeTexts>
 							<Text>Eksakt leveringssted avtales ved bestilling</Text>
 						</Notice>
 					</notices>
@@ -527,7 +543,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 						</ServiceJourneyInterchange>
 						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-863-to-L1-C">
 							<Description>2Ø Tog fra Oslo 1219</Description>
-							<Priority>1</Priority>
+							<Priority>0</Priority>
 							<StaySeated>false</StaySeated>
 							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>

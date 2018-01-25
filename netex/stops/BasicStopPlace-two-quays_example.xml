@@ -43,6 +43,7 @@ Frames (gruppering)
 					<stopPlaces>
 						<!-- Merk: Holdeplass-ID vil komme fra Holdeplassregisteret -->
 						<StopPlace version="any" id="NSR:StopPlace:12345678">
+							<Name>Navn</Name>
 							<Centroid>
 								<Location srsName="WGS84" id="NSR:Location:1">
 									<Longitude>10.824609</Longitude>

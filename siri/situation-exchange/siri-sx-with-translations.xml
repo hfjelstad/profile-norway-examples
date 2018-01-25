@@ -15,7 +15,7 @@
                     <ParticipantRef>NSB</ParticipantRef>
                     <SituationNumber>46197</SituationNumber>
                     <Source>
-                        <SourceType>web</SourceType>
+                        <SourceType>directReport</SourceType>
                         <Phone>99127032</Phone>
                         <Web>http://www.entur.org/test</Web>
                         <AgentReference>unknown</AgentReference>
@@ -118,6 +118,17 @@
                                 </Destinations-->
                                 <Route>
                                     <RouteRef>RouteRef</RouteRef>
+                                    
+                                    
+                                    <!-- TODO -->
+                                    <!-- Fallback option? (for å knytte én SX til et sett av vehicle journeys) -->
+                                    <StopPoints>
+                                        <AffectedStopPoint>
+                                            <StopPointRef>quayID</StopPointRef>
+                                        </AffectedStopPoint>
+                                    </StopPoints>
+                                    
+                                    
                                 </Route>
                                 <Route>
                                     <RouteRef>RouteRef</RouteRef>

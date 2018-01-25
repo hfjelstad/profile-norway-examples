@@ -10,7 +10,7 @@
         <ProducerRef>CODESPACE</ProducerRef>
         
         <EstimatedTimetableDelivery version="2.0">
-            <ResponseTimestamp>2017-07-11T11:29:31.173+02:00</ResponseTimestamp>
+            <ResponseTimestamp>2017-07-11T11:29:31</ResponseTimestamp>
             <!--ValidUntil>2017-08-11T11:29:31.173+02:00</ValidUntil-->
             <EstimatedJourneyVersionFrame>
                 <RecordedAtTime>2017-08-15T10:43:21.826+02:00</RecordedAtTime>
@@ -19,12 +19,17 @@
                     <LineRef>SKY:Line:985</LineRef>
                     <DirectionRef>1</DirectionRef>
                     <!--DatedVehicleJourneyRef>6671390_94170</DatedVehicleJourneyRef-->
-                    <EstimatedVehicleJourneyCode>test</EstimatedVehicleJourneyCode>
+                    <FramedVehicleJourneyRef>
+                        <DataFrameRef>2017-12-12</DataFrameRef>
+                        <DatedVehicleJourneyRef>ref</DatedVehicleJourneyRef>
+                    </FramedVehicleJourneyRef>
                     <ExtraJourney>false</ExtraJourney>
                     <JourneyPatternRef>placeholder</JourneyPatternRef>
                     <VehicleMode>bus</VehicleMode>
                     <RouteRef>placeholder</RouteRef>
                     <ExternalLineRef>placeholder</ExternalLineRef>
+                    <OriginName>placeholder</OriginName>
+                    <DestinationName>placeholder</DestinationName>
                     <OperatorRef>31</OperatorRef>
                     <ServiceFeatureRef>placeholder</ServiceFeatureRef>
                     <PublicContact>
@@ -113,7 +118,7 @@
                             <AimedArrivalTime>2017-08-15T15:00:00+02:00</AimedArrivalTime>
                             <ExpectedArrivalTime>2017-08-15T15:00:01+02:00</ExpectedArrivalTime>
                             <ArrivalStatus>arrived</ArrivalStatus>
-                            <ArrivalBoardingActivity>passThru</ArrivalBoardingActivity>
+                            <ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
                             <ArrivalStopAssignment>
                                 <AimedQuayRef>placeholder</AimedQuayRef>
                                 <ExpectedQuayRef>placeholder</ExpectedQuayRef>

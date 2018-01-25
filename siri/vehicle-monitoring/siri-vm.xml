@@ -33,6 +33,7 @@
                     <ExternalLineRef>placeholder</ExternalLineRef>
                     <OperatorRef>placeholder</OperatorRef>
                     <OriginRef>placeholder</OriginRef>
+                    <OriginName>placeholder</OriginName>
                     <Via>
                         <PlaceRef>placeholder</PlaceRef>
                         <ViaPriority>2</ViaPriority>
@@ -42,7 +43,8 @@
                         <ViaPriority>2</ViaPriority>
                     </Via>
                     
-                    <DestinationRef>placeholder</DestinationRef>                    
+                    <DestinationRef>placeholder</DestinationRef>  
+                    <DestinationName>placeholder</DestinationName>
                     
                     <JourneyNote>placeholder</JourneyNote>
                     <PublicContact>
