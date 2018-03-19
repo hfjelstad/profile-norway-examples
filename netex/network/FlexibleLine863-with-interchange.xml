@@ -554,9 +554,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							<Description>2Ø Tog mot Lillestrøm 1019</Description>
 							<Priority>1</Priority>
 							<StaySeated>false</StaySeated>
-							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
-							<Advertised>true</Advertised>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
@@ -567,9 +565,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							<Description>2Ø Tog mot Lillestrøm 1031</Description>
 							<Priority>1</Priority>
 							<StaySeated>false</StaySeated>
-							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
-							<Advertised>true</Advertised>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
@@ -580,9 +576,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							<Description>2Ø Tog fra Oslo 1219</Description>
 							<Priority>0</Priority>
 							<StaySeated>false</StaySeated>
-							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
-							<Advertised>true</Advertised>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
@@ -593,9 +587,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							<Description>2Ø Tog fra Lillestrøm 1231</Description>
 							<Priority>1</Priority>
 							<StaySeated>false</StaySeated>
-							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
-							<Advertised>true</Advertised>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
@@ -607,9 +599,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							<Description>2Ø Buss 401 mot Oslo 1022</Description>
 							<Priority>1</Priority>
 							<StaySeated>false</StaySeated>
-							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
-							<Advertised>true</Advertised>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
@@ -620,9 +610,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							<Description>2Ø Buss 401 mot Oslo 1022</Description>
 							<Priority>1</Priority>
 							<StaySeated>false</StaySeated>
-							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
-							<Advertised>true</Advertised>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
@@ -633,9 +621,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							<Description>2Ø Buss 401 fra Oslo 1224</Description>
 							<Priority>1</Priority>
 							<StaySeated>false</StaySeated>
-							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
-							<Advertised>true</Advertised>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
@@ -646,9 +632,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							<Description>2Ø Buss 401 fra Lillestrøm 1222</Description>
 							<Priority>1</Priority>
 							<StaySeated>false</StaySeated>
-							<Planned>true</Planned>
 							<Guaranteed>false</Guaranteed>
-							<Advertised>true</Advertised>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
