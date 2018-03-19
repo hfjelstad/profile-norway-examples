@@ -16,7 +16,7 @@ Se også NeTEx-eksempel:
 https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 -->
 <PublicationDelivery 
-  version="1.07:NO-NeTEx-networktimetable:1.1"
+  version="1.08:NO-NeTEx-networktimetable:1.3"
   xmlns="http://www.netex.org.uk/netex" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xmlns:gml="http://www.opengis.net/gml/3.2">
@@ -88,13 +88,31 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 
 				<!-- Referanser til stoppestedregisteret (kun tatt med for å illustrere oppbygning av SiteFrame) -->
 				<SiteFrame version="1" id="RUT:SiteFrame:1">
+					<groupsOfStopPlaces>
+						<GroupOfStopPlaces id="traeg" version="1">
+							<Name>test</Name>
+							<PurposeOfGroupingRef ref="NSR:PurposeOfGrouping:journeyTarget"/>
+							<!--PurposeOfGroupingRef ref="NSR:PurposeOfGrouping:journeyHub"/-->
+							<members>
+								<StopPlaceRef ref="x"></StopPlaceRef>
+							</members>
+						</GroupOfStopPlaces>
+					</groupsOfStopPlaces>
 					<stopPlaces>
 						<!-- Codespace NSR pga data fra sentralt stoppestedregister -->
 						<StopPlace version="1" id="NSR:StopPlace:ID-HANABORG_ST">
 							<!-- Hanaborg stasjon (59.938586, 10.966605) -->
 							<Name lang="NO-NB">Hanaborg stasjon</Name>
+							<Centroid></Centroid>
+							<alternativeNames>
+								<AlternativeName>
+									<Name></Name>
+								</AlternativeName>
+							</alternativeNames>
 							<quays>
-								<Quay version="1" id="NSR:Quay:ID-HANABORG_ST-QUAY"/>
+								<Quay version="1" id="NSR:Quay:ID-HANABORG_ST-QUAY">
+									<Centroid></Centroid>
+								</Quay>
 							</quays>
 						</StopPlace>
 						<StopPlace version="1" id="NSR:StopPlace:ID-LORENSKOGSENTRUM">
@@ -147,6 +165,8 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 					<Network version="1" id="RUT:Network:RuterBestillingslinjer">
 						<Name>Ruter# bestillingslinjer</Name>
 					</Network>
+					
+
 					<directions>
 						<Direction version="1" id="NSR:Direction:TilLorenskog">
 							<Name>Til Lørenskog sentrum</Name>
@@ -192,6 +212,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							</projections>
 						</RoutePoint>
 					</routePoints>
+					
 					
 					<routes>
 						<Route version="1" id="RUT:Route:863-TilLorenskog">
@@ -264,7 +285,13 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							</BookingNote>
 						</FlexibleLine>
 					</lines>
-
+					
+					<groupsOfLines>
+						<GroupOfLines version="1" id="testdemo">
+							<BrandingRef ref=""></BrandingRef>
+						</GroupOfLines>
+					</groupsOfLines>
+					
 					<destinationDisplays>
 						<DestinationDisplay version="1" id="RUT:DestinationDisplay:Triaden">
 							<FrontText>Triaden</FrontText>
@@ -486,6 +513,7 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							</passingTimes>
 						</ServiceJourney>
 						<ServiceJourney version="1" id="RUT:ServiceJourney:0863-FraLorenskog">
+							<ServiceAlteration></ServiceAlteration>
 							<dayTypes>
 								<DayTypeRef version="1" ref="RUT:DayType:weekdays"/>
 							</dayTypes>
@@ -512,8 +540,15 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 						</ServiceJourney>
 					</vehicleJourneys>
 
-
 					<journeyInterchanges>
+					    <!-- JourneyPatternInterchange pdd. ikke i bruk -->
+						<!--ServiceJourneyPatternInterchange>
+							<FromPointRef ref=""></FromPointRef>
+							<ToPointRef ref=""></ToPointRef>
+							<FromJourneyPatternRef ref=""></FromJourneyPatternRef>
+							<ToJourneyPatternRef ref=""></ToJourneyPatternRef>
+						</ServiceJourneyPatternInterchange-->
+					    
 						<!-- Overganger Tog -->
 						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-863-to-L1-A">
 							<Description>2Ø Tog mot Lillestrøm 1019</Description>

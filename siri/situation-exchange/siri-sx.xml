@@ -43,13 +43,7 @@
                     <MiscellaneousReason>specialEvent</MiscellaneousReason>
                     <PublicEventReason>airShow</PublicEventReason>
                     <Severity>normal</Severity>
-                    
-                    
-                    <!-- med? -->
                     <Priority>1</Priority>
-                   
-                    
-                    
                     <Audience>staff</Audience>
                     <ScopeType>line</ScopeType>
                     
@@ -76,7 +70,9 @@
                     <Affects>
                         <Networks>
                             <AffectedNetwork>
+                                <NetworkRef>NetworkRef2</NetworkRef>
                                 <AllLines/>
+
                             </AffectedNetwork>
                             <AffectedNetwork>
                                 <AffectedOperator>
@@ -87,146 +83,87 @@
                                 <BusSubmode>railReplacementBus</BusSubmode>
                                 <AffectedLine>
                                     <LineRef>LineRef2</LineRef>
+                                    <Routes>
+                                        <AffectedRoute>
+                                            <RouteRef>data</RouteRef>
+                                            <StopPoints>
+                                                <AffectedStopPoint>
+                                                    <StopPointRef>data</StopPointRef>
+                                                    <StopPointName>data</StopPointName>
+                                                    <!-- PAD -->
+                                                    <StopCondition>throughServiceDestination</StopCondition>
+                                                </AffectedStopPoint>
+                                            </StopPoints>
+                                        </AffectedRoute>
+                                    </Routes>
                                 </AffectedLine>
                             </AffectedNetwork>
                         </Networks>
-                        <!-- UTGÅR antakelig ikke likevel...!! (selv om det meste kan beskrives gjennom stopplace) -->
-                        <StopPoints> 
-                            <AffectedStopPoint>
-                                <StopCondition>additionalStop</StopCondition>
-                                <Extensions>
-                                    <BoardingRelevance arrive="true" disembark="true" pass="false" transfer="false" />
-                                </Extensions>
-                            </AffectedStopPoint>
-                        </StopPoints>
+
                         <StopPlaces>
                             <AffectedStopPlace>
                                 <AccessibilityAssessment>
                                     <acsb:MobilityImpairedAccess>false</acsb:MobilityImpairedAccess>
+                                    <acsb:Limitations>
+                                        <acsb:AccessibilityLimitation>
+                                            <acsb:WheelchairAccess>true</acsb:WheelchairAccess>
+                                            <acsb:StepFreeAccess>false</acsb:StepFreeAccess>
+                                            <acsb:EscalatorFreeAccess>false</acsb:EscalatorFreeAccess>
+                                            <acsb:LiftFreeAccess>true</acsb:LiftFreeAccess>
+                                        </acsb:AccessibilityLimitation>
+                                    </acsb:Limitations>
                                 </AccessibilityAssessment>
                                 <StopPlaceRef>placeholder</StopPlaceRef>
-                                <AffectedFacilities>
-                                    <AffectedFacility>
-                                        <FacilityRef>placeholder</FacilityRef>
-                                    </AffectedFacility>
-                                </AffectedFacilities>
+                                <PlaceName>placeholder</PlaceName>
+                                <AffectedComponents>
+                                    <AffectedComponent>
+                                        <ComponentRef>data</ComponentRef>
+                                        <ComponentType>quay</ComponentType>
+                                        <AccessFeatureType>lift</AccessFeatureType>
+                                    </AffectedComponent>
+                                </AffectedComponents>
                             </AffectedStopPlace>
                         </StopPlaces>
-                        <Places>
-                            <AffectedPlace>
-                                <PlaceRef>PaceRef</PlaceRef>
-                                <PlaceName>PlaceName</PlaceName>
-                                <Location>
-                                    <Longitude>1</Longitude>
-                                    <Latitude>2</Latitude>
-                                </Location>
-                                <EquipmentRef>EquipmentRef1</EquipmentRef>
-                                <EquipmentRef>EquipmentRef2</EquipmentRef>
-                                <AccessibilityAssessment>
-                                    <acsb:MobilityImpairedAccess>false</acsb:MobilityImpairedAccess>
-                                </AccessibilityAssessment>
-                            </AffectedPlace>
-                            <AffectedPlace>
-                                <PlaceRef>ref</PlaceRef>
-                            </AffectedPlace>
-                        </Places>
-                        
-                        
-                        <!-- TODO -->
                         
                         <VehicleJourneys>
-                            
-                            <!-- NB: NSB-caset bør nesten beskrives ca slik (da affected stopplace varierer mellom f.eks. lokaltog og regionaltog): -->
                             <AffectedVehicleJourney>
-                                <VehicleJourneyRef>1634</VehicleJourneyRef>
+                                <FramedVehicleJourneyRef>
+                                    <DataFrameRef>2017-12-12</DataFrameRef>
+                                    <DatedVehicleJourneyRef>ref</DatedVehicleJourneyRef>
+                                </FramedVehicleJourneyRef>
+                                <!-- <VehicleJourneyRef>1634</VehicleJourneyRef> -->
+                                <Operator>
+                                    <OperatorRef>data</OperatorRef>
+                                </Operator>
                                 <Route>
+                                    <RouteRef>data</RouteRef>
                                     <StopPoints>
                                         <AffectedStopPoint>
-                                            <StopPointRef>NSR:StopPlace:288</StopPointRef>
-                                            <StopPointName>Nationaltheatret</StopPointName>
-                                        </AffectedStopPoint>
-                                        <AffectedStopPoint>
-                                            <StopPointRef>NSR:StopPlace:152</StopPointRef>
-                                            <StopPointName>Skøyen</StopPointName>
+                                            <StopPointRef>data</StopPointRef>
                                         </AffectedStopPoint>
                                     </StopPoints>
                                 </Route>
-                                <OriginAimedDepartureTime>2017-12-01T00:00:00+01:00</OriginAimedDepartureTime>
                             </AffectedVehicleJourney>
-                        
-                        
-                        
-                        
+                            
                             <AffectedVehicleJourney>
                                 <VehicleJourneyRef>VehicleJourneyRef1</VehicleJourneyRef>
                                 <Operator>
                                     <OperatorRef>OperatorRef</OperatorRef>
                                 </Operator>
                                 <LineRef>LineRef</LineRef>
-                                <!--Origins>
-                                    <PlaceName>OriginPlaceName</PlaceName>
-                                </Origins>
-                                <Destinations>
-                                    <PlaceName>DestinationPlaceName</PlaceName>
-                                </Destinations-->
-                                <Route>
-                                    <RouteRef>RouteRef</RouteRef>
-                                </Route>
-                                <Route>
-                                    <RouteRef>RouteRef</RouteRef>
-                                </Route>
+                                <Route/> <!-- default -->
                             </AffectedVehicleJourney>
                             <AffectedVehicleJourney>
                                 <VehicleJourneyRef>VehicleJourneyRef2</VehicleJourneyRef>
                                 <Route>
                                     <RouteRef>ref</RouteRef>
+                                    <StopPoints>
+                                        <AffectedStopPoint></AffectedStopPoint>
+                                    </StopPoints>
                                 </Route>
                             </AffectedVehicleJourney>
                         </VehicleJourneys>
                     </Affects>
-                    <Consequences>
-                        <Consequence>
-                            <Period>
-                                <StartTime>2017-07-01T02:00:00+02:00</StartTime>
-                                <EndTime>2017-07-02T02:00:00+02:00</EndTime>
-                            </Period>
-                            <Condition>delayed</Condition>
-                            <Severity>normal</Severity>
-                            <Suitabilities>
-                                <Suitability>
-                                    <acsb:Suitable>notSuitable</acsb:Suitable>
-                                    <acsb:UserNeed>
-                                        <acsb:MobilityNeed>assistedWheelchair</acsb:MobilityNeed>
-                                    </acsb:UserNeed>
-                                </Suitability>
-                                <Suitability>
-                                    <acsb:Suitable>notSuitable</acsb:Suitable>
-                                    <acsb:UserNeed>
-                                        <acsb:MobilityNeed>motorizedWheelchair</acsb:MobilityNeed>
-                                    </acsb:UserNeed>
-                                </Suitability>
-                                <Suitability>
-                                    <acsb:Suitable>notSuitable</acsb:Suitable>
-                                    <acsb:UserNeed>
-                                        <acsb:MobilityNeed>wheelchair</acsb:MobilityNeed>
-                                    </acsb:UserNeed>
-                                </Suitability>
-                            </Suitabilities>
-                            <Blocking>
-                                <JourneyPlanner>true</JourneyPlanner>
-                                <RealTime>true</RealTime>
-                            </Blocking>
-                            <Boarding>
-                                <ArrivalBoardingActivity>passThru</ArrivalBoardingActivity>
-                                <DepartureBoardingActivity>passThru</DepartureBoardingActivity>
-                            </Boarding>
-                            <Delays>
-                                <DelayBand>betweenOneHourAndThreeHours</DelayBand>
-                                <DelayType>delaysOfUncertainDuration</DelayType>
-                                <Delay>P20M</Delay>
-                            </Delays>
-                        </Consequence>
-                    </Consequences>
                 </PtSituationElement>
             </Situations>
         </SituationExchangeDelivery>
