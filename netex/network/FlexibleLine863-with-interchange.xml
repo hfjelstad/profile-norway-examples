@@ -494,19 +494,19 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							<JourneyPatternRef ref="RUT:JourneyPattern:863-TilLorenskog"/>
 							<FlexibleLineRef ref="RUT:FlexibleLine:863"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1000">
 									<!-- Flexi-sone (sted og tid avtales ved bestilling) -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-tilLorenskog" version="1"/>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1015">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-tilLorenskog" version="1"/>
 									<ArrivalTime>10:15:00</ArrivalTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1020">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-LORENSKOG-tilLorenskog" version="1"/>
 									<ArrivalTime>10:20:00</ArrivalTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1025">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-TRIADEN-tilLorenskog" version="1"/>
 									<ArrivalTime>10:25:00</ArrivalTime>
 								</TimetabledPassingTime>
@@ -520,15 +520,15 @@ https://github.com/nick-knowles/NeTEx-XML/blob/master/schema/1.03/examples/funct
 							<JourneyPatternRef ref="RUT:JourneyPattern:863-FraLorenskog"/>
 							<FlexibleLineRef ref="RUT:FlexibleLine:863"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1225">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-TRIADEN-fraLorenskog" version="1"/>
 									<DepartureTime>12:25:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1230">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-LORENSKOG-fraLorenskog" version="1"/>
 									<DepartureTime>12:30:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1235">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-fraLorenskog" version="1"/>
 									<DepartureTime>12:35:00</DepartureTime>
 								</TimetabledPassingTime>

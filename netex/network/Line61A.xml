@@ -396,43 +396,29 @@
                                 <!-- Refererer til 1 daytype som inneholder alle dager mandag-lørdag. Kunne vært separate dagtyper, men da måtte alle listes her -->
                                 <DayTypeRef version="1" ref="RUT:DayType:MonSat"/>
                             </dayTypes>
-                            
-                            <RouteRef ref="test"></RouteRef>
                             <JourneyPatternRef version="1" ref="RUT:JourneyPattern:0061101"/>
-                            <PublicCode>test</PublicCode>
-                            <!-- Hvilket kjøremønster som benyttes med passasjerer ombord -->
-                            
-                            <!-- Hvilken linje det gjelder (optional) -->
-                            <LineRef version="1" ref="RUT:Line:0061"/>
-                            <!--calls>
-                                <Call version="1" id="test">
-                                    <Departure>
-                                        <DayOffset>1</DayOffset>
-                                    </Departure>
-                                </Call>
-                            </calls-->
                             <passingTimes>
-                                <TimetabledPassingTime>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:xx15">
                                     <!-- Tveita T -->
                                     <StopPointInJourneyPatternRef version="1" ref="RUT:StopPointInJourneyPattern:0061101001" />
                                     <DepartureTime>00:15:00</DepartureTime>
                                 </TimetabledPassingTime>
-                                <TimetabledPassingTime>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:xx17">
                                     <!-- Tveita bedriftsområde -->
                                     <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101002"/>
                                     <DepartureTime>00:17:00</DepartureTime>
                                 </TimetabledPassingTime>
-                                <TimetabledPassingTime>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:xx21">
                                     <!-- Solfjellet -->
                                     <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101003"/>
                                     <DepartureTime>00:21:00</DepartureTime>
                                 </TimetabledPassingTime>
-                                <TimetabledPassingTime>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:xx24">
                                     <!-- Larsbråten -->
                                     <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101004"/>
                                     <DepartureTime>00:24:00</DepartureTime>
                                 </TimetabledPassingTime>
-                                <TimetabledPassingTime>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:xx27">
                                     <!-- Tveita bedriftsområde -->
                                     <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101005"/>
                                     <DepartureTime>00:27:00</DepartureTime>
@@ -442,7 +428,7 @@
                                     <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101006"/>
                                     <DepartureTime>00:28:00</DepartureTime>
                                 </TimetabledPassingTime>
-                                <TimetabledPassingTime>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:xx31">
                                     <!-- Tveita -->
                                     <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101007"/>
                                     <ArrivalTime>00:31:00</ArrivalTime>

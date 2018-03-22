@@ -12,6 +12,26 @@
     <ParticipantRef>NSR</ParticipantRef>
     <dataObjects>
 
+        <!-- Test fristilt Zone, konstruksjon ikke ihht. NeTEx profil Norge -->
+        <GeneralFrame version="1" id="NSR:GeneralFrame:1">
+            <members>
+                <Zone version="1" id="NSR:Zone:1">
+                    <!-- merk at GML er eksternt definert datatype med andre tekniske krav til ID en NeTEx profil Norge -->
+                    <gml:Polygon gml:id="NSR-Polygon-1">
+                        <gml:exterior>
+                            <gml:LinearRing>
+                                <gml:pos srsDimension="2">3.14159265358971 3.14159265358972</gml:pos>
+                                <gml:pos srsDimension="2">3.14159265358973 3.14159265358974</gml:pos>
+                                <gml:pos srsDimension="2">3.14159265358975 3.14159265358976</gml:pos>
+                                <gml:pos srsDimension="2">3.14159265358977 3.14159265358978</gml:pos>
+                            </gml:LinearRing>
+                        </gml:exterior>
+                    </gml:Polygon>
+                </Zone>
+            </members>
+        </GeneralFrame>
+        
+        
         <SiteFrame version="1" id="NSR:SiteFrame:1">
             <groupsOfStopPlaces>
                 <GroupOfStopPlaces version="1" id="NSR:GroupOfStopPlaces:1234">
