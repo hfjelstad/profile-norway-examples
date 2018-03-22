@@ -407,6 +407,7 @@
 					</serviceLinks>
 
 					
+
 					<!-- ===STOP ASSIGNMENTs=== -->
 					<!-- Must be defined in order to assign Journey/Service Pattern stop point to actual StopPlace -->
 					<stopAssignments>
@@ -435,6 +436,34 @@
 							<QuayRef ref="NSR:Quay:holtet-QUAYID"/>
 						</PassengerStopAssignment>
 					</stopAssignments>
+					
+					
+					<!-- KUN TEST -->
+					<timingLinks>
+						<TimingLink version="test" id="slettmeg">
+							<Distance>1</Distance>
+							<projections>
+								<LinkSequenceProjection version="test" id="projection">
+									<gml:LineString srsName="WGS84" gml:id="nyprojection">
+										<gml:pos>59.894780 10.804309</gml:pos>
+										<gml:pos>59.892531 10.804000</gml:pos>
+										<gml:pos>59.888996 10.805961</gml:pos>
+										<gml:pos>59.887608 10.806368</gml:pos>
+										<gml:pos>59.886410 10.800586</gml:pos>
+										<gml:pos>59.885832 10.792943</gml:pos>
+										<gml:pos>59.885392 10.788938</gml:pos>
+										<gml:pos>59.885630 10.784435</gml:pos>
+										<gml:pos>59.883864 10.783759</gml:pos>
+										<gml:pos>59.881872 10.783770</gml:pos>
+									</gml:LineString>
+								</LinkSequenceProjection>
+							</projections>
+							<FromPointRef ref="invalid"></FromPointRef>
+							<ToPointRef ref="invalid"></ToPointRef>
+						</TimingLink>
+					</timingLinks>
+					
+					
 
 					<!-- ===JOURNEY PATTERNs=== -->
 					<journeyPatterns>
@@ -498,32 +527,32 @@
 							<!-- Optional: -->
 							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<!-- Helsfyr T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>04:30:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<!-- Brynseng T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>04:32:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<!-- Høyenhall T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>04:33:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<!-- Manglerud T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>04:34:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<!-- Ryen T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>04:35:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<!-- Holtet -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>04:40:00</ArrivalTime>
@@ -532,6 +561,7 @@
 						</ServiceJourney>
 
 						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0500">
+							<TransportMode>bus</TransportMode>
 							<dayTypes>
 								<DayTypeRef version="1" ref="UNI:DayType:weekday"/>
 							</dayTypes>
@@ -539,27 +569,27 @@
 							<!-- Optional: -->
 							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0500-1">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>05:00:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0500-2">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>05:02:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0500-3">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>05:03:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0500-4">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>05:04:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0500-5">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>05:05:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0500-6">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>05:10:00</ArrivalTime>
 								</TimetabledPassingTime>
@@ -575,32 +605,32 @@
 							<!-- Optional: -->
 							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0530-1">
 									<!-- Helsfyr T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>05:30:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0530-2">
 									<!-- Brynseng T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>05:32:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0530-3">
 									<!-- Høyenhall T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>05:33:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0530-4">
 									<!-- Manglerud T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>05:34:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0530-5">
 									<!-- Ryen T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>05:35:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0530-6">
 									<!-- Holtet -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>05:40:00</ArrivalTime>
@@ -617,27 +647,27 @@
 							<!-- Optional: -->
 							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0600-1">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>06:00:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0600-2">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>06:02:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0600-3">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>06:03:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0600-4">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>06:04:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0600-5">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>06:06:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0600-6">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>06:10:00</ArrivalTime>
 								</TimetabledPassingTime>
@@ -654,32 +684,32 @@
 							<!-- Optional: -->
 							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0630-1">
 									<!-- Helsfyr T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>06:30:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0630-2">
 									<!-- Brynseng T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>06:32:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0630-3">
 									<!-- Høyenhall T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>06:33:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0630-4">
 									<!-- Manglerud T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>06:34:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0630-5">
 									<!-- Ryen T -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>06:35:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0630-6">
 									<!-- Holtet -->
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>06:40:00</ArrivalTime>
@@ -695,27 +725,27 @@
 							<!-- Optional: -->
 							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0700-1">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>07:00:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0700-2">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>07:02:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0700-3">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>07:03:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0700-4">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>07:04:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0700-5">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>07:07:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0700-6">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>07:10:00</ArrivalTime>
 								</TimetabledPassingTime>
@@ -734,27 +764,27 @@
 							<!-- Optional: -->
 							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
 									<DepartureTime>00:30:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
 									<DepartureTime>00:32:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:hoyenhall_t"/>
 									<DepartureTime>00:33:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:manglerud_t"/>
 									<DepartureTime>00:34:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:ryen_t"/>
 									<DepartureTime>00:37:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:10001">
 									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
 									<ArrivalTime>00:40:00</ArrivalTime>
 								</TimetabledPassingTime>
