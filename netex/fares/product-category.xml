@@ -20,38 +20,43 @@
 						<ValueSet classOfValues="TypeOfProductCategory" id="ENT:ValueSet:1" version="1">
 							<Name>Tariffkoder</Name>
 							<values>
+								<!-- 
+								ProductCategory = product types (SIRI std part 3 p.95 / SIRI std part 3 various)
+									ex: "school", "special", "plusbus", "PDCATEXPRESS", "express", "local"
+								(for ordens skyld like fullt blandet med ServiceFeature, som tydeligvis kan kategoriseres tilsvarende med f.eks. "school bus"
+							
+								Ihht NeTEx part 3 kan (skal?) den videre tilordnes en ACCESS RIGHT PARAMETER
+								-->
 								<TypeOfProductCategory id="ENT:TypeOfProductCategory:1" version="1">
-									<Name>Nattakst</Name>
+									<Name>Night</Name>
+								</TypeOfProductCategory>
+								<TypeOfProductCategory id="ENT:TypeOfProductCategory:2" version="1">
+									<Name>Day</Name>
 								</TypeOfProductCategory>
 							</values>
 						</ValueSet>
 					</typesOfValue>
-					
 				</ResourceFrame>
 				
 				
 				<TimetableFrame version="1" id="UNI:TimetableFrame:1">
 					<vehicleJourneys>
 						<ServiceJourney version="1" id="UNI:ServiceJourney:1">
-							
-							<!-- ALTERNATIVE 1 -->
-							<keyList>
-								<KeyValue>
-									<Key>Tariffkode</Key>
-									<Value>Nattakst</Value>
-								</KeyValue>
-							</keyList>
-							
-							
-							<!-- ALTERNATIVE 2 -->
+
 							<TypeOfProductCategoryRef ref="ENT:TypeOfProductCategory:1" version="1"/>
-							<!-- 
-								ProductCategory = product types (SIRI std part 3 p.95 / SIRI std part 3 various)
-							ex: "school", "special", "plusbus", "PDCATEXPRESS", "express", "local"
-							(for ordens skyld like fullt blandet med ServiceFeature, som tydeligvis kan kategoriseres tilsvarende med f.eks. "school bus"
 							
-							Ihht NeTEx part 3 kan (bør?) den også tilordnes en ACCESS RIGHT PARAMETER
-							-->
+							<DepartureTime>00:00:00</DepartureTime>
+							<passingTimes>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1">
+									<ArrivalTime>00:00:00</ArrivalTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+						
+						
+						<ServiceJourney version="1" id="UNI:ServiceJourney:2">
+							
+							<TypeOfProductCategoryRef ref="ENT:TypeOfProductCategory:2" version="1"/>
 							
 							<DepartureTime>00:00:00</DepartureTime>
 							<passingTimes>
@@ -62,7 +67,6 @@
 						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-
 			</frames>
 		</CompositeFrame>
 	</dataObjects>
