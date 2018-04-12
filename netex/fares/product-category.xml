@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- === Simplified example for setting product category (per NeTEx profile Norge) === -->
-<!-- (REMARK: to reduce the content of this sample file, most mandatory objects and references have been omitted ) -->
+<!-- === Simplified example for setting product category in accordance with NeTEx profile Norge === -->
+<!-- (REMARK: to reduce the content of this sample file, most mandatory objects and references have been omitted) -->
 <PublicationDelivery 
   version="1.08:NO-NeTEx-networktimetable:1.3"
   xmlns="http://www.netex.org.uk/netex" 
