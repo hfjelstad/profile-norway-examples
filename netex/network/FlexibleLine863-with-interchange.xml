@@ -88,31 +88,13 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 
 				<!-- Referanser til stoppestedregisteret (kun tatt med for å illustrere oppbygning av SiteFrame) -->
 				<SiteFrame version="1" id="RUT:SiteFrame:1">
-					<groupsOfStopPlaces>
-						<GroupOfStopPlaces id="traeg" version="1">
-							<Name>test</Name>
-							<PurposeOfGroupingRef ref="NSR:PurposeOfGrouping:journeyTarget"/>
-							<!--PurposeOfGroupingRef ref="NSR:PurposeOfGrouping:journeyHub"/-->
-							<members>
-								<StopPlaceRef ref="x"></StopPlaceRef>
-							</members>
-						</GroupOfStopPlaces>
-					</groupsOfStopPlaces>
 					<stopPlaces>
 						<!-- Codespace NSR pga data fra sentralt stoppestedregister -->
 						<StopPlace version="1" id="NSR:StopPlace:ID-HANABORG_ST">
 							<!-- Hanaborg stasjon (59.938586, 10.966605) -->
 							<Name lang="NO-NB">Hanaborg stasjon</Name>
-							<Centroid></Centroid>
-							<alternativeNames>
-								<AlternativeName>
-									<Name></Name>
-								</AlternativeName>
-							</alternativeNames>
 							<quays>
-								<Quay version="1" id="NSR:Quay:ID-HANABORG_ST-QUAY">
-									<Centroid></Centroid>
-								</Quay>
+								<Quay version="1" id="NSR:Quay:ID-HANABORG_ST-QUAY"/>
 							</quays>
 						</StopPlace>
 						<StopPlace version="1" id="NSR:StopPlace:ID-LORENSKOGSENTRUM">
@@ -165,7 +147,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					<Network version="1" id="RUT:Network:RuterBestillingslinjer">
 						<Name>Ruter# bestillingslinjer</Name>
 					</Network>
-					
 
 					<directions>
 						<Direction version="1" id="NSR:Direction:TilLorenskog">
@@ -212,7 +193,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							</projections>
 						</RoutePoint>
 					</routePoints>
-					
 					
 					<routes>
 						<Route version="1" id="RUT:Route:316-TilLorenskog">
