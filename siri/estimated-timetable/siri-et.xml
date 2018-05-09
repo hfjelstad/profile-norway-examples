@@ -45,6 +45,7 @@
                     <Monitored>false</Monitored>
                     <InCongestion>false</InCongestion>
                     <PredictionInaccurate>false</PredictionInaccurate>
+                    <DataSource>ENT</DataSource>
                     <ConfidenceLevel>reliable</ConfidenceLevel>
                     <Occupancy>full</Occupancy>
                     <!-- BlockRef>86</BlockRef -->

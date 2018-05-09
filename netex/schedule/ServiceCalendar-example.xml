@@ -135,7 +135,6 @@
 								<DayTypeRef ref="NSR:DayType:Sunday"/>
 							</dayTypes>
 							<JourneyPatternRef ref="NSR:JourneyPattern:default"/>
-							<LineRef ref="NSR:line:default"/>
 							<!-- ...(stops etc)... -->
 						</ServiceJourney>
 					</vehicleJourneys>

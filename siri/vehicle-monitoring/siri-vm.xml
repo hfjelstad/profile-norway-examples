@@ -79,7 +79,7 @@
                     <InCongestion>false</InCongestion>
                     <InPanic>false</InPanic>
                     <PredictionInaccurate>false</PredictionInaccurate>
-                    <DataSource>xsd:string</DataSource>
+                    <DataSource>ENT</DataSource>
                     <ConfidenceLevel>reliable</ConfidenceLevel>
                     
                     <VehicleLocation>
