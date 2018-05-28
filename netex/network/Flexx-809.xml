@@ -157,9 +157,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 								<Url>http://finnmark.flexx.no/</Url>
 							</BookingContact>
 							<BookingMethods>online callOffice other</BookingMethods>
-							<BookWhen>advanceOnly</BookWhen>
-							<LatestBookingTime>21:00:00</LatestBookingTime>
-							<MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
+							<!-- Merk at obligatoriske felter BookWhen og LatestBookingTime / MinimumBookingPeriod overstyres i ServiceJourney -->
 							<BookingNote>
 								Du kan bestille reise med Flexxruter ved å lage deg en brukerprofil på 
 								http://finnmark.flexx.no/, og bestille på den aktuelle ruten.
@@ -313,6 +311,11 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 									<ArrivalTime>10:45:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
+							<FlexibleServiceProperties version="1" id="FIN:FlexibleServiceProperties:1">
+								<BookWhen>untilPreviousDay</BookWhen>
+								<LatestBookingTime>21:00:00</LatestBookingTime>
+								<MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
+							</FlexibleServiceProperties>
 						</ServiceJourney>
 						
 						<ServiceJourney version="1" id="FIN:ServiceJourney:2">
@@ -332,6 +335,10 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 									<ArrivalTime>14:30:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
+							<FlexibleServiceProperties version="1" id="FIN:FlexibleServiceProperties:1">
+								<BookWhen>advanceAndDayOfTravel</BookWhen>
+								<MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
+							</FlexibleServiceProperties>
 						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
