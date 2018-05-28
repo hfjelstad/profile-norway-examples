@@ -265,7 +265,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 				<ServiceCalendarFrame id="FIN:ServiceCalendarFrame:809" version="1">
 					<dayTypes>
 						<DayType id="FIN:DayType:1" version="1">
-							<Name>Tirscag og fredag</Name>
+							<Name>Tirsdag og fredag</Name>
 							<properties>
 								<PropertyOfDay>
 									<DaysOfWeek>Tuesday Friday</DaysOfWeek>
@@ -314,7 +314,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<FlexibleServiceProperties version="1" id="FIN:FlexibleServiceProperties:1">
 								<BookWhen>untilPreviousDay</BookWhen>
 								<LatestBookingTime>21:00:00</LatestBookingTime>
-								<MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
 							</FlexibleServiceProperties>
 						</ServiceJourney>
 						
@@ -335,7 +334,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 									<ArrivalTime>14:30:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
-							<FlexibleServiceProperties version="1" id="FIN:FlexibleServiceProperties:1">
+							<FlexibleServiceProperties version="1" id="FIN:FlexibleServiceProperties:2">
 								<BookWhen>advanceAndDayOfTravel</BookWhen>
 								<MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
 							</FlexibleServiceProperties>
