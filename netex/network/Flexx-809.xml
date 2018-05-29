@@ -107,7 +107,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<RoutePoint version="1" id="FIN:RoutePoint:1">
 							<projections>
 								<PointProjection version="1" id="FIN:PointProjection:1">
-									<ProjectToPointRef version="1" ref="FIN:ScheduledStopPoint:ID-HANABORG_ST"/>
+									<ProjectToPointRef version="1" ref="FIN:ScheduledStopPoint:1"/>
 								</PointProjection>
 							</projections>
 						</RoutePoint>
@@ -115,7 +115,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<RoutePoint version="1" id="FIN:RoutePoint:2">
 							<projections>
 								<PointProjection version="1" id="FIN:PointProjection:2">
-									<ProjectToPointRef version="1" ref="FIN:ScheduledStopPoint:ID-HANABORG_ST"/>
+									<ProjectToPointRef version="1" ref="FIN:ScheduledStopPoint:2"/>
 								</PointProjection>
 							</projections>
 						</RoutePoint>
@@ -124,7 +124,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					<routes>
 						<Route version="1" id="FIN:Route:809">
 							<Name>Gamvik - Mehamn</Name>
-							<DirectionRef version="1" ref="NSR:Direction:1"/>
+							<LineRef ref="FIN:FlexibleLine:809"/>
+							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
 								<PointOnRoute version="1" id="FIN:PointOnRoute:1" order="1">
 									<RoutePointRef version="1" ref="FIN:RoutePoint:1"/>
@@ -149,7 +150,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<routes>
 								<RouteRef version="1" ref="FIN:Route:809"/>
 							</routes>
-							<RepresentedByGroupRef ref="FIN:Network:Flexx"/>
+							<RepresentedByGroupRef version="1" ref="FIN:Network:Flexx"/>
 							<FlexibleLineType>fixed</FlexibleLineType>
 							<BookingContact>
 								<Email>post@snelandia.no</Email>
