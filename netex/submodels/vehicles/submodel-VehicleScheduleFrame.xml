@@ -26,6 +26,7 @@
             </organisations>
         </ResourceFrame>
 
+        <!-- Vil pdd. være gyldig innsending innenfor en CompositeFrame eller som separat frame --> 
         <VehicleScheduleFrame version="1" id="RUT:VehicleScheduleFrame:1">
             <blocks>
                 <Block id="RUT:Block:1" version="1">
