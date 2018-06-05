@@ -3,7 +3,7 @@
 ==== Eksempel på VehicleScheduleFrame for innsending av operatørspesifikke Blocks (Vognløp) ======
 -->
 <PublicationDelivery
-  version="1.08:NO-NeTEx-networktimetable:1.3"
+  version="1.08:NO-NeTEx-networktimetable:1.1"
   xmlns="http://www.netex.org.uk/netex"
   xmlns:gml="http://www.opengis.net/gml/3.2" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -28,7 +28,7 @@
 
         <VehicleScheduleFrame version="1" id="RUT:VehicleScheduleFrame:1">
             <blocks>
-                <Block id="RUT:Block:1" version="2018-03-19-1200">
+                <Block id="RUT:Block:1" version="1">
                     <validityConditions>
                         <ValidBetween>
                             <FromDate>2018-01-01T00:00:01</FromDate>
@@ -43,25 +43,16 @@
                     <dayTypes>
                         <DayTypeRef ref="UNI:DayType:BareUkedager" version="1"/>
                     </dayTypes>
-                    <StartPointRef ref="RUT:ScheduledStopPoint:default-11238" version="2017-12-19-101449"/>
-                    <EndPointRef ref="RUT:ScheduledStopPoint:default-11012" version="2017-12-19-101449"/>
+                    <StartPointRef ref="RUT:ScheduledStopPoint:1" version="1"/>
+                    <EndPointRef ref="RUT:ScheduledStopPoint:2" version="1"/>
                     <journeys>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:N11-107700-11255052"/>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:N12-107700-11255049"/>
-                        <DeadRunRef ref="RUT:DeadRun:0-107700-11700139"/>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:25-107700-11254327"/>
-                        <DeadRunRef ref="RUT:DeadRun:0-107700-11700152"/>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:25-107700-11254309"/>
-                        <DeadRunRef ref="RUT:DeadRun:0-107700-11700094"/>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:25-107700-11254135"/>
-                        <DeadRunRef ref="RUT:DeadRun:0-107700-11700125"/>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:25-107700-11254264"/>
-                        <DeadRunRef ref="RUT:DeadRun:0-107700-11700089"/>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:25-107700-11254155"/>
-                        <DeadRunRef ref="RUT:DeadRun:0-107700-11700090"/>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:25-107700-11254191"/>
-                        <DeadRunRef ref="RUT:DeadRun:0-107700-11700199"/>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:25-107700-11254282"/>
+                        <VehicleJourneyRef ref="RUT:ServiceJourney:1"/>
+                        <VehicleJourneyRef ref="RUT:ServiceJourney:2"/>
+                        <DeadRunRef ref="RUT:DeadRun:3"/>
+                        <VehicleJourneyRef ref="RUT:ServiceJourney:4"/>
+                        <DeadRunRef ref="RUT:DeadRun:5"/>
+                        <VehicleJourneyRef ref="RUT:ServiceJourney:6"/>
+                        <DeadRunRef ref="RUT:DeadRun:7"/>
                     </journeys>
                 </Block>
             </blocks>
