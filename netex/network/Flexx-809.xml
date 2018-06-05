@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Eksempel-implementasjon for kollektivreise på fast som skal forhandsbookes (Flexible Journey).
-
-https://rutebanken.atlassian.net/wiki/display/PUBLIC/Bestillingstransport
-
-For rutetabell, se:
-http://finnmark.flexx.no/area/gamvik/route/flexx-809-gamvik-mehamn/
-
-Se videre offisielt NeTEx-eksempel:
-https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
--->
-
 <PublicationDelivery 
   version="1.08:NO-NeTEx-networktimetable:1.3"
   xmlns="http://www.netex.org.uk/netex" 
@@ -26,9 +14,13 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 	<dataObjects>
 
 		<CompositeFrame version="1" created="2018-05-28T08:00:00" id="FIN:CompositeFrame:0809">
-			<ValidBetween>
-				<FromDate>2018-04-07T00:00:00</FromDate>
-			</ValidBetween>
+	        <validityConditions>
+				<ValidBetween>
+					<FromDate>2018-03-21T00:00:00</FromDate>
+					<ToDate>2018-08-19T00:00:00</ToDate>
+				</ValidBetween>
+			</validityConditions>
+
 			<codespaces>
 				<Codespace id="fin">
 					<Xmlns>FIN</Xmlns>
@@ -93,14 +85,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 				<ServiceFrame version="1" id="FIN:ServiceFrame:809">
 					<Network version="1" id="FIN:Network:Flexx">
 						<Name>Flexx Finmark</Name>
+                    	<AuthorityRef ref="FIN:Authority:FIN_ID" version="1"/>
 					</Network>
-
-					<directions>
-						<Direction version="1" id="NSR:Direction:1">
-							<Name>Til Mehamn</Name>
-							<DirectionType>inbound</DirectionType>
-						</Direction>
-					</directions>
 					
 					<routePoints>
 						<!-- Gamvik -->
@@ -115,7 +101,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<RoutePoint version="1" id="FIN:RoutePoint:2">
 							<projections>
 								<PointProjection version="1" id="FIN:PointProjection:2">
-									<ProjectToPointRef version="1" ref="FIN:ScheduledStopPoint:2"/>
+									<ProjectToPointRef version="1" ref="FIN:ScheduledStopPoint:1"/>
 								</PointProjection>
 							</projections>
 						</RoutePoint>
@@ -124,7 +110,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					<routes>
 						<Route version="1" id="FIN:Route:809">
 							<Name>Gamvik - Mehamn</Name>
-							<LineRef ref="FIN:FlexibleLine:809"/>
+                            <FlexibleLineRef version="1" ref="FIN:FlexibleLine:809"/>
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
 								<PointOnRoute version="1" id="FIN:PointOnRoute:1" order="1">
@@ -146,10 +132,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 								<BusSubmode>shuttleBus</BusSubmode>
 							</TransportSubmode>
 							<PublicCode>809</PublicCode>
-							<OperatorRef ref="FIN:Operator:Flexx"/>
-							<routes>
-								<RouteRef version="1" ref="FIN:Route:809"/>
-							</routes>
+							<OperatorRef version="1" ref="FIN:Operator:Flexx"/>
 							<RepresentedByGroupRef version="1" ref="FIN:Network:Flexx"/>
 							<FlexibleLineType>fixed</FlexibleLineType>
 							<BookingContact>
@@ -157,8 +140,10 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 								<Phone>177</Phone>
 								<Url>http://finnmark.flexx.no/</Url>
 							</BookingContact>
-							<BookingMethods>online callOffice other</BookingMethods>
-							<!-- Merk at obligatoriske felter BookWhen og LatestBookingTime / MinimumBookingPeriod overstyres i ServiceJourney -->
+							<BookingMethods>online callOffice</BookingMethods>
+							<BookWhen>advanceAndDayOfTravel</BookWhen>
+							<LatestBookingTime>21:00:00</LatestBookingTime>
+							<MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
 							<BookingNote>
 								Du kan bestille reise med Flexxruter ved å lage deg en brukerprofil på 
 								http://finnmark.flexx.no/, og bestille på den aktuelle ruten.
@@ -193,7 +178,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<QuayRef version="1" ref="NSR:Quay:97371"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="1" id="FIN:PassengerStopAssignment:2" order="2">
-							<ScheduledStopPointRef ref="FIN:ScheduledStopPoint:2"/>
+							<ScheduledStopPointRef version="1" ref="FIN:ScheduledStopPoint:2"/>
 							<StopPlaceRef version="1" ref="NRI:StopPlace:761083333"/>
 							<QuayRef version="1" ref="NSR:Quay:97379"/>
 						</PassengerStopAssignment>
@@ -249,7 +234,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					<noticeAssignments>
 						<NoticeAssignment version="1" id="FIN:NoticeAssignment:Flexx" order="0">
 							<NoticeRef version="1" ref="FIN:Notice:Flexx"/>
-							<NoticedObjectRef version="1" ref="FIN:Network:Flexx"/>
+							<NoticedObjectRef version="1" ref="FIN:Line:809"/>
 						</NoticeAssignment>
 						<NoticeAssignment version="1" id="FIN:NoticeAssignment:Booking" order="0">
 							<NoticeRef version="1" ref="FIN:Notice:Booking"/>
@@ -266,7 +251,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 				<ServiceCalendarFrame id="FIN:ServiceCalendarFrame:809" version="1">
 					<dayTypes>
 						<DayType id="FIN:DayType:1" version="1">
-							<Name>Tirsdag og fredag</Name>
+							<Name>Tirscag og fredag</Name>
 							<properties>
 								<PropertyOfDay>
 									<DaysOfWeek>Tuesday Friday</DaysOfWeek>
@@ -284,8 +269,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					
 					<dayTypeAssignments>
 						<DayTypeAssignment id="FIN:DayTypeAssignment:1" version="1" order="1">
-							<OperatingPeriodRef ref="FIN:OperatingPeriod:2018"/>
-							<DayTypeRef ref="FIN:DayType:1"/>
+							<OperatingPeriodRef version="1" ref="FIN:OperatingPeriod:2018"/>
+							<DayTypeRef version="1" ref="FIN:DayType:1"/>
 						</DayTypeAssignment>
 					</dayTypeAssignments>
 				</ServiceCalendarFrame>
@@ -300,8 +285,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<dayTypes>
 								<DayTypeRef version="1" ref="FIN:DayType:1"/>
 							</dayTypes>
-							<JourneyPatternRef ref="FIN:JourneyPattern:809"/>
-							<FlexibleLineRef ref="FIN:FlexibleLine:809"/>
+							<JourneyPatternRef version="1" ref="FIN:JourneyPattern:809"/>
+							<FlexibleLineRef version="1" ref="FIN:FlexibleLine:809"/>
 							<passingTimes>
 								<TimetabledPassingTime version="1" id="FIN:TimetabledPassingTime:1025">
 									<StopPointInJourneyPatternRef ref="FIN:StopPointInJourneyPattern:1" version="1"/>
@@ -312,9 +297,10 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 									<ArrivalTime>10:45:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
-							<FlexibleServiceProperties version="1" id="FIN:FlexibleServiceProperties:1">
-								<BookWhen>untilPreviousDay</BookWhen>
-								<LatestBookingTime>21:00:00</LatestBookingTime>
+							<FlexibleServiceProperties>
+								<BookWhen>advanceAndDayOfTravel</BookWhen>
+								<BuyWhen>afterBoarding</BuyWhen>
+								<LatestBookingTime>10:25:00</LatestBookingTime>
 							</FlexibleServiceProperties>
 						</ServiceJourney>
 						
@@ -323,8 +309,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<dayTypes>
 								<DayTypeRef version="1" ref="FIN:DayType:1"/>
 							</dayTypes>
-							<JourneyPatternRef ref="FIN:JourneyPattern:809"/>
-							<FlexibleLineRef ref="FIN:FlexibleLine:809"/>
+							<JourneyPatternRef version="1" ref="FIN:JourneyPattern:809"/>
+							<FlexibleLineRef version="1" ref="FIN:FlexibleLine:809"/>
 							<passingTimes>
 								<TimetabledPassingTime version="1" id="FIN:TimetabledPassingTime:1410">
 									<StopPointInJourneyPatternRef ref="FIN:StopPointInJourneyPattern:1" version="1"/>
@@ -335,10 +321,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 									<ArrivalTime>14:30:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
-							<FlexibleServiceProperties version="1" id="FIN:FlexibleServiceProperties:2">
-								<BookWhen>advanceAndDayOfTravel</BookWhen>
-								<MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
-							</FlexibleServiceProperties>
 						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>

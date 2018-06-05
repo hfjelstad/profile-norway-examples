@@ -6,7 +6,6 @@ https://rutebanken.atlassian.net/wiki/display/PUBLIC/Bestillingstransport
 https://rutebanken.atlassian.net/wiki/display/PUBLIC/Multimodal+overgang
 
 Modellert som "Flexible zone without fixed stops"
-Ref. NetexStandardPart1 s 584: 
 "The service is defined by one or several zones (in sequence).
 A stop can occur anywhere in each Zone. 
 Stops served, and stop order will be defined four each vehicle journey according to the reservations. 
@@ -197,6 +196,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					<routes>
 						<Route version="1" id="RUT:Route:316-TilLorenskog">
 							<Name>316 til Lørenskog sentrum</Name>
+							<FlexibleLineRef ref="RUT:FlexibleLine:316" version="1"/>
 							<DirectionRef version="1" ref="NSR:Direction:TilLorenskog"/>
 							<pointsInSequence>
 								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-HANABORG-NORD-HENTING" order="1">
@@ -245,10 +245,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							</TransportSubmode>
 							<PublicCode>316</PublicCode>
 							<OperatorRef ref="RUT:Operator:Unibuss"/>
-							<routes>
-								<RouteRef version="1" ref="RUT:Route:316-TilLorenskog"/>
-								<RouteRef version="1" ref="RUT:Route:316-FraLorenskog"/>
-							</routes>
 							<RepresentedByGroupRef ref="RUT:Network:RuterBestillingslinjer"/>
 							<FlexibleLineType>mixedFlexibleAndFixed</FlexibleLineType>
 							<BookingContact>
@@ -265,12 +261,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							</BookingNote>
 						</FlexibleLine>
 					</lines>
-					
-					<groupsOfLines>
-						<GroupOfLines version="1" id="testdemo">
-							<BrandingRef ref=""></BrandingRef>
-						</GroupOfLines>
-					</groupsOfLines>
 					
 					<destinationDisplays>
 						<DestinationDisplay version="1" id="RUT:DestinationDisplay:Triaden">
