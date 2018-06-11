@@ -1,12 +1,143 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Branding version="any" id="Ruter"
-    xmlns="http://www.netex.org.uk/netex"
-    xmlns:core="http://www.govtalk.gov.uk/core"
-    xmlns:siri="http://www.siri.org.uk/siri"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.netex.org.uk/netex ../../xsd/netex_framework/netex_responsibility/netex_dataSource_version-v1.0.xsd">
-    <Name>Ruter AS</Name>
-    <Description>Operator that runs public transport in Oslo region</Description>
-    <Image>http://url.to.ruter.logo/</Image>
-    <Url>http://ruter.no/</Url>
-</Branding>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===Simplyfied Branding Example for NeTEx profil Norge=== -->
+<PublicationDelivery version="1.07:NO-NeTEx-networktimetable:1.2"
+	xmlns="http://www.netex.org.uk/netex" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:siri="http://www.siri.org.uk/siri">
+<!--
+    xsi:schemaLocation="http://www.netex.org.uk/netex ../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd"
+-->
+    <PublicationTimestamp>2018-06-11T12:13:00Z</PublicationTimestamp>
+	<ParticipantRef>NSR</ParticipantRef>
+
+	<dataObjects>
+		<CompositeFrame version="1" created="2018-06-11T12:13:14Z" id="RUT:CompositeFrame:1">
+			<validityConditions>
+				<AvailabilityCondition version="1" id="RUT:AvailabilityCondition:1">
+					<FromDate>2018-01-01T00:00:00</FromDate>
+				    <ToDate>2018-12-31T23:59:59</ToDate>
+				</AvailabilityCondition>
+			</validityConditions>
+
+			<codespaces>
+			    <Codespace id="ruter">
+			        <Xmlns>RUT</Xmlns>
+			        <XmlnsUrl>www.ruter.no</XmlnsUrl>
+			    </Codespace>
+				<Codespace id="unibuss">
+					<Xmlns>UNI</Xmlns>
+					<XmlnsUrl>www.unibuss.no</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="ruter"/>
+				<DefaultLocale>
+					<DefaultLanguage>no</DefaultLanguage>
+				</DefaultLocale>
+				<DefaultLocationSystem>WGS84</DefaultLocationSystem>
+			</FrameDefaults>
+
+			<frames>
+				<ResourceFrame version="1" id="RUT:ResourceFrame:1">
+				    
+				    <!-- branding for hypotetical routes -->
+					<typesOfValue>
+						<Branding version="1" id="RUT:Branding:1">
+							<Name>Nesoddbåtene</Name>
+						    <Url>https://ruter.no/reise/rutetabeller-og-linjekart/baat/</Url>
+						</Branding>
+					    <Branding version="1" id="RUT:Branding:2">
+					        <Name>Son-båten</Name>
+					    </Branding>
+					    <Branding version="1" id="RUT:Branding:3">
+					        <Name>Aker Brygge - Son (ekspress)</Name>
+					    </Branding>
+					    <Branding version="1" id="RUT:Branding:4">
+					        <Name>Aker Brygge - Son (ekspress)</Name>
+					    </Branding>
+					</typesOfValue>
+					
+					<organisations>
+						<Authority version="1" id="RUT:Authority:Ruter">
+							<PublicCode>sddf</PublicCode>
+							<CompanyNumber>991609407</CompanyNumber>
+							<Name>Ruter#</Name>
+							<LegalName>RUTER AS</LegalName>
+							<ContactDetails>
+								<Email>post@ruter.no</Email>
+								<Phone>22 08 43 00</Phone>
+								<Url>www.ruter.no</Url>
+							</ContactDetails>
+							<Address>
+								<AddressLine1>Dronningens gate 40, 4.etg.</AddressLine1>
+								<Town>Oslo</Town>
+								<PostCode>0154</PostCode>
+							</Address>
+						</Authority>
+						<Operator version="1" id="RUT:Operator:Norled">
+							<CompanyNumber>00000000</CompanyNumber>
+						    <Name>Norled</Name>
+						    <LegalName>Norled AS</LegalName>
+							<ContactDetails>
+							    <Email>post@norled.no</Email>
+							    <Phone>5186 8700</Phone>
+							    <Url>https://www.norled.no/</Url>
+							</ContactDetails>
+							<PrimaryMode>ferry</PrimaryMode>
+							<OperatorActivities>passenger</OperatorActivities>
+							<CustomerServiceContactDetails>
+								<Phone>0047 177</Phone>
+								<Url>www.ruter.no</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				
+				
+				<ServiceFrame version="1" id="RUT:SiteFrame:1">
+					<Network version="1" id="RUT:Network:1">
+					    <BrandingRef version="1" ref="RUT:Branding:1"/>
+						<Name>Ruter# ferje</Name>
+						<AuthorityRef version="1" ref="RUT:Authority:Ruter"/>
+					</Network>
+				    
+					<lines>
+						<Line version="1" id="RUT:Line:B10">
+						    <BrandingRef version="1" ref="RUT:Branding:2"/>
+							<Name>Nesodden-Drøbak-Son</Name>
+							<TransportMode>water</TransportMode>
+							<TransportSubmode>
+								<WaterSubmode>localPassengerFerry</WaterSubmode>
+							</TransportSubmode>
+							<PublicCode>B10</PublicCode>
+						</Line>
+					</lines>
+				    
+					<journeyPatterns>
+						<JourneyPattern version="1" id="RUT:JourneyPattern:1">
+						    <BrandingRef version="1" ref="RUT:Branding:3"/>
+						    <Name>Direktebåt til Son</Name>
+						</JourneyPattern>
+					</journeyPatterns>
+				</ServiceFrame>
+			    
+			    
+				<TimetableFrame version="1" id="RUT:TimetableFrame:1">
+					<vehicleJourneys>
+					    <ServiceJourney version="1" id="RUT:ServiceJourney:1"> 
+					        <BrandingRef version="1" ref="RUT:Branding:4"/>
+						    <TransportMode>water</TransportMode>
+						    <TransportSubmode>
+						        <WaterSubmode>localPassengerFerry</WaterSubmode>
+						    </TransportSubmode>
+						    <JourneyPatternRef version="1" ref="RUT:JourneyPattern:1"/>
+						</ServiceJourney>
+					</vehicleJourneys>
+				</TimetableFrame>
+
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
