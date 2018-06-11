@@ -55,7 +55,7 @@
 					        <Name>Aker Brygge - Son (ekspress)</Name>
 					    </Branding>
 					    <Branding version="1" id="RUT:Branding:4">
-					        <Name>Aker Brygge - Son (ekspress)</Name>
+					        <Name>Aker Brygge - Lysaker (ekstra-avgang)</Name>
 					    </Branding>
 					</typesOfValue>
 					
@@ -104,21 +104,20 @@
 					</Network>
 				    
 					<lines>
-						<Line version="1" id="RUT:Line:B10">
+						<Line version="1" id="RUT:Line:1">
 						    <BrandingRef version="1" ref="RUT:Branding:2"/>
 							<Name>Nesodden-Drøbak-Son</Name>
 							<TransportMode>water</TransportMode>
 							<TransportSubmode>
 								<WaterSubmode>localPassengerFerry</WaterSubmode>
 							</TransportSubmode>
-							<PublicCode>B10</PublicCode>
 						</Line>
 					</lines>
 				    
 					<journeyPatterns>
 						<JourneyPattern version="1" id="RUT:JourneyPattern:1">
 						    <BrandingRef version="1" ref="RUT:Branding:3"/>
-						    <Name>Direktebåt til Son</Name>
+						    <Name>Direktebåten til Son</Name>
 						</JourneyPattern>
 					</journeyPatterns>
 				</ServiceFrame>
