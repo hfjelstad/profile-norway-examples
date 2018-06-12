@@ -1,92 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 
-==== Eksempel på VehicleScheduleFrame for innsending av operatørspesifikke Blocks (Vognløp) ======
+==== Example for VehicleScheduleFrame ======
+# for exchange of vendor specific Blocks (norwegian: "Vognløp") #
 -->
 <PublicationDelivery
-  version="1.08:NO-NeTEx-networktimetable:1.1"
+  version="1.08:NO-NeTEx-networktimetable:1.2"
   xmlns="http://www.netex.org.uk/netex"
   xmlns:gml="http://www.opengis.net/gml/3.2" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <PublicationTimestamp>2018-03-19T13:37:00</PublicationTimestamp>
-    <ParticipantRef>NSR</ParticipantRef>
+    <PublicationTimestamp>2018-05-25T16:15:14</PublicationTimestamp>
+    <ParticipantRef>RUT</ParticipantRef>
 
     <dataObjects>
-        <ResourceFrame version="1" id="RUT:ResourceFrame:1">
-            <organisations>
-                <Authority version="1" id="RUT:Authority:Ruter">
-                    <CompanyNumber>991609407</CompanyNumber>
-                    <Name>Ruter#</Name>
-                    <LegalName>RUTER AS</LegalName>
-                    <ContactDetails>
-                        <Phone>0047 177</Phone>
-                        <Url>http://www.ruter.no</Url>
-                    </ContactDetails>
-                </Authority>
-            </organisations>
-        </ResourceFrame>
+        
+        <CompositeFrame version="1" created="2018-05-25T16:16:16" id="RUT:CompositeFrame:1">
+            <ValidBetween>
+                <FromDate>2018-01-01T00:00:00</FromDate>
+                <ToDate>2018-12-31T23:59:59</ToDate>
+            </ValidBetween>
+            <codespaces>
+                <Codespace id="ruter">
+                    <Xmlns>RUT</Xmlns>
+                    <XmlnsUrl>http://www.rutebanken.org/ns/rut</XmlnsUrl>
+                </Codespace>
+            </codespaces>
+            <frames>
+                <ResourceFrame version="1" id="RUT:ResourceFrame:1">
+                    <organisations>
+                        <Authority version="1" id="RUT:Authority:Ruter">
+                            <CompanyNumber>991609407</CompanyNumber>
+                            <Name>Ruter#</Name>
+                            <LegalName>RUTER AS</LegalName>
+                            <ContactDetails>
+                                <Phone>0047 177</Phone>
+                                <Url>http://www.ruter.no</Url>
+                            </ContactDetails>
+                        </Authority>
+                        <Operator version="1" id="RUT:Operator:1">
+                            <CompanyNumber>985615616</CompanyNumber>
+                            <Name>Unibuss</Name>
+                            <LegalName>UNIBUSS AS</LegalName>
+                            <ContactDetails>
+                                <Phone>0047 177</Phone>
+                                <Url>http://www.ruter.no</Url>
+                                <FurtherDetails>Kontaktskjema på websider</FurtherDetails>
+                            </ContactDetails>
+                        </Operator>
+                    </organisations>
+                </ResourceFrame>
 
-        <!-- Vil pdd. være gyldig innsending innenfor en CompositeFrame eller som separat frame --> 
-        <VehicleScheduleFrame version="1" id="RUT:VehicleScheduleFrame:1">
-            <blocks>
-                <Block id="RUT:Block:1" version="1">
-                    <validityConditions>
-                        <ValidBetween>
-                            <FromDate>2018-01-01T00:00:01</FromDate>
-                            <ToDate>2018-06-30T23:59:59</ToDate>
-                        </ValidBetween>
-                    </validityConditions>
-                    <Name>Vognlop #1</Name>
-                    <Description>Eksempel-vognlop</Description>
-                    <PrivateCode>Default-2018-Q1-Q2</PrivateCode>
-                    <StartTime>05:48:00</StartTime>
-                    <EndTime>22:39:00</EndTime>
+                <!-- Valid within a CompositeFrame OR as a separate frame --> 
+                <VehicleScheduleFrame version="1" id="RUT:VehicleScheduleFrame:1">
+                    <blocks>
+                        <Block id="RUT:Block:1" version="1">
+                            <validityConditions>
+                                <ValidBetween>
+                                    <FromDate>2018-01-01T00:00:01</FromDate>
+                                    <ToDate>2018-06-30T23:59:59</ToDate>
+                                </ValidBetween>
+                            </validityConditions>
+                            <Name>Vognlop #1</Name>
+                            <Description>Eksempel-vognlop</Description>
+                            <PrivateCode>Default-2018-Q1-Q2</PrivateCode>
+                            <StartTime>05:48:00</StartTime>
+                            <EndTime>22:39:00</EndTime>
+                            <dayTypes>
+                                <DayTypeRef ref="RUT:DayType:ukedag" version="1"/>
+                            </dayTypes>
+                            <!-- NB: 'version' attributs ONLY for references to objects within this file -->
+                            <!-- (for validation purposes, MUST be present in proper datasets) -->
+                            <StartPointRef ref="RUT:ScheduledStopPoint:1"/>
+                            <EndPointRef ref="RUT:ScheduledStopPoint:2"/>
+                            <journeys>
+                                <DeadRunRef version="1" ref="RUT:DeadRun:1"/>
+                                <VehicleJourneyRef ref="RUT:ServiceJourney:2" />
+                                <DeadRunRef ref="RUT:DeadRun:3"/>
+                                <VehicleJourneyRef ref="RUT:ServiceJourney:4" />
+                                <DeadRunRef ref="RUT:DeadRun:5"/>
+                                <VehicleJourneyRef ref="RUT:ServiceJourney:6"/>
+                                <DeadRunRef ref="RUT:DeadRun:7"/>
+                            </journeys>
+                        </Block>
+                    </blocks>
+                </VehicleScheduleFrame>
+                
+                <!-- Example Dead Run -->
+                <TimetableFrame version="1" id="RUT:TimetableFrame:1">
+                    <vehicleJourneys>
+                        <DeadRun version="1" id="RUT:DeadRun:1">
+                            <JourneyDuration>PT2H</JourneyDuration>
+                            <dayTypes>
+                                <DayTypeRef version="1" ref="RUT:DayType:ukedag"/>
+                            </dayTypes>
+                            <JourneyPatternRef ref="RUT:JourneyPattern:1"/>
+                            <VehicleTypeRef ref="RUT:VehicleType:1"/>
+                            <passingTimes>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1">
+                                    <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:1"/>
+                                    <DepartureTime>05:30:00</DepartureTime>
+                                </TimetabledPassingTime>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:2">
+                                    <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:2"/>
+                                    <ArrivalTime>05:45:00</ArrivalTime>
+                                </TimetabledPassingTime>
+                            </passingTimes>
+                            <OperatorRef version="1" ref="RUT:Operator:1"/>
+                            <DeadRunType>garageRunOut</DeadRunType> 
+                        </DeadRun>
+                    </vehicleJourneys>
+                </TimetableFrame>
+                
+                <!-- ServiceCalendar for completeness -->
+                <ServiceCalendarFrame version="1" id="RUT:ServiceCalendarFrame:1">
                     <dayTypes>
-                        <DayTypeRef ref="UNI:DayType:BareUkedager" version="1"/>
+                        <DayType version="1" id="RUT:DayType:ukedag">
+                            <Name>Ukedager (mandag til fredag)</Name>
+                            <properties>
+                                <PropertyOfDay>
+                                    <DaysOfWeek>Weekdays</DaysOfWeek>
+                                </PropertyOfDay>
+                            </properties>
+                        </DayType>
                     </dayTypes>
-                    <StartPointRef ref="RUT:ScheduledStopPoint:1" version="1"/>
-                    <EndPointRef ref="RUT:ScheduledStopPoint:2" version="1"/>
-                    <journeys>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:1"/>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:2"/>
-                        <DeadRunRef ref="RUT:DeadRun:3"/>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:4"/>
-                        <DeadRunRef ref="RUT:DeadRun:5"/>
-                        <VehicleJourneyRef ref="RUT:ServiceJourney:6"/>
-                        <DeadRunRef ref="RUT:DeadRun:7"/>
-                    </journeys>
-                </Block>
-            </blocks>
-        </VehicleScheduleFrame>
-
-
-        <!-- ServiceCalendar med for eksempelets kompletthet -->
-        <ServiceCalendarFrame version="1" id="UNI:ServiceCalendarFrame:1">
-            <dayTypes>
-                <DayType version="1" id="UNI:DayType:BareUkedager">
-                    <Name>Ukedager (mandag til fredag)</Name>
-                    <properties>
-                        <PropertyOfDay>
-                            <DaysOfWeek>Weekdays</DaysOfWeek>
-                        </PropertyOfDay>
-                    </properties>
-                </DayType>
-            </dayTypes>
-
-            <operatingPeriods>
-                <OperatingPeriod id="RUT:OperatingPeriod:2018-Q1Q2" version="1">
-                    <FromDate>2018-01-01T05:48:00</FromDate>
-                    <ToDate>2018-06-30T22:39:00</ToDate>
-                </OperatingPeriod>
-            </operatingPeriods>
-
-            <dayTypeAssignments>
-                <DayTypeAssignment id="RUT:DayTypeAssignment:1" version="1" order="1">
-                    <OperatingPeriodRef ref="RUT:OperatingPeriod:2018-Q1Q2" version="1"/>
-                    <DayTypeRef ref="UNI:DayType:BareUkedager" version="1"/>
-                </DayTypeAssignment>
-            </dayTypeAssignments>
-        </ServiceCalendarFrame>
-
+                    <operatingPeriods>
+                        <OperatingPeriod id="RUT:OperatingPeriod:2018-Q1Q2" version="1">
+                            <FromDate>2018-01-01T05:48:00</FromDate>
+                            <ToDate>2018-06-30T22:39:00</ToDate>
+                        </OperatingPeriod>
+                    </operatingPeriods>
+                    <dayTypeAssignments>
+                        <DayTypeAssignment id="RUT:DayTypeAssignment:1" version="1" order="1">
+                            <OperatingPeriodRef ref="RUT:OperatingPeriod:2018-Q1Q2" version="1"/>
+                            <DayTypeRef ref="RUT:DayType:ukedag" version="1"/>
+                        </DayTypeAssignment>
+                    </dayTypeAssignments>
+                </ServiceCalendarFrame>
+            </frames>
+        </CompositeFrame>
     </dataObjects>
 </PublicationDelivery>

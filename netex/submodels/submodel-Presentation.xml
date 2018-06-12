@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===Simplyfied Example of Presentation for NeTEx profil Norge=== -->
+<PublicationDelivery version="1.07:NO-NeTEx-networktimetable:1.2"
+	xmlns="http://www.netex.org.uk/netex" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:siri="http://www.siri.org.uk/siri">
+	<!--
+    xsi:schemaLocation="http://www.netex.org.uk/netex ../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd"
+	-->
+	<PublicationTimestamp>2018-06-11T12:13:00Z</PublicationTimestamp>
+	<ParticipantRef>NSR</ParticipantRef>
+	
+	<dataObjects>
+		<CompositeFrame version="1" created="2018-06-11T12:13:14Z" id="RUT:CompositeFrame:1">
+			<frames>
+				<ServiceFrame version="1" id="RUT:SiteFrame:1">
+					<Network version="1" id="RUT:Network:1">
+						<Name>Ruter</Name>
+					</Network>
+					<lines>
+						<Line version="1" id="RUT:Line:1">
+							<Name>19 Ljabru</Name>
+							<Presentation>
+								<Colour>FDB927</Colour>
+								<TextColour>FFFFFF</TextColour>
+							</Presentation>
+						</Line>
+					</lines>
+				</ServiceFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
+

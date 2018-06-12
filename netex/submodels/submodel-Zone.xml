@@ -21,5 +21,13 @@
                 <gml:pos>12346.18 2344.2</gml:pos>
             </gml:LinearRing>
         </gml:exterior>
+        <gml:interior>
+            <gml:LinearRing>
+                <gml:pos>12345.78 2345.2</gml:pos>
+                <gml:pos>12345.76 2346.2</gml:pos>
+                <gml:pos>12345.88 2345.3</gml:pos>
+                <gml:pos>12346.18 2344.2</gml:pos>
+            </gml:LinearRing>
+        </gml:interior>
     </gml:Polygon>
 </GeneralZone>

@@ -390,6 +390,7 @@
                     <vehicleJourneys>
                         <!-- Her defineres en TemplateServiceJourney. Den sier at avgangstidene er de samme, men i dette tilfellet med et rytmisk mønster (hvert. 15 minutt over hel) -->
                         <TemplateServiceJourney version="1" id="RUT:TemplateServiceJourney:0061">
+                            
                             <PrivateCode>test</PrivateCode>
                             <DepartureTime>00:15:00</DepartureTime>
                             <dayTypes>
@@ -397,6 +398,7 @@
                                 <DayTypeRef version="1" ref="RUT:DayType:MonSat"/>
                             </dayTypes>
                             <JourneyPatternRef version="1" ref="RUT:JourneyPattern:0061101"/>
+                            <JourneyFrequencyGroupRef version="1" ref="RUT:RhythmicalJourneyGroup:1"/>
                             <passingTimes>
                                 <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:xx15">
                                     <!-- Tveita T -->
@@ -434,22 +436,23 @@
                                     <ArrivalTime>00:31:00</ArrivalTime>
                                 </TimetabledPassingTime>
                             </passingTimes>
-                            
+                            <TemplateVehicleJourneyType>headway</TemplateVehicleJourneyType>
+
                             <frequencyGroups>
                                 <RhythmicalJourneyGroup version="1" id="RUT:RhythmicalJourneyGroup:1">
                                     <Name>Every hour, 15 minutes past the hour</Name>
-                                    <!-- Første avgang er kl 09:15 -->
+                                    <!-- dagens første avgang -->
                                     <FirstDepartureTime>09:15:00</FirstDepartureTime>
-                                    <!-- Siste avgang er kl 14:15 -->
+                                    <!-- dagens siste avgang -->
                                     <LastDepartureTime>14:15:00</LastDepartureTime>
                                     <timebands>
-                                        <!-- Hvert 15 minutt over -->
                                         <TimebandRef version="1" ref="RUT:Timeband:TM15"/>
                                     </timebands>
                                 </RhythmicalJourneyGroup>
                             </frequencyGroups>
                         </TemplateServiceJourney>
                     </vehicleJourneys>
+                    
                 </TimetableFrame>
             </frames>
         </CompositeFrame>
