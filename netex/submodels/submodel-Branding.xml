@@ -12,126 +12,95 @@
 	<ParticipantRef>NSR</ParticipantRef>
 
 	<dataObjects>
-		<CompositeFrame version="1" created="2018-06-11T12:13:14Z" id="RUT:CompositeFrame:1">
+		<CompositeFrame version="1" created="2018-06-11T12:13:14Z" id="SOF:CompositeFrame:1">
 			<validityConditions>
-				<AvailabilityCondition version="1" id="RUT:AvailabilityCondition:1">
+				<AvailabilityCondition version="1" id="SOF:AvailabilityCondition:1">
 					<FromDate>2018-01-01T00:00:00</FromDate>
 				    <ToDate>2018-12-31T23:59:59</ToDate>
 				</AvailabilityCondition>
 			</validityConditions>
-
 			<codespaces>
-			    <Codespace id="ruter">
-			        <Xmlns>RUT</Xmlns>
-			        <XmlnsUrl>www.ruter.no</XmlnsUrl>
+			    <Codespace id="SOF">
+			        <Xmlns>SOF</Xmlns>
+			    	<XmlnsUrl>http://www.rutebanken.org/ns/sof</XmlnsUrl>
 			    </Codespace>
-				<Codespace id="unibuss">
-					<Xmlns>UNI</Xmlns>
-					<XmlnsUrl>www.unibuss.no</XmlnsUrl>
-				</Codespace>
 			</codespaces>
 
-			<FrameDefaults>
-				<DefaultCodespaceRef ref="ruter"/>
-				<DefaultLocale>
-					<DefaultLanguage>no</DefaultLanguage>
-				</DefaultLocale>
-				<DefaultLocationSystem>WGS84</DefaultLocationSystem>
-			</FrameDefaults>
-
 			<frames>
-				<ResourceFrame version="1" id="RUT:ResourceFrame:1">
-				    
-				    <!-- branding for hypotetical routes -->
+
+				<ResourceFrame version="1" id="SOF:ResourceFrame:1">
 					<typesOfValue>
-						<Branding version="1" id="RUT:Branding:1">
-							<Name>Nesoddbåtene</Name>
-						    <Url>https://ruter.no/reise/rutetabeller-og-linjekart/baat/</Url>
+						<Branding version="1" id="SOF:Branding:1">
+							<Name>Firda Billag</Name>
+							<Url>https://www.firda-billag.no/</Url>
 						</Branding>
-					    <Branding version="1" id="RUT:Branding:2">
-					        <Name>Son-båten</Name>
-					    </Branding>
-					    <Branding version="1" id="RUT:Branding:3">
-					        <Name>Aker Brygge - Son (ekspress)</Name>
-					    </Branding>
-					    <Branding version="1" id="RUT:Branding:4">
-					        <Name>Aker Brygge - Lysaker (ekstra-avgang)</Name>
+					    <Branding version="1" id="SOF:Branding:2">
+					        <Name>Nettbuss Sogndal</Name>
+					    	<Url>https://www.nettbuss.no/</Url>
 					    </Branding>
 					</typesOfValue>
-					
 					<organisations>
-						<Authority version="1" id="RUT:Authority:Ruter">
-							<PublicCode>sddf</PublicCode>
-							<CompanyNumber>991609407</CompanyNumber>
-							<Name>Ruter#</Name>
-							<LegalName>RUTER AS</LegalName>
+						<Authority version="1" id="SOF:Authority:1">
+							<CompanyNumber>941388841</CompanyNumber>
+							<Name>Kringom</Name>
+							<LegalName>Sogn og Fjordane fylkeskommune</LegalName>
 							<ContactDetails>
-								<Email>post@ruter.no</Email>
-								<Phone>22 08 43 00</Phone>
-								<Url>www.ruter.no</Url>
+								<Url>http://www.kringom.no/</Url>
 							</ContactDetails>
-							<Address>
-								<AddressLine1>Dronningens gate 40, 4.etg.</AddressLine1>
-								<Town>Oslo</Town>
-								<PostCode>0154</PostCode>
-							</Address>
+							<OrganisationType>authority</OrganisationType>
 						</Authority>
-						<Operator version="1" id="RUT:Operator:Norled">
-							<CompanyNumber>00000000</CompanyNumber>
-						    <Name>Norled</Name>
-						    <LegalName>Norled AS</LegalName>
+						<Operator version="1" id="SOF:Operator:1">
+							<CompanyNumber>7</CompanyNumber>
+							<Name>Firda Billag Buss AS</Name>
+							<LegalName>Firda Billag Buss AS</LegalName>
 							<ContactDetails>
-							    <Email>post@norled.no</Email>
-							    <Phone>5186 8700</Phone>
-							    <Url>https://www.norled.no/</Url>
+								<Url>https://www.firda-billag.no/</Url>
 							</ContactDetails>
-							<PrimaryMode>ferry</PrimaryMode>
-							<OperatorActivities>passenger</OperatorActivities>
+							<OrganisationType>operator</OrganisationType>
 							<CustomerServiceContactDetails>
-								<Phone>0047 177</Phone>
-								<Url>www.ruter.no</Url>
+								<Email>post@firda-billag.no</Email>
+								<Phone>+47 57725000</Phone>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="SOF:Operator:2">
+							<CompanyNumber>15</CompanyNumber>
+							<Name>Nettbuss AS avd. Sogndal</Name>
+							<LegalName>Nettbuss AS avd. Sogndal</LegalName>
+							<ContactDetails>
+								<Url>https://www.firda-billag.no/</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+							<CustomerServiceContactDetails>
+								<Email>05070@nettbuss.no</Email>
+								<Phone>+47 40705070</Phone>
+								<Url>https://www.nettbuss.no/om-nettbuss/kontakt-oss</Url>
 							</CustomerServiceContactDetails>
 						</Operator>
 					</organisations>
 				</ResourceFrame>
 				
-				
-				<ServiceFrame version="1" id="RUT:SiteFrame:1">
-					<Network version="1" id="RUT:Network:1">
-					    <BrandingRef version="1" ref="RUT:Branding:1"/>
-						<Name>Ruter# ferje</Name>
-						<AuthorityRef version="1" ref="RUT:Authority:Ruter"/>
-					</Network>
-				    
+				<ServiceFrame version="1" id="SOF:SiteFrame:1">
 					<lines>
-						<Line version="1" id="RUT:Line:1">
-						    <BrandingRef version="1" ref="RUT:Branding:2"/>
-							<Name>Nesodden-Drøbak-Son</Name>
-							<TransportMode>water</TransportMode>
+						<Line version="1" id="SOF:Line:1">
+						    <BrandingRef version="1" ref="SOF:Branding:1"/>
+							<Name>Sogndal-Kaupanger kai</Name>
+							<TransportMode>bus</TransportMode>
 							<TransportSubmode>
-								<WaterSubmode>localPassengerFerry</WaterSubmode>
+								<BusSubmode>localBus</BusSubmode>
 							</TransportSubmode>
 						</Line>
 					</lines>
-				    
-					<journeyPatterns>
-						<JourneyPattern version="1" id="RUT:JourneyPattern:1">
-						    <BrandingRef version="1" ref="RUT:Branding:3"/>
-						    <Name>Direktebåten til Son</Name>
-						</JourneyPattern>
-					</journeyPatterns>
 				</ServiceFrame>
 			    
-			    
-				<TimetableFrame version="1" id="RUT:TimetableFrame:1">
+				<TimetableFrame version="1" id="SOF:TimetableFrame:1">
 					<vehicleJourneys>
-					    <ServiceJourney version="1" id="RUT:ServiceJourney:1"> 
-					        <BrandingRef version="1" ref="RUT:Branding:4"/>
-						    <TransportMode>water</TransportMode>
-						    <TransportSubmode>
-						        <WaterSubmode>localPassengerFerry</WaterSubmode>
-						    </TransportSubmode>
-						    <JourneyPatternRef version="1" ref="RUT:JourneyPattern:1"/>
+						<ServiceJourney version="1" id="SOF:ServiceJourney:1"> 
+							<BrandingRef version="1" ref="SOF:Branding:2"/>
+							<Name>Sogndal-Kaupanger kai</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>localBus</BusSubmode>
+							</TransportSubmode>
 						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
