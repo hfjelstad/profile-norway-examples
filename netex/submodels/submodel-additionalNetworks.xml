@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===Simplified example of multiple Network in a single data export=== -->
+<PublicationDelivery 
+  version="1.07:NO-NeTEx-networktimetable:1.1"
+  xmlns="http://www.netex.org.uk/netex" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:siri="http://www.siri.org.uk/siri">
+<!--
+    xsi:schemaLocation="http://www.netex.org.uk/netex ../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd"
+-->	
+	<PublicationTimestamp>2018-05-25T16:15:14</PublicationTimestamp>
+	<ParticipantRef>OPP</ParticipantRef>
+	
+	<dataObjects>
+		
+		<CompositeFrame version="1" created="2018-05-25T16:16:16" id="OPP:CompositeFrame:1">
+			<ValidBetween>
+				<FromDate>2018-01-01T00:00:00</FromDate>
+				<ToDate>2018-12-31T23:59:59</ToDate>
+			</ValidBetween>
+			<codespaces>
+				<Codespace id="OPP">
+					<Xmlns>OPP</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/opp</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+			<frames>
+
+				<ResourceFrame version="1" id="OPP:ResourceFrame:1">
+					<organisations>
+						<Authority version="1" id="OPP:Authority:1">
+							<CompanyNumber>1</CompanyNumber>
+							<Name>Opplandstrafikk</Name>
+							<LegalName>Oppland fylkeskommune</LegalName>
+							<ContactDetails>
+								<Url>https://www.opplandstrafikk.no/</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+						<Authority version="1" id="OPP:Authority:2">
+							<CompanyNumber>2</CompanyNumber>
+							<Name>Skibladner</Name>
+							<LegalName>DS Skibladner</LegalName>
+							<ContactDetails>
+								<Url>https://www.skibladner.no/</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+					</organisations>
+				</ResourceFrame>
+
+				<ServiceFrame version="1" id="OPP:SiteFrame:1">
+					<Network version="1" id="OPP:Network:1">
+						<Name>Opplandstrafikk</Name>
+						<AuthorityRef version="1" ref="OPP:Authority:1"/>
+						<groupsOfLines>
+							<GroupOfLines version="1" id="OPP:GroupOfLines:1">
+								<Name>Fylkestrafikkerende buss</Name>
+							</GroupOfLines>
+						</groupsOfLines>
+					</Network>
+					<additionalNetworks>
+						<Network version="1" id="OPP:Network:2">
+							<Name>Skibladner</Name>
+							<AuthorityRef version="1" ref="OPP:Authority:2"/>
+							<groupsOfLines>
+								<GroupOfLines version="1" id="OPP:GroupOfLines:2">
+									<Name>Skibladner</Name>
+								</GroupOfLines>
+							</groupsOfLines>
+						</Network>
+					</additionalNetworks>
+					
+					<lines>
+						<!-- # NB: representation of Line from FILE-1 # -->
+						<Line version="1" id="OPP:Line:1">
+							<Name>Dokka-Fagernes</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>localBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>1</PublicCode>
+							<!--OperatorRef ref="[demo]"/-->
+							<RepresentedByGroupRef version="1" ref="OPP:GroupOfLines:1"/>
+						</Line>
+						<!-- # NB: representation of Line from FILE-2 # -->
+						<Line version="112" id="OPP:Line:5002_247">
+							<Name>Eidsvoll-Lillehammer</Name>
+							<TransportMode>water</TransportMode>
+							<TransportSubmode>
+								<WaterSubmode>localPassengerFerry</WaterSubmode>
+							</TransportSubmode>
+							<PublicCode>2</PublicCode>
+							<!--OperatorRef ref="[demo]"/-->
+							<RepresentedByGroupRef version="1" ref="OPP:GroupOfLines:2"/>
+						</Line>
+					</lines>
+				</ServiceFrame>
+				
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
