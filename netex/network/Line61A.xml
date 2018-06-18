@@ -70,7 +70,6 @@
                     </organisations>
                 </ResourceFrame>
 
-
                 <!-- 
                 Stoppestedsinformasjon skal IKKE sendes inn ihht. networktimetable profil, men som egen XML ihht. stops profil.
                 Objektene er likevel tatt med for å vise begge datasettene i samme eksempel.
@@ -203,12 +202,6 @@
                                 <!-- Denne linjen kjøres bare på 1 måte -->
                                 <RouteRef version="1" ref="RUT:Route:0061101"/>
                             </routes>
-                            <Presentation>
-                                <infoLinks>
-                                    <InfoLink typeOfInfoLink="resource">http://test.com</InfoLink>
-                                    <InfoLink typeOfInfoLink="info">http://test.com</InfoLink>
-                                </infoLinks>
-                            </Presentation>
                         </Line>
                     </lines>
 
@@ -390,7 +383,6 @@
                     <vehicleJourneys>
                         <!-- Her defineres en TemplateServiceJourney. Den sier at avgangstidene er de samme, men i dette tilfellet med et rytmisk mønster (hvert. 15 minutt over hel) -->
                         <TemplateServiceJourney version="1" id="RUT:TemplateServiceJourney:0061">
-                            
                             <PrivateCode>test</PrivateCode>
                             <DepartureTime>00:15:00</DepartureTime>
                             <dayTypes>
