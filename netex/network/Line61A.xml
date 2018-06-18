@@ -389,8 +389,8 @@
                                 <!-- Refererer til 1 daytype som inneholder alle dager mandag-lørdag. Kunne vært separate dagtyper, men da måtte alle listes her -->
                                 <DayTypeRef version="1" ref="RUT:DayType:MonSat"/>
                             </dayTypes>
-                            <!-- JourneyPatternRef version="1" ref="RUT:JourneyPattern:0061101"/-->
-                            <JourneyFrequencyGroupRef version="1" ref="RUT:RhythmicalJourneyGroup:1"/>
+                            <JourneyPatternRef version="1" ref="RUT:JourneyPattern:0061101"/>
+                            <!--JourneyFrequencyGroupRef version="1" ref="RUT:RhythmicalJourneyGroup:1"/-->
                             <JourneyFrequencyGroupRef ref="RUT:RhythmicalJourneyGroup:1"/>
                             <passingTimes>
                                 <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:xx15">
