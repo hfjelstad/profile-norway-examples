@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ===Simplyfied Example of Presentation for NeTEx profil Norge=== -->
 <PublicationDelivery version="1.07:NO-NeTEx-networktimetable:1.2"
-	xmlns="http://www.netex.org.uk/netex" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:gml="http://www.opengis.net/gml/3.2" 
-	xmlns:siri="http://www.siri.org.uk/siri">
-	<!--
-    xsi:schemaLocation="http://www.netex.org.uk/netex ../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd"
-	-->
+  xmlns="http://www.netex.org.uk/netex" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:siri="http://www.siri.org.uk/siri">
+ 
 	<PublicationTimestamp>2018-06-11T12:13:00Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	

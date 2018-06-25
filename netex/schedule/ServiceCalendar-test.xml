@@ -5,21 +5,20 @@
   xmlns="http://www.netex.org.uk/netex"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:siri="http://www.siri.org.uk/siri"
-  xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
+  xmlns:siri="http://www.siri.org.uk/siri">
 	<PublicationTimestamp>2017-01-02T12:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
-		<CompositeFrame version="any" id="NSR:CompositeFrame:1">
+		<CompositeFrame version="1" id="NSR:CompositeFrame:1">
 			<frames>
 				
 				
 				<!-- TODO: Eksempelet er ikke komplett -->
 				
 				
-				<ServiceCalendarFrame version="any" id="NSR:ServiceCalendarFrame:1">
+				<ServiceCalendarFrame version="1" id="NSR:ServiceCalendarFrame:1">
 					<dayTypes>
-						<DayType version="any" id="NSR:DayType:ukedag-normaldrift">
+						<DayType version="1" id="NSR:DayType:ukedag-normaldrift">
 							<Name>Ukedager</Name>
 							<properties>
 								<PropertyOfDay>
@@ -27,7 +26,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="NSR:DayType:helg-normaldrift">
+						<DayType version="1" id="NSR:DayType:helg-normaldrift">
 							<Name>Helg</Name>
 							<properties>
 								<PropertyOfDay>
@@ -35,7 +34,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="NSR:DayType:ukedag-romjul">
+						<DayType version="1" id="NSR:DayType:ukedag-romjul">
 							<Name>Julen</Name>
 							<properties>
 								<PropertyOfDay>
@@ -43,7 +42,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="NSR:DayType:helg-nyttar">
+						<DayType version="1" id="NSR:DayType:helg-nyttar">
 							<Name>Julen</Name>
 							<properties>
 								<PropertyOfDay>
@@ -54,19 +53,19 @@
 					</dayTypes>
 					
 					<operatingPeriods>
-						<OperatingPeriod version="any" id="NSR:OperatingPeriod:desember-for-jul">
+						<OperatingPeriod version="1" id="NSR:OperatingPeriod:desember-for-jul">
 							<FromDate>2017-12-01T00:00:00</FromDate>
 							<ToDate>2017-12-23T24:00:00</ToDate>
 						</OperatingPeriod>
-						<OperatingPeriod version="any" id="NSR:OperatingPeriod:romjul-helligdager">
+						<OperatingPeriod version="1" id="NSR:OperatingPeriod:romjul-helligdager">
 							<FromDate>2017-12-24T00:00:00</FromDate>
 							<ToDate>2017-12-26T24:00:00</ToDate>
 						</OperatingPeriod>
-						<OperatingPeriod version="any" id="NSR:OperatingPeriod:romjul">
+						<OperatingPeriod version="1" id="NSR:OperatingPeriod:romjul">
 							<FromDate>2017-12-27T00:00:00</FromDate>
 							<ToDate>2017-12-29T24:00:00</ToDate>
 						</OperatingPeriod>
-						<OperatingPeriod version="any" id="NSR:OperatingPeriod:nyttar-helg">
+						<OperatingPeriod version="1" id="NSR:OperatingPeriod:nyttar-helg">
 							<FromDate>2017-12-30T00:00:00</FromDate>
 							<ToDate>2017-01-31T24:00:00</ToDate>
 						</OperatingPeriod>
@@ -75,36 +74,36 @@
 					<!-- julaften, nyttårsaften og første nyttårsdag er koplet til dato -->
 					<dayTypeAssignments>
 						<!-- Før jul -->
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:desember-for-jul-uke">
-							<OperatingPeriodRef version="any" ref="NSR:OperatingPeriod:desember-for-jul"/>
-							<DayTypeRef version="any" ref="NSR:DayType:ukedag-normaldrift"/>
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:desember-for-jul-uke">
+							<OperatingPeriodRef version="1" ref="NSR:OperatingPeriod:desember-for-jul"/>
+							<DayTypeRef version="1" ref="NSR:DayType:ukedag-normaldrift"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:desember-for-jul-helg">
-							<OperatingPeriodRef version="any" ref="NSR:OperatingPeriod:desember-for-jul"/>
-							<DayTypeRef version="any" ref="NSR:DayType:helg-normaldrift"/>
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:desember-for-jul-helg">
+							<OperatingPeriodRef version="1" ref="NSR:OperatingPeriod:desember-for-jul"/>
+							<DayTypeRef version="1" ref="NSR:DayType:helg-normaldrift"/>
 						</DayTypeAssignment>
 						<!-- 
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:julaften">
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:julaften">
 							<Date>2017-12-24</Date>
-							<DayTypeRef version="any" ref="NSR:DayType:ukedag-normaldrift"/>
+							<DayTypeRef version="1" ref="NSR:DayType:ukedag-normaldrift"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:forste-juledag">
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:forste-juledag">
 							<Date>2017-12-25</Date>
-							<DayTypeRef version="any" ref="NSR:DayType:weekend"/>
+							<DayTypeRef version="1" ref="NSR:DayType:weekend"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:andre-juledag">
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:andre-juledag">
 							<Date>2017-12-26</Date>
-							<DayTypeRef version="any" ref="NSR:DayType:weekend"/>
+							<DayTypeRef version="1" ref="NSR:DayType:weekend"/>
 						</DayTypeAssignment>
 						
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:romjul">
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:romjul">
 							<OperatingPeriodRef ref="NSR:OperatingPeriod:romjul"/>
-							<DayTypeRef version="any" ref="NSR:DayType:ukedag-romjul"/>
+							<DayTypeRef version="1" ref="NSR:DayType:ukedag-romjul"/>
 						</DayTypeAssignment>
 						
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:nyttarsaften-ikke">
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:nyttarsaften-ikke">
 							<Date>2017-12-31</Date>
-							<DayTypeRef version="any" ref="NSR:DayType:nyttar"/>
+							<DayTypeRef version="1" ref="NSR:DayType:nyttar"/>
 							<isAvailable>false</isAvailable>
 						</DayTypeAssignment>
 						-->
@@ -112,42 +111,42 @@
 				</ServiceCalendarFrame>
 
 
-				<TimetableFrame version="any" id="NSR:TimetableFrame:desember-for-jul">
-					<ServiceCalendarFrameRef version="any" ref="NSR:ServiceCalendarFrame:1"/>
+				<TimetableFrame version="1" id="NSR:TimetableFrame:desember-for-jul">
+					<ServiceCalendarFrameRef version="1" ref="NSR:ServiceCalendarFrame:1"/>
 					<vehicleJourneys>
-						<ServiceJourney version="any" id="NSR:ServiceJourney:0800">
+						<ServiceJourney version="1" id="NSR:ServiceJourney:0800">
 							<dayTypes>
-								<DayTypeRef version="any" ref="NSR:DayType:ukedag-normaldrift"/>
-								<DayTypeRef version="any" ref="NSR:DayType:ukedag-romjul"/>
+								<DayTypeRef version="1" ref="NSR:DayType:ukedag-normaldrift"/>
+								<DayTypeRef version="1" ref="NSR:DayType:ukedag-romjul"/>
 							</dayTypes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="NSR:ServiceJourney:1000">
+						<ServiceJourney version="1" id="NSR:ServiceJourney:1000">
 							<dayTypes>
-								<DayTypeRef version="any" ref="NSR:DayType:ukedag-normaldrift"/>
-								<DayTypeRef version="any" ref="NSR:DayType:helg-normaldrift"/>
+								<DayTypeRef version="1" ref="NSR:DayType:ukedag-normaldrift"/>
+								<DayTypeRef version="1" ref="NSR:DayType:helg-normaldrift"/>
 							</dayTypes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="NSR:ServiceJourney:1200">
+						<ServiceJourney version="1" id="NSR:ServiceJourney:1200">
 							<dayTypes>
-								<DayTypeRef version="any" ref="NSR:DayType:ukedag-normaldrift"/>
-								<DayTypeRef version="any" ref="NSR:DayType:ukedag-romjul"/>
+								<DayTypeRef version="1" ref="NSR:DayType:ukedag-normaldrift"/>
+								<DayTypeRef version="1" ref="NSR:DayType:ukedag-romjul"/>
 							</dayTypes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="NSR:ServiceJourney:1800">
+						<ServiceJourney version="1" id="NSR:ServiceJourney:1800">
 							<dayTypes>
-								<DayTypeRef version="any" ref="NSR:DayType:ukedag-normaldrift"/>
-								<DayTypeRef version="any" ref="NSR:DayType:ukedag-romjul"/>
-								<DayTypeRef version="any" ref="NSR:DayType:helg-normaldrift"/>
-								<DayTypeRef version="any" ref="NSR:DayType:helg-nyttar"/>
+								<DayTypeRef version="1" ref="NSR:DayType:ukedag-normaldrift"/>
+								<DayTypeRef version="1" ref="NSR:DayType:ukedag-romjul"/>
+								<DayTypeRef version="1" ref="NSR:DayType:helg-normaldrift"/>
+								<DayTypeRef version="1" ref="NSR:DayType:helg-nyttar"/>
 							</dayTypes>
 						</ServiceJourney>
 						
-						<ServiceJourney version="any" id="NSR:ServiceJourney:2200">
+						<ServiceJourney version="1" id="NSR:ServiceJourney:2200">
 							<dayTypes>
-								<DayTypeRef version="any" ref="NSR:DayType:helg-nyttar"/>
+								<DayTypeRef version="1" ref="NSR:DayType:helg-nyttar"/>
 							</dayTypes>
 						</ServiceJourney>
 					</vehicleJourneys>

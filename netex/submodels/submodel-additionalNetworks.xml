@@ -6,9 +6,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:gml="http://www.opengis.net/gml/3.2" 
   xmlns:siri="http://www.siri.org.uk/siri">
-<!--
-    xsi:schemaLocation="http://www.netex.org.uk/netex ../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd"
--->	
+
 	<PublicationTimestamp>2018-05-25T16:15:14</PublicationTimestamp>
 	<ParticipantRef>OPP</ParticipantRef>
 	

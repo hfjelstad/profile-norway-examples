@@ -9,22 +9,22 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 	- SITE FRAME inneholder STOP PLACE og QUAY
 -->
 <PublicationDelivery
-	version="1.0" 
-	xmlns="http://www.netex.org.uk/netex"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<!-- xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd" -->
+  version="1.0" 
+  xmlns="http://www.netex.org.uk/netex"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
 	<PublicationTimestamp>2017-02-13T15:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
-		<SiteFrame version="any" id="NSR:SiteFrame:1" >
+		<SiteFrame version="1" id="NSR:SiteFrame:1" >
 			<stopPlaces>
 				<!-- ===Stop=== -->
 				<!-- Alle objekter skal ha nasjonal ID fra stoppestedsregisteret -->
-				<StopPlace version="any" id="NSR:StopPlace:10000000">
+				<StopPlace version="1" id="NSR:StopPlace:10000000">
 					<Name>Blystadlia</Name>
 					
 					<!-- Generelt tilgjengelig med rullestol -->
-					<AccessibilityAssessment version="any" id="NSR:AccessibilityAssessment:1">
+					<AccessibilityAssessment version="1" id="NSR:AccessibilityAssessment:1">
 						<MobilityImpairedAccess>true</MobilityImpairedAccess>
 						<limitations>
 							<!-- Minimumskrav til UU-informasjon -->
@@ -38,11 +38,11 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 					<Covered>outdoors</Covered>
 					
 					<placeEquipments>
-						<PassengerInformationEquipment id="NSR:PassengerInformationEquipment" version="any">
+						<PassengerInformationEquipment id="NSR:PassengerInformationEquipment" version="1">
 							<PassengerInformationFacilityList>passengerInformationDisplay</PassengerInformationFacilityList>
 						</PassengerInformationEquipment>
 
-						<GeneralSign id="NSR:GeneralSign:1" version="any">
+						<GeneralSign id="NSR:GeneralSign:1" version="1">
 							<PrivateCode>512</PrivateCode>
 							<SignContentType>transportMode</SignContentType>
 						</GeneralSign>
@@ -52,7 +52,7 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 					
 					<StopPlaceType>onstreetBus</StopPlaceType>
 					<quays>
-						<Quay version="any" id="NSR:Quay:11111111">
+						<Quay version="1" id="NSR:Quay:11111111">
 							<Centroid>
 								<!-- Alltid WGS84 -->
 								<Location srsName="WGS84">
@@ -60,7 +60,7 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 									<Latitude>59.931081</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment version="any" id="NSR:AccessibilityAssessment:2">
+							<AccessibilityAssessment version="1" id="NSR:AccessibilityAssessment:2">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
 									<!-- Minimumskrav til UU-informasjon -->

@@ -5,8 +5,8 @@
   xmlns="http://www.netex.org.uk/netex"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:siri="http://www.siri.org.uk/siri"
-  xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
+  xmlns:siri="http://www.siri.org.uk/siri">
+	
 	<PublicationTimestamp>2016-06-28T12:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NHR</ParticipantRef>
 	<dataObjects>

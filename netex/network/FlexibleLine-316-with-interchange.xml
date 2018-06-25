@@ -19,9 +19,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
   xmlns="http://www.netex.org.uk/netex" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xmlns:gml="http://www.opengis.net/gml/3.2">
-<!--
-  xsi:schemaLocation="http://www.netex.org.uk/netex /data/github/NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
--->
 	
 	<PublicationTimestamp>2016-07-07T16:07:07Z</PublicationTimestamp>
 	<ParticipantRef>RUT</ParticipantRef>

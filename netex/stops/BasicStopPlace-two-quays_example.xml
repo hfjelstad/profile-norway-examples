@@ -16,17 +16,18 @@ Frames (gruppering)
 -->
 
 <PublicationDelivery 
-	version="1.0" 
-	xmlns="http://www.netex.org.uk/netex"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:gml="http://www.opengis.net/gml/3.2"
-	xmlns:siri="http://www.siri.org.uk/siri">
+  version="1.0" 
+  xmlns="http://www.netex.org.uk/netex"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:siri="http://www.siri.org.uk/siri">
+	
 	<PublicationTimestamp>2016-04-29T12:30:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
-		<CompositeFrame version="any" id="NSR:CompositeFrame:1">
+		<CompositeFrame version="1" id="NSR:CompositeFrame:1">
 			<validityConditions>
-				<AvailabilityCondition version="any" id="NSR:AvailabilityCondition:1">
+				<AvailabilityCondition version="1" id="NSR:AvailabilityCondition:1">
 					<FromDate>2017-03-08T12:12:00.0Z</FromDate>
 				</AvailabilityCondition>
 			</validityConditions>
@@ -38,11 +39,11 @@ Frames (gruppering)
 			</codespaces>
 			
 			<frames>
-				<SiteFrame version="any" id="NSR:SiteFrame:1">
+				<SiteFrame version="1" id="NSR:SiteFrame:1">
 					<!-- ===Stoppesteder=== -->
 					<stopPlaces>
 						<!-- Merk: Holdeplass-ID vil komme fra Holdeplassregisteret -->
-						<StopPlace version="any" id="NSR:StopPlace:12345678">
+						<StopPlace version="1" id="NSR:StopPlace:12345678">
 							<Name>Navn</Name>
 							<Centroid>
 								<Location srsName="WGS84" id="NSR:Location:1">
@@ -50,7 +51,7 @@ Frames (gruppering)
 									<Latitude>59.913915</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment version="any" id="NSR:AccessibilityAssessment:1">
+							<AccessibilityAssessment version="1" id="NSR:AccessibilityAssessment:1">
 								<MobilityImpairedAccess>unknown</MobilityImpairedAccess>
 								<limitations>
 									<AccessibilityLimitation>
@@ -60,11 +61,11 @@ Frames (gruppering)
 									</AccessibilityLimitation>
 								</limitations>
 								<suitabilities>
-									<Suitability version="any" id="suitability">
+									<Suitability version="1" id="suitability">
 										<MobilityNeed>assistedWheelchair</MobilityNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability version="any" id="suitability2">
+									<Suitability version="1" id="suitability2">
 										<MedicalNeed>allergic</MedicalNeed>
 										<Suitable>notSuitable</Suitable>
 									</Suitability>
@@ -72,7 +73,7 @@ Frames (gruppering)
 							</AccessibilityAssessment>
 
 							<placeEquipments>
-								<GeneralSign id="NSR:GeneralSign:1" version="any">
+								<GeneralSign id="NSR:GeneralSign:1" version="1">
 									<PrivateCode>512</PrivateCode>
 									<SignContentType>transportMode</SignContentType>
 								</GeneralSign>
@@ -82,7 +83,7 @@ Frames (gruppering)
 							<StopPlaceType>onstreetBus</StopPlaceType>
 
 							<quays>
-								<Quay version="any" id="NSR:Quay:12345679">
+								<Quay version="1" id="NSR:Quay:12345679">
 									<Centroid>
 										<Location>
 											<Longitude>59.9139819</Longitude>
@@ -97,7 +98,7 @@ Frames (gruppering)
 									<PublicCode>Sør</PublicCode>
 									<CompassBearing>200</CompassBearing>
 								</Quay>
-								<Quay version="any" id="NSR:Quay:12345670">
+								<Quay version="1" id="NSR:Quay:12345670">
 									<Centroid>
 										<Location>
 											<Longitude>59.9138612</Longitude>
@@ -118,19 +119,19 @@ Frames (gruppering)
 					
 					<siteFacilitySets>
 						<!-- TODO: Rapportert forslag til utvidelse av NeTEx slik at dette... -->
-						<SiteFacilitySet id="NSR:SiteFacilitySet:timetablePoster" version="any">
+						<SiteFacilitySet id="NSR:SiteFacilitySet:timetablePoster" version="1">
 							<PassengerInformationEquipmentList>timetablePoster</PassengerInformationEquipmentList>
 						</SiteFacilitySet>
-						<SiteFacilitySet id="NSR:SiteFacilitySet:lineNetworkPlan" version="any">
+						<SiteFacilitySet id="NSR:SiteFacilitySet:lineNetworkPlan" version="1">
 							<PassengerInformationEquipmentList>lineNetworkPlan</PassengerInformationEquipmentList>
 						</SiteFacilitySet>
-						<SiteFacilitySet id="NSR:SiteFacilitySet:fareInformation" version="any">
+						<SiteFacilitySet id="NSR:SiteFacilitySet:fareInformation" version="1">
 							<PassengerInformationEquipmentList>fareInformation</PassengerInformationEquipmentList>
 						</SiteFacilitySet>
 					</siteFacilitySets>
 					<!-- ...kan modellers enda mer eksplisitt/presist som Equipment:
 							<placeEquipments>
-								<PassengerInformationEquipment id="passengerinformationequipment" version="any">
+								<PassengerInformationEquipment id="passengerinformationequipment" version="1">
 									alt 1: <PassengerInformationFacilityList>[dataset]</PassengerInformationFacilityList>
 									alt 2: <PassengerInformationEquipmentList>[dataset]</PassengerInformationEquipmentList>
 								</PassengerInformationEquipment>

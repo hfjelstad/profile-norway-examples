@@ -114,27 +114,27 @@
                 </ValueSet>
                 <ValueSet id="StopPlaceType" version="1">
                     <values>
-                        <TypeOfPoint version="any" id="RB:TypeOfPoint:OnStreetBus">
+                        <TypeOfPoint version="1" id="RB:TypeOfPoint:OnStreetBus">
                             <Name>Bus stop</Name>
                             <PrivateCode>onStreetBus</PrivateCode>
                             <!-- bruke samme som stopPlaceType -->
                         </TypeOfPoint>
-                        <TypeOfPoint version="any" id="RB:TypeOfPoint:Tram">
+                        <TypeOfPoint version="1" id="RB:TypeOfPoint:Tram">
                             <Name>Tram stop</Name>
                             <PrivateCode>tramStop</PrivateCode>
                             <!-- bruke samme som stopPlaceType -->
                         </TypeOfPoint>
-                        <TypeOfPoint version="any" id="RB:TypeOfPoint:Airport">
+                        <TypeOfPoint version="1" id="RB:TypeOfPoint:Airport">
                             <Name>Airport</Name>
                         </TypeOfPoint>
-                        <TypeOfPoint version="any" id="RB:TypeOfPoint:RailwayStation">
+                        <TypeOfPoint version="1" id="RB:TypeOfPoint:RailwayStation">
                             <Name>Railway station</Name>
                         </TypeOfPoint>
                     </values>
                 </ValueSet>
                 <ValueSet id="PointofInterestType" version="1">
                     <values>
-                        <TypeOfPoint version="any" id="RB:TypeOfPoint:AnyPoi">
+                        <TypeOfPoint version="1" id="RB:TypeOfPoint:AnyPoi">
                             <Name>Alle POI-typer</Name>
                             <PrivateCode>*</PrivateCode>
                             <!-- bruke samme som pointOfInterestType? -->

@@ -5,8 +5,7 @@
   xmlns:core="http://www.govtalk.gov.uk/core"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:ifopt="http://www.ifopt.org.uk/ifopt"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.netex.org.uk/netex /data/github/NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <PublicationTimestamp>2016-05-30T12:00:00Z</PublicationTimestamp>
     <ParticipantRef>RUT</ParticipantRef>

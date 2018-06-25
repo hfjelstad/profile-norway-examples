@@ -5,19 +5,17 @@
   xmlns="http://www.netex.org.uk/netex"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:siri="http://www.siri.org.uk/siri"
-  xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
+  xmlns:siri="http://www.siri.org.uk/siri">
+	
 	<PublicationTimestamp>2016-06-28T12:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
-		<CompositeFrame version="any" id="NSR:CompositeFrame:1">
+		<CompositeFrame version="1" id="NSR:CompositeFrame:1">
 			<frames>
 				
-				
-				<ServiceCalendarFrame version="any" id="NSR:ServiceCalendarFrame:default">
-
+				<ServiceCalendarFrame version="1" id="NSR:ServiceCalendarFrame:default">
 					<dayTypes>
-						<DayType version="any" id="NSR:DayType:Weekdays">
+						<DayType version="1" id="NSR:DayType:Weekdays">
 							<Name>Ukedager</Name>
 							<properties>
 								<PropertyOfDay>
@@ -25,7 +23,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="NSR:DayType:Weekend">
+						<DayType version="1" id="NSR:DayType:Weekend">
 							<Name>Helg</Name>
 							<properties>
 								<PropertyOfDay>
@@ -33,7 +31,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="NSR:DayType:Saturday">
+						<DayType version="1" id="NSR:DayType:Saturday">
 							<Name>Lordag</Name>
 							<properties>
 								<PropertyOfDay>
@@ -41,7 +39,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="NSR:DayType:Sunday">
+						<DayType version="1" id="NSR:DayType:Sunday">
 							<Name>Sondag</Name>
 							<properties>
 								<PropertyOfDay>
@@ -52,25 +50,25 @@
 					</dayTypes>
 					
 					<operatingDays>
-						<OperatingDay version="any" id="NSR:OperatingDay:1">
+						<OperatingDay version="1" id="NSR:OperatingDay:1">
 							<CalendarDate>2016-12-01</CalendarDate>
 						</OperatingDay>
 					</operatingDays>
 					
 					<operatingPeriods>
-						<OperatingPeriod version="any" id="NSR:OperatingPeriod:1">
+						<OperatingPeriod version="1" id="NSR:OperatingPeriod:1">
 							<FromDate>2016-12-01T00:00:00</FromDate>
 							<ToDate>2016-12-23T24:00:00</ToDate>
 						</OperatingPeriod>
-						<OperatingPeriod version="any" id="NSR:OperatingPeriod:2">
+						<OperatingPeriod version="1" id="NSR:OperatingPeriod:2">
 							<FromDate>2016-12-24T00:00:00</FromDate>
 							<ToDate>2016-12-26T24:00:00</ToDate>
 						</OperatingPeriod>
-						<OperatingPeriod version="any" id="NSR:OperatingPeriod:3">
+						<OperatingPeriod version="1" id="NSR:OperatingPeriod:3">
 							<FromDate>2016-12-27T00:00:00</FromDate>
 							<ToDate>2016-12-30T24:00:00</ToDate>
 						</OperatingPeriod>
-						<OperatingPeriod version="any" id="NSR:OperatingPeriod:4">
+						<OperatingPeriod version="1" id="NSR:OperatingPeriod:4">
 							<FromDate>2016-12-31T00:00:00</FromDate>
 							<ToDate>2017-01-01T24:00:00</ToDate>
 						</OperatingPeriod>
@@ -78,72 +76,65 @@
 					
 					<dayTypeAssignments>
 						<!-- enkeltdag -->
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:day">
-							<OperatingPeriodRef version="any" ref="NSR:OperatingPeriod:1"/>
-							<DayTypeRef version="any" ref="NSR:DayType:Sunday"/>
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:day">
+							<OperatingPeriodRef version="1" ref="NSR:OperatingPeriod:1"/>
+							<DayTypeRef version="1" ref="NSR:DayType:Sunday"/>
 						</DayTypeAssignment>
 						<!-- periode -->
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:period">
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:period">
 							<OperatingPeriodRef ref="NSR:OperatingPeriod:1"/>
-							<DayTypeRef version="any" ref="NSR:DayType:Weekdays"/>
+							<DayTypeRef version="1" ref="NSR:DayType:Weekdays"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:period-2">
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:period-2">
 							<OperatingPeriodRef ref="NSR:OperatingPeriod:2"/>
-							<DayTypeRef version="any" ref="NSR:DayType:Weekdays"/>
+							<DayTypeRef version="1" ref="NSR:DayType:Weekdays"/>
 						</DayTypeAssignment>
-
-						<DayTypeAssignment version="any" order="1" id="test">
+						<DayTypeAssignment version="1" order="1" id="test">
 							<OperatingDayRef ref="NSR:OperatingDay:1"/>
-							<DayTypeRef version="any" ref="NSR:DayType:Weekdays"/>
+							<DayTypeRef version="1" ref="NSR:DayType:Weekdays"/>
 						</DayTypeAssignment>
-
 					</dayTypeAssignments>
 				</ServiceCalendarFrame>
 
 
-
-				<ServiceCalendarFrame version="any" id="NSR:ServiceCalendarFrame:1">
-					<ServiceCalendar version="any" id="NSR:ServiceCalendar:1">
+				<ServiceCalendarFrame version="1" id="NSR:ServiceCalendarFrame:1">
+					<ServiceCalendar version="1" id="NSR:ServiceCalendar:1">
 						<Name>Kalender 1</Name>
 						<operatingPeriods>
-							<OperatingPeriodRef version="any" ref="NSR:OperatingPeriod:1"/>
+							<OperatingPeriodRef version="1" ref="NSR:OperatingPeriod:1"/>
 						</operatingPeriods>
 					</ServiceCalendar>
 				</ServiceCalendarFrame>
 				
-				<ServiceCalendarFrame version="any" id="NSR:ServiceCalendarFrame:2">
-					<ServiceCalendar version="any" id="NSR:ServiceCalendar:2">
+				<ServiceCalendarFrame version="1" id="NSR:ServiceCalendarFrame:2">
+					<ServiceCalendar version="1" id="NSR:ServiceCalendar:2">
 						<Name>Kalender 2</Name>
 						<operatingPeriods>
-							<OperatingPeriodRef version="any" ref="NSR:OperatingPeriod:2"/>
+							<OperatingPeriodRef version="1" ref="NSR:OperatingPeriod:2"/>
 						</operatingPeriods>
 					</ServiceCalendar>
 				</ServiceCalendarFrame>
 
 
-
-
-				<TimetableFrame version="any" id="NSR:TimetableFrame:1">
-					<ServiceCalendarFrameRef version="any" ref="NSR:ServiceCalendarFrame:1"/>
+				<TimetableFrame version="1" id="NSR:TimetableFrame:1">
+					<ServiceCalendarFrameRef version="1" ref="NSR:ServiceCalendarFrame:1"/>
 					<vehicleJourneys>
-						<ServiceJourney version="any" id="NSR:ServiceJourney:0700">
+						<ServiceJourney version="1" id="NSR:ServiceJourney:0700">
 							<dayTypes>
-								<DayTypeRef version="any" ref="NSR:DayType:Weekdays"/>
-								<DayTypeRef ref="NSR:DayType:Saturday"/>
+								<DayTypeRef version="1" ref="NSR:DayType:Weekdays"/>
+								<DayTypeRef version="1" ref="NSR:DayType:Saturday"/>
 							</dayTypes>
-
 						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
 				
-				<TimetableFrame version="any" id="NSR:TimetableFrame:2">
-					<ServiceCalendarFrameRef version="any" ref="NSR:ServiceCalendarFrame:2"/>
+				<TimetableFrame version="1" id="NSR:TimetableFrame:2">
+					<ServiceCalendarFrameRef version="1" ref="NSR:ServiceCalendarFrame:2"/>
 					<vehicleJourneys>
-						<ServiceJourney version="any" id="NSR:ServiceJourney:0800">
+						<ServiceJourney version="1" id="NSR:ServiceJourney:0800">
 							<dayTypes>
 								<DayTypeRef ref="NSR:DayType:Sunday"/>
 							</dayTypes>
-
 						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>

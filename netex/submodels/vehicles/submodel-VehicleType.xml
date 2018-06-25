@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VehicleType
-    xmlns="http://www.netex.org.uk/netex"
-    xmlns:siri="http://www.siri.org.uk/siri"
-    xmlns:ifopt="http://www.ifopt.org.uk/ifopt"
-    xmlns:core="http://www.govtalk.gov.uk/core"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  xmlns="http://www.netex.org.uk/netex"
+  xmlns:siri="http://www.siri.org.uk/siri"
+  xmlns:ifopt="http://www.ifopt.org.uk/ifopt"
+  xmlns:core="http://www.govtalk.gov.uk/core"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
     <Name>example</Name>
     <Description>V</Description>
     <SelfPropelled>true</SelfPropelled>

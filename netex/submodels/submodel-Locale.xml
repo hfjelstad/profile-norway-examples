@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Locale
-    xmlns="http://www.netex.org.uk/netex"
-    xmlns:core="http://www.govtalk.gov.uk/core"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx/xsd/netex_framework/netex_utility/netex_utility_types-v1.1.xsd">
+  xmlns="http://www.netex.org.uk/netex"
+  xmlns:core="http://www.govtalk.gov.uk/core"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
     <TimeZone>Moscow</TimeZone>
     <DefaultLanguage>ru-RU</DefaultLanguage>
     <languages>

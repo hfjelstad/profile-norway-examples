@@ -5,14 +5,14 @@ submodel - Example of alternative stop names
 <PublicationDelivery 
   version="1.0" 
   xmlns="http://www.netex.org.uk/netex" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.netex.org.uk/netex /data/github/NeTEx-XML/schema/xsd/NeTEx_publication.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
 	<PublicationTimestamp>2016-07-07T16:07:07Z</PublicationTimestamp>
 	<ParticipantRef>RUT</ParticipantRef>
 	<Description>Example of alternative stop names</Description>
 	<dataObjects>
 		<!-- =========================================== -->
-		<CompositeFrame version="any" created="2016-07-07T16:07:07Z" id="RUT:CompositeFrame">
+		<CompositeFrame version="1" created="2016-07-07T16:07:07Z" id="RUT:CompositeFrame">
 			<ValidBetween>
 				<FromDate>2013-04-07T00:00:00</FromDate>
 			</ValidBetween>
@@ -25,9 +25,9 @@ submodel - Example of alternative stop names
 			</codespaces>
 			<frames>
 				<!-- =========================================== -->
-				<ResourceFrame version="any" id="RUT:ResourceFrame">
+				<ResourceFrame version="1" id="RUT:ResourceFrame">
 					<organisations>
-						<Authority version="any" id="RUT:Company:Ruter">
+						<Authority version="1" id="RUT:Company:Ruter">
 							<CompanyNumber>00000000</CompanyNumber>
 							<Name>Nasjonalt stoppestedregister</Name>
 							<LegalName>RUTER AS</LegalName>
@@ -35,9 +35,9 @@ submodel - Example of alternative stop names
 						</Authority>
 					</organisations>
 				</ResourceFrame>
-				<SiteFrame version="any" id="RUT:SiteFrame">
+				<SiteFrame version="1" id="RUT:SiteFrame">
 					<stopPlaces>
-						<StopPlace version="any" id="NHR:StopPlace:Nationaltheatret">
+						<StopPlace version="1" id="NHR:StopPlace:Nationaltheatret">
 						    <Name lang="nob">Nationaltheatret</Name>
 							<alternativeNames>
 								<AlternativeName>
