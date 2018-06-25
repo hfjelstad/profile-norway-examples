@@ -120,13 +120,6 @@
                     <Network version="1" changed="2015-12-13T00:00:00Z" id="RUT:GroupOfLine:RuterBuss">
                         <Name>Ruter#</Name>
                     </Network>
-                    <!-- Definisjon av hvilken retning dette er. Her brukt en rundtur som kjører med klokken -->
-                    <directions>
-                        <Direction version="1" id="RUT:Route:0061101:Direction">
-                            <Name>Rundtur</Name>
-                            <DirectionType>clockwise</DirectionType>
-                        </Direction>
-                    </directions>
                     <!-- Her listes alle rutepunktene. I eksemplet under er det kun referanser til StopPoints, men det kan også være andre typer punkter, eks TimingPoint.
                          Hvis man har flere ruter skal alle rutepunkter defineres her. For hver rute under lister man opp de som faktisk benyttes i gitt rute 
                          (eks tur/retur der mange av punktene er de samme, men ikke nødvendigvis alle -->
@@ -169,7 +162,8 @@
                         <Route version="1" id="RUT:Route:0061101">
                             <Name>Tveita - Solfjellet - Larsbråten - Tveita</Name>
                             <LineRef ref="RUT:Line:0061"/>
-                            <DirectionRef version="1" ref="RUT:Route:0061101:Direction"/>
+                            <!-- Definisjon av hvilken retning dette er. Her brukt en rundtur som kjører med klokken -->
+                            <DirectionType>clockwise</DirectionType>
                             <pointsInSequence>
                                 <PointOnRoute version="1" id="RUT:PointOnRoute:0061101001-0" order="1">
                                     <RoutePointRef version="1" ref="RUT:RoutePoint:0061101A0A0061101001"/>
@@ -390,7 +384,8 @@
                                 <DayTypeRef version="1" ref="RUT:DayType:MonSat"/>
                             </dayTypes>
                             <JourneyPatternRef version="1" ref="RUT:JourneyPattern:0061101"/>
-                            <JourneyFrequencyGroupRef version="1" ref="RUT:RhythmicalJourneyGroup:1"/>
+                            <!--JourneyFrequencyGroupRef version="1" ref="RUT:RhythmicalJourneyGroup:1"/-->
+                            <JourneyFrequencyGroupRef ref="RUT:RhythmicalJourneyGroup:1"/>
                             <passingTimes>
                                 <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:xx15">
                                     <!-- Tveita T -->

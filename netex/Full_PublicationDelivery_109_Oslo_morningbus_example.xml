@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- ===Simple Timetable  Example=== -->
 <!-- This example show the timetable for route 109 morning express in Oslo. -->
-<PublicationDelivery version="1.07:NO-NeTEx-networktimetable:1.1"
-	xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri">
-<!--
-    xsi:schemaLocation="http://www.netex.org.uk/netex ../../NeTEx-XML/schema/xsd/NeTEx_publication.xsd"
--->
+<PublicationDelivery version="1.08:NO-NeTEx-networktimetable:1.3"
+  xmlns="http://www.netex.org.uk/netex" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:siri="http://www.siri.org.uk/siri">
+
 	<PublicationTimestamp>2016-05-23T12:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 
@@ -71,6 +71,7 @@
 					
 					<organisations>
 						<Authority version="1" id="RUT:Authority:Ruter">
+							<PublicCode>sddf</PublicCode>
 							<!-- Organisasjonsnummer -->
 							<CompanyNumber>991609407</CompanyNumber>
 							<Name>Ruter#</Name>
@@ -91,6 +92,7 @@
 								<PostCode>0154</PostCode>
 							</Address>
 						</Authority>
+						
 						<!-- Unibuss kjører ruten på vegne av Ruter# -->
 						<Operator version="1" id="RUT:Operator:Unibuss">
 							<CompanyNumber>985615616</CompanyNumber>
@@ -242,7 +244,7 @@
 							</GroupOfLines>
 						</groupsOfLines>
 					</Network>
-
+					
 					<routePoints>
 						<!-- Helsfyr -->
 						<RoutePoint version="1" id="UNI:RoutePoint:helsfyr">
@@ -288,7 +290,6 @@
 								<BusSubmode>localBus</BusSubmode>
 							</TransportSubmode>
 							<PublicCode>109</PublicCode>
-							<ExternalLineRef ref="xfdsa"></ExternalLineRef>
 							<OperatorRef version="1" ref="RUT:Operator:Unibuss"/>
 							<!-- Optional: -->
 							<routes>
@@ -519,11 +520,15 @@
 				<TimetableFrame version="1" id="UNI:TimetableFrame:1">
 					<vehicleJourneys>
 						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0430">
+
 							<DepartureTime>04:30:00</DepartureTime> <!-- Optional -->
 							<dayTypes>
 								<DayTypeRef version="1" ref="UNI:DayType:weekday"/>
 							</dayTypes>
 							<JourneyPatternRef version="1" ref="UNI:JourneyPattern:109"/>
+							
+							<OperatorRef version="1" ref="RUT:Operator:Unibuss"/>
+								
 							<!-- Optional: -->
 							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
@@ -562,6 +567,9 @@
 
 						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0500">
 							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>localBus</BusSubmode>
+							</TransportSubmode>
 							<dayTypes>
 								<DayTypeRef version="1" ref="UNI:DayType:weekday"/>
 							</dayTypes>
@@ -834,6 +842,7 @@
 				<!-- ===SERVICE CALENDAR FRAME=== -->
 				<ServiceCalendarFrame version="1" id="UNI:ServiceCalendarFrame:01">
 					<ServiceCalendar version="1" id="UNI:ServiceCalendar:01">
+						
 						<!-- ############################# -->
 						<!-- (for alternative description) -->
 						<!-- ############################# -->
@@ -850,6 +859,26 @@
 					</ServiceCalendar>
 
 					<dayTypes>
+						<DayType version="1" id="UNI:DayType:month">
+							<Name>sommer</Name>
+							<properties>
+								<PropertyOfDay>
+									<MonthOfYear>--04</MonthOfYear>
+								</PropertyOfDay>
+								<PropertyOfDay>
+									<MonthOfYear>--04</MonthOfYear>
+								</PropertyOfDay>
+								<PropertyOfDay>
+									<MonthOfYear>--05</MonthOfYear>
+								</PropertyOfDay>
+								<PropertyOfDay>
+									<MonthOfYear>--06</MonthOfYear>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						
+						
+						
 						<DayType version="1" id="UNI:DayType:weekday">
 							<Name>Ukedager (mandag til fredag)</Name>
 							<properties>

@@ -146,17 +146,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					<Network version="1" id="RUT:Network:RuterBestillingslinjer">
 						<Name>Ruter# bestillingslinjer</Name>
 					</Network>
-
-					<directions>
-						<Direction version="1" id="NSR:Direction:TilLorenskog">
-							<Name>Til Lørenskog sentrum</Name>
-							<DirectionType>inbound</DirectionType>
-						</Direction>
-						<Direction version="1" id="NSR:Direction:FraLorenskog">
-							<Name>Til Hanaborg nord</Name>
-							<DirectionType>outbound</DirectionType>
-						</Direction>
-					</directions>
 					
 					<routePoints>
 						<!-- Flexi-sone Hanaborg Nord -->
@@ -197,7 +186,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<Route version="1" id="RUT:Route:316-TilLorenskog">
 							<Name>316 til Lørenskog sentrum</Name>
 							<FlexibleLineRef ref="RUT:FlexibleLine:316" version="1"/>
-							<DirectionRef version="1" ref="NSR:Direction:TilLorenskog"/>
+							<DirectionType>inbound</DirectionType>
 							<pointsInSequence>
 								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-HANABORG-NORD-HENTING" order="1">
 									<RoutePointRef version="1" ref="RUT:RoutePoint:ID-HANABORG-NORD"/>
@@ -217,7 +206,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						
 						<Route version="1" id="RUT:Route:316-FraLorenskog">
 							<Name>316 fra Lørenskog sentrum</Name>
-							<DirectionRef version="1" ref="NSR:Direction:FraLorenskog"/>
+							<FlexibleLineRef ref="RUT:FlexibleLine:316" version="1"/>
+							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
 								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-TRIADEN-FRA" order="1">
 									<RoutePointRef version="1" ref="RUT:RoutePoint:ID-TRIADEN"/>
