@@ -5,9 +5,6 @@
     xmlns:ifopt="http://www.ifopt.org.uk/ifopt"
     xmlns:core="http://www.govtalk.gov.uk/core"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<!--
-    xsi:schemaLocation="http://www.netex.org.uk/netex ../../xsd/netex_framework/netex_reusableComponents/netex_vehicleType_version-v1.0.xsd">
--->
     <Name>example</Name>
     <Description>V</Description>
     <SelfPropelled>true</SelfPropelled>
