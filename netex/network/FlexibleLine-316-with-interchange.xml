@@ -300,7 +300,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<!-- TODO -->
 						
 						
-						<FlexibleStopAssignment version="1" id="RUT:PassengerStopAssignment:ID-HANABORG">
+						<FlexibleStopAssignment version="1" id="RUT:FlexibleStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD"/>
 							<FlexibleStopPlaceRef version="1" ref="NSR:FlexibleStopPlace:ID-HANABORG-NORD"/>
 						</FlexibleStopAssignment>
@@ -308,7 +308,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						
 						
 						
-						<PassengerStopAssignment version="1" order="0" id="RUT:PassengerStopAssignment:ID-HANABORG">
+						<PassengerStopAssignment version="1" order="0" id="RUT:FlexibleStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef ref="NSB:ScheduledStopPoint:HANABORG-STASJON"/>
 							<StopPlaceRef version="1" ref="NSR:StopPlace:ID-HANABORG_ST"/>
 							<QuayRef version="1" ref="NSR:Quay:ID-HANABORG_ST-QUAY"/>
