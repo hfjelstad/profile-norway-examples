@@ -277,6 +277,9 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					</destinationDisplays>
 
 					<scheduledStopPoints>
+						<ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:ID-HANABORG_ST">
+							<Name>Hanaborg stasjon</Name>
+						</ScheduledStopPoint>
 						<ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD">
 							<Name>Fleksi-sone Hanaborg nord</Name>
 						</ScheduledStopPoint>
@@ -286,12 +289,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:ID-TRIADEN">
 							<Name>Triaden</Name>
 						</ScheduledStopPoint>
-						<!-- Definert i eksternt datasett, kun vist for illustrasjon -->
-						<!--
-						<ScheduledStopPoint version="1" id="NSB:ScheduledStopPoint:HANABORG-STASJON">
-							<Name>Hanaborg stasjon</Name>
-						</ScheduledStopPoint>
-						-->
 					</scheduledStopPoints>
 
 					<stopAssignments>
@@ -300,7 +297,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<FlexibleStopPlaceRef version="1" ref="NSR:FlexibleStopPlace:ID-HANABORG-NORD"/>
 						</FlexibleStopAssignment>
 						<PassengerStopAssignment version="1" order="0" id="RUT:FlexibleStopAssignment:ID-HANABORG">
-							<ScheduledStopPointRef ref="NSB:ScheduledStopPoint:HANABORG-STASJON"/>
+							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<StopPlaceRef version="1" ref="NSR:StopPlace:ID-HANABORG_ST"/>
 							<QuayRef version="1" ref="NSR:Quay:ID-HANABORG_ST-QUAY"/>
 						</PassengerStopAssignment>
@@ -329,7 +326,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 								</StopPointInJourneyPattern>
 								<!-- (flexi-sone slutt) -->
 								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-tilLorenskog" order="2">
-									<ScheduledStopPointRef ref="NSB:ScheduledStopPoint:HANABORG-STASJON"/>
+									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-LORENSKOG-tilLorenskog" order="3">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
@@ -353,7 +350,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-fraLorenskog" order="3">
-									<ScheduledStopPointRef ref="NSB:ScheduledStopPoint:HANABORG-STASJON"/>
+									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 								</StopPointInJourneyPattern>
 								<!-- Flexi-sone -->
 								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-fraLorenskog" order="4">
@@ -410,11 +407,11 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						</NoticeAssignment>
 						<NoticeAssignment version="1" id="RUT:NoticeAssignment:316-TilLorenskog" order="0">
 							<NoticeRef version="1" ref="RUT:Notice:316-Henting"/>
-							<NoticedObjectRef version="1" ref="RUT:Route:316-TilLorenskog"/>
+							<NoticedObjectRef version="1" ref="RUT:ServiceJourney:0316-TilLorenskog"/>
 						</NoticeAssignment>
 						<NoticeAssignment version="1" id="RUT:NoticeAssignment:316-FraLorenskog" order="0">
 							<NoticeRef version="1" ref="RUT:Notice:316-Levering"/>
-							<NoticedObjectRef version="1" ref="RUT:Route:316-FraLorenskog"/>
+							<NoticedObjectRef version="1" ref="RUT:ServiceJourney:0316-FraLorenskog"/>
 						</NoticeAssignment>
 					</noticeAssignments>
 				</ServiceFrame>
@@ -528,7 +525,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<Guaranteed>false</Guaranteed>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
-							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
+							<ToPointRef ref="NSB:ScheduledStopPoint:HANABORG-JERNBANESTASJON"/>
 							<FromJourneyRef version="1" ref="RUT:ServiceJourney:0316-TilLorenskog"/>
 							<ToJourneyRef ref="NSB:ServiceJourney:L1-Spikkestad-1-ExternalRef"/>
 						</ServiceJourneyInterchange>
@@ -539,7 +536,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<Guaranteed>false</Guaranteed>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
 							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
-							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
+							<ToPointRef ref="NSB:ScheduledStopPoint:HANABORG-JERNBANESTASJON"/>
 							<FromJourneyRef version="1" ref="RUT:ServiceJourney:0316-TilLorenskog"/>
 							<ToJourneyRef ref="NSB:ServiceJourney:L1-Lillestrom-1-ExtenalRef"/>
 						</ServiceJourneyInterchange>
@@ -549,7 +546,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<StaySeated>false</StaySeated>
 							<Guaranteed>false</Guaranteed>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
-							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
+							<FromPointRef ref="NSB:ScheduledStopPoint:HANABORG-JERNBANESTASJON"/>
 							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<FromJourneyRef ref="NSB:ServiceJourney:L1-Lillestrom-2-ExtenalRef"/>
 							<ToJourneyRef version="1" ref="RUT:ServiceJourney:0316-FraLorenskog"/>
@@ -560,7 +557,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<StaySeated>false</StaySeated>
 							<Guaranteed>false</Guaranteed>
 							<MaximumWaitTime>PT0M</MaximumWaitTime>
-							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
+							<FromPointRef ref="NSB:ScheduledStopPoint:HANABORG-JERNBANESTASJON"/>
 							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<FromJourneyRef ref="NSB:ServiceJourney:L1-Spikkestad-2-ExtenalRef"/>
 							<ToJourneyRef version="1" ref="RUT:ServiceJourney:0316-FraLorenskog"/>
