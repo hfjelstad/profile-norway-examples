@@ -42,6 +42,24 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 				</Codespace>
 			</codespaces>
 			<frames>
+				<!-- Test fristilt Zone, konstruksjon ikke ihht. NeTEx profil Norge -->
+				<GeneralFrame version="1" id="NSR:GeneralFrame:1">
+					<members>
+						<Zone version="1" id="NSR:Zone:1">
+							<!-- merk at GML er eksternt definert datatype med andre tekniske krav til ID en NeTEx profil Norge -->
+							<gml:Polygon gml:id="NSR-Polygon-1">
+								<gml:exterior>
+									<gml:LinearRing>
+										<gml:pos srsDimension="2">3.14159265358971 3.14159265358972</gml:pos>
+										<gml:pos srsDimension="2">3.14159265358973 3.14159265358974</gml:pos>
+										<gml:pos srsDimension="2">3.14159265358975 3.14159265358976</gml:pos>
+										<gml:pos srsDimension="2">3.14159265358977 3.14159265358978</gml:pos>
+									</gml:LinearRing>
+								</gml:exterior>
+							</gml:Polygon>
+						</Zone>
+					</members>
+				</GeneralFrame>
 				<!-- =========================================== -->
 				<ResourceFrame version="1" id="RUT:ResourceFrame:1">
 					<organisations>
@@ -85,14 +103,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 				<!-- Referanser til stoppestedregisteret (kun tatt med for å illustrere oppbygning av SiteFrame) -->
 				<SiteFrame version="1" id="RUT:SiteFrame:1">
 					<stopPlaces>
-						<!-- Codespace NSR pga data fra sentralt stoppestedregister -->
-						<StopPlace version="1" id="NSR:StopPlace:ID-HANABORG_ST">
-							<!-- Hanaborg stasjon (59.938586, 10.966605) -->
-							<Name lang="NO-NB">Hanaborg stasjon</Name>
-							<quays>
-								<Quay version="1" id="NSR:Quay:ID-HANABORG_ST-QUAY"/>
-							</quays>
-						</StopPlace>
+						<!-- Alle codespace er NSR pga data fra sentralt stoppestedregister -->
 						<StopPlace version="1" id="NSR:StopPlace:ID-LORENSKOGSENTRUM">
 							<!-- Lørenskog sentrum (59.927963, 10.954812) -->
 							<Name>Lørenskog sentrum</Name>
@@ -105,6 +116,13 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<!-- Gamleveien 88C, 1476 Rasta (utenfor hovdeinngang Triaden: 59.919880, 10.953399) -->
 							<quays>
 								<Quay version="1" id="NSR:Quay:ID-TRIADEN-ENTRANCE-QUAY"/>
+							</quays>
+						</StopPlace>
+						<StopPlace version="1" id="NSR:StopPlace:ID-HANABORG_ST">
+							<!-- Hanaborg stasjon (59.938586, 10.966605) -->
+							<Name lang="NO-NB">Hanaborg stasjon</Name>
+							<quays>
+								<Quay version="1" id="NSR:Quay:ID-HANABORG_ST-QUAY"/>
 							</quays>
 						</StopPlace>
 					</stopPlaces>				
@@ -262,25 +280,36 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD">
 							<Name>Fleksi-sone Hanaborg nord</Name>
 						</ScheduledStopPoint>
-						<ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:ID-HANABORG_ST">
-							<Name>Hanaborg stasjon</Name>
-						</ScheduledStopPoint>
 						<ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:ID-LORENSKOG">
 							<Name>Lørenskog sentrum</Name>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:ID-TRIADEN">
 							<Name>Triaden</Name>
 						</ScheduledStopPoint>
+						<!-- Definert i eksternt datasett, kun vist for illustrasjon -->
+						<!--
+						<ScheduledStopPoint version="1" id="NSB:ScheduledStopPoint:HANABORG-STASJON">
+							<Name>Hanaborg stasjon</Name>
+						</ScheduledStopPoint>
+						-->
 					</scheduledStopPoints>
 
 					<stopAssignments>
+						
+						
+						<!-- TODO -->
+						
+						
 						<FlexibleStopAssignment version="1" id="RUT:PassengerStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD"/>
 							<FlexibleStopPlaceRef version="1" ref="NSR:FlexibleStopPlace:ID-HANABORG-NORD"/>
 						</FlexibleStopAssignment>
 						
+						
+						
+						
 						<PassengerStopAssignment version="1" order="0" id="RUT:PassengerStopAssignment:ID-HANABORG">
-							<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
+							<ScheduledStopPointRef ref="NSB:ScheduledStopPoint:HANABORG-STASJON"/>
 							<StopPlaceRef version="1" ref="NSR:StopPlace:ID-HANABORG_ST"/>
 							<QuayRef version="1" ref="NSR:Quay:ID-HANABORG_ST-QUAY"/>
 						</PassengerStopAssignment>
@@ -310,13 +339,14 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 								</StopPointInJourneyPattern>
 								<!-- (flexi-sone slutt) -->
 								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-tilLorenskog" order="2">
-									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
+									<ScheduledStopPointRef ref="NSB:ScheduledStopPoint:HANABORG-STASJON"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-LORENSKOG-tilLorenskog" order="3">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-TRIADEN-tilLorenskog" order="4">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-TRIADEN"/>
+									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 						</JourneyPattern>
@@ -327,13 +357,14 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<pointsInSequence>
 								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-TRIADEN-fraLorenskog" order="1">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-TRIADEN"/>
+									<ForAlighting>false</ForAlighting>
 									<DestinationDisplayRef ref="RUT:DestinationDisplay:HanaborgSt"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-LORENSKOG-fraLorenskog" order="2">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-fraLorenskog" order="3">
-									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
+									<ScheduledStopPointRef ref="NSB:ScheduledStopPoint:HANABORG-STASJON"/>
 								</StopPointInJourneyPattern>
 								<!-- Flexi-sone -->
 								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-fraLorenskog" order="4">
