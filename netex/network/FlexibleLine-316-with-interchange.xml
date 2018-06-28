@@ -295,19 +295,10 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					</scheduledStopPoints>
 
 					<stopAssignments>
-						
-						
-						<!-- TODO -->
-						
-						
 						<FlexibleStopAssignment version="1" id="RUT:FlexibleStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD"/>
 							<FlexibleStopPlaceRef version="1" ref="NSR:FlexibleStopPlace:ID-HANABORG-NORD"/>
 						</FlexibleStopAssignment>
-						
-						
-						
-						
 						<PassengerStopAssignment version="1" order="0" id="RUT:FlexibleStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef ref="NSB:ScheduledStopPoint:HANABORG-STASJON"/>
 							<StopPlaceRef version="1" ref="NSR:StopPlace:ID-HANABORG_ST"/>
@@ -324,7 +315,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<QuayRef version="1" ref="NSR:Quay:ID-TRIADEN-ENTRANCE-QUAY"/>
 						</PassengerStopAssignment>
 					</stopAssignments>
-
 					
 					<journeyPatterns>
 						<JourneyPattern version="1" id="RUT:JourneyPattern:316-TilLorenskog">
@@ -350,7 +340,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 						</JourneyPattern>
-						
 						<JourneyPattern version="1" id="RUT:JourneyPattern:316-FraLorenskog">
 							<Name>316 fra Lørenskog</Name>
 							<RouteRef version="1" ref="RUT:Route:316-FraLorenskog"/>
