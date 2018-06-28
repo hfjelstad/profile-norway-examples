@@ -522,28 +522,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						</ServiceJourneyPatternInterchange-->
 					    
 						<!-- Overganger Tog -->
-						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-316-to-L1-A">
-							<Description>2Ø Tog mot Lillestrøm 1019</Description>
-							<Priority>1</Priority>
-							<StaySeated>false</StaySeated>
-							<Guaranteed>false</Guaranteed>
-							<MaximumWaitTime>PT0M</MaximumWaitTime>
-							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
-							<ToPointRef ref="NSB:ScheduledStopPoint:HANABORG-JERNBANESTASJON"/>
-							<FromJourneyRef version="1" ref="RUT:ServiceJourney:0316-TilLorenskog"/>
-							<ToJourneyRef ref="NSB:ServiceJourney:L1-Spikkestad-1-ExternalRef"/>
-						</ServiceJourneyInterchange>
-						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-316-to-L1-B">
-							<Description>2Ø Tog mot Lillestrøm 1031</Description>
-							<Priority>1</Priority>
-							<StaySeated>false</StaySeated>
-							<Guaranteed>false</Guaranteed>
-							<MaximumWaitTime>PT0M</MaximumWaitTime>
-							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
-							<ToPointRef ref="NSB:ScheduledStopPoint:HANABORG-JERNBANESTASJON"/>
-							<FromJourneyRef version="1" ref="RUT:ServiceJourney:0316-TilLorenskog"/>
-							<ToJourneyRef ref="NSB:ServiceJourney:L1-Lillestrom-1-ExtenalRef"/>
-						</ServiceJourneyInterchange>
 						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-316-to-L1-C">
 							<Description>2Ø Tog fra Oslo 1219</Description>
 							<Priority>0</Priority>
@@ -567,28 +545,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<ToJourneyRef version="1" ref="RUT:ServiceJourney:0316-FraLorenskog"/>
 						</ServiceJourneyInterchange>
 						<!-- Overganger Buss -->
-						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-316-to-100-A">
-							<Description>2Ø Buss 100 mot Oslo 1022</Description>
-							<Priority>1</Priority>
-							<StaySeated>false</StaySeated>
-							<Guaranteed>false</Guaranteed>
-							<MaximumWaitTime>PT0M</MaximumWaitTime>
-							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
-							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
-							<FromJourneyRef version="1" ref="RUT:ServiceJourney:0316-TilLorenskog"/>
-							<ToJourneyRef ref="RUT:ServiceJourney:100-Oslo-1-ExtenalRef"/>
-						</ServiceJourneyInterchange>
-						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-316-to-100-B">
-							<Description>2Ø Buss 100 mot Oslo 1022</Description>
-							<Priority>1</Priority>
-							<StaySeated>false</StaySeated>
-							<Guaranteed>false</Guaranteed>
-							<MaximumWaitTime>PT0M</MaximumWaitTime>
-							<FromPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
-							<ToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
-							<FromJourneyRef version="1" ref="RUT:ServiceJourney:0316-TilLorenskog"/>
-							<ToJourneyRef ref="RUT:ServiceJourney:100-Lillestrom-1-ExtenalRef"/>
-						</ServiceJourneyInterchange>
 						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-316-to-100-C">
 							<Description>2Ø Buss 100 fra Oslo 1224</Description>
 							<Priority>1</Priority>
