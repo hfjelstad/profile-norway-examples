@@ -6,11 +6,11 @@ The profiles can be found (in Norwegian) at:
 
 NeTEx - https://rutebanken.atlassian.net/wiki/display/PUBLIC/NeTEx+profil+Norge
 
-_SIRI - (https://rutebanken.atlassian.net/wiki/display/PUBLIC/SIRI+profil+Norge - Not yet published!)_
+SIRI - https://rutebanken.atlassian.net/wiki/display/PUBLIC/SIRI+profil+Norge
 
 ## Repositories ##
 Official NeTEx XSD repository:
-https://github.com/nick-knowles/NeTEx-XML
+https://github.com/NeTEx-CEN/NeTEx
 
 Publication of last updated (semi-official) SIRI v2.0 XML schema:
 https://www.vdv.de/siri.aspx
