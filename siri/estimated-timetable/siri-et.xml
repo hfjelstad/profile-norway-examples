@@ -14,10 +14,9 @@
             <!--ValidUntil>2017-08-11T11:29:31.173+02:00</ValidUntil-->
             <EstimatedJourneyVersionFrame>
                 <RecordedAtTime>2017-08-15T10:43:21.826+02:00</RecordedAtTime>
-                <VersionRef>TEST</VersionRef>
                 <EstimatedVehicleJourney>
                     <LineRef>SKY:Line:985</LineRef>
-                    <DirectionRef>1</DirectionRef>
+                    <DirectionRef>0</DirectionRef>
                     <!--DatedVehicleJourneyRef>6671390_94170</DatedVehicleJourneyRef-->
                     <FramedVehicleJourneyRef>
                         <DataFrameRef>2017-12-12</DataFrameRef>

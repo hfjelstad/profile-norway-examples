@@ -8,7 +8,7 @@
     <ServiceDelivery>
         <ResponseTimestamp>2017-07-11T11:29:31.173+02:00</ResponseTimestamp>
         <ProducerRef>CODESPACE</ProducerRef>
-        <SituationExchangeDelivery version="1.0">
+        <SituationExchangeDelivery version="2.0">
             <ResponseTimestamp>2017-07-11T11:29:31.173+02:00</ResponseTimestamp>
             <ValidUntil>2017-08-11T11:29:31.173+02:00</ValidUntil>
             <Situations>

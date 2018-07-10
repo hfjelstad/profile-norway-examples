@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- === Basic Service Calendar datatype example === -->
 <PublicationDelivery
-	version="1.0"
-	xmlns="http://www.netex.org.uk/netex"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:gml="http://www.opengis.net/gml/3.2"
-	xmlns:siri="http://www.siri.org.uk/siri">
+  version="1.0"
+  xmlns="http://www.netex.org.uk/netex"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:siri="http://www.siri.org.uk/siri">
 	
 	<PublicationTimestamp>2016-06-28T12:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>
-		<CompositeFrame version="any" id="NSR:CompositeFrame:1">
+		<CompositeFrame version="1" id="NSR:CompositeFrame:1">
 			<frames>
 				
-				<ServiceCalendarFrame version="any" id="NSR:ServiceCalendarFrame:default">
+				<ServiceCalendarFrame version="1" id="NSR:ServiceCalendarFrame:default">
 					
 					<validityConditions>
-						<AvailabilityCondition version="any" id="NSR:AvailabilityCondition:1">
+						<AvailabilityCondition version="1" id="NSR:AvailabilityCondition:1">
 							<FromDate>2016-12-01T00:00:00</FromDate>
 							<ToDate>2016-12-23T24:00:00</ToDate>
 						</AvailabilityCondition>
-						<AvailabilityCondition version="any" id="NSR:AvailabilityCondition:2">
+						<AvailabilityCondition version="1" id="NSR:AvailabilityCondition:2">
 							<FromDate>2016-12-24T00:00:00</FromDate>
 							<ToDate>2016-12-25T24:00:00</ToDate>
 						</AvailabilityCondition>
 					</validityConditions>
 
 					<dayTypes>
-						<DayType version="any" id="NSR:DayType:weekdays">
+						<DayType version="1" id="NSR:DayType:weekdays">
 							<validityConditions>
 								<AvailabilityConditionRef ref="AvailabilityCondition:1"/>
 							</validityConditions>
@@ -38,7 +38,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="NSR:DayType:weekend">
+						<DayType version="1" id="NSR:DayType:weekend">
 							<validityConditions>
 								<AvailabilityConditionRef ref="AvailabilityCondition:1"/>
 							</validityConditions>
@@ -50,7 +50,7 @@
 							</properties>
 						</DayType>
 						
-						<DayType version="any" id="NSR:DayType:Christmas">
+						<DayType version="1" id="NSR:DayType:Christmas">
 							<validityConditions>
 								<AvailabilityConditionRef ref="AvailabilityCondition:2"/>
 							</validityConditions>
@@ -69,23 +69,23 @@
 				</ServiceCalendarFrame>
 				
 				
-				<TimetableFrame version="any" id="NSR:TimetableFrame:1">
+				<TimetableFrame version="1" id="NSR:TimetableFrame:1">
 					<vehicleJourneys>
-						<ServiceJourney version="any" id="NSR:ServiceJourney:0700">
+						<ServiceJourney version="1" id="NSR:ServiceJourney:0700">
 							<dayTypes>
-								<DayTypeRef version="any" ref="NSR:DayType:weekdays"/>
-								<DayTypeRef version="any" ref="NSR:DayType:weekend"/>
+								<DayTypeRef version="1" ref="NSR:DayType:weekdays"/>
+								<DayTypeRef version="1" ref="NSR:DayType:weekend"/>
 							</dayTypes>
 							
 						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
 				
-				<TimetableFrame version="any" id="NSR:TimetableFrame:2">
+				<TimetableFrame version="1" id="NSR:TimetableFrame:2">
 					<vehicleJourneys>
-						<ServiceJourney version="any" id="NSR:ServiceJourney:0800">
+						<ServiceJourney version="1" id="NSR:ServiceJourney:0800">
 							<dayTypes>
-								<DayTypeRef version="any" ref="NSR:DayType:Christmas"/>
+								<DayTypeRef version="1" ref="NSR:DayType:Christmas"/>
 							</dayTypes>
 						</ServiceJourney>
 					</vehicleJourneys>

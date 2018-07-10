@@ -4,6 +4,7 @@
   xmlns:core="http://www.govtalk.gov.uk/core"
   xmlns:ifopt="http://www.ifopt.org.uk/ifopt"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
     <components>
         <TrainInCompoundTrain>
             <TrainRef ref="tr:trainname"/>

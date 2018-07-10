@@ -10,17 +10,17 @@
 	<PublicationTimestamp>2016-06-28T12:00:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NHR</ParticipantRef>
 	<dataObjects>
-		<CompositeFrame version="any" id="NSR:CompositeFrame:1">
+		<CompositeFrame version="1" id="NSR:CompositeFrame:1">
 			<frames>
 
-				<ServiceCalendarFrame version="any" id="NSR:ServiceCalendarFrame:1">
-					<ServiceCalendar version="any" id="NSR:ServiceCalendar">
+				<ServiceCalendarFrame version="1" id="NSR:ServiceCalendarFrame:1">
+					<ServiceCalendar version="1" id="NSR:ServiceCalendar">
 						<Name>Ukedager</Name>
 						<FromDate>2016-04-01</FromDate>
 						<ToDate>2016-08-31</ToDate>
 					</ServiceCalendar>
 					<dayTypes>
-						<DayType version="any" id="NSR:DayType:weekdays">
+						<DayType version="1" id="NSR:DayType:weekdays">
 							<Name>Ukedager</Name>
 							<properties>
 								<PropertyOfDay>
@@ -28,7 +28,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="NSR:DayType:Saturday">
+						<DayType version="1" id="NSR:DayType:Saturday">
 							<Name>Lordag</Name>
 							<properties>
 								<PropertyOfDay>
@@ -36,7 +36,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="NSR:DayType:Sunday">
+						<DayType version="1" id="NSR:DayType:Sunday">
 							<Name>Sondag</Name>
 							<properties>
 								<PropertyOfDay>
@@ -45,7 +45,7 @@
 							</properties>
 						</DayType>
 						<!-- Irregular examples: -->
-						<DayType version="any" id="NSR:DayType:SpringMarketDay">
+						<DayType version="1" id="NSR:DayType:SpringMarketDay">
 							<Name>Market day</Name>
 							<properties>
 								<PropertyOfDay>
@@ -55,7 +55,7 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						<DayType version="any" id="NSR:DayType:ConstitutionDay">
+						<DayType version="1" id="NSR:DayType:ConstitutionDay">
 							<Name>National constitution day 17. may</Name>
 							<properties>
 								<PropertyOfDay>
@@ -65,56 +65,56 @@
 						</DayType>
 					</dayTypes>
 					<timebands>
-						<Timeband version="any" id="NSR:Timeband:TM15">
+						<Timeband version="1" id="NSR:Timeband:TM15">
 							<!--Name>15 minutes past the hour</Name-->
 							<StartTime>00:15:00</StartTime>
 							<EndTime>00:15:00</EndTime>
 						</Timeband>
 					</timebands>
 					<operatingDays>
-						<OperatingDay version="any" id="NSR:OperatingDay:default:1">
+						<OperatingDay version="1" id="NSR:OperatingDay:default:1">
 							<CalendarDate>2016-05-01</CalendarDate>
 							<EarliestTime>10:10:00</EarliestTime>
 						</OperatingDay>
-						<OperatingDay version="any" id="NSR:od:default:2">
+						<OperatingDay version="1" id="NSR:od:default:2">
 							<CalendarDate>2016-07-07</CalendarDate>
 							<EarliestTime>11:11:00</EarliestTime>
 							<DayLength>PT5H10M</DayLength>
 						</OperatingDay>
 					</operatingDays>
 					<operatingPeriods>
-						<OperatingPeriod version="any" id="NSR:op:default">
+						<OperatingPeriod version="1" id="NSR:op:default">
 							<FromOperatingDayRef ref="NSR:OperatingDay:default:1"/>
 							<ToOperatingDayRef ref="NSR:od:default:2"/>
 						</OperatingPeriod>
 					</operatingPeriods>
 					<dayTypeAssignments>
 						<!-- enkeltdato -->
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:date">
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:date">
 							<Date>2016-05-17</Date>
 							<!-- nasjonaldag, annet ruteplan -->
-							<DayTypeRef version="any" ref="NSR:DayType:Sunday"/>
+							<DayTypeRef version="1" ref="NSR:DayType:Sunday"/>
 						</DayTypeAssignment>
 						<!-- enkeltdag -->
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:day">
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:day">
 							<OperatingDayRef ref="NSR:OperatingDay:default:1"/>
-							<DayTypeRef version="any" ref="NSR:DayType:Sunday"/>
+							<DayTypeRef version="1" ref="NSR:DayType:Sunday"/>
 						</DayTypeAssignment>
 						<!-- periode -->
-						<DayTypeAssignment version="any" order="1" id="NSR:DayTypeAssignment:period">
+						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:period">
 							<OperatingPeriodRef ref="NSR:OperatingPeriod:default"/>
-							<DayTypeRef version="any" ref="NSR:DayType:weekdays"/>
+							<DayTypeRef version="1" ref="NSR:DayType:weekdays"/>
 						</DayTypeAssignment>
 					</dayTypeAssignments>
 				</ServiceCalendarFrame>
 
 				<!-- Dummy Service and Timetable frames (for reference) -->
-				<ServiceFrame version="any" id="NSR:ServiceFrame:1">
+				<ServiceFrame version="1" id="NSR:ServiceFrame:1">
 					<routes>
-						<Route version="any" id="NSR:Route:default"/>
+						<Route version="1" id="NSR:Route:default"/>
 					</routes>
 					<lines>
-						<Line version="any" id="NSR:Line:default">
+						<Line version="1" id="NSR:Line:default">
 							<Name>default</Name>
 							<routes>
 								<RouteRef ref="NSR:Route:default"/>
@@ -122,13 +122,13 @@
 						</Line>
 					</lines>
 					<journeyPatterns>
-						<JourneyPattern version="any" id="NSR:JourneyPattern:default"/>
+						<JourneyPattern version="1" id="NSR:JourneyPattern:default"/>
 					</journeyPatterns>
 				</ServiceFrame>
 
-				<TimetableFrame version="any" id="NSR:TimetableFrame:1">
+				<TimetableFrame version="1" id="NSR:TimetableFrame:1">
 					<vehicleJourneys>
-						<ServiceJourney version="any" id="NSR:ServiceJourney:default">
+						<ServiceJourney version="1" id="NSR:ServiceJourney:default">
 							<dayTypes>
 								<DayTypeRef ref="NSR:DayType:weekdays"/>
 								<DayTypeRef ref="NSR:DayType:Saturday"/>

@@ -13,8 +13,6 @@
             <VehicleActivity>
                 <RecordedAtTime>2017-08-07T11:29:55.56+02:00</RecordedAtTime>
                 <ValidUntilTime>2017-08-07T11:39:55.559+02:00</ValidUntilTime>
-                <VehicleMonitoringRef>placeholder</VehicleMonitoringRef>
-                <MonitoringName>placeholder</MonitoringName>
                 <ProgressBetweenStops>
                     <LinkDistance>500</LinkDistance>
                     <Percentage>0.60</Percentage>

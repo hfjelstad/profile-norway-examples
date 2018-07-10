@@ -7,7 +7,7 @@
   version="2.0">
     <ServiceDelivery>
         <ResponseTimestamp>2017-07-11T11:29:31.173+02:00</ResponseTimestamp>
-        <SituationExchangeDelivery version="1.0">
+        <SituationExchangeDelivery version="2.0">
             <ResponseTimestamp>2017-07-11T11:29:31.173+02:00</ResponseTimestamp>
             <Situations>
                 <PtSituationElement>
