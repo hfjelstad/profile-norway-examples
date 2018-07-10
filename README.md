@@ -4,9 +4,9 @@ Examples for the Norwegian NeTEx and SIRI profiles.
 
 The profiles can be found (in Norwegian) at:
 
-NeTEx - https://rutebanken.atlassian.net/wiki/display/PUBLIC/NeTEx+profil+Norge
+**NeTEx** - https://rutebanken.atlassian.net/wiki/display/PUBLIC/NeTEx+profil+Norge
 
-SIRI - https://rutebanken.atlassian.net/wiki/display/PUBLIC/SIRI+profil+Norge
+**SIRI** - https://rutebanken.atlassian.net/wiki/display/PUBLIC/SIRI+profil+Norge
 
 ## Repositories ##
 Official NeTEx XSD repository:
