@@ -157,7 +157,7 @@
                             <ArrivalBoardingActivity></ArrivalBoardingActivity>
                         </OnwardCall>
                     </OnwardCalls>
-                    <IsCompleteStopSequence>true</IsCompleteStopSequence>
+                    <IsCompleteStopSequence>false</IsCompleteStopSequence>
                 </MonitoredVehicleJourney>
             </VehicleActivity>
         </VehicleMonitoringDelivery>

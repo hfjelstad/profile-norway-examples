@@ -28,8 +28,8 @@
                             <Order>1</Order>
                             <StopPointName>Vinstra</StopPointName>
                             <RequestStop>false</RequestStop>
-                            <AimedDepartureTime>2018-04-18T13:05:00</AimedDepartureTime>
-                            <ExpectedDepartureTime>2018-04-18T13:05:00</ExpectedDepartureTime>
+                            <AimedDepartureTime>2018-04-18T13:05:00+02:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2018-04-18T13:05:00+02:00</ExpectedDepartureTime>
                             <DepartureStatus>onTime</DepartureStatus>
                             <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
                         </EstimatedCall>
@@ -38,12 +38,12 @@
                             <Order>2</Order>
                             <StopPointName>Kvam</StopPointName>
                             <RequestStop>false</RequestStop>
-                            <AimedArrivalTime>2018-04-18T13:12:50</AimedArrivalTime>
-                            <ExpectedArrivalTime>2018-04-18T13:12:50</ExpectedArrivalTime>
+                            <AimedArrivalTime>2018-04-18T13:12:50+02:00</AimedArrivalTime>
+                            <ExpectedArrivalTime>2018-04-18T13:12:50+02:00</ExpectedArrivalTime>
                             <ArrivalStatus>onTime</ArrivalStatus>
                             <ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
-                            <AimedDepartureTime>2018-04-18T13:13:00</AimedDepartureTime>
-                            <ExpectedDepartureTime>2018-04-18T13:13:00</ExpectedDepartureTime>
+                            <AimedDepartureTime>2018-04-18T13:13:00+02:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2018-04-18T13:13:00+02:00</ExpectedDepartureTime>
                             <DepartureStatus>onTime</DepartureStatus>
                             <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
                         </EstimatedCall>
@@ -52,12 +52,12 @@
                             <Order>3</Order>
                             <StopPointName>Otta</StopPointName>
                             <RequestStop>false</RequestStop>
-                            <AimedArrivalTime>2018-04-18T13:27:00</AimedArrivalTime>
-                            <ExpectedArrivalTime>2018-04-18T13:27:00</ExpectedArrivalTime>
+                            <AimedArrivalTime>2018-04-18T13:27:00+02:00</AimedArrivalTime>
+                            <ExpectedArrivalTime>2018-04-18T13:27:00+02:00</ExpectedArrivalTime>
                             <ArrivalStatus>onTime</ArrivalStatus>
                             <ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
-                            <AimedDepartureTime>2018-04-18T13:28:00</AimedDepartureTime>
-                            <ExpectedDepartureTime>2018-04-18T13:28:00</ExpectedDepartureTime>
+                            <AimedDepartureTime>2018-04-18T13:28:00+02:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2018-04-18T13:28:00+02:00</ExpectedDepartureTime>
                             <DepartureStatus>onTime</DepartureStatus>
                             <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
                         </EstimatedCall>
@@ -66,12 +66,12 @@
                             <Order>4</Order>
                             <StopPointName>Dovre</StopPointName>
                             <RequestStop>false</RequestStop>
-                            <AimedArrivalTime>2018-04-18T13:51:50</AimedArrivalTime>
-                            <ExpectedArrivalTime>2018-04-18T13:51:50</ExpectedArrivalTime>
+                            <AimedArrivalTime>2018-04-18T13:51:50+02:00</AimedArrivalTime>
+                            <ExpectedArrivalTime>2018-04-18T13:51:50+02:00</ExpectedArrivalTime>
                             <ArrivalStatus>onTime</ArrivalStatus>
                             <ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
-                            <AimedDepartureTime>2018-04-18T13:52:00</AimedDepartureTime>
-                            <ExpectedDepartureTime>2018-04-18T13:52:00</ExpectedDepartureTime>
+                            <AimedDepartureTime>2018-04-18T13:52:00+02:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2018-04-18T13:52:00+02:00</ExpectedDepartureTime>
                             <DepartureStatus>onTime</DepartureStatus>
                             <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
                         </EstimatedCall>
@@ -80,51 +80,54 @@
                             <Order>5</Order>
                             <StopPointName>Dombås</StopPointName>
                             <RequestStop>false</RequestStop>
-                            <AimedArrivalTime>2018-04-18T14:02:00</AimedArrivalTime>
-                            <ExpectedArrivalTime>2018-04-18T14:02:00</ExpectedArrivalTime>
+                            <AimedArrivalTime>2018-04-18T14:02:00+02:00</AimedArrivalTime>
+                            <ExpectedArrivalTime>2018-04-18T14:02:00+02:00</ExpectedArrivalTime>
                             <ArrivalStatus>onTime</ArrivalStatus>
                             <ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
-                            <AimedDepartureTime>2018-04-18T14:04:00</AimedDepartureTime>
-                            <ExpectedDepartureTime>2018-04-18T14:04:00</ExpectedDepartureTime>
-                            <DepartureStatus>onTime</DepartureStatus>
+                            <AimedDepartureTime>2018-04-18T14:04:00+02:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2018-04-18T14:04:00+02:00</ExpectedDepartureTime>
+                            <DepartureStatus>cancelled</DepartureStatus>
                             <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
                         </EstimatedCall>
                         <EstimatedCall>
                             <StopPointRef>NSR:Quay:519</StopPointRef>
                             <Order>6</Order>
                             <StopPointName>Oppdal</StopPointName>
+                            <Cancellation>true</Cancellation>
                             <RequestStop>false</RequestStop>
-                            <AimedArrivalTime>2018-04-18T14:59:00</AimedArrivalTime>
-                            <ExpectedArrivalTime>2018-04-18T14:59:00</ExpectedArrivalTime>
-                            <ArrivalStatus>onTime</ArrivalStatus>
+                            <AimedArrivalTime>2018-04-18T14:59:00+02:00</AimedArrivalTime>
+                            <ExpectedArrivalTime>2018-04-18T14:59:00+02:00</ExpectedArrivalTime>
+                            <ArrivalStatus>cancelled</ArrivalStatus>
                             <ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
-                            <AimedDepartureTime>2018-04-18T15:02:00</AimedDepartureTime>
-                            <ExpectedDepartureTime>2018-04-18T15:02:00</ExpectedDepartureTime>
-                            <DepartureStatus>onTime</DepartureStatus>
+                            <AimedDepartureTime>2018-04-18T15:02:00+02:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2018-04-18T15:02:00+02:00</ExpectedDepartureTime>
+                            <DepartureStatus>cancelled</DepartureStatus>
                             <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
                         </EstimatedCall>
                         <EstimatedCall>
                             <StopPointRef>NSR:Quay:982</StopPointRef>
                             <Order>7</Order>
                             <StopPointName>Støren</StopPointName>
+                            <Cancellation>true</Cancellation>
                             <RequestStop>false</RequestStop>
-                            <AimedArrivalTime>2018-04-18T15:49:30</AimedArrivalTime>
-                            <ExpectedArrivalTime>2018-04-18T15:49:30</ExpectedArrivalTime>
-                            <ArrivalStatus>onTime</ArrivalStatus>
+                            <AimedArrivalTime>2018-04-18T15:49:30+02:00</AimedArrivalTime>
+                            <ExpectedArrivalTime>2018-04-18T15:49:30+02:00</ExpectedArrivalTime>
+                            <ArrivalStatus>cancelled</ArrivalStatus>
                             <ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
-                            <AimedDepartureTime>2018-04-18T15:50:00</AimedDepartureTime>
-                            <ExpectedDepartureTime>2018-04-18T15:50:00</ExpectedDepartureTime>
-                            <DepartureStatus>onTime</DepartureStatus>
+                            <AimedDepartureTime>2018-04-18T15:50:00+02:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2018-04-18T15:50:00+02:00</ExpectedDepartureTime>
+                            <DepartureStatus>cancelled</DepartureStatus>
                             <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
                         </EstimatedCall>
                         <EstimatedCall>
                             <StopPointRef>NSR:Quay:1078</StopPointRef>
                             <Order>8</Order>
                             <StopPointName>Trondheim</StopPointName>
+                            <Cancellation>true</Cancellation>
                             <RequestStop>false</RequestStop>
-                            <AimedArrivalTime>2018-04-18T14:32:00</AimedArrivalTime>
-                            <ExpectedArrivalTime>2018-04-18T14:32:00</ExpectedArrivalTime>
-                            <ArrivalStatus>onTime</ArrivalStatus>
+                            <AimedArrivalTime>2018-04-18T14:32:00+02:00</AimedArrivalTime>
+                            <ExpectedArrivalTime>2018-04-18T14:32:00+02:00</ExpectedArrivalTime>
+                            <ArrivalStatus>cancelled</ArrivalStatus>
                             <ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
                         </EstimatedCall>
                     </EstimatedCalls>
