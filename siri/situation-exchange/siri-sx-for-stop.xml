@@ -13,29 +13,30 @@
             <ValidUntil>2017-08-11T11:29:31</ValidUntil>
             <Situations>
                 <PtSituationElement>
-                    <CreationTime>2018-04-10T12:13:52+02:00</CreationTime>
-                    <ParticipantRef>RUT</ParticipantRef>
-                    <SituationNumber>RUT:SituationNumber:71590</SituationNumber>
+                    <CreationTime>2018-02-22T11:40:33</CreationTime>
+                    <ParticipantRef>NSB</ParticipantRef>
+                    <SituationNumber>NSB:SituationNumber:status-53733</SituationNumber>
                     <Version>1</Version>
                     <Source>
                         <SourceType>directReport</SourceType>
                     </Source>
                     <Progress>open</Progress>
                     <ValidityPeriod>
-                        <StartTime>2018-04-12T05:00:00+02:00</StartTime>
-                        <EndTime>2018-04-12T07:00:00+02:00</EndTime>
+                        <StartTime>2018-02-22T11:40:11</StartTime>
+                        <EndTime>2018-04-04T16:55:40</EndTime>
                     </ValidityPeriod>
                     <UndefinedReason/>
-                    <ReportType>incident</ReportType>
-                    <Summary>Rushtidstrafikk</Summary>
-                    <Description>Alle våre ruter kan bli forsinket</Description>
+                    <Priority>18</Priority>
+                    <ReportType>general</ReportType>
+                    <Description>Plattformene kan være glatte.</Description>
+                    <Advice>Gå forsiktig.</Advice>
                     <Affects>
-                        <Networks>
-                            <AffectedNetwork>
-                                <NetworkRef>RUT:Network:1</NetworkRef>
-                                <AllLines/>
-                            </AffectedNetwork>
-                        </Networks>
+                        <StopPoints>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:StopPlace:652</StopPointRef>
+                                <StopPointName>Dovre</StopPointName>           
+                            </AffectedStopPoint>
+                        </StopPoints>
                     </Affects>
                 </PtSituationElement>
             </Situations>
