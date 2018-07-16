@@ -13,7 +13,7 @@
             <ValidUntil>2017-08-11T11:29:31</ValidUntil>
             <Situations>
                 <PtSituationElement>
-                    <CreationTime>2018-04-10T12:13:52</CreationTime>
+                    <CreationTime>2018-04-10T12:13:52+02:00</CreationTime>
                     <ParticipantRef>RUT</ParticipantRef>
                     <SituationNumber>RUT:SituationNumber:71590</SituationNumber>
                     <Version>1</Version>
@@ -22,8 +22,8 @@
                     </Source>
                     <Progress>open</Progress>
                     <ValidityPeriod>
-                        <StartTime>2018-04-12T05:00:00</StartTime>
-                        <EndTime>2018-04-12T07:00:00</EndTime>
+                        <StartTime>2018-04-12T05:00:00+02:00</StartTime>
+                        <EndTime>2018-04-12T07:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <UndefinedReason/>
                     <ReportType>incident</ReportType>
