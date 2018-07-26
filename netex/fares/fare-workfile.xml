@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== Use of Fare Frame elements  ====== -->
+
+<PublicationDelivery 
+  xmlns="http://www.netex.org.uk/netex" 
+  xmlns:siri="http://www.siri.org.uk/siri" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  version="1.0">
+	
+	<PublicationTimestamp>2018-06-06T12:00:00</PublicationTimestamp>
+	<ParticipantRef>ENT</ParticipantRef>
+	<Description>Generell test av FareFrame objekter</Description>
+	
+	<dataObjects>
+		<CompositeFrame version="1" created="2018-06-06T12:24:36" id="ENT:CompositeFrame:1">
+			<validityConditions>
+				<ValidBetween>
+					<FromDate>2018-03-21T00:00:00</FromDate>
+					<ToDate>2018-08-19T00:00:00</ToDate>
+				</ValidBetween>
+			</validityConditions>
+			
+			<codespaces>
+				<Codespace id="ent">
+					<Xmlns>ENT</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/ent</XmlnsUrl>
+				</Codespace>
+				<Codespace id="nsr">
+					<Xmlns>NSR</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/nsr</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+			
+			
+			<frames>
+				<ResourceFrame version="1" id="ENT:ResourceFrame:1">
+					<organisations>
+						<Authority version="1" id="ENT:Authority:1">
+							<CompanyNumber>0</CompanyNumber>
+							<Name>Entur</Name>
+							<LegalName>Entur AS</LegalName>
+							<ContactDetails>
+								<Phone>0</Phone>
+								<Url>entur.org</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+						<Operator version="1" id="ENT:Operator:1">
+							<CompanyNumber>0</CompanyNumber>
+							<Name>Entur</Name>
+							<LegalName>Entur AS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email>post@entur.org</Email>
+								<Phone>0</Phone>
+								<Url>entur.org</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				
+				
+				<FareFrame version="1" id="ENT:FareFrame:DTA">
+					<FrameDefaults>
+					</FrameDefaults>
+					
+					<!--
+					<fareStructureElements>
+						<FareStructureElement version="any" id="tfl:FareStructureElement:Zone_1or2or2-3_TravelTimes">
+							<validityParameterAssignments>
+								
+								<GenericParameterAssignment id="gpa-1" version="1" order="1">
+									
+									<limitations>
+										<RefundingRef ref="ref-1"/>
+									</limitations>
+									
+								</GenericParameterAssignment>
+								
+							</validityParameterAssignments>
+						</FareStructureElement>
+					</fareStructureElements>
+					-->
+					
+					
+
+					
+					
+					<usageParameters>
+						
+						<UserProfile id="up-1" version="1">
+						
+						</UserProfile>
+						
+						<PenaltyPolicy id="pp-1" version="1">
+							<prices>
+								<UsageParameterPriceRef ref="ref"/>
+							</prices>
+							<PenaltyPolicyType>noTicket</PenaltyPolicyType>
+						</PenaltyPolicy>
+						
+						<Refunding id="ref-1" version="1">
+							<prices>
+								<UsageParameterPrice id="upp-1" version="1"/>
+							</prices>
+							<Allowed>full</Allowed>
+							<RefundType>delay</RefundType>
+							<PaymentMethod>cash</PaymentMethod>
+						</Refunding>
+						<Cancelling></Cancelling>
+					</usageParameters>
+					
+					
+					
+					
+					<fareProducts>
+						<PreassignedFareProduct id="ENT:PreassignedFareProduct:1" version="1">
+							<ConditionSummary>
+								
+							</ConditionSummary>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="gpa-2" version="1" order="1">
+									<limitations>
+										<RefundingRef ref=""></RefundingRef> 
+									</limitations>
+
+									<temporalValidityParameters>
+										<DayTypeRef ref=""></DayTypeRef>
+										<OperatingDayRef ref=""></OperatingDayRef>
+										<ValidityConditionRef ref=""></ValidityConditionRef>
+									</temporalValidityParameters>
+									
+									<validityParameters>
+										<GroupOfDistributionChannelsRef ref="godc-1" version="1"/>
+										<DistributionChannelRef ref="dc-1" version="1"/>
+									</validityParameters>
+
+								</GenericParameterAssignment>
+
+							</validityParameterAssignments>
+						</PreassignedFareProduct>	
+					</fareProducts>
+					
+					
+					<distributionChannels>
+						<DistributionChannel id="dc-1" version="1">
+							<DistributionChannelType>agency</DistributionChannelType>
+						</DistributionChannel>
+					</distributionChannels>
+					
+					<groupsOfDistributionChannels>
+						<GroupOfDistributionChannels id="godc-1" version="1">
+							<members>
+								<DistributionChannelRef ref="dc-1"></DistributionChannelRef>
+							</members>
+						</GroupOfDistributionChannels>
+					</groupsOfDistributionChannels>
+					
+					
+<!--
+					<PricingParameterSet version="1" id="ENT:PricingParameterSet:tap">
+						<pricingRules>
+							<DiscountingRule version="1" id="ENT:DiscountingRule:5%">
+								<DiscountAsPercentage>5</DiscountAsPercentage>
+							</DiscountingRule>
+							<DiscountingRule version="1" id="ENT:DiscountingRule:10%">
+								<DiscountAsPercentage>10</DiscountAsPercentage>
+							</DiscountingRule>
+						</pricingRules>
+					</PricingParameterSet>
+					<usageParameters>
+						<UserProfile version="1" id="ENT:UserProfile:standard">
+							<Name>Normal Fare</Name>
+							<TypeOfConcessionRef version="1" ref="ENT:TypeOfConcession:standard"/>
+						</UserProfile>
+						<UserProfile version="1" id="ENT:UserProfile:student">
+							<Name>Student Fare</Name>
+							<TypeOfConcessionRef version="1" ref="ENT:TypeOfConcession:student"/>
+						</UserProfile>
+					</usageParameters>
+					<fareProducts>
+						<SaleDiscountRight version="1" id="ENT:SaleDiscountRight:railcard@standard">
+							<Name>Adult  Standard Flat  fare   </Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1" order="1" id="ENT:GenericParameterAssignment:railcard@standard@Operator">
+									<validityParameters>
+										<VehicleModes>rail</VehicleModes>
+										<OperatorRef version="1" ref="ENT:Operator:1"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment version="1" order="2" id="ENT:GenericParameterAssignment:railcard@standard@UserProfile">
+									<Name>Students are ELigible</Name>
+									<limitations>
+										<UserProfileRef version="1" ref="ENT:UserProfile:standard"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+						</SaleDiscountRight>
+						<SaleDiscountRight version="1" id="ENT:SaleDiscountRight:railcard@student">
+							<Name>student Fare ,  </Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1" order="1" id="ENT:GenericParameterAssignment:railcard@student@Operator">
+									<validityParameters>
+										<VehicleModes>rail</VehicleModes>
+										<OperatorRef version="1" ref="ENT:Operator:1"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment version="1" order="2" id="ENT:GenericParameterAssignment:railcard@student@UserProfile">
+									<Name>Students are ELigible</Name>
+									<limitations>
+										<UserProfileRef version="1" ref="ENT:UserProfile:student"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+						</SaleDiscountRight>
+					</fareProducts>
+					<priceGroups>
+						<PriceGroup version="1" id="ENT:PriceGroup:DTA">
+							<Name>Discounts for Rail Cards</Name>
+							<members>
+								<FareProductPrice version="1" id="ENT:FareProductPrice:railcard@standard">
+									<Name>Standard discount - all fares</Name>
+									<DiscountingRuleRef version="1" ref="ENT:DiscountingRule:5%"/>
+									<SaleDiscountRightRef version="1" ref="ENT:SaleDiscountRight:railcard@standard"/>
+								</FareProductPrice>
+								<FareProductPrice version="1" id="ENT:FareProductPrice:railcard@student">
+									<Name>Student  discount - all fares</Name>
+									<DiscountingRuleRef version="1" ref="ENT:DiscountingRule:10%"/>
+									<SaleDiscountRightRef version="1" ref="ENT:SaleDiscountRight:railcard@student"/>
+								</FareProductPrice>
+							</members>
+						</PriceGroup>
+					</priceGroups>
+-->
+					
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
