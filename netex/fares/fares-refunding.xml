@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== Example of Fare Frame for exchanging data set for REFUNDING ====== -->
+
+<PublicationDelivery 
+  xmlns="http://www.netex.org.uk/netex" 
+  xmlns:siri="http://www.siri.org.uk/siri" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  version="1.0">
+	
+	<PublicationTimestamp>2018-07-27T12:34:56</PublicationTimestamp>
+	<ParticipantRef>ENT</ParticipantRef>
+	<Description>Generell test av FareFrame objekter</Description>
+	
+	<dataObjects>
+		<CompositeFrame version="1" created="2018-07-27T12:34:56" id="NSB:CompositeFrame:1">
+			<validityConditions>
+				<ValidBetween>
+					<FromDate>2018-01-01T00:00:00</FromDate>
+					<ToDate>2018-12-31T23:59:59</ToDate>
+				</ValidBetween>
+			</validityConditions>
+			
+			<codespaces>
+				<Codespace id="nsb">
+					<Xmlns>NSB</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/nsb</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+			
+			<frames>
+				<ResourceFrame version="1" id="NSB:ResourceFrame:1">
+					<organisations>
+						<Authority version="1" id="NSB:Authority:1">
+							<CompanyNumber>0</CompanyNumber>
+							<Name>NSB</Name>
+							<LegalName>NSB AS</LegalName>
+							<ContactDetails>
+								<Phone>0</Phone>
+								<Url>https://nsb.no</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+					</organisations>
+				</ResourceFrame>
+				
+				
+				<FareFrame version="1" id="NSB:FareFrame:1">
+
+					<!-- ################ -->
+					<!-- USAGE PARAMETERS -->
+					<!-- ################ -->
+					<usageParameters>
+						
+						<Refunding id="NSB:Refunding:1" version="1">
+							<Name>Ingen refusjon</Name>
+							<Allowed>none</Allowed>
+						</Refunding>
+						
+						<Refunding id="NSB:Refunding:2" version="1">
+							<Name>Angrefrist</Name>
+							<Allowed>full</Allowed>
+							<UnusedTicketsOnly>true</UnusedTicketsOnly>
+							<ResellWhen>anyTime</ResellWhen> <!-- MANGLER "afterSale" -->
+							<ExchangableUntilDuration>PT4H</ExchangableUntilDuration>
+							<HasFee>false</HasFee>
+							<RefundBasis>perOffer</RefundBasis>
+						</Refunding>
+
+						<Refunding id="NSB:Refunding:3" version="1">
+							<Name>Etter angrefrist</Name>
+							<Allowed>none</Allowed>
+							<ResellWhen>anyTime</ResellWhen> <!-- MANGLER "afterSale" -->
+							<ExchangableFromDuration>PT4H</ExchangableFromDuration>
+						</Refunding>
+						
+						<Refunding id="NSB:Refunding:4" version="1">
+							<Name>Full med gebyr</Name>
+							<prices>
+								<UsageParameterPrice id="NSB:UsageParameterPrice:1" version="1">
+									<Amount>100</Amount>
+								</UsageParameterPrice>
+							</prices>
+							<Allowed>full</Allowed>
+							<UnusedTicketsOnly>true</UnusedTicketsOnly>
+							<ResellWhen>beforeStartOfValidity</ResellWhen>
+							<HasFee>true</HasFee> <!-- NB: Feil i modellen (har "false") -->
+							<RefundBasis>perOffer</RefundBasis>
+						</Refunding>
+						
+						<Refunding id="NSB:Refunding:5" version="1">
+							<Name>Full uten gebyr</Name>
+							<Allowed>full</Allowed>
+							<UnusedTicketsOnly>true</UnusedTicketsOnly>
+							<ResellWhen>beforeStartOfValidity</ResellWhen>
+							<HasFee>false</HasFee>
+							<RefundBasis>perOffer</RefundBasis>
+						</Refunding>
+						
+					</usageParameters>
+					
+					
+					<!-- ############# -->
+					<!-- FARE PRODUCTS -->
+					<!-- ############# -->
+					<fareProducts>
+						
+						<PreassignedFareProduct id="NSB:PreassignedFareProduct:1" version="1">
+							<Name>Enkeltbillett</Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="NSB:GenericParameterAssignment:1" version="1" order="1">
+									<limitations>
+										<RefundingRef ref="NSB:Refunding:1" version="1"/> 
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+						</PreassignedFareProduct>
+						
+						<PreassignedFareProduct id="NSB:PreassignedFareProduct:2" version="1">
+							<Name>Minipris</Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="NSB:GenericParameterAssignment:2" version="1" order="1">
+									<limitations>
+										<RefundingRef ref="NSB:Refunding:2" version="1"/>
+										<RefundingRef ref="NSB:Refunding:3" version="1"/>
+									</limitations>
+								</GenericParameterAssignment>
+								<!-- ALT. -->
+								<!-- mulig ALTERNATIV IMPLEMENTASJON under (men mindre presis/intuitiv) -->
+								<!--
+								<GenericParameterAssignment id="NSB:GenericParameterAssignment:2a" version="1" order="1">
+									<limitations>
+										<RefundingRef ref="NSB:Refunding:1"/>
+									</limitations>
+									<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment id="NSB:GenericParameterAssignment:2b" version="1" order="1">
+									<limitations>
+										<RefundingRef ref="NSB:Refunding:2"/>
+									</limitations>
+									<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+								</GenericParameterAssignment>
+								-->
+							</validityParameterAssignments>
+						</PreassignedFareProduct>
+						
+						<PreassignedFareProduct id="NSB:PreassignedFareProduct:3" version="1">
+							<Name>Enkeltbillett</Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="NSB:GenericParameterAssignment:3" version="1" order="1">
+									<limitations>
+										<RefundingRef ref="NSB:Refunding:4"/>
+									</limitations>
+									<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+									<validityParameters>
+										<DistributionChannelRef ref="NSB:DistributionChannel:1" version="1"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment id="NSB:GenericParameterAssignment:4" version="1" order="2">
+									<limitations>
+										<RefundingRef ref="NSB:Refunding:5"/>
+									</limitations>
+									<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+									<validityParameters>
+										<DistributionChannelRef ref="NSB:DistributionChannel:2" version="1"/> <!-- NB: Feil i modellen (brukt group)! -->
+									</validityParameters>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+						</PreassignedFareProduct>
+						
+					</fareProducts>
+					
+					
+					<!-- ##################### -->
+					<!-- DISTRIBUTION CHANNELS -->
+					<!-- ##################### -->
+					<distributionChannels>
+						<DistributionChannel id="NSB:DistributionChannel:1" version="1">
+							<Name>Betjent</Name>
+							<DistributionChannelType>agency</DistributionChannelType>
+						</DistributionChannel>
+						<DistributionChannel id="NSB:DistributionChannel:2" version="1">
+							<Name>Selvbetjent (online)</Name>
+							<DistributionChannelType>online</DistributionChannelType>
+						</DistributionChannel>
+					</distributionChannels>
+					
+					<!-- Pdd. ikke i bruk (jf. kommentar ang. modellen) -->
+					<groupsOfDistributionChannels>
+						<GroupOfDistributionChannels id="NSB:GroupOfDistributionChannels:1" version="1">
+							<members>
+								<DistributionChannelRef ref="NSB:DistributionChannel:1" version="1"/>
+								<DistributionChannelRef ref="NSB:DistributionChannel:2" version="1"/>
+							</members>
+						</GroupOfDistributionChannels>
+					</groupsOfDistributionChannels>
+					
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
