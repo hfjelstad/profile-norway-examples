@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ==== Example of Fare Frame for exchanging data set for REFUNDING ====== -->
-
+<!--
+See sample data model:
+https://enturas.atlassian.net/wiki/spaces/POP/pages/579797203/Refusjoner+og+kontrollgebyr
+-->
 <PublicationDelivery 
   xmlns="http://www.netex.org.uk/netex" 
   xmlns:siri="http://www.siri.org.uk/siri" 
@@ -9,8 +12,8 @@
   version="1.0">
 	
 	<PublicationTimestamp>2018-07-27T12:34:56</PublicationTimestamp>
-	<ParticipantRef>ENT</ParticipantRef>
-	<Description>Generell test av FareFrame objekter</Description>
+	<ParticipantRef>NSB</ParticipantRef>
+	<Description>Eksempel: Refunding</Description>
 	
 	<dataObjects>
 		<CompositeFrame version="1" created="2018-07-27T12:34:56" id="NSB:CompositeFrame:1">
@@ -106,7 +109,7 @@
 					<fareProducts>
 						
 						<PreassignedFareProduct id="NSB:PreassignedFareProduct:1" version="1">
-							<Name>Enkeltbillett</Name>
+							<Name>Enkeltbillett uten refusjon</Name>
 							<validityParameterAssignments>
 								<GenericParameterAssignment id="NSB:GenericParameterAssignment:1" version="1" order="1">
 									<limitations>
@@ -145,7 +148,7 @@
 						</PreassignedFareProduct>
 						
 						<PreassignedFareProduct id="NSB:PreassignedFareProduct:3" version="1">
-							<Name>Enkeltbillett</Name>
+							<Name>Enkeltbillett med refusjon</Name>
 							<validityParameterAssignments>
 								<GenericParameterAssignment id="NSB:GenericParameterAssignment:3" version="1" order="1">
 									<limitations>
