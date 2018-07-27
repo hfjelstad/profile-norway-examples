@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== Example of Fare Frame for exchanging data set for PENALTY POLICY ====== -->
+<!--
+See sample data model:
+https://enturas.atlassian.net/wiki/spaces/POP/pages/579797203/Refusjoner+og+kontrollgebyr
+-->
+<PublicationDelivery 
+  xmlns="http://www.netex.org.uk/netex" 
+  xmlns:siri="http://www.siri.org.uk/siri" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  version="1.0">
+	
+	<PublicationTimestamp>2018-07-27T12:34:56</PublicationTimestamp>
+	<ParticipantRef>NSB</ParticipantRef>
+	<Description>Eksempel: Kontrollgebyr</Description>
+	
+	<dataObjects>
+		<CompositeFrame version="1" created="2018-07-27T12:34:56" id="NSB:CompositeFrame:1">
+			<validityConditions>
+				<ValidBetween>
+					<FromDate>2018-01-01T00:00:00</FromDate>
+					<ToDate>2018-12-31T23:59:59</ToDate>
+				</ValidBetween>
+			</validityConditions>
+			
+			<codespaces>
+				<Codespace id="nsb">
+					<Xmlns>NSB</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/nsb</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+			
+			<frames>
+				<ResourceFrame version="1" id="NSB:ResourceFrame:1">
+					<organisations>
+						<Authority version="1" id="NSB:Authority:1">
+							<CompanyNumber>0</CompanyNumber>
+							<Name>NSB</Name>
+							<LegalName>NSB AS</LegalName>
+							<ContactDetails>
+								<Phone>0</Phone>
+								<Url>https://nsb.no</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+					</organisations>
+				</ResourceFrame>
+				
+				
+				<FareFrame version="1" id="NSB:FareFrame:1">
+					
+					<!-- ################ -->
+					<!-- USAGE PARAMETERS -->
+					<!-- ################ -->
+					<usageParameters>
+						
+						<UserProfile id="NSB:UserProfile:1" version="1">
+							<Name>Barn</Name>
+							<MinimumAge>5</MinimumAge>
+							<MaximumAge>12</MaximumAge>
+						</UserProfile>
+						
+						<UserProfile id="NSB:UserProfile:2" version="1">
+							<Name>Ungdom</Name>
+							<MinimumAge>13</MinimumAge>
+							<MaximumAge>18</MaximumAge>
+						</UserProfile>
+						
+						
+						<PenaltyPolicy id="NSB:PenaltyPolicy:1" version="1">
+							<Name>Kontrollgebyr</Name>
+							<prices>
+								<UsageParameterPrice id="NSB:UsageParameterPrice:1" version="1">
+									<Amount>950</Amount>
+								</UsageParameterPrice>
+							</prices>
+							<!--
+								<PenaltyAction>fine</PenaltyAction>
+								<PaymentMethod>cashAndCard</PaymentMethod>
+							-->
+						</PenaltyPolicy>
+						
+						<PenaltyPolicy id="NSB:PenaltyPolicy:2" version="1">
+							<Name>Kontrollgebyr ung</Name>
+							<prices>
+								<UsageParameterPriceRef ref="NSB:UsageParameterPrice:1" version="1"/> <!-- Teknisk gyldig... -->
+							</prices>
+							<!--
+								<PenaltyAction>fine</PenaltyAction>
+								(mangler muliget for PaymentMethod = alle/utvalgte)
+							-->
+						</PenaltyPolicy>
+
+						<PenaltyPolicy id="NSB:PenaltyPolicy:3" version="1">
+							<Name>Kontrollgebyr faktura</Name>
+							<prices>
+								<UsageParameterPrice id="NSB:UsageParameterPrice:2" version="1">
+									<Amount>1150</Amount>
+								</UsageParameterPrice>
+							</prices>
+							<!--
+								<PenaltyAction>fine</PenaltyAction>
+								<PaymentMethod>postalOrder</PaymentMethod>
+							-->
+						</PenaltyPolicy>
+												
+					</usageParameters>
+					
+					
+					<!-- ############# -->
+					<!-- FARE PRODUCTS -->
+					<!-- ############# -->
+					<fareProducts>
+						
+						<PreassignedFareProduct id="NSB:PreassignedFareProduct:1" version="1">
+							<Name>Enkeltbillett</Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="NSB:GenericParameterAssignment:1" version="1" order="1">
+									<limitations>
+										<UserProfileRef ref="NSB:UserProfile:1" version="1"/>
+										<UserProfileRef ref="NSB:UserProfile:2" version="1"/>
+										<PenaltyPolicyRef ref="NSB:PenaltyPolicy:2" version="1"/>										
+									</limitations>
+									<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment id="NSB:GenericParameterAssignment:2" version="1" order="2">
+									<limitations>
+										<PenaltyPolicyRef ref="NSB:PenaltyPolicy:1" version="1"/>
+										<PenaltyPolicyRef ref="NSB:PenaltyPolicy:3" version="1"/>
+									</limitations>
+									<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+								</GenericParameterAssignment>
+								<!-- ALT. -->
+								<!-- mulig ALTERNATIV IMPLEMENTASJON under 
+									(men i og med at uansett ikke knyttet til f.eks. UserProfile er det allerede implisitt gitt over) -->
+								<!--
+								<GenericParameterAssignment id="NSB:GenericParameterAssignment:3" version="1" order="2">
+									<limitations>
+										<PenaltyPolicyRef ref="NSB:PenaltyPolicy:1" version="1"/>
+									</limitations>
+									<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment id="NSB:GenericParameterAssignment:4" version="1" order="2">
+									<limitations>
+										<PenaltyPolicyRef ref="NSB:PenaltyPolicy:3" version="1"/>
+									</limitations>
+									<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+								</GenericParameterAssignment>
+								-->
+							</validityParameterAssignments>
+						</PreassignedFareProduct>
+						
+					</fareProducts>
+					
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
