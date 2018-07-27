@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ==== Use of Fare Frame elements  ====== -->
-
 <PublicationDelivery 
   xmlns="http://www.netex.org.uk/netex" 
   xmlns:siri="http://www.siri.org.uk/siri" 
@@ -158,6 +157,9 @@
 					
 					
 <!--
+
+EXAMPLE STRUCTURES:
+
 					<PricingParameterSet version="1" id="ENT:PricingParameterSet:tap">
 						<pricingRules>
 							<DiscountingRule version="1" id="ENT:DiscountingRule:5%">
