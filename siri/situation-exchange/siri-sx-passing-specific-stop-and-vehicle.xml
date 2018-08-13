@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Siri 
+  xmlns="http://www.siri.org.uk/siri" 
+  xmlns:acsb="http://www.ifopt.org.uk/acsb" 
+  xmlns:datex2="http://datex2.eu/schema/2_0RC1/2_0" 
+  xmlns:ifopt="http://www.ifopt.org.uk/ifopt" 
+  version="2.0">
+    <ServiceDelivery>
+        <ResponseTimestamp>2018-08-13T11:29:31</ResponseTimestamp>
+        <ProducerRef>NSB</ProducerRef>
+        <SituationExchangeDelivery version="2.0">
+            <ResponseTimestamp>2018-08-13T11:29:31</ResponseTimestamp>
+            <ValidUntil>2018-08-13T11:29:31</ValidUntil>
+            <Situations>
+                <PtSituationElement>
+                    <CreationTime>2018-08-13T11:29:31</CreationTime>
+                    <ParticipantRef>NSB</ParticipantRef>
+                    <SituationNumber>NSB:SituationNumber:status-168101753</SituationNumber>
+                    <Version>1</Version>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2018-08-13T11:30:00</StartTime>
+                        <EndTime>2018-08-13T13:37:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason/>
+                    <ReportType>incident</ReportType>
+                    <Description xml:lang="NO">Toget vil bytte togmateriell på Dovre. Du må dessverre bytte tog på denne stasjonen.</Description>
+                    <Description xml:lang="EN">You must change trains at Dovre. We apologize for the inconvenience.</Description>
+                    <Affects>
+                        <VehicleJourneys>
+                            <AffectedVehicleJourney>
+                                <VehicleJourneyRef>NSB:ServiceJourney:1-2492-2343</VehicleJourneyRef>
+                                <Route>
+                                    <StopPoints>
+                                        <AffectedStopPoint>
+                                            <StopPointRef>NSR:Quay:652</StopPointRef>
+                                            <StopPointName>Dovre</StopPointName>
+                                            <StopCondition>notStopping</StopCondition>
+                                        </AffectedStopPoint>
+                                    </StopPoints>
+                                </Route>
+                                <OriginAimedDepartureTime>2018-08-13T11:50:00</OriginAimedDepartureTime>
+                            </AffectedVehicleJourney>
+                        </VehicleJourneys>
+                    </Affects>
+                </PtSituationElement>
+            </Situations>
+        </SituationExchangeDelivery>
+    </ServiceDelivery>
+</Siri>
