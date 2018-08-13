@@ -7,7 +7,7 @@
   version="2.0">
     <ServiceDelivery>
         <ResponseTimestamp>2018-08-13T11:29:31</ResponseTimestamp>
-        <ProducerRef>RUT</ProducerRef>
+        <ProducerRef>NSB</ProducerRef>
         <SituationExchangeDelivery version="2.0">
             <ResponseTimestamp>2018-08-13T11:29:31</ResponseTimestamp>
             <ValidUntil>2018-08-13T11:29:31</ValidUntil>
