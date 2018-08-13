@@ -62,10 +62,8 @@
                     
                     <InfoLinks>
                         <InfoLink>
-                            <Uri>http://www.entur.org/1</Uri>
-                        </InfoLink>
-                        <InfoLink>
                             <Uri>http://www.entur.org/2</Uri>
+                            <Label>test</Label>
                         </InfoLink>
                     </InfoLinks>
                     <Affects>

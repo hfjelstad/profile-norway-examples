@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Siri 
+  xmlns="http://www.siri.org.uk/siri" 
+  xmlns:acsb="http://www.ifopt.org.uk/acsb" 
+  xmlns:datex2="http://datex2.eu/schema/2_0RC1/2_0" 
+  xmlns:ifopt="http://www.ifopt.org.uk/ifopt" 
+  version="2.0">
+    <ServiceDelivery>
+        <ResponseTimestamp>2018-02-11T11:29:31</ResponseTimestamp>
+        <ProducerRef>RUT</ProducerRef>
+        <SituationExchangeDelivery version="2.0">
+            <ResponseTimestamp>2018-02-11T11:29:31</ResponseTimestamp>
+            <ValidUntil>2018-02-11T11:29:31</ValidUntil>
+            <Situations>
+                <PtSituationElement>
+                    <CreationTime>2018-02-11T11:29:33</CreationTime>
+                    <ParticipantRef>NSB</ParticipantRef>
+                    <SituationNumber>NSB:SituationNumber:status-53734</SituationNumber>
+                    <Version>1</Version>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2018-02-11T11:29:33</StartTime>
+                    </ValidityPeriod>
+                    <UndefinedReason/>
+                    <Priority>18</Priority>
+                    <ReportType>general</ReportType>
+                    <Description xml:lang="NO">Plattformene kan være glatte.</Description>
+                    <Affects>
+                        <StopPoints>
+                            <AffectedStopPoint>
+                                <StopPointRef>NSR:Quay:1067</StopPointRef>
+                                <StopPointName>Dovre</StopPointName>
+                                <StopCondition>destination</StopCondition>
+                                <StopCondition>startPoint</StopCondition>
+                            </AffectedStopPoint>
+                        </StopPoints>
+                    </Affects>
+                </PtSituationElement>
+            </Situations>
+        </SituationExchangeDelivery>
+    </ServiceDelivery>
+</Siri>
