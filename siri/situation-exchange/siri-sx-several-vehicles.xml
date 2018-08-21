@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Siri 
+    xmlns="http://www.siri.org.uk/siri" 
+    xmlns:acsb="http://www.ifopt.org.uk/acsb" 
+    xmlns:datex2="http://datex2.eu/schema/2_0RC1/2_0" 
+    xmlns:ifopt="http://www.ifopt.org.uk/ifopt" 
+    version="2.0">
+    <ServiceDelivery>
+        <ResponseTimestamp>2018-04-10T12:14:52</ResponseTimestamp>
+        <ProducerRef>NSB</ProducerRef>
+        <SituationExchangeDelivery version="2.0">
+            <ResponseTimestamp>2018-04-10T12:14:52</ResponseTimestamp>
+            <ValidUntil>2018-05-10T22:11:00</ValidUntil>
+            <Situations>
+                <PtSituationElement>
+                    <CreationTime>2018-04-10T12:14:51</CreationTime>
+                    <ParticipantRef>NSB</ParticipantRef>
+                    <SituationNumber>NSB:SituationNumber:status-631189</SituationNumber>
+                    <Version>1</Version>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2018-04-10T12:14:52</StartTime>
+                        <EndTime>2018-04-13T04:49:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason/>
+                    <Priority>59</Priority>
+                    <ReportType>incident</ReportType>
+                    <Summary xml:lang="NO">Bane NOR arbeider på strekningen Otta-Ringebu i perioden 10. april - 11. april.</Summary>
+                    <Summary xml:lang="EN">Bane NOR is carrying out planned maintenance works on the Otta-Ringebu line from 10. April to 11. April.</Summary>
+                    <Affects>
+                        <VehicleJourneys>
+                            <AffectedVehicleJourney>
+                                <!-- Kjøretøy 1 -->
+                                <VehicleJourneyRef>NSB:ServiceJourney:1-2492-2343</VehicleJourneyRef>
+                                <Route/>
+                                <OriginAimedDepartureTime>2018-04-11T09:20:00</OriginAimedDepartureTime>
+                            </AffectedVehicleJourney>
+                            <AffectedVehicleJourney>
+                                <!-- Kjøretøy 2 -->
+                                <VehicleJourneyRef>NSB:ServiceJourney:1-3678-42</VehicleJourneyRef>
+                                <Route/>
+                                <OriginAimedDepartureTime>2018-04-11T13:37:00</OriginAimedDepartureTime>
+                            </AffectedVehicleJourney>
+                            <AffectedVehicleJourney>
+                                <!-- Kjøretøy 3 (en dato) -->
+                                <FramedVehicleJourneyRef>
+                                    <DataFrameRef>2018-04-11</DataFrameRef>
+                                    <DatedVehicleJourneyRef>NSB:ServiceJourney:1-3654-47</DatedVehicleJourneyRef>
+                                </FramedVehicleJourneyRef>
+                                <Route/>
+                            </AffectedVehicleJourney>
+                            <AffectedVehicleJourney>
+                                <!-- Kjøretøy 3 (annen dato) -->
+                                <FramedVehicleJourneyRef>
+                                    <DataFrameRef>2018-04-12</DataFrameRef>
+                                    <DatedVehicleJourneyRef>NSB:ServiceJourney:1-3654-47</DatedVehicleJourneyRef>
+                                </FramedVehicleJourneyRef>
+                                <Route/>
+                            </AffectedVehicleJourney>
+                        </VehicleJourneys>
+                    </Affects>
+                </PtSituationElement>
+            </Situations>
+        </SituationExchangeDelivery>
+    </ServiceDelivery>
+</Siri>
