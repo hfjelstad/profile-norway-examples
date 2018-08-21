@@ -9,7 +9,6 @@
         <ProducerRef>RUT</ProducerRef>
         <VehicleMonitoringDelivery version="2.0">
             <ResponseTimestamp>2018-07-27T18:01:11</ResponseTimestamp>
-            <ValidUntil>2018-07-24T12:22:59</ValidUntil>
             <VehicleActivity>
                 <RecordedAtTime>2018-07-27T18:00:12</RecordedAtTime>
                 <ValidUntilTime>2018-07-27T18:10:59</ValidUntilTime>

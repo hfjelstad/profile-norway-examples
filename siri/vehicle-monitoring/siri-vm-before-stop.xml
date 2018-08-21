@@ -9,11 +9,11 @@
         <ProducerRef>RUT</ProducerRef>
         <VehicleMonitoringDelivery version="2.0">
             <ResponseTimestamp>2018-07-24T12:13:39</ResponseTimestamp>
-            <ValidUntil>2018-07-24T12:22:59</ValidUntil>
             <VehicleActivity>
                 <RecordedAtTime>2018-07-24T12:13:01</RecordedAtTime>
                 <ValidUntilTime>2018-07-24T12:23:01</ValidUntilTime>
                 <ProgressBetweenStops>
+                    <LinkDistance>501</LinkDistance>
                     <Percentage>0.62</Percentage>
                 </ProgressBetweenStops>
                 <MonitoredVehicleJourney>
@@ -35,32 +35,12 @@
                     <Delay>PT239S</Delay>
                     <VehicleStatus>inProgress</VehicleStatus>
                     <VehicleRef>103029</VehicleRef>
-                    <!-- PreviousCalls is not evaluated, only in example for context -->
-                    <!--
-                    <PreviousCalls>
-                        <PreviousCall>
-                            <StopPointRef>NSR:Quay:11713</StopPointRef>
-                            <VisitNumber>14</VisitNumber>
-                            <StopPointName>Arendalsgata</StopPointName>
-                        </PreviousCall>
-                    </PreviousCalls>
-                    -->
                     <MonitoredCall>
                         <StopPointRef>NSR:Quay:11689</StopPointRef>
                         <StopPointName>Sagene</StopPointName>
                         <VehicleAtStop>false</VehicleAtStop>
                         <DestinationDisplay>Tjuvholmen</DestinationDisplay>
                     </MonitoredCall>
-                    <!-- OnwardsCalls is not evaluated, only in example for context -->
-                    <!--
-                    <OnwardCalls>
-                        <OnwardCall>
-                            <StopPointRef>NSR:Quay:11674</StopPointRef>
-                            <VisitNumber>16</VisitNumber>
-                            <StopPointName>Arkitekt Rivertz plass</StopPointName>
-                        </OnwardCall>
-                    </OnwardCalls>
-                    -->
                     <IsCompleteStopSequence>false</IsCompleteStopSequence>
                 </MonitoredVehicleJourney>
             </VehicleActivity>
