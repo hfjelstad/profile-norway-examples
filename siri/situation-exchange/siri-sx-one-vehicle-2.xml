@@ -34,7 +34,7 @@
                         <VehicleJourneys>
                             <AffectedVehicleJourney>
                                 <FramedVehicleJourneyRef>
-                                    <DataFrameRef>2018-04-10</DataFrameRef>
+                                    <DataFrameRef>2018-08-17</DataFrameRef>
                                     <DatedVehicleJourneyRef>NSB:ServiceJourney:1-3654-47</DatedVehicleJourneyRef>
                                 </FramedVehicleJourneyRef>
                                 <Route/>
