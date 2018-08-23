@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+==== Stoppested med Taxi-skilt (for bruk av taxi/buss) ======
+-->
+<PublicationDelivery
+  version="1.09:NO-NeTEx-stops:1.3" 
+  xmlns="http://www.netex.org.uk/netex"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <PublicationTimestamp>2017-04-04T14:14:14.0Z</PublicationTimestamp>
+    <ParticipantRef>NSR</ParticipantRef>
+    <dataObjects>
+        
+        <SiteFrame version="1" id="NSR:SiteFrame:1">
+            <stopPlaces>
+                <StopPlace version="1" id="NSR:StopPlace:1">
+                    <Name>Taxi-stopp eksempel</Name>
+                    <Covered>outdoors</Covered>
+                    <placeEquipments>
+                        <GeneralSign id="NSR:GeneralSign:1" version="1">
+                            <!-- 514 Holdeplass for drosje (oppstillingsplass) -->
+                            <PrivateCode>514</PrivateCode>
+                            <SignContentType>transportMode</SignContentType>
+                        </GeneralSign>
+                    </placeEquipments>
+                    <TransportMode>bus</TransportMode>
+                    
+                    <!-- TODO -->
+                    <!-- StopPlaceType>taxiStand</StopPlaceType -->
+                    
+                    <quays>
+                        <Quay version="1" id="NSR:Quay:1">
+                            <Centroid>
+                                <Location srsName="WGS84">
+                                    <Longitude>10.804112</Longitude>
+                                    <Latitude>59.928687</Latitude>
+                                </Location>
+                            </Centroid>
+                            <!-- Minimumskrav for UU-informasjon -->
+                            <AccessibilityAssessment version="1" id="NSR:AccessibilityAssessment:1">
+                                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                                <limitations>
+                                    <AccessibilityLimitation>
+                                        <WheelchairAccess>true</WheelchairAccess>
+                                        <StepFreeAccess>true</StepFreeAccess>
+                                    </AccessibilityLimitation>
+                                </limitations>
+                            </AccessibilityAssessment>
+                            <Lighting>wellLit</Lighting>
+                        </Quay>
+                    </quays>
+                </StopPlace>
+            </stopPlaces>
+        </SiteFrame>
+        
+    </dataObjects>
+</PublicationDelivery>
