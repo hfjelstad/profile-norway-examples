@@ -129,6 +129,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						</StopPlace>
 					</stopPlaces>				
 					
+					<!-- Angivelse av område hvor fleksibel transport kan bestilles fra/til -->
 					<flexibleStopPlaces>
 						<FlexibleStopPlace version="1" id="NSR:FlexibleStopPlace:ID-HANABORG-NORD">
 							<Name>Fleksisone for linje 316</Name>
