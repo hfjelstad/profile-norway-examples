@@ -46,6 +46,7 @@
 			</FrameDefaults>
 
 			<frames>
+				
 				<ResourceFrame version="1" id="UNI:ResourceFrame:1">
 					<!-- Optional, konseptet tas ikke i bruk i initiell versjon av Rutebanken -->
 					<!--
@@ -112,6 +113,7 @@
 						</Operator>
 					</organisations>
 				</ResourceFrame>
+				
 
 				<!-- ===SITE FRAME=== -->
 				<SiteFrame version="1" id="UNI:SiteFrame:1">
@@ -301,6 +303,7 @@
 							</Presentation>
 						</Line>
 					</lines>
+					
 					<!-- ===DESTINATION DISPLAYs=== -->
 					<destinationDisplays>
 						<DestinationDisplay version="1" id="UNI:DestinationDisplay:holtet">
@@ -331,6 +334,7 @@
 						</ScheduledStopPoint>
 					</scheduledStopPoints>
 					
+					<!--- =========SERVICE LINKs============ -->
 					<serviceLinks>
 						<ServiceLink version="1" id="UNI:ServiceLink:helsfyr_to_brynseng">
 							<Distance>150</Distance>
@@ -407,8 +411,6 @@
 						</ServiceLink>
 					</serviceLinks>
 
-					
-
 					<!-- ===STOP ASSIGNMENTs=== -->
 					<!-- Must be defined in order to assign Journey/Service Pattern stop point to actual StopPlace -->
 					<stopAssignments>
@@ -440,6 +442,7 @@
 					
 					
 					<!-- KUN TEST -->
+					<!--
 					<timingLinks>
 						<TimingLink version="test" id="slettmeg">
 							<Distance>1</Distance>
@@ -463,9 +466,9 @@
 							<ToPointRef ref="invalid"></ToPointRef>
 						</TimingLink>
 					</timingLinks>
+					-->
 					
 					
-
 					<!-- ===JOURNEY PATTERNs=== -->
 					<journeyPatterns>
 						<JourneyPattern version="1" id="UNI:JourneyPattern:109">
@@ -514,21 +517,19 @@
 						</JourneyPattern>
 					</journeyPatterns>
 				</ServiceFrame>
-
-				<!-- TIMETABLE FRAME -->
+				
+				
+				<!-- ===TIMETABLE FRAME=== -->
 				<!-- Definert som et sett av avganger med referanse til dager (dagtyper) avgangen kjøres -->
 				<TimetableFrame version="1" id="UNI:TimetableFrame:1">
 					<vehicleJourneys>
 						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0430">
-
 							<DepartureTime>04:30:00</DepartureTime> <!-- Optional -->
 							<dayTypes>
 								<DayTypeRef version="1" ref="UNI:DayType:weekday"/>
 							</dayTypes>
 							<JourneyPatternRef version="1" ref="UNI:JourneyPattern:109"/>
-							
 							<OperatorRef version="1" ref="RUT:Operator:Unibuss"/>
-								
 							<!-- Optional: -->
 							<LineRef version="1" ref="UNI:Line:109"/>
 							<passingTimes>
@@ -838,7 +839,8 @@
 						</RhythmicalJourneyGroup>
 					</frequencyGroups>
 				</TimetableFrame>
-
+				
+				
 				<!-- ===SERVICE CALENDAR FRAME=== -->
 				<ServiceCalendarFrame version="1" id="UNI:ServiceCalendarFrame:01">
 					<ServiceCalendar version="1" id="UNI:ServiceCalendar:01">
@@ -876,8 +878,6 @@
 								</PropertyOfDay>
 							</properties>
 						</DayType>
-						
-						
 						
 						<DayType version="1" id="UNI:DayType:weekday">
 							<Name>Ukedager (mandag til fredag)</Name>
@@ -933,7 +933,9 @@
 						</DayTypeAssignment>
 					</dayTypeAssignments>
 				</ServiceCalendarFrame>
+				
 			</frames>
+			
 		</CompositeFrame>
 	</dataObjects>
 </PublicationDelivery>

@@ -92,25 +92,68 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 				
 				
 				<!-- Angivelse av Hail&Ride-område, hvor kjøretøy stopper på signal fra passasjer -->
-				<SiteFrame id="RUT:SiteFrame:svf_12" version="1">
+				<SiteFrame id="RUT:SiteFrame:1" version="1">
+					<Name>HailAndRide-område mellom Elle og Ullerud</Name>
 					<flexibleStopPlaces>
+						<!-- inbound -->
 						<FlexibleStopPlace id="RUT:FlexibleStopPlace:1" version="1">
-							<Name>HailAndRide-område Elle til Ullerud</Name>
+							<Name>Langs trase fra Elleveien til Vestbyveien</Name>
 							<areas>
 								<HailAndRideArea id="RUT:HailAndRideArea:1" version="1">
 									<Name>Fleksibel påstigning mellom Elle og Ullerud</Name>
-									<!-- TransportMode>bus</TransportMode --> <!-- REDUNDANT -->
-									<BoardingUse>true</BoardingUse>
-									<AlightingUse>false</AlightingUse>
 									<StartPointRef ref="RUT:ScheduledStopPoint:1" version="1"/>
+									<EndPointRef ref="RUT:ScheduledStopPoint:2" version="1"/>
+								</HailAndRideArea>
+							</areas>
+						</FlexibleStopPlace>
+						<FlexibleStopPlace id="RUT:FlexibleStopPlace:2" version="1">
+							<Name>HailAndRide fra Vestbyveien til Sogsti skole</Name>
+							<areas>
+								<HailAndRideArea id="RUT:HailAndRideArea:2" version="1">
+									<Name>Fleksibel påstigning mellom Elle og Ullerud</Name>
+									<StartPointRef ref="RUT:ScheduledStopPoint:2" version="1"/>
+									<EndPointRef ref="RUT:ScheduledStopPoint:3" version="1"/>
+								</HailAndRideArea>
+							</areas>
+						</FlexibleStopPlace>
+						<FlexibleStopPlace id="RUT:FlexibleStopPlace:3" version="1">
+							<Name>Langs trase fra Sogsti skole til Ullerud</Name>
+							<areas>
+								<HailAndRideArea id="RUT:HailAndRideArea:3" version="1">
+									<Name>Fleksibel påstigning mellom Elle og Ullerud</Name>
+									<StartPointRef ref="RUT:ScheduledStopPoint:3" version="1"/>
 									<EndPointRef ref="RUT:ScheduledStopPoint:4" version="1"/>
 								</HailAndRideArea>
-								<HailAndRideArea id="RUT:HailAndRideArea:2" version="1">
-									<Name>Fleksibel avstigning mellom Ullerud og Elle</Name>
-									<!-- TransportMode>bus</TransportMode --> <!-- REDUNDANT -->
-									<BoardingUse>false</BoardingUse>
-									<AlightingUse>true</AlightingUse>
-									<StartPointRef ref="RUT:ScheduledStopPoint:7" version="1"/>
+							</areas>
+						</FlexibleStopPlace>
+						<!-- outbound -->
+						<FlexibleStopPlace id="RUT:FlexibleStopPlace:4" version="1">
+							<Name>Langs trase fra Ullerud til Sogsti skole</Name>
+							<areas>
+								<HailAndRideArea id="RUT:HailAndRideArea:4" version="1">
+									<Name>Fleksibel påstigning mellom Ullerud og Sogsti skole</Name>
+									<!-- (gjernbruk Ullerud, da buss ikke stopper der på retur) -->
+									<StartPointRef ref="RUT:ScheduledStopPoint:4" version="1"/>
+									<EndPointRef ref="RUT:ScheduledStopPoint:9" version="1"/>
+								</HailAndRideArea>
+							</areas>
+						</FlexibleStopPlace>						
+						<FlexibleStopPlace id="RUT:FlexibleStopPlace:5" version="1">
+							<Name>Langs trase fra Sogsti skole til Vestbyveien</Name>
+							<areas>
+								<HailAndRideArea id="RUT:HailAndRideArea:5" version="1">
+									<Name>Fleksibel avstigning mellom Sogsti skole og Vestbyveien</Name>
+									<StartPointRef ref="RUT:ScheduledStopPoint:9" version="1"/>
+									<EndPointRef ref="RUT:ScheduledStopPoint:10" version="1"/>
+								</HailAndRideArea>
+							</areas>
+						</FlexibleStopPlace>
+						<FlexibleStopPlace id="RUT:FlexibleStopPlace:6" version="1">
+							<Name>Langs trase fra Vestbyveien til Elleveien</Name>
+							<areas>
+								<HailAndRideArea id="RUT:HailAndRideArea:6" version="1">
+									<Name>Fleksibel avstigning mellom Vestbyveien og Elleveien</Name>
+									<StartPointRef ref="RUT:ScheduledStopPoint:10" version="1"/>
 									<!-- (gjenbrukes pga kun en quay ved stoppestedet) -->
 									<EndPointRef ref="RUT:ScheduledStopPoint:1" version="1"/>
 								</HailAndRideArea>
@@ -216,6 +259,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					</destinationDisplays>
 					
 					<scheduledStopPoints>
+						<!-- Fixed Stops -->
 						<!-- inbound -->
 						<!-- Elleveien -->
 						<ScheduledStopPoint id="RUT:ScheduledStopPoint:1" version="1"/>
@@ -243,7 +287,152 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<ScheduledStopPoint id="RUT:ScheduledStopPoint:10" version="1"/>
 						<!-- Elleveien -->
 						<!-- (gjenbrukes, har kun en quay) -->
+						
+						<!-- Hail&Ride -->
+						<!-- inbound -->
+						<!-- seksjon Elleveien - Vestbyveien -->
+						<ScheduledStopPoint id="RUT:ScheduledStopPoint:11" version="1"/>
+						<!-- seksjon Vestbyveien - Sogsti skole -->
+						<ScheduledStopPoint id="RUT:ScheduledStopPoint:12" version="1"/>
+						<!-- seksjon Sogsti skole - Ullerud -->
+						<ScheduledStopPoint id="RUT:ScheduledStopPoint:13" version="1"/>
+						<!-- outbound -->
+						<!-- seksjon Ullerud - Sogsti skole -->
+						<ScheduledStopPoint id="RUT:ScheduledStopPoint:14" version="1"/>
+						<!-- seksjon Sogsti skole - Vestbyveien -->
+						<ScheduledStopPoint id="RUT:ScheduledStopPoint:15" version="1"/>
+						<!-- seksjon Vestbyveien - Elleveien -->
+						<ScheduledStopPoint id="RUT:ScheduledStopPoint:16" version="1"/>
 					</scheduledStopPoints>
+					
+					<serviceLinks>
+						<!-- inbound -->
+						<!-- Elleveien - Vestbyveien (hail&ride) -->
+						<ServiceLink id="RUT:ServiceLink:1" version="1">
+							<Distance>1200</Distance>
+							<projections>
+								<LinkSequenceProjection id="RUT:LinkSequenceProjection:1" version="1">
+									<gml:LineString srsName="WGS84" gml:id="Elleveien-Vestbyveien">
+										<gml:pos>59.648480 10.637532</gml:pos>
+										<gml:pos>59.649806 10.636470</gml:pos>
+										<gml:pos>59.651631 10.636789</gml:pos>
+										<gml:pos>59.652667 10.637289</gml:pos>
+									</gml:LineString>
+								</LinkSequenceProjection>
+							</projections>
+							<FromPointRef ref="RUT:ScheduledStopPoint:1" version="1"/>
+							<ToPointRef ref="RUT:ScheduledStopPoint:2" version="1"/>
+						</ServiceLink>
+						<!-- Vestbyveien - Sogsti skole (hail&ride) -->
+						<ServiceLink id="RUT:ServiceLink:2" version="1">
+							<Distance>530</Distance>
+							<projections>
+								<LinkSequenceProjection id="RUT:LinkSequenceProjection:2" version="1">
+									<gml:LineString srsName="WGS84" gml:id="Vestbyveien-SogstiSkole">
+										<gml:pos>59.653661 10.638712</gml:pos>
+										<gml:pos>59.652986 10.639523</gml:pos>
+										<gml:pos>59.654143 10.640731</gml:pos>
+									</gml:LineString>
+								</LinkSequenceProjection>
+							</projections>
+							<FromPointRef ref="RUT:ScheduledStopPoint:2" version="1"/>
+							<ToPointRef ref="RUT:ScheduledStopPoint:3" version="1"/>
+						</ServiceLink>
+						<!-- Sogsti skole - Ullerud (hail&ride) -->
+						<ServiceLink id="RUT:ServiceLink:3" version="1">
+							<Distance>1300</Distance>
+							<projections>
+								<LinkSequenceProjection id="RUT:LinkSequenceProjection:3" version="1">
+									<gml:LineString srsName="WGS84" gml:id="SogstiSkole-Ullerud">
+										<gml:pos>59.657015 10.641884</gml:pos>
+										<gml:pos>59.658424 10.640339</gml:pos>
+										<gml:pos>59.660228 10.639310</gml:pos>
+										<gml:pos>59.661611 10.630340</gml:pos>
+										<gml:pos>59.664212 10.640211</gml:pos>
+										<gml:pos>59.666162 10.641327</gml:pos>
+									</gml:LineString>
+								</LinkSequenceProjection>
+							</projections>
+							<FromPointRef ref="RUT:ScheduledStopPoint:3" version="1"/>
+							<ToPointRef ref="RUT:ScheduledStopPoint:4" version="1"/>
+						</ServiceLink>
+						<!-- Ullerud - Ullerudsletta -->
+						<ServiceLink id="RUT:ServiceLink:4" version="1">
+							<Distance>540</Distance>
+							<FromPointRef ref="RUT:ScheduledStopPoint:4" version="1"/>
+							<ToPointRef ref="RUT:ScheduledStopPoint:5" version="1"/>
+						</ServiceLink>
+						<!-- Ullerudsletta - Dyrløkke -->
+						<ServiceLink id="RUT:ServiceLink:5" version="1">
+							<Distance>540</Distance>
+							<FromPointRef ref="RUT:ScheduledStopPoint:5" version="1"/>
+							<ToPointRef ref="RUT:ScheduledStopPoint:6" version="1"/>
+						</ServiceLink>
+						<!-- outbound -->
+						<!-- Dyrløkke - Ullerudsletta -->
+						<ServiceLink id="RUT:ServiceLink:6" version="1">
+							<Distance>540</Distance>
+							<FromPointRef ref="RUT:ScheduledStopPoint:7" version="1"/>
+							<ToPointRef ref="RUT:ScheduledStopPoint:8" version="1"/>
+						</ServiceLink>
+						<!-- Ullerudsletta - Ullerud -->
+						<ServiceLink id="RUT:ServiceLink:7" version="1">
+							<Distance>540</Distance>
+							<FromPointRef ref="RUT:ScheduledStopPoint:8" version="1"/>
+							<!-- (Ullerud gjenbrukes, ikke stoppested men er start på Hail&Ride) -->
+							<ToPointRef ref="RUT:ScheduledStopPoint:4" version="1"/>
+						</ServiceLink>
+						<!-- Ullerud - Sogsti skole (hail&ride) -->
+						<ServiceLink id="RUT:ServiceLink:8" version="1">
+							<Distance>1300</Distance>
+							<projections>
+								<LinkSequenceProjection id="RUT:LinkSequenceProjection:4" version="1">
+									<gml:LineString srsName="WGS84" gml:id="Ullerud-SogstiSkole">
+										<gml:pos>59.666162 10.641327</gml:pos>
+										<gml:pos>59.664212 10.640211</gml:pos>
+										<gml:pos>59.661611 10.630340</gml:pos>
+										<gml:pos>59.660228 10.639310</gml:pos>
+										<gml:pos>59.658424 10.640339</gml:pos>
+										<gml:pos>59.657015 10.641884</gml:pos>
+									</gml:LineString>
+								</LinkSequenceProjection>
+							</projections>
+							<!-- (Ullerud gjenbrukes, ikke stoppested men er start på Hail&Ride) -->
+							<FromPointRef ref="RUT:ScheduledStopPoint:4" version="1"/>
+							<ToPointRef ref="RUT:ScheduledStopPoint:9" version="1"/>
+						</ServiceLink>
+						<!-- Sogsti skole - Vestbyveien (hail&ride) -->
+						<ServiceLink id="RUT:ServiceLink:9" version="1">
+							<Distance>530</Distance>
+							<projections>
+								<LinkSequenceProjection id="RUT:LinkSequenceProjection:5" version="1">
+									<gml:LineString srsName="WGS84" gml:id="SogstiSkole-Vestbyveien">
+										<gml:pos>59.654143 10.640731</gml:pos>
+										<gml:pos>59.652986 10.639523</gml:pos>
+										<gml:pos>59.653661 10.638712</gml:pos>
+									</gml:LineString>
+								</LinkSequenceProjection>
+							</projections>
+							<FromPointRef ref="RUT:ScheduledStopPoint:9" version="1"/>
+							<ToPointRef ref="RUT:ScheduledStopPoint:10" version="1"/>
+						</ServiceLink>
+						<!-- Vestbyveien - Elleveien (hail&ride) -->
+						<ServiceLink id="RUT:ServiceLink:10" version="1">
+							<Distance>1200</Distance>
+							<projections>
+								<LinkSequenceProjection id="RUT:LinkSequenceProjection:6" version="1">
+									<gml:LineString srsName="WGS84" gml:id="Vestbyveien-Elleveien">
+										<gml:pos>59.652667 10.637289</gml:pos>
+										<gml:pos>59.651631 10.636789</gml:pos>
+										<gml:pos>59.649806 10.636470</gml:pos>
+										<gml:pos>59.648480 10.637532</gml:pos>
+									</gml:LineString>
+								</LinkSequenceProjection>
+							</projections>
+							<FromPointRef ref="RUT:ScheduledStopPoint:10" version="1"/>
+							<ToPointRef ref="RUT:ScheduledStopPoint:1" version="1"/>
+						</ServiceLink>
+					</serviceLinks>
 					
 					<stopAssignments>
 						<!-- inbound -->
@@ -313,6 +502,40 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						</PassengerStopAssignment>
 						<!-- Elleveien (Hail&Ride) -->
 						<!-- (gjenbrukes, har kun en quay) -->
+						
+						<!-- Hail&Ride -->
+						<!-- inbound -->
+						<!-- seksjon Elleveien - Vestbyveien -->
+						<FlexibleStopAssignment id="RUT:FlexibleStopAssignment:1" version="1">
+							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:11" version="1"/>
+							<FlexibleStopPlaceRef ref="RUT:FlexibleStopPlace:1" version="1"/>
+						</FlexibleStopAssignment>
+						<!-- seksjon Vestbyveien - Sogsti skole -->
+						<FlexibleStopAssignment id="RUT:FlexibleStopAssignment:2" version="1">
+							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:12" version="1"/>
+							<FlexibleStopPlaceRef ref="RUT:FlexibleStopPlace:2" version="1"/>
+						</FlexibleStopAssignment> 
+						<!-- seksjon Sogsti skole - Ullerud -->
+						<FlexibleStopAssignment id="RUT:FlexibleStopAssignment:3" version="1">
+							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:13" version="1"/>
+							<FlexibleStopPlaceRef ref="RUT:FlexibleStopPlace:3" version="1"/>
+						</FlexibleStopAssignment> 
+						<!-- outbound -->
+						<!-- seksjon Ullerud - Sogsti skole -->
+						<FlexibleStopAssignment id="RUT:FlexibleStopAssignment:4" version="1">
+							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:14" version="1"/>
+							<FlexibleStopPlaceRef ref="RUT:FlexibleStopPlace:4" version="1"/>
+						</FlexibleStopAssignment> 
+						<!-- seksjon Sogsti skole - Vestbyveien -->
+						<FlexibleStopAssignment id="RUT:FlexibleStopAssignment:5" version="1">
+							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:15" version="1"/>
+							<FlexibleStopPlaceRef ref="RUT:FlexibleStopPlace:5" version="1"/>
+						</FlexibleStopAssignment> 
+						<!-- seksjon Vestbyveien - Elleveien -->
+						<FlexibleStopAssignment id="RUT:FlexibleStopAssignment:6" version="1">
+							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:16" version="1"/>
+							<FlexibleStopPlaceRef ref="RUT:FlexibleStopPlace:6" version="1"/>
+						</FlexibleStopAssignment> 
 					</stopAssignments>
 					
 					<journeyPatterns>
@@ -321,42 +544,60 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<Name>507 Elle - Dyrløkke</Name>
 							<RouteRef ref="RUT:Route:507-inbound" version="1"/>
 							<pointsInSequence>
-								<!-- Elleveien (Hail&Ride) -->
+								<!-- Elleveien (fixed) -->
 								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:1" version="1" order="1">
 									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:1" version="1"/>
-									<ForAlighting>true</ForAlighting>
+									<ForAlighting>false</ForAlighting>
 									<ForBoarding>true</ForBoarding>
 									<DestinationDisplayRef ref="RUT:DestinationDisplay:1" version="1"/>
 								</StopPointInJourneyPattern>
-								<!-- Vestbyveien (Hail&Ride) -->
+								<!-- Elleveien - Vestbyveien (hail&ride) -->
 								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:2" version="1" order="2">
+									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:11" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<!-- Vestbyveien (fixed) -->
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:3" version="1" order="3">
 									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:2" version="1"/>
 									<ForAlighting>true</ForAlighting>
 									<ForBoarding>true</ForBoarding>
 								</StopPointInJourneyPattern>
-								<!-- Sogsti skole (Hail&Ride) -->
-								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:3" version="1" order="2">
+								<!-- Vestbyveien - Sogsti skole (hail&ride) -->
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:4" version="1" order="4">
+									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:12" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<!-- Sogsti skole (fixed) -->
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:5" version="1" order="5">
 									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:3" version="1"/>
 									<ForAlighting>true</ForAlighting>
 									<ForBoarding>true</ForBoarding>
 								</StopPointInJourneyPattern>
+								<!-- Sogsti skole - Ullerud (hail&ride) -->
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:6" version="1" order="6">
+									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:13" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
 								<!-- Ullerud (fixed) -->
-								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:4" version="1" order="2">
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:7" version="1" order="7">
 									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:4" version="1"/>
 									<ForAlighting>true</ForAlighting>
 									<ForBoarding>true</ForBoarding>
 								</StopPointInJourneyPattern>
 								<!-- Ullerudsletta (fixed) -->
-								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:5" version="1" order="2">
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:8" version="1" order="8">
 									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:5" version="1"/>
 									<ForAlighting>true</ForAlighting>
 									<ForBoarding>true</ForBoarding>
 								</StopPointInJourneyPattern>
 								<!-- Dyrløkke (fixed) -->
-								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:6" version="1" order="2">
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:9" version="1" order="9">
 									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:6" version="1"/>
 									<ForAlighting>true</ForAlighting>
-									<ForBoarding>true</ForBoarding>
+									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 						</JourneyPattern>
@@ -366,40 +607,70 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<RouteRef ref="RUT:Route:507-outbound" version="1"/>
 							<pointsInSequence>
 								<!-- Dyrløkke (fixed) -->
-								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:7" version="1" order="2">
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:10" version="1" order="1">
 									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:7" version="1"/>
-									<ForAlighting>true</ForAlighting>
+									<ForAlighting>false</ForAlighting>
 									<ForBoarding>true</ForBoarding>
-									<DestinationDisplayRef ref="RUT:DestinationDisplay:1" version="1"/>
+									<DestinationDisplayRef ref="RUT:DestinationDisplay:2" version="1"/>
 								</StopPointInJourneyPattern>
 								<!-- Ullerudsletta (fixed) -->
-								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:8" version="1" order="2">
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:11" version="1" order="2">
 									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:8" version="1"/>
 									<ForAlighting>true</ForAlighting>
 									<ForBoarding>true</ForBoarding>
 								</StopPointInJourneyPattern>
-								<!-- Ullerud (not in use for outbound) -->
-								<!-- only start of Hail&Ride area -->
-								<!-- Sogsti skole (Hail&Ride) -->
-								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:9" version="1" order="2">
+								<!-- NB: Ullerud fixed stop is not in use for outbound route) -->
+								<!-- Ullerud - Sogsti skole (hail&ride) -->
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:12" version="1" order="3">
+									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:14" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<RequestStop>true</RequestStop>
+								</StopPointInJourneyPattern>
+								<!-- Sogsti skole (fixed) -->
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:13" version="1" order="4">
 									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:9" version="1"/>
 									<ForAlighting>true</ForAlighting>
 									<ForBoarding>true</ForBoarding>
 								</StopPointInJourneyPattern>
-								<!-- Vestbyveien (Hail&Ride) -->
-								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:10" version="1" order="2">
+								<!-- Sogsti skole - Vestbyveien (hail&ride) -->
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:14" version="1" order="5">
+									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:15" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<RequestStop>true</RequestStop>
+								</StopPointInJourneyPattern>
+								<!-- Vestbyveien (fixed) -->
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:15" version="1" order="6">
 									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:10" version="1"/>
 									<ForAlighting>true</ForAlighting>
 									<ForBoarding>true</ForBoarding>
 								</StopPointInJourneyPattern>
-								<!-- Elleveien (Hail&Ride) -->
-								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:11" version="1" order="1">
+								<!-- Vestbyveien - Elleveien (hail&ride) -->
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:16" version="1" order="7">
+									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:16" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<RequestStop>true</RequestStop>
+								</StopPointInJourneyPattern>
+								<!-- Elleveien (fixed) -->
+								<StopPointInJourneyPattern id="RUT:StopPointInJourneyPattern:17" version="1" order="8">
 									<!-- (gjenbrukes pga kun en quay ved stoppestedet) -->
 									<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:1" version="1"/>
 									<ForAlighting>true</ForAlighting>
-									<ForBoarding>true</ForBoarding>
+									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
+							<linksInSequence>
+								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:10" version="1" order="1">
+									<ServiceLinkRef ref="test"></ServiceLinkRef>
+									
+									
+									<!-- TODO -->
+									
+									
+								</ServiceLinkInJourneyPattern>
+							</linksInSequence>
 						</JourneyPattern>
 					</journeyPatterns>
 					
