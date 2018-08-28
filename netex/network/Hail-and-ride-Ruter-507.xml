@@ -833,9 +833,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:7" version="1"/>
 									<DepartureTime>15:26:00</DepartureTime>
 								</TimetabledPassingTime>
-								<!-- 
-									Ullerud (not in use for outbound) 
-								-->
+								<!-- (Ullerud is not in use for outbound route) -->
 								<!-- Sogsti skole (Hail&Ride) -->
 								<TimetabledPassingTime id="RUT:TimetabledPassingTime:9" version="1">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:9" version="1"/>
