@@ -600,6 +600,28 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
+							<linksInSequence>
+								<!-- Elleveien - Vestbyveien (hail&ride) -->
+								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:1" version="1" order="1">
+									<ServiceLinkRef ref="RUT:ServiceLink:1" version="1"/>
+								</ServiceLinkInJourneyPattern>
+								<!-- Vestbyveien - Sogsti skole (hail&ride) -->
+								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:2" version="1" order="2">
+									<ServiceLinkRef ref="RUT:ServiceLink:2" version="1"/>
+								</ServiceLinkInJourneyPattern>
+								<!-- Sogsti skole - Ullerud (hail&ride) -->
+								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:3" version="1" order="3">
+									<ServiceLinkRef ref="RUT:ServiceLink:3" version="1"/>
+								</ServiceLinkInJourneyPattern>
+								<!-- Ullerud - Ullerudsletta -->
+								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:4" version="1" order="4">
+									<ServiceLinkRef ref="RUT:ServiceLink:4" version="1"/>
+								</ServiceLinkInJourneyPattern>
+								<!-- Ullerudsletta - Dyrløkke -->
+								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:5" version="1" order="5">
+									<ServiceLinkRef ref="RUT:ServiceLink:5" version="1"/>
+								</ServiceLinkInJourneyPattern>
+							</linksInSequence>
 						</JourneyPattern>
 						<!-- outbound -->
 						<JourneyPattern id="RUT:JourneyPattern:507-outbound" version="1">
@@ -662,13 +684,25 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:10" version="1" order="1">
-									<ServiceLinkRef ref="test"></ServiceLinkRef>
-									
-									
-									<!-- TODO -->
-									
-									
+								<!-- Dyrløkke - Ullerudsletta -->
+								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:6" version="1" order="1">
+									<ServiceLinkRef ref="RUT:ServiceLink:6" version="1"/>
+								</ServiceLinkInJourneyPattern>
+								<!-- Ullerudsletta - Ullerud -->
+								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:7" version="1" order="2">
+									<ServiceLinkRef ref="RUT:ServiceLink:7" version="1"/>
+								</ServiceLinkInJourneyPattern>
+								<!-- Ullerud - Sogsti skole (hail&ride) -->
+								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:8" version="1" order="3">
+									<ServiceLinkRef ref="RUT:ServiceLink:8" version="1"/>
+								</ServiceLinkInJourneyPattern>
+								<!-- Sogsti skole - Vestbyveien (hail&ride) -->
+								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:9" version="1" order="4">
+									<ServiceLinkRef ref="RUT:ServiceLink:9" version="1"/>
+								</ServiceLinkInJourneyPattern>
+								<!-- Vestbyveien - Elleveien (hail&ride) -->
+								<ServiceLinkInJourneyPattern id="RUT:ServiceLinkInJourneyPattern:10" version="1" order="5">
+									<ServiceLinkRef ref="RUT:ServiceLink:10" version="1"/>
 								</ServiceLinkInJourneyPattern>
 							</linksInSequence>
 						</JourneyPattern>
