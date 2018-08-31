@@ -436,50 +436,50 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					
 					<stopAssignments>
 						<!-- inbound -->
-						<!-- Elleveien (Hail&Ride) -->
+						<!-- Elleveien -->
 						<PassengerStopAssignment id="RUT:PassengerStopAssignment:1" version="1" order="1">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:1" version="1"/>
 							<StopPlaceRef ref="NSR:StopPlace:5485"/>
 							<QuayRef ref="NSR:Quay:10035"/>
 						</PassengerStopAssignment>
-						<!-- Vestbyveien (Hail&Ride) -->
+						<!-- Vestbyveien -->
 						<PassengerStopAssignment id="RUT:PassengerStopAssignment:2" version="1" order="2">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:2" version="1"/>
 							<StopPlaceRef ref="NSR:StopPlace:5483"/>
 							<QuayRef ref="NSR:Quay:10032"/>
 						</PassengerStopAssignment>
-						<!-- Sogsti skole (Hail&Ride) -->
+						<!-- Sogsti skole -->
 						<PassengerStopAssignment id="RUT:PassengerStopAssignment:3" version="1" order="3">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:3"/>
 							<StopPlaceRef ref="NSR:StopPlace:5443"/>
 							<QuayRef ref="NSR:Quay:9956"/>
 						</PassengerStopAssignment>						
-						<!-- Ullerud (fixed) -->
+						<!-- Ullerud -->
 						<PassengerStopAssignment id="RUT:PassengerStopAssignment:4" version="1" order="4">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:4"/>
 							<StopPlaceRef ref="NSR:StopPlace:5496"/>
 							<QuayRef ref="NSR:Quay:10052"/>
 						</PassengerStopAssignment>
-						<!-- Ullerudsletta (fixed) -->
+						<!-- Ullerudsletta -->
 						<PassengerStopAssignment id="RUT:PassengerStopAssignment:5" version="1" order="5">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:5"/>
 							<StopPlaceRef ref="NSR:StopPlace:5546"/>
 							<QuayRef ref="NSR:Quay:10154"/>
 						</PassengerStopAssignment>
-						<!-- Dyrløkke (fixed) -->
+						<!-- Dyrløkke -->
 						<PassengerStopAssignment id="RUT:PassengerStopAssignment:6" version="1" order="6">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:6"/>
 							<StopPlaceRef ref="NSR:StopPlace:5532"/>
 							<QuayRef ref="NSR:Quay:10130"/>
 						</PassengerStopAssignment>
 						<!-- outbound -->
-						<!-- Dyrløkke (fixed) -->
+						<!-- Dyrløkke -->
 						<PassengerStopAssignment id="RUT:PassengerStopAssignment:7" version="1" order="7">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:7"/>
 							<StopPlaceRef ref="NSR:StopPlace:5532"/>
 							<QuayRef ref="NSR:Quay:10129"/>
 						</PassengerStopAssignment>
-						<!-- Ullerudsletta (fixed) -->
+						<!-- Ullerudsletta -->
 						<PassengerStopAssignment id="RUT:PassengerStopAssignment:8" version="1" order="8">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:8"/>
 							<StopPlaceRef ref="NSR:StopPlace:5546"/>
@@ -488,19 +488,19 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<!-- Ullerud (not in use for outbound) -->
 						<!-- BUSSEN HAR IKKE STOPP PÅ ULLERUD VED RETUR -->
 						<!-- (men dette er likevel start på fleksibel avstigningssone) -->
-						<!-- Sogsti skole (Hail&Ride) -->
+						<!-- Sogsti skole -->
 						<PassengerStopAssignment id="RUT:PassengerStopAssignment:9" version="1" order="9">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:9"/>
 							<StopPlaceRef ref="NSR:StopPlace:5443"/>
 							<QuayRef ref="NSR:Quay:9955"/>
 						</PassengerStopAssignment>
-						<!-- Vestbyveien (Hail&Ride) -->
+						<!-- Vestbyveien -->
 						<PassengerStopAssignment id="RUT:PassengerStopAssignment:10" version="1" order="10">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:10" version="1"/>
 							<StopPlaceRef ref="NSR:StopPlace:5483"/>
 							<QuayRef ref="NSR:Quay:10031"/>
 						</PassengerStopAssignment>
-						<!-- Elleveien (Hail&Ride) -->
+						<!-- Elleveien (retur) -->
 						<!-- (gjenbrukes, har kun en quay) -->
 						
 						<!-- Hail&Ride -->

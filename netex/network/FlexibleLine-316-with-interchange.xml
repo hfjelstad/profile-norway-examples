@@ -466,11 +466,11 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 								<DayTypeRef version="1" ref="RUT:DayType:weekdays"/>
 							</dayTypes>
 							<JourneyPatternRef version="1" ref="RUT:JourneyPattern:316-TilLorenskog"/>
-							<FlexibleLineRef version="1" ref="RUT:FlexibleLine:316"/>
 							<passingTimes>
 								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1000">
 									<!-- Flexi-sone (sted og tid avtales ved bestilling) -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-tilLorenskog" version="1"/>
+									<EarliestDepartureTime>10:10:00</EarliestDepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1015">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-tilLorenskog" version="1"/>
@@ -491,7 +491,6 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 								<DayTypeRef version="1" ref="RUT:DayType:weekdays"/>
 							</dayTypes>
 							<JourneyPatternRef version="1" ref="RUT:JourneyPattern:316-FraLorenskog"/>
-							<FlexibleLineRef version="1" ref="RUT:FlexibleLine:316"/>
 							<passingTimes>
 								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1225">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-TRIADEN-fraLorenskog" version="1"/>
@@ -508,6 +507,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 								<TimetabledPassingTime>
 									<!-- Flexi-sone (leveringssted avtales ved bestilling) -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-fraLorenskog" version="1"/>
+									<LatestArrivalTime>12:45:00</LatestArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
 						</ServiceJourney>
