@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Eksempel-implementasjon for enkel bestillingsrute med fri transport innefor et område(Flexible Area).
+Eksempel-implementasjon for enkel bestillingsrute med fri transport innefor samme område (Flexible Area).
 
 -->
 <PublicationDelivery
@@ -11,10 +11,10 @@ Eksempel-implementasjon for enkel bestillingsrute med fri transport innefor et o
 
     <PublicationTimestamp>2018-09-01T16:00:00Z</PublicationTimestamp>
     <ParticipantRef>RUT</ParticipantRef>
-    <Description>Bestillingslinje 317</Description>
+    <Description>Bestillingslinje</Description>
     <dataObjects>
         <!-- =========================================== -->
-        <CompositeFrame version="1" created="2018-09-01T16:00:00Z" id="RUT:CompositeFrame:0317">
+        <CompositeFrame version="1" created="2018-09-01T16:00:00Z" id="RUT:CompositeFrame:01">
             <validityConditions>
                 <AvailabilityCondition version="1" id="RUT:AvailabilityCondition:1">
                     <FromDate>2018-09-01T00:00:00</FromDate>
@@ -58,10 +58,9 @@ Eksempel-implementasjon for enkel bestillingsrute med fri transport innefor et o
 
                     <flexibleStopPlaces>
                         <FlexibleStopPlace version="1" id="RUT:FlexibleStopPlace:ID-HANABORG-NORD">
-                            <Name>Fleksisone for linje 317</Name>
+                            <Name>Fleksisone for linje 1</Name>
                             <Description>
-                                Bestillingslinjen kjøres i områdene nord for toglinjen i Lørenskog;
-                                Øvre Grønlia, Hanaborglia, Fridjof Nansens vei og Steinbekkveien
+                                Bestillingslinjen kjøres i området Øvre Grønlia og Hanaborglia (Hanaborg nord)
                                 men har ikke fast trasé.
                             </Description>
                             <TransportMode>bus</TransportMode>
@@ -86,7 +85,7 @@ Eksempel-implementasjon for enkel bestillingsrute med fri transport innefor et o
                 </SiteFrame>
 
 
-                <ServiceFrame version="1" id="RUT:ServiceFrame:317">
+                <ServiceFrame version="1" id="RUT:ServiceFrame:1">
                     <Network version="1" id="RUT:Network:RuterBestillingslinjer">
                         <Name>Ruter# bestillingslinjer</Name>
                         <AuthorityRef version="1" ref="RUT:Authority:Ruter"/>
@@ -106,9 +105,9 @@ Eksempel-implementasjon for enkel bestillingsrute med fri transport innefor et o
 
 
                     <routes>
-                        <Route version="1" id="RUT:Route:317-HanaborgNord">
+                        <Route version="1" id="RUT:Route:1-HanaborgNord">
                             <Name>Hanaborg nord</Name>
-                            <FlexibleLineRef ref="RUT:FlexibleLine:317" version="1"/>
+                            <FlexibleLineRef ref="RUT:FlexibleLine:1" version="1"/>
                             <DirectionType>inbound</DirectionType>
                             <pointsInSequence>
                                 <PointOnRoute version="1" id="RUT:PointOnRoute:ID-HANABORG-NORD-fra" order="1">
@@ -123,13 +122,13 @@ Eksempel-implementasjon for enkel bestillingsrute med fri transport innefor et o
                     </routes>
 
                     <lines>
-                        <FlexibleLine version="1" id="RUT:FlexibleLine:317">
-                            <Name>Bestillingslinje 317: Øvre Grønlia</Name>
+                        <FlexibleLine version="1" id="RUT:FlexibleLine:1">
+                            <Name>Bestillingslinje 1: Øvre Grønlia</Name>
                             <TransportMode>bus</TransportMode>
                             <TransportSubmode>
                                 <BusSubmode>shuttleBus</BusSubmode>
                             </TransportSubmode>
-                            <PublicCode>317</PublicCode>
+                            <PublicCode>1</PublicCode>
                             <OperatorRef version="1" ref="RUT:Operator:Unibuss"/>
                             <RepresentedByGroupRef version="1" ref="RUT:Network:RuterBestillingslinjer"/>
                             <FlexibleLineType>flexibleAreasOnly</FlexibleLineType>
@@ -140,7 +139,7 @@ Eksempel-implementasjon for enkel bestillingsrute med fri transport innefor et o
                             <BookWhen>untilPreviousDay</BookWhen>
                             <LatestBookingTime>12:00:00</LatestBookingTime>
                             <BookingNote>
-                                Slik bestiller du transport med linje 317:
+                                Slik bestiller du transport med linje 1:
                                 Bestill transport på tlf. 04144 innen kl. 12 hverdagen i forveien.
                                 Prisene er som på vanlig rutebuss, og Ruters kort og billetter gjelder.
                                 Har du tilgang til internett, kan du lese mer om bestillingslinjene på ruter.no.
@@ -168,9 +167,9 @@ Eksempel-implementasjon for enkel bestillingsrute med fri transport innefor et o
                     </stopAssignments>
 
                     <journeyPatterns>
-                        <JourneyPattern version="1" id="RUT:JourneyPattern:317-HanaborgNord">
+                        <JourneyPattern version="1" id="RUT:JourneyPattern:1-HanaborgNord">
                             <Name>Hanaborg nord</Name>
-                            <RouteRef version="1" ref="RUT:Route:317-HanaborgNord"/>
+                            <RouteRef version="1" ref="RUT:Route:1-HanaborgNord"/>
                             <pointsInSequence>
                                 <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-fra" order="1">
                                     <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD"/>
@@ -188,30 +187,29 @@ Eksempel-implementasjon for enkel bestillingsrute med fri transport innefor et o
 
                     <notices>
                         <!-- Fotnote som gjelder for linjen -->
-                        <Notice version="1" id="RUT:Notice:317">
+                        <Notice version="1" id="RUT:Notice:1">
                             <Text>
                                 Denne bestillingslinjen kjører i området
-                                nord for toglinjen i Lørenskog; Øvre Grøn-
-                                lia, Hanaborglia, Fridjof Nansens vei, og
-                                Steinbekkveien, og henter/leverer på øn-
-                                sket sted innenfor kjøreområdet.
+                                Øvre Grønlia og Hanaborglia (Hanaborg nord),
+                                uten fast trasé.
+                                (Dør-til-dør transport.)
 
                                 Ruters kort og billetter gjelder.
                                 TT-kort gjelder ikke.
                             </Text>
                         </Notice>
-                        <Notice version="1" id="RUT:Notice:317-Henting">
+                        <Notice version="1" id="RUT:Notice:1-Henting">
                             <Text>Eksakt hentested og -tidspunkt avtales ved bestilling</Text>
                         </Notice>
                     </notices>
                     <noticeAssignments>
-                        <NoticeAssignment version="1" id="RUT:NoticeAssignment:317-Henting" order="0">
-                            <NoticeRef version="1" ref="RUT:Notice:317-Henting"/>
+                        <NoticeAssignment version="1" id="RUT:NoticeAssignment:1-Henting" order="0">
+                            <NoticeRef version="1" ref="RUT:Notice:1-Henting"/>
                             <NoticedObjectRef version="1" ref="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-fra"/>
                         </NoticeAssignment>
-                        <NoticeAssignment version="1" id="RUT:NoticeAssignment:317" order="1">
-                            <NoticeRef version="1" ref="RUT:Notice:317"/>
-                            <NoticedObjectRef version="1" ref="RUT:FlexibleLine:317"/>
+                        <NoticeAssignment version="1" id="RUT:NoticeAssignment:1" order="1">
+                            <NoticeRef version="1" ref="RUT:Notice:1"/>
+                            <NoticedObjectRef version="1" ref="RUT:FlexibleLine:1"/>
                         </NoticeAssignment>
                     </noticeAssignments>
                 </ServiceFrame>
@@ -243,14 +241,14 @@ Eksempel-implementasjon for enkel bestillingsrute med fri transport innefor et o
                 </ServiceCalendarFrame>
 
 
-                <TimetableFrame version="1" id="RUT:TimetableFrame:317-HanaborgNord">
+                <TimetableFrame version="1" id="RUT:TimetableFrame:1-HanaborgNord">
                     <vehicleJourneys>
-                        <ServiceJourney version="1" id="RUT:ServiceJourney:0317-HanaborgNord">
+                        <ServiceJourney version="1" id="RUT:ServiceJourney:01-HanaborgNord">
                             <dayTypes>
                                 <DayTypeRef version="1" ref="RUT:DayType:weekdays"/>
                             </dayTypes>
-                            <JourneyPatternRef version="1" ref="RUT:JourneyPattern:317-HanaborgNord"/>
-                            <FlexibleLineRef version="1" ref="RUT:FlexibleLine:317"/>
+                            <JourneyPatternRef version="1" ref="RUT:JourneyPattern:1-HanaborgNord"/>
+                            <FlexibleLineRef version="1" ref="RUT:FlexibleLine:1"/>
                             <passingTimes>
                                 <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1000">
                                     <!-- Flexi-sone (sted og tid avtales ved bestilling) -->
