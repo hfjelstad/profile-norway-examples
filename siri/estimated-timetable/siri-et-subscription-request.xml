@@ -3,18 +3,18 @@
 	<SubscriptionRequest>
 		<RequestTimestamp>2018-09-04T12:11:30.913+02:00</RequestTimestamp>
 		<Address>http://endpoint.address.to/receive/data</Address>
-		<RequestorRef>UUID</RequestorRef>
-		<MessageIdentifier>UUID - påkrevd i XSD</MessageIdentifier>
+		<RequestorRef>56c4fae2-b549-4259-b71f-4ff58958eceb</RequestorRef>
+		<MessageIdentifier>99fec1e6-2e4d-4d47-afe1-ea23e505f1b8</MessageIdentifier>
 		<SubscriptionContext>
 			<HeartbeatInterval>PT1M</HeartbeatInterval>
 		</SubscriptionContext>
 		<EstimatedTimetableSubscriptionRequest>
-			<SubscriberRef>Intern referanse</SubscriberRef>
-			<SubscriptionIdentifier>UUID - for unik identifikasjon av subscription</SubscriptionIdentifier>
+			<SubscriberRef>ENTUR_DEV</SubscriberRef>
+			<SubscriptionIdentifier>9b89af9b-12a7-4f19-9266-4c6fa0554332</SubscriptionIdentifier>
 			<InitialTerminationTime>2018-09-04T13:11:30.913+02:00</InitialTerminationTime>
 			<EstimatedTimetableRequest version="2.0">
 				<RequestTimestamp>2018-09-04T12:11:30.913+02:00</RequestTimestamp>
-				<MessageIdentifier>UUID - påkrevd i XSD</MessageIdentifier>
+				<MessageIdentifier>ceef79cf-b813-4f64-9204-9b888b0eb088</MessageIdentifier>
 			</EstimatedTimetableRequest>
 		</EstimatedTimetableSubscriptionRequest>
 	</SubscriptionRequest>
