@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery version="1.08:NO-NeTEx-fares:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.netex.org.uk/netex ../nick070918/xsd/NeTEx_publication.xsd" 
+    xmlns="http://www.netex.org.uk/netex">
+    <PublicationTimestamp>2018-09-04T12:00:00</PublicationTimestamp>
+    <ParticipantRef>ENT</ParticipantRef>
+    <dataObjects>
+
+        <!-- Eksempel på case nr 1:
+            
+           2 Voksen
+           1 barn
+           1 student
+           
+           Gruppebillett Voksen + barn
+-->
+
+
+        <SalesTransactionFrame id="SalesTransactionFrame" version="any">
+            
+            
+            
+            <fareContracts>
+                <FareContract version="any" id="xpl:Contract:Anon001">
+                    <Name>Enkel voksen</Name>
+                    <fareContractEntries>
+                        <SalesTransaction version="any" id="ENT:SalesTransaction:VoksenOsloDrammen">
+                            <Name>Betaling for voksen</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <Amount>112</Amount>
+                            <PriceUnitRef ref="NOK"/>
+                            <!-- Norske kroner -->
+                            <PaymentMethod>debitCard</PaymentMethod>
+                            <travelSpecifications>
+                                <TravelSpecification version="any" id="ENT:TravelSpecification:EnkelOsloTrondheim123123242342342">
+                                    <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
+                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity>
+                                    <specificParameterAssignments>
+                                        <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:1" order="1">
+                                            <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                            <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                            <FareStructureElementRef ref="NSB:FSE:TEN">Ikke strengt nødvendig</FareStructureElementRef>
+                                            <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
+                                            <limitations>
+                                                <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                                <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                            </limitations>
+                                            <validityParameters>
+                                                <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
+                                                <StopPlaceRef ref="NSR:StopPlace:OSloS"/>
+                                                <StopPlaceRef ref="NSR:StopPlace:Drammen"/>
+                                                <AuthorityRef ref="NSB:Authority:NSB"/>
+                                            </validityParameters>
+                                        </SpecificParameterAssignment>
+                                    </specificParameterAssignments>
+                                </TravelSpecification>
+                            </travelSpecifications>
+                        </SalesTransaction>
+                    </fareContractEntries>
+                    
+                </FareContract>
+                <FareContract version="any" id="xpl:Contract:Anon00dd1">
+                    <Name>Voksen og barn i gruppe</Name>
+                    <fareContractEntries>
+                        <SalesTransaction version="any" id="ENT:SalesTransaction:GruppeOsloDrammen">
+                            <Name>Betaling for voksen og barn i gruppe</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <Amount>112</Amount>
+                            <PriceUnitRef ref="NOK"/>
+                            <!-- Norske kroner -->
+                            <PaymentMethod>debitCard</PaymentMethod>
+                            
+                            <travelSpecifications>
+                                <TravelSpecification version="any" id="ENT:TravelSpecification:GruppeOsloDrammen">
+                                    <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
+                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity>
+                                   <specificParameterAssignments>
+                                        <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:1" order="1">
+                                            <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                            <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                            <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesPackage:5e69"/>
+                                            <limitations>
+                                              <!-- GroupTicketRef? -->
+                                                <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                                <CompanionProfileRef ref="NSB:UserProfile:Child" versionRef="NSB:Version:V1"/>
+                                            </limitations>
+                                            <validityParameters>
+                                                <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
+                                                <StopPlaceRef ref="NSR:StopPlace:OSloS"/>
+                                                <StopPlaceRef ref="NSR:StopPlace:Drammen"/>
+                                                <AuthorityRef ref="NSB:Authority:NSB"/>
+                                            </validityParameters>
+                                        </SpecificParameterAssignment>
+                                    </specificParameterAssignments>
+                                </TravelSpecification>
+                            </travelSpecifications>
+                        </SalesTransaction>
+                    </fareContractEntries>
+                    
+                </FareContract>
+                
+                <FareContract version="any" id="xpl:Contract:Andfdfon001">
+                    <Name>Student</Name>
+                    <fareContractEntries>
+                        <SalesTransaction version="any" id="ENT:SalesTransaction:StyudentOsloDrammen">
+                            <Name>Betaling for student</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <Amount>84</Amount>
+                            <PriceUnitRef ref="NOK"/>
+                            <!-- Norske kroner -->
+                            <PaymentMethod>debitCard</PaymentMethod>
+                            
+                            <travelSpecifications>
+                                <TravelSpecification version="any" id="ENT:TravelSpecification:EnkelOsloDrammen">
+                                    <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
+                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity>
+                                    <specificParameterAssignments>
+                                        <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:1" order="1">
+                                            <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                            <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                            <FareStructureElementRef ref="NSB:FSE:TEN">Ikke strengt nødvendig</FareStructureElementRef>
+                                            <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesPackage:5e69"/>     
+                                            <limitations>
+                                                <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                                <UserProfileRef ref="NSB:UserProfile:Student" versionRef="NSB:Version:V1"/>
+                                            </limitations>
+                                            <validityParameters>
+                                                <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
+                                                <StopPlaceRef ref="NSR:StopPlace:OSloS"/>
+                                                <StopPlaceRef ref="NSR:StopPlace:Drammen"/>
+                                                <AuthorityRef ref="NSB:Authority:NSB"/>
+                                            </validityParameters>
+                                        </SpecificParameterAssignment>
+                                    </specificParameterAssignments>
+                                </TravelSpecification>
+                            </travelSpecifications>
+                        </SalesTransaction>
+                    </fareContractEntries>
+                </FareContract>
+            </fareContracts>
+            
+     
+        </SalesTransactionFrame>
+    </dataObjects>
+</PublicationDelivery>

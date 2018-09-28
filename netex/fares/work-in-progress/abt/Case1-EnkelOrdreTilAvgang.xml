@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery version="1.08:NO-NeTEx-fares:1.0" xmlns="http://www.netex.org.uk/netex">
+    <PublicationTimestamp>2018-09-04T12:00:00</PublicationTimestamp>
+    <ParticipantRef>ENT</ParticipantRef>
+    <dataObjects>
+
+        <!-- Eksempel på case nr 1:
+            
+            1.            Case 1: Enkel billett til avgang
+                    Fra til stasjon til stasjon
+                    bestemt avgang.
+                    Voksen .
+                    Seter
+                    Nsb ordinær
+                    Oslo trondheim
+-->
+
+
+        <SalesTransactionFrame id="SalesTransactionFrame" version="any">
+
+            <customers>
+                <Customer id="autogenrerert kunde" version="1">
+                    <!-- Her kunne man hatt mer info om kunden - men i dette tilfellet er kunden anonym -->
+                    <customerAccounts>
+                        <CustomerAccount id="autogenerertid" version="1">
+                            <!-- Finne noe som kan låse en konto på et gitt "sikkerhetsnivå". Dette for å hindre mindre sikre ID-måter å referere til kontoen
+                                eks lavt sikkerhetsnivå kan refereres til av en QR-kode på papir, mens et høyere sikkerhetsnivå krever eks smartkort eller mobil
+                            <SecurityLevel>
+                            -->
+                            <StartDate>2018-09-04T12:00:00</StartDate>
+                            <FareContractEntries>
+                                
+                                <SalesTransaction version="any" id="ENT:SalesTransaction:EnkelOsloTrondheim123123242342342">
+                                    <Name>Kjøp enkeltbillett fra Oslo til Trondheim </Name>
+                                 
+                                    <Date>2018-09-06T01:07:00</Date>
+                                    <FareContractRef ref="xpl:Contract:Anon001" version="any"/>
+                                    <Amount>699</Amount>
+                                    <PriceUnitRef ref="NOK"/>
+                                    <!-- Norske kroner -->
+                                    <PaymentMethod>debitCard</PaymentMethod>
+                                    <travelSpecifications>
+                                        <TravelSpecification version="any" id="ENT:TravelSpecification:EnkelOsloTrondheim123123242342342">
+                                            
+                                            <!-- Hvordan uttrykke start og slutt-tidspunkt for en billett? 
+                                            
+                                            NED I PARAMETER?
+                                            -->
+                                            <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
+                                            <EndOfValidity>2018-10-08T03:07:00</EndOfValidity>
+                                            <!-- Kommer i neste versjon av XSD (er i Nick sine eksempler)
+                                        <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesPackage:5e69"/>
+                            -->
+                                            
+                                            <specificParameterAssignments>
+                                                <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:1" order="1">
+                                                    
+                                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                                    <limitations>
+                                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                                        <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                                    </limitations>
+                                                    <validityParameters>
+                                                        
+                                                        <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
+                                                        <StopPlaceRef ref="NSR:StopPlace:OSloS"/>
+                                                        <StopPlaceRef ref="NSR:StopPlace:Drammen"/>
+                                                        <AuthorityRef ref="NSB:Authority:NSB"/>
+                                                        
+                                                    </validityParameters>
+                                                </SpecificParameterAssignment>
+                                            </specificParameterAssignments>
+                                            
+                                        </TravelSpecification>
+                                    </travelSpecifications>
+                                    <TravelDocumentRef ref="NSB:TravelDocument:Xsdsdfxdfsd">Ekstern ordrereferanse?</TravelDocumentRef>
+                                    
+                                </SalesTransaction>
+              <!--                  
+                                <CheckInEntry id="XXXXX" version="111">
+                                    <Date>2018-09-06T01:07:00</Date>
+                                    <Location>
+                                        <Centroid> ...</Centroid>
+                                    </Location>
+                                    <TariffZoneRef ref="RUT:Zone23"/>
+                                    
+                                </CheckInEntry>
+                    -->            
+                                
+                            </FareContractEntries>
+                        </CustomerAccount>
+                    </customerAccounts>
+                </Customer>
+            </customers>
+
+            <!--
+                
+                Trengs egentlig dette?
+             <customerPurchasePackages>
+                 <CustomerPurchasePackage>
+                     <validityParameterAssignments>
+                         <CustomerPurchaseParameterAssignment id="xxx">
+                             
+                         </CustomerPurchaseParameterAssignment>
+                     </validityParameterAssignments>
+                 </CustomerPurchasePackage>
+             </customerPurchasePackages>          
+            -->
+            <FareContracts>
+                <FareContract version="any" id="xpl:Contract:Anon001">
+                    <Name>Enkeltbillett reise Oslo Trondheim</Name>
+                   
+                </FareContract>
+            </FareContracts>
+
+            <typesOfTravelDocuments>
+                <TypeOfTravelDocument id="online" version="1">
+                    <HasPhoto>false</HasPhoto>
+                    <!-- None kan være alternativ for manglende "online". Teknisk sett er dog "none" korrekt, den er ikke manifestert på noe dokument -->
+                    <MediaType>none</MediaType>
+                </TypeOfTravelDocument>
+            </typesOfTravelDocuments>
+
+            <travelDocuments>
+                <TravelDocument id="randomtraveldocumentid" version="1">
+                    <TypeOfTravelDocumentRef ref="online" version="1"/>
+                </TravelDocument>
+            </travelDocuments>
+
+
+        </SalesTransactionFrame>
+    </dataObjects>
+</PublicationDelivery>

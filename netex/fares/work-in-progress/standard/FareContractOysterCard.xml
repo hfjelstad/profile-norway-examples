@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery version="1.08:NO-NeTEx-fares:1.0" xmlns="http://www.netex.org.uk/netex">
+    <PublicationTimestamp>2018-09-04T12:00:00</PublicationTimestamp>
+    <ParticipantRef>ENT</ParticipantRef>
+    <dataObjects>
+        <SalesTransactionFrame id="SalesTransactionFrame" version="any">
+            <FareContracts>
+                <!-- Example Use of an Oyster Card -->
+                <FareContract version="any" id="xpl::Oyster-12345">
+                    <Name> Anonymous Oyster card Oyster-12345 with Transactions </Name>
+                    <FareContractEntries>
+                        <SalesTransaction version="any" id="xpl::Oyster-12345@trans001@purchaseNewCard">
+                            <Name>Buy an Travel Card Oyster Card with 7 days for zones 1 and 2</Name>
+                            <Description> Card 5.00 deposit + Pass @ £30.40 </Description>
+                            <Date>2013-07-08T01:07:00</Date>
+                            <Amount>35.40</Amount>
+                        </SalesTransaction>
+                        <TravelSpecification version="any" id="xpl::Oyster-12345@trans001@purchaseNewCardAdultOysterCard">
+                            <Name>Adult Oyster Card</Name>
+                            <Date>2013-07-08T01:07:00</Date>
+                            <TypeOfFareContractEntryRef version="any" ref="tfl::purchase"/>
+                            <SalesTransactionRef version="any" ref="xpl::Oyster-12345@trans001@purchaseNewCard"/>
+                            <Amount>5.00</Amount>
+                            <StartOfValidity>2013-07-08T01:07:00</StartOfValidity>
+
+                            <!-- <SalesPackageRef version="any" ref="tfl::AdultOysterCard"/> -->
+                            <specificParameterAssignments>
+                                <SpecificParameterAssignment version="any" id="xpl::Oyster-12345@trans001@01" order="1">
+                                    <limitations>
+                                        <UserProfileRef version="any" ref="tfl::adult"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <DistributionChannelRef version="any" ref="tfl::TubeStationTicketOffices"/>
+                                    </validityParameters>
+                                </SpecificParameterAssignment>
+                            </specificParameterAssignments>
+                        </TravelSpecification>
+                        <TravelSpecification version="any" id="xpl::Oyster-
+                            12345@trans001@purchaseNewCard@TravelCardOnOyster">
+                            <Name>TravelCardOnOyster 7 Day Travel card for zones 1 and 2 </Name>
+                            <Date>2013-07-08T01:07:00</Date>
+                            <TypeOfFareContractEntryRef version="any" ref="tfl::purchase"/>
+                            <SalesTransactionRef version="any" ref="xpl::Oyster-12345@trans001@purchaseNewCard"/>
+                            <Amount>30.40</Amount>
+                            <!-- <SalesPackageRef version="any" ref="tfl::TravelCardOnOyster"/>-->
+                            <specificParameterAssignments>
+                                <SpecificParameterAssignment version="any" id="xpl::Oyster-12345@trans001@Zones_1-2" order="1">
+                                    <FareStructureElementRef version="any" ref="tfl::Zones_1-2"/>
+                                    <limitations>
+                                        <UserProfileRef version="any" ref="tfl::adult"/>
+                                    </limitations>
+                                </SpecificParameterAssignment>
+                                <SpecificParameterAssignment version="any" id="xpl::Oyster-12345@trans001@@1Week" order="2">
+                                    <Name> 1 week pass </Name>
+                                    <FareStructureElementRef version="any" ref="tfl::1WeekPass"/>
+                                </SpecificParameterAssignment>
+                            </specificParameterAssignments>
+                        </TravelSpecification>
+                        <!-- Prepay £10 O N an Travel Card Oyster Card with -->
+
+                        <SalesTransaction version="any" id="xpl::Oyster-12345@trans002@OysterTopUp">
+                            <Name>Top up Oyster card with £10 </Name>
+                            <Description> £10 </Description>
+                            <Date>2013-07-08T01:07:10</Date>
+                            <Amount>10.00</Amount>
+                        </SalesTransaction>
+                        <TravelSpecification version="any" id="xpl::Oyster-
+                            12345@trans002@OysterTopUp@OysterTopUp">
+                            <Name>Add 10 Pay as you go</Name>
+                            <Date>2013-07-08T01:07:10</Date>
+                            <TypeOfFareContractEntryRef version="any" ref="tfl::purchase"/>
+                            <SalesTransactionRef version="any" ref="xpl::Oyster-12345@trans002@OysterTopUp"/>
+                            <Amount>10</Amount>
+                            <!--         <SalesPackageRef version="any" ref="tfl::OysterTopUp"/>-->
+                            <specificParameterAssignments>
+                                <SpecificParameterAssignment version="any" id="xpl::Oyster-12345@trans002@01" order="1">
+                                    <Name>Top up ay at Kings Cross </Name>
+                                    <validityParameters>
+                                        <DistributionChannelRef version="any" ref="tfl::SelfServiceMachine"/>
+                                    </validityParameters>
+                                </SpecificParameterAssignment>
+                            </specificParameterAssignments>
+                        </TravelSpecification>
+                        <!-- Start a peak time trip inside travel zone -->
+                        <SalesTransaction version="any" id="xpl::Oyster-12345@trans003@touchIn">
+                            <Name>Oyster Touch in in a zone inside travel card </Name>
+                            <Description> Raises liability for max far £.8.40 ( £2.40) </Description>
+                            <Date>2013-07-08T01:09:00</Date>
+                            <TypeOfFareContractEntryRef version="any" ref="tfl::yellowTouchIn"/>
+                            <Amount>8.40</Amount>
+                        </SalesTransaction>
+                        <TravelSpecification version="any" id="xpl::Oyster-12345@trans003@touchIn@touchIn">
+                            <Name>Add Max fare </Name>
+                            <Date>2013-07-08T01:08:50</Date>
+                            <TypeOfFareContractEntryRef version="any" ref="tfl::yellowTouchIn"/>
+                            <SalesTransactionRef version="any" ref="xpl::Oyster-12345@trans003@touchIn"/>
+                            <Amount>8.40</Amount>
+                            <!--     <SalesPackageRef version="any" ref="tfl::PayAsYouGoFare"/>
+                       -->
+                            <specificParameterAssignments>
+                                <SpecificParameterAssignment version="any" id="xpl::Oyster-12345@trans003@01" order="1">
+                                    <Name>Touch in at Kings Cross </Name>
+                                    <FareStructureElementRef version="any" ref="tfl::Zone_1_only"/>
+                                    <limitations>
+                                        <UserProfileRef version="any" ref="tfl::adult"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ScheduledStopPointRef ref="tfl::Kings_Cross" version="any"/>
+                                        <DistributionChannelRef version="any" ref="tfl::Validator"/>
+                                    </validityParameters>
+                                    <FareDemandFactorRef version="any" ref="tfl::peak"/>
+                                </SpecificParameterAssignment>
+                            </specificParameterAssignments>
+                        </TravelSpecification>
+                        <!-- End a peak time trip inside travel zone covered by card -->
+                        <SalesTransaction version="any" id="xpl::Oyster-12345@trans004@purchase">
+                            <Name>Oyster Touch out in a zone inside travel card </Name>
+                            <Description>Raises liability for max incremental fare zones 2-8 £.8.40 ( £2.40) </Description>
+                            <Date>2013-07-08T01:09:10</Date>
+                            <TypeOfFareContractEntryRef version="any" ref="tfl::yellowTouchIn"/>
+                            <Amount>-8.40</Amount>
+                        </SalesTransaction>
+                        <TravelSpecification version="any" id="xpl::Oyster-12345@trans004@purchase@yellowTouchOut">
+                            <Name>Touch out to complete Fare within zone </Name>
+                            <Date>2013-07-08T01:09:10</Date>
+                            <TypeOfFareContractEntryRef version="any" ref="tfl::yellowTouchOut"/>
+                            <SalesTransactionRef version="any" ref="xpl::Oyster-12345@trans004@purchase"/>
+                            <Amount>0.00</Amount>
+                            <!--       <SalesPackageRef version="any" ref="tfl::PayAsYouGoFare"/>
+                     -->
+                            <specificParameterAssignments>
+                                <SpecificParameterAssignment version="any" id="xpl::Oyster-12345@trans004@01" order="1">
+                                    <Name>Touch out at Oxford Circus . </Name>
+                                    <Description>Counts as Peak because journey started before 9.00</Description>
+                                    <FareStructureElementRef version="any" ref="tfl::Zone_1_only"/>
+
+                                    <limitations>
+                                        <UserProfileRef version="any" ref="tfl::adult"/>
+                                    </limitations>
+                                    <FareDemandFactorRef version="any" ref="tfl::peak"/>
+                                </SpecificParameterAssignment>
+                                <SpecificParameterAssignment version="any" id="xpl::Oyster-12345@trans004@02" order="2">
+                                    <Name>Touch out at Oxford Circus . </Name>
+                                    <FareStructureElementRef version="any" ref="tfl::metroTrip"/>
+                                    <limitations>
+                                        <RoundTripRef version="any" ref="tfl:RoundTrip:single"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ScheduledStopPointRef ref="tfl::Oxford_Circus" version="any"/>
+                                    </validityParameters>
+                                </SpecificParameterAssignment>
+                            </specificParameterAssignments>
+                        </TravelSpecification>
+                    </FareContractEntries>
+                </FareContract>
+            </FareContracts>
+        </SalesTransactionFrame>
+    </dataObjects>
+</PublicationDelivery>

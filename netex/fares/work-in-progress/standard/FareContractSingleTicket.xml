@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery version="1.08:NO-NeTEx-fares:1.0" xmlns="http://www.netex.org.uk/netex">
+    <PublicationTimestamp>2018-09-04T12:00:00</PublicationTimestamp>
+    <ParticipantRef>ENT</ParticipantRef>
+    <dataObjects>
+        <SalesTransactionFrame id="SalesTransactionFrame" version="any">
+            <FareContracts>
+                <FareContract version="any" id="xpl:Contract:Anon001">
+                    <Name> Zone 1 Paper ticket for Cash </Name>
+
+                    <FareContractEntries>
+                        <SalesTransaction version="any" id="xpl::Anon001@trans001@purchaseTicket@Ticket">
+                            <Name>Buy Single Cash ticket for zone 1 </Name>
+                            <Description> £ 4.50 cash </Description>
+                            <Date>2013-07-08T01:07:00</Date>
+                            <Amount>4.50</Amount>
+                        </SalesTransaction>
+                        <TravelSpecification version="any" id="xpl::Anon001@trans001@purchaseTicket@Ticket">
+
+                            <Name>Single fare zone 1 </Name>
+                            <Date>2013-07-08T01:07:00</Date>
+                            <TypeOfFareContractEntryRef version="any" ref="tfl::purchase"/>
+                            <SalesTransactionRef version="any" ref="xpl::Anon001@trans001@purchaseTicket@Ticket"/>
+                            <Amount>4.50</Amount>
+                            <StartOfValidity>2013-07-08T01:07:00</StartOfValidity>
+                            <!-- Not in XSD 
+                            <SalesPackageRef version="any" ref="tfl::Ticket"/>
+                            -->
+
+                            <specificParameterAssignments>
+
+                                <SpecificParameterAssignment version="any" id="xpl::Anon001@trans001@01" order="1">
+                                    <ValidableElementRef version="any" ref="lul::metroTrip"/>
+                                </SpecificParameterAssignment>
+
+                                <SpecificParameterAssignment version="any" id="xpl::Anon001@trans001@01" order="1">
+                                    <Name>Fare zones 1 only</Name>
+                                    <Description> of purchase?</Description>
+                                    <FareStructureElementRef version="any" ref="tfl::Zone_1_only"/>
+                                    <limitations>
+                                        <FrequencyOfUseRef version="any" ref="tfl::oneTrip"/>
+                                        <UserProfileRef version="any" ref="tfl::adult"/>
+                                    </limitations>
+
+                                    <validityParameters>
+                                        <ScheduledStopPointRef ref="tfl::Kings_Cross" version="any"/>
+                                        <DistributionChannelRef version="any" ref="tfl::SelfServiceMachine"/>
+                                    </validityParameters>
+                                    <FareDemandFactorRef version="any" ref="tfl::anyTime"/>
+                                </SpecificParameterAssignment>
+
+                                <SpecificParameterAssignment version="any" id="xpl::Anon001@trans001@02" order="1">
+                                    <Name>Metro trip can be made up of multiple steps</Name>
+                                    <FareStructureElementRef version="any" ref="tfl::metroTrip"/>
+                                    <limitations>
+                                        <RoundTripRef version="any" ref="tfl::single"/>
+                                    </limitations>
+                                </SpecificParameterAssignment>
+                            </specificParameterAssignments>
+
+                        </TravelSpecification>
+                    </FareContractEntries>
+                </FareContract>
+            </FareContracts>
+        </SalesTransactionFrame>
+    </dataObjects>
+</PublicationDelivery>

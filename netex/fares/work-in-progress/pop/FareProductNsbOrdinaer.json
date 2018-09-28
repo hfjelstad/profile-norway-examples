@@ -1,0 +1,560 @@
+{
+    "id": "NSB:PreassignedFareProduct:Ordinary",
+    "nameOfClass": "PreassignedFareProduct",
+    "version": "NSB:Version:V1",
+    "name": [{
+        "lang": "nob",
+        "value": "NSB Ordinær"
+    }],
+    "typeOfFareProduct": {
+        "id": "NSB:TypeOfFareProduct:Ordinary",
+        "nameOfClass": "TypeOfFareProduct",
+        "version": "NSB:Version:V1",
+        "name": [{
+            "lang": "nob",
+            "value": "NSB Ordinær"
+        }]
+    },
+    "operatorRef": "NSB:Authority:NSB",
+    "fareStructureType": "POINT_TO_POINT_DISTANCE_FARE",
+    "chargingMoment": {
+        "id": "NSB:ChargingMoment:Prepaid",
+        "nameOfClass": "ChargingMoment",
+        "version": "NSB:Version:V1",
+        "name": [{
+            "lang": "nob",
+            "value": "NSB Ordinær"
+        }]
+    },
+    "accessRightParameterAssignments": [
+        {
+            "id": "NSB:GenericParameterAssignment:OrdinaryNotBratsbergbanen",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            
+            "validityParameters": [{
+                "id": "NSB:ScopingValidityParameter:OrdinaryNotBratsbergbanen",
+                "nameOfClass": "ScopingValidityParameter",
+                "version": "NSB:Version:V1",
+                "lineRef": "NSB:Line:52"
+            }],
+            "validityParameterAssignmentType": "NE",
+            "validityParameterGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:LuggageAllowancePushChair",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "chargingBasisType": "NORMAL",
+            "limitations": [{
+                "nameOfClass": "LuggageAllowance",
+                "ref": "NSB:LuggageAllowance:PushChair",
+                "version": "NSB:Version:V1"
+            }],
+            "limitationGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:Refunding",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "chargingBasisType": "NORMAL",
+            "limitations": [
+                {
+                    "nameOfClass": "Refunding",
+                    "ref": "NSB:Refunding:FullRefundUntilLimit",
+                    "version": "NSB:Version:V1"
+                },
+                {
+                    "nameOfClass": "Refunding",
+                    "ref": "NSB:Refunding:FeeLatestHour",
+                    "version": "NSB:Version:V1"
+                }
+            ],
+            "limitationGroupingType": "OR"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:OrdinaryEligibility",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "includes": [
+                {
+                    "id": "NSB:GenericParameterAssignment:OrdinaryEligibilityWithoutCustomerCard",
+                    "nameOfClass": "GenericParameterAssignment",
+                    "version": "NSB:Version:V1",
+                    "name": [{
+                        "lang": "nob",
+                        "value": "NSB Ordinær"
+                    }],
+                    "limitationGroupingType": "AND",
+                    "validityParameters": [],
+                    "validityParameterAssignmentType": "EQ",
+                    "validityParameterGroupingType": "AND",
+                    "includes": [
+                        {
+                            "id": "NSB:GenericParameterAssignment:OrdinaryNoCustomerCard",
+                            "nameOfClass": "GenericParameterAssignment",
+                            "version": "NSB:Version:V1",
+                            "name": [{
+                                "lang": "nob",
+                                "value": "NSB Ordinær"
+                            }],
+                            "limitations": [{
+                                "nameOfClass": "EntitlementRequired",
+                                "ref": "NSB:EntitlementRequired:CustomerCard",
+                                "version": "NSB:Version:V1"
+                            }],
+                            "limitationGroupingType": "NOT"
+                        },
+                        {
+                            "id": "NSB:GenericParameterAssignment:OrdinaryProfilesAndGroupTickets",
+                            "nameOfClass": "GenericParameterAssignment",
+                            "version": "NSB:Version:V1",
+                            "name": [{
+                                "lang": "nob",
+                                "value": "NSB Ordinær"
+                            }],
+                            "limitations": [
+                                {
+                                    "nameOfClass": "UserProfile",
+                                    "ref": "NSB:UserProfile:Adult",
+                                    "version": "NSB:Version:V1"
+                                },
+                                {
+                                    "nameOfClass": "UserProfile",
+                                    "ref": "NSB:UserProfile:Military",
+                                    "version": "NSB:Version:V1"
+                                },
+                                {
+                                    "nameOfClass": "GroupTicket",
+                                    "ref": "NSB:GroupTicket:FamilyDiscount",
+                                    "version": "NSB:Version:V1"
+                                },
+                                {
+                                    "nameOfClass": "UserProfile",
+                                    "ref": "NSB:UserProfile:Student",
+                                    "version": "NSB:Version:V1"
+                                },
+                                {
+                                    "nameOfClass": "UserProfile",
+                                    "ref": "NSB:UserProfile:Senior",
+                                    "version": "NSB:Version:V1"
+                                },
+                                {
+                                    "nameOfClass": "UserProfile",
+                                    "ref": "NSB:UserProfile:Infant",
+                                    "version": "NSB:Version:V1"
+                                },
+                                {
+                                    "nameOfClass": "UserProfile",
+                                    "ref": "NSB:UserProfile:Child",
+                                    "version": "NSB:Version:V1"
+                                }
+                            ],
+                            "limitationGroupingType": "XOR",
+                            "validityParameters": [],
+                            "validityParameterAssignmentType": "EQ",
+                            "validityParameterGroupingType": "AND",
+                            "includesGroupingType": "AND"
+                        }
+                    ],
+                    "includesGroupingType": "AND"
+                },
+                {
+                    "id": "NSB:GenericParameterAssignment:OrdinaryEligibilityWithCustomerCard",
+                    "nameOfClass": "GenericParameterAssignment",
+                    "version": "NSB:Version:V1",
+                    "name": [{
+                        "lang": "nob",
+                        "value": "NSB Ordinær"
+                    }],
+                    "limitationGroupingType": "AND",
+                    "validityParameters": [],
+                    "validityParameterAssignmentType": "EQ",
+                    "validityParameterGroupingType": "AND",
+                    "includes": [
+                        {
+                            "id": "NSB:GenericParameterAssignment:OrdinaryAdult",
+                            "nameOfClass": "GenericParameterAssignment",
+                            "version": "NSB:Version:V1",
+                            "name": [{
+                                "lang": "nob",
+                                "value": "NSB Ordinær"
+                            }],
+                            "limitations": [{
+                                "nameOfClass": "UserProfile",
+                                "ref": "NSB:UserProfile:Adult",
+                                "version": "NSB:Version:V1"
+                            }],
+                            "limitationGroupingType": "AND",
+                            "validityParameters": [],
+                            "validityParameterAssignmentType": "EQ",
+                            "validityParameterGroupingType": "AND",
+                            "includesGroupingType": "AND"
+                        },
+                        {
+                            "id": "NSB:GenericParameterAssignment:OrdinaryCustomerCard",
+                            "nameOfClass": "GenericParameterAssignment",
+                            "version": "NSB:Version:V1",
+                            "name": [{
+                                "lang": "nob",
+                                "value": "NSB Ordinær"
+                            }],
+                            "limitations": [{
+                                "nameOfClass": "EntitlementRequired",
+                                "ref": "NSB:EntitlementRequired:CustomerCard",
+                                "version": "NSB:Version:V1"
+                            }],
+                            "limitationGroupingType": "AND",
+                            "validityParameters": [],
+                            "validityParameterAssignmentType": "EQ",
+                            "validityParameterGroupingType": "AND",
+                            "includesGroupingType": "AND"
+                        }
+                    ],
+                    "includesGroupingType": "AND"
+                }
+            ],
+            "includesGroupingType": "XOR"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:OrdinaryZoneRestriction",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "limitationGroupingType": "AND",
+            "validityParameters": [
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryZone4N",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "tariffZoneRef": "RUT:TariffZone:4N"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryZone3S",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "tariffZoneRef": "RUT:TariffZone:3S"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryZone1",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "tariffZoneRef": "RUT:TariffZone:1"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryZone2Ø",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "tariffZoneRef": "RUT:TariffZone:2Ø"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryZone3V",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "tariffZoneRef": "RUT:TariffZone:3V"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryZone2S",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "tariffZoneRef": "RUT:TariffZone:2S"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryZone4SØ",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "tariffZoneRef": "RUT:TariffZone:4SØ"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryZone2V",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "tariffZoneRef": "RUT:TariffZone:2V"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryZone4V",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "tariffZoneRef": "RUT:TariffZone:4V"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryZone3Ø",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "tariffZoneRef": "RUT:TariffZone:3Ø"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryZone4Ø",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "tariffZoneRef": "RUT:TariffZone:4Ø"
+                }
+            ],
+            "validityParameterAssignmentType": "GT",
+            "includesGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:PurchaseWindow",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "limitations": [{
+                "nameOfClass": "PurchaseWindow",
+                "ref": "NSB:PurchaseWindow:StandardFromDuration",
+                "version": "NSB:Version:V1"
+            }],
+            "limitationGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:SingleRide",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "limitations": [{
+                "nameOfClass": "FrequencyOfUse",
+                "ref": "NSB:FrequencyOfUse:Single",
+                "version": "NSB:Version:V1"
+            }],
+            "limitationGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:OrdinaryNoReplacing",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "limitations": [{
+                "nameOfClass": "Replacing",
+                "ref": "NSB:Replacing:NoReplacing",
+                "version": "NSB:Version:V1"
+            }],
+            "limitationGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:OrdinaryFareClass",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "chargingBasisType": "NORMAL",
+            "validityParameters": [{
+                "id": "NSB:ScopingValidityParameter:OrdinaryFareClass",
+                "nameOfClass": "ScopingValidityParameter",
+                "version": "NSB:Version:V1",
+                "fareClasses": ["STANDARD_CLASS"]
+            }],
+            "validityParameterAssignmentType": "EQ",
+            "validityParameterGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:LuggageAllowanceAnimal",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "chargingBasisType": "NORMAL",
+            "limitations": [{
+                "nameOfClass": "LuggageAllowance",
+                "ref": "NSB:LuggageAllowance:Animal",
+                "version": "NSB:Version:V1"
+            }],
+            "limitationGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:LuggageAllowanceSmallAnimal",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "chargingBasisType": "NORMAL",
+            "limitations": [{
+                "nameOfClass": "LuggageAllowance",
+                "ref": "NSB:LuggageAllowance:SmallAnimal",
+                "version": "NSB:Version:V1"
+            }],
+            "limitationGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:OrdinaryValidBetween",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+           
+       
+            "validityParameterAssignmentType": "EQ",
+            "validityParameterGroupingType": "AND",
+            "temporalValidityParameters": [{
+                "id": "NSB:TemporalValidityParameter:OrdinaryValidBetween",
+                "nameOfClass": "TemporalValidityParameter",
+                "version": "NSB:Version:V1",
+                "genericParameterAssignmentRef": {
+                    "nameOfClass": "GenericParameterAssignment",
+                    "ref": "NSB:GenericParameterAssignment:OrdinaryValidBetween",
+                    "version": "NSB:Version:V1"
+                },
+                "validityCondition": {
+                    "id": "NSB:ValidBetween:2018",
+                    "nameOfClass": "ValidBetween",
+                    "version": "NSB:Version:V1",
+                    "fromDate": "2018-01-01T00:00:00Z",
+                    "toDate": "2018-12-31T23:59:59Z"
+                }
+            }]
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:OrdinaryNoExchanging",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "limitations": [{
+                "nameOfClass": "Exchanging",
+                "ref": "NSB:Exchanging:NoExchange",
+                "version": "NSB:Version:V1"
+            }],
+            "limitationGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:OrdinaryNoTransfer",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "limitations": [{
+                "nameOfClass": "Transferability",
+                "ref": "NSB:Transferability:NoTransfer",
+                "version": "NSB:Version:V1"
+            }],
+            "limitationGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:OrdinaryNotTrondelagFareSection",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "limitationGroupingType": "AND",
+            "validityParameters": [
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryFareSectionTrondheimKoppera",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "fareSectionRef": "NSB:FareSection:TrondheimKoppera"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryFareSectionTrondheimSteinkjer",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "fareSectionRef": "NSB:FareSection:TrondheimSteinkjer"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryFareSectionTrondheimRoros",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "fareSectionRef": "NSB:FareSection:TrondheimRoros"
+                },
+                {
+                    "id": "NSB:ScopingValidityParameter:OrdinaryFareSectionTrondheimOppdal",
+                    "nameOfClass": "ScopingValidityParameter",
+                    "version": "NSB:Version:V1",
+                    "fareSectionRef": "NSB:FareSection:TrondheimOppdal"
+                }
+            ],
+            "validityParameterAssignmentType": "GT"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:OrdinaryNotRaumabanen",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+           
+            "validityParameters": [{
+                "id": "NSB:ScopingValidityParameter:OrdinaryFareSectionAndalsnesDombas",
+                "nameOfClass": "ScopingValidityParameter",
+                "version": "NSB:Version:V1",
+                "fareSectionRef": "NSB:FareSection:AndalsnesDombas"
+            }],
+            "validityParameterAssignmentType": "GT",
+            "validityParameterGroupingType": "AND"
+        },
+        {
+            "id": "NSB:GenericParameterAssignment:OrdinaryNoReselling",
+            "nameOfClass": "GenericParameterAssignment",
+            "version": "NSB:Version:V1",
+            "name": [{
+                "lang": "nob",
+                "value": "NSB Ordinær"
+            }],
+            "limitations": [{
+                "nameOfClass": "Reselling",
+                "ref": "NSB:Reselling:OrdinaryNoReselling",
+                "version": "NSB:Version:V1"
+            }],
+            "limitationGroupingType": "AND"
+        }
+    ],
+    "accessRightsInProduct": [{
+        "id": "NSB:AccessRightInProduct:Ordinary",
+        "nameOfClass": "AccessRightInProduct",
+        "version": "NSB:Version:V1",
+        "name": [{
+            "lang": "nob",
+            "value": "NSB Ordinær"
+        }],
+        "preassignedFareProductRef": {
+            "nameOfClass": "PreassignedFareProduct",
+            "ref": "NSB:PreassignedFareProduct:Ordinary",
+            "version": "NSB:Version:V1"
+        },
+        "validableElementRef": {
+            "nameOfClass": "ValidableElement",
+            "ref": "NSB:ValidableElement:Ordinary",
+            "version": "NSB:Version:V1"
+        }
+    }]
+}

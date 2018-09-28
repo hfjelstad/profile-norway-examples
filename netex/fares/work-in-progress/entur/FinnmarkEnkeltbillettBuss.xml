@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== Use of Fare Frame elements  ====== -->
+
+<PublicationDelivery 
+	xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+
+	<PublicationTimestamp>2018-08-15T12:51:00</PublicationTimestamp>
+	<ParticipantRef>FIN</ParticipantRef>
+	<Description>Enkeltbillett Buss</Description>
+
+	<dataObjects>
+
+		<CompositeFrame version="1" created="2018-08-15T12:51:00" id="FIN:CompositeFrame:1">
+
+		    <validityConditions>
+				<ValidBetween>
+					<FromDate>2018-03-21T00:00:00</FromDate>
+					<ToDate>2018-08-19T00:00:00</ToDate>
+				</ValidBetween>
+			</validityConditions>
+
+			<codespaces>
+				<Codespace id="fin">
+					<Xmlns>FIN</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/fin</XmlnsUrl>
+				</Codespace>
+				<Codespace id="nsr">
+					<Xmlns>NSR</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/nsr</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+
+			<frames>
+				<ResourceFrame version="1" id="FIN:ResourceFrame:1">
+					<organisations>
+						<Authority version="1" id="FIN:Authority:1">
+							<CompanyNumber>964994218</CompanyNumber>
+							<Name>Snelandia</Name>
+							<LegalName>Finnmark Fylkeskommune</LegalName>
+							<ContactDetails>
+								<Phone>78963000</Phone>
+								<Url>www.snelandia.no</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+						<Operator version="1" id="FIN:Operator:1">
+							<CompanyNumber>979437218</CompanyNumber>
+							<Name>Boreal Buss</Name>
+							<LegalName>Boreal Buss AS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email>post@boreal.no</Email>
+								<Phone>91555888</Phone>
+								<Url>https://www.boreal.no/om-boreal/kontakt/boreal-buss-as/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:2">
+							<CompanyNumber>0</CompanyNumber>
+							<Name>Svein Olav Olsen</Name>
+							<LegalName>Svein Olav Olsen</LegalName>
+							<CustomerServiceContactDetails>
+								<Email></Email>
+								<Phone></Phone>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:3">
+							<CompanyNumber>0</CompanyNumber>
+							<Name>Einar M. Røe</Name>
+							<LegalName>Einar M. Røe</LegalName>
+							<CustomerServiceContactDetails>
+								<Email></Email>
+								<Phone></Phone>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+
+				<FareFrame version="1" id="FIN:FareFrame:EnkeltbillettBuss">
+					<FrameDefaults>
+						<DefaultCurrency>NOK</DefaultCurrency>
+					</FrameDefaults>
+					<PricingParameterSet id="pps-1" version="1">
+						<pricingRules>
+							<PricingRule version="any" id="FIN:PricingRule:2x">
+								<Name>Enkeltbillett buss</Name>
+								<Description>Enkeltbillettpriser for lokale bussreiser i Finnmark</Description>
+								<Factor>2</Factor>
+							</PricingRule>
+							<DiscountingRule version="any" id="FIN:DiscountingRule:100%">
+								<DiscountAsPercentage>100</DiscountAsPercentage>
+							</DiscountingRule>
+							<DiscountingRule version="any" id="FIN:DiscountingRule:50%">
+								<DiscountAsPercentage>50</DiscountAsPercentage>
+							</DiscountingRule>
+							<DiscountingRule version="any" id="FIN:DiscountingRule:0%">
+								<DiscountAsPercentage>0</DiscountAsPercentage>
+							</DiscountingRule>
+							<LimitingRule version="any" id="FIN:LimitingRule:AdultMinMax">
+								<MinimumPrice>52</MinimumPrice>
+								<MaximumPrice>450</MaximumPrice>
+							</LimitingRule>
+							<LimitingRule version="any" id="FIN:LimitingRule:SeniorChildMilitaryStudentMinMax">
+								<MinimumPrice>26</MinimumPrice>
+								<MaximumPrice>225</MaximumPrice>
+							</LimitingRule>
+						</pricingRules>
+<!--
+						<roundings>
+							<Rounding id="tfl:Rounding:TopUpIn5PoundSteps" version="any">
+								<Name>Oyster Top ups must be in in £5 Multiples</Name>
+								<RoundingMethod>up</RoundingMethod>
+								<RoundingModulus>5</RoundingModulus>
+							</Rounding>
+							<Rounding id="tfl:Rounding:TopUpIn20PoundSteps" version="any">
+								<Name>Oyster AUTO Top ups must be in in £20 Multiples</Name>
+								<RoundingMethod>up</RoundingMethod>
+								<RoundingModulus>20</RoundingModulus>
+							</Rounding>
+						</roundings>
+						<FareDayTypeRef ref="tfl:FareDayType:DayFrom0430"/> -->
+					</PricingParameterSet>
+
+					<geographicalUnits id="FIN:geographicalUnits:km">
+						<GeographicalUnit id="FIN:GeographicalUnit:km" version="1">
+							<Name>Kilometer</Name>
+							<Distance>3</Distance>
+						</GeographicalUnit>
+					</geographicalUnits>
+<!--
+					<geographicalStructureFactors id="FIN:geographicalStructureFactors:gsf">
+						<GeographicalStructureFactor id="FIN:GeographicalStructureFactor:gsf" version="1">
+						</GeographicalStructureFactor>
+					</geographicalStructureFactors>
+-->
+					<fareStructureElements>
+						<FareStructureElement id="FIN:FareStructureElement:kmsoner" version="1">
+							<geographicalIntervals>
+								<GeographicalInterval id="FIN:geographicalIntervals:Sone1-3" version="1">
+									<Name>Sone 1-3</Name>
+									<StartGeographicalValue>0</StartGeographicalValue>
+									<EndGeographicalValue>9</EndGeographicalValue>
+									<NumberOfUnits>3</NumberOfUnits>
+									<IntervalType>distance</IntervalType>
+									<GeographicalUnitRef ref="FIN:GeographicalUnit:km"></GeographicalUnitRef>
+									<prices>
+										<GeographicalIntervalPrice id="FIN:GeographicalIntervalPrice:0-9km" version="1">
+											<Amount>52</Amount>
+										</GeographicalIntervalPrice>
+									</prices>
+								</GeographicalInterval>
+								<GeographicalInterval id="FIN:geographicalIntervals:Sone4" version="1">
+									<Name>Sone 4</Name>
+									<StartGeographicalValue>9.1</StartGeographicalValue>
+									<EndGeographicalValue>12</EndGeographicalValue>
+									<NumberOfUnits>1</NumberOfUnits>
+									<IntervalType>distance</IntervalType>
+									<GeographicalUnitRef ref="FIN:GeographicalUnit:km"></GeographicalUnitRef>
+									<prices>
+										<GeographicalIntervalPrice id="FIN:GeographicalIntervalPrice:9-12km" version="1">
+											<Amount>53</Amount>
+										</GeographicalIntervalPrice>
+									</prices>
+								</GeographicalInterval>
+								<GeographicalInterval id="FIN:geographicalIntervals:Sone5" version="1">
+									<Name>Sone 5</Name>
+									<StartGeographicalValue>12.1</StartGeographicalValue>
+									<EndGeographicalValue>15</EndGeographicalValue>
+									<NumberOfUnits>1</NumberOfUnits>
+									<IntervalType>distance</IntervalType>
+									<GeographicalUnitRef ref="FIN:GeographicalUnit:km"></GeographicalUnitRef>
+									<prices>
+										<GeographicalIntervalPrice id="FIN:GeographicalIntervalPrice:12-15km" version="1">
+											<Amount>58</Amount>
+										</GeographicalIntervalPrice>
+									</prices>
+								</GeographicalInterval>
+								<!-- Osv. ... -->
+								<GeographicalInterval id="FIN:geographicalIntervals:Sone162" version="1">
+									<Name>Sone 162</Name>
+									<StartGeographicalValue>483.1</StartGeographicalValue>
+									<EndGeographicalValue>486</EndGeographicalValue>
+									<NumberOfUnits>1</NumberOfUnits>
+									<IntervalType>distance</IntervalType>
+									<GeographicalUnitRef ref="FIN:GeographicalUnit:km"></GeographicalUnitRef>
+									<prices>
+										<GeographicalIntervalPrice id="FIN:GeographicalIntervalPrice:483-486km" version="1">
+											<Amount>450</Amount>
+										</GeographicalIntervalPrice>
+									</prices>
+								</GeographicalInterval>
+							</geographicalIntervals>
+						</FareStructureElement>
+<!--						<FareStructureElement version="any" id="tfl:FareStructureElement:Zone_1or2or2-3_TravelTimes">
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="gpa-1" version="1" order="1">
+									<limitations>
+										<RefundingRef ref="ref-1"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+						</FareStructureElement> -->
+					</fareStructureElements>
+
+					<accessRightParameterAssignments id="FIN:accessRightParameterAssignments:access-fin">
+						<GenericParameterAssignment id="FIN:GenericParameterAssignment" version="1">
+								
+						</GenericParameterAssignment>
+					</accessRightParameterAssignments>
+					
+					<usageParameters>
+<!--					<UserProfile id="up-1" version="1"></UserProfile>
+						<PenaltyPolicy id="pp-1" version="1">
+							<prices>
+								<UsageParameterPrice id="upp-1" version="1">
+									<Name>price</Name>
+									<FareStructureElementPriceRef ref=""></FareStructureElementPriceRef>
+								</UsageParameterPrice>
+								<UsageParameterPriceRef ref="ref"/>
+							</prices>
+							<PenaltyPolicyType>noTicket</PenaltyPolicyType>
+						</PenaltyPolicy>
+						<Refunding id="ref-1" version="1">
+							<prices>
+								<UsageParameterPrice id="upp-2" version="1"/>
+							</prices>
+							<Allowed>full</Allowed>
+							<RefundType>delay</RefundType>
+							<PaymentMethod>cash</PaymentMethod>
+						</Refunding>
+						<Cancelling></Cancelling> -->
+						
+						<!-- Travel Usage Parameters	
+							
+							USAGE VALIDITY PERIOD	-->
+
+						<UsageValidityPeriod id="FIN:Usagevalidityperiod:singletrip" version="1">
+							<ValidityPeriodType>singleTrip</ValidityPeriodType>
+							<UsageTrigger>purchase</UsageTrigger>
+							<UsageEnd>standardDuration</UsageEnd>
+						</UsageValidityPeriod>
+
+						<!-- FREQUENCY OF USE	-->
+
+						<FrequencyOfUse id="FIN:frequencyofuse:singletrip" version="1">
+							<FrequencyOfUseType>single</FrequencyOfUseType>
+							<MaximalFrequency>1</MaximalFrequency>
+						</FrequencyOfUse>
+						
+						<!-- INTERCHANGING	-->
+						
+						<Interchanging id="FIN:interchanging:singletrip" version="1">
+							<FromMode>bus</FromMode>
+							<ToMode>bus</ToMode>
+							<MaximumTimeToMakeATransfer>P1D</MaximumTimeToMakeATransfer>
+						</Interchanging>
+						
+						<!-- Eligibility Usage Parameters	
+							
+							GROUP TICKET	-->
+
+						<GroupTicket id="FIN:Groupticket:family" version="1">
+							<Name>Family</Name>
+							<Description>1 adult ordinary fare, unlimited amount of accompanying adults/children/youths</Description>
+							<GroupBookingFacility>groupsAllowed</GroupBookingFacility>
+<!--						<companionProfiles id="FIN:Companionprofile:adultchildyouth"></companionProfiles>	 Må definere adultchildyouth -->
+							
+
+						</GroupTicket>
+
+						<!-- USER PROFILES	-->
+
+						<UserProfile id="FIN:UserProfile:adult" version="1">
+							<Name>Adult</Name>
+							<UserType>adult</UserType>
+							<MinimumAge>16</MinimumAge>
+							<MaximumAge>66</MaximumAge>
+							<DiscountBasis>none</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:child">
+							<Name>Child</Name>
+							<MinimumAge>4</MinimumAge>
+							<MaximumAge>15</MaximumAge>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:senior">
+							<Name>Senior</Name>
+							<MinimumAge>67</MinimumAge>
+							<ProofRequired>identityDocument</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:military">
+							<Name>Military</Name>
+							<ProofRequired>identityDocument</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:student">
+							<Name>Student</Name>
+							<MinimumAge>16</MinimumAge>
+							<MaximumAge>29</MaximumAge>
+							<ProofRequired>studentCard</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:infant">
+							<Name>Infant</Name>
+							<MaximumAge>3</MaximumAge>
+							<DiscountBasis>free</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:disabled">
+							<Name>Disabled</Name>
+							<ProofRequired>medicalDocument</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						
+						<!-- COMMERCIAL PROFILE  -->
+						
+						<CommercialProfile id="FIN:CommercialProfile:employee" version="1">
+							<TypeOfConcessionRef ref="employee"></TypeOfConcessionRef>
+							<GeneralGroupOfEntitiesRef ref="Boreal Buss AS"></GeneralGroupOfEntitiesRef>
+						</CommercialProfile>
+						<CommercialProfile id="FIN:CommercialProfile:employeespouse" version="1">
+							<TypeOfConcessionRef ref="employeespouse"></TypeOfConcessionRef>
+							<GeneralGroupOfEntitiesRef ref="Boreal Buss AS"></GeneralGroupOfEntitiesRef>
+						</CommercialProfile>
+						<CommercialProfile id="FIN:CommercialProfile:employeechild" version="1">
+							<TypeOfConcessionRef ref="employeechild"></TypeOfConcessionRef>
+							<GeneralGroupOfEntitiesRef ref="Boreal Buss AS"></GeneralGroupOfEntitiesRef>
+						</CommercialProfile>
+						
+						<!-- COMPANION PROFILE  -->
+						
+						<CompanionProfile id="FIN:CompanionProfile:infant1" version="1">
+							<ParentRef ref="adult"></ParentRef>
+							<UserProfileRef ref="infant"></UserProfileRef>
+							<DiscountBasis>free</DiscountBasis>
+						</CompanionProfile>
+						<CompanionProfile id="FIN:CompanionProfile:adult1" version="1">
+							<ParentRef ref="senior"></ParentRef>
+							<UserProfileRef ref="adult"></UserProfileRef>
+							<DiscountBasis>discount</DiscountBasis>
+						</CompanionProfile>
+						<CompanionProfile id="FIN:CompanionProfile:adult2" version="1">
+							<ParentRef ref="disabled"></ParentRef>
+							<UserProfileRef ref="adult"></UserProfileRef>
+							<DiscountBasis>discount</DiscountBasis>
+						</CompanionProfile>
+						
+						<!-- LUGGAGE ALLOWANCE -->
+						
+						<LuggageAllowance id="FIN:LuggageAllowance:pushchair" version="1">
+							<Description>Baby stroller, wheel chair</Description>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>pushChair</BaggageType>
+							<LuggageChargingBasis>free</LuggageChargingBasis>
+						</LuggageAllowance>						
+						<LuggageAllowance id="FIN:LuggageAllowance:animal1" version="1">
+							<Description>Dog</Description>
+							<DiscountingRuleRef ref=""></DiscountingRuleRef>	<!-- Finn ut hva ref'en skal være her (50% av voksentakst) -->
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>animal</BaggageType>
+							<LuggageChargingBasis>chargedByItem</LuggageChargingBasis>
+						</LuggageAllowance>						
+						<LuggageAllowance id="FIN:LuggageAllowance:animal2" version="1">
+							<Description>Guard dog accompanying a blind person OR police dog accompanying a policeman on duty</Description>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>animal</BaggageType>
+							<LuggageChargingBasis>free</LuggageChargingBasis>
+						</LuggageAllowance>						
+						<LuggageAllowance id="FIN:LuggageAllowance:bicycle" version="1">
+							<Description>Bicycle</Description>
+							<DiscountingRuleRef ref=""></DiscountingRuleRef>	<!-- Finn ut hva ref'en skal være her (50% av voksentakst, maks. kr 50) -->
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>bicycle</BaggageType>
+							<LuggageChargingBasis>chargedByItem</LuggageChargingBasis>
+						</LuggageAllowance>						
+						<LuggageAllowance id="FIN:LuggageAllowance:sportingequipment" version="1">
+							<Description>Kick sledge, sledge</Description>
+							<DiscountingRuleRef ref=""></DiscountingRuleRef>	<!-- Finn ut hva ref'en skal være her (50% av voksentakst, maks. kr 50) -->
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>sportingEquipment</BaggageType>
+							<LuggageChargingBasis>chargedByItem</LuggageChargingBasis>
+						</LuggageAllowance>						
+						<LuggageAllowance id="FIN:LuggageAllowance:ski" version="1">
+							<Description>Ski</Description>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>skis</BaggageType>
+							<LuggageChargingBasis>free</LuggageChargingBasis>
+						</LuggageAllowance>						
+						<LuggageAllowance id="FIN:LuggageAllowance:handluggage1" version="1">
+							<Description>Handluggage up to 20 kg</Description>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>handLuggage</BaggageType>
+							<TotalWeight>20</TotalWeight>
+							<LuggageChargingBasis>free</LuggageChargingBasis>
+						</LuggageAllowance>						
+						<LuggageAllowance id="FIN:LuggageAllowance:handluggage2" version="1">
+							<Description>Handluggage over 20 kg</Description>
+							<DiscountingRuleRef ref=""></DiscountingRuleRef>	<!-- Finn ut hva ref'en skal være her (Special fares) -->
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>handLuggage</BaggageType>
+							<TotalWeight>20</TotalWeight>
+							<LuggageChargingBasis>chargedByWeight</LuggageChargingBasis>
+						</LuggageAllowance>						
+
+						<!-- Booking Usage Parameters
+							
+							 REPLACING -->
+							
+							<Replacing id="FIN:Replacing:singleticket" version="1">
+								<Allowed>full</Allowed>
+							</Replacing>
+							<Replacing id="FIN:Replacing:groupticket" version="1">
+								<Allowed>full</Allowed>
+							</Replacing>
+						
+						<!-- EXCHANGING -->
+						
+							<Exchanging id="FIN:Exchanging:singleticket" version="1">
+								<ExchangableTo>anyProduct</ExchangableTo>
+							</Exchanging>
+							<Exchanging id="FIN:Exchanging:groupticket" version="1">
+								<ExchangableTo>anyProduct</ExchangableTo>
+							</Exchanging>
+						
+						<!-- PURCHASE WINDOW -->
+						
+							<PurchaseWindow id="FIN:Purchasewindow:singleticket" version="1">
+								<PurchaseWhen>timeOfTravelOnly</PurchaseWhen>
+							</PurchaseWindow>
+							<PurchaseWindow id="FIN:Purchasewindow:groupticket" version="1">
+								<PurchaseWhen>advanceOnly</PurchaseWhen>
+								<MinimumPeriodBeforeDeparture>P7D</MinimumPeriodBeforeDeparture>
+							</PurchaseWindow>
+						
+						<!-- REFUNDING -->
+						
+							<Refunding id="FIN:Refunding:singleticket" version="1">
+								<Description>100% refusjon, ProofRequired=other (receipt)</Description>
+								<RefundType>unused</RefundType>
+							</Refunding>
+							<Refunding id="FIN:Refunding:groupticket" version="1">
+								<Description>100% refusjon, ProofRequired=other (receipt)</Description>
+								<RefundType>unused</RefundType>
+							</Refunding>
+						
+						<!-- RESERVING -->
+						
+							<Reserving id="FIN:Reserving:singleticket" version="1">
+								<ReservingRequirements>noReservationsPossible</ReservingRequirements>
+							</Reserving>
+							<Reserving id="FIN:Reserving:groupticket" version="1">
+								<ReservingRequirements>reservationsCompulsoryForGroups</ReservingRequirements>
+								<MinimumNumberToReserve>12</MinimumNumberToReserve>	<!-- Adults -->   
+							</Reserving>
+
+						<!-- TRANSFERABILITY -->
+						
+							<Transferability id="FIN:Transferability:cantransfer" version="1">
+								<CanTransfer>true</CanTransfer>
+							</Transferability>
+						
+						<!-- Charging Usage Parameters
+							
+							 PENALTY POLICY -->
+						
+							<PenaltyPolicy id="FIN:Penaltypolicy:penaltypolicytype" version="1">
+								<PricingRuleRef ref=""></PricingRuleRef>	<!-- Pris: 'Double fare. Min. fee: kr 300. -->
+								<PenaltyPolicyType>noTicket</PenaltyPolicyType>
+							</PenaltyPolicy>
+						
+						<!-- Cancelling Usage Parameters
+							
+							 CANCELLING -->
+
+							<Cancelling id="FIN:Cancelling:cancel" version="1"></Cancelling>
+						
+					</usageParameters>
+					
+				    <fareProducts>
+						<PreassignedFareProduct id="FIN:PreassignedFareProduct:1" version="1">
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="gpa-2" version="1" order="1">
+<!--									<limitations>
+										<RefundingRef ref=""></RefundingRef> 
+									</limitations>
+									<temporalValidityParameters>
+										<DayTypeRef ref=""></DayTypeRef>
+										<OperatingDayRef ref=""></OperatingDayRef>
+										<ValidityConditionRef ref=""></ValidityConditionRef>
+									</temporalValidityParameters> -->
+									<validityParameters>
+<!--									<DistributionChannelRef ref="dc-1" version="1"/> -->
+										<VehicleModes>bus</VehicleModes>
+<!--										<TransportSubmode>
+											<AirSubmode>SchengenAreaFlight</AirSubmode>
+										</TransportSubmode> -->
+									</validityParameters>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+						</PreassignedFareProduct>	
+						<SaleDiscountRight id="ENT:SaleDiscountRight:railcard-standard" version="1">
+							<Name>Adult  Standard Flat  fare   </Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1" order="1" id="ENT:GenericParameterAssignment:railcard@standard@Operator">
+									<validityParameters>
+										<VehicleModes>rail</VehicleModes>
+										<OperatorRef ref="ENT:Operator:1"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment version="1" order="2" id="ENT:GenericParameterAssignment:railcard@standard@UserProfile">
+									<Name>Students are ELigible</Name>
+									<limitations>
+										<UserProfileRef ref="ENT:UserProfile:standard"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+						</SaleDiscountRight>
+						<SaleDiscountRight version="1" id="ENT:SaleDiscountRight:railcard@student">
+							<Name>student Fare ,  </Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1" order="1" id="ENT:GenericParameterAssignment:railcard@student@Operator">
+									<validityParameters>
+										<VehicleModes>rail</VehicleModes>
+										<OperatorRef ref="ENT:Operator:1"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment version="1" order="2" id="ENT:GenericParameterAssignment:railcard@student@UserProfile">
+									<Name>Students are ELigible</Name>
+									<limitations>
+										<UserProfileRef ref="ENT:UserProfile:student"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+						</SaleDiscountRight>
+					</fareProducts>
+
+					<priceGroups>
+						<PriceGroup id="pg-1" version="1">
+							<Description>test</Description>
+						</PriceGroup>
+						<PriceGroup id="ENT:PriceGroup:DTA" version="1">
+							<Name>Prices for Point to Point Fare Products  - Standard</Name>
+							<members>
+								<FareProductPrice version="any" id="myfares:FareProductPrice:standard">
+									<Name>Single fare</Name>
+									<Amount>1.00</Amount>
+									<Currency>EUR</Currency>
+									<PreassignedFareProductRef ref="myfares:PreassignedFareProduct:flat"/>
+								</FareProductPrice>
+								<FareProductPrice version="1" id="ENT:FareProductPrice:railcard@standard">
+									<Name>Standard discount - all fares</Name>
+									<DiscountingRuleRef ref="ENT:DiscountingRule:5%"/>
+									<SaleDiscountRightRef ref="ENT:SaleDiscountRight:railcard@standard"/>
+								</FareProductPrice>
+								<FareProductPrice version="1" id="ENT:FareProductPrice:railcard@student">
+									<Name>Student  discount - all fares</Name>
+									<DiscountingRuleRef ref="ENT:DiscountingRule:10%"/>
+									<SaleDiscountRightRef ref="ENT:SaleDiscountRight:railcard@student"/>
+								</FareProductPrice>
+								<UsageParameterPrice version="any" id="myfares:FareProductPrice:return">
+									<Name>Return fare</Name>
+									<Amount>1.75</Amount>
+									<Currency>EUR</Currency>
+									<RoundTripRef ref="myfares:RoundTrip:return"/>
+								</UsageParameterPrice>
+								<UsageParameterPrice version="any" id="myfares:UsageParameterPrice:group">
+									<Name>Group discount - all fares</Name>
+									<FareProductPriceRef ref="myfares:FareProductPrice:standard"/>
+									<DiscountingRule version="any" id="myfares:DiscountRule:group">
+										<DiscountAsPercentage>75</DiscountAsPercentage>
+									</DiscountingRule>
+									<GroupTicketRef ref="myfares:GroupTicket:group"/>
+								</UsageParameterPrice>
+							</members>
+						</PriceGroup>
+					</priceGroups>
+
+					<distributionChannels>
+						<DistributionChannel id="dc-1" version="1">
+							<alternativeNames>
+								<AlternativeName>
+									<Name></Name>
+								</AlternativeName>
+							</alternativeNames>
+							<DistributionChannelType>agency</DistributionChannelType>
+						</DistributionChannel>
+					</distributionChannels>
+
+					<groupsOfDistributionChannels>
+						<GroupOfDistributionChannels id="godc-1" version="1">
+							<members>
+								<DistributionChannelRef ref="dc-1"></DistributionChannelRef>
+							</members>
+						</GroupOfDistributionChannels>
+					</groupsOfDistributionChannels>
+
+					<fulfilmentMethods>
+						<FulfilmentMethod id="fm-1" version="1">
+							<Name>test</Name>
+							<prices>
+								<FulfilmentMethodPrice id="fmp-1" version="1">
+									<Name>test</Name>
+								</FulfilmentMethodPrice>
+							</prices>
+						</FulfilmentMethod>
+					</fulfilmentMethods>
+
+					<typesOfTravelDocuments>
+						<TypeOfTravelDocument id="totd-1" version="1">
+							<Name>test</Name>
+							<IsCard>false</IsCard>
+						</TypeOfTravelDocument>
+					</typesOfTravelDocuments>	
+
+					<SalesOfferPackages>
+						<SalesOfferPackage id="sop-1" version="1">
+							<PrivateCode>x</PrivateCode>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="gpa-3" version="1" order="1">
+									<Name>test</Name>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment id="da-1" version="1" order="1">
+									<Name>test</Name>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<SalesOfferPackageSubstitutions>
+								<SalesOfferPackageSubstitution>
+									<WithSalesOfferPackageRef ref="sop-2" version="1"/>
+								</SalesOfferPackageSubstitution>								
+							</SalesOfferPackageSubstitutions>
+						</SalesOfferPackage>
+					</SalesOfferPackages>
+
+					<SalesOfferPackageElements>
+						<SalesOfferPackageElement id="sope-1" version="1">
+							<prices>
+								<SalesOfferPackagePriceRef ref=""></SalesOfferPackagePriceRef>
+							</prices>
+						</SalesOfferPackageElement>
+					</SalesOfferPackageElements>
+
+					<!--
+					<SalesOfferPackageSubstitutions>
+						<SalesOfferPackageSubstitution>
+							<SalesOfferPackageRef ref="sop-1" version="1"/>
+							<WithSalesOfferPackageRef ref="sop-2" version="1"></WithSalesOfferPackageRef>
+						</SalesOfferPackageSubstitution>
+					</SalesOfferPackageSubstitutions>
+					-->
+
+					<groupsOfSalesOfferPackages>
+						<GroupOfSalesOfferPackages id="gsop-1" version="1">
+							<priceGroups>
+								<PriceGroupRef ref=""></PriceGroupRef>
+							</priceGroups>
+							<fareTables>
+								<StandardFareTableRef ref=""></StandardFareTableRef>
+								<FareTableRef ref=""></FareTableRef>
+							</fareTables>
+							<SalesOfferPackageElements>
+								<SalesOfferPackageElement>
+								</SalesOfferPackageElement>
+							</SalesOfferPackageElements>
+							<members>
+								<SalesOfferPackageRef ref=""></SalesOfferPackageRef>
+							</members>
+						</GroupOfSalesOfferPackages>
+					</groupsOfSalesOfferPackages>
+
+				</FareFrame>
+
+				<SalesTransactionFrame id="stf" version="1">
+					<!-- not yet evaluated -->
+				</SalesTransactionFrame>
+
+			</frames>
+
+		</CompositeFrame>
+
+	</dataObjects>
+
+</PublicationDelivery>
