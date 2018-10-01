@@ -6,7 +6,7 @@
     <ParticipantRef>ENT</ParticipantRef>
     <dataObjects>
 
-        <!-- Eksempel på case nr 1:
+        <!-- Eksempel på case nr 6:
             
            2 Voksen
            1 barn
@@ -75,7 +75,7 @@
                                     <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
                                     <EndOfValidity>2018-10-08T03:07:00</EndOfValidity>
                                    <specificParameterAssignments>
-                                        <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:1" order="1">
+                                        <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:2" order="1">
                                             <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
                                             <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
                                             <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesPackage:5e69"/>
@@ -115,7 +115,7 @@
                                     <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
                                     <EndOfValidity>2018-10-08T03:07:00</EndOfValidity>
                                     <specificParameterAssignments>
-                                        <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:1" order="1">
+                                        <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:3" order="1">
                                             <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
                                             <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
                                             <FareStructureElementRef ref="NSB:FSE:TEN">Ikke strengt nødvendig</FareStructureElementRef>

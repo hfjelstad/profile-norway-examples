@@ -29,10 +29,11 @@
                             -->
                             <StartDate>2018-09-04T12:00:00</StartDate>
                             <FareContractEntries>
-                                
-                                <SalesTransaction version="any" id="ENT:SalesTransaction:EnkelOsloTrondheim123123242342342">
+
+                                <SalesTransaction version="any"
+                                    id="ENT:SalesTransaction:EnkelOsloTrondheim123123242342342">
                                     <Name>Kjøp enkeltbillett fra Oslo til Trondheim </Name>
-                                 
+
                                     <Date>2018-09-06T01:07:00</Date>
                                     <FareContractRef ref="xpl:Contract:Anon001" version="any"/>
                                     <Amount>699</Amount>
@@ -40,8 +41,9 @@
                                     <!-- Norske kroner -->
                                     <PaymentMethod>debitCard</PaymentMethod>
                                     <travelSpecifications>
-                                        <TravelSpecification version="any" id="ENT:TravelSpecification:EnkelOsloTrondheim123123242342342">
-                                            
+                                        <TravelSpecification version="any"
+                                            id="ENT:TravelSpecification:EnkelOsloTrondheim123123242342342">
+
                                             <!-- Hvordan uttrykke start og slutt-tidspunkt for en billett? 
                                             
                                             NED I PARAMETER?
@@ -51,33 +53,34 @@
                                             <!-- Kommer i neste versjon av XSD (er i Nick sine eksempler)
                                         <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesPackage:5e69"/>
                             -->
-                                            
+
                                             <specificParameterAssignments>
-                                                <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:1" order="1">
-                                                    
-                                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
-                                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
-                                                    <limitations>
-                                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
-                                                        <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
-                                                    </limitations>
-                                                    <validityParameters>
-                                                        
-                                                        <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
-                                                        <StopPlaceRef ref="NSR:StopPlace:OSloS"/>
-                                                        <StopPlaceRef ref="NSR:StopPlace:Drammen"/>
-                                                        <AuthorityRef ref="NSB:Authority:NSB"/>
-                                                        
-                                                    </validityParameters>
+                                                <SpecificParameterAssignment version="any"
+                                                  id="NSB:SpecificParameterAssignment:1" order="1">
+
+                                                  <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                                  <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                                  <limitations>
+                                                  <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                                  <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                                  </limitations>
+                                                  <validityParameters>
+
+                                                  <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
+                                                  <StopPlaceRef ref="NSR:StopPlace:OSloS"/>
+                                                  <StopPlaceRef ref="NSR:StopPlace:Drammen"/>
+                                                  <AuthorityRef ref="NSB:Authority:NSB"/>
+
+                                                  </validityParameters>
                                                 </SpecificParameterAssignment>
                                             </specificParameterAssignments>
-                                            
+
                                         </TravelSpecification>
                                     </travelSpecifications>
                                     <TravelDocumentRef ref="NSB:TravelDocument:Xsdsdfxdfsd">Ekstern ordrereferanse?</TravelDocumentRef>
-                                    
+
                                 </SalesTransaction>
-              <!--                  
+                                <!--                  
                                 <CheckInEntry id="XXXXX" version="111">
                                     <Date>2018-09-06T01:07:00</Date>
                                     <Location>
@@ -86,8 +89,8 @@
                                     <TariffZoneRef ref="RUT:Zone23"/>
                                     
                                 </CheckInEntry>
-                    -->            
-                                
+                    -->
+
                             </FareContractEntries>
                         </CustomerAccount>
                     </customerAccounts>
@@ -110,7 +113,7 @@
             <FareContracts>
                 <FareContract version="any" id="xpl:Contract:Anon001">
                     <Name>Enkeltbillett reise Oslo Trondheim</Name>
-                   
+
                 </FareContract>
             </FareContracts>
 
