@@ -1,0 +1,2343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== Use of Fare Frame elements  ====== -->
+
+<!-- TAKSTPRODUKTER I FINNMARK MED Tilleggsprodukt "SYKKEL"
+
+Finnmark har et vanlig km-basert taktsregulativ med 3 km-soner som går opp til 486 km.
+Maks.prisen er kr 450,- for kategorien "voksen" (2018). Takstene er registrert v.h.a. Geographical intervals
+Dette takstproduktet omfatter alle bussruter som trafikkerer Finnmark med følgende unntak:
+Bybussruter, FLEXX-ruter (bestillingsruter), ruter til/fra Finland og Russland og en flybussrute 
+
+NB! Har ikke tatt med holdeplassdata (stop points), men derimot alle linjer (ruter). I tillegg har jeg bare
+lagt inn noen få intervaller i taksttabellen (geographic intervals). 
+Det er gjort slik siden disse datamengdene er ganske omfattende.
+
+Det som er med her foreløpig er produktene "Enkeltbillett buss" og tre periodeprodukter (30-dager voksen/barn/honnør)
+-->
+
+<!-- FARE PRODUCTS IN THE COUNTY FINNMARK AND ONE SUPPLEMENT PRODUCT "BICYCLE"
+
+This county uses an ordinary kilometer based fare table with zones of 3 km length. There are 162 such zones, up to 486 km.
+Max fare is NOK 450 for the use profile "adult" (2018). The fares are handled with the use of Geographical intervals.
+This fare product consists of nearly all local bus lines in this county, with some exceptions: city lines, on demand lines, airport shuttles and lines to/from Finland and Russia. 
+
+Stop point data is not included in this xml file, but all lines are included. As regards the fare table there are just a few zones registered here (geographic intervals). 
+The fare products included are the product "Single ticket bus" ("Enkeltbillett Buss") and three monthly pass products (adult/child/senior).
+-->
+
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri"
+	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="1.0">
+
+	<PublicationTimestamp>2018-08-15T12:51:00</PublicationTimestamp>
+	<ParticipantRef>FIN</ParticipantRef>
+	<Description>Enkeltbillett Buss</Description>
+
+	<dataObjects>
+
+		<CompositeFrame version="1" created="2018-08-15T12:51:00" id="FIN:CompositeFrame:1">
+
+			<validityConditions>
+				<ValidBetween>
+					<FromDate>2018-03-21T00:00:00</FromDate>
+					<ToDate>2018-08-19T00:00:00</ToDate>
+				</ValidBetween>
+			</validityConditions>
+
+			<codespaces>
+				<Codespace id="fin">
+					<Xmlns>FIN</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/fin</XmlnsUrl>
+				</Codespace>
+				<Codespace id="nsr">
+					<Xmlns>NSR</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/nsr</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+
+			<frames>
+				<ResourceFrame version="1" id="FIN:ResourceFrame:1">
+
+					<!-- Authorities and operators -->
+					
+					<organisations>
+						<Authority version="1" id="FIN:Authority:1">
+							<CompanyNumber>964994218</CompanyNumber>
+							<Name>Snelandia</Name>
+							<LegalName>Finnmark Fylkeskommune</LegalName>
+							<ContactDetails>
+								<Phone>78963000</Phone>
+								<Url>www.snelandia.no</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+						<Operator version="1" id="FIN:Operator:1">
+							<CompanyNumber>979437218</CompanyNumber>
+							<Name>Boreal Buss</Name>
+							<LegalName>Boreal Buss AS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email>post@boreal.no</Email>
+								<Phone>91555888</Phone>
+								<Url>https://www.boreal.no/om-boreal/kontakt/boreal-buss-as/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:2">
+							<CompanyNumber>0</CompanyNumber>
+							<Name>Svein Olav Olsen</Name>
+							<LegalName>Svein Olav Olsen</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone/>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:3">
+							<CompanyNumber>0</CompanyNumber>
+							<Name>Einar M. Røe</Name>
+							<LegalName>Einar M. Røe</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone/>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:4">
+							<CompanyNumber>985154694</CompanyNumber>
+							<Name>Berlevåg Taxi</Name>
+							<LegalName>Berlevåg Taxi Leirbekk</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone>41441022</Phone>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:5">
+							<CompanyNumber>985859310</CompanyNumber>
+							<Name>Børselv Taxi</Name>
+							<LegalName>Børselv Taxi Werner Eriksen</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone>78464420</Phone>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:6">
+							<CompanyNumber>0</CompanyNumber>
+							<Name>Båtsfjord Taxi</Name>
+							<LegalName>Båtsfjord Taxisentral</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone>78983480</Phone>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:7">
+							<CompanyNumber>975862380</CompanyNumber>
+							<Name>Bugøynes Taxi</Name>
+							<LegalName>Bugøynes Taxi</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone>97691485</Phone>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:8">
+							<CompanyNumber>991293825</CompanyNumber>
+							<Name>Kirkenes Taxi AS</Name>
+							<LegalName>Kirkenes Taxi AS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone>78991397</Phone>
+								<Url>www.kirkenestaxi.no</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:9">
+							<CompanyNumber>920468802</CompanyNumber>
+							<Name>Kjøllefjord Skipsekspedisjon AS</Name>
+							<LegalName>Kjøllefjord Skipsekspedisjon AS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone>78498101</Phone>
+								<Url>http://kjollefjordtransport.com</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:10">
+							<CompanyNumber>984631960</CompanyNumber>
+							<Name>Mikkel Mathis Sara</Name>
+							<LegalName>Kautokeino Taxi, Mikkel Mathis Sara</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone>90151671</Phone>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:11">
+							<CompanyNumber>914637562</CompanyNumber>
+							<Name>Pasvik Taxi</Name>
+							<LegalName>Pasvik Taxi Kjell-Arne Johansen Tolk</LegalName>
+							<CustomerServiceContactDetails>
+								<Email>ulvestad@live.no</Email>
+								<Phone>90738005</Phone>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:12">
+							<CompanyNumber>998176476</CompanyNumber>
+							<Name>Neiden Taxi</Name>
+							<LegalName>Neiden Taxi Stein Tore Sivertsen</LegalName>
+							<CustomerServiceContactDetails>
+								<Email>neiden.taxi@hotmail.com</Email>
+								<Phone>95034586</Phone>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:13">
+							<CompanyNumber>928971015</CompanyNumber>
+							<Name>Gunnar Tore Olsen</Name>
+							<LegalName>Gunnar Tore Olsen</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone>78458805</Phone>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:14">
+							<CompanyNumber>876765632</CompanyNumber>
+							<Name>Vardø Taxi</Name>
+							<LegalName>Vardø Taxisentral ANS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone>78987371</Phone>
+								<Url>/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="FIN:Operator:15">
+							<CompanyNumber>974208849</CompanyNumber>
+							<Name>Boreal Sjø AS</Name>
+							<LegalName>Boreal Sjø AS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone>91555888</Phone>
+								<Url>https://www.boreal.no/om-boreal/organisasjon/konsernstruktur/boreal-sjo-as</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+					</organisations>
+					<groupsOfOperators>
+						<GroupOfOperators id="FIN:GroupOfOperators:Ordinær" version="1">
+							<members>
+								<OperatorRef ref="FIN:Operator:1"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:2"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:3"></OperatorRef>
+							</members>
+						</GroupOfOperators>
+						<GroupOfOperators id="FIN:GroupOfOperators:Flexx" version="1">
+							<members>
+								<OperatorRef ref="FIN:Operator:1"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:4"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:5"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:6"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:7"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:8"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:9"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:10"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:11"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:12"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:13"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:14"></OperatorRef>
+							</members>
+						</GroupOfOperators>
+						<GroupOfOperators id="FIN:GroupOfOperators:ByRingbuss" version="1">
+							<members>
+								<OperatorRef ref="FIN:Operator:1"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:8"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:11"></OperatorRef>
+								<OperatorRef ref="FIN:Operator:14"></OperatorRef>
+							</members>
+						</GroupOfOperators>
+						<GroupOfOperators id="FIN:GroupOfOperators:Hurtigbåt" version="1">
+							<members>
+								<OperatorRef ref="FIN:Operator:15"></OperatorRef>
+							</members>
+						</GroupOfOperators>
+					</groupsOfOperators>
+				</ResourceFrame>
+
+				<ServiceFrame version="1" id="FIN:ServiceFrame:Finnmark">
+					<!-- Lines  -->
+					<lines>
+
+						<!-- Lokale ordinære bussruter -->
+
+						<Line version="1" id="FIN:Line:060">
+							<Name>060 Alta-Karasjok-Kirkenes</Name>
+							<PublicCode>060</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:061">
+							<Name>061 Alta-Hammerfest</Name>
+							<PublicCode>061</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:062">
+							<Name>062 Alta-Olderfjord-Honningsvåg</Name>
+							<PublicCode>062</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:063">
+							<Name>063 Karasjok-Lakselv-Olderfjord-Hammerfest</Name>
+							<PublicCode>063</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:064">
+							<Name>064 Vadsø-Vardø</Name>
+							<PublicCode>064</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:066">
+							<Name>066 Kirkenes-Ifjord-Hammerfest</Name>
+							<PublicCode>066</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:111">
+							<Name>111 Bjørnevatn-Hesseng-Kirkenes sentrum (Ringrute)</Name>
+							<PublicCode>111</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:111B">
+							<Name>111 Bjørnevatn-Hesseng-Kirkenes sentrum (Ringrute sommer)</Name>
+							<PublicCode>111B</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:112">
+							<Name>112 Kirkenes sentrum-Jakobsnes-Tårnet (Ringrute)</Name>
+							<PublicCode>112</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:112B">
+							<Name>112B Kirkenes sentrum-Jakobsnes-Tårnet (Ringrute sommer)</Name>
+							<PublicCode>112B</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:132">
+							<Name>132 Hammerfest-Strømsnes-Forsøl (Ringrute)</Name>
+							<PublicCode>132</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:132B">
+							<Name>132B Hammerfest-Strømsnes-Forsøl (Ringrute sommer)</Name>
+							<PublicCode>132B</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:133">
+							<Name>133 Hammerfest-Kvalsund-Hammerfest (Ringrute)</Name>
+							<PublicCode>133</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:134">
+							<Name>134 Hammerfest sykehus-Hammerfest bussterminal</Name>
+							<PublicCode>134</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:141">
+							<Name>141 Alta-Talvik-Alta (Ringrute)</Name>
+							<PublicCode>141</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:142">
+							<Name>142 Alta-Rafsbotn-Alta (Ringrute)</Name>
+							<PublicCode>142</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:143">
+							<Name>143 Alta-Eiby-Alta (Ringrute)</Name>
+							<PublicCode>143</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:144">
+							<Name>144 Alta-Aronnes-Tverrelvdalen-Alta (Ringrute)</Name>
+							<PublicCode>144</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:201">
+							<Name>201 Øksfjord-Alta</Name>
+							<PublicCode>201</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:202">
+							<Name>202 Kautokeino-Alta</Name>
+							<PublicCode>202</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:203">
+							<Name>203 Alta-Mikkelsby-Storekorsnes-Nyvoll</Name>
+							<PublicCode>203</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:205">
+							<Name>205 Klubbukt-Kvalsund</Name>
+							<PublicCode>205</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:206">
+							<Name>206 Suosjavri-Lahppoluobbal-Maze</Name>
+							<PublicCode>206</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:207">
+							<Name>207 Havøysund-Olderfjord</Name>
+							<PublicCode>207</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:208">
+							<Name>208 Saraby-Kvalsund</Name>
+							<PublicCode>208</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:209">
+							<Name>209 Gunnarnes-Tufjord</Name>
+							<PublicCode>209</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:210">
+							<Name>210 Hønseby-Kjerringholmen</Name>
+							<PublicCode>210</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:213">
+							<Name>213 Kautokeino-Stornes</Name>
+							<PublicCode>213</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:214">
+							<Name>214 Smørfjord-Olderfjord-Billefjord-Lakselv</Name>
+							<PublicCode>214</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:215">
+							<Name>215 Kjøllefjord-Kifjord-Dyfjord</Name>
+							<PublicCode>215</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:216">
+							<Name>216 Mattaluobbal-Kautokeino</Name>
+							<PublicCode>216</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:217">
+							<Name>217 Suolovuobme-Maze</Name>
+							<PublicCode>217</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:218">
+							<Name>218 Kirkenes-Neiden (Skolerute)</Name>
+							<PublicCode>218</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:219">
+							<Name>219 Polmak-Tana bru (Skolerute)</Name>
+							<PublicCode>219</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:220">
+							<Name>220 Nordvågen-Honningsvåg skole</Name>
+							<PublicCode>220</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:221">
+							<Name>221 Melkefoss-Skogfoss skole</Name>
+							<PublicCode>221</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:222">
+							<Name>222 Lanabukt-Tårnet skole</Name>
+							<PublicCode>222</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:223">
+							<Name>223 Kirkenes-Pasvik</Name>
+							<PublicCode>223</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:224">
+							<Name>224 Kirkenes-Elvenes-Lanabukt</Name>
+							<PublicCode>224</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:225">
+							<Name>225 Mortensnes-Varangerbotn</Name>
+							<PublicCode>225</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:226">
+							<Name>226 Ulvsvåg-Langfjordbotn-Burfjord</Name>
+							<PublicCode>226</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:227">
+							<Name>227 Øksfjordbotn-Øksfjord-Høgtun skole</Name>
+							<PublicCode>227</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:228">
+							<Name>228 Kvitevika-Kviby skole-Rafsbotn</Name>
+							<PublicCode>228</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:229">
+							<Name>229 Breivikbotn-Hasvik skole</Name>
+							<PublicCode>229</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:230">
+							<Name>230 Storsandnes-Talvik skole</Name>
+							<PublicCode>230</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:231">
+							<Name>231 Eiby-Bossekop-Alta (Skolerute)</Name>
+							<PublicCode>231</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:232">
+							<Name>232 Aronnes-Alta (Skolerute)</Name>
+							<PublicCode>232</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:233">
+							<Name>233 Amtmannsnes-Alta (Skolerute)</Name>
+							<PublicCode>233</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:234">
+							<Name>234 Raipas-Kaiskuru-Alta (Skolerute)</Name>
+							<PublicCode>234</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:235">
+							<Name>235 Tverrelvdalen-Alta (Skolerute)</Name>
+							<PublicCode>235</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:236">
+							<Name>236 Russeluft-Rafsbotn-Alta (Skolerute)</Name>
+							<PublicCode>236</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:237">
+							<Name>237 Torhop-Boftsa-Bonakas</Name>
+							<PublicCode>237</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:238">
+							<Name>238 Tana bru-Sirma (Skolerute)</Name>
+							<PublicCode>238</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:239">
+							<Name>239 Birkestrand-Tana bru</Name>
+							<PublicCode>239</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:240">
+							<Name>240 Masjokdalen-Tana Montessoriskole</Name>
+							<PublicCode>240</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:241">
+							<Name>241 Vadsø-Skallelv (Skolerute)</Name>
+							<PublicCode>241</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:242">
+							<Name>242 Gaska-Birkestrand</Name>
+							<PublicCode>242</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:243">
+							<Name>243 Sarnes-Seppoladalen-Honningsvåg skole</Name>
+							<PublicCode>243</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:244">
+							<Name>244 Smørfjord-Kokelv</Name>
+							<PublicCode>244</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:245">
+							<Name>245 Lakselv-Indre Billefjord</Name>
+							<PublicCode>245</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:246">
+							<Name>246 Handelsbukt-Lakselv skole</Name>
+							<PublicCode>246</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:247">
+							<Name>247 Klemetstad-Lakselv skole</Name>
+							<PublicCode>247</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:248">
+							<Name>248 Skoganvarre-Lakselv skole</Name>
+							<PublicCode>248</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:249">
+							<Name>249 Port-Valjok-Karasjok skole</Name>
+							<PublicCode>249</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:250">
+							<Name>250 Iskurasjok-Karasjok skole</Name>
+							<PublicCode>250</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:251">
+							<Name>251 Suosjavre-Karasjok skole</Name>
+							<PublicCode>251</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:252">
+							<Name>252 Beskinjarg-Karasjok skole</Name>
+							<PublicCode>252</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:253">
+							<Name>253 Friarfjord-Ifjord-Lebesby skole</Name>
+							<PublicCode>253</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:255">
+							<Name>255 Børselv skole</Name>
+							<PublicCode>255</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:256">
+							<Name>256 Bekkarfjord-Lebesby skole</Name>
+							<PublicCode>256</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:257">
+							<Name>257 Galgenes-Snattvika-Kjøllefjord skole</Name>
+							<PublicCode>257</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:258">
+							<Name>258 Alta (Skolerute ekstra)</Name>
+							<PublicCode>258</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:259">
+							<Name>259 Varangerbotn-Tana bru-Gednje-Båtsfjord</Name>
+							<PublicCode>259</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:260">
+							<Name>260 Båtsfjord-Nordskogen skole</Name>
+							<PublicCode>260</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:262">
+							<Name>262 Kamøyvær-Honningsvåg (Skolerute)</Name>
+							<PublicCode>262</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:263">
+							<Name>263 Skaidi-Kvalsund skole</Name>
+							<PublicCode>263</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:264">
+							<Name>264 Sjursjok/Suossjohka-Boftsa</Name>
+							<PublicCode>264</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:265">
+							<Name>265 Kåfjord-Mathisdalen-Alta</Name>
+							<PublicCode>265</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:266">
+							<Name>266 Kvenvikklubben-Kåfjord-Talvik</Name>
+							<PublicCode>266</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:400">
+							<Name>400 Skarvfjordhamn-Hellefjord kai (Sommerrute)</Name>
+							<PublicCode>400</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:401">
+							<Name>401 Sandøybotn-Lotre (Sommerrute)</Name>
+							<PublicCode>401</PublicCode>
+						</Line>
+						
+						<!-- Bybussruter -->
+
+						<Line version="1" id="FIN:Line:110">
+							<Name>110 Bybuss Kirkenes</Name>
+							<PublicCode>110</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:110B">
+							<Name>110B Bybuss Kirkenes (sommer)</Name>
+							<PublicCode>110</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:120">
+							<Name>120 Bybuss Honningsvåg</Name>
+							<PublicCode>120</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:130">
+							<Name>130 Bybuss Hammerfest</Name>
+							<PublicCode>130</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:130B">
+							<Name>130B Bybuss Hammerfest (sommer)</Name>
+							<PublicCode>130</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:131">
+							<Name>131 Bybuss Hammerfest-Storvannet</Name>
+							<PublicCode>131</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:131B">
+							<Name>131B Bybuss Hammerfest-Storvannet (sommer)</Name>
+							<PublicCode>131</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:140">
+							<Name>140 Bybuss Alta</Name>
+							<PublicCode>140</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:140B">
+							<Name>140B Bybuss Alta</Name>
+							<PublicCode>140</PublicCode>
+						</Line>
+						
+						<!-- Flybussruter -->
+
+						<Line version="1" id="FIN:Line:261">
+							<Name>261 Flybuss Alta</Name>
+							<PublicCode>261</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:403">
+							<Name>403 Flybuss Kirkenes</Name>
+							<PublicCode>403</PublicCode>
+						</Line>
+						
+						<!-- Flexx (bestillingsruter) -->
+						
+						<Line version="1" id="FIN:Line:801">
+							<Name>801 Sørvær-Hasvik</Name>
+							<PublicCode>801</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:802">
+							<Name>802 Kirkenes-Pasvik (Sommerrute)</Name>
+							<PublicCode>802</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:803">
+							<Name>803 Austertana-Tana bru</Name>
+							<PublicCode>803</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:804">
+							<Name>804 Vestertana-Tana bru</Name>
+							<PublicCode>804</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:805">
+							<Name>805 Polmak-Tana bru</Name>
+							<PublicCode>805</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:806">
+							<Name>806 Sirma-Tana Bru</Name>
+							<PublicCode>806</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:807">
+							<Name>807 Berlevåg-Varangerbotn</Name>
+							<PublicCode>807</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:808">
+							<Name>808 Båtsfjord-Gednje-Berlevåg</Name>
+							<PublicCode>808</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:809">
+							<Name>809 Gamvik-Mehamn</Name>
+							<PublicCode>809</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:810">
+							<Name>810 Mehamn-Mehamnelv bru-Skjånes</Name>
+							<PublicCode>810</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:811">
+							<Name>811 Kjøllefjord-Dyfjord (Sommerrute)</Name>
+							<PublicCode>811</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:812">
+							<Name>812 FlexxBy Vardø m/Kiberg</Name>
+							<PublicCode>812</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:813">
+							<Name>813 Kautokeino-Karasjok</Name>
+							<PublicCode>813</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:814">
+							<Name>814 Lakselv-Børselv-Veidnesklubben</Name>
+							<PublicCode>814</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:815">
+							<Name>815 Honningsvåg-Gjesvær</Name>
+							<PublicCode>815</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:816">
+							<Name>816 Flexx Neiden</Name>
+							<PublicCode>816</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:817">
+							<Name>817 Hønseby-Kjerringholmen (Sommerrute)</Name>
+							<PublicCode>817</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:818">
+							<Name>818 Korsfjord-Lille Lerresfjord-Korsfjord</Name>
+							<PublicCode>818</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:819">
+							<Name>819 FlexxBy Vadsø</Name>
+							<PublicCode>819</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:820">
+							<Name>820 Karasjok-Varangerbotn</Name>
+							<PublicCode>820</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:821">
+							<Name>821 Saraby-Kvalsund (Sommerrute)</Name>
+							<PublicCode>821</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:823">
+							<Name>823 Flexx Fly Nordkyn</Name>
+							<PublicCode>823</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:824">
+							<Name>824 Kirkenes-Jakobsnes-Lanabukt (Sommerrute)</Name>
+							<PublicCode>824</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:825">
+							<Name>825 Brannsletta-Bugøynes</Name>
+							<PublicCode>825</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:826">
+							<Name>826 FlexxBy Honningsvåg</Name>
+							<PublicCode>826</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:827">
+							<Name>827 Berlevåg-Kongsfjord + flybuss Berlevåg</Name>
+							<PublicCode>827</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:828">
+							<Name>828 Klubbukt-Kvalsund (Sommerrute)</Name>
+							<PublicCode>828</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:829">
+							<Name>829 Nordkyn-Ifjord-Lakselv</Name>
+							<PublicCode>829</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:830">
+							<Name>830 Myrnes-Nusvåg-Tverrfjord</Name>
+							<PublicCode>830</PublicCode>
+						</Line>
+						
+						<!-- Hurtigbåtruter -->
+						
+						<Line version="1" id="FIN:Line:310">
+							<Name>310 AltafjordXpressen</Name>
+							<PublicCode>310</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:320">
+							<Name>320 LoppaXpressen</Name>
+							<PublicCode>320</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:330">
+							<Name>330 Alta-Hammerfest (VargsundXpressen)</Name>
+							<PublicCode>330</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:340">
+							<Name>340 Rognsundet (Skolerute)</Name>
+							<PublicCode>340</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:350">
+							<Name>350 MåsøyXpressen</Name>
+							<PublicCode>350</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:360">
+							<Name>360 LangfjordXpressen</Name>
+							<PublicCode>360</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:380">
+							<Name>380 SørøysundXpressen</Name>
+							<PublicCode>380</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:390">
+							<Name>390 Lille Survik-Sennabukt</Name>
+							<PublicCode>390</PublicCode>
+						</Line>
+						
+						<!-- Ferjeruter -->
+						
+						<Line version="1" id="FIN:Line:500">
+							<Name>500 Hasvik-Øksfjord</Name>
+							<PublicCode>500</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:501">
+							<Name>501 Reserverute for rute 500/510/520</Name>
+							<PublicCode>501</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:510">
+							<Name>510 Øksfjord-Tverrfjord-Øksfjord</Name>
+							<PublicCode>510</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:520">
+							<Name>520 Øksfjord-Bergsfjord-Sør-Tverrfjord</Name>
+							<PublicCode>520</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:530">
+							<Name>530 Kongshus-Mikkelsby</Name>
+							<PublicCode>530</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:550">
+							<Name>550 Korsfjord-Nyvoll</Name>
+							<PublicCode>550</PublicCode>
+						</Line>
+						<Line version="1" id="FIN:Line:560">
+							<Name>560 Strømsnes-Kjerringholmen</Name>
+							<PublicCode>560</PublicCode>
+						</Line>
+					</lines>
+					<!--- === GROUPs OF LINEs ========= -->
+					<groupsOfLines>
+						<GroupOfLines version="1" id="FIN:GroupOfLines:1">
+							<Name>Lokalbussruter Finnmark</Name>
+							<members>
+								<LineRef version="1" ref="FIN:Line:061"/>
+								<LineRef version="1" ref="FIN:Line:062"/>
+								<LineRef version="1" ref="FIN:Line:063"/>
+								<LineRef version="1" ref="FIN:Line:064"/>
+								<LineRef version="1" ref="FIN:Line:066"/>
+								<LineRef version="1" ref="FIN:Line:111"/>
+								<LineRef version="1" ref="FIN:Line:111B"/>
+								<LineRef version="1" ref="FIN:Line:112"/>
+								<LineRef version="1" ref="FIN:Line:112B"/>
+								<LineRef version="1" ref="FIN:Line:132"/>
+								<LineRef version="1" ref="FIN:Line:132B"/>
+								<LineRef version="1" ref="FIN:Line:133"/>
+								<LineRef version="1" ref="FIN:Line:134"/>
+								<LineRef version="1" ref="FIN:Line:141"/>
+								<LineRef version="1" ref="FIN:Line:142"/>
+								<LineRef version="1" ref="FIN:Line:143"/>
+								<LineRef version="1" ref="FIN:Line:144"/>
+								<LineRef version="1" ref="FIN:Line:201"/>
+								<LineRef version="1" ref="FIN:Line:202"/>
+								<LineRef version="1" ref="FIN:Line:203"/>
+								<LineRef version="1" ref="FIN:Line:205"/>
+								<LineRef version="1" ref="FIN:Line:206"/>
+								<LineRef version="1" ref="FIN:Line:207"/>
+								<LineRef version="1" ref="FIN:Line:208"/>
+								<LineRef version="1" ref="FIN:Line:209"/>
+								<LineRef version="1" ref="FIN:Line:210"/>
+								<LineRef version="1" ref="FIN:Line:213"/>
+								<LineRef version="1" ref="FIN:Line:214"/>
+								<LineRef version="1" ref="FIN:Line:215"/>
+								<LineRef version="1" ref="FIN:Line:216"/>
+								<LineRef version="1" ref="FIN:Line:217"/>
+								<LineRef version="1" ref="FIN:Line:218"/>
+								<LineRef version="1" ref="FIN:Line:219"/>
+								<LineRef version="1" ref="FIN:Line:220"/>
+								<LineRef version="1" ref="FIN:Line:221"/>
+								<LineRef version="1" ref="FIN:Line:222"/>
+								<LineRef version="1" ref="FIN:Line:223"/>
+								<LineRef version="1" ref="FIN:Line:224"/>
+								<LineRef version="1" ref="FIN:Line:225"/>
+								<LineRef version="1" ref="FIN:Line:226"/>
+								<LineRef version="1" ref="FIN:Line:227"/>
+								<LineRef version="1" ref="FIN:Line:228"/>
+								<LineRef version="1" ref="FIN:Line:229"/>
+								<LineRef version="1" ref="FIN:Line:230"/>
+								<LineRef version="1" ref="FIN:Line:231"/>
+								<LineRef version="1" ref="FIN:Line:232"/>
+								<LineRef version="1" ref="FIN:Line:233"/>
+								<LineRef version="1" ref="FIN:Line:234"/>
+								<LineRef version="1" ref="FIN:Line:235"/>
+								<LineRef version="1" ref="FIN:Line:236"/>
+								<LineRef version="1" ref="FIN:Line:237"/>
+								<LineRef version="1" ref="FIN:Line:238"/>
+								<LineRef version="1" ref="FIN:Line:239"/>
+								<LineRef version="1" ref="FIN:Line:240"/>
+								<LineRef version="1" ref="FIN:Line:241"/>
+								<LineRef version="1" ref="FIN:Line:242"/>
+								<LineRef version="1" ref="FIN:Line:243"/>
+								<LineRef version="1" ref="FIN:Line:244"/>
+								<LineRef version="1" ref="FIN:Line:245"/>
+								<LineRef version="1" ref="FIN:Line:246"/>
+								<LineRef version="1" ref="FIN:Line:247"/>
+								<LineRef version="1" ref="FIN:Line:248"/>
+								<LineRef version="1" ref="FIN:Line:249"/>
+								<LineRef version="1" ref="FIN:Line:250"/>
+								<LineRef version="1" ref="FIN:Line:251"/>
+								<LineRef version="1" ref="FIN:Line:252"/>
+								<LineRef version="1" ref="FIN:Line:253"/>
+								<LineRef version="1" ref="FIN:Line:255"/>
+								<LineRef version="1" ref="FIN:Line:256"/>
+								<LineRef version="1" ref="FIN:Line:257"/>
+								<LineRef version="1" ref="FIN:Line:258"/>
+								<LineRef version="1" ref="FIN:Line:259"/>
+								<LineRef version="1" ref="FIN:Line:260"/>
+								<LineRef version="1" ref="FIN:Line:262"/>
+								<LineRef version="1" ref="FIN:Line:263"/>
+								<LineRef version="1" ref="FIN:Line:264"/>
+								<LineRef version="1" ref="FIN:Line:265"/>
+								<LineRef version="1" ref="FIN:Line:266"/>
+								<LineRef version="1" ref="FIN:Line:400"/>
+								<LineRef version="1" ref="FIN:Line:401"/>
+							</members>
+						</GroupOfLines>
+						<GroupOfLines version="1" id="FIN:GroupOfLines:2">
+							<Name>By- og ringbussruter Finnmark</Name>
+							<members>
+								<LineRef version="1" ref="FIN:Line:110"/>
+								<LineRef version="1" ref="FIN:Line:110B"/>
+								<LineRef version="1" ref="FIN:Line:111"/>
+								<LineRef version="1" ref="FIN:Line:111B"/>
+								<LineRef version="1" ref="FIN:Line:112"/>
+								<LineRef version="1" ref="FIN:Line:112B"/>
+								<LineRef version="1" ref="FIN:Line:120"/>
+								<LineRef version="1" ref="FIN:Line:130"/>
+								<LineRef version="1" ref="FIN:Line:130B"/>
+								<LineRef version="1" ref="FIN:Line:131"/>
+								<LineRef version="1" ref="FIN:Line:131B"/>
+								<LineRef version="1" ref="FIN:Line:132"/>
+								<LineRef version="1" ref="FIN:Line:132B"/>
+								<LineRef version="1" ref="FIN:Line:133"/>
+								<LineRef version="1" ref="FIN:Line:134"/>
+								<LineRef version="1" ref="FIN:Line:140"/>
+								<LineRef version="1" ref="FIN:Line:140B"/>
+								<LineRef version="1" ref="FIN:Line:141"/>
+								<LineRef version="1" ref="FIN:Line:142"/>
+								<LineRef version="1" ref="FIN:Line:143"/>
+								<LineRef version="1" ref="FIN:Line:144"/>
+								<LineRef version="1" ref="FIN:Line:812"/>
+								<LineRef version="1" ref="FIN:Line:819"/>
+								<LineRef version="1" ref="FIN:Line:826"/>
+							</members>
+						</GroupOfLines>
+						<GroupOfLines version="1" id="FIN:GroupOfLines:3">
+							<Name>Flybussruter Finnmark</Name>
+							<members>
+								<LineRef version="1" ref="FIN:Line:261"/>
+								<LineRef version="1" ref="FIN:Line:403"/>
+							</members>
+						</GroupOfLines>
+						<GroupOfLines version="1" id="FIN:GroupOfLines:4">
+							<Name>Flexxruter Finnmark</Name>
+							<members>
+								<LineRef version="1" ref="FIN:Line:801"/>
+								<LineRef version="1" ref="FIN:Line:802"/>
+								<LineRef version="1" ref="FIN:Line:803"/>
+								<LineRef version="1" ref="FIN:Line:804"/>
+								<LineRef version="1" ref="FIN:Line:805"/>
+								<LineRef version="1" ref="FIN:Line:806"/>
+								<LineRef version="1" ref="FIN:Line:807"/>
+								<LineRef version="1" ref="FIN:Line:808"/>
+								<LineRef version="1" ref="FIN:Line:809"/>
+								<LineRef version="1" ref="FIN:Line:810"/>
+								<LineRef version="1" ref="FIN:Line:811"/>
+								<LineRef version="1" ref="FIN:Line:812"/>
+								<LineRef version="1" ref="FIN:Line:813"/>
+								<LineRef version="1" ref="FIN:Line:814"/>
+								<LineRef version="1" ref="FIN:Line:815"/>
+								<LineRef version="1" ref="FIN:Line:816"/>
+								<LineRef version="1" ref="FIN:Line:817"/>
+								<LineRef version="1" ref="FIN:Line:818"/>
+								<LineRef version="1" ref="FIN:Line:819"/>
+								<LineRef version="1" ref="FIN:Line:820"/>
+								<LineRef version="1" ref="FIN:Line:821"/>
+								<LineRef version="1" ref="FIN:Line:823"/>
+								<LineRef version="1" ref="FIN:Line:824"/>
+								<LineRef version="1" ref="FIN:Line:825"/>
+								<LineRef version="1" ref="FIN:Line:826"/>
+								<LineRef version="1" ref="FIN:Line:827"/>
+								<LineRef version="1" ref="FIN:Line:828"/>
+								<LineRef version="1" ref="FIN:Line:829"/>
+								<LineRef version="1" ref="FIN:Line:830"/>
+							</members>
+						</GroupOfLines>
+						<GroupOfLines version="1" id="FIN:GroupOfLines:5">
+							<Name>Hurtigbåtruter Finnmark</Name>
+							<members>
+								<LineRef version="1" ref="FIN:Line:310"/>
+								<LineRef version="1" ref="FIN:Line:320"/>
+								<LineRef version="1" ref="FIN:Line:330"/>
+								<LineRef version="1" ref="FIN:Line:340"/>
+								<LineRef version="1" ref="FIN:Line:350"/>
+								<LineRef version="1" ref="FIN:Line:360"/>
+								<LineRef version="1" ref="FIN:Line:380"/>
+								<LineRef version="1" ref="FIN:Line:390"/>
+							</members>
+						</GroupOfLines>
+						<GroupOfLines version="1" id="FIN:GroupOfLines:6">
+							<Name>Ferjeruter Finnmark</Name>
+							<members>
+								<LineRef version="1" ref="FIN:Line:500"/>
+								<LineRef version="1" ref="FIN:Line:501"/>
+								<LineRef version="1" ref="FIN:Line:510"/>
+								<LineRef version="1" ref="FIN:Line:520"/>
+								<LineRef version="1" ref="FIN:Line:530"/>
+								<LineRef version="1" ref="FIN:Line:550"/>
+								<LineRef version="1" ref="FIN:Line:560"/>
+							</members>
+						</GroupOfLines>
+						<GroupOfLines version="1" id="FIN:GroupOfLines:7">
+							<Name>Finnmarkskortet HON</Name>
+							<members>
+								<LineRef version="1" ref="FIN:Line:061"/>
+								<LineRef version="1" ref="FIN:Line:062"/>
+								<LineRef version="1" ref="FIN:Line:063"/>
+								<LineRef version="1" ref="FIN:Line:064"/>
+								<LineRef version="1" ref="FIN:Line:066"/>
+								<LineRef version="1" ref="FIN:Line:111"/>
+								<LineRef version="1" ref="FIN:Line:111B"/>
+								<LineRef version="1" ref="FIN:Line:112"/>
+								<LineRef version="1" ref="FIN:Line:112B"/>
+								<LineRef version="1" ref="FIN:Line:132"/>
+								<LineRef version="1" ref="FIN:Line:132B"/>
+								<LineRef version="1" ref="FIN:Line:133"/>
+								<LineRef version="1" ref="FIN:Line:134"/>
+								<LineRef version="1" ref="FIN:Line:141"/>
+								<LineRef version="1" ref="FIN:Line:142"/>
+								<LineRef version="1" ref="FIN:Line:143"/>
+								<LineRef version="1" ref="FIN:Line:144"/>
+								<LineRef version="1" ref="FIN:Line:201"/>
+								<LineRef version="1" ref="FIN:Line:202"/>
+								<LineRef version="1" ref="FIN:Line:203"/>
+								<LineRef version="1" ref="FIN:Line:205"/>
+								<LineRef version="1" ref="FIN:Line:206"/>
+								<LineRef version="1" ref="FIN:Line:207"/>
+								<LineRef version="1" ref="FIN:Line:208"/>
+								<LineRef version="1" ref="FIN:Line:209"/>
+								<LineRef version="1" ref="FIN:Line:210"/>
+								<LineRef version="1" ref="FIN:Line:213"/>
+								<LineRef version="1" ref="FIN:Line:214"/>
+								<LineRef version="1" ref="FIN:Line:215"/>
+								<LineRef version="1" ref="FIN:Line:216"/>
+								<LineRef version="1" ref="FIN:Line:217"/>
+								<LineRef version="1" ref="FIN:Line:218"/>
+								<LineRef version="1" ref="FIN:Line:219"/>
+								<LineRef version="1" ref="FIN:Line:220"/>
+								<LineRef version="1" ref="FIN:Line:221"/>
+								<LineRef version="1" ref="FIN:Line:222"/>
+								<LineRef version="1" ref="FIN:Line:223"/>
+								<LineRef version="1" ref="FIN:Line:224"/>
+								<LineRef version="1" ref="FIN:Line:225"/>
+								<LineRef version="1" ref="FIN:Line:226"/>
+								<LineRef version="1" ref="FIN:Line:227"/>
+								<LineRef version="1" ref="FIN:Line:228"/>
+								<LineRef version="1" ref="FIN:Line:229"/>
+								<LineRef version="1" ref="FIN:Line:230"/>
+								<LineRef version="1" ref="FIN:Line:231"/>
+								<LineRef version="1" ref="FIN:Line:232"/>
+								<LineRef version="1" ref="FIN:Line:233"/>
+								<LineRef version="1" ref="FIN:Line:234"/>
+								<LineRef version="1" ref="FIN:Line:235"/>
+								<LineRef version="1" ref="FIN:Line:236"/>
+								<LineRef version="1" ref="FIN:Line:237"/>
+								<LineRef version="1" ref="FIN:Line:238"/>
+								<LineRef version="1" ref="FIN:Line:239"/>
+								<LineRef version="1" ref="FIN:Line:240"/>
+								<LineRef version="1" ref="FIN:Line:241"/>
+								<LineRef version="1" ref="FIN:Line:242"/>
+								<LineRef version="1" ref="FIN:Line:243"/>
+								<LineRef version="1" ref="FIN:Line:244"/>
+								<LineRef version="1" ref="FIN:Line:245"/>
+								<LineRef version="1" ref="FIN:Line:246"/>
+								<LineRef version="1" ref="FIN:Line:247"/>
+								<LineRef version="1" ref="FIN:Line:248"/>
+								<LineRef version="1" ref="FIN:Line:249"/>
+								<LineRef version="1" ref="FIN:Line:250"/>
+								<LineRef version="1" ref="FIN:Line:251"/>
+								<LineRef version="1" ref="FIN:Line:252"/>
+								<LineRef version="1" ref="FIN:Line:253"/>
+								<LineRef version="1" ref="FIN:Line:255"/>
+								<LineRef version="1" ref="FIN:Line:256"/>
+								<LineRef version="1" ref="FIN:Line:257"/>
+								<LineRef version="1" ref="FIN:Line:258"/>
+								<LineRef version="1" ref="FIN:Line:259"/>
+								<LineRef version="1" ref="FIN:Line:260"/>
+								<LineRef version="1" ref="FIN:Line:262"/>
+								<LineRef version="1" ref="FIN:Line:263"/>
+								<LineRef version="1" ref="FIN:Line:264"/>
+								<LineRef version="1" ref="FIN:Line:265"/>
+								<LineRef version="1" ref="FIN:Line:266"/>
+								<LineRef version="1" ref="FIN:Line:400"/>
+								<LineRef version="1" ref="FIN:Line:401"/>
+								<LineRef version="1" ref="FIN:Line:110"/>
+								<LineRef version="1" ref="FIN:Line:110B"/>
+								<LineRef version="1" ref="FIN:Line:111"/>
+								<LineRef version="1" ref="FIN:Line:111B"/>
+								<LineRef version="1" ref="FIN:Line:112"/>
+								<LineRef version="1" ref="FIN:Line:112B"/>
+								<LineRef version="1" ref="FIN:Line:120"/>
+								<LineRef version="1" ref="FIN:Line:130"/>
+								<LineRef version="1" ref="FIN:Line:130B"/>
+								<LineRef version="1" ref="FIN:Line:131"/>
+								<LineRef version="1" ref="FIN:Line:131B"/>
+								<LineRef version="1" ref="FIN:Line:132"/>
+								<LineRef version="1" ref="FIN:Line:132B"/>
+								<LineRef version="1" ref="FIN:Line:133"/>
+								<LineRef version="1" ref="FIN:Line:134"/>
+								<LineRef version="1" ref="FIN:Line:140"/>
+								<LineRef version="1" ref="FIN:Line:140B"/>
+								<LineRef version="1" ref="FIN:Line:141"/>
+								<LineRef version="1" ref="FIN:Line:142"/>
+								<LineRef version="1" ref="FIN:Line:143"/>
+								<LineRef version="1" ref="FIN:Line:144"/>
+								<LineRef version="1" ref="FIN:Line:801"/>
+								<LineRef version="1" ref="FIN:Line:802"/>
+								<LineRef version="1" ref="FIN:Line:803"/>
+								<LineRef version="1" ref="FIN:Line:804"/>
+								<LineRef version="1" ref="FIN:Line:805"/>
+								<LineRef version="1" ref="FIN:Line:806"/>
+								<LineRef version="1" ref="FIN:Line:807"/>
+								<LineRef version="1" ref="FIN:Line:808"/>
+								<LineRef version="1" ref="FIN:Line:809"/>
+								<LineRef version="1" ref="FIN:Line:810"/>
+								<LineRef version="1" ref="FIN:Line:811"/>
+								<LineRef version="1" ref="FIN:Line:812"/>
+								<LineRef version="1" ref="FIN:Line:813"/>
+								<LineRef version="1" ref="FIN:Line:814"/>
+								<LineRef version="1" ref="FIN:Line:815"/>
+								<LineRef version="1" ref="FIN:Line:816"/>
+								<LineRef version="1" ref="FIN:Line:817"/>
+								<LineRef version="1" ref="FIN:Line:818"/>
+								<LineRef version="1" ref="FIN:Line:819"/>
+								<LineRef version="1" ref="FIN:Line:820"/>
+								<LineRef version="1" ref="FIN:Line:821"/>
+								<LineRef version="1" ref="FIN:Line:823"/>
+								<LineRef version="1" ref="FIN:Line:824"/>
+								<LineRef version="1" ref="FIN:Line:825"/>
+								<LineRef version="1" ref="FIN:Line:826"/>
+								<LineRef version="1" ref="FIN:Line:827"/>
+								<LineRef version="1" ref="FIN:Line:828"/>
+								<LineRef version="1" ref="FIN:Line:829"/>
+								<LineRef version="1" ref="FIN:Line:830"/>
+								<LineRef version="1" ref="FIN:Line:500"/>
+								<LineRef version="1" ref="FIN:Line:501"/>
+								<LineRef version="1" ref="FIN:Line:510"/>
+								<LineRef version="1" ref="FIN:Line:520"/>
+								<LineRef version="1" ref="FIN:Line:530"/>
+								<LineRef version="1" ref="FIN:Line:550"/>
+								<LineRef version="1" ref="FIN:Line:560"/>
+							</members>
+						</GroupOfLines>
+					</groupsOfLines>
+				</ServiceFrame>
+
+				<FareFrame version="1" id="FIN:FareFrame:Finnmark">
+
+					<FrameDefaults>
+						<DefaultCurrency>NOK</DefaultCurrency>
+					</FrameDefaults>
+
+					<!-- Prisenhet (NOK)/Price unit -->
+					
+					<PricingParameterSet id="FIN:PricingParameterSet:Finnmark" version="1">
+						<priceUnits id="FIN:priceUnits:1">
+							<PriceUnit id="FIN:PriceUnit:NOK" version="1">
+								<Name>Norske kroner</Name>
+								<Precision>0</Precision>
+							</PriceUnit>
+						</priceUnits>
+					</PricingParameterSet>
+
+					<!-- Geografisk enhet/Geographical unit (km)  -->
+					
+					<geographicalUnits id="FIN:geographicalUnits:km">
+						<GeographicalUnit id="FIN:GeographicalUnit:km" version="1">
+							<Name>Kilometer</Name>
+							<Distance>3</Distance>
+						</GeographicalUnit>
+					</geographicalUnits>
+					
+					<!-- Takstregulativ/Fare table -->
+					
+					<geographicalIntervals id="FIN:geographicalIntervals:1">
+						<GeographicalInterval id="FIN:geographicalInterval:Sone1-3" version="1">
+							<Name>Sone 1-3</Name>
+							<StartGeographicalValue>0</StartGeographicalValue>
+							<EndGeographicalValue>9</EndGeographicalValue>
+							<NumberOfUnits>3</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="FIN:GeographicalUnit:km"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="FIN:GeographicalIntervalPrice:0-9km@Adult" version="1">
+									<Amount>52</Amount>
+								</GeographicalIntervalPrice>
+								<GeographicalIntervalPrice
+									id="FIN:GeographicalIntervalPrice:0-9km@Child" version="1">
+									<Amount>26</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="FIN:geographicalInterval:Sone4" version="1">
+							<Name>Sone 4</Name>
+							<StartGeographicalValue>9.1</StartGeographicalValue>
+							<EndGeographicalValue>12</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="FIN:GeographicalUnit:km"/>
+							<prices>
+								<GeographicalIntervalPrice id="FIN:GeographicalIntervalPrice:9-12km@Adult" version="1">
+									<Amount>53</Amount>
+								</GeographicalIntervalPrice>
+								<GeographicalIntervalPrice id="FIN:GeographicalIntervalPrice:9-12km@Child" version="1">
+									<Amount>26</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="FIN:geographicalInterval:Sone5" version="1">
+							<Name>Sone 5</Name>
+							<StartGeographicalValue>12.1</StartGeographicalValue>
+							<EndGeographicalValue>15</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="FIN:GeographicalUnit:km"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="FIN:GeographicalIntervalPrice:12-15km@Adult" version="1">
+									<Amount>58</Amount>
+								</GeographicalIntervalPrice>
+								<GeographicalIntervalPrice
+									id="FIN:GeographicalIntervalPrice:12-15km@Child" version="1">
+									<Amount>29</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<!-- Osv. ... -->
+						<GeographicalInterval id="FIN:geographicalInterval:Sone162" version="1">
+							<Name>Sone 162</Name>
+							<StartGeographicalValue>483.1</StartGeographicalValue>
+							<EndGeographicalValue>486</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="FIN:GeographicalUnit:km"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="FIN:GeographicalIntervalPrice:483-486km@Adult" version="1">
+									<Amount>450</Amount>
+								</GeographicalIntervalPrice>
+								<GeographicalIntervalPrice
+									id="FIN:GeographicalIntervalPrice:483-486km@Child" version="1">
+									<Amount>225</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+					</geographicalIntervals>
+
+					<geographicalStructureFactors id="FIN:geographicalStructureFactors:1">
+						<GeographicalStructureFactor id="FIN:GeographicalStructureFactor:Sone1-3"
+							version="1">
+							<Name>Sone 1-3</Name>
+							<GeographicalIntervalRef ref="FIN:geographicalIntervals:Sone1-3"/>
+							<GeographicalUnitRef ref="FIN:geographicalUnits:km"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="FIN:GeographicalStructureFactor:Sone4"
+							version="1">
+							<Name>Sone 4</Name>
+							<GeographicalIntervalRef ref="FIN:geographicalIntervals:Sone4"/>
+							<GeographicalUnitRef ref="FIN:geographicalUnits:km"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="FIN:GeographicalStructureFactor:Sone5"
+							version="1">
+							<Name>Sone 5</Name>
+							<GeographicalIntervalRef ref="FIN:geographicalIntervals:Sone5"/>
+							<GeographicalUnitRef ref="FIN:geographicalUnits:km"/>
+						</GeographicalStructureFactor>
+						<!-- Osv. ... -->
+						<GeographicalStructureFactor id="FIN:GeographicalStructureFactor:Sone162"
+							version="1">
+							<Name>Sone 162</Name>
+							<GeographicalIntervalRef ref="FIN:geographicalIntervals:Sone162"/>
+							<GeographicalUnitRef ref="FIN:geographicalUnits:km"/>
+						</GeographicalStructureFactor>
+					</geographicalStructureFactors>
+
+					<!-- Fare structure elements  -->
+					
+					<fareStructureElements>
+						<FareStructureElement id="FIN:FareStructureElement:kmsoner" version="1">
+							<Name>Km-basert taksttabell for buss i Finnmark 2018</Name>
+							<geographicalStructureFactors id="FIN:geographicalStructureFactors:1">
+								<GeographicalStructureFactorRef ref="FIN:GeographicalStructureFactor:Sone1-3"/>
+								<GeographicalStructureFactorRef ref="FIN:GeographicalStructureFactor:Sone4"/>
+								<GeographicalStructureFactorRef ref="FIN:GeographicalStructureFactor:Sone5"/>
+								<GeographicalStructureFactorRef ref="FIN:GeographicalStructureFactor:Sone162"/>
+							</geographicalStructureFactors>
+						</FareStructureElement>
+					</fareStructureElements>
+
+					<!-- Tariffer -->
+					
+					<tariffs>
+						<Tariff id="FIN:Tariff:EnkeltbillettBuss" version="1">
+							<ValidBetween>
+								<FromDate>2018-01-01T00:00:00</FromDate>
+								<ToDate>2018-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<AuthorityRef ref="FIN:Authority:1"/>
+							<GroupOfLinesRef ref="FIN:GroupOfLines:1"/>
+							<TariffBasis>distance</TariffBasis>
+							<fareStructureElements>
+								<FareStructureElementRef ref="FIN:FareStructureElement:kmsoner"/>
+							</fareStructureElements>
+							<PriceUnitRef ref="FIN:priceUnits:1"/>
+							<priceGroups>
+								<PriceGroupRef ref="FIN:pricegroup:1"/>
+							</priceGroups>
+						</Tariff>
+						<Tariff id="FIN:Tariff:FinnmarkskortetVOK" version="1">
+							<ValidBetween>
+								<FromDate>2018-01-01T00:00:00</FromDate>
+								<ToDate>2018-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<AuthorityRef ref="FIN:Authority:1"/>
+							<GroupOfLinesRef ref="FIN:GroupOfLines:2"/>
+							<TariffBasis>flat</TariffBasis>
+							<PriceUnitRef ref="FIN:priceUnits:1"/>
+							<priceGroups>
+								<PriceGroupRef ref="FIN:priceGroups:FinnmarkskortetVOK"/>
+							</priceGroups>
+						</Tariff>
+						<Tariff id="FIN:Tariff:FinnmarkskortetBARN" version="1">
+							<ValidBetween>
+								<FromDate>2018-01-01T00:00:00</FromDate>
+								<ToDate>2018-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<AuthorityRef ref="FIN:Authority:1"/>
+							<GroupOfLinesRef ref="FIN:GroupOfLines:2"/>
+							<TariffBasis>flat</TariffBasis>
+							<PriceUnitRef ref="FIN:priceUnits:1"/>
+							<priceGroups>
+								<PriceGroupRef ref="FIN:priceGroups:FinnmarkskortetBARN"/>
+							</priceGroups>
+						</Tariff>
+						<Tariff id="FIN:Tariff:FinnmarkskortetHON" version="1">
+							<ValidBetween>
+								<FromDate>2018-01-01T00:00:00</FromDate>
+								<ToDate>2018-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<AuthorityRef ref="FIN:Authority:1"/>
+							<GroupOfLinesRef ref="FIN:GroupOfLines:7"/>
+							<TariffBasis>flat</TariffBasis>
+							<PriceUnitRef ref="FIN:priceUnits:1"/>
+							<priceGroups>
+								<PriceGroupRef ref="FIN:priceGroups:FinnmarkskortetHON"/>
+							</priceGroups>
+						</Tariff>
+					</tariffs>
+
+					<!-- Usage parameters -->
+					
+					<usageParameters>
+
+						<!-- Travel Usage Parameters	
+							
+							USAGE VALIDITY PERIOD	-->
+
+						<UsageValidityPeriod id="FIN:Usagevalidityperiod:singletrip" version="1">
+							<ValidityPeriodType>singleTrip</ValidityPeriodType>
+							<UsageTrigger>purchase</UsageTrigger>
+							<UsageEnd>standardDuration</UsageEnd>
+						</UsageValidityPeriod>
+						<UsageValidityPeriod id="FIN:Usagevalidityperiod:monthlyPass" version="1">
+							<ValidityPeriodType>monthlyPass</ValidityPeriodType>
+							<UsageTrigger>purchase</UsageTrigger>
+							<UsageEnd>standardDuration</UsageEnd>
+						</UsageValidityPeriod>
+						
+						<!-- FREQUENCY OF USE	-->
+
+						<FrequencyOfUse id="FIN:frequencyofuse:singletrip" version="1">
+							<FrequencyOfUseType>single</FrequencyOfUseType>
+							<MaximalFrequency>1</MaximalFrequency>
+						</FrequencyOfUse>
+						<FrequencyOfUse id="FIN:frequencyofuse:monthlyPass" version="1">
+							<FrequencyOfUseType>unlimited</FrequencyOfUseType>
+						</FrequencyOfUse>
+						
+						<!-- INTERCHANGING	-->
+
+						<Interchanging id="FIN:interchanging:singletrip" version="1">
+							<FromMode>bus</FromMode>
+							<ToMode>bus</ToMode>
+							<MaximumTimeToMakeATransfer>P1D</MaximumTimeToMakeATransfer>
+						</Interchanging>
+
+						<!-- Eligibility Usage Parameters	
+							
+							GROUP TICKET	-->
+
+						<GroupTicket id="FIN:Groupticket:family" version="1">
+							<Name>Family</Name>
+							<Description>1 adult ordinary fare, unlimited amount of accompanying adults/children/youths, minimum travel distance = 150 km</Description>
+							<!-- Denne rabatten krever en mimimum reiselengde på 150 km. Hvordan håndtere det? --> 
+							<MinimumNumberOfPersons>2</MinimumNumberOfPersons>
+							<companionProfiles id="FIN:Companionprofile:adultchildyouth">
+								<CompanionProfile id="FIN:Companionprofile:adult" version="1">
+									<ParentRef ref="FIN:UserProfile:adult"/>
+									<UserProfileRef ref="FIN:UserProfile:adult"/>
+								</CompanionProfile>
+								<CompanionProfile id="FIN:Companionprofile:child" version="1">
+									<DiscountingRuleRef ref="FIN:DiscountingRule:75%"/>
+									<ParentRef ref="FIN:UserProfile:adult"/>
+									<UserProfileRef ref="FIN:UserProfile:child"/>
+								</CompanionProfile>
+								<CompanionProfile id="FIN:Companionprofile:youth" version="1">
+									<ParentRef ref="FIN:UserProfile:adult"/>
+									<UserProfileRef ref="FIN:UserProfile:youth"/>
+								</CompanionProfile>
+							</companionProfiles>
+							<PricingBasis>perOffer</PricingBasis> 	<!-- Er ikke sikker på denne -->
+							<GroupBookingFacility>groupsAllowed</GroupBookingFacility>
+						</GroupTicket>
+						<GroupTicket id="FIN:Groupticket:gruppe12" version="1">
+							<Name>Reisegruppe</Name>
+							<Description>Groups with 12 persons or more get 17% discount (adults)</Description>
+							<MinimumNumberOfPersons>12</MinimumNumberOfPersons>
+							<companionProfiles id="FIN:Companionprofile:allprofiles">
+								<CompanionProfile id="FIN:Companionprofile:adult2" version="1">
+									<DiscountingRuleRef ref="FIN:DiscountingRule:17%"/>
+									<ParentRef ref="FIN:UserProfile:adult"/>
+									<UserProfileRef ref="FIN:UserProfile:adult"/>
+								</CompanionProfile>
+							</companionProfiles>
+							<PricingBasis>perOffer</PricingBasis> 	<!-- Er ikke sikker på denne -->
+							<GroupBookingFacility>groupsAllowed</GroupBookingFacility>
+						</GroupTicket>
+						
+						<!-- USER PROFILES	-->
+
+						<UserProfile id="FIN:UserProfile:adult" version="1">
+							<Name>Adult</Name>
+							<DiscountingRuleRef ref="FIN:DiscountingRule:0%"></DiscountingRuleRef>
+							<prices>
+								<UsageParameterPrice id="FIN:UsageParameterPrice:Adult" version="">
+									<LimitingRuleRef ref="FIN:LimitingRule:AdultMinMax"></LimitingRuleRef>	<!-- Er det nødvendig å måtte angi LimitingRuleRef på denne måten?  --> 
+								</UsageParameterPrice>
+							</prices>
+							<UserType>adult</UserType>
+							<MinimumAge>16</MinimumAge>
+							<MaximumAge>66</MaximumAge>
+							<DiscountBasis>none</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:child">
+							<Name>Child</Name>
+							<DiscountingRuleRef ref="FIN:DiscountingRule:50%"/>
+							<MinimumAge>4</MinimumAge>
+							<MaximumAge>15</MaximumAge>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:employeechild">
+							<Name>Child of employee</Name>
+							<MinimumAge>4</MinimumAge>
+							<MaximumAge>17</MaximumAge>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:childpass">
+							<Name>Child pass</Name>
+							<DiscountingRuleRef ref="FIN:DiscountingRule:50%"/>
+							<MinimumAge>4</MinimumAge>
+							<MaximumAge>10</MaximumAge>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:senior">
+							<Name>Senior</Name>
+							<DiscountingRuleRef ref="FIN:DiscountingRule:50%"/>
+							<MinimumAge>67</MinimumAge>
+							<ProofRequired>identityDocument</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:seniorpass">
+							<Name>Senior pass</Name>
+							<MinimumAge>67</MinimumAge>
+							<ProofRequired>identityDocument</ProofRequired>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:military">
+							<Name>Military</Name>
+							<DiscountingRuleRef ref="FIN:DiscountingRule:50%"/>
+							<ProofRequired>identityDocument</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:student">
+							<Name>Student</Name>
+							<DiscountingRuleRef ref="FIN:DiscountingRule:25%"/>
+							<MinimumAge>16</MinimumAge>
+							<MaximumAge>29</MaximumAge>
+							<ProofRequired>studentCard</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:infant">
+							<Name>Infant</Name>
+							<DiscountingRuleRef ref="FIN:DiscountingRule:100%"/>
+							<MaximumAge>3</MaximumAge>
+							<DiscountBasis>free</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:disabled">
+							<Name>Disabled</Name>
+							<DiscountingRuleRef ref="FIN:DiscountingRule:50%"/>
+							<ProofRequired>medicalDocument</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:disabledpass">
+							<Name>Disabled pass</Name>
+							<ProofRequired>medicalDocument</ProofRequired>
+						</UserProfile>
+						<UserProfile version="1" id="FIN:UserProfile:youth">
+							<Name>Youth</Name>
+							<DiscountingRuleRef ref="FIN:DiscountingRule:50%"/>
+							<MinimumAge>16</MinimumAge>
+							<MaximumAge>25</MaximumAge>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						
+						<!-- COMMERCIAL PROFILE  -->
+
+						<CommercialProfile id="FIN:CommercialProfile:employee" version="1">
+							<prices>
+								<UsageParameterPrice id="FIN:UsageParameterPrice:employee" version="1">
+									<Amount>500</Amount>
+									<UserProfileRef ref="FIN:UserProfile:adult"></UserProfileRef>
+								</UsageParameterPrice>
+							</prices>
+							<GeneralGroupOfEntitiesRef ref="FIN:Operator:1"/>
+						</CommercialProfile>
+						<CommercialProfile id="FIN:CommercialProfile:employeespouse" version="1">
+							<prices>
+								<UsageParameterPrice id="FIN:UsageParameterPrice:employeespouse" version="1">
+									<Amount>1000</Amount>
+									<UserProfileRef ref="FIN:UserProfile:adult"></UserProfileRef>
+								</UsageParameterPrice>
+							</prices>
+							<GeneralGroupOfEntitiesRef ref="FIN:Operator:1"/>
+						</CommercialProfile>
+						<CommercialProfile id="FIN:CommercialProfile:employeechild" version="1">
+							<prices>
+								<UsageParameterPrice id="FIN:UsageParameterPrice:employeechild" version="1">
+									<Amount>500</Amount>
+									<UserProfileRef ref="FIN:UserProfile:employeechild"></UserProfileRef>
+								</UsageParameterPrice>
+							</prices>
+							<GeneralGroupOfEntitiesRef ref="FIN:Operator:1"/>
+						</CommercialProfile>
+						
+						<!-- COMPANION PROFILE  -->
+
+						<CompanionProfile id="FIN:CompanionProfile:infant" version="1">
+							<ParentRef ref="FIN:UserProfile:adult"/>
+							<UserProfileRef ref="FIN:UserProfile:infant"/>
+							<DiscountBasis>free</DiscountBasis>
+						</CompanionProfile>
+						<CompanionProfile id="FIN:CompanionProfile:adult1" version="1">
+							<ParentRef ref="FIN:UserProfile:senior"/>
+							<UserProfileRef ref="FIN:UserProfile:adult"/>
+							<DiscountBasis>discount</DiscountBasis>
+						</CompanionProfile>
+						<CompanionProfile id="FIN:CompanionProfile:adult2" version="1">
+							<ParentRef ref="FIN:UserProfile:disabled"/>
+							<UserProfileRef ref="FIN:UserProfile:adult"/>
+							<DiscountBasis>discount</DiscountBasis>
+						</CompanionProfile>
+
+						<!-- LUGGAGE ALLOWANCE -->
+
+						<LuggageAllowance id="FIN:LuggageAllowance:pushchair" version="1">
+							<Description>Baby stroller, wheel chair</Description>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>pushChair</BaggageType>
+							<LuggageChargingBasis>free</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="FIN:LuggageAllowance:animal1" version="1">
+							<Description>Dog</Description>
+							<DiscountingRuleRef ref=""/>
+							<!-- Finn ut hva ref'en skal være her (50% av voksentakst) -->
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>animal</BaggageType>
+							<LuggageChargingBasis>chargedByItem</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="FIN:LuggageAllowance:animal2" version="1">
+							<Description>Guard dog accompanying a blind person OR police dog accompanying a policeman on duty</Description>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>animal</BaggageType>
+							<LuggageChargingBasis>free</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="FIN:LuggageAllowance:bicycle" version="1">
+							<Description>Bicycle</Description>
+							<DiscountingRuleRef ref="FIN:DiscountingRule:50%"/>
+							<prices>
+								<UsageParameterPrice id="FIN:UsageParameterPrice:Bicycle" version="1">
+									<LimitingRule id="FIN:LimitingRule:BicycleMax@Luggage" version="1">
+										<MaximumPrice>50</MaximumPrice>
+									</LimitingRule>
+								</UsageParameterPrice>
+							</prices>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>bicycle</BaggageType>
+							<LuggageChargingBasis>chargedByItem</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="FIN:LuggageAllowance:sportingequipment" version="1">
+							<Description>Kick sledge, sledge</Description>
+							<DiscountingRuleRef ref="FIN:DiscountingRule:50%"/>
+							<prices>
+								<UsageParameterPrice id="FIN:UsageParameterPrice:sportingequipment" version="1">
+									<LimitingRule id="FIN:LimitingRule:sportingequipment" version="1">
+										<MaximumPrice>50</MaximumPrice>
+									</LimitingRule>
+								</UsageParameterPrice>
+							</prices>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>sportingEquipment</BaggageType>
+							<LuggageChargingBasis>chargedByItem</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="FIN:LuggageAllowance:ski" version="1">
+							<Description>Ski</Description>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>skis</BaggageType>
+							<LuggageChargingBasis>free</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="FIN:LuggageAllowance:handluggage1" version="1">
+							<Description>Handluggage up to 20 kg</Description>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>handLuggage</BaggageType>
+							<TotalWeight>20</TotalWeight>
+							<LuggageChargingBasis>free</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="FIN:LuggageAllowance:handluggage2" version="1">
+							<Description>Handluggage over 20 kg</Description>
+							<DiscountingRuleRef ref=""/>
+							<!-- Finn ut hva ref'en skal være her (Special fares) -->
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>handLuggage</BaggageType>
+							<TotalWeight>20</TotalWeight>
+							<LuggageChargingBasis>chargedByWeight</LuggageChargingBasis>
+						</LuggageAllowance>
+
+						<!-- Booking Usage Parameters
+							
+							 REPLACING -->
+
+						<Replacing id="FIN:Replacing:singleticket" version="1">
+							<Allowed>full</Allowed>
+						</Replacing>
+						<Replacing id="FIN:Replacing:groupticket" version="1">
+							<Allowed>full</Allowed>
+						</Replacing>
+
+						<!-- EXCHANGING -->
+
+						<Exchanging id="FIN:Exchanging:singleticket" version="1">
+							<ExchangableTo>anyProduct</ExchangableTo>
+						</Exchanging>
+						<Exchanging id="FIN:Exchanging:groupticket" version="1">
+							<ExchangableTo>anyProduct</ExchangableTo>
+						</Exchanging>
+
+						<!-- PURCHASE WINDOW -->
+
+						<PurchaseWindow id="FIN:Purchasewindow:singleticket" version="1">
+							<PurchaseWhen>timeOfTravelOnly</PurchaseWhen>
+						</PurchaseWindow>
+						<PurchaseWindow id="FIN:Purchasewindow:groupticket" version="1">
+							<PurchaseWhen>advanceOnly</PurchaseWhen>
+							<MinimumPeriodBeforeDeparture>P7D</MinimumPeriodBeforeDeparture>
+						</PurchaseWindow>
+
+						<!-- REFUNDING -->
+
+						<Refunding id="FIN:Refunding:singleticket" version="1">
+							<Description>100% refusjon, ProofRequired=other (receipt)</Description>
+							<RefundType>unused</RefundType>
+						</Refunding>
+						<Refunding id="FIN:Refunding:groupticket" version="1">
+							<Description>100% refusjon, ProofRequired=other (receipt)</Description>
+							<RefundType>unused</RefundType>
+						</Refunding>
+
+						<!-- RESERVING -->
+
+						<Reserving id="FIN:Reserving:singleticket" version="1">
+							<ReservingRequirements>noReservationsPossible</ReservingRequirements>
+						</Reserving>
+						<Reserving id="FIN:Reserving:groupticket" version="1">
+							<ReservingRequirements>reservationsCompulsoryForGroups</ReservingRequirements>
+							<MinimumNumberToReserve>12</MinimumNumberToReserve>
+							<!-- Adults -->
+						</Reserving>
+
+						<!-- TRANSFERABILITY -->
+
+						<Transferability id="FIN:Transferability:cantransfertrue" version="1">
+							<CanTransfer>true</CanTransfer>
+						</Transferability>
+
+						<!-- Charging Usage Parameters
+							
+							 PENALTY POLICY -->
+
+						<PenaltyPolicy id="FIN:Penaltypolicy:penaltypolicytype" version="1">
+							<PricingRuleRef ref=""/>
+							<!-- Pris: 'Double fare. Min. fee: kr 300. -->
+							<PenaltyPolicyType>noTicket</PenaltyPolicyType>
+						</PenaltyPolicy>
+
+						<!-- Cancelling Usage Parameters
+							
+							 CANCELLING -->
+
+						<Cancelling id="FIN:Cancelling:cancel" version="1"></Cancelling>
+
+					</usageParameters>
+
+					<!-- Takstprodukter/Fare products -->
+					
+					<fareProducts>
+
+						<PreassignedFareProduct id="FIN:PreassignedFareProduct:BusOneWayTicket" version="1">
+							<Name>Enkeltbillett Buss</Name>
+							<Description>Enkeltbillett for lokale bussruter i Finnmark</Description>
+							<SupplementProductRef ref="FIN:SupplementProduct:BicycleBus"></SupplementProductRef>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="FIN:GenericParameterAssignment:BusOneWayTicket" version="1" order="1">
+									<FareStructureElementRef ref="FIN:FareStructureElement:kmsoner"/>
+									<limitations>
+										<ReplacingRef ref="FIN:Replacing:singleticket"/>
+										<ReplacingRef ref="FIN:Replacing:groupticket"/>
+										<ExchangingRef ref="FIN:Exchanging:singleticket"/>
+										<ExchangingRef ref="FIN:Exchanging:groupticket"/>
+										<PurchaseWindowRef ref="FIN:Purchasewindow:singleticket"/>
+										<PurchaseWindowRef ref="FIN:Purchasewindow:groupticket"/>
+										<RefundingRef ref="FIN:Refunding:singleticket"/>
+										<RefundingRef ref="FIN:Refunding:groupticket"/>
+										<ReservingRef ref="FIN:Reserving:singleticket"/>
+										<ReservingRef ref="FIN:Reserving:groupticket"/>
+										<TransferabilityRef ref="FIN:Transferability:cantransfer"/>
+										<PenaltyPolicyRef ref="FIN:Penaltypolicy:penaltypolicytype"/>
+										<CancellingRef ref="FIN:Cancelling:cancel"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElement id="FIN:ValidableElement:oneWayTicketBus" version="1">
+									<Name>Enkeltbillett buss</Name>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="FIN:ValidableElementGenericParameterAssignment:BusOneWayTicket" version="1" order="1">
+											<FareStructureElementRef ref="FIN:FareStructureElement:kmsoner"/>
+											<limitations>
+												<UsageValidityPeriodRef ref="FIN:Usagevalidityperiod:singletrip"/>
+												<FrequencyOfUseRef ref="FIN:frequencyofuse:singletrip"/>
+												<InterchangingRef ref="FIN:interchanging:singletrip"/>
+												<GroupTicketRef ref="FIN:Groupticket:family"/>
+												<GroupTicketRef ref="FIN:Groupticket:gruppe12"/>
+												<UserProfileRef ref="FIN:UserProfile:child"/>
+												<UserProfileRef ref="FIN:UserProfile:senior"/>
+												<UserProfileRef ref="FIN:UserProfile:student"/>
+												<UserProfileRef ref="FIN:UserProfile:military"/>
+												<UserProfileRef ref="FIN:UserProfile:disabled"/>
+												<UserProfileRef ref="FIN:UserProfile:infant"/>
+												<CommercialProfileRef ref="FIN:CommercialProfile:employee"/>
+												<CommercialProfileRef ref="FIN:CommercialProfile:employeespouse"/>
+												<CommercialProfileRef ref="FIN:CommercialProfile:employeechild"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:pushchair"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:animal1"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:animal2"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:bicycle"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:sportingequipment"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:ski"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:handluggage1"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:handluggage2"/>
+											</limitations>
+											<validityParameters>
+												<GroupOfLinesRef ref="FIN:GroupOfLines:1"/>
+												<VehicleModes>bus</VehicleModes>
+												<AuthorityRef ref="FIN:Authority:1"/>
+												<GroupOfOperatorsRef ref="FIN:GroupOfOperators:Ordinær"></GroupOfOperatorsRef>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="FIN:AccessRightInProduct:oneWayTicketBus" version="1" order="1">
+									<Description>Enkeltbillett buss</Description>
+									<ValidableElementRef ref="FIN:ValidableElement:oneWayTicketBus" version="1"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+						</PreassignedFareProduct>
+						<PreassignedFareProduct id="FIN:PreassignedFareProduct:MonthlyPassAdultBus" version="1">
+							<Name>Periodebillett Finnmarkskortet VOK</Name>
+							<Description>30-dagers periodebillett voksen for by - og ringbussruter i Finnmark (Alta, Hammerfest, Honningsvåg, Vadsø, Vardø og Kirkenes)</Description>
+							<SupplementProductRef ref="FIN:SupplementProduct:BicycleBus"></SupplementProductRef>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="FIN:GenericParameterAssignment:MonthlyPassAdultBus" version="1" order="1">
+									<limitations>
+										<ReplacingRef ref="FIN:Replacing:singleticket"/>
+										<ExchangingRef ref="FIN:Exchanging:singleticket"/>
+<!-- 									<PurchaseWindowRef ref="FIN:Purchasewindow:singleticket"/> Må sjekke med FFK hva det skal være her -->
+										<RefundingRef ref="FIN:Refunding:singleticket"/>
+										<ReservingRef ref="FIN:Reserving:singleticket"/>
+										<TransferabilityRef ref="FIN:Transferability:cantransfertrue"/>
+										<PenaltyPolicyRef ref="FIN:Penaltypolicy:penaltypolicytype"/>
+										<CancellingRef ref="FIN:Cancelling:cancel"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElement id="FIN:ValidableElement:monthlyPassAdultBus" version="1">
+									<Name>>Periodebillett Finnmarkskortet VOK</Name>
+									<priceGroups>
+										<PriceGroupRef ref="FIN:PriceGroup:Finnmarkskortet@VOK"></PriceGroupRef>
+									</priceGroups>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="FIN:ValidableElementGenericParameterAssignment:MonthlyPassAdultBus" version="1" order="1">
+											<limitations>
+												<UsageValidityPeriodRef ref="FIN:Usagevalidityperiod:monthlyPass"/>
+												<FrequencyOfUseRef ref="FIN:frequencyofuse:monthlyPass"/>
+												<UserProfileRef ref="FIN:UserProfile:adult"/>
+												<UserProfileRef ref="FIN:UserProfile:infant"/>
+												<CommercialProfileRef ref="FIN:CommercialProfile:employee"/>
+												<CommercialProfileRef ref="FIN:CommercialProfile:employeespouse"/>
+												<CommercialProfileRef ref="FIN:CommercialProfile:employeechild"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:pushchair"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:animal1"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:animal2"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:bicycle"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:sportingequipment"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:ski"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:handluggage1"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:handluggage2"/>
+											</limitations>
+											<validityParameters>
+												<GroupOfLinesRef ref="FIN:GroupOfLines:2"/>
+												<VehicleModes>bus</VehicleModes>
+												<AuthorityRef ref="FIN:Authority:1"/>
+												<GroupOfOperatorsRef ref="FIN:GroupOfOperators:ByRingbuss"></GroupOfOperatorsRef>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="FIN:AccessRightInProduct:Finnmarkskortet@VOK" version="1" order="1">
+									<Description>Periodebillett Finnmarkskortet VOK</Description>
+									<ValidableElementRef ref="FIN:ValidableElement:monthlyPassAdultBus" version="1"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+						</PreassignedFareProduct>
+						<PreassignedFareProduct id="FIN:PreassignedFareProduct:MonthlyPassChildBus" version="1">
+							<Name>Periodebillett Finnmarkskortet BARN</Name>
+							<Description>30-dagers periodebillett voksen for by - og ringbussruter i Finnmark (Alta, Hammerfest, Honningsvåg, Vadsø, Vardø og Kirkenes)</Description>
+							<SupplementProductRef ref="FIN:SupplementProduct:BicycleBus"></SupplementProductRef>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="FIN:GenericParameterAssignment:MonthlyPassChildBus" version="1" order="1">
+									<limitations>
+										<ReplacingRef ref="FIN:Replacing:singleticket"/>
+										<ExchangingRef ref="FIN:Exchanging:singleticket"/>
+										<!-- 									<PurchaseWindowRef ref="FIN:Purchasewindow:singleticket"/> Må sjekke med FFK hva det skal være her -->
+										<RefundingRef ref="FIN:Refunding:singleticket"/>
+										<ReservingRef ref="FIN:Reserving:singleticket"/>
+										<TransferabilityRef ref="FIN:Transferability:cantransfertrue"/>
+										<PenaltyPolicyRef ref="FIN:Penaltypolicy:penaltypolicytype"/>
+										<CancellingRef ref="FIN:Cancelling:cancel"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElement id="FIN:ValidableElement:monthlyPassChildBus" version="1">
+									<Name>>Periodebillett Finnmarkskortet BARN</Name>
+									<priceGroups>
+										<PriceGroupRef ref="FIN:PriceGroup:Finnmarkskortet@BARN"></PriceGroupRef>
+									</priceGroups>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="FIN:ValidableElementGenericParameterAssignment:MonthlyPassChildBus" version="1" order="1">
+											<limitations>
+												<UsageValidityPeriodRef ref="FIN:Usagevalidityperiod:monthlyPass"/>
+												<FrequencyOfUseRef ref="FIN:frequencyofuse:monthlyPass"/>
+												<UserProfileRef ref="FIN:UserProfile:childpass"/>
+												<CommercialProfileRef ref="FIN:CommercialProfile:employeechild"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:pushchair"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:animal1"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:animal2"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:bicycle"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:sportingequipment"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:ski"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:handluggage1"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:handluggage2"/>
+											</limitations>
+											<validityParameters>
+												<GroupOfLinesRef ref="FIN:GroupOfLines:2"/>
+												<VehicleModes>bus</VehicleModes>
+												<AuthorityRef ref="FIN:Authority:1"/>
+												<GroupOfOperatorsRef ref="FIN:GroupOfOperators:ByRingbuss"></GroupOfOperatorsRef>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="FIN:AccessRightInProduct:Finnmarkskortet@BARN" version="1" order="1">
+									<Description>Periodebillett Finnmarkskortet BARN</Description>
+									<ValidableElementRef ref="FIN:ValidableElement:monthlyPassChildBus" version="1"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+						</PreassignedFareProduct>
+						<PreassignedFareProduct id="FIN:PreassignedFareProduct:MonthlyPassSenior" version="1">
+							<Name>Periodebillett Finnmarkskortet HON</Name>
+							<Description>30-dagers periodebillett honnør/ufør for buss -og hurtigbåtruter i Finnmark</Description>
+							<SupplementProductRef ref="FIN:SupplementProduct:BicycleBus"></SupplementProductRef>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="FIN:GenericParameterAssignment:MonthlyPassSenior" version="1" order="1">
+									<limitations>
+										<ReplacingRef ref="FIN:Replacing:singleticket"/>
+										<ExchangingRef ref="FIN:Exchanging:singleticket"/>
+										<!-- 									<PurchaseWindowRef ref="FIN:Purchasewindow:singleticket"/> Må sjekke med FFK hva det skal være her -->
+										<RefundingRef ref="FIN:Refunding:singleticket"/>
+										<ReservingRef ref="FIN:Reserving:singleticket"/>
+										<TransferabilityRef ref="FIN:Transferability:cantransfertrue"/>
+										<PenaltyPolicyRef ref="FIN:Penaltypolicy:penaltypolicytype"/>
+										<CancellingRef ref="FIN:Cancelling:cancel"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElement id="FIN:ValidableElement:monthlyPassSenior" version="1">
+									<Name>Periodebillett Finnmarkskortet HON</Name>
+									<priceGroups>
+										<PriceGroupRef ref="FIN:PriceGroup:Finnmarkskortet@HON"></PriceGroupRef>
+									</priceGroups>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="FIN:ValidableElementGenericParameterAssignment:MonthlyPassSenior" version="1" order="1">
+											<limitations>
+												<UsageValidityPeriodRef ref="FIN:Usagevalidityperiod:monthlyPass"/>
+												<FrequencyOfUseRef ref="FIN:frequencyofuse:monthlyPass"/>
+												<UserProfileRef ref="FIN:UserProfile:seniorpass"/>
+												<UserProfileRef ref="FIN:UserProfile:disabledpass"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:pushchair"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:animal1"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:animal2"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:bicycle"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:sportingequipment"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:ski"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:handluggage1"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:handluggage2"/>
+											</limitations>
+											<validityParameters>
+												<GroupOfLinesRef ref="FIN:GroupOfLines:7"/>
+												<VehicleModes>bus</VehicleModes>
+												<AuthorityRef ref="FIN:Authority:1"/>
+												<GroupOfOperatorsRef ref="FIN:GroupOfOperators:Ordinær"></GroupOfOperatorsRef>
+												<GroupOfOperatorsRef ref="FIN:GroupOfOperators:ByRingbuss"></GroupOfOperatorsRef>
+												<GroupOfOperatorsRef ref="FIN:GroupOfOperators:Flexx"></GroupOfOperatorsRef>
+												<GroupOfOperatorsRef ref="FIN:GroupOfOperators:Hurtigbåt"></GroupOfOperatorsRef>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="FIN:AccessRightInProduct:Finnmarkskortet@HON" version="1" order="1">
+									<Description>Periodebillett Finnmarkskortet HON</Description>
+									<ValidableElementRef ref="FIN:ValidableElement:monthlyPassSenior" version="1"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+						</PreassignedFareProduct>
+						
+						<SupplementProduct id="FIN:SupplementProduct:BicycleBus" version="1">
+							<Name>Sykkel Buss</Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="FIN:GenericParameterAssignment;BicycleBus" version="1" order="1">
+									<limitations>
+										<UsageValidityPeriodRef ref="FIN:Usagevalidityperiod:singletrip"/>
+										<FrequencyOfUseRef ref="FIN:frequencyofuse:singletrip"/>
+										<InterchangingRef ref="FIN:interchanging:singletrip"/>
+										<LuggageAllowanceRef ref="FIN:LuggageAllowance:bicycle"/>
+									</limitations>
+									<validityParameters>
+										<GroupOfLinesRef ref="FIN:GroupOfLines:1"/>
+										<GroupOfLinesRef ref="FIN:GroupOfLines:2"/>
+										<GroupOfLinesRef ref="FIN:GroupOfLines:4"/>
+										<VehicleModes>bus</VehicleModes>
+										<AuthorityRef ref="FIN:Authority:1"/>
+										<AllOperatorsRef ref="All"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElement id="FIN:ValidableElement:BicycleBus" version="1">
+									<Name>Sykkel Buss</Name>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="FIN:ValidableElementGenericParameterAssignment:BicycleBus" version="1" order="1">
+											<limitations>
+												<UsageValidityPeriodRef ref="FIN:Usagevalidityperiod:singletrip"/>
+												<FrequencyOfUseRef ref="FIN:frequencyofuse:singletrip"/>
+												<InterchangingRef ref="FIN:interchanging:singletrip"/>
+												<LuggageAllowanceRef ref="FIN:LuggageAllowance:bicycle"/>
+											</limitations>
+											<validityParameters>
+												<GroupOfLinesRef ref="FIN:GroupOfLines:1"/>
+												<GroupOfLinesRef ref="FIN:GroupOfLines:2"/>
+												<GroupOfLinesRef ref="FIN:GroupOfLines:4"/>
+												<VehicleModes>bus</VehicleModes>
+												<AuthorityRef ref="FIN:Authority:1"/>
+												<AllOperatorsRef ref="All"/>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="FIN:AccessRightInProduct:BicycleBus" version="1" order="1">
+									<Description>Sykkel buss</Description>
+									<ValidableElementRef ref="FIN:ValidableElement:BicycleBus" version="1"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+						</SupplementProduct>
+						
+					</fareProducts>
+
+					<!-- Flat fares, discounts and limiting rules/Enhetspriser, moderasjoner og maks./min. priser -->
+					
+					<priceGroups>
+						<PriceGroup id="FIN:pricegroup:Enkeltbillett Buss" version="1">
+							<RoundingRef ref=""/>
+							<members id="FIN:members:1">
+								<FareProductPrice id="FIN:FareProductPrice:100%" version="1">
+									<DiscountingRule version="1" id="FIN:DiscountingRule:100%">
+										<DiscountAsPercentage>100</DiscountAsPercentage>
+									</DiscountingRule>
+								</FareProductPrice>
+								<FareProductPrice id="FIN:FareProductPrice:75%" version="1">
+									<DiscountingRule version="1" id="FIN:DiscountingRule:25%">
+										<DiscountAsPercentage>25</DiscountAsPercentage>
+									</DiscountingRule>
+								</FareProductPrice>
+								<FareProductPrice id="FIN:FareProductPrice:50%" version="1">
+									<DiscountingRule version="1" id="FIN:DiscountingRule:50%">
+										<DiscountAsPercentage>50</DiscountAsPercentage>
+									</DiscountingRule>
+								</FareProductPrice>
+								<FareProductPrice id="FIN:FareProductPrice:17%" version="1">
+									<DiscountingRule version="1" id="FIN:DiscountingRule:17%">
+										<DiscountAsPercentage>17</DiscountAsPercentage>
+									</DiscountingRule>
+								</FareProductPrice>
+								<FareProductPrice id="FIN:FareProductPrice:0%" version="1">
+									<DiscountingRule version="1" id="FIN:DiscountingRule:0%">
+										<DiscountAsPercentage>0</DiscountAsPercentage>
+									</DiscountingRule>
+								</FareProductPrice>
+								<FareProductPrice id="FIN:FareProductPrice:AdultMinMax" version="1">
+									<LimitingRule version="1" id="FIN:LimitingRule:AdultMinMax">
+										<MinimumPrice>52</MinimumPrice>
+										<MaximumPrice>450</MaximumPrice>
+									</LimitingRule>
+								</FareProductPrice>
+								<FareProductPrice id="FIN:FareProductPrice:SeniorChildMilitaryStudentMinMax" version="1">
+									<LimitingRule version="1" id="FIN:LimitingRule:SeniorChildMilitaryStudentMinMax">
+										<MinimumPrice>26</MinimumPrice>
+										<MaximumPrice>225</MaximumPrice>
+									</LimitingRule>
+								</FareProductPrice>
+								<FareProductPrice id="FIN:FareProductPrice:BicycleMax" version="1">
+									<LimitingRule id="FIN:LimitingRule:BicycleMax@PriceGroup" version="1">
+										<MaximumPrice>50</MaximumPrice>
+									</LimitingRule>
+								</FareProductPrice>
+								<FareProductPrice id="FIN:FareProductPrice:GroupTicket@Family@MinDistance" version="1">
+									<LimitingRule id="FIN:LimitingRule:GroupTicket@Family@MinDistance" version="1">
+									</LimitingRule>
+								</FareProductPrice>
+							</members>
+						</PriceGroup>
+						<PriceGroup id="FIN:PriceGroup:FinnmarkskortetVOK" version="1" >
+							<Name>Periodekort for voksen</Name>
+							<Description>Gjelder for by- og ringbuss: Alta Hammerfest Honningsvåg Vadsø Vardø Kirkenes</Description>
+							<members>
+								<FareProductPrice version="1" id="FIN:FareProductPrice:Finnmarkskortet@VOK">
+									<Name>Finnmarkskortet VOK</Name>
+									<Amount>694</Amount>
+									<PreassignedFareProductRef version="1" ref="FIN:PreassignedFareProduct:MonthlyPassAdultBus"/>
+								</FareProductPrice>
+							</members>
+						</PriceGroup>
+						<PriceGroup id="FIN:PriceGroup:Finnmarkskortet@BARN" version="1" >
+							<Name>Periodekort for barn</Name>
+							<Description>Gjelder for by- og ringbuss: Alta Hammerfest Honningsvåg Vadsø Vardø Kirkenes</Description>
+							<members>
+								<FareProductPrice version="1" id="FIN:FareProductPrice:Finnmarkskortet@BARN">
+									<Name>Finnmarkskortet BARN</Name>
+									<Amount>102</Amount>
+									<PreassignedFareProductRef version="1" ref="FIN:PreassignedFareProduct:MonthlyPassChildBus"/>
+								</FareProductPrice>
+							</members>
+						</PriceGroup>
+						<PriceGroup id="FIN:PriceGroup:Finnmarkskortet@HON" version="1">
+							<Name>Periodekort for barn</Name>
+							<Description>Gjelder buss- og hurtigbåtruter i Finnmark (ikke flybuss)</Description>
+							<members>
+								<FareProductPrice version="1" id="FIN:FareProductPrice:Finnmarkskortet@HON">
+									<Name>Finnmarkskortet HON</Name>
+									<Amount>255</Amount>
+									<PreassignedFareProductRef version="1" ref="FIN:PreassignedFareProduct:MonthlyPassSenior"/>
+								</FareProductPrice>
+							</members>
+						</PriceGroup>
+					</priceGroups>
+
+					<!-- Distribution channels/distribusjonskanaler -->
+						
+					<distributionChannels>
+						<DistributionChannel id="FIN:DistributionChannel:onBoard" version="1">
+							<DistributionChannelType>onBoard</DistributionChannelType>
+							<AuthorityRef ref="FIN:Authority:1"/>
+						</DistributionChannel>
+						<DistributionChannel id="FIN:DistributionChannel:mobileDevice" version="1">
+							<DistributionChannelType>mobileDevice</DistributionChannelType>
+							<AuthorityRef ref="FIN:Authority:1"/>
+						</DistributionChannel>
+						<DistributionChannel id="FIN:DistributionChannel:online" version="1">
+							<DistributionChannelType>online</DistributionChannelType>
+							<AuthorityRef ref="FIN:Authority:1"/>
+						</DistributionChannel>
+					</distributionChannels>
+
+					<groupsOfDistributionChannels>
+						<GroupOfDistributionChannels id="FIN:GroupOfDistributionChannels:onBoard" version="1">
+							<members>
+								<DistributionChannelRef ref="FIN:DistributionChannel:onBoard"/>
+							</members>
+						</GroupOfDistributionChannels>
+						<GroupOfDistributionChannels id="FIN:GroupOfDistributionChannels:mobileDevice" version="1">
+							<members>
+								<DistributionChannelRef ref="FIN:DistributionChannel:mobileDevice"/>
+							</members>
+						</GroupOfDistributionChannels>
+						<GroupOfDistributionChannels id="FIN:GroupOfDistributionChannels:onBoardmobileDevice" version="1">
+							<members>
+								<DistributionChannelRef ref="FIN:DistributionChannel:onBoard"/>
+								<DistributionChannelRef ref="FIN:DistributionChannel:mobileDevice"/>
+							</members>
+						</GroupOfDistributionChannels>
+						<GroupOfDistributionChannels id="FIN:GroupOfDistributionChannels:onBoardmobileDeviceonline" version="1">
+							<members>
+								<DistributionChannelRef ref="FIN:DistributionChannel:onBoard"/>
+								<DistributionChannelRef ref="FIN:DistributionChannel:mobileDevice"/>
+								<DistributionChannelRef ref="FIN:DistributionChannel:online"/>
+							</members>
+						</GroupOfDistributionChannels>
+					</groupsOfDistributionChannels>
+
+					<!-- Fulfilment methods/utleveringsmåter til kunde -->
+
+					<fulfilmentMethods>
+						<FulfilmentMethod id="FIN:FulfilmentMethod:Driver" version="1">
+							<Name>Bussjåfør</Name>
+							<FulfilmentMethodType>conductor</FulfilmentMethodType>
+							<!-- Her bør verdien "driver" innføres, siden det ikke er konduktører lenger på bussene -->
+						</FulfilmentMethod>
+						<FulfilmentMethod id="FIN:FulfilmentMethod:mobileApp" version="1">
+							<Name>MobilApp</Name>
+							<FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+						</FulfilmentMethod>
+						<FulfilmentMethod id="FIN:FulfilmentMethod:sms" version="1">
+							<Name>Sms</Name>
+							<FulfilmentMethodType>sms</FulfilmentMethodType>
+						</FulfilmentMethod>
+					</fulfilmentMethods>
+
+					<!-- Type of travel documents / billettmedier  --> 
+					
+					<typesOfTravelDocuments>
+						<TypeOfTravelDocument id="FIN:TypeOfTravelDocument:paperTicket" version="1">
+							<Name>Papirbillett</Name>
+							<IsCard>false</IsCard>
+							<MediaType>paperTicket</MediaType>
+						</TypeOfTravelDocument>
+						<TypeOfTravelDocument id="FIN:TypeOfTravelDocument:mobileApp" version="1">
+							<Name>Mobillett</Name>
+							<IsCard>false</IsCard>
+							<MediaType>mobileApp</MediaType>
+						</TypeOfTravelDocument>
+						<TypeOfTravelDocument id="FIN:TypeOfTravelDocument:sms" version="1">
+							<Name>sms</Name>
+							<IsCard>false</IsCard>
+							<MediaType>sms</MediaType>
+						</TypeOfTravelDocument>
+						<TypeOfTravelDocument id="FIN:TypeOfTravelDocument:smartcard" version="1">
+							<Name>Finnmarkskortet</Name>
+							<Description>Finnmarkskortet er et periodekort som finnes i kategoriene VOK/BARN/HON/UNG (voksen/barn/honnør/ungdom)</Description>
+							<IsSmartCard>true</IsSmartCard>
+							<MediaType>smartCard</MediaType>
+						</TypeOfTravelDocument>
+					</typesOfTravelDocuments>  
+
+					<!-- Sales offer packages/Salgspakker -->
+					
+					<SalesOfferPackages>
+						<SalesOfferPackage id="FIN:SalesOfferPackage:OneWayTicketBus" version="1">
+							<Name>Enkeltbillett Buss</Name>
+							<distributionAssignments>
+								<DistributionAssignment id="FIN:DistributionAssignment:OneWayTicketBus" version="1" order="1">
+									<GroupOfDistributionChannelsRef ref="FIN:GroupOfDistributionChannels:onBoard"/>
+									<FulfilmentMethodRef ref="FIN:FulfilmentMethod:Driver"></FulfilmentMethodRef>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<SalesOfferPackageElements>
+								<SalesOfferPackageElement id="FIN:SalesOfferPackageElement:OneWayTicketBus">
+									<RequiresValidation>false</RequiresValidation>
+									<TypeOfTravelDocumentRef ref="FIN:TypeOfTravelDocument:paperTicket"/>
+									<PreassignedFareProductRef ref="FIN:PreassignedFareProduct:BusOneWayTicket"/>
+								</SalesOfferPackageElement>
+								<SalesOfferPackageElementRef ref="FIN:PreassignedFareProduct:BusOneWayTicket" version="1"/>
+							</SalesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage id="FIN:SalesOfferPackage:Finnmarkskortet@VOK" version="1">
+							<Name>Finnmarkskortet VOK</Name>
+							<distributionAssignments>
+								<DistributionAssignment id="FIN:DistributionAssignment:Finnmarkskortet@VOK@onBoard" version="1" order="1">
+									<GroupOfDistributionChannelsRef ref="FIN:GroupOfDistributionChannels:onBoard"/>
+									<FulfilmentMethodRef ref="FIN:FulfilmentMethod:Driver"></FulfilmentMethodRef>
+								</DistributionAssignment>
+								<DistributionAssignment id="FIN:DistributionAssignment:Finnmarkskortet@VOK@mobileDevice" version="1" order="2">
+									<GroupOfDistributionChannelsRef ref="FIN:GroupOfDistributionChannels:mobileDevice"/>
+									<FulfilmentMethodRef ref="FIN:FulfilmentMethod:mobileApp"></FulfilmentMethodRef>
+								</DistributionAssignment>
+								<DistributionAssignment id="FIN:DistributionAssignment:Finnmarkskortet@VOK@mobileDevice" version="1" order="3">
+									<GroupOfDistributionChannelsRef ref="FIN:GroupOfDistributionChannels:mobileDevice"/>
+									<FulfilmentMethodRef ref="FIN:FulfilmentMethod:sms"></FulfilmentMethodRef>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<SalesOfferPackageElements>
+								<SalesOfferPackageElement id="FIN:SalesOfferPackageElement:Finnmarkskortet@VOK@mobileApp">
+									<RequiresValidation>false</RequiresValidation>
+									<TypeOfTravelDocumentRef ref="FIN:TypeOfTravelDocument:mobileApp"/>
+									<PreassignedFareProductRef ref="FIN:PreassignedFareProduct:Finnmarkskortet@VOK"/>
+								</SalesOfferPackageElement>
+								<SalesOfferPackageElement id="FIN:SalesOfferPackageElement:Finnmarkskortet@VOK@smartcard">
+									<RequiresValidation>true</RequiresValidation>
+									<TypeOfTravelDocumentRef ref="FIN:TypeOfTravelDocument:smartcard"/>
+									<PreassignedFareProductRef ref="FIN:PreassignedFareProduct:Finnmarkskortet@VOK"/>
+								</SalesOfferPackageElement>
+									<!-- Usikker på sms, om det er aktuelt her	<SalesOfferPackageElement>
+									<RequiresValidation>false</RequiresValidation>
+									<TypeOfTravelDocumentRef ref="FIN:TypeOfTravelDocument:sms"/>
+								</SalesOfferPackageElement> -->
+							</SalesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage id="FIN:SalesOfferPackage:Finnmarkskortet@BARN" version="1">
+							<Name>Finnmarkskortet BARN</Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="FIN:GenericParameterAssignment:PreassignedFareProduct@Finnmarkskortet@BARN" version="1" order="1">
+									<PreassignedFareProductRef ref="FIN:PreassignedFareProduct:Finnmarkskortet@BARN"/>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment id="FIN:DistributionAssignment:Finnmarkskortet@BARN@onBoard" version="1" order="1">
+									<GroupOfDistributionChannelsRef ref="FIN:GroupOfDistributionChannels:onBoard"/>
+									<FulfilmentMethodRef ref="FIN:FulfilmentMethod:Driver"></FulfilmentMethodRef>
+								</DistributionAssignment>
+								<DistributionAssignment id="FIN:DistributionAssignment:Finnmarkskortet@BARN@mobileDevice" version="1" order="2">
+									<GroupOfDistributionChannelsRef ref="FIN:GroupOfDistributionChannels:mobileDevice"/>
+									<FulfilmentMethodRef ref="FIN:FulfilmentMethod:mobileApp"></FulfilmentMethodRef>
+								</DistributionAssignment>
+								<DistributionAssignment id="FIN:DistributionAssignment:Finnmarkskortet@BARN@mobileDevice" version="1" order="3">
+									<GroupOfDistributionChannelsRef ref="FIN:GroupOfDistributionChannels:mobileDevice"/>
+									<FulfilmentMethodRef ref="FIN:FulfilmentMethod:sms"></FulfilmentMethodRef>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<SalesOfferPackageElements>
+								<SalesOfferPackageElement id="FIN:SalesOfferPackageElement:Finnmarkskortet@BARN@mobileApp">
+									<RequiresValidation>false</RequiresValidation>
+									<TypeOfTravelDocumentRef ref="FIN:TypeOfTravelDocument:mobileApp"/>
+									<PreassignedFareProductRef ref="FIN:PreassignedFareProduct:Finnmarkskortet@BARN"/>
+								</SalesOfferPackageElement>
+								<SalesOfferPackageElement id="FIN:SalesOfferPackageElement:Finnmarkskortet@BARN@smartcard">
+									<RequiresValidation>true</RequiresValidation>
+									<TypeOfTravelDocumentRef ref="FIN:TypeOfTravelDocument:smartcard"/>
+									<PreassignedFareProductRef ref="FIN:PreassignedFareProduct:Finnmarkskortet@BARN"/>
+								</SalesOfferPackageElement>
+								<!-- Usikker på sms, om det er aktuelt her	<SalesOfferPackageElement>
+									<RequiresValidation>false</RequiresValidation>
+									<TypeOfTravelDocumentRef ref="FIN:TypeOfTravelDocument:sms"/>
+								</SalesOfferPackageElement> -->
+							</SalesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage id="FIN:SalesOfferPackage:Finnmarkskortet@HON" version="1">
+							<Name>Finnmarkskortet BARN</Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="FIN:GenericParameterAssignment:PreassignedFareProduct@Finnmarkskortet@HON" version="1" order="1">
+									<PreassignedFareProductRef ref="FIN:PreassignedFareProduct:Finnmarkskortet@HON"/>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment id="FIN:DistributionAssignment:Finnmarkskortet@HON@onBoard" version="1" order="1">
+									<GroupOfDistributionChannelsRef ref="FIN:GroupOfDistributionChannels:onBoard"/>
+									<FulfilmentMethodRef ref="FIN:FulfilmentMethod:Driver"></FulfilmentMethodRef>
+								</DistributionAssignment>
+								<DistributionAssignment id="FIN:DistributionAssignment:Finnmarkskortet@HON@mobileDevice" version="1" order="2">
+									<GroupOfDistributionChannelsRef ref="FIN:GroupOfDistributionChannels:mobileDevice"/>
+									<FulfilmentMethodRef ref="FIN:FulfilmentMethod:mobileApp"></FulfilmentMethodRef>
+								</DistributionAssignment>
+								<DistributionAssignment id="FIN:DistributionAssignment:Finnmarkskortet@HON@mobileDevice" version="1" order="3">
+									<GroupOfDistributionChannelsRef ref="FIN:GroupOfDistributionChannels:mobileDevice"/>
+									<FulfilmentMethodRef ref="FIN:FulfilmentMethod:sms"></FulfilmentMethodRef>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<SalesOfferPackageElements>
+								<SalesOfferPackageElement id="FIN:SalesOfferPackageElement:Finnmarkskortet@HON@mobileApp">
+									<RequiresValidation>false</RequiresValidation>
+									<TypeOfTravelDocumentRef ref="FIN:TypeOfTravelDocument:mobileApp"/>
+									<PreassignedFareProductRef ref="FIN:PreassignedFareProduct:Finnmarkskortet@HON"/>
+								</SalesOfferPackageElement>
+								<SalesOfferPackageElement id="FIN:SalesOfferPackageElement:Finnmarkskortet@HON@smartcard">
+									<RequiresValidation>true</RequiresValidation>
+									<TypeOfTravelDocumentRef ref="FIN:TypeOfTravelDocument:smartcard"/>
+									<PreassignedFareProductRef ref="FIN:PreassignedFareProduct:Finnmarkskortet@HON"/>
+								</SalesOfferPackageElement>
+								<!-- Usikker på sms, om det er aktuelt her	<SalesOfferPackageElement>
+									<RequiresValidation>false</RequiresValidation>
+									<TypeOfTravelDocumentRef ref="FIN:TypeOfTravelDocument:sms"/>
+								</SalesOfferPackageElement> -->
+							</SalesOfferPackageElements>
+						</SalesOfferPackage>
+					</SalesOfferPackages>
+
+				</FareFrame>
+
+			</frames>
+
+		</CompositeFrame>
+
+	</dataObjects>
+
+</PublicationDelivery>
