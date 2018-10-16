@@ -47,7 +47,7 @@ Barn
                                             id="NSB:SpecificParameterAssignment:1" order="1">
                                             <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
                                             <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
-
+                                            <DistanceMatrixElementRef ref=""></DistanceMatrixElementRef>
                                             <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
                                             <limitations>
                                                 <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->

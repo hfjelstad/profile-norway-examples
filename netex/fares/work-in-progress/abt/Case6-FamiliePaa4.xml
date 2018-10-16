@@ -13,6 +13,8 @@
            1 student
            
            Gruppebillett Voksen + barn
+           
+           3 separate kontrakter
 -->
 
 
@@ -39,18 +41,13 @@
                                         <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:1" order="1">
                                             <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
                                             <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
-                                            <FareStructureElementRef ref="NSB:FSE:TEN">Ikke strengt nødvendig</FareStructureElementRef>
+                                            <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloDrammen"/>
                                             <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
                                             <limitations>
                                                 <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
                                                 <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
                                             </limitations>
-                                            <validityParameters>
-                                                <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
-                                                <StopPlaceRef ref="NSR:StopPlace:OSloS"/>
-                                                <StopPlaceRef ref="NSR:StopPlace:Drammen"/>
-                                                <AuthorityRef ref="NSB:Authority:NSB"/>
-                                            </validityParameters>
+                                          
                                         </SpecificParameterAssignment>
                                     </specificParameterAssignments>
                                 </TravelSpecification>
@@ -78,18 +75,14 @@
                                         <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:2" order="1">
                                             <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
                                             <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                            <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloDrammen"/>
                                             <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesPackage:5e69"/>
                                             <limitations>
                                               <!-- GroupTicketRef? -->
                                                 <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
                                                 <CompanionProfileRef ref="NSB:UserProfile:Child" versionRef="NSB:Version:V1"/>
                                             </limitations>
-                                            <validityParameters>
-                                                <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
-                                                <StopPlaceRef ref="NSR:StopPlace:OSloS"/>
-                                                <StopPlaceRef ref="NSR:StopPlace:Drammen"/>
-                                                <AuthorityRef ref="NSB:Authority:NSB"/>
-                                            </validityParameters>
+                                          
                                         </SpecificParameterAssignment>
                                     </specificParameterAssignments>
                                 </TravelSpecification>
@@ -118,18 +111,13 @@
                                         <SpecificParameterAssignment version="any" id="NSB:SpecificParameterAssignment:3" order="1">
                                             <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
                                             <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
-                                            <FareStructureElementRef ref="NSB:FSE:TEN">Ikke strengt nødvendig</FareStructureElementRef>
+                                            <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloDrammen"/>
                                             <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesPackage:5e69"/>     
                                             <limitations>
                                                 <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
                                                 <UserProfileRef ref="NSB:UserProfile:Student" versionRef="NSB:Version:V1"/>
                                             </limitations>
-                                            <validityParameters>
-                                                <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
-                                                <StopPlaceRef ref="NSR:StopPlace:OSloS"/>
-                                                <StopPlaceRef ref="NSR:StopPlace:Drammen"/>
-                                                <AuthorityRef ref="NSB:Authority:NSB"/>
-                                            </validityParameters>
+                                          
                                         </SpecificParameterAssignment>
                                     </specificParameterAssignments>
                                 </TravelSpecification>

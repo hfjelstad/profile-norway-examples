@@ -26,99 +26,178 @@ Refusjon samlet, må reise samlet
 
             <fareContracts>
                 <FareContract version="any" id="xpl:Contract:Anon001">
-                    
+
                     <Name>Gjennomgående Kristiansand-Oslo-Nittedal</Name>
                     <fareContractEntries>
                         <SalesTransaction version="any" id="ENT:SalesTransaction:Gjennomgående">
-                           
+
                             <Name>Betaling for gjennomgående billett</Name>
                             <Date>2018-09-06T01:07:00</Date>
                             <Amount>143</Amount>
                             <PriceUnitRef ref="NOK"/>
                             <!-- Norske kroner -->
                             <PaymentMethod>debitCard</PaymentMethod>
+
                             <travelSpecifications>
                                 <!-- Leg 1 -->
                                 <TravelSpecification version="any"
                                     id="ENT:TravelSpecification:Kristiansand-Oslo">
+                                    
                                     <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
-                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity> <!-- Utgang av driftsdøgn? -->
+                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity>
+                                    <!-- Utgang av driftsdøgn? -->
                                     <!-- Hva skla stå her? -->
                                     <specificParameterAssignments>
                                         <SpecificParameterAssignment version="any"
                                             id="NSB:SpecificParameterAssignment:1" order="1">
                                             <ValidableElementRef ref="NSB:ValidableElement:Minipris" versionRef="NSB:Version:V1"/>
                                             <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Minipris" versionRef="NSB:Version:V1"/>
-
+                                            <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:KristiansandOslo"/>
                                             <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
                                             <limitations>
-                                                <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
                                                 <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
                                             </limitations>
                                             <validityParameters>
-                                                <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
-                                                <StopPlaceRef ref="NSR:StopPlace:Kristiansand"/>
-                                                <StopPlaceRef ref="NSR:StopPlace:Oslo"/>
-                                                
                                                 <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
                                             </validityParameters>
                                         </SpecificParameterAssignment>
-                                        
-                                        <SpecificParameterAssignment version="any" order="2" id="NSB:SpecificParameterAssignment:2">
+
+                                        <SpecificParameterAssignment version="any" order="2"
+                                            id="NSB:SpecificParameterAssignment:2">
                                             <Name> Seat Reservation  </Name>
                                             <!-- STATE -->
                                             <ValidableElementRef ref="NSB:ValidableElement:Sete" versionRef="NSB:Version:V1"/>
                                             <SupplementProductRef ref="NSB:SupplementProduct:SeatReservation"/>
-                                            <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/> <!-- assuming same as above? -->
+                                            <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:KristiansandOslo"/>
+                                            <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
+                                            <!-- assuming same as above? -->
                                             <limitations>
-                                                <UserProfileRef  ref="NSB:UserProfile:Adult"/>
+                                                <UserProfileRef ref="NSB:UserProfile:Adult"/>
                                             </limitations>
                                             <validityParameters>
                                                 <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
-                                            
                                             </validityParameters>
                                         </SpecificParameterAssignment>
-                                        
+
                                     </specificParameterAssignments>
-                                    
-                                    
+
+
                                 </TravelSpecification>
                                 <TravelSpecification version="any"
                                     id="ENT:TravelSpecification:Oslo-Nittedal">
                                     <!-- Leg 2 -->
-                                    <StartOfValidity>2018-10-08T01:07:00</StartOfValidity> <!-- avgangstid leg 2 -->
+                                    <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
+                                    <!-- avgangstid leg 2 -->
                                     <!-- Er det samme som Kristiansand-Oslo?= -->
-                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity> <!-- utgang av siste driftsdøgn --> 
+                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity>
+                                    <!-- utgang av siste driftsdøgn -->
                                     <specificParameterAssignments>
                                         <SpecificParameterAssignment version="any"
                                             id="NSB:SpecificParameterAssignment:2" order="1">
-                                            <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/> <!-- Aktiveres 2 ganger eller bare 1 gang? -->
+                                            <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                            <!-- Aktiveres 2 ganger eller bare 1 gang? -->
                                             <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                            <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloNittedal"/>
                                             <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
                                             <limitations>
                                                 <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
                                                 <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
                                             </limitations>
                                             <validityParameters>
-                                                <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
-                                                
-                                                <StopPlaceRef ref="NSR:StopPlace:Oslo"/>
-                                                <StopPlaceRef ref="NSR:StopPlace:Nittedal"/>
-                                                
-                                                <!-- ServiceJourneyRef her også, eller er det åpent? -->
                                                 <ServiceJourneyRef ref="NSB:ServiceJourney:456"/>
-                                                
                                             </validityParameters>
                                         </SpecificParameterAssignment>
                                     </specificParameterAssignments>
                                 </TravelSpecification>
                             </travelSpecifications>
+
+                            <customerPurchasePackages>
+                                <CustomerPurchasePackageRef ref="NSB:CustomerPurchasePackage:1"/>
+                            </customerPurchasePackages>
+
                         </SalesTransaction>
                     </fareContractEntries>
 
                 </FareContract>
 
             </fareContracts>
+
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="NSB:CustomerPurchasePackage:1" version="1">
+
+                    <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="NSB:CustomerPurchasePackageElement:1"
+                            version="1" order="1">
+                            <SalesOfferPackageElementRef ref="NSB:SalesOfferPackageElement:1"/>
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="any"
+                                    id="NSB:CustomerPurchaseParameterAssignment:1" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <!-- Aktiveres 2 ganger eller bare 1 gang? -->
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:KristiansandOslo"/>
+                                    <limitations>
+                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                        <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:456"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                                
+                            </validityParameterAssignments>
+                            
+                        </CustomerPurchasePackageElement>
+                        <CustomerPurchasePackageElement id="NSB:CustomerPurchasePackageElement:2"
+                            version="1" order="1">
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="any"
+                                    id="NSB:CustomerPurchaseParameterAssignment:2" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <!-- Aktiveres 2 ganger eller bare 1 gang? -->
+                                    <SupplementProductRef ref="NSB:SupplementProduct:Seat" versionRef="NSB:Version:V1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:KristiansandOslo"/>
+                                   
+                                    <limitations>
+                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                        <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:456"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                                
+                            </validityParameterAssignments>
+                            
+                        </CustomerPurchasePackageElement>
+                        
+                        
+                        <CustomerPurchasePackageElement version="any"
+                            id="ENT:CustomerPurchasePackageElement:Oslo-Nittedal" order="2">
+                            <!-- Leg 2 -->
+
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1"
+                                    id="NSB:CustomerPurchaseParameterAssignment:3" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <!-- Aktiveres 2 ganger eller bare 1 gang? -->
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloNittedal"/>
+                                   
+                                    <limitations>
+                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                        <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                    </limitations>
+                                    
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                    </customerPurchasePackageElements>
+
+
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
 
 
         </SalesTransactionFrame>
