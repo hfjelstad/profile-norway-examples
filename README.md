@@ -2,11 +2,11 @@
 
 Examples for the Norwegian NeTEx and SIRI profiles.
 
-The profiles can be found (in Norwegian) at:
+The profiles can be found (in Norwegian) at 
 
-**NeTEx** - https://rutebanken.atlassian.net/wiki/display/PUBLIC/NeTEx+profil+Norge
+**NeTEx** - https://enturas.atlassian.net/wiki/spaces/PUBLIC/pages/637370405/NeTEx+profil+Norge
 
-**SIRI** - https://rutebanken.atlassian.net/wiki/display/PUBLIC/SIRI+profil+Norge
+**SIRI** - https://enturas.atlassian.net/wiki/spaces/PUBLIC/pages/637370420/SIRI+profil+Norge
 
 ## Repositories ##
 Official NeTEx XSD repository:
