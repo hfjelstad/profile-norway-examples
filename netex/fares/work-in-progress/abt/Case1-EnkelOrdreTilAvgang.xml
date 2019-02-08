@@ -18,29 +18,11 @@
 
         <SalesTransactionFrame id="SalesTransactionFrame" version="any">
 
-
-
-            <customers>
-                <Customer id="autogenrerert kunde" version="1">
-                    <!-- Her kunne man hatt mer info om kunden - men i dette tilfellet er kunden anonym -->
-                    <customerAccounts>
-                        <CustomerAccount id="autogenerertid" version="1">
-                            <!-- Finne noe som kan låse en konto på et gitt "sikkerhetsnivå". Dette for å hindre mindre sikre ID-måter å referere til kontoen
-                                eks lavt sikkerhetsnivå kan refereres til av en QR-kode på papir, mens et høyere sikkerhetsnivå krever eks smartkort eller mobil
-                            <SecurityLevel>
-                            -->
-                            <!-- FareContracts skulle kunne vært referert til her, men det er trolig feil i XSD -->
-                            <StartDate>2018-09-04T12:00:00</StartDate>
-                        </CustomerAccount>
-                    </customerAccounts>
-                </Customer>
-            </customers>
-
-
             <FareContracts>
                 <FareContract version="any" id="xpl:Contract:Anon001">
-
                     <Name>Enkeltbillett reise Oslo Trondheim</Name>
+                    <StartDate>2018-09-06T01:07:00</StartDate>
+                    <EndDate>2018-09-07T01:07:00</EndDate>
                     <FareContractEntries>
 
                         <SalesTransaction version="any"
@@ -54,30 +36,7 @@
                             <PriceUnitRef ref="NOK"/>
                             <!-- Norske kroner -->
                             <PaymentMethod>debitCard</PaymentMethod>
-                            <travelSpecifications>
 
-                                <TravelSpecification version="any"
-                                    id="ENT:TravelSpecification:EnkelOsloTrondheim123123242342342">
-
-                                    <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
-                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity>
-                                    <!-- Kommer i neste versjon av XSD (er i Nick sine eksempler)
-                                        <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesPackage:5e69"/>
-                            -->
-                                    <specificParameterAssignments>
-                                        <SpecificParameterAssignment version="any"
-                                            id="NSB:SpecificParameterAssignment:1" order="1">
-                                            <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
-                                            <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
-                                            <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloDrammen"/>
-                                            <limitations>
-                                                <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
-                                            </limitations>
-                                        </SpecificParameterAssignment>
-                                    </specificParameterAssignments>
-
-                                </TravelSpecification>
-                            </travelSpecifications>
                             <customerPurchasePackages>
                                 <!-- Referanse til customer purchase packages -->
                                 <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:1" version="1"/>
@@ -85,31 +44,14 @@
 
                             <TravelDocumentRef ref="NSB:TravelDocument:Xsdsdfxdfsd">Ekstern ordrereferanse?</TravelDocumentRef>
 
-
                         </SalesTransaction>
                     </FareContractEntries>
 
                 </FareContract>
             </FareContracts>
 
-            <typesOfTravelDocuments>
-                <TypeOfTravelDocument id="online" version="1">
-                    <HasPhoto>false</HasPhoto>
-                    <!-- None kan være alternativ for manglende "online". Teknisk sett er dog "none" korrekt, den er ikke manifestert på noe dokument -->
-                    <MediaType>none</MediaType>
-                </TypeOfTravelDocument>
-            </typesOfTravelDocuments>
-
-            <travelDocuments>
-                <TravelDocument id="NSB:TravelDocument:Xsdsdfxdfsd" version="1">
-                    <TypeOfTravelDocumentRef ref="online"/>
-                </TravelDocument>
-            </travelDocuments>
             <customerPurchasePackages>
-
                 <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:1" version="1">
-
-
                     <SalesOfferPackageRef ref="NSB:SalesPackage:SingleTicket"/>
                     <customerPurchasePackageElements>
                         <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackage:1"
@@ -122,10 +64,22 @@
                                     <!-- STATE -->
                                     <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
                                     <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
-                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloDrammen"/>
+
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloTrondheim"/>
                                     <limitations>
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:XX"
+                                            version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-05</EndDate>
+                                            <EndTime>12:00:00</EndTime>
+                                        </UsageValidityPeriod>
                                         <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
                                     </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
+                                    </validityParameters>
+
                                 </CustomerPurchaseParameterAssignment>
 
                             </validityParameterAssignments>

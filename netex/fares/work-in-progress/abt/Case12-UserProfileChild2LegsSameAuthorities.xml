@@ -27,6 +27,8 @@ Barn
             <fareContracts>
                 <FareContract version="any" id="xpl:Contract:Anon001">
                     <Name>Gjennomgående Drammen-Oslo-Rakkestad</Name>
+                    <StartDate>2019-01-01T01:01:01</StartDate>
+                    <EndDate>2019-01-02T12:12:12</EndDate>
                     <fareContractEntries>
                         <SalesTransaction version="any" id="ENT:SalesTransaction:Gjennomgående">
                             <Name>Betaling for gjennomgående billett</Name>
@@ -35,64 +37,6 @@ Barn
                             <PriceUnitRef ref="NOK"/>
                             <!-- Norske kroner -->
                             <PaymentMethod>debitCard</PaymentMethod>
-                            <travelSpecifications>
-                                <!-- Leg 1 -->
-                                <TravelSpecification version="any"
-                                    id="ENT:TravelSpecification:Drammen-Oslo">
-                                    <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
-                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity> <!-- Utgang av driftsdøgn? -->
-                                    <!-- Hva skla stå her? -->
-                                    <specificParameterAssignments>
-                                        <SpecificParameterAssignment version="any"
-                                            id="NSB:SpecificParameterAssignment:1" order="1">
-                                            <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
-                                            <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
-                                            <DistanceMatrixElementRef ref=""></DistanceMatrixElementRef>
-                                            <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
-                                            <limitations>
-                                                <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
-                                                <UserProfileRef ref="NSB:UserProfile:Child" versionRef="NSB:Version:V1"/>
-                                            </limitations>
-                                            <validityParameters>
-                                                <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
-                                                <StopPlaceRef ref="NSR:StopPlace:Drammen"/>
-                                                <StopPlaceRef ref="NSR:StopPlace:Oslo"/>
-                                                
-                                                <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
-                                            </validityParameters>
-                                        </SpecificParameterAssignment>
-                                        
-                                    </specificParameterAssignments>
-                                </TravelSpecification>
-                                <TravelSpecification version="any"
-                                    id="ENT:TravelSpecification:Oslo-Rakkestad">
-                                    <!-- Leg 2 -->
-                                    <StartOfValidity>2018-10-08T01:07:00</StartOfValidity> <!-- avgangstid leg 2 -->
-                                    <!-- Er det samme som Drammen-Oslo?= -->
-                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity> <!-- utgang av siste driftsdøgn --> 
-                                    <specificParameterAssignments>
-                                        <SpecificParameterAssignment version="any"
-                                            id="NSB:SpecificParameterAssignment:2" order="1">
-                                            <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/> <!-- Aktiveres 2 ganger eller bare 1 gang? -->
-                                            <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
-                                            <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
-                                            <limitations>
-                                                <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
-                                                <UserProfileRef ref="NSB:UserProfile:Child" versionRef="NSB:Version:V1"/>
-                                            </limitations>
-                                            <validityParameters>
-                                                <!-- Ingenting som sier hvilken StopPlace som er avgang og hvilket som er ankomst -->
-                                                
-                                                <StopPlaceRef ref="NSR:StopPlace:Oslo"/>
-                                                <StopPlaceRef ref="NSR:StopPlace:Rakkestad"/>
-                                                
-                                                <ServiceJourneyRef ref="NSB:ServiceJourney:456"/>
-                                                
-                                            </validityParameters>
-                                        </SpecificParameterAssignment>
-                                    </specificParameterAssignments>
-                                </TravelSpecification>
-                            </travelSpecifications>
                         </SalesTransaction>
                     </fareContractEntries>
 
@@ -100,6 +44,75 @@ Barn
 
             </fareContracts>
 
+
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="NSB:CustomerPurchasePackager:1" version="1">
+                    <SalesOfferPackageRef ref="NSB:SalesPackage:SingleTicket"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackage:1"
+                            version="1" order="1">
+
+                            <SalesOfferPackageElementRef ref="NSB:SalesPackageElement:SingleTicket"/>
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="any"
+                                    id="NSB:CustomerPurchaseParameterAssignment:1" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:DrammenOslo"/>
+                                    <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
+                                    <limitations>
+                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                        <UserProfileRef ref="NSB:UserProfile:Child" versionRef="NSB:Version:V1"/>
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:XX"
+                                            version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-05</EndDate>
+                                            <EndTime>12:00:00</EndTime>
+                                        </UsageValidityPeriod>
+
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackage:12"
+                            version="1" order="2">
+
+                            <SalesOfferPackageElementRef ref="NSB:SalesPackageElement:SingleTicket"/>
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="any"
+                                    id="NSB:CustomerPurchaseParameterAssignment:12" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloRakkestad"/>
+                                    <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
+                                    <limitations>
+                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                        <UserProfileRef ref="NSB:UserProfile:Child" versionRef="NSB:Version:V1"/>
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:XXY"
+                                            version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-05</EndDate>
+                                            <EndTime>12:00:00</EndTime>
+                                        </UsageValidityPeriod>
+
+                                    </limitations>
+                                    <validityParameters>
+                                        
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:456"/>
+                                    </validityParameters>
+
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+
+                    </customerPurchasePackageElements>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
 
         </SalesTransactionFrame>
     </dataObjects>

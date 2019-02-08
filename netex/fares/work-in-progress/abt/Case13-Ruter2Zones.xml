@@ -17,92 +17,70 @@ Voksen
 
 -->
         <SalesTransactionFrame id="SalesTransactionFrame" version="any">
-
-            <customers>
-                <Customer id="autogenrerert kunde" version="1">
-                    <!-- Her kunne man hatt mer info om kunden - men i dette tilfellet er kunden anonym -->
-                    <customerAccounts>
-                        <CustomerAccount id="autogenerertid" version="1">
-                            <!-- Finne noe som kan låse en konto på et gitt "sikkerhetsnivå". Dette for å hindre mindre sikre ID-måter å referere til kontoen
-                                eks lavt sikkerhetsnivå kan refereres til av en QR-kode på papir, mens et høyere sikkerhetsnivå krever eks smartkort eller mobil
-                            <SecurityLevel>
-                            -->
-                            <StartDate>2018-09-04T12:00:00</StartDate>
-                            <FareContractEntries>
-                                
-                                <SalesTransaction version="any" id="ENT:SalesTransaction:SingleZone1">
-                                    <Name>Kjøp av enkel billett Ruter voksen 2 soner</Name>
-                                 
-                                    <Date>2018-09-06T01:07:00</Date>
-                                    <FareContractRef ref="xpl:Contract:Anon001" version="any"/>
-                                    <Amount>57</Amount>
-                                    <PriceUnitRef ref="NOK"/>
-                                    <!-- Norske kroner -->
-                                    <PaymentMethod>debitCard</PaymentMethod>
-                                    <travelSpecifications>
-                                        <TravelSpecification version="any" id="ENT:TravelSpecification:Single2Zones">
-                                            
-                                            <StartOfValidity>2018-10-08T12:00:00</StartOfValidity>
-                                            <EndOfValidity>2018-10-08T13:30:00</EndOfValidity>
-                                            
-                                            <!-- Kommer i neste versjon av XSD (er i Nick sine eksempler)
-                                        <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="RUT:SalesPackage:5e69"/>
-                            -->                 
-                                            <specificParameterAssignments>
-                                                <SpecificParameterAssignment version="any" id="ENT:SpecificParameterAssignment:1" order="1">
-                                                    <ValidableElementRef ref="RUT:ValidableElement:RuterSingleTicket" versionRef="RUT:Version:V1"/>
-                                                    <PreassignedFareProductRef ref="RUT:PreassignedFareProduct:RuterSingleTicket" versionRef="RUT:Version:V1"/>
-                                                    <limitations>
-                                                        <!-- UserProfile voksen -->
-                                                        <UserProfileRef ref="RUT:UserProfile:Adult" versionRef="RUT:Version:V1"/>
-                                                    </limitations>
-                                                    <validityParameters>
-                                                        <TariffZoneRef ref="RUT:TariffZone:Sone1"/> <!-- start sone -->
-                                                    </validityParameters>
-                                                    <GeographicalIntervalRef ref="RUT:GeograhicalInterval:2Zone"/> 
-                                                    <!-- Hvordan spesifisere alle mulige kombinasjoner av disse to sonene gitt startsone? -->
-                                                   
-                                                </SpecificParameterAssignment>
-                                            </specificParameterAssignments>
-                                            
-                                        </TravelSpecification>
-                                    </travelSpecifications>
-                                   
-                                </SalesTransaction>
-              
-                                
-                                <!--
-                                    
-                                    
-                                    <CustomerProductActivation id="XXXXX" version="1">
-                                        <TravelSpecificationRef ref="ENT:TravelSpecification:SingleZone1">    - Hvilken TravelSpecification kunden ønsker å aktivere? Eller SPA?
-                                        <TariffZoneRef ref="RUT:TariffZone:1"/>                               - Hvilken sone dette skal gjelde for - legges inn i validityParameters?
-                                        <Date>2018-10-08T12:00:00</Date>                                      - Når aktiveringen skjedde - brukes for å kalkulere StartOfValidity og EndOfValidity
-                                        
-                                     - Finne og konsumere alle ValidableElements?
-                                     - Når billett kjøpes i Ruterapp må man velge både fra og til-sone (ved 2 soner)
-                                    </CustomerProductActivation>
-                                
-                                -->
-                                   
-                                
-                            </FareContractEntries>
-                        </CustomerAccount>
-                    </customerAccounts>
-                </Customer>
-            </customers>
-
-       
             <FareContracts>
                 <FareContract version="any" id="xpl:Contract:Anon001">
                     <Name>Enkeltbillett Ruter 1 zone</Name>
-                   
+                    <FareContractEntries>
+                        <SalesTransaction version="any" id="ENT:SalesTransaction:SingleZone1">
+                            <Name>Kjøp av enkel billett Ruter voksen 2 soner</Name>
+
+                            <Date>2018-09-06T01:07:00</Date>
+                            <FareContractRef ref="xpl:Contract:Anon001" version="any"/>
+                            <Amount>57</Amount>
+                            <PriceUnitRef ref="NOK"/>
+                            <!-- Norske kroner -->
+                            <PaymentMethod>debitCard</PaymentMethod>
+
+                            <customerPurchasePackages>
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:1" version="1"/>
+                            </customerPurchasePackages>
+                        </SalesTransaction>
+                        <!--
+                        <FareContractActivation id="XXXXX" version="1">
+                            <ValidityStart>2018-10-08T12:00:00</ValidityStart>                                     
+                            <ValidityEnd>2018-10-08T13:00:00</ValidityEnd>                                      
+                        </FareContractActivation>
+                        -->
+                    </FareContractEntries>
+
                 </FareContract>
             </FareContracts>
 
-        
 
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:1" version="1">
+                    <SalesOfferPackageRef ref="RUT:SalesPackage:SingleTicket"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackage:1"
+                            version="1" order="1">
 
+                            <SalesOfferPackageElementRef ref="RUT:SalesPackageElement:SingleTicket"/>
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="any"
+                                    id="RUT:CustomerPurchaseParameterAssignment:1" order="1">
+                                    <ValidableElementRef ref="RUT:ValidableElement:RuterSingleTicket" versionRef="RUT:Version:V1"/>
+                                    <PreassignedFareProductRef ref="RUT:PreassignedFareProduct:RuterSingleTicket" versionRef="RUT:Version:V1"/>
+                                    <limitations>
+                                        <!-- UserProfile voksen -->
+                                        <UserProfileRef ref="RUT:UserProfile:Adult" versionRef="RUT:Version:V1"/>
+                                    </limitations>
+
+                                    <validityParameters>
+                                        <!-- Enten spesifisere hvilke soner som er inkludert her ANDet sammen - eller kun startsone og så antall soner 
+                                            dvs GeograhicalIntervalRef under -->
+                                        <TariffZoneRef ref="RUT:TariffZone:Sone1"/>
+                                        <TariffZoneRef ref="RUT:TariffZone:Sone2Ø"/>
+                                    </validityParameters>
+
+                                    <!-- Hvordan spesifisere alle mulige kombinasjoner av disse to sonene gitt startsone? -->
+                                    <GeographicalIntervalRef ref="RUT:GeograhicalInterval:2Zone"/>
+
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                    </customerPurchasePackageElements>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
         </SalesTransactionFrame>
     </dataObjects>
 </PublicationDelivery>

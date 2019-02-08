@@ -17,17 +17,18 @@ Refusjon samlet, må reise samlet
 
 -->
 
-
+       
 
 
         <SalesTransactionFrame id="SalesTransactionFrame" version="any">
 
-
+            
 
             <fareContracts>
                 <FareContract version="any" id="xpl:Contract:Anon001">
-
+                    
                     <Name>Gjennomgående Kristiansand-Oslo-Nittedal</Name>
+                    
                     <fareContractEntries>
                         <SalesTransaction version="any" id="ENT:SalesTransaction:Gjennomgående">
 
@@ -37,79 +38,6 @@ Refusjon samlet, må reise samlet
                             <PriceUnitRef ref="NOK"/>
                             <!-- Norske kroner -->
                             <PaymentMethod>debitCard</PaymentMethod>
-
-                            <travelSpecifications>
-                                <!-- Leg 1 -->
-                                <TravelSpecification version="any"
-                                    id="ENT:TravelSpecification:Kristiansand-Oslo">
-                                    
-                                    <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
-                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity>
-                                    <!-- Utgang av driftsdøgn? -->
-                                    <!-- Hva skla stå her? -->
-                                    <specificParameterAssignments>
-                                        <SpecificParameterAssignment version="any"
-                                            id="NSB:SpecificParameterAssignment:1" order="1">
-                                            <ValidableElementRef ref="NSB:ValidableElement:Minipris" versionRef="NSB:Version:V1"/>
-                                            <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Minipris" versionRef="NSB:Version:V1"/>
-                                            <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:KristiansandOslo"/>
-                                            <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
-                                            <limitations>
-                                                <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
-                                            </limitations>
-                                            <validityParameters>
-                                                <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
-                                            </validityParameters>
-                                        </SpecificParameterAssignment>
-
-                                        <SpecificParameterAssignment version="any" order="2"
-                                            id="NSB:SpecificParameterAssignment:2">
-                                            <Name> Seat Reservation  </Name>
-                                            <!-- STATE -->
-                                            <ValidableElementRef ref="NSB:ValidableElement:Sete" versionRef="NSB:Version:V1"/>
-                                            <SupplementProductRef ref="NSB:SupplementProduct:SeatReservation"/>
-                                            <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:KristiansandOslo"/>
-                                            <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
-                                            <!-- assuming same as above? -->
-                                            <limitations>
-                                                <UserProfileRef ref="NSB:UserProfile:Adult"/>
-                                            </limitations>
-                                            <validityParameters>
-                                                <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
-                                            </validityParameters>
-                                        </SpecificParameterAssignment>
-
-                                    </specificParameterAssignments>
-
-
-                                </TravelSpecification>
-                                <TravelSpecification version="any"
-                                    id="ENT:TravelSpecification:Oslo-Nittedal">
-                                    <!-- Leg 2 -->
-                                    <StartOfValidity>2018-10-08T01:07:00</StartOfValidity>
-                                    <!-- avgangstid leg 2 -->
-                                    <!-- Er det samme som Kristiansand-Oslo?= -->
-                                    <EndOfValidity>2018-10-08T03:07:00</EndOfValidity>
-                                    <!-- utgang av siste driftsdøgn -->
-                                    <specificParameterAssignments>
-                                        <SpecificParameterAssignment version="any"
-                                            id="NSB:SpecificParameterAssignment:2" order="1">
-                                            <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
-                                            <!-- Aktiveres 2 ganger eller bare 1 gang? -->
-                                            <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
-                                            <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloNittedal"/>
-                                            <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
-                                            <limitations>
-                                                <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
-                                                <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
-                                            </limitations>
-                                            <validityParameters>
-                                                <ServiceJourneyRef ref="NSB:ServiceJourney:456"/>
-                                            </validityParameters>
-                                        </SpecificParameterAssignment>
-                                    </specificParameterAssignments>
-                                </TravelSpecification>
-                            </travelSpecifications>
 
                             <customerPurchasePackages>
                                 <CustomerPurchasePackageRef ref="NSB:CustomerPurchasePackage:1"/>
@@ -125,10 +53,16 @@ Refusjon samlet, må reise samlet
             <customerPurchasePackages>
                 <CustomerPurchasePackage id="NSB:CustomerPurchasePackage:1" version="1">
 
+                    
+
                     <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
+                    
+                    
                     <customerPurchasePackageElements>
                         <CustomerPurchasePackageElement id="NSB:CustomerPurchasePackageElement:1"
                             version="1" order="1">
+                           
+                            
                             <SalesOfferPackageElementRef ref="NSB:SalesOfferPackageElement:1"/>
                             <validityParameterAssignments>
                                 <CustomerPurchaseParameterAssignment version="any"
@@ -138,11 +72,19 @@ Refusjon samlet, må reise samlet
                                     <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
                                     <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:KristiansandOslo"/>
                                     <limitations>
+                                        
                                         <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
                                         <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                        <!-- Når er billetten gyldig? Sammen med ServiceJourneyRef under blir dette en unik avgang -->
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:123" version="1">
+                                            <StartDate>2019-01-01</StartDate>
+                                            <StartTime>00:00:00</StartTime>
+                                            <EndDate>2019-01-02</EndDate>
+                                            <EndTime>00:00:00</EndTime>
+                                        </UsageValidityPeriod>
                                     </limitations>
                                     <validityParameters>
-                                        <ServiceJourneyRef ref="NSB:ServiceJourney:456"/>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
                                     </validityParameters>
                                 </CustomerPurchaseParameterAssignment>
                                 
@@ -162,9 +104,15 @@ Refusjon samlet, må reise samlet
                                     <limitations>
                                         <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
                                         <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:1234" version="1">
+                                            <StartDate>2019-01-01</StartDate>
+                                            <StartTime>00:00:00</StartTime>
+                                            <EndDate>2019-01-02</EndDate>
+                                            <EndTime>00:00:00</EndTime>
+                                        </UsageValidityPeriod>
                                     </limitations>
                                     <validityParameters>
-                                        <ServiceJourneyRef ref="NSB:ServiceJourney:456"/>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
                                     </validityParameters>
                                 </CustomerPurchaseParameterAssignment>
                                 
@@ -188,6 +136,13 @@ Refusjon samlet, må reise samlet
                                     <limitations>
                                         <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
                                         <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                        <!-- Når er billetten gyldig? Sammen med ServiceJourneyRef under blir dette en unik avgang -->
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:1235" version="1">
+                                            <StartDate>2019-01-01</StartDate>
+                                            <StartTime>00:00:00</StartTime>
+                                            <EndDate>2019-01-02</EndDate>
+                                            <EndTime>00:00:00</EndTime>
+                                        </UsageValidityPeriod>
                                     </limitations>
                                     
                                 </CustomerPurchaseParameterAssignment>
