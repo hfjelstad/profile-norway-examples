@@ -9,7 +9,7 @@
     
     <PublicationTimestamp>2016-05-20T15:03:03Z</PublicationTimestamp>
     <ParticipantRef>RUT</ParticipantRef>
-    <!-- Description is optional -->
+    <!-- Description is optional.test -->
     <Description>Ruter line 61A: Tveita Solfjellet</Description>
 
     <dataObjects>
