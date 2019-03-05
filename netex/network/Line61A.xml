@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-    Dette eksempelet er basert på linje 61A Tveita Solfjellet funnet her: 
-    https://ruter.no/globalassets/rutetabeller/oslo/oslo_syd_web_april2016.pdf
+    This example is based on the Ruter line 61A Tveita Solfjellet as presented in 2016.
 -->
 <PublicationDelivery 
   version="1.07:NO-NeTEx-networktimetable:1.1"
@@ -10,8 +9,8 @@
     
     <PublicationTimestamp>2016-05-20T15:03:03Z</PublicationTimestamp>
     <ParticipantRef>RUT</ParticipantRef>
-    <!-- Description er frivillig -->
-    <Description>Ruter linje 61A: Tveita Solfjellet</Description>
+    <!-- Description is optional -->
+    <Description>Ruter line 61A: Tveita Solfjellet</Description>
 
     <dataObjects>
         <!-- =========================================== -->
@@ -24,7 +23,7 @@
                     <Xmlns>RUT</Xmlns>
                     <XmlnsUrl>http://www.ruter.no/</XmlnsUrl>
                 </Codespace>
-                <!-- Codespace for nasjonalt holdeplassregister -->
+                <!-- Codespace for national stop place registry -->
                 <Codespace id="nsr">
                     <Xmlns>NSR</Xmlns>
                     <XmlnsUrl>http://www.rutebanken.no/nasjonltstoppestedregister</XmlnsUrl>
@@ -32,32 +31,30 @@
             </codespaces>
 
             <FrameDefaults>
-                <!-- Alle elementer med id-attributt blir prefixet med dette codespacet (dvs RUT:) -->
+                <!-- All elements with id-attributes are prefixed with this codespace (in this case RUT) -->
                 <DefaultCodespaceRef ref="ruter"/>
                 <DefaultLocale>
                     <TimeZone>CET</TimeZone>
                     <SummerTimeZone>CEST</SummerTimeZone>
-                    <!-- Alle tekster er på norsk om ikke eksplisitt spesifisert -->
+                    <!-- All texts are by default in Norwegian, unless stated otherwise. -->
                     <DefaultLanguage>no</DefaultLanguage>
                 </DefaultLocale>
-                <!-- Alle koordinater leveres i henhold til WGS84 -->
-                <!-- TODO: rett opp, skal kanskje ikke med i det hele tatt gitt implisitt krav WGS84 --> 
-                <!--DefaultLocationSystem>EPSG:4326</DefaultLocationSystem-->
+                <!-- All coordinates must be WGS84 -->
             </FrameDefaults>
 
             <frames>
                 <!-- =========================================== -->
                 <ResourceFrame version="1" id="RUT:ResourceFrame:RF1">
                     <organisations>
-                        <!-- TODO her er ting kun splittet i authority og operator. Normalt er strukturen mer kompleks, og informasjon rundt f.eks hittegods må modelleres korrekt -->
+                        <!-- This structure can be more complex when for example adding lost & found information -->
                         <Authority version="1" id="RUT:Authority:1">
                             <CompanyNumber>991609407</CompanyNumber>
-                            <!-- Organisasjonsnummer -->
-                            <Name>Ruter#</Name>
+                            <!-- Organisation number -->
+                            <Name>Ruter</Name>
                             <LegalName>RUTER AS</LegalName>
                             <OrganisationType>authority</OrganisationType>
                         </Authority>
-                        <!-- Antar her at Unibuss er selskapet som kjører turen. Ikke nødvendigvis korrekt, men fremgår ikke av rutetabellen -->
+                        <!-- Presumed operator is Unibuss -->
                         <Operator version="1" id="RUT:Operator:1">
                             <CompanyNumber>985615616</CompanyNumber>
                             <Name>Unibuss</Name>
@@ -72,14 +69,13 @@
                 </ResourceFrame>
 
                 <!-- 
-                Stoppestedsinformasjon skal IKKE sendes inn ihht. networktimetable profil, men som egen XML ihht. stops profil.
-                Objektene er likevel tatt med for å vise begge datasettene i samme eksempel.
-                
-                Alle stoppestedsreferanser vil i stedet verifiseres mot det som ligger i holdeplassregisteret. Finnes det ikke der blir hele denne filen avvist.
+                Stop place information is not to be included in the network-timetable profile, 
+                but reference stops in the national stop place registry.
+                Stop places in this example are included to illustrate the full structure of the data.
                 -->
                 <SiteFrame version="1" id="RUT:SiteFrame:SF01">
                     <stopPlaces>
-                        <!-- Merk at her brukes det codespace NSR som viser at disse elementene eies av NasjonaltHoldeplassRegister -->
+                        <!-- Stops use the codespace NSR since they are "owned" by the national stop place registry -->
                         <StopPlace version="1" id="NSR:StopPlace:03011537">
                             <Name>Larsbr&#229;ten</Name>
                             <quays>
@@ -117,13 +113,19 @@
 
 
                 <ServiceFrame version="1" id="RUT:ServiceFrame:0061">
-                    <!-- Nettverk er bare en gruppering av Lines under en felles "paraply". En Line igjen er en gruppe av ruter under samme markedsføringsnavn, eks Rute 2 -->
+                    <!-- 
+                    Network is just a grouping of lines under a common "umbrella". A Line in turn is a group of Routes using the 
+                    same public reference (line number/PublicCode). In this example "61A" 
+                    -->
                     <Network version="1" changed="2015-12-13T00:00:00Z" id="RUT:GroupOfLine:RuterBuss">
                         <Name>Ruter#</Name>
                     </Network>
-                    <!-- Her listes alle rutepunktene. I eksemplet under er det kun referanser til StopPoints, men det kan også være andre typer punkter, eks TimingPoint.
-                         Hvis man har flere ruter skal alle rutepunkter defineres her. For hver rute under lister man opp de som faktisk benyttes i gitt rute 
-                         (eks tur/retur der mange av punktene er de samme, men ikke nødvendigvis alle -->
+                    <!-- 
+                    All route points are listed here. The example contains only StopPoints, but there could also be other 
+                    types of points, such as TimingPoints.
+                    If the Line has several Routes, all RoutePoints must be listed here. The StopPoints actually used in each 
+                    Route is listed in each respective Route. 
+                    -->
                     <routePoints>
                         <!-- Tveita T -->
                         <RoutePoint version="1" id="RUT:RoutePoint:0061101A0A0061101001">
@@ -163,7 +165,7 @@
                         <Route version="1" id="RUT:Route:0061101">
                             <Name>Tveita - Solfjellet - Larsbråten - Tveita</Name>
                             <LineRef ref="RUT:Line:0061"/>
-                            <!-- Definisjon av hvilken retning dette er. Her brukt en rundtur som kjører med klokken -->
+                            <!-- The definition of direction. This example is a circular trip in a clockwise direction. -->
                             <DirectionType>clockwise</DirectionType>
                             <pointsInSequence>
                                 <PointOnRoute version="1" id="RUT:PointOnRoute:0061101001-0" order="1">
@@ -183,7 +185,7 @@
                     </routes>
 
                     <lines>
-                        <!-- Kun 1 linje definert; 61A -->
+                        <!-- Only one line defined; 61A -->
                         <Line version="1" id="RUT:Line:0061">
                             <Name>Tveita T - Solfjellet</Name>
                             <ShortName>test</ShortName>
@@ -194,14 +196,16 @@
                             <PublicCode>61A</PublicCode>
                             <OperatorRef ref="RUT:Operator:1"/>
                             <routes>
-                                <!-- Denne linjen kjøres bare på 1 måte -->
+                                <!-- This Line has no variations, and thus only has one Route -->
                                 <RouteRef version="1" ref="RUT:Route:0061101"/>
                             </routes>
                         </Line>
                     </lines>
 
-                    <!-- Det antas her at det er to tekster som vises på bussen, "Solfjellet" ved start og frem til Solfjellet stopp, deretter "Tveita T" tilbake til Tveita T-banestasjon.
-                    Disse tekstene er referert til i Calls-seksjonen lenger nede
+                    <!-- 
+                    It is presumed here that two texts are displayed on the bus (above the front window). 
+                    At the beginning of the departure "Solfjellet", up until the stop "Solfjellet". Thereafter "Tveita T"
+                    all the way back to the stop "Tveita T". These texts are referenced to in Calls, further down the example.
                     -->
                     <destinationDisplays>
                         <DestinationDisplay version="1" id="RUT:DestinationDisplay:DST_Solfjellet">
@@ -211,7 +215,7 @@
                             <FrontText>Tveita T</FrontText>
                         </DestinationDisplay>
                     </destinationDisplays>
-                    <!-- Dette er alle stoppene Linje 61A stopper på -->
+                    <!-- These are all the stops served by 61A -->
                     <scheduledStopPoints>
                         <ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:0061101001">
                             <Name>Tveita T</Name>
@@ -236,14 +240,16 @@
                         </ScheduledStopPoint>
                     </scheduledStopPoints>
 
-                    <!-- Kobling fra ScheduledStopPoint til StopPlace/Quay. Legg merke til at StopPlace og Quay hører til i NSR-codespace mens ScheduleStopPoint hører til i RUT-codespacet -->
+                    <!-- 
+                    Reference from ScheduledStopPoint to StopPlace/Quay. Please note that StopPlace and Quay
+                    belong to the NSR codespace, while the ScheduledStopPoint belongs to the RUT codespace -->
                     <stopAssignments>
                         <PassengerStopAssignment version="1" order="1" id="RUT:PassengerStopAssignment:0061101001">
-                            <!-- Hvilket ScheduledStopPoint som mappes til ... -->
+                            <!-- Which ScheduledStopPoint is referenced ... -->
                             <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:0061101001"/>
-                            <!-- .. hvilket stopPlace ... og hvis mulig -->
+                            <!-- .. which StopPlace ... and if possible -->
                             <StopPlaceRef version="1" ref="NSR:StopPlace:03011521"/>
-                            <!-- hvilken quay kjøretøyet stopper ved -->
+                            <!-- which Quay the vehicle stops at -->
                             <QuayRef version="1" ref="NSR:Quay:0301152101"/>
                         </PassengerStopAssignment>
                         <PassengerStopAssignment version="1" order="2" id="RUT:PassengerStopAssignment:0061101002">
@@ -278,17 +284,17 @@
                         </PassengerStopAssignment>
                     </stopAssignments>
 
-                    <!-- Dette er alle JourneyPatterns linje 61A kjører. Akkurat for denne linjen finnes det bare ett slikt "kjøremønster" -->
+                    <!-- These are all the JourneyPatterns used by 61A. For this particular line there is only one pattern. -->
                     <journeyPatterns>
                         <JourneyPattern version="1" id="RUT:JourneyPattern:0061101">
                             <RouteRef version="1" ref="RUT:Route:0061101"/>
-                            <!-- Rekkefølge på stopp -->
+                            <!-- Sequential order of stops -->
                             <pointsInSequence>
                                 <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:0061101002" order="1">
-                                    <!-- Referanse til hvilket ScheduledStopPoint -->
+                                    <!-- Reference to which ScheduledStopPoint... -->
                                     <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:0061101001"/>
                                     <ForAlighting>false</ForAlighting>
-                                    <!-- Destinasjonstekst som vises på bussen -->
+                                    <!-- Destination text displayed on the bus -->
                                     <DestinationDisplayRef ref="RUT:DestinationDisplay:DST_Solfjellet"/>
                                 </StopPointInJourneyPattern>
                                 <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:0061101002" order="2">
@@ -296,7 +302,7 @@
                                 </StopPointInJourneyPattern>
                                 <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:0061101003" order="3">
                                     <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:0061101003"/>
-                                    <!-- Her endrer teksten på bussen seg fra Solfjellet til Tveita T -->
+                                    <!-- From this point on the destination text changes from Solfjellet to Tveita T -->
                                     <DestinationDisplayRef ref="RUT:DestinationDisplay:DST_TveitaT"/>
                                 </StopPointInJourneyPattern>
                                 <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:0061101004" order="4">
@@ -321,7 +327,7 @@
                     </journeyPatterns>
                     
                     <notices>
-                        <!-- Denne fotnoten er modellert for hele linjen, ikke relatert spesifikt til noe stopp eller turer -->
+                        <!-- This notice is modelled for the entire Line, and not specificly related to any stops or trips. -->
                         <Notice version="1" id="RUT:Notice:1">
                             <Text>I boligveiene kan buss 61A ogs&#229; stoppe utenom de faste holdeplassene. Husk &#229; gi stoppsignal!</Text>
                         </Notice>
@@ -339,7 +345,7 @@
                     <ServiceCalendar version="1" id="RUT:ServiceCalendar:1">
                         <Name>Ukedager inkludert lørdag, hver hele time kvart over</Name>
                         <dayTypes>
-                            <!-- Denne kalenderen gjelder alle ukedager inkludert lørdager -->
+                            <!-- This calendar specifies Monday-Saturday -->
                             <DayType version="1" id="RUT:DayType:MonSat">
                                 <Name>Ukedager og lørdager</Name>
                                 <properties>
@@ -372,16 +378,21 @@
                 </ServiceCalendarFrame>
 
 
-                <!-- Tidtabellen, dvs avgangstider -->
+                <!-- Timetable, that is, departure times etc. -->
                 <TimetableFrame version="1" id="RUT:TimetableFrame:TF02">
-                    <!-- Kjøres buss om ikke noe annet er spesifisert -->
                     <vehicleJourneys>
-                        <!-- Her defineres en TemplateServiceJourney. Den sier at avgangstidene er de samme, men i dette tilfellet med et rytmisk mønster (hvert. 15 minutt over hel) -->
+                        <!-- 
+                        TemplateServiceJourney is defined here. It specifies that departure times are the same, but
+                        in this case they follow a rhythmical pattern (every 15 minutes past whole hours)
+                        -->
                         <TemplateServiceJourney version="1" id="RUT:TemplateServiceJourney:0061">
                             <PrivateCode>test</PrivateCode>
                             <DepartureTime>00:15:00</DepartureTime>
                             <dayTypes>
-                                <!-- Refererer til 1 daytype som inneholder alle dager mandag-lørdag. Kunne vært separate dagtyper, men da måtte alle listes her -->
+                                <!-- 
+                                Refers to a daytype, which in this case is Monday-Saturday. It is possible to list each daytype
+                                separately, but that would require all to be listed here.
+                                -->
                                 <DayTypeRef version="1" ref="RUT:DayType:MonSat"/>
                             </dayTypes>
                             <JourneyPatternRef version="1" ref="RUT:JourneyPattern:0061101"/>
@@ -428,9 +439,9 @@
                             <frequencyGroups>
                                 <RhythmicalJourneyGroup version="1" id="RUT:RhythmicalJourneyGroup:1">
                                     <Name>Every hour, 15 minutes past the hour</Name>
-                                    <!-- dagens første avgang -->
+                                    <!-- First departure of the day (all days in the daytype) -->
                                     <FirstDepartureTime>09:15:00</FirstDepartureTime>
-                                    <!-- dagens siste avgang -->
+                                    <!-- Last departure of the day (all days in the daytype) -->
                                     <LastDepartureTime>14:15:00</LastDepartureTime>
                                     <timebands>
                                         <TimebandRef version="1" ref="RUT:Timeband:TM15"/>
