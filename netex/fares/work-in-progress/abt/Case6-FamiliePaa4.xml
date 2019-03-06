@@ -102,11 +102,15 @@
                             <validityParameterAssignments>
                                 <CustomerPurchaseParameterAssignment version="any"
                                     id="NSB:CustomerPurchaseParameterAssignment:2" order="1">
+                                    
+                                    
+                                    
                                     <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
                                     <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
                                     <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloDrammen"/>
                                     <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesPackage:5e69"/>
                                     <limitations>
+                                        
                                         <!-- GroupTicketRef? -->
                                         <UsageValidityPeriod id="NSB:UsageValidityPeriod:XXY"
                                             version="1">
@@ -117,7 +121,15 @@
                                         </UsageValidityPeriod>
                                         <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
                                         <CompanionProfileRef ref="NSB:UserProfile:Child" versionRef="NSB:Version:V1"/>
+                                    
+                                    
                                     </limitations>
+                                    <validityParameters>
+                                       
+                                        
+                                        
+                                        
+                                    </validityParameters>
 
 
                                 </CustomerPurchaseParameterAssignment>

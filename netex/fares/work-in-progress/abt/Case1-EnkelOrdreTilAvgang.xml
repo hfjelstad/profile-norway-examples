@@ -52,7 +52,9 @@
 
             <customerPurchasePackages>
                 <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:1" version="1">
+                    
                     <SalesOfferPackageRef ref="NSB:SalesPackage:SingleTicket"/>
+                    
                     <customerPurchasePackageElements>
                         <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackage:1"
                             version="1" order="1">

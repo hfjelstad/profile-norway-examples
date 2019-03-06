@@ -61,7 +61,7 @@ Barn
                                     <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:DrammenOslo"/>
                                     <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
                                     <limitations>
-                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                       
                                         <UserProfileRef ref="NSB:UserProfile:Child" versionRef="NSB:Version:V1"/>
                                         <UsageValidityPeriod id="NSB:UsageValidityPeriod:XX"
                                             version="1">
@@ -73,6 +73,7 @@ Barn
 
                                     </limitations>
                                     <validityParameters>
+                                        
                                         <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
                                     </validityParameters>
                                 </CustomerPurchaseParameterAssignment>

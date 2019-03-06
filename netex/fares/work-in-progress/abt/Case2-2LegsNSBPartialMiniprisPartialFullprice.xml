@@ -42,7 +42,7 @@ Refusjon samlet, må reise samlet
                             <customerPurchasePackages>
                                 <CustomerPurchasePackageRef ref="NSB:CustomerPurchasePackage:1"/>
                             </customerPurchasePackages>
-
+                            
                         </SalesTransaction>
                     </fareContractEntries>
 
@@ -53,8 +53,7 @@ Refusjon samlet, må reise samlet
             <customerPurchasePackages>
                 <CustomerPurchasePackage id="NSB:CustomerPurchasePackage:1" version="1">
 
-                    
-
+                 
                     <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
                     
                     
@@ -67,6 +66,7 @@ Refusjon samlet, må reise samlet
                             <validityParameterAssignments>
                                 <CustomerPurchaseParameterAssignment version="any"
                                     id="NSB:CustomerPurchaseParameterAssignment:1" order="1">
+                                    
                                     <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
                                     <!-- Aktiveres 2 ganger eller bare 1 gang? -->
                                     <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
