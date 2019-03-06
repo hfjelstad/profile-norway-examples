@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery version="1.08:NO-NeTEx-fares:1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.netex.org.uk/netex ../nick070918/xsd/NeTEx_publication.xsd"
+    xmlns="http://www.netex.org.uk/netex">
+    <PublicationTimestamp>2018-09-04T12:00:00</PublicationTimestamp>
+    <ParticipantRef>ENT</ParticipantRef>
+    <dataObjects>
+
+        <!-- Case 2: Gjennomgående billett NSB - Gjøvikbane
+Minipris på regiontog
+Ordinærbillett på lokaltog
+Voksen
+Setereservasjon på regiontog
+Ikke setevalg på lokaltog
+Refusjon samlet, må reise samlet
+
+-->
+
+       
+
+
+        <SalesTransactionFrame id="SalesTransactionFrame" version="any">
+
+            
+
+            <fareContracts>
+                <FareContract version="any" id="xpl:Contract:Anon001">
+                    
+                    <Name>Gjennomgående Kristiansand-Oslo-Nittedal</Name>
+                    
+                    <fareContractEntries>
+                        <SalesTransaction version="any" id="ENT:SalesTransaction:Gjennomgående">
+
+                            <Name>Betaling for gjennomgående billett</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <Amount>143</Amount>
+                            <PriceUnitRef ref="NOK"/>
+                            <!-- Norske kroner -->
+                            <PaymentMethod>debitCard</PaymentMethod>
+
+                            <customerPurchasePackages>
+                                <CustomerPurchasePackageRef ref="NSB:CustomerPurchasePackage:1"/>
+                            </customerPurchasePackages>
+                            
+                        </SalesTransaction>
+                    </fareContractEntries>
+
+                </FareContract>
+
+            </fareContracts>
+
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="NSB:CustomerPurchasePackage:1" version="1">
+
+                 
+                    <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
+                    
+                    
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="NSB:CustomerPurchasePackageElement:1"
+                            version="1" order="1">
+                           
+                            
+                            <SalesOfferPackageElementRef ref="NSB:SalesOfferPackageElement:1"/>
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="any"
+                                    id="NSB:CustomerPurchaseParameterAssignment:1" order="1">
+                                    
+                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <!-- Aktiveres 2 ganger eller bare 1 gang? -->
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:KristiansandOslo"/>
+                                    <limitations>
+                                        
+                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                        <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                        <!-- Når er billetten gyldig? Sammen med ServiceJourneyRef under blir dette en unik avgang -->
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:123" version="1">
+                                            <StartDate>2019-01-01</StartDate>
+                                            <StartTime>00:00:00</StartTime>
+                                            <EndDate>2019-01-02</EndDate>
+                                            <EndTime>00:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                                
+                            </validityParameterAssignments>
+                            
+                        </CustomerPurchasePackageElement>
+                        <CustomerPurchasePackageElement id="NSB:CustomerPurchasePackageElement:2"
+                            version="1" order="1">
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="any"
+                                    id="NSB:CustomerPurchaseParameterAssignment:2" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <!-- Aktiveres 2 ganger eller bare 1 gang? -->
+                                    <SupplementProductRef ref="NSB:SupplementProduct:Seat" versionRef="NSB:Version:V1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:KristiansandOslo"/>
+                                   
+                                    <limitations>
+                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                        <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:1234" version="1">
+                                            <StartDate>2019-01-01</StartDate>
+                                            <StartTime>00:00:00</StartTime>
+                                            <EndDate>2019-01-02</EndDate>
+                                            <EndTime>00:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                                
+                            </validityParameterAssignments>
+                            
+                        </CustomerPurchasePackageElement>
+                        
+                        
+                        <CustomerPurchasePackageElement version="any"
+                            id="ENT:CustomerPurchasePackageElement:Oslo-Nittedal" order="2">
+                            <!-- Leg 2 -->
+
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1"
+                                    id="NSB:CustomerPurchaseParameterAssignment:3" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <!-- Aktiveres 2 ganger eller bare 1 gang? -->
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloNittedal"/>
+                                   
+                                    <limitations>
+                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                        <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                        <!-- Når er billetten gyldig? Sammen med ServiceJourneyRef under blir dette en unik avgang -->
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:1235" version="1">
+                                            <StartDate>2019-01-01</StartDate>
+                                            <StartTime>00:00:00</StartTime>
+                                            <EndDate>2019-01-02</EndDate>
+                                            <EndTime>00:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                    </limitations>
+                                    
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                    </customerPurchasePackageElements>
+
+
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+
+
+        </SalesTransactionFrame>
+    </dataObjects>
+</PublicationDelivery>

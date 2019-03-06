@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery version="1.08:NO-NeTEx-fares:1.0" xmlns="http://www.netex.org.uk/netex">
+    <PublicationTimestamp>2018-09-04T12:00:00</PublicationTimestamp>
+    <ParticipantRef>ENT</ParticipantRef>
+    <dataObjects>
+
+        <!-- Eksempel på case nr 1:
+            
+            1.            Case 1: Enkel billett til avgang
+                    Fra til stasjon til stasjon
+                    bestemt avgang.
+                    Voksen .
+                    Seter
+                    Nsb ordinær
+                    Oslo trondheim
+-->
+
+
+        <SalesTransactionFrame id="SalesTransactionFrame" version="any">
+
+            <FareContracts>
+                <FareContract version="any" id="xpl:Contract:Anon001">
+                    <Name>Enkeltbillett reise Oslo Trondheim</Name>
+                    <StartDate>2018-09-06T01:07:00</StartDate>
+                    <EndDate>2018-09-07T01:07:00</EndDate>
+                    <FareContractEntries>
+
+                        <SalesTransaction version="any"
+                            id="ENT:SalesTransaction:EnkelOsloTrondheim123123242342342">
+
+                            <Name>Kjøp enkeltbillett fra Oslo til Trondheim </Name>
+
+                            <Date>2018-09-06T01:07:00</Date>
+                            <FareContractRef ref="xpl:Contract:Anon001" version="any"/>
+                            <Amount>699</Amount>
+                            <PriceUnitRef ref="NOK"/>
+                            <!-- Norske kroner -->
+                            <PaymentMethod>debitCard</PaymentMethod>
+
+                            <customerPurchasePackages>
+                                <!-- Referanse til customer purchase packages -->
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:1" version="1"/>
+                            </customerPurchasePackages>
+
+                            <TravelDocumentRef ref="NSB:TravelDocument:Xsdsdfxdfsd">Ekstern ordrereferanse?</TravelDocumentRef>
+
+                        </SalesTransaction>
+                    </FareContractEntries>
+
+                </FareContract>
+            </FareContracts>
+
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:1" version="1">
+                    
+                    <SalesOfferPackageRef ref="NSB:SalesPackage:SingleTicket"/>
+                    
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackage:1"
+                            version="1" order="1">
+
+                            <SalesOfferPackageElementRef ref="NSB:SalesPackageElement:SingleTicket"/>
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="any"
+                                    id="NSB:CustomerPurchaseParameterAssignment:1" order="1">
+                                    <!-- STATE -->
+                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloTrondheim"/>
+                                    <limitations>
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:XX"
+                                            version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-05</EndDate>
+                                            <EndTime>12:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        <UserProfileRef ref="NSB:UserProfile:Adult" versionRef="NSB:Version:V1"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
+                                    </validityParameters>
+
+                                </CustomerPurchaseParameterAssignment>
+
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                    </customerPurchasePackageElements>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+
+
+        </SalesTransactionFrame>
+    </dataObjects>
+</PublicationDelivery>

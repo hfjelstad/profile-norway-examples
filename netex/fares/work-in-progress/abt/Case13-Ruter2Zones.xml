@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery version="1.08:NO-NeTEx-fares:1.0" xmlns="http://www.netex.org.uk/netex">
+    <PublicationTimestamp>2018-09-04T12:00:00</PublicationTimestamp>
+    <ParticipantRef>ENT</ParticipantRef>
+    <dataObjects>
+
+        <!-- 
+            
+            
+Case 13: Ruter enkeltbillett/mobil
+
+Ruter enkeltreise
+Definert startsone
+2 soner / radius
+Lengde på gyldighet (90 min)
+Voksen
+
+-->
+        <SalesTransactionFrame id="SalesTransactionFrame" version="any">
+            <FareContracts>
+                <FareContract version="any" id="xpl:Contract:Anon001">
+                    <Name>Enkeltbillett Ruter 1 zone</Name>
+                    <FareContractEntries>
+                        <SalesTransaction version="any" id="ENT:SalesTransaction:SingleZone1">
+                            <Name>Kjøp av enkel billett Ruter voksen 2 soner</Name>
+
+                            <Date>2018-09-06T01:07:00</Date>
+                            <FareContractRef ref="xpl:Contract:Anon001" version="any"/>
+                            <Amount>57</Amount>
+                            <PriceUnitRef ref="NOK"/>
+                            <!-- Norske kroner -->
+                            <PaymentMethod>debitCard</PaymentMethod>
+
+                            <customerPurchasePackages>
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:1" version="1"/>
+                            </customerPurchasePackages>
+                        </SalesTransaction>
+                        <!--
+                        <FareContractActivation id="XXXXX" version="1">
+                            <ValidityStart>2018-10-08T12:00:00</ValidityStart>                                     
+                            <ValidityEnd>2018-10-08T13:00:00</ValidityEnd>                                      
+                        </FareContractActivation>
+                        -->
+                    </FareContractEntries>
+
+                </FareContract>
+            </FareContracts>
+
+
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:1" version="1">
+                    <SalesOfferPackageRef ref="RUT:SalesPackage:SingleTicket"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackage:1"
+                            version="1" order="1">
+
+                            <SalesOfferPackageElementRef ref="RUT:SalesPackageElement:SingleTicket"/>
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="any"
+                                    id="RUT:CustomerPurchaseParameterAssignment:1" order="1">
+                                    <ValidableElementRef ref="RUT:ValidableElement:RuterSingleTicket" versionRef="RUT:Version:V1"/>
+                                    <PreassignedFareProductRef ref="RUT:PreassignedFareProduct:RuterSingleTicket" versionRef="RUT:Version:V1"/>
+                                    <limitations>
+                                        <!-- UserProfile voksen -->
+                                        <UserProfileRef ref="RUT:UserProfile:Adult" versionRef="RUT:Version:V1"/>
+                                    </limitations>
+
+                                    <validityParameters>
+                                        <!-- Enten spesifisere hvilke soner som er inkludert her ANDet sammen - eller kun startsone og så antall soner 
+                                            dvs GeograhicalIntervalRef under -->
+                                        <TariffZoneRef ref="RUT:TariffZone:Sone1"/>
+                                        <TariffZoneRef ref="RUT:TariffZone:Sone2Ø"/>
+                                    </validityParameters>
+
+                                    <!-- Hvordan spesifisere alle mulige kombinasjoner av disse to sonene gitt startsone? -->
+                                    <GeographicalIntervalRef ref="RUT:GeograhicalInterval:2Zone"/>
+
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                    </customerPurchasePackageElements>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+        </SalesTransactionFrame>
+    </dataObjects>
+</PublicationDelivery>

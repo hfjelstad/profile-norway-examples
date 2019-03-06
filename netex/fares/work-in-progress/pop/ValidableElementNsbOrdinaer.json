@@ -1,0 +1,117 @@
+{
+  "id": "NSB:ValidableElement:Ordinary",
+  "nameOfClass": "ValidableElement",
+  "version": "NSB:Version:V1",
+  "name": [
+    {
+      "lang": "nob",
+      "value": "NSB Ordinær"
+    }
+  ],
+  "accessRightParameterAssignments": [
+    {
+      "id": "NSB:GenericParameterAssignment:OrdinaryAllowInterchanging",
+      "nameOfClass": "GenericParameterAssignment",
+      "version": "NSB:Version:V1",
+      "name": [
+        {
+          "lang": "nob",
+          "value": "NSB Ordinær"
+        }
+      ],
+      "limitations": [
+        {
+          "nameOfClass": "Interchanging",
+          "ref": "NSB:Interchanging:Unlimited",
+          "version": "NSB:Version:V1"
+        }
+      ],
+      "limitationGroupingType": "AND"
+      },
+    {
+      "id": "NSB:GenericParameterAssignment:OrdinaryBergensbanen",
+      "nameOfClass": "GenericParameterAssignment",
+      "version": "NSB:Version:V1",
+      "name": [
+        {
+          "lang": "nob",
+          "value": "NSB Ordinær"
+        }
+      ],
+      "includes": [
+        {
+          "id": "NSB:GenericParameterAssignment:OrdinaryBergensbanenWithLowSeason",
+          "nameOfClass": "GenericParameterAssignment",
+          "version": "NSB:Version:V1",
+          "name": [
+            {
+              "lang": "nob",
+              "value": "NSB Ordinær"
+            }
+          ],
+          "validityParameters": [
+            {
+              "id": "NSB:ScopingValidityParameter:OrdinaryBergensbanenLine",
+              "nameOfClass": "ScopingValidityParameter",
+              "version": "NSB:Version:V1",
+              "lineRef": "NSB:Line:41",
+              "fareClasses": []
+            }
+          ],
+          "validityParameterAssignmentType": "EQ",
+          "validityParameterGroupingType": "AND"
+        },
+        {
+          "id": "NSB:GenericParameterAssignment:OrdinaryNotBergensbanenLine",
+          "nameOfClass": "GenericParameterAssignment",
+          "version": "NSB:Version:V1",
+          "name": [
+            {
+              "lang": "nob",
+              "value": "NSB Ordinær"
+            }
+          ],
+          "validityParameters": [
+            {
+              "id": "NSB:ScopingValidityParameter:OrdinaryNotBergensbanenLine",
+              "nameOfClass": "ScopingValidityParameter",
+              "version": "NSB:Version:V1",
+              "lineRef": "NSB:Line:41"
+            }
+          ],
+          "validityParameterAssignmentType": "NE",
+          "validityParameterGroupingType": "AND"
+        }
+      ],
+      "includesGroupingType": "OR"
+    },
+    {
+      "id": "NSB:GenericParameterAssignment:GreaterOrEqualNSB",
+      "nameOfClass": "GenericParameterAssignment",
+      "version": "NSB:Version:V1",
+      "name": [
+        {
+          "lang": "nob",
+          "value": "NSB Ordinær"
+        }
+      ],
+      "validityParameters": [
+        {
+          "id": "NSB:ScopingValidityParameter:OperatorGreaterOrEqualNSB",
+          "nameOfClass": "ScopingValidityParameter",
+          "version": "NSB:Version:V1",
+          "operatorRef": "NSB:Authority:NSB"
+        }
+      ],
+      "validityParameterAssignmentType": "GE",
+      "validityParameterGroupingType": "AND"
+    }
+  ],
+  "fareStructureElementsRef": [
+    {
+      "nameOfClass": "FareStructureElement",
+      "ref": "NSB:FareStructureElement:TENInterval",
+      "version": "NSB:Version:V1"
+    }
+  ]
+}

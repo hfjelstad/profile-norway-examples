@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ==== NSB Rail Fare Example ====== -->
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.netex.org.uk/netex file:/Users/hegedreiem/entur/NetEx%20xmls/NeTEx-V01,09-examples/xsd/NeTEx_publication.xsd"
+    xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:siri="http://www.siri.org.uk/siri" version="1.0">
+    <PublicationTimestamp>2018-10-08T09:30:47.0Z</PublicationTimestamp>
+    <ParticipantRef>NSB</ParticipantRef>
+
+    <dataObjects>
+        <FareFrame version="01" id="RUT:FareFrame:FareData">
+            <AuthorityRef ref="RUT:Authority:RUT"></AuthorityRef>
+            <fareZones>
+                <FareZone id="RUT:TariffZone:2V" version="any"></FareZone>
+                <FareZone id="RUT:TariffZone:4V" version="any"></FareZone>
+                <FareZone id="RUT:TariffZone:2OE" version="any"></FareZone>
+                <FareZone id="RUT:TariffZone:4N" version="any"></FareZone>
+                <FareZone id="RUT:TariffZone:4SOE" version="any"></FareZone>
+                <FareZone id="RUT:TariffZone:3V" version="any"></FareZone>
+                <FareZone id="RUT:TariffZone:3OE" version="any"></FareZone>
+                <FareZone id="RUT:TariffZone:4OE" version="any"></FareZone>
+                <FareZone id="RUT:TariffZone:3S" version="any"></FareZone>
+                <FareZone id="RUT:TariffZone:2S" version="any"></FareZone>
+                <FareZone id="RUT:TariffZone:1" version="any"></FareZone>
+            </fareZones>
+        </FareFrame>
+        <FareFrame version="NSB:Version:V1" created="2017-11-11T12:11:11" id="NSB:FareFrame:FareData">
+            <AuthorityRef ref="NSB:Authority:NSB"/>
+              
+              <fareSections>
+                  <FareSection id="NSB:FareSection:TrondheimKoppera" version="01">
+                      <JourneyPattern id="NSB:JourneyPattern:TrondheimKoppera" version="01">
+                          <pointsInSequence>
+                              <PointInJourneyPattern id="NSB:FarePointInPattern:TrondheimOnTK" version="01" order="1">
+                                  <PointRef ref="NSR:StopPlace:659"></PointRef>
+                              </PointInJourneyPattern>
+                              <PointInJourneyPattern id="NSB:FarePointInPattern:LademoenOnTK" version="01" order="2">
+                                  <PointRef ref="NSR:StopPlace:99999"></PointRef>
+                              </PointInJourneyPattern>
+                              <PointInJourneyPattern id="NSB:FarePointInPattern:LillebyOnTK" version="01" order="3">
+                                  <PointRef ref="NSR:StopPlace:388"></PointRef>
+                              </PointInJourneyPattern>
+                              <PointInJourneyPattern id="NSB:FarePointInPattern:LeangenOnTK" version="01" order="4">
+                                  <PointRef ref="NSR:StopPlace:393"></PointRef>
+                              </PointInJourneyPattern>
+                              <!-- todo the other points -->
+                          </pointsInSequence>
+                      </JourneyPattern>
+                  </FareSection>
+                  <FareSection id="NSB:FareSection:TrondheimSteinkjer" version="01"></FareSection>
+                  <FareSection id="NSB:FareSection:TrondheimRoros" version="01"></FareSection>
+                  <FareSection id="NSB:FareSection:TrondheimOppdal" version="01"></FareSection>
+                  <FareSection id="NSB:FareSection:AndalsnesDombas" version="01"></FareSection>
+              </fareSections>
+            <usageParameters>
+                <!-- User Profiles -->
+                <UserProfile version="any" id="NSB:UserProfile:Anyone"></UserProfile>
+                <UserProfile version="01" id="NSB:UserProfile:Adult">
+                    <UserType>adult</UserType>
+                </UserProfile>
+                <UserProfile version="01" id="NSB:UserProfile:Child">
+                    <UserType>child</UserType>
+                    <MinimumAge>4</MinimumAge>
+                    <MaximumAge>16</MaximumAge>
+                    <DiscountBasis>discount</DiscountBasis>
+                </UserProfile>
+                <UserProfile version="01" id="NSB:UserProfile:Infant">
+                    <UserType>infant</UserType>
+                    <MaximumAge>3</MaximumAge>
+                    <DiscountBasis>free</DiscountBasis>
+                </UserProfile>
+                <UserProfile version="any" id="NSB:UserProfile:Senior">
+                    <!-- For now, the senior UserProfile also includes spouse travelling with the senior, blind and disabled. -->
+                    <!--<MinimumAge>67</MinimumAge>-->
+                    <DiscountBasis>discount</DiscountBasis>
+                </UserProfile>               
+                <UserProfile version="any" id="NSB:UserProfile:Student">
+                    <MinimumAge>16</MinimumAge>
+                    <MaximumAge>30</MaximumAge>
+                </UserProfile>
+                <UserProfile version="any" id="NSB:UserProfile:Military"></UserProfile>
+                <UserProfile version="any" id="NSB:UserProfile:DeafBlind">
+                    <UserType>adult</UserType>
+                    <ProofRequired>membershipCard</ProofRequired>
+                    <DiscountBasis>discount</DiscountBasis>
+                    <companionProfiles >
+                        <CompanionProfile version="any" id="NSB:CompanionProfile:deafblindCompanion">
+                            <Name>Companion  for deafblind person</Name>
+                            <ParentRef ref="NSB:UserProfile:DeafBlind"></ParentRef>
+                            <!-- The userprofile who can be companion --> 
+                            <UserProfileRef ref="NSB:UserProfile:Adult"/>
+                            <MaximumNumberOfPersons>1</MaximumNumberOfPersons>
+                            <DiscountBasis>free</DiscountBasis>
+                        </CompanionProfile>
+                    </companionProfiles>
+                </UserProfile>               
+                <UserProfile version="any" id="NSB:UserProfile:DeafblindCompanion">
+                    <UserType>adult</UserType>
+                    <DiscountBasis>free</DiscountBasis>
+                </UserProfile>
+                
+                <Reserving id="NSB:Reserving:CompulsoryRes" version="01">
+                    <ReservingRequirements>reservationsCompulsory</ReservingRequirements>
+                    <MinimumNumberToReserve>1</MinimumNumberToReserve>
+                    <MaximumNumberToReserve>1</MaximumNumberToReserve>
+                    <MustReserveWholeCompartment>false</MustReserveWholeCompartment>
+                </Reserving>
+                <Reserving id="NSB:Reserving:NoReservationPossible" version="01">
+                    <ReservingRequirements>noReservationsPossible</ReservingRequirements>
+                </Reserving>
+                <Reserving id="NSB:Reserving:standardFare" version="01">
+                    <TypeOfUsageParameterRef ref="ENT:TypeOfUsageParameter:SeatMap"></TypeOfUsageParameterRef>
+                </Reserving>
+                <Reserving id="NSB:Reserving:economyFare" version="01">
+                    <TypeOfUsageParameterRef ref="ENT:TypeOfUsageParameter:AutoAssigned"></TypeOfUsageParameterRef>
+                </Reserving>
+                
+                <!---  ===TRAVEL USAGE PARAMETERS =========    -->
+                <FrequencyOfUse id="NSB:FrequencyOfUse:Single" version="01">
+                    <FrequencyOfUseType>single</FrequencyOfUseType>
+                    <MinimalFrequency>1</MinimalFrequency>
+                    <MaximalFrequency>1</MaximalFrequency>
+                </FrequencyOfUse>
+                <Interchanging version="any" id="NSB:Interchanging:Unlimited">
+                    <TypeOfUsageParameterRef ref="NSB:TypeOfUsageParameter:ThroughFareInterchanging"></TypeOfUsageParameterRef>
+                    <MaximumTimeToMakeATransfer>PT12H</MaximumTimeToMakeATransfer>
+                    <CanBreakJourney>false</CanBreakJourney>
+                </Interchanging>
+                <!---  ===AFTER SALES USAGE PARAMETERS =========    -->
+                <Exchanging id="NSB:Exchanging:NoExchange" version="01">
+                    <NumberOfExchangesAllowed>0</NumberOfExchangesAllowed>
+                </Exchanging>
+                <Replacing id="NSB:Replacing:NoReplacing" version="any">
+                    <Allowed>none</Allowed>
+                    <UnusedTicketsOnly>false</UnusedTicketsOnly>
+                    <ResellWhen>never</ResellWhen>
+                </Replacing>
+                <Refunding id="NSB:Refunding:FeeLatestHour" version="any"> <!-- Denne ser feil ut i db, samme periode som FullRefundUntilLimit, mangler resell_when-->
+                    <Allowed>full</Allowed>
+                    <UnusedTicketsOnly>false</UnusedTicketsOnly>
+                    <ResellWhen>beforeStartOfValidity</ResellWhen>
+                    <ExchangableFromDuration>PT24H</ExchangableFromDuration>
+                    <HasFee>true</HasFee>
+                    <RefundType>unused</RefundType>
+                </Refunding>
+                <Refunding id="NSB:Refunding:NSB:Refunding:FullRefundUntilLimit" version="any"><!-- Denne ser feil ut i db, mangler resell_when-->
+                    <Allowed>full</Allowed>
+                    <UnusedTicketsOnly>true</UnusedTicketsOnly>
+                    <ResellWhen>beforeStartOfValidity</ResellWhen>
+                    <ExchangableUntilDuration>PT24H</ExchangableUntilDuration>
+                    <HasFee>false</HasFee>
+                    <RefundType>unused</RefundType>
+                </Refunding>
+                <PurchaseWindow id="NSB:PurchaseWindow:StandardFromDuration" version="any">
+                    <PurchaseWhen>advanceAndDayOfTravel</PurchaseWhen>
+                    <MaximumPeriodBeforeDeparture>P90D</MaximumPeriodBeforeDeparture> 
+                </PurchaseWindow>
+            </usageParameters>
+
+            <fareProducts>
+                <PreassignedFareProduct id="NSB:PreassignedFareProduct:Ordinary" version="01">
+                    <Name>NSB Ordinær</Name>
+                    <validityParameterAssignments>
+                        
+                        <!-- Note the use of Order in GPAs for valid xml-->
+                        
+                        <!-- Eligibility -->
+                        <!-- One familiy ticket (children travel free when accompanied by adult paying std fare), std user profiles) -->
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:OrdinaryEligibility" version="01" order="01">
+                            <LimitationGroupingType>XOR</LimitationGroupingType>
+                            <limitations>
+                                <GroupTicket id="NSB:GroupTicket:FamilyDiscount" version="01">
+                                    <companionProfiles>
+                                        <CompanionProfile id="NSB:CompanionProfile:Adult" version="01">
+                                            <MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+                                            <MaximumNumberOfPersons>1</MaximumNumberOfPersons>
+                                            <DiscountBasis>none</DiscountBasis>
+                                        </CompanionProfile>
+                                        <CompanionProfile id="NSB:CompanionProfile:Child" version="01">
+                                            <MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+                                            <MaximumNumberOfPersons>1</MaximumNumberOfPersons>
+                                            <DiscountBasis>free</DiscountBasis>
+                                        </CompanionProfile>
+                                    </companionProfiles>
+                                    <!-- <GroupTicketing>separate</GroupTicketing> -->
+                                    <PricingBasis>perOffer</PricingBasis>
+                                    <MaximumPersonsDiscounted>1</MaximumPersonsDiscounted>
+                                    
+                                </GroupTicket>
+                                <UserProfileRef ref="NSB:UserProfile:Adult"></UserProfileRef>
+                                <UserProfileRef ref="NSB:UserProfile:Child"></UserProfileRef>
+                                <UserProfileRef ref="NSB:UserProfile:Infant"></UserProfileRef>
+                                <UserProfileRef ref="NSB:UserProfile:Senior"></UserProfileRef>
+                                <UserProfileRef ref="NSB:UserProfile:Military"></UserProfileRef>
+                                <UserProfileRef ref="NSB:UserProfile:Student"></UserProfileRef>
+                            </limitations>
+                        </GenericParameterAssignment>
+                        
+                        <!-- after sales parameters -->
+                        <!-- These parameters do not require validation at time of purchase -->
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:OrdinaryNoReplacing" version="01" order="1">
+                            <Name>After sales parameters</Name>
+                            <TypeOfAccessRightAssignmentRef ref="eura:condition_of_use"></TypeOfAccessRightAssignmentRef> <!-- Note TypeOfAccessRightAssignment -->
+                            <LimitationGroupingType>AND</LimitationGroupingType>
+                            <limitations>
+                                <ReplacingRef ref="NSB:Replacing:NoReplacing" version="any"/>
+                                <Transferability id="NSB:GenericParameterAssignment:OrdinaryNoTransfer" version="any">
+                                    <CanTransfer>false</CanTransfer>
+                                </Transferability>
+                                <Exchanging id="NSB:Exchanging:NoExchange" version="any"/>
+                                <Reselling id="NSB:Reselling:OrdinaryNoReselling">
+                                    <Allowed>none</Allowed>
+                                    <ResellWhen>never</ResellWhen>
+                                </Reselling>
+                            </limitations>
+                        </GenericParameterAssignment>
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:Refunding" version="01" order="01">
+                            <LimitationGroupingType>OR</LimitationGroupingType>
+                            <limitations>
+                                <RefundingRef ref="NSB:Refunding:NSB:Refunding:FullRefundUntilLimit"></RefundingRef>
+                                <RefundingRef ref="NSB:Refunding:FeeLatestHour"></RefundingRef>
+                            </limitations>
+                        </GenericParameterAssignment>
+                        
+                        <!-- booking parameters -->
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:PurchaseWindow" version="01" order="01">
+                            <limitations>
+                                <PurchaseWindowRef ref="NSB:PurchaseWindow:StandardFromDuration"></PurchaseWindowRef>
+                            </limitations>
+                        </GenericParameterAssignment>
+                        
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:ordinary@reserving" version="01" order="01">
+                            <limitations>
+                                <ReservingRef ref="NSB:Reserving:standardFare"></ReservingRef>
+                            </limitations>
+                        </GenericParameterAssignment>
+                        
+                        <!-- travel parameters -->
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:SingleRide" version="01" order="01">
+                            <limitations>
+                                <FrequencyOfUseRef ref="NSB:FrequencyOfUse:Single"></FrequencyOfUseRef>
+                            </limitations>    
+                        </GenericParameterAssignment>
+                        
+                        <!-- scoping parameters -->
+                        <!-- this product valid on all NSB lines with a few exceptions. Only standard class tickets are available. -->
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:OrdinaryFareClass" version="01" order="01">
+                            <validityParameters>
+                                <FareClass>standardClass</FareClass>
+                            </validityParameters>
+                        </GenericParameterAssignment>
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:OrdinaryZoneRestriction" version="01" order="01">
+                            <!-- This product should not be sold if the journey is entirely within Ruter zones -->
+                            <ValidityParameterAssignmentType>GT</ValidityParameterAssignmentType>
+                            <ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+                            <validityParameters>
+                                <FareZoneRef ref="RUT:TariffZone:2V" version="any"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:4V" version="any"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:2OE" version="any"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:4N" version="any"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:4SOE" version="any"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:3V" version="any"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:3OE" version="any"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:4OE" version="any"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:3S" version="any"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:2S" version="any"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:1" version="any"></FareZoneRef>
+                            </validityParameters>
+                        </GenericParameterAssignment>
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:OrdinaryNotTrondelagFareSection" version="01" order="01">
+                            <!-- this product is not valid on some FareSections in county Trondelag -->
+                            <ValidityParameterAssignmentType>GT</ValidityParameterAssignmentType>
+                            <validityParameters>
+                                <FareSectionRef ref="NSB:FareSection:TrondheimKoppera"></FareSectionRef>
+                                <FareSectionRef ref="NSB:FareSection:TrondheimSteinkjer"></FareSectionRef>
+                                <FareSectionRef ref="NSB:FareSection:TrondheimRoros"></FareSectionRef>
+                                <FareSectionRef ref="NSB:FareSection:TrondheimOppdal"></FareSectionRef>
+                            </validityParameters>
+                        </GenericParameterAssignment>
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:OrdinaryNotBratsbergbanen" version="01" order="01">
+                            <!-- this product is not valid on the line Bratsbergbanen -->
+                            <ValidityParameterAssignmentType>NE</ValidityParameterAssignmentType>
+                            <ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+                            <validityParameters>
+                                <LineRef ref="NSB:Line:52"></LineRef>
+                            </validityParameters>
+                        </GenericParameterAssignment>
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:OrdinaryNotRaumabanen" version="01" order="01">
+                            <!-- this product is not valid on one FareSection on the line Raumabanen -->
+                            <ValidityParameterAssignmentType>GT</ValidityParameterAssignmentType>
+                            <validityParameters>
+                                <FareSectionRef ref="NSB:FareSection:AndalsnesDombas"></FareSectionRef>
+                            </validityParameters>
+                        </GenericParameterAssignment>
+                        
+                    </validityParameterAssignments>
+                    <accessRightsInProduct>
+                        <AccessRightInProduct id="NSB:AccessRightInProduct:Ordinary" version="01" order="0">
+                            <ValidableElementRef ref="NSB:ValidableElement:Ordinary"></ValidableElementRef>
+                        </AccessRightInProduct>
+                    </accessRightsInProduct> 
+                    <prices>
+                        <FareProductPrice id="NSB:FareProductPrice:OrdinaryRounding" version="01">
+                            <RoundingRef ref="NSB:normal"></RoundingRef>
+                        </FareProductPrice>
+                    </prices>
+                </PreassignedFareProduct>
+                <!-- The MiniPrice is a discounted, quota based product available for most regional and interregional trains. No other discounts are allowed. -->
+                <PreassignedFareProduct id="NSB:PreassignedFareProduct:MiniPrice" version="01">
+                    <validityParameterAssignments>
+                        <!-- egilibility -->
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:MiniPriceUserProfile" version="01" order="01">
+                            <limitations>
+                                <UserProfileRef ref="NSB:UserProfile:Anyone"></UserProfileRef>
+                            </limitations>
+                        </GenericParameterAssignment>
+                        
+                        <!-- booking -->
+                         <GenericParameterAssignment id="NSB:GenericParameterAssignment:MiniPricePurchaseWindow" version="01" order="01">
+                             <limitations>
+                                 <PurchaseWindow id="NSB:PurchaseWindow:MiniPriceStandardFromDuration" version="01">
+                                     <PurchaseWhen>advanceOnly</PurchaseWhen>
+                                     <MinimumPeriodBeforeDeparture>P1D</MinimumPeriodBeforeDeparture>
+                                     <MaximumPeriodBeforeDeparture>P90D</MaximumPeriodBeforeDeparture>    
+                                 </PurchaseWindow>
+                             </limitations>
+                         </GenericParameterAssignment>
+                         <GenericParameterAssignment id="NSB:GenericParameterAssignment:minipris@reserving" version="01" order="01">
+                            <limitations>
+                                <ReservingRef ref="NSB:Reserving:economyFare" ></ReservingRef>
+                            </limitations>
+                        </GenericParameterAssignment>
+                        
+                        <!-- travel parameters -->
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:MiniPriceSingleRide" version="01" order="01">
+                            <limitations>
+                                <FrequencyOfUseRef ref="NSB:FrequencyOfUse:Single"></FrequencyOfUseRef>
+                            </limitations>    
+                        </GenericParameterAssignment>
+                        
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:NSBMiniPriceAllowedSubModes" version="01" order="01">
+                            <ValidityParameterAssignmentType>EQ</ValidityParameterAssignmentType>
+                            <ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+                            <validityParameters>
+                                <TransportSubmode>
+                                    <RailSubmode>regionalRail</RailSubmode>
+                                </TransportSubmode>
+                                <TransportSubmode>
+                                    <RailSubmode>interregionalRail</RailSubmode>
+                                </TransportSubmode>
+                            </validityParameters>
+                        </GenericParameterAssignment>
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:MiniPriceFareClass" order="01" version="01">
+                            <validityParameters>
+                                <FareClass>economyClass</FareClass>
+                            </validityParameters>
+                        </GenericParameterAssignment>
+                    </validityParameterAssignments>
+                    <accessRightsInProduct>
+                        <AccessRightInProduct id="NSB:AccessRightInProduct:MiniPrice" version="01" order="0">
+                            <ValidableElementRef ref="NSB:ValidableElement:MiniPrice"></ValidableElementRef>
+                        </AccessRightInProduct>
+                    </accessRightsInProduct>    
+                    <prices>
+                        <FareProductPrice id="NSB:FareProductPrice:OrdinaryMiniPriceRounding" version="01">
+                            <RoundingRef ref="NSB:roundupto@nine"></RoundingRef>
+                        </FareProductPrice>
+                    </prices>
+                </PreassignedFareProduct>
+                <PreassignedFareProduct id="NSB:PreassignedFareProduct:Telemark" version="01">
+                    <validityParameterAssignments>
+                    <GenericParameterAssignment id="NSB:GenericParameterAssignment:TelemarkPurchaseWindow" version="01" order="01">
+                        <limitations>
+                            <PurchaseWindowRef ref="NSB:PurchaseWindow:StandardFromDuration"></PurchaseWindowRef>
+                        </limitations>
+                    </GenericParameterAssignment>
+                    
+                    <GenericParameterAssignment id="NSB:GenericParameterAssignment:TelemarkBratsbergbanen" version="01" order="01">
+                        <validityParameters>
+                            <LineRef ref="NSB:Line:52"></LineRef>
+                        </validityParameters>
+                    </GenericParameterAssignment>
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:TelemarkFareClass" version="01" order="01">
+                            <validityParameters>
+                                <FareClass>standardClass</FareClass>
+                            </validityParameters>
+                        </GenericParameterAssignment>
+                        
+                    </validityParameterAssignments>
+                    <accessRightsInProduct>
+                        <AccessRightInProduct id="NSB:AccessRightInProduct:Telemark" version="01" order="0">
+                            <ValidableElementRef ref="NSB:ValidableElement:Telemark"></ValidableElementRef>
+                        </AccessRightInProduct>
+                    </accessRightsInProduct>   
+                    <prices>
+                        <FareProductPrice id="NSB:FareProductPrice:TelemarkRounding" version="01">
+                            <RoundingRef ref="NSB:normal"></RoundingRef>
+                        </FareProductPrice>
+                    </prices>
+                </PreassignedFareProduct>
+            </fareProducts>
+
+        </FareFrame>
+       <FareFrame version="01" created="2017-11-11T12:11:11" id="NSB:FareFrame@generalstructure">
+            <geographicalUnits>
+                <GeographicalUnit id="NSB:ten" version="any">
+                    <Name>Distance Unit TEN (takstenhet)</Name>
+                </GeographicalUnit>
+            </geographicalUnits>
+           <qualityStructureFactors>
+               <FareQuotaFactor id="NSB:FareQuotaFactor:MiniPrice1" version="01"></FareQuotaFactor>
+               <FareQuotaFactor id="NSB:FareQuotaFactor:MiniPrice2" version="01"></FareQuotaFactor>
+               <FareQuotaFactor id="NSB:FareQuotaFactor:MiniPrice3" version="01"></FareQuotaFactor>
+               <FareQuotaFactor id="NSB:FareQuotaFactor:MiniPrice4" version="01"></FareQuotaFactor>
+               <FareQuotaFactor id="NSB:FareQuotaFactor:MiniPrice5" version="01"></FareQuotaFactor>
+               <FareQuotaFactor id="NSB:FareQuotaFactor:MiniPrice6" version="01"></FareQuotaFactor>
+               <FareQuotaFactor id="NSB:FareQuotaFactor:MiniPrice7" version="01"></FareQuotaFactor>
+               <FareQuotaFactor id="NSB:FareQuotaFactor:MiniPrice8" version="01"></FareQuotaFactor>
+           </qualityStructureFactors>
+           <fareStructureElements>
+                <FareStructureElement id="NSB:FareStructureElement:TENInterval" version="01">
+                    <geographicalIntervals>
+                        <GeographicalInterval id="NSB:GeographicalInterval:1TEN" version="01">
+                            <StartGeographicalValue>0</StartGeographicalValue>
+                            <EndGeographicalValue>1</EndGeographicalValue>
+                            <IntervalType>distance</IntervalType>
+                            <GeographicalUnitRef ref="NSB:ten"></GeographicalUnitRef>
+                            <prices>
+                                <GeographicalIntervalPriceRef ref="NSB:FarePrice:1TEN" />
+                            </prices>
+                        </GeographicalInterval>
+                        <GeographicalInterval id="NSB:GeographicalInterval:2TEN" version="01">
+                            <StartGeographicalValue>1</StartGeographicalValue>
+                            <EndGeographicalValue>2</EndGeographicalValue>
+                            <IntervalType>distance</IntervalType>
+                            <GeographicalUnitRef ref="NSB:ten"></GeographicalUnitRef>
+                            <prices>
+                                <GeographicalIntervalPriceRef ref="NSB:FarePrice:2TEN"></GeographicalIntervalPriceRef>
+                            </prices>
+                        </GeographicalInterval>
+                        <GeographicalInterval id="NSB:GeographicalInterval:3TEN" version="01">
+                            <StartGeographicalValue>2</StartGeographicalValue>
+                            <EndGeographicalValue>3</EndGeographicalValue>
+                            <IntervalType>distance</IntervalType>
+                            <GeographicalUnitRef ref="NSB:ten"></GeographicalUnitRef>
+                            <prices>
+                                <GeographicalIntervalPriceRef ref="NSB:FarePrice:3TEN"></GeographicalIntervalPriceRef>
+                            </prices>
+                        </GeographicalInterval>
+                        <GeographicalInterval id="NSB:GeographicalInterval:10TEN" version="01">
+                            <StartGeographicalValue>9</StartGeographicalValue>
+                            <EndGeographicalValue>10</EndGeographicalValue>
+                            <IntervalType>distance</IntervalType>
+                            <GeographicalUnitRef ref="NSB:ten"></GeographicalUnitRef>
+                            <prices>
+                                <GeographicalIntervalPriceRef ref="NSB:FarePrice:10TEN"></GeographicalIntervalPriceRef>
+                            </prices>
+                        </GeographicalInterval>
+                        <!-- etc -->
+                    </geographicalIntervals>
+                    <validityParameterAssignments>
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:NSBOrGJB" version="01" order="01">
+                            <ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+                            <validityParameters>
+                                <OperatorRef ref="NSB:Operator:NSB"></OperatorRef>
+                                <OperatorRef ref="GJB:Operator:GJB"></OperatorRef>
+                            </validityParameters>
+                        </GenericParameterAssignment>
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:mode@reservationtypes" version="01">
+                            <IncludesGroupingType>OR</IncludesGroupingType>
+                            <includes>
+                                <GenericParameterAssignment id="NSB:GenericParameterAssignment:mode@reservationsCompulsory" version="01" order="01">
+                                    <limitations>
+                                        <ReservingRef ref="NSB:Reserving:CompulsoryRes"></ReservingRef>
+                                    </limitations>
+                                    <ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+                                    <validityParameters>
+                                        <TransportSubmode>
+                                            <RailSubmode>nightRail</RailSubmode>
+                                        </TransportSubmode>
+                                        <TransportSubmode>
+                                            <RailSubmode>regionalRail</RailSubmode>
+                                        </TransportSubmode>
+                                    </validityParameters>
+                                </GenericParameterAssignment>
+                                <GenericParameterAssignment id="NSB:GenericParameterAssignment:mode@noreservations" version="01" order="01">
+                                    <limitations>
+                                        <ReservingRef ref="NSB:Reserving:NoReservationPossible"></ReservingRef>
+                                    </limitations>
+                                    <ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+                                    <validityParameters>
+                                        <TransportSubmode>
+                                            <RailSubmode>interregionalRail</RailSubmode>
+                                        </TransportSubmode>
+                                        <TransportSubmode>
+                                            <RailSubmode>local</RailSubmode>
+                                        </TransportSubmode>
+                                    </validityParameters>
+                                </GenericParameterAssignment>
+                            </includes>
+                        </GenericParameterAssignment>
+                    </validityParameterAssignments>
+                </FareStructureElement>
+                <FareStructureElement id="NSB:FareStructureElement:MiniPriceDiscountPercentage" version="01">
+                    <qualityStructureFactors>
+                        <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice1"/>   
+                        <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice2"/>                                
+                        <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice3"/>   
+                        <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice4"/>   
+                        <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice5"/>   
+                        <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice6"/>   
+                        <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice7"/>   
+                        <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice8"/>
+                    </qualityStructureFactors>
+                </FareStructureElement>
+            </fareStructureElements>
+            <validableElements>
+                <ValidableElement id="NSB:ValidableElement:Ordinary" version="01">
+                    <fareStructureElements>
+                        <FareStructureElementRef ref="NSB:FareStructureElement:TENInterval"></FareStructureElementRef>
+                    </fareStructureElements>
+                    <validityParameterAssignments>
+                        <GenericParameterAssignment id="NSB:Interchanging:Ordinary" version ="01" order="01">
+                            <limitations>
+                                <InterchangingRef ref="NSB:Interchanging:Unlimited"></InterchangingRef>
+                            </limitations>
+                        </GenericParameterAssignment>
+                    </validityParameterAssignments>
+                </ValidableElement>
+                <ValidableElement id="NSB:ValidableElement:MiniPrice" version="01">
+                    <fareElementsInSequence>
+                        <FareStructureElementInSequenceRef ref="NSB:FareStructureElement:TENInterval" order="1"></FareStructureElementInSequenceRef>
+                        <FareStructureElementInSequenceRef ref="NSB:FareStructureElement:MiniPriceDiscountPercentage" order="2"></FareStructureElementInSequenceRef>
+                    </fareElementsInSequence>
+                    <validityParameterAssignments>
+                        <GenericParameterAssignment  id="NSB:GenericParameterAssignment:MiniPriceAllowInterchanging" version="01" order="01">
+                            <limitations>
+                                <InterchangingRef ref="NSB:Interchanging:Unlimited"></InterchangingRef>
+                            </limitations>
+                        </GenericParameterAssignment>
+                    </validityParameterAssignments>
+                </ValidableElement>
+                <ValidableElement id="NSB:ValidableElement:Telemark" version="01">
+                    <fareStructureElements>
+                        <FareStructureElementRef ref="NSB:FareStructureElement:TelemarkDME"></FareStructureElementRef>
+                    </fareStructureElements>
+                </ValidableElement>
+            </validableElements>
+       </FareFrame>
+        <FareFrame version="01" id="NSB:FareFrame@prices">
+            <PricingParameterSet id="NSB:Common" version="any">
+                <priceUnits>
+                    <PriceUnit id="NSB:NOK" version="any">
+                        <Name>Norske kroner</Name>
+                        <Precision>2</Precision>
+                    </PriceUnit>
+                </priceUnits>
+                <pricingRules>
+                    <DiscountingRule id="NSB:concession@child" version="01">
+                        <DiscountAsPercentage>50</DiscountAsPercentage>
+                    </DiscountingRule>
+                    <DiscountingRule id="NSB:concession@senior" version="01">
+                        <DiscountAsPercentage>50</DiscountAsPercentage>
+                    </DiscountingRule>
+                    <DiscountingRule id="NSB:concession@infant" version="01">
+                        <DiscountAsPercentage>100</DiscountAsPercentage>
+                    </DiscountingRule>
+                    <DiscountingRule id="NSB:concession@adult" version="01">
+                        <DiscountAsPercentage>0</DiscountAsPercentage>
+                    </DiscountingRule>
+                    <LimitingRule id="NSB:concessions@military" version="01">
+                        <DiscountAsPercentage>90</DiscountAsPercentage>
+                        <MinimumPrice>41</MinimumPrice>
+                    </LimitingRule>
+                    <LimitingRule id="NSB:concessions@student" version="01">
+                        <DiscountAsPercentage>25</DiscountAsPercentage>
+                        <MinimumPrice>41</MinimumPrice>
+                    </LimitingRule>
+                </pricingRules>
+                <roundings>
+                    <Rounding id="NSB:roundupto@nine" version="01">
+                        <RoundingMethod>up</RoundingMethod>
+                        <RoundingModulus>9</RoundingModulus>
+                    </Rounding>
+                    <Rounding id="NSB:normal" version="01">
+                        <RoundingMethod>split</RoundingMethod>  
+                    </Rounding>
+                </roundings>
+            </PricingParameterSet>
+           <tariffs>
+               <Tariff id="NSB:Tariff:Telemark" version="01">
+                   <ValidBetween>
+                       <FromDate>2018-02-01T00:00:00</FromDate>
+                       <ToDate>2019-01-31T23:59:59</ToDate>
+                   </ValidBetween>
+                    <Name>Route based fares for  NSB in county Telemark </Name>
+                    <TariffBasis>route</TariffBasis>
+                    <fareStructureElements>
+                        <!-- NB denne koblingen fra FSE til Tariff er ikke implementert selv om både tariffen og FSE finnes -->
+                        <FareStructureElement id="NSB:FareStructureElement:TelemarkDME" version="01">
+                            <distanceMatrixElements>
+                                <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:TelemarkNSR12ToNSR263"></DistanceMatrixElementRef>
+                                <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:TelemarkNSR12ToNSR283"></DistanceMatrixElementRef>
+                                <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:TelemarkNSR136ToNSR12"></DistanceMatrixElementRef>
+                                <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:TelemarkNSR136ToNSR263"></DistanceMatrixElementRef>
+                                <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:TelemarkNSR136ToNSR283"></DistanceMatrixElementRef>
+                                <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:TelemarkNSR136ToNSR291"></DistanceMatrixElementRef>
+                                <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:TelemarkNSR136ToNSR690"></DistanceMatrixElementRef>
+                                <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:TelemarkNSR263ToNSR283"></DistanceMatrixElementRef>
+                            </distanceMatrixElements>
+                        </FareStructureElement>
+                    </fareStructureElements>
+                    <groupsOfDistanceMatrixElements>
+                        <GroupOfDistanceMatrixElements id="NSB:GroupOfDistanceMatrixElements:Telemark" version="01">
+                            <members>
+                                <DistanceMatrixElement id="NSB:DistanceMatrixElement:TelemarkNSR12ToNSR263" version="01">
+                                    <StartStopPointRef ref="NSR:StopPlace:12"></StartStopPointRef>
+                                    <EndStopPointRef ref="NSR:StopPlace:263"></EndStopPointRef>
+                                </DistanceMatrixElement>
+                                <DistanceMatrixElement id="NSB:DistanceMatrixElement:TelemarkNSR12ToNSR283" version="01">
+                                    <StartStopPointRef ref="NSR:StopPlace:12"></StartStopPointRef>
+                                    <EndStopPointRef ref="NSR:StopPlace:283"></EndStopPointRef>
+                                </DistanceMatrixElement>
+                                <DistanceMatrixElement id="NSB:DistanceMatrixElement:TelemarkNSR136ToNSR12" version="01">
+                                    <StartStopPointRef ref="NSR:StopPlace:136"></StartStopPointRef>
+                                    <EndStopPointRef ref="NSR:StopPlace:12"></EndStopPointRef>
+                                </DistanceMatrixElement>
+                                <DistanceMatrixElement id="NSB:DistanceMatrixElement:TelemarkNSR136ToNSR263" version="01">
+                                    <StartStopPointRef ref="NSR:StopPlace:136"></StartStopPointRef>
+                                    <EndStopPointRef ref="NSR:StopPlace:263"></EndStopPointRef>
+                                </DistanceMatrixElement>
+                                <DistanceMatrixElement id="NSB:DistanceMatrixElement:TelemarkNSR136ToNSR283" version="01">
+                                    <StartStopPointRef ref="NSR:StopPlace:136"></StartStopPointRef>
+                                    <EndStopPointRef ref="NSR:StopPlace:283"></EndStopPointRef>
+                                </DistanceMatrixElement>
+                                <DistanceMatrixElement id="NSB:DistanceMatrixElement:TelemarkNSR136ToNSR291" version="01">
+                                    <StartStopPointRef ref="NSR:StopPlace:136"></StartStopPointRef>
+                                    <EndStopPointRef ref="NSR:StopPlace:291"></EndStopPointRef>
+                                </DistanceMatrixElement>
+                                <DistanceMatrixElement id="NSB:DistanceMatrixElement:TelemarkNSR136ToNSR690" version="01">
+                                    <StartStopPointRef ref="NSR:StopPlace:136"></StartStopPointRef>
+                                    <EndStopPointRef ref="NSR:StopPlace:690"></EndStopPointRef>
+                                </DistanceMatrixElement>
+                                <DistanceMatrixElement id="NSB:DistanceMatrixElement:TelemarkNSR263ToNSR283" version="01">
+                                    <StartStopPointRef ref="NSR:StopPlace:263"></StartStopPointRef>
+                                    <EndStopPointRef ref="NSR:StopPlace:283"></EndStopPointRef>
+                                </DistanceMatrixElement>
+                                <!-- etc-->
+                            </members>
+                        </GroupOfDistanceMatrixElements>
+                    </groupsOfDistanceMatrixElements>
+                   <priceGroups>
+                       <PriceGroup id="NSB:PriceGroup:Telemark2018Prices" version="01">
+                           <members>
+                               <DistanceMatrixElementPrice id="NSB:FarePrice:NSR12ToNSR263" version="01">
+                                   <Amount>91</Amount>
+                                   <Currency>NOK</Currency>
+                                   <IsAllowed>true</IsAllowed>
+                               </DistanceMatrixElementPrice> 
+                               <DistanceMatrixElementPrice id="NSB:FarePrice:NSR12ToNSR283" version="01">
+                                   <Amount>91</Amount>
+                                   <Currency>NOK</Currency>
+                                   <IsAllowed>true</IsAllowed>
+                               </DistanceMatrixElementPrice>
+                               <DistanceMatrixElementPrice id="NSB:FarePrice:NSR136ToNSR12" version="01">
+                                   <Amount>48</Amount>
+                                   <Currency>NOK</Currency>
+                                   <IsAllowed>true</IsAllowed>
+                               </DistanceMatrixElementPrice>
+                               <DistanceMatrixElementPrice id="NSB:FarePrice:NSR136ToNSR263" version="01">
+                                   <Amount>91</Amount>
+                                   <Currency>NOK</Currency>
+                                   <IsAllowed>true</IsAllowed>
+                               </DistanceMatrixElementPrice>
+                               <DistanceMatrixElementPrice id="NSB:FarePrice:NSR136ToNSR283" version="01">
+                                   <Amount>91</Amount>
+                                   <Currency>NOK</Currency>
+                                   <IsAllowed>true</IsAllowed>
+                               </DistanceMatrixElementPrice>
+                               <DistanceMatrixElementPrice id="NSB:FarePrice:NSR136ToNSR291" version="01">
+                                   <Amount>48</Amount>
+                                   <Currency>NOK</Currency>
+                                   <IsAllowed>true</IsAllowed>
+                               </DistanceMatrixElementPrice>
+                               <DistanceMatrixElementPrice id="NSB:FarePrice:NSR136ToNSR690" version="01">
+                                   <Amount>91</Amount>
+                                   <Currency>NOK</Currency>
+                                   <IsAllowed>true</IsAllowed>
+                               </DistanceMatrixElementPrice>
+                               <DistanceMatrixElementPrice id="NSB:FarePrice:NSR263ToNSR283" version="01">
+                                   <Amount>48</Amount>
+                                   <Currency>NOK</Currency>
+                                   <IsAllowed>true</IsAllowed>
+                               </DistanceMatrixElementPrice>
+                           </members>
+                       </PriceGroup>
+                   </priceGroups>
+                </Tariff>
+               <Tariff id="NSB:Tariff:TEN2018" version="01">
+                    <ValidBetween>
+                        <FromDate>2018-02-01T00:00:00</FromDate>
+                        <ToDate>2019-01-31T23:59:59</ToDate>
+                    </ValidBetween>
+                    <Name>Distance based fares for NSB</Name>
+                    <TariffBasis>distance</TariffBasis>
+                    <priceGroups>
+                        <PriceGroup id="NSB:PriceGroup:2018Prices" version="01">
+                            <members> 
+                                <GeographicalIntervalPrice id="NSB:FarePrice:1TEN" version="01">
+                                    <Amount>41</Amount>
+                                </GeographicalIntervalPrice> 
+                                <GeographicalIntervalPrice id="NSB:FarePrice:2TEN" version="01">
+                                    <Amount>41</Amount>
+                                </GeographicalIntervalPrice> 
+                                <GeographicalIntervalPrice id="NSB:FarePrice:3TEN" version="01">
+                                    <Amount>41</Amount>
+                                </GeographicalIntervalPrice>
+                                <GeographicalIntervalPrice id="NSB:FarePrice:10TEN" version="01">
+                                    <Amount>43</Amount>
+                                </GeographicalIntervalPrice>
+                                <GeographicalIntervalPrice id="NSB:FarePrice:11TEN" version="01">
+                                    <Amount>45</Amount>
+                                </GeographicalIntervalPrice>
+                                <GeographicalIntervalPrice id="NSB:FarePrice:12TEN" version="01">
+                                    <Amount>47</Amount>
+                                </GeographicalIntervalPrice>
+                                <GeographicalIntervalPrice id="NSB:FarePrice:13TEN" version="01">
+                                    <Amount>49</Amount>
+                                </GeographicalIntervalPrice>  
+                                <!-- etc -->
+                                <QualityStructureFactorPrice id="NSB:FarePrice:DiscountPercentage10" version="01">
+                                    <DiscountingRule id="NSB:FarePrice:DiscountPercentage10@discount" version="01">
+                                        <DiscountAsPercentage>10</DiscountAsPercentage>
+                                    </DiscountingRule>
+                                    <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice1"></FareQuotaFactorRef>
+                                </QualityStructureFactorPrice>
+                                <QualityStructureFactorPrice id="NSB:FarePrice:DiscountPercentage20" version="01">
+                                    <DiscountingRule id="NSB:FarePrice:DiscountPercentage20@discount" version="01">
+                                        <DiscountAsPercentage>20</DiscountAsPercentage>
+                                    </DiscountingRule>
+                                    <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice2"></FareQuotaFactorRef>
+                                </QualityStructureFactorPrice>
+                                <QualityStructureFactorPrice id="NSB:FarePrice:DiscountPercentage30" version="01">
+                                    <DiscountingRule id="NSB:FarePrice:DiscountPercentage30@discount" version="01">
+                                        <DiscountAsPercentage>30</DiscountAsPercentage>
+                                    </DiscountingRule>
+                                    <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice3"></FareQuotaFactorRef>
+                                </QualityStructureFactorPrice>
+                                <QualityStructureFactorPrice id="NSB:FarePrice:DiscountPercentage40" version="01">
+                                    <DiscountingRule id="NSB:FarePrice:DiscountPercentage40@discount" version="01">
+                                        <DiscountAsPercentage>40</DiscountAsPercentage>
+                                    </DiscountingRule>
+                                    <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice4"></FareQuotaFactorRef>
+                                </QualityStructureFactorPrice>
+                                <QualityStructureFactorPrice id="NSB:FarePrice:DiscountPercentage50" version="01">
+                                    <DiscountingRule id="NSB:FarePrice:DiscountPercentage50@discount" version="01">
+                                        <DiscountAsPercentage>50</DiscountAsPercentage>
+                                    </DiscountingRule>
+                                    <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice5"></FareQuotaFactorRef>
+                                </QualityStructureFactorPrice>
+                                <QualityStructureFactorPrice id="NSB:FarePrice:DiscountPercentage60" version="01">
+                                    <DiscountingRule id="NSB:FarePrice:DiscountPercentage60@discount" version="01">
+                                        <DiscountAsPercentage>60</DiscountAsPercentage>
+                                    </DiscountingRule>
+                                    <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice6"></FareQuotaFactorRef>
+                                </QualityStructureFactorPrice>
+                                <QualityStructureFactorPrice id="NSB:FarePrice:DiscountPercentage70" version="01">
+                                    <DiscountingRule id="NSB:FarePrice:DiscountPercentage70@discount" version="01">
+                                        <DiscountAsPercentage>70</DiscountAsPercentage>
+                                    </DiscountingRule>
+                                    <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice7"></FareQuotaFactorRef>
+                                </QualityStructureFactorPrice>
+                                <QualityStructureFactorPrice id="NSB:FarePrice:DiscountPercentage80" version="01">
+                                    <DiscountingRule id="NSB:FarePrice:DiscountPercentage80@discount" version="01">
+                                        <DiscountAsPercentage>80</DiscountAsPercentage>
+                                    </DiscountingRule>
+                                    <FareQuotaFactorRef ref="NSB:FareQuotaFactor:MiniPrice8"></FareQuotaFactorRef>
+                                </QualityStructureFactorPrice>
+                            </members>
+                        </PriceGroup>
+                    </priceGroups>  
+                    <fareTables>
+                        <FareTable version="01" id="NSB:FareTable:Ordinary">
+                            <cells>
+                                <Cell version="01" id="NSB:Cell:OrdinaryChild" order="2">
+                                    <CellPrice>
+                                       <IsAllowed>true</IsAllowed> 
+                                        <DiscountingRuleRef ref="NSB:concession@child"/>
+                                    </CellPrice>
+                                    <FareProductRef ref="NSB:PreassignedFareProduct:Ordinary"></FareProductRef>
+                                    <UserProfileRef ref="NSB:UserProfile:Child"></UserProfileRef>
+                                </Cell>
+                                <Cell version="01" id="NSB:Cell:OrdinaryInfant" order="4">
+                                    <CellPrice>
+                                        <IsAllowed>true</IsAllowed> 
+                                        <DiscountingRuleRef ref="NSB:concession@infant"/>
+                                    </CellPrice>
+                                    <FareProductRef ref="NSB:PreassignedFareProduct:Ordinary"></FareProductRef>
+                                    <UserProfileRef ref="NSB:UserProfile:Infant"></UserProfileRef>
+                                </Cell>
+                                <Cell version="01" id="NSB:Cell:OrdinarySenior" order="3">
+                                    <CellPrice>
+                                        <IsAllowed>true</IsAllowed> 
+                                        <DiscountingRuleRef ref="NSB:concession@senior"/>
+                                    </CellPrice>
+                                    <FareProductRef ref="NSB:PreassignedFareProduct:Ordinary"></FareProductRef>
+                                    <UserProfileRef ref="NSB:UserProfile:Senior"></UserProfileRef>
+                                </Cell>
+                                <Cell version="01" id="NSB:Cell:OrdinaryAdult" order="1">
+                                    <CellPrice>
+                                        <IsAllowed>true</IsAllowed> 
+                                        <DiscountingRuleRef ref="NSB:concession@adult"/>
+                                    </CellPrice>
+                                    <FareProductRef ref="NSB:PreassignedFareProduct:Ordinary"></FareProductRef>
+                                    <UserProfileRef ref="NSB:UserProfile:Adult"></UserProfileRef>
+                                </Cell>
+                                <Cell version="01" id="NSB:Cell:OrdinaryMilitary" order="6">
+                                    <CellPrice>
+                                        <IsAllowed>true</IsAllowed> 
+                                        <LimitingRuleRef ref="NSB:concession@military"/>
+                                    </CellPrice>
+                                    <FareProductRef ref="NSB:PreassignedFareProduct:Ordinary"></FareProductRef>
+                                    <UserProfileRef ref="NSB:UserProfile:Military"></UserProfileRef>
+                                </Cell>
+                                <Cell version="01" id="NSB:Cell:OrdinaryStudent" order="5">
+                                    <CellPrice>
+                                        <IsAllowed>true</IsAllowed>                                      
+                                        <LimitingRuleRef ref="NSB:concession@student"/>
+                                    </CellPrice>
+                                    <FareProductRef ref="NSB:PreassignedFareProduct:Ordinary"></FareProductRef>
+                                    <UserProfileRef ref="NSB:UserProfile:Student"></UserProfileRef>
+                                </Cell>
+                            </cells>
+                        </FareTable>
+                        <FareTable id="NSB:FareTable:Telemark" version="01">
+                            <cells>
+                                <Cell version="01" id="NSB:Cell:TelemarkChild" order="2">
+                                    <CellPrice>
+                                        <IsAllowed>true</IsAllowed> 
+                                        <DiscountingRuleRef ref="NSB:concession@child"/>
+                                    </CellPrice>
+                                    <FareProductRef ref="NSB:PreassignedFareProduct:Telemark"></FareProductRef>
+                                    <UserProfileRef ref="NSB:UserProfile:Child"></UserProfileRef>
+                                </Cell>
+                                <Cell version="01" id="NSB:Cell:TelemarkInfant" order="4">
+                                    <CellPrice>
+                                        <IsAllowed>true</IsAllowed> 
+                                        <DiscountingRuleRef ref="NSB:concession@infant"/>
+                                    </CellPrice>
+                                    <FareProductRef ref="NSB:PreassignedFareProduct:Telemark"></FareProductRef>
+                                    <UserProfileRef ref="NSB:UserProfile:Infant"></UserProfileRef>
+                                </Cell>
+                                <Cell version="01" id="NSB:Cell:TelemarkSenior" order="3">
+                                    <CellPrice>
+                                        <IsAllowed>true</IsAllowed> 
+                                        <DiscountingRuleRef ref="NSB:concession@senior"/>
+                                    </CellPrice>
+                                    <FareProductRef ref="NSB:PreassignedFareProduct:Telemark"></FareProductRef>
+                                    <UserProfileRef ref="NSB:UserProfile:Senior"></UserProfileRef>
+                                </Cell>
+                                <Cell version="01" id="NSB:Cell:TelemarkAdult" order="1">
+                                    <CellPrice>
+                                        <IsAllowed>true</IsAllowed> 
+                                        <DiscountingRuleRef ref="NSB:concession@adult"/>
+                                    </CellPrice>
+                                    <FareProductRef ref="NSB:PreassignedFareProduct:Telemark"></FareProductRef>
+                                    <UserProfileRef ref="NSB:UserProfile:Adult"></UserProfileRef>
+                                </Cell>
+                                <Cell version="01" id="NSB:Cell:TelemarkMilitary" order="6">
+                                    <CellPrice>
+                                        <IsAllowed>true</IsAllowed> 
+                                        <LimitingRuleRef ref="NSB:concession@military"/>
+                                    </CellPrice>
+                                    <FareProductRef ref="NSB:PreassignedFareProduct:Telemark"></FareProductRef>
+                                    <UserProfileRef ref="NSB:UserProfile:Military"></UserProfileRef>
+                                </Cell>
+                            </cells>
+                        </FareTable>
+                    </fareTables>
+                </Tariff>
+            </tariffs>
+        </FareFrame>
+        
+    </dataObjects>
+</PublicationDelivery>

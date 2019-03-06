@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery version="1.08:NO-NeTEx-fares:1.0" xmlns="http://www.netex.org.uk/netex">
+    <PublicationTimestamp>2018-09-04T12:00:00</PublicationTimestamp>
+    <ParticipantRef>ENT</ParticipantRef>
+    <dataObjects>
+        <SalesTransactionFrame id="SalesTransactionFrame" version="any">
+            <FareContracts>
+                <FareContract version="any" id="xpl:Contract:Anon002">
+                    <Name> Day Group Paper Ticket </Name>
+                    <FareContractEntries>
+                        <SalesTransaction version="any" id="xpl::Anon002@trans001@purchaseTicket@GroupDayTicket">
+                            <Name>Buy Group Day ticket for zone 1-6 4 Adults 10 Children </Name>
+                            <Description> 4 @£ 4.50 each + 10@ £ 1.70 each </Description>
+                            <Date>2013-07-08T01:07:15</Date>
+                            <Amount>28.70</Amount>
+                        </SalesTransaction>
+                        <TravelSpecification version="any" id="xpl::Anon002@trans001@purchaseTicket@GroupDayTicket@Adult">
+                            <Name>Adults on Day ticket </Name>
+                            <Date>2013-07-08T01:09:15</Date>
+                            <TypeOfFareContractEntryRef version="any" ref="tfl::purchase"/>
+                            <SalesTransactionRef version="any" ref="xpl::Anon002@trans001@purchaseTicket@GroupDayTicket"/>
+                            <Amount>4.50</Amount>
+                            <Units>4</Units>
+                      <!--      <SalesPackageRef version="any" ref="tfl::GroupDayTicket"/>
+                      -->      <specificParameterAssignments>
+                                <SpecificParameterAssignment version="any" id="xpl::Anon002@trans001@purchaseTicket@GroupDayTicket@01" order="1">
+                                    <Name>Fare zones 1-6</Name>
+                                    <FareStructureElementRef version="any" ref="tfl::Zones_1-6"/>
+                                    <limitations>
+                                        <GroupTicketRef version="any" ref="tfl::groupDayTicket"/>
+                                        <UserProfileRef version="any" ref="tfl::adult"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ScheduledStopPointRef ref="tfl::Kings_Cross" version="any"/>
+                                        <DistributionChannelRef version="any" ref="tfl::TubeStationTicketOffices"/>
+                                    </validityParameters>
+                                    <FareDemandFactorRef version="any" ref="tfl::anyTime"/>
+                                </SpecificParameterAssignment>
+                            </specificParameterAssignments>
+                        </TravelSpecification>
+                        <TravelSpecification version="any" id="xpl::Anon002@trans001@purchaseTicket@GroupDayTicket@Child">
+                            <Name>Children on Day ticket </Name>
+                            <Date>2013-07-08T01:07:15</Date>
+                            <TypeOfFareContractEntryRef version="any" ref="tfl::purchase"/>
+                            <SalesTransactionRef version="any" ref="xpl::Anon002@trans001@purchaseTicket@GroupDayTicket"/>
+                            <Amount>1.70</Amount>
+                            <Units>10</Units>
+                      <!--      <SalesPackageRef version="any" ref="tfl::GroupDayTicket"/>
+                      -->   <specificParameterAssignments>
+                                <SpecificParameterAssignment version="any" id="xpl::Anon002@trans001@ 01"  order="1">
+                                    <Name>Fare zones 1-6</Name>
+                                    <FareStructureElementRef version="any" ref="tfl::Zones_1-6"/>
+                                    <limitations>
+                                        <GroupTicketRef version="any" ref="tfl::groupDayTicket"/>
+                                        <UserProfileRef version="any" ref="tfl::child"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ScheduledStopPointRef ref="tfl::Kings_Cross" version="any"/>
+                                        <DistributionChannelRef version="any" ref="tfl::TubeStationTicketOffices"/>
+                                    </validityParameters>
+                                    <FareDemandFactorRef version="any" ref="tfl::anyTime"/>
+                                </SpecificParameterAssignment>
+                            </specificParameterAssignments>
+                        </TravelSpecification>
+                    </FareContractEntries>
+                </FareContract>
+            </FareContracts>
+        </SalesTransactionFrame>
+    </dataObjects>
+</PublicationDelivery>

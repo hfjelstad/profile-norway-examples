@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery version="1.08:NO-NeTEx-fares:1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.netex.org.uk/netex ../nick070918/xsd/NeTEx_publication.xsd"
+    xmlns="http://www.netex.org.uk/netex">
+    <PublicationTimestamp>2018-09-04T12:00:00</PublicationTimestamp>
+    <ParticipantRef>ENT</ParticipantRef>
+    <dataObjects>
+
+        <!-- Case 12: Sosiale rabatter på gjennomgående, aka userprofile child
+
+2 leg (Drammen - Oslo - Rakkestad)
+Bestemt avgang
+1 produkt (NSB Ordinær
+Samme authority (nsb)
+Barn
+
+-->
+
+
+
+
+        <SalesTransactionFrame id="SalesTransactionFrame" version="any">
+
+
+
+            <fareContracts>
+                <FareContract version="any" id="xpl:Contract:Anon001">
+                    <Name>Gjennomgående Drammen-Oslo-Rakkestad</Name>
+                    <StartDate>2019-01-01T01:01:01</StartDate>
+                    <EndDate>2019-01-02T12:12:12</EndDate>
+                    <fareContractEntries>
+                        <SalesTransaction version="any" id="ENT:SalesTransaction:Gjennomgående">
+                            <Name>Betaling for gjennomgående billett</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <Amount>143</Amount>
+                            <PriceUnitRef ref="NOK"/>
+                            <!-- Norske kroner -->
+                            <PaymentMethod>debitCard</PaymentMethod>
+                        </SalesTransaction>
+                    </fareContractEntries>
+
+                </FareContract>
+
+            </fareContracts>
+
+
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="NSB:CustomerPurchasePackager:1" version="1">
+                    <SalesOfferPackageRef ref="NSB:SalesPackage:SingleTicket"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackage:1"
+                            version="1" order="1">
+
+                            <SalesOfferPackageElementRef ref="NSB:SalesPackageElement:SingleTicket"/>
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="any"
+                                    id="NSB:CustomerPurchaseParameterAssignment:1" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:DrammenOslo"/>
+                                    <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
+                                    <limitations>
+                                       
+                                        <UserProfileRef ref="NSB:UserProfile:Child" versionRef="NSB:Version:V1"/>
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:XX"
+                                            version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-05</EndDate>
+                                            <EndTime>12:00:00</EndTime>
+                                        </UsageValidityPeriod>
+
+                                    </limitations>
+                                    <validityParameters>
+                                        
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:123"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackage:12"
+                            version="1" order="2">
+
+                            <SalesOfferPackageElementRef ref="NSB:SalesPackageElement:SingleTicket"/>
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="any"
+                                    id="NSB:CustomerPurchaseParameterAssignment:12" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:Ordinary" versionRef="NSB:Version:V1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloRakkestad"/>
+                                    <SalesOfferPackageRef versionRef="NSB:Version:V1" ref="NSB:SalesOfferPackage:5e69"/>
+                                    <limitations>
+                                        <!-- Kunne hatt UserProfile men dette er voksen - dvs åpen for alle -->
+                                        <UserProfileRef ref="NSB:UserProfile:Child" versionRef="NSB:Version:V1"/>
+                                        <UsageValidityPeriod id="NSB:UsageValidityPeriod:XXY"
+                                            version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-05</EndDate>
+                                            <EndTime>12:00:00</EndTime>
+                                        </UsageValidityPeriod>
+
+                                    </limitations>
+                                    <validityParameters>
+                                        
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:456"/>
+                                    </validityParameters>
+
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+
+                    </customerPurchasePackageElements>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+
+        </SalesTransactionFrame>
+    </dataObjects>
+</PublicationDelivery>
