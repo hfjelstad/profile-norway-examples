@@ -70,11 +70,11 @@
                             <AimedArrivalTime>2018-04-18T13:51:50+02:00</AimedArrivalTime>
                             <ExpectedArrivalTime>2018-04-18T13:51:50+02:00</ExpectedArrivalTime>
                             <ArrivalStatus>cancelled</ArrivalStatus>
-                            <ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
+                            <ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
                             <AimedDepartureTime>2018-04-18T13:52:00+02:00</AimedDepartureTime>
                             <ExpectedDepartureTime>2018-04-18T13:52:00+02:00</ExpectedDepartureTime>
                             <DepartureStatus>cancelled</DepartureStatus>
-                            <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
+                            <DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
                         </EstimatedCall>
                         <EstimatedCall>
                             <StopPointRef>NSR:Quay:1059</StopPointRef>
