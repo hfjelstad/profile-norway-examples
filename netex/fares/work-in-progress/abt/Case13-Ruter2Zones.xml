@@ -66,14 +66,13 @@ Voksen
                                     </limitations>
 
                                     <validityParameters>
-                                        <!-- Enten spesifisere hvilke soner som er inkludert her ANDet sammen - eller kun startsone og så antall soner 
-                                            dvs GeograhicalIntervalRef under -->
+                                        <!-- startsone og så antall soner dvs GeograhicalIntervalRef under -->
                                         <TariffZoneRef ref="RUT:TariffZone:Sone1"/>
-                                        <TariffZoneRef ref="RUT:TariffZone:Sone2Ø"/>
                                     </validityParameters>
 
-                                    <!-- Hvordan spesifisere alle mulige kombinasjoner av disse to sonene gitt startsone? -->
                                     <GeographicalIntervalRef ref="RUT:GeograhicalInterval:2Zone"/>
+
+                                    <!-- Start/sluttidspunkt gitt av aktiveringsevent -->
 
                                 </CustomerPurchaseParameterAssignment>
                             </validityParameterAssignments>
