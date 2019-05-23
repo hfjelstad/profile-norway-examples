@@ -109,7 +109,7 @@
 						<!-- knytting til dato -->
 						<DayTypeAssignment version="1" order="1" id="NSR:DayTypeAssignment:99">
 							<Date>2017-04-06</Date>
-							<DayTypeRef version="1" ref="NSR:DayType:Tuesday-and-Thursday"/>
+							<DayTypeRef version="1" ref="NSR:DayType:April-6"/>
 						</DayTypeAssignment>
 					</dayTypeAssignments>
 				</ServiceCalendarFrame>
