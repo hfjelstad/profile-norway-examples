@@ -1,8 +1,8 @@
 # profile-norway-examples
 
-Examples for the Norwegian NeTEx and SIRI profiles.
+Examples for the Nordic NeTEx and Norwegian SIRI profiles.
 
-The profiles can be found (in Norwegian) at 
+The profiles can be found at 
 
 **NeTEx** - https://enturas.atlassian.net/wiki/spaces/PUBLIC/pages/728891481/Nordic+NeTEx+Profile
 
