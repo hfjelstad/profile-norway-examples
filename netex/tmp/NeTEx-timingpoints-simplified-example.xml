@@ -67,7 +67,7 @@
 						<RoutePoint version="1" id="UNI:RoutePoint:helsfyr">
 							<projections>
 								<PointProjection version="1" id="UNI:pointprojection:departure">
-									<ProjectToPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr_t"/>
+									<ProjectToPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr"/>
 								</PointProjection>
 							</projections>
 						</RoutePoint>
@@ -118,10 +118,10 @@
 
 					<!--- =========STOP POINTs============ -->
 					<scheduledStopPoints>
-						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:helfyr_t">
+						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:helfyr">
 							<Name>Helsfyr T</Name>
 						</ScheduledStopPoint>
-						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:brynseng_t">
+						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:brynseng">
 							<Name>Brynseng T</Name>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:holtet">
@@ -132,13 +132,13 @@
 					
 					<!-- ===STOP ASSIGNMENTs=== -->
 					<stopAssignments>
-						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:helsfyr_t" order="1">
-							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr_t"/>
-							<QuayRef ref="NSR:Quay:helsfyr_t-5"/>
+						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:helsfyr" order="1">
+							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr"/>
+							<QuayRef ref="NSR:Quay:helsfyr-5"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:brynseng_t" order="2">
-							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng_t"/>
-							<QuayRef ref="NSR:Quay:brynseng_t-1"/>
+						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:brynseng" order="2">
+							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng"/>
+							<QuayRef ref="NSR:Quay:brynseng-1"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:holtet" order="3">
 							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:holtet"/>
@@ -147,7 +147,7 @@
 					</stopAssignments>
 					
 					<timingPoints>
-						<TimingPoint version="1" id="UNI:TimingPoint:hoyenhall_t">
+						<TimingPoint version="1" id="UNI:TimingPoint:hoyenhall">
 							<Name>H&#216;yenhall</Name>
 							<Location srsName="WGS84">
 								<Longitude>10.819156</Longitude>
@@ -168,18 +168,9 @@
 							<!-- or through a Projection for the Location -->
 							
 							<TimingPointStatus>timingPoint</TimingPointStatus>
-							<AllowedForWaitTime>PT1M</AllowedForWaitTime>
 						</TimingPoint>
-						<TimingPoint version="1" id="UNI:TimingPoint:manglerud_t">
-							<Name>Manglerud T</Name>
-							<Location srsName="WGS84">
-								<Longitude>10.813655</Longitude>
-								<Latitude>59.898316</Latitude>
-							</Location>	
-							<TimingPointStatus>timingPoint</TimingPointStatus>
-							<AllowedForWaitTime>PT30S</AllowedForWaitTime>
-						</TimingPoint>
-						<TimingPoint version="1" id="UNI:TimingPoint:ryen_t">
+						
+						<TimingPoint version="1" id="UNI:TimingPoint:ryen">
 							<Name>Ryen T</Name>
 							<Location srsName="WGS84">
 								<Longitude>10.805572</Longitude>
@@ -189,30 +180,41 @@
 							<AllowedForWaitTime>PT1M</AllowedForWaitTime>
 						</TimingPoint>
 					</timingPoints>
-
+					
+					
+					<timingLinks>
+						<TimingLink version="1" id="UNI:TimingPoint:hoyenhall-ryen">
+							<FromPointRef ref="UNI:TimingPoint:hoyenhall"/>
+							<ToPointRef ref="UNI:TimingPoint:ryen"/>
+						</TimingLink>
+					</timingLinks>
+					
+					
 					<!-- ===JOURNEY PATTERNs=== -->
 					<journeyPatterns>
 						<JourneyPattern version="1" id="UNI:JourneyPattern:109">
 							<RouteRef version="1" ref="UNI:Route:109"/>
+							<runTimes>
+								<JourneyPatternRunTime version="1" id="UNI:JourneyPatternRunTime:109">
+									<RunTime>PT10M</RunTime>
+								</JourneyPatternRunTime>
+							</runTimes>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:helfyr_t" order="1">
-									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr_t"/>
+								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:helfyr" order="1">
+									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr"/>
 									<ForAlighting>false</ForAlighting>
 									<DestinationDisplayRef version="1" ref="UNI:DestinationDisplay:holtet"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:brynseng_t" order="2">
-									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng_t"/>
+								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:brynseng" order="2">
+									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng"/>
 								</StopPointInJourneyPattern>
 								
 								
-								<TimingPointInJourneyPattern version="1" id="UNI:TimingPointInJourneyPattern:hoyenhall_t" order="3">
-									<TimingPointRef version="1" ref="UNI:TimingPoint:hoyenhall_t"/>
+								<TimingPointInJourneyPattern version="1" id="UNI:TimingPointInJourneyPattern:hoyenhall" order="3">
+									<TimingPointRef version="1" ref="UNI:TimingPoint:hoyenhall"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="1" id="UNI:TimingPointInJourneyPattern:manglerud_t" order="4">
-									<TimingPointRef version="1" ref="UNI:TimingPoint:manglerud_t"/>
-								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="1" id="UNI:TimingPointInJourneyPattern:ryen_t" order="5">
-									<TimingPointRef version="1" ref="UNI:TimingPoint:ryen_t"/>
+								<TimingPointInJourneyPattern version="1" id="UNI:TimingPointInJourneyPattern:ryen" order="4">
+									<TimingPointRef version="1" ref="UNI:TimingPoint:ryen"/>
 								</TimingPointInJourneyPattern>
 								
 								
@@ -221,6 +223,19 @@
 									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
+							
+							
+							<linksInSequence>
+								<TimingLinkInJourneyPattern version="1" id="UNI:TimingLinkInJourneyPattern:hoyenhall-ryen" order="1">
+									<TimingLinkRef ref="UNI:TimingPoint:hoyenhall-ryen"/>
+									<runTimes>
+										<JourneyRunTime version="1" id="UNI:JourneyRunTime:hoyenhall-ryen">
+											<RunTime>PT6M</RunTime>
+										</JourneyRunTime>
+									</runTimes>
+								</TimingLinkInJourneyPattern>
+							</linksInSequence>
+							
 						</JourneyPattern>
 					</journeyPatterns>
 				</ServiceFrame>
@@ -234,30 +249,27 @@
 							<passingTimes>
 								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0630">
 									<!-- Helsfyr T -->
-									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr"/>
 									<DepartureTime>06:30:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0632">
 									<!-- Brynseng T -->
-									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng"/>
 									<DepartureTime>06:32:00</DepartureTime>
 								</TimetabledPassingTime>
 								
 								
 								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0634">
 									<!-- Høyenhall T -->
-									<TimingPointInJourneyPatternRef version="1" ref="UNI:TimingPointInJourneyPattern:hoyenhall_t"/>
+									<TimingPointInJourneyPatternRef version="1" ref="UNI:TimingPointInJourneyPattern:hoyenhall"/>
+									<!-- use LatestArrival or EarliestDeparture, or both, according to need -->
 									<LatestArrivalTime>06:34:00</LatestArrivalTime>
+									<EarliestDepartureTime>06:34:00</EarliestDepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0636">
-									<!-- Manglerud T -->
-									<TimingPointInJourneyPatternRef version="1" ref="UNI:TimingPointInJourneyPattern:hoyenhall_t"/>
-									<DepartureTime>06:36:00</DepartureTime>
-								</TimetabledPassingTime>
-								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0638">
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0637">
 									<!-- Ryen T -->
-									<TimingPointInJourneyPatternRef version="1" ref="UNI:TimingPointInJourneyPattern:hoyenhall_t"/>
-									<EarliestDepartureTime>06:38:00</EarliestDepartureTime>
+									<TimingPointInJourneyPatternRef version="1" ref="UNI:TimingPointInJourneyPattern:ryen"/>
+									<EarliestDepartureTime>06:37:00</EarliestDepartureTime>
 								</TimetabledPassingTime>
 
 
