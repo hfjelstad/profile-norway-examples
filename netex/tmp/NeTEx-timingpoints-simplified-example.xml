@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- === Simple Timetable  Example for illustrating ScheduledStopPoint vs TimingPoint === -->
+<!-- Based on example for timetable showing route 109 morning express in Oslo -->
+<PublicationDelivery version="1.07:NO-NeTEx-networktimetable:1.1"
+	xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri">
+	<PublicationTimestamp>2019-08-27T12:00:00.0Z</PublicationTimestamp>
+	<ParticipantRef>NSR</ParticipantRef>
+
+	<dataObjects>
+		<CompositeFrame version="1" created="2016-08-22T00:00:00Z" id="UNI:CompositeFrame:1">
+			<validityConditions>
+				<AvailabilityCondition version="1" id="UNI:AvailabilityCondition:cf01">
+					<FromDate>2019-01-01T00:00:00.0Z</FromDate>
+				</AvailabilityCondition>
+			</validityConditions>
+
+			<!-- ===CODESPACE=== -->
+			<codespaces>
+				<Codespace id="nsr">
+					<Xmlns>NSR</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.no/nasjonltstoppestedregister</XmlnsUrl>
+				</Codespace>
+				<Codespace id="unibuss">
+					<Xmlns>UNI</Xmlns>
+					<XmlnsUrl>www.unibuss.no</XmlnsUrl>
+				</Codespace>
+				<Codespace id="ruter">
+					<Xmlns>RUT</Xmlns>
+					<XmlnsUrl>www.ruter.no</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+
+			<!-- ===FRAME DEFAULTS=== -->
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="unibuss"/>
+				<DefaultLocale>
+					<DefaultLanguage>no</DefaultLanguage>
+				</DefaultLocale>
+				<!-- Alle koordinater leveres i henhold til WGS84 -->
+				<DefaultLocationSystem>WGS84</DefaultLocationSystem>
+			</FrameDefaults>
+
+			<frames>
+				<ResourceFrame version="1" id="UNI:ResourceFrame:1">
+					<organisations>
+
+						<Operator version="1" id="RUT:Operator:Unibuss">
+							<CompanyNumber>2</CompanyNumber>
+							<Name>Unibuss</Name>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+
+
+				<!-- SITE FRAME disregarded to simplify the example -->
+				
+				
+				<!-- ===SERVICE FRAME=== -->
+				<ServiceFrame version="1" id="UNI:SiteFrame:1">
+					<Network version="1" id="RUT:Network:RuterBuss">
+						<Name>Ruter# buss</Name>
+					</Network>
+
+					<routePoints>
+						<!-- Helsfyr -->
+						<RoutePoint version="1" id="UNI:RoutePoint:helsfyr">
+							<projections>
+								<PointProjection version="1" id="UNI:pointprojection:departure">
+									<ProjectToPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr_t"/>
+								</PointProjection>
+							</projections>
+						</RoutePoint>
+						<!-- Holtet -->
+						<RoutePoint version="1" id="UNI:RoutePoint:holtet">
+							<projections>
+								<PointProjection version="1" id="RUT:PointProjection:arrival">
+									<ProjectToPointRef version="1" ref="UNI:ScheduledStopPoint:holtet"/>
+								</PointProjection>
+							</projections>
+						</RoutePoint>
+					</routePoints>
+
+					<!-- ===ROUTE=== -->
+					<routes>
+						<Route version="1" id="UNI:Route:109">
+							<Name>Morning bus Helsfyr - Holtet</Name>
+							<LineRef version="1" ref="UNI:Line:109"/>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<PointOnRoute version="1" id="UNI:PointOnRoute:109-start" order="1">
+									<RoutePointRef version="1" ref="UNI:RoutePoint:helsfyr"/>
+								</PointOnRoute>
+								<PointOnRoute version="1" id="UNI:PointOnRoute:109-end" order="2">
+									<RoutePointRef version="1" ref="UNI:RoutePoint:holtet"/>
+								</PointOnRoute>
+							</pointsInSequence>
+						</Route>
+					</routes>
+
+					<!-- ===LINEs=== -->
+					<lines>
+						<Line version="1" id="UNI:Line:109">
+							<Name>Morning bus Helsfyr - Holtet</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>localBus</BusSubmode>
+							</TransportSubmode>
+						</Line>
+					</lines>
+					<!-- ===DESTINATION DISPLAYs=== -->
+					<destinationDisplays>
+						<DestinationDisplay version="1" id="UNI:DestinationDisplay:holtet">
+							<SideText>Holtet</SideText>
+							<FrontText>Holtet</FrontText>
+						</DestinationDisplay>
+					</destinationDisplays>
+
+					<!--- =========STOP POINTs============ -->
+					<scheduledStopPoints>
+						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:helfyr_t">
+							<Name>Helsfyr T</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:brynseng_t">
+							<Name>Brynseng T</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint version="1" id="UNI:ScheduledStopPoint:holtet">
+							<Name>Holtet</Name>
+						</ScheduledStopPoint>
+					</scheduledStopPoints>
+					
+					
+					<!-- ===STOP ASSIGNMENTs=== -->
+					<stopAssignments>
+						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:helsfyr_t" order="1">
+							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr_t"/>
+							<QuayRef ref="NSR:Quay:helsfyr_t-5"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:brynseng_t" order="2">
+							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng_t"/>
+							<QuayRef ref="NSR:Quay:brynseng_t-1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment version="1" id="UNI:PassengerStopAssignment:holtet" order="3">
+							<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:holtet"/>
+							<QuayRef ref="NSR:Quay:holtet-1"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+					
+					<timingPoints>
+						<TimingPoint version="1" id="UNI:TimingPoint:hoyenhall_t">
+							<Name>H&#216;yenhall</Name>
+							<Location srsName="WGS84">
+								<Longitude>10.819156</Longitude>
+								<Latitude>59.907023</Latitude>
+							</Location>
+							
+							<!-- Could also be projectet to a known point/geographical entity, 
+								however, as Norwegian points usually are stops which most intuitively 
+								would be projected to an unused ScheduledStopPoint - which in turn is
+								assigned to a StopPlace or Quay, this comes out a bit clumsy in this example -->
+							<!-- DIRECTLY -->
+							<!-- projections>
+								<PointProjection>...</PointProjection>
+								<LinkProjection>...</LinkProjection>
+								<TopographicProjection>...</TopographicProjection> 
+								or similar
+							</projections -->
+							<!-- or through a Projection for the Location -->
+							
+							<TimingPointStatus>timingPoint</TimingPointStatus>
+							<AllowedForWaitTime>PT1M</AllowedForWaitTime>
+						</TimingPoint>
+						<TimingPoint version="1" id="UNI:TimingPoint:manglerud_t">
+							<Name>Manglerud T</Name>
+							<Location srsName="WGS84">
+								<Longitude>10.813655</Longitude>
+								<Latitude>59.898316</Latitude>
+							</Location>	
+							<TimingPointStatus>timingPoint</TimingPointStatus>
+							<AllowedForWaitTime>PT30S</AllowedForWaitTime>
+						</TimingPoint>
+						<TimingPoint version="1" id="UNI:TimingPoint:ryen_t">
+							<Name>Ryen T</Name>
+							<Location srsName="WGS84">
+								<Longitude>10.805572</Longitude>
+								<Latitude>59.895407</Latitude>
+							</Location>
+							<TimingPointStatus>timingPoint</TimingPointStatus>
+							<AllowedForWaitTime>PT1M</AllowedForWaitTime>
+						</TimingPoint>
+					</timingPoints>
+
+					<!-- ===JOURNEY PATTERNs=== -->
+					<journeyPatterns>
+						<JourneyPattern version="1" id="UNI:JourneyPattern:109">
+							<RouteRef version="1" ref="UNI:Route:109"/>
+							<pointsInSequence>
+								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:helfyr_t" order="1">
+									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:helfyr_t"/>
+									<ForAlighting>false</ForAlighting>
+									<DestinationDisplayRef version="1" ref="UNI:DestinationDisplay:holtet"/>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:brynseng_t" order="2">
+									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:brynseng_t"/>
+								</StopPointInJourneyPattern>
+								
+								
+								<TimingPointInJourneyPattern version="1" id="UNI:TimingPointInJourneyPattern:hoyenhall_t" order="3">
+									<TimingPointRef version="1" ref="UNI:TimingPoint:hoyenhall_t"/>
+								</TimingPointInJourneyPattern>
+								<TimingPointInJourneyPattern version="1" id="UNI:TimingPointInJourneyPattern:manglerud_t" order="4">
+									<TimingPointRef version="1" ref="UNI:TimingPoint:manglerud_t"/>
+								</TimingPointInJourneyPattern>
+								<TimingPointInJourneyPattern version="1" id="UNI:TimingPointInJourneyPattern:ryen_t" order="5">
+									<TimingPointRef version="1" ref="UNI:TimingPoint:ryen_t"/>
+								</TimingPointInJourneyPattern>
+								
+								
+								<StopPointInJourneyPattern version="1" id="UNI:StopPointInJourneyPattern:holtet" order="6">
+									<ScheduledStopPointRef version="1" ref="UNI:ScheduledStopPoint:holtet"/>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+						</JourneyPattern>
+					</journeyPatterns>
+				</ServiceFrame>
+
+				<!-- ===TIMETABLE FRAME=== -->
+				<TimetableFrame version="1" id="UNI:TimetableFrame:1">
+					<vehicleJourneys>
+						<ServiceJourney version="1" id="UNI:ServiceJourney:109-CODE-0430">
+							<DepartureTime>04:30:00</DepartureTime> <!-- Optional -->
+							<JourneyPatternRef version="1" ref="UNI:JourneyPattern:109"/>
+							<passingTimes>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0630">
+									<!-- Helsfyr T -->
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:helfyr_t"/>
+									<DepartureTime>06:30:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0632">
+									<!-- Brynseng T -->
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:brynseng_t"/>
+									<DepartureTime>06:32:00</DepartureTime>
+								</TimetabledPassingTime>
+								
+								
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0634">
+									<!-- Høyenhall T -->
+									<TimingPointInJourneyPatternRef version="1" ref="UNI:TimingPointInJourneyPattern:hoyenhall_t"/>
+									<LatestArrivalTime>06:34:00</LatestArrivalTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0636">
+									<!-- Manglerud T -->
+									<TimingPointInJourneyPatternRef version="1" ref="UNI:TimingPointInJourneyPattern:hoyenhall_t"/>
+									<DepartureTime>06:36:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0638">
+									<!-- Ryen T -->
+									<TimingPointInJourneyPatternRef version="1" ref="UNI:TimingPointInJourneyPattern:hoyenhall_t"/>
+									<EarliestDepartureTime>06:38:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+
+
+								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:0640">
+									<!-- Holtet -->
+									<StopPointInJourneyPatternRef version="1" ref="UNI:StopPointInJourneyPattern:holtet"/>
+									<ArrivalTime>06:40:00</ArrivalTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+					</vehicleJourneys>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
