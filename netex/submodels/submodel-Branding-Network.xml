@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===Simplyfied Branding Example for NeTEx profil Norge=== -->
+<PublicationDelivery version="1.09:NO-NeTEx-networktimetable:1.3"
+  xmlns="http://www.netex.org.uk/netex" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:siri="http://www.siri.org.uk/siri">
+
+    <PublicationTimestamp>2018-06-11T12:13:00Z</PublicationTimestamp>
+	<ParticipantRef>NSR</ParticipantRef>
+
+	<dataObjects>
+		<CompositeFrame version="1" created="2018-06-11T12:13:14Z" id="VYB:CompositeFrame:1">
+			<validityConditions>
+				<AvailabilityCondition version="1" id="VYB:AvailabilityCondition:1">
+					<FromDate>2018-01-01T00:00:00</FromDate>
+				    <ToDate>2018-12-31T23:59:59</ToDate>
+				</AvailabilityCondition>
+			</validityConditions>
+			<codespaces>
+			    <Codespace id="vyb">
+			        <Xmlns>VYB</Xmlns>
+			    	<XmlnsUrl>http://www.rutebanken.org/ns/vyb</XmlnsUrl>
+			    </Codespace>
+				<Codespace id="nsr">
+					<Xmlns>NSR</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/nsr</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+
+			<frames>
+
+				<ResourceFrame version="1" id="VYB:ResourceFrame:1">
+					<typesOfValue>
+						<Branding version="1" id="VYB:Branding:1">
+							<Name>Bus4You</Name>
+							<Url>https://www.vy.se</Url>
+						</Branding>
+					</typesOfValue>
+					<organisations>
+						<Authority version="1" id="VYB:Authority:1">
+							<CompanyNumber>2</CompanyNumber>
+							<Name>Vy Buss AB</Name>
+							<ContactDetails>
+								<Phone>+46 771 15 15 15</Phone>
+								<Url>http://vy.se</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+					</organisations>
+				</ResourceFrame>
+				
+				<ServiceFrame version="1" id="VYB:ServiceFrame:1">
+
+					<Network version="1" id="VYB:Network:1">
+						<BrandingRef version="1" ref="VYB:Branding:1"/>
+						<Name>Vy Buss AB</Name>
+						<AuthorityRef ref="VYB:Authority:1" version="1"/>
+					</Network>
+
+				</ServiceFrame>
+
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
