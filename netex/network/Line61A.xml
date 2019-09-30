@@ -396,7 +396,7 @@
                                 <DayTypeRef version="1" ref="RUT:DayType:MonSat"/>
                             </dayTypes>
                             <JourneyPatternRef version="1" ref="RUT:JourneyPattern:0061101"/>
-                            <JourneyFrequencyGroupRef version="1" ref="RUT:RhythmicalJourneyGroup:1"/>
+                            <RhythmicalJourneyGroupRef version="1" ref="RUT:RhythmicalJourneyGroup:1"/>
                             <passingTimes>
                                 <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:xx15">
                                     <!-- Tveita T -->
