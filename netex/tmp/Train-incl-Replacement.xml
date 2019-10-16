@@ -33,10 +33,20 @@
 
 
     <ResourceFrame created="2019-08-17T00:50:24.905" version="1" id="NSB:ResourceFrame:4145997"> 
+      <typesOfValue>
+        <TypeOfEquipment version="1" id="NTO:TypeOfEquipment:PremiumSeating">
+          <PrivateCode>PremiumSeating</PrivateCode>
+        </TypeOfEquipment>
+        <TypeOfEquipment version="1" id="NTO:TypeOfEquipment:RegularSeating">
+          <PrivateCode>RegularSeating</PrivateCode>
+        </TypeOfEquipment>
+      </typesOfValue>
+  
   
       <equipments>
-        <!-- pervertering av firergruppe sete v.h.a. derivedFromObjectRef -->
+        <!-- pervertering av firergruppe sete, premium klasse (Komfort?), v.h.a. derivedFromObjectRef -->
         <SeatingEquipment version="1" id="NTO:SeatingEquipment:Group1">
+          <TypeOfEquipmentRef version="1" ref="NTO:TypeOfEquipment:PremiumSeating"/>
           <Seats>4</Seats>
         </SeatingEquipment>
         <!-- gruppe -->
@@ -53,12 +63,14 @@
           <PublicCode>Sete 4</PublicCode>
         </SeatingEquipment>
         
-        <!-- ikke firergruppe -->
+        <!-- ikke firergruppe, standard klasse -->
         <SeatingEquipment version="1" id="NTO:SeatingEquipment:5">
           <PublicCode>Sete 5</PublicCode>
+          <TypeOfEquipmentRef version="1" ref="NTO:TypeOfEquipment:RegularSeating"/>
         </SeatingEquipment>
         <SeatingEquipment version="1" id="NTO:SeatingEquipment:6">
           <PublicCode>Sete 6</PublicCode>
+          <TypeOfEquipmentRef version="1" ref="NTO:TypeOfEquipment:RegularSeating"/>
         </SeatingEquipment>
       </equipments>
       
@@ -82,7 +94,7 @@
         <Train version="1" id="NTO:Train:Flirt">
           <!-- consolidated capasity -->
           <capacities>
-            <PassengerCapacityRef version="1" ref="NTO:PassengerCapacity:ElementPremium"/>
+            <PassengerCapacityRef version="1" ref="NTO:PassengerCapacity:Premium"/>
             <PassengerCapacity id="NTO:PassengerCapacity:TrainStandard">
               <FareClass>standardClass</FareClass>
               <SeatingCapacity>250</SeatingCapacity>
@@ -103,11 +115,11 @@
           <FareClasses>premiumClass standardClass</FareClasses>
           <!-- capasity per element-->
           <capacities>
-            <PassengerCapacity id="NTO:PassengerCapacity:ElementPremium">
+            <PassengerCapacity id="NTO:PassengerCapacity:Premium">
               <FareClass>premiumClass</FareClass>
               <SeatingCapacity>50</SeatingCapacity>
             </PassengerCapacity>
-            <PassengerCapacity id="NTO:PassengerCapacity:ElementStandard">
+            <PassengerCapacity id="NTO:PassengerCapacity:Standard">
               <FareClass>standardClass</FareClass>
               <SeatingCapacity>250</SeatingCapacity>
             </PassengerCapacity>
@@ -120,7 +132,6 @@
             <SeatingEquipmentRef version="1" ref="NTO:SeatingEquipment:5"/>
             <SeatingEquipmentRef version="1" ref="NTO:SeatingEquipment:6"/>
           </equipments>
-          
           
         </TrainElement>
         
