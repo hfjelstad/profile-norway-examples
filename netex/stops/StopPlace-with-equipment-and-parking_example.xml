@@ -263,7 +263,7 @@
                     <RechargingAvailable>true</RechargingAvailable>
                     <ParkingReservation>reservationAllowed</ParkingReservation>
                     <parkingProperties>
-                        <ParkingProperties>
+                        <ParkingProperties id="NSR:ParkingProperties:1" version="1">
                             <ParkingUserTypes>all</ParkingUserTypes>
                         </ParkingProperties>
                     </parkingProperties>
@@ -335,8 +335,8 @@
                     <ParkingFacilityList>parkAndRidePark carPark cyclePark</ParkingFacilityList>
                 </SiteFacilitySet>
 
-                <SiteFacilitySet id="NSR:SiteFacilitySet:2" version="1">
-                    <MobilityFacilityList>tactileGuidingStrips tactilePatformEdges</MobilityFacilityList>
+                <SiteFacilitySet id="NSR:SiteFacilitySet:2" version="1">    
+                    <MobilityFacilityList>tactileGuidingStrips tactilePlatformEdges</MobilityFacilityList>
                 </SiteFacilitySet>
             </siteFacilitySets>
         </SiteFrame>
