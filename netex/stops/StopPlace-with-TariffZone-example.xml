@@ -39,6 +39,9 @@
 						</Location>
 					</Centroid>
 					<TransportMode>bus</TransportMode>
+					<tariffZones>
+						<TariffZoneRef ref="RUT:TariffZone:2Ø" version="1"/>
+					</tariffZones>
 					<StopPlaceType>onstreetBus</StopPlaceType>
 				</StopPlace>
 			</stopPlaces>
