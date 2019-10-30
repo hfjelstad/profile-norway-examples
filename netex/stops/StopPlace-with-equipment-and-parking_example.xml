@@ -3,12 +3,12 @@
 ==== Stoppested med utstyr (billetteringsutstyr, toalett og baggasje-/sykkel-oppbevaring) og parkering / sykkelparkering ======
 -->
 <PublicationDelivery
-  version="1.08:NO-NeTEx-stops:1.3" 
+  version="1.1:NO-NeTEx-stops:1.4" 
   xmlns="http://www.netex.org.uk/netex"
   xmlns:gml="http://www.opengis.net/gml/3.2" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <PublicationTimestamp>2017-04-04T14:14:14.0Z</PublicationTimestamp>
+    <PublicationTimestamp>2019-10-28T11:12:13.0Z</PublicationTimestamp>
     <ParticipantRef>NSR</ParticipantRef>
     <dataObjects>
         
@@ -118,7 +118,7 @@
                                 wheelChairAccessToilet</SanitaryFacilityList>
                         </SanitaryEquipment>
 
-                        <CycleStorageEquipment id="NSR:CycleEquipment:1">
+                        <CycleStorageEquipment id="NSR:CycleStorageEquipment:1">
                             <NumberOfSpaces>15</NumberOfSpaces>
                             <CycleStorageType>racks</CycleStorageType>
                         </CycleStorageEquipment>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!-- 
+==== Minimal example for NeTEx implementation of Tariff Zone with StopPlace refering to this ======
+-->
+<PublicationDelivery
+  version="1.0" 
+  xmlns="http://www.netex.org.uk/netex"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<PublicationTimestamp>2019-10-30T12:00:00.0Z</PublicationTimestamp>
+	<ParticipantRef>NSR</ParticipantRef>
+	<dataObjects>
+		
+		<ResourceFrame id="NSR:ResourceFrame:1" version="1">
+			<typesOfValue>
+				<ValueSet id="NSR:ValueSet:TypesOfFareZones" classOfValues="TypeOfZone" version="1">
+					<Name>Types of Fare Zones</Name>
+					<values>
+						<TypeOfZone id="NSR:TypeOfZone:Ruter" version="1">
+							<Name>Ruter# geographial zone</Name>
+							<PrivateCode>Ruter#</PrivateCode>
+						</TypeOfZone>
+					</values>
+				</ValueSet>
+			</typesOfValue>
+		</ResourceFrame>
+		
+		
+		<SiteFrame version="1" id="NSR:SiteFrame:1" >
+			<stopPlaces>
+				<!-- Simplified stop place description without quays -->
+				<StopPlace version="1" id="NSR:StopPlace:5565">
+					<Name>Sagdalen</Name>
+					<Centroid>
+						<Location>
+							<Longitude>11.016178</Longitude>
+							<Latitude>59.957269</Latitude>
+						</Location>
+					</Centroid>
+					<TransportMode>bus</TransportMode>
+					<StopPlaceType>onstreetBus</StopPlaceType>
+				</StopPlace>
+			</stopPlaces>
+			
+			<tariffZones>
+				<TariffZone id="RUT:TariffZone:2Ø" version="1">
+					<Name>Ruter# zone 2Ø</Name>
+					<PrivateCode>2Ø</PrivateCode>
+					<types>
+						<TypeOfZoneRef ref="NSR:TypeOfZone:Ruter" version="1"/>
+					</types>
+					<gml:Polygon gml:id="Ruter2EAST" srsName="Ruter#">
+						<gml:exterior>
+							<gml:LinearRing>
+								<!-- This example contains only a few key geographical coordinates -->
+								<gml:pos>60.146632 10.676651</gml:pos>
+								<gml:pos>60.155636 10.906953</gml:pos>
+								<gml:pos>59.98272 11.155931</gml:pos>
+								<gml:pos>59.814488 11.216325</gml:pos>
+								<gml:pos>59.778375 10.999464</gml:pos>
+								<gml:pos>59.830567 10.922014</gml:pos>
+								<gml:pos>59.983912 10.921569</gml:pos>
+							</gml:LinearRing>
+						</gml:exterior>
+					</gml:Polygon>
+				</TariffZone>
+			</tariffZones>		
+		</SiteFrame>
+	</dataObjects>
+</PublicationDelivery>
