@@ -248,7 +248,7 @@
 				<ServiceCalendarFrame id="FIN:ServiceCalendarFrame:809" version="1">
 					<dayTypes>
 						<DayType id="FIN:DayType:1" version="1">
-							<Name>Tirscag og fredag</Name>
+							<Name>Tirsdag og fredag</Name>
 							<properties>
 								<PropertyOfDay>
 									<DaysOfWeek>Tuesday Friday</DaysOfWeek>
