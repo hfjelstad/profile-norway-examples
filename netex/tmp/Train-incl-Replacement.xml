@@ -143,8 +143,6 @@
         </Vehicle>
       </vehicles>
       
-      
-      
     </ResourceFrame>
 
 
@@ -171,8 +169,49 @@
           <DefaultLanguage>no</DefaultLanguage>
         </DefaultLocale>
       </FrameDefaults>
+      
+      
+      
       <frames>
+        <SiteFrame version="1" id="ENT:SiteFrame:1">
+          <stopPlaces>
+            <StopPlace version="1" id="NRI:StopPlace:1">
+              <Name>Demo</Name>
+              <quays>
+                <Quay version="1" id="NSR:Quay:1"/>
+              </quays>
+            </StopPlace>
+          </stopPlaces>
+        </SiteFrame>
+        
+        
         <ServiceFrame version="1" id="NSB:ServiceFrame:4145998">
+          <routePoints>
+            <RoutePoint version="1" id="ENT:RoutePoint:1">
+              <projections>
+                <PointProjection version="1" id="ENT:PointProjection:1">
+                  <ProjectToPointRef version="1" ref="ENT:ScheduledStopPoint:1"/>
+                </PointProjection>
+              </projections>
+            </RoutePoint>
+            <RoutePoint version="1" id="ENT:RoutePoint:2">
+              <projections>
+                <PointProjection version="1" id="ENT:PointProjection:2">
+                  <ProjectToPointRef version="1" ref="ENT:ScheduledStopPoint:1"/>
+                </PointProjection>
+              </projections>
+            </RoutePoint>
+          </routePoints>
+          
+          <routeLinks>
+            <RouteLink version="1" id="ENT:RouteLink:1">
+              <Distance>100</Distance>
+              <FromPointRef ref="ENT:RoutePoint:1"/>
+              <ToPointRef ref="ENT:RoutePoint:2"/>
+            </RouteLink>
+          </routeLinks>
+          
+          
           <routes>
             <Route version="0" id="NSB:Route:1-1105">
               <Name>Oslo S - Drammen stasjon</Name>
@@ -193,6 +232,25 @@
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
+
+            <Route version="1" id="ENT:Route:Demo">
+              <Name>Demo</Name>
+              <Description>description</Description>
+              <PrivateCode>privatecode</PrivateCode>
+              <LineRef ref="NSB:Line:41" version="0"/>
+              <DirectionType>outbound</DirectionType>
+              <pointsInSequence>
+                <PointOnRoute version="1" id="ENT:PointOnRoute:1" order="1">
+                  <RoutePointRef version="1" ref="ENT:RoutePoint:1"/>
+                </PointOnRoute>
+                <PointOnRoute version="1" id="ENT:PointOnRoute:2" order="2">
+                  <RoutePointRef version="1" ref="ENT:RoutePoint:2"/>
+                </PointOnRoute>
+              </pointsInSequence>
+            </Route>
+            
+            
+            
           </routes>
           <lines>
             <Line version="0" id="NSB:Line:41">
@@ -206,6 +264,26 @@
               <RepresentedByGroupRef ref="NSB:Network:1"/>
             </Line>
           </lines>
+          
+          <scheduledStopPoints>
+            <ScheduledStopPoint version="1" id="ENT:ScheduledStopPoint:1">
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1" id="ENT:ScheduledStopPoint:2"/>
+          </scheduledStopPoints>
+          
+          <stopAssignments>
+            <PassengerStopAssignment version="1" id="ENT:PassengerStopAssignment:1" order="1">
+              <ScheduledStopPointRef version="1" ref="ENT:ScheduledStopPoint:1"/>
+              <StopPlaceRef version="1" ref="NRI:StopPlace:1"/>
+              <QuayRef version="1" ref="NSR:Quay:1"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment version="1" id="ENT:PassengerStopAssignment:2" order="2">
+              <ScheduledStopPointRef version="1" ref="ENT:ScheduledStopPoint:2"/>
+              <StopPlaceRef version="1" ref="NRI:StopPlace:1"/>
+              <QuayRef version="1" ref="NSR:Quay:1"/>
+            </PassengerStopAssignment>
+          </stopAssignments>
+          
           <journeyPatterns>
             <JourneyPattern version="0" id="NSB:JourneyPattern:1-1105">
               <Name>Oslo S - Drammen stasjon</Name>
@@ -216,6 +294,17 @@
                   <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:760010003"/>
                   <ForAlighting>false</ForAlighting>
                   <DestinationDisplayRef ref="NSB:DestinationDisplay:32"/>
+                  <BookingArrangements>
+                    <BookingContact>
+                      <Phone>+47 407 05 070</Phone>
+                      <Url>https://www.nettbuss.no</Url>
+                    </BookingContact>
+                    <BookingMethods>callOffice online</BookingMethods>
+                    <BookingAccess>public</BookingAccess>
+                    <BookWhen>advanceAndDayOfTravel</BookWhen>
+                    <BuyWhen>onReservation</BuyWhen>
+                    <MinimumBookingPeriod>PT10M</MinimumBookingPeriod>
+                  </BookingArrangements>
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="2" version="0"
                   id="NSB:StopPointInJourneyPattern:1-1105-2">
@@ -250,6 +339,9 @@
             </JourneyPattern>
           </journeyPatterns>
         </ServiceFrame>
+        
+        
+        
         <TimetableFrame version="1" id="NSB:TimetableFrame:4145999">
           <vehicleJourneys>
             <VehicleJourney version="0" id="NSB:VehicleJourney:1-3922-61"> </VehicleJourney>
