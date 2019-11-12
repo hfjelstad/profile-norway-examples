@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery 
+  version="1.1:NO-NeTEx-networktimetable:1.4"
+  xmlns="http://www.netex.org.uk/netex" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:gml="http://www.opengis.net/gml/3.2">
+	
+	<PublicationTimestamp>2019-11-08T00:00:00</PublicationTimestamp>
+	<ParticipantRef>FIN</ParticipantRef>
+	<Description>DEMO FILE for FlexibleServiceType</Description>
+	<dataObjects>
+
+		<CompositeFrame version="1" created="2019-11-08T00:00:00" id="ENT:CompositeFrame:1">
+	        <validityConditions>
+				<ValidBetween>
+					<FromDate>2019-01-01T00:00:00</FromDate>
+					<ToDate>2029-12-31T23:59:59</ToDate>
+				</ValidBetween>
+			</validityConditions>
+
+			<codespaces>
+				<Codespace id="ent">
+					<Xmlns>ENT</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/ent</XmlnsUrl>
+				</Codespace>
+				<Codespace id="nsr">
+					<Xmlns>NSR</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/nsr</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+			
+			
+			<frames>
+				
+				<ResourceFrame version="1" id="ENT:ResourceFrame:1">
+					<organisations>
+						<Authority version="1" id="ENT:Authority:FIN_ID">
+							<CompanyNumber>00000000</CompanyNumber>
+							<Name>Entur DEMO</Name>
+							<LegalName>Entur AS</LegalName>
+							<ContactDetails>
+								<Phone>00000000</Phone>
+								<Url>www.entur.org</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+						<Operator version="1" id="ENT:Operator:Demo">
+							<CompanyNumber>00000000</CompanyNumber>
+							<Name>Entur DEMO</Name>
+							<LegalName>Entur AS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email>post@entur.org</Email>
+								<Phone>000</Phone>
+								<Url>http://en-tur.no</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+
+
+				<!-- Referanser til stoppestedregisteret (SiteFrame kun tatt med for eksempelets lesbarhet) -->
+				<SiteFrame version="1" id="ENT:SiteFrame:1">
+					<stopPlaces>
+						<StopPlace version="1" id="NRI:StopPlace:1">
+							<Name>Demo</Name>
+							<quays>
+								<Quay version="1" id="NSR:Quay:1"/>
+							</quays>
+						</StopPlace>
+					</stopPlaces>
+				</SiteFrame>
+
+
+				<ServiceFrame version="1" id="ENT:ServiceFrame:Demo">
+					<Network version="1" id="ENT:Network:Demo">
+						<Name>Demo</Name>
+                    	<AuthorityRef ref="ENT:Authority:FIN_ID" version="1"/>
+					</Network>
+					
+					<routePoints>
+						<RoutePoint version="1" id="ENT:RoutePoint:1">
+							<projections>
+								<PointProjection version="1" id="ENT:PointProjection:1">
+									<ProjectToPointRef version="1" ref="ENT:ScheduledStopPoint:1"/>
+								</PointProjection>
+							</projections>
+						</RoutePoint>
+						<RoutePoint version="1" id="ENT:RoutePoint:2">
+							<projections>
+								<PointProjection version="1" id="ENT:PointProjection:2">
+									<ProjectToPointRef version="1" ref="ENT:ScheduledStopPoint:1"/>
+								</PointProjection>
+							</projections>
+						</RoutePoint>
+					</routePoints>
+					
+					<routes>
+						<Route version="1" id="ENT:Route:Demo">
+							<Name>Demo</Name>
+                            <FlexibleLineRef version="1" ref="ENT:FlexibleLine:Demo"/>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<PointOnRoute version="1" id="ENT:PointOnRoute:1" order="1">
+									<RoutePointRef version="1" ref="ENT:RoutePoint:1"/>
+								</PointOnRoute>
+								<PointOnRoute version="1" id="ENT:PointOnRoute:2" order="2">
+									<RoutePointRef version="1" ref="ENT:RoutePoint:2"/>
+								</PointOnRoute>
+							</pointsInSequence>
+						</Route>
+					</routes>
+
+
+					<lines>
+						<FlexibleLine version="1" id="ENT:FlexibleLine:Demo">
+							<Name>Demo</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>shuttleBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>Demo</PublicCode>
+							<OperatorRef version="1" ref="ENT:Operator:Demo"/>
+							<RepresentedByGroupRef version="1" ref="ENT:Network:Demo"/>
+							<FlexibleLineType>fixed</FlexibleLineType>
+							<BookingContact>
+								<Email>post@snelandia.no</Email>
+								<Phone>177</Phone>
+								<Url>http://finnmark.Demo.no/</Url>
+							</BookingContact>
+							<BookingMethods>online callOffice</BookingMethods>
+							<BookWhen>advanceAndDayOfTravel</BookWhen>
+							<LatestBookingTime>21:00:00</LatestBookingTime>
+							<MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
+							<BookingNote>
+								Demo
+							</BookingNote>
+						</FlexibleLine>
+					</lines>
+					
+					<destinationDisplays>
+						<DestinationDisplay version="1" id="ENT:DestinationDisplay:1">
+							<FrontText>Demo</FrontText>
+						</DestinationDisplay>
+					</destinationDisplays>
+
+
+					<scheduledStopPoints>
+						<ScheduledStopPoint version="1" id="ENT:ScheduledStopPoint:1"/>
+						<ScheduledStopPoint version="1" id="ENT:ScheduledStopPoint:2"/>
+					</scheduledStopPoints>
+
+					<stopAssignments>
+						<PassengerStopAssignment version="1" id="ENT:PassengerStopAssignment:1" order="1">
+							<ScheduledStopPointRef version="1" ref="ENT:ScheduledStopPoint:1"/>
+							<StopPlaceRef version="1" ref="NRI:StopPlace:1"/>
+							<QuayRef version="1" ref="NSR:Quay:1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment version="1" id="ENT:PassengerStopAssignment:2" order="2">
+							<ScheduledStopPointRef version="1" ref="ENT:ScheduledStopPoint:2"/>
+							<StopPlaceRef version="1" ref="NRI:StopPlace:1"/>
+							<QuayRef version="1" ref="NSR:Quay:1"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+
+					
+					<journeyPatterns>
+						<JourneyPattern version="1" id="ENT:JourneyPattern:Demo">
+							<Name>Demo</Name>
+							<RouteRef version="1" ref="ENT:Route:Demo"/>
+							<pointsInSequence>
+								<StopPointInJourneyPattern version="1" id="ENT:StopPointInJourneyPattern:1" order="1">
+									<ScheduledStopPointRef version="1" ref="ENT:ScheduledStopPoint:1"/>
+									<DestinationDisplayRef version="1" ref="ENT:DestinationDisplay:1"/>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern version="1" id="ENT:StopPointInJourneyPattern:2" order="2">
+									<ScheduledStopPointRef version="1" ref="ENT:ScheduledStopPoint:2"/>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+						</JourneyPattern>
+					</journeyPatterns>
+
+				</ServiceFrame>
+
+
+				<ServiceCalendarFrame id="ENT:ServiceCalendarFrame:Demo" version="1">
+					<dayTypes>
+						<DayType id="ENT:DayType:1" version="1">
+							<Name>Weekdays</Name>
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Everyday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+					</dayTypes>
+					
+					<operatingPeriods>
+						<OperatingPeriod id="ENT:OperatingPeriod:2018" version="1">
+							<FromDate>2019-01-01T00:00:00</FromDate>
+							<ToDate>2029-12-31T23:59:59</ToDate>
+						</OperatingPeriod>
+					</operatingPeriods>
+					
+					<dayTypeAssignments>
+						<DayTypeAssignment id="ENT:DayTypeAssignment:1" version="1" order="1">
+							<OperatingPeriodRef version="1" ref="ENT:OperatingPeriod:2018"/>
+							<DayTypeRef version="1" ref="ENT:DayType:1"/>
+						</DayTypeAssignment>
+					</dayTypeAssignments>
+				</ServiceCalendarFrame>
+
+
+				<TimetableFrame version="1" id="ENT:TimetableFrame:Demo">
+					<Name>Demo</Name>
+					<DefaultMode>bus</DefaultMode>
+					<vehicleJourneys>
+						<ServiceJourney version="1" id="ENT:ServiceJourney:1">
+							<DepartureTime>10:25:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef version="1" ref="ENT:DayType:1"/>
+							</dayTypes>
+							<JourneyPatternRef version="1" ref="ENT:JourneyPattern:Demo"/>
+							<FlexibleLineRef version="1" ref="ENT:FlexibleLine:Demo"/>
+							<passingTimes>
+								<TimetabledPassingTime version="1" id="ENT:TimetabledPassingTime:1025">
+									<StopPointInJourneyPatternRef ref="ENT:StopPointInJourneyPattern:1" version="1"/>
+									<DepartureTime>10:25:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="ENT:TimetabledPassingTime:1045">
+									<StopPointInJourneyPatternRef ref="ENT:StopPointInJourneyPattern:2" version="1"/>
+									<ArrivalTime>10:45:00</ArrivalTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+							<FlexibleServiceProperties>
+								<BookWhen>advanceAndDayOfTravel</BookWhen>
+								<BuyWhen>afterBoarding</BuyWhen>
+								<LatestBookingTime>10:25:00</LatestBookingTime>
+							</FlexibleServiceProperties>
+						</ServiceJourney>
+						
+						<ServiceJourney version="1" id="ENT:ServiceJourney:2">
+							<DepartureTime>14:10:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef version="1" ref="ENT:DayType:1"/>
+							</dayTypes>
+							<JourneyPatternRef version="1" ref="ENT:JourneyPattern:Demo"/>
+							<FlexibleLineRef version="1" ref="ENT:FlexibleLine:Demo"/>
+							<passingTimes>
+								<TimetabledPassingTime version="1" id="ENT:TimetabledPassingTime:1410">
+									<StopPointInJourneyPatternRef ref="ENT:StopPointInJourneyPattern:1" version="1"/>
+									<DepartureTime>14:10:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="1" id="ENT:TimetabledPassingTime:1430">
+									<StopPointInJourneyPatternRef ref="ENT:StopPointInJourneyPattern:2" version="1"/>
+									<ArrivalTime>14:30:00</ArrivalTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+					</vehicleJourneys>
+				</TimetableFrame>
+				
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

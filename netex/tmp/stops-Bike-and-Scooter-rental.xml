@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+==== Prototype sample implementation of coming Vehicle Sharing Parking Area (Transmodel Urban ITS Transmodel supplement) ======
+-->
+<PublicationDelivery
+  version="1.1:NO-NeTEx-stops:1.4" 
+  xmlns="http://www.netex.org.uk/netex"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <PublicationTimestamp>2019-10-28T13:37:00.0Z</PublicationTimestamp>
+    <ParticipantRef>NSR</ParticipantRef>
+    <dataObjects>
+        
+        <GeneralFrame version="1" id="NSR:GeneralFrame:1">
+            <members>
+                <AddressablePlace id="NSR:AddressablePlace:BikeRack" version="1">
+                    <Name>BikeRack@Entur</Name>
+                    <Centroid>
+                        <Location>
+                            <gml:pos>59.909800 10.763739</gml:pos>
+                        </Location>
+                    </Centroid>
+                    <RoadAddress id="NSR:RoadAdderess:BikeRack" version="1">
+                        <RoadNumber>23</RoadNumber>
+                        <RoadName>Schweigaards gate</RoadName>
+                    </RoadAddress>
+                </AddressablePlace>
+                
+                <Zone id="NSR:Zone:ScooterZone" version="1">
+                    <Name>ScooterZone@Entur</Name>
+                    <!-- GML datatype is defined externally, thus other requirement than NeTEx/Transmodel types -->
+                    <gml:Polygon gml:id="NSR-Polygon-ScooterZone">
+                        <gml:exterior>
+                            <gml:LinearRing>
+                                <gml:pos srsDimension="2">59.909997 10.745917</gml:pos>
+                                <gml:pos srsDimension="2">59.909760 10.746900</gml:pos>
+                                <gml:pos srsDimension="2">59.908708 10.745872</gml:pos>
+                                <gml:pos srsDimension="2">59.908943 10.744911</gml:pos>
+                            </gml:LinearRing>
+                        </gml:exterior>
+                    </gml:Polygon>
+                </Zone>
+            </members>
+        </GeneralFrame>
+        
+        
+        <ResourceFrame created="2019-10-28T10:01:00.0Z" version="1" id="NSB:ResourceFrame:1"> 
+            <typesOfValue>
+                <TypeOfEquipment version="1" id="NSR:TypeOfEquipment:CityBikeRack">
+                    <PrivateCode>CityBikeRack</PrivateCode>
+                </TypeOfEquipment>
+                <TypeOfEquipment version="1" id="NTO:TypeOfEquipment:ScooterArea">
+                    <PrivateCode>ScooterArea</PrivateCode>
+                </TypeOfEquipment>
+            </typesOfValue>
+            
+            <equipments>
+                <CycleStorageEquipment id="NSR:CycleStorageEquipment:1" version="1">
+                    <NumberOfSpaces>15</NumberOfSpaces>
+                    <CycleStorageType>racks</CycleStorageType>
+                </CycleStorageEquipment>
+            </equipments>
+        </ResourceFrame>
+        
+        
+        <SiteFrame version="1" id="NSR:SiteFrame:1">
+            
+            <parkings>
+                <!-- VEHICLE SHARING PARKING AREA for CityBike -->
+                <Parking id="NSR:Parking:CityBike" version="1">
+                    <placeEquipments>
+                        <!-- FEIL mangler referanse til CycleStorageEquipment (og mange andre typer tillatt equipment) -->
+                        <!--CycleStorageEquipmentRef ref="NSR:CycleStorageEquipment:1" version="1"/-->
+                        <CycleStorageEquipment id="NSR:CycleStorageEquipment:1" version="2">
+                            <NumberOfSpaces>15</NumberOfSpaces>
+                            <CycleStorageType>racks</CycleStorageType>
+                        </CycleStorageEquipment>
+                    </placeEquipments>
+                    <parkingAreas>
+                        <ParkingArea id="NSR:VehicleSharingParkingArea:CityBike" version="1">
+                            
+                        </ParkingArea>
+                    </parkingAreas>
+                    
+                </Parking>
+                <!-- VEHICLE SHARING PARKING AREA for Scooter -->
+                <Parking id="NSR:Parking:Scooter" version="1">
+                    <ParentZoneRef ref="NSR:Zone:ScooterZone"/>
+                </Parking> 
+            </parkings>
+
+            <siteFacilitySets>
+                <SiteFacilitySet id="NSR:SiteFacilitySet:1" version="1">
+                    <ParkingFacilityList>cyclePark</ParkingFacilityList>
+                </SiteFacilitySet>
+            </siteFacilitySets>
+            
+        </SiteFrame>
+    </dataObjects>
+</PublicationDelivery>

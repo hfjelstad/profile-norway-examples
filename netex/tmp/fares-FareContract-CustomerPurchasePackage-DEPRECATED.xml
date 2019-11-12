@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery version="1.08:NO-NeTEx-fares:1.0" xmlns="http://www.netex.org.uk/netex">
+    <PublicationTimestamp>2018-09-04T12:00:00</PublicationTimestamp>
+    <ParticipantRef>ENT</ParticipantRef>
+    <dataObjects>
+
+        <!-- Reference data START -->
+
+        <FareFrame id="ENT:FareFrame:1" version="1">
+           
+            <geographicalIntervals>
+                <GeographicalInterval id="RUT:GeographicalInterval:1" version="1">
+                    <NumberOfUnits>2</NumberOfUnits>
+                    <IntervalType>tariffZone</IntervalType>
+                </GeographicalInterval>
+            </geographicalIntervals>
+            <timeIntervals>
+                <TimeInterval id="RUT:TimeInterval:1Hour" version="1">
+                    <Duration>PT1H</Duration>
+                </TimeInterval>
+            </timeIntervals>
+            <validableElements>
+                <ValidableElement id="NSB:ValidableElement:SingleTrip" version="1">
+                    <Name>Enkelttur NSB</Name>
+                </ValidableElement>
+                <ValidableElement id="NSB:ValidableElement:Seat" version="1">
+                    <Name>Setereservasjon</Name>
+                </ValidableElement>
+                <ValidableElement id="RUT:ValidableElement:SingleTrip" version="1">
+                    <Name>Enkelttur Ruter</Name>
+                </ValidableElement>
+                <ValidableElement id="RUT:ValidableElement:Oyafestivalen" version="1">
+                    <Name>Enkelttur Ruter</Name>
+                </ValidableElement>
+            </validableElements>
+            <usageParameters>
+                <UserProfile id="NSB:UserProfile:Voksen" version="1">
+                    <Name lang="no">Voksen</Name>
+                </UserProfile>
+                <UserProfile id="NSB:UserProfile:Barn" version="1">
+                    <Name lang="no">Barn</Name>
+                </UserProfile>
+                <UserProfile id="NSB:UserProfile:Student" version="1">
+                    <Name lang="no">Student</Name>
+                </UserProfile>
+                <UserProfile id="RUT:UserProfile:Barn" version="1">
+                    <Name lang="no">Barn</Name>
+                </UserProfile>
+                <UserProfile id="RUT:UserProfile:Anyone" version="1">
+                    <Name lang="no">Hvem som helst / fullprisprofil</Name>
+                </UserProfile>
+            </usageParameters>
+            
+            <fareProducts>
+                <PreassignedFareProduct id="NSB:PreassignedFareProduct:SingleTrip" version="1">
+                    <Name lang="no">Enkelttur NSB</Name>
+                    <accessRightsInProduct>
+                        <AccessRightInProductRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                    </accessRightsInProduct>
+                </PreassignedFareProduct>
+ 
+                <ThirdPartyProduct id="RUT:ThirdPartyProduyct:OyafestivalenLordag" version="1">
+                    <accessRightsInProduct>
+                        <AccessRightInProduct id="RUT:AccessRightInProduct:Exhibition" version="1" order="1">
+                            <ValidableElementRef ref="RUT:ValidableElement:Oyafestivalen" version="1"/>
+                        </AccessRightInProduct>
+                    </accessRightsInProduct>
+                </ThirdPartyProduct>
+                <PreassignedFareProduct id="RUT:PreassignedFareProduct:Oyafestivalen" version="1">
+                    
+                    
+                   <Name lang="no">Øyafestivalen -billett tur - inngang - retur</Name>
+                    <accessRightsInProduct>
+                        <AccessRightInProduct id="RUT:AccessRightInProduct:SingleTripOutbound" version="1" order="1">
+                            <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                        </AccessRightInProduct>
+                        <AccessRightInProductRef ref="RUT:AccessRightInProduct:Exhibition" version="1" order="2"/>
+                        <AccessRightInProduct id="RUT:AccessRightInProduct:SingleTripInbound" version="1" order="3">
+                            <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                        </AccessRightInProduct>
+                    </accessRightsInProduct>
+                </PreassignedFareProduct>
+                <SupplementProduct id="NSB:SupplementProduct:Seat" version="1">
+                    <Name lang="no">Setereservasjon</Name>
+                    <accessRightsInProduct>
+                        <AccessRightInProductRef ref="NSB:ValidableElement:Seat" version="1"/>
+                    </accessRightsInProduct>
+                </SupplementProduct>
+                <PreassignedFareProduct id="RUT:PreassignedFareProduct:SingleTrip" version="1">
+                    <Name lang="no">Enkelttur Ruter</Name>
+                    
+                    <accessRightsInProduct>
+                        <AccessRightInProductRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                    </accessRightsInProduct>
+                </PreassignedFareProduct>
+                <AmountOfPriceUnitProduct id="RUT:AmountOfPriceUnitProduct:10Trips" version="1">
+                    <Name>Klippekort 10 turer</Name>
+                    <accessRightsInProduct>
+                        <AccessRightInProduct id="RUT:AccessRightInProduct" version="1" order="1">
+                            <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>              
+                        </AccessRightInProduct>
+                    </accessRightsInProduct>
+                    <Amount>10</Amount>
+                </AmountOfPriceUnitProduct>
+            </fareProducts>
+
+            <salesOfferPackages>
+                <SalesOfferPackage id="ENT:SalesOfferPackage:SingleRailTripWithMandatorySeat" version="1">
+                    <Name lang="no">Enkelttur spesifikk avgang obligatorisk setereservasjon</Name>
+                    <salesOfferPackageElements>
+                        <SalesOfferPackageElement id="ENT:SalesOfferPackageElement:SingleTrip" version="1" order="1">
+                            <Name lang="no">Togtur</Name>
+                        </SalesOfferPackageElement>
+                        <SalesOfferPackageElement id="ENT:SalesOfferPackageElement:Seat" version="1" order="2">
+                            <Name lang="no">Setereservasjon</Name>
+                        </SalesOfferPackageElement>
+                    </salesOfferPackageElements>
+                </SalesOfferPackage>
+                <SalesOfferPackage id="ENT:SalesOfferPackage:SingleTrip2Zones" version="1">
+                    <Name lang="no">Enkelttur</Name>
+                    <salesOfferPackageElements>
+                        <SalesOfferPackageElement id="ENT:SalesOfferPackageElement:SingleTripRuter" version="1" order="1">
+                            <Name lang="no">Enkelttur</Name>
+                        </SalesOfferPackageElement>
+                    </salesOfferPackageElements>
+                </SalesOfferPackage>
+                <SalesOfferPackage id="ENT:SalesOfferPackage:SingleTrip" version="1">
+                    <Name lang="no">Enkelttur</Name>
+                    <salesOfferPackageElements>
+                        <SalesOfferPackageElement id="ENT:SalesOfferPackageElement:SingleTripRuterX" version="1" order="1">
+                            <Name lang="no">Enkelttur</Name>
+                        </SalesOfferPackageElement>
+                    </salesOfferPackageElements>
+                </SalesOfferPackage>
+                <SalesOfferPackage id="ENT:SalesOfferPackage:Combined2Legs" version="1">
+                    <Name lang="no">Enkelttur</Name>
+                    <salesOfferPackageElements>
+                        <SalesOfferPackageElement id="ENT:SalesOfferPackageElement:Combined2Legs" version="1" order="1">
+                            <Name lang="no">Gjennomgående togtur 2 legs</Name>
+                        </SalesOfferPackageElement>
+                    </salesOfferPackageElements>
+                </SalesOfferPackage>
+                <SalesOfferPackage id="ENT:SalesOfferPackage:SeparateLegs" version="1">
+                    <Name lang="no">Enkelttur</Name>
+                    <salesOfferPackageElements>
+                        <SalesOfferPackageElement id="ENT:SalesOfferPackageElement:SeparateLegs" version="1" order="1">
+                            <Name lang="no">Gjennomgående togtur 2 legs</Name>
+                        </SalesOfferPackageElement>
+                    </salesOfferPackageElements>
+                </SalesOfferPackage>
+                <SalesOfferPackage id="ENT:SalesOfferPackage:SingleTripBundle" version="1">
+                    <Name lang="no">Enkelttur</Name>
+                    <salesOfferPackageElements>
+                        <SalesOfferPackageElement id="ENT:SalesOfferPackageElement:SingleTripBundle" version="1" order="1">
+                            <Name lang="no">Enkel togtur</Name>
+                            
+                        </SalesOfferPackageElement>
+                    </salesOfferPackageElements>
+                </SalesOfferPackage>
+                <SalesOfferPackage id="ENT:SalesOfferPackage:10Trips" version="1">
+                    <Name lang="no">Enkelttur</Name>
+                    <salesOfferPackageElements>
+                        <SalesOfferPackageElement id="ENT:SalesOfferPackageElement:10Trips" version="1" order="1">
+                            <Name lang="no">Klippekort 10 turer sone 1</Name>
+                            <AmountOfPriceUnitProductRef ref="RUT:AmountOfPriceUnitProduct:10Trips" version="1"/>
+                        </SalesOfferPackageElement>
+                    </salesOfferPackageElements>
+                </SalesOfferPackage>
+                <SalesOfferPackage id="ENT:SalesOfferPackage:Oyafestivalen" version="1">
+                    <Name lang="no">Oyafestival Lørdag + reise til og fra</Name>
+                    <salesOfferPackageElements>
+                        <SalesOfferPackageElement id="ENT:SalesOfferPackageElement:Oyafestivalen" version="1" order="1">
+                            <PreassignedFareProductRef ref="RUT:PreassignedFareProduct:Oyafestivalen" version="1"/>
+                        </SalesOfferPackageElement>
+                    </salesOfferPackageElements>
+                </SalesOfferPackage>
+            </salesOfferPackages>
+            
+            
+        </FareFrame>
+
+
+        <SiteFrame id="ENT:SiteFrame:1" version="1">
+            <tariffZones>
+                <TariffZone id="RUT:TariffZone:1" version="1">
+                    <Name lang="no">Ruter Sone 1</Name>
+                </TariffZone>
+            </tariffZones>
+        </SiteFrame>
+
+      
+
+        <ServiceFrame id="ENT:ServiceFrame:1" version="1">
+            
+        </ServiceFrame>
+
+
+        <TimetableFrame id="ENT:TimetableFrame:1" version="1">
+            <vehicleJourneys>
+                <ServiceJourney id="NSB:ServiceJourney:1" version="1">
+                    <Name lang="no">Avgang Oslo Trondheim kl 12:00</Name>
+                </ServiceJourney>
+                <ServiceJourney id="NSB:ServiceJourney:OsloRakkestad" version="1">
+                    <Name lang="no">Avgang Oslo Rakkestad kl 13</Name>
+                </ServiceJourney>
+                <ServiceJourney id="NSB:ServiceJourney:DrammenOslo" version="1">
+                    <Name lang="no">Drammen til Oslo kl 12:00</Name>
+                </ServiceJourney>
+                <ServiceJourney id="NSB:ServiceJourney:StavangerOslo" version="1">
+                    <Name lang="no">Stavanger til Oslo kl 12:00</Name>
+                </ServiceJourney>
+                <ServiceJourney id="NSB:ServiceJourney:ArendalOslo" version="1">
+                    <Name lang="no">Stavanger til Oslo kl 12:00</Name>
+                </ServiceJourney>
+                <ServiceJourney id="GJB:ServiceJourney:OsloNittedal" version="1">
+                    <Name lang="no">Oslo Nittedal Gjøvikbanken kl 13</Name>
+                </ServiceJourney>
+            </vehicleJourneys>
+        </TimetableFrame>
+
+        <!-- Reference data END -->
+
+
+
+
+        <!-- Eksempel på case nr 1:
+            
+            Enkel billett til avgang
+            Fra til stasjon til stasjon
+            bestemt avgang.
+            (Voksen) -> ALLE egentlig
+            
+            Obligatorisk sete 
+            Nsb ordinær
+            Oslo trondheim
+            Forhåndsaktivert
+        -->
+        <SalesTransactionFrame id="ENT:SalesTransactionFrame:Case1" version="1">
+            
+            <fareContracts>
+                <FareContract id="ENT:FareContract:1" version="1">
+                    
+                    <Name>Enkeltbillett reise Oslo Trondheim</Name>
+                    <StartDate>2018-09-06T01:07:00</StartDate>
+                    <EndDate>2018-09-07T01:07:00</EndDate>
+                    <fareContractEntries>
+                        
+                        <SalesTransaction version="1" id="ENT:SalesTransaction:1">
+                            <Name>Kjøp enkeltbillett fra Oslo til Trondheim </Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <Amount>699</Amount>
+                            <Currency>NOK</Currency>
+                            <PaymentMethod>debitCard</PaymentMethod>
+                            <customerPurchasePackages>
+                                <!-- Referanse til customer purchase packages -->
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:SingleTripSpecificJourney" version="1"/>
+                            </customerPurchasePackages>
+                        </SalesTransaction>
+                    </fareContractEntries>
+                    
+                </FareContract>
+            </fareContracts>
+            
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:SingleTripSpecificJourney" version="1">
+                    
+                    
+                    <SalesOfferPackageRef ref="ENT:SalesOfferPackage:SingleRailTripWithMandatorySeat" version="1"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackageElement:SingleTripSpecificJourney" version="1" order="1">
+                            
+                            <SalesOfferPackageElementRef ref="ENT:SalesOfferPackageElement:SingleTrip" version="1"/>
+                            
+                            <!-- Consumption of validable elements
+                             
+                              
+                             
+                              Initial state 'unused' -> but must contain information on how to calculate UsageValidityPeriod
+                              
+                              Preactvated state 'activated' -> must contain UsageValidityPeriod
+                           
+                              After additional validation / 
+                           
+                            -->
+                            
+                            <!-- 
+                                   
+                                   Access to a VALIDABLE ELEMENT by a specific CUSTOMER PURCHASE PACKAGE (ELEMENT) through use of CUSTOMER PURCHASE PACKAGE. 
+                                   This is needed for validation of complex SALES OFFER PACKAGEs containing tariffs structures that have FARE STRUCTURE ELEMENTs IN SEQUENCE, 
+                                   in such a case a given SALES PACKAGE ELEMENT may have multiple VALIDABLE ELEMENTs associated with it, 
+                                   each of which can be separately validated and marked. +v1.1
+                                   -->
+                            
+                            
+                            <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:1" version="1" created="2019-01-01T00:00:00">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <!--  <FareStructureElementRef ref="NSB:TariffZone:213" version="1"/>-->
+                                    <MarkedAs>activated</MarkedAs>
+                                </CustomerPurchasePackageElementAccess>
+                            </elementAccesses>
+                            
+                            
+                            <!--
+                   Kombinring av flere produkt/access rights og konsumering
+                   
+                   Enkel leg uten tilleggsprodukt
+                   Enkel leg MED tilllegsprodukt der konsumering henger saMMEN
+                   Multi leg MED tilllegsprodukt der konsumering henger saMMEN for leg 1
+                   Multi leg MED tilllegsprodukt der konsumering henger saMMEN for for respektive leg
+                   
+                   Enkel leg med tilleggsprodukt der konsumering er uavhengig (eks tog + kaffekopp)
+                   
+                   
+                   
+                   -->
+                            
+                            
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:1" order="1">
+                                    
+                                    
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloTrondheim"/>
+                                    
+                                    
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        <UsageValidityPeriod id="ENT:UsageValidityPeriod:1" version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-05</EndDate>
+                                            <EndTime>12:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        
+                                    </limitations>
+                                    <!-- BOTH Journey and seat must match -->
+                                    <ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+                                    <validityParameters>
+                                        <PassengerSeatRef ref="NSB:PassengerSeat:XYZ3" version="1">3/24</PassengerSeatRef> <!-- NOT DOCUMENTED -->
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:1" version="1"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        
+                    </customerPurchasePackageElements>
+                    
+                    <prices>
+                        <!-- Delbeløp for denne pakken i SalesTransaction -->
+                        <CustomerPurchasePackagePrice id="ENT:CustomerPurchasePackagePrice:1">
+                            <Amount>699</Amount>
+                            <Currency>NOK</Currency>
+                        </CustomerPurchasePackagePrice>
+                    </prices>
+                    
+                    
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+            
+            
+        </SalesTransactionFrame>
+
+        <!-- 
+            
+            
+                Case 13: Ruter enkeltbillett/mobil
+                
+                Ruter enkeltreise
+                Definert startsone
+                2 soner / radius
+                Lengde på gyldighet (90 min)
+                Voksen (dvs alle)
+                
+            -->
+        <SalesTransactionFrame id="ENT:SalesTransactionFrame:Case13" version="1">
+            
+            
+            
+            
+            <fareContracts>
+                <FareContract id="ENT:FareContract:2" version="1">
+                    
+                    <Name>Enkeltbillett 2 soner</Name>
+                    <StartDate>2018-09-06T01:07:00</StartDate>
+                    <EndDate>2018-09-07T01:07:00</EndDate>
+                    <fareContractEntries>
+                        
+                        <SalesTransaction version="1" id="ENT:SalesTransaction:2">
+                            <Name>Enkeltbillett 2 soner</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <Amount>57</Amount>
+                            <Currency>NOK</Currency>
+                            <PaymentMethod>debitCard</PaymentMethod>
+                            <customerPurchasePackages>
+                                <!-- Referanse til customer purchase packages -->
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:SingleTrip2Zones" version="1"/>
+                            </customerPurchasePackages>
+                        </SalesTransaction>
+                    </fareContractEntries>
+                    
+                </FareContract>
+            </fareContracts>
+            
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:SingleTrip2Zones" version="1">
+                    <SalesOfferPackageRef ref="ENT:SalesOfferPackage:SingleTrip2Zones" version="1"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackageElement:SingleTrip2Zones" version="1" order="1">
+                            
+                            <SalesOfferPackageElementRef ref="ENT:SalesOfferPackageElement:SingleTrip2Zones" version="1"/>
+                            
+                        
+                            <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:2" version="1" created="2019-01-01T00:00:00">
+                                    <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>activated</MarkedAs>
+                                </CustomerPurchasePackageElementAccess>
+                            </elementAccesses>
+                          
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:2" order="1">
+                                    
+                                    
+                                    <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                                    
+                                    <PreassignedFareProductRef ref="RUT:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        <UsageValidityPeriod id="ENT:UsageValidityPeriod:2" version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-04</EndDate>
+                                            <EndTime>13:30:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        
+                                    </limitations>
+                                    <validityParameters>
+                                        <!-- startsone og så antall soner dvs GeograhicalIntervalRef under -->
+                                        <TariffZoneRef ref="RUT:TariffZone:1" version="1"/>
+                                    </validityParameters>
+                                    
+                                    <GeographicalIntervalRef ref="RUT:GeographicalInterval:1" version="1"/>
+                                    
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        
+                    </customerPurchasePackageElements>
+                    <prices>
+                        <CustomerPurchasePackagePrice id="ENT:CustomerPurchasePackagePrice:1">
+                            <Amount>57</Amount>
+                            <Currency>NOK</Currency>
+                        </CustomerPurchasePackagePrice>
+                    </prices>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+            
+            
+        </SalesTransactionFrame>
+        
+        <!-- Case 12: Sosiale rabatter på gjennomgående, aka userprofile child
+
+                2 leg (Drammen - Oslo - Rakkestad)
+                Bestemt avgang
+                1 produkt (NSB Ordinær
+                Samme authority (nsb)
+                Barn
+
+            -->
+        <SalesTransactionFrame id="ENT:SalesTransactionFrame:Case12" version="1">
+            
+            
+            
+            
+            <fareContracts>
+                <FareContract id="ENT:FareContract:3" version="1">
+                    
+                    <Name>Gjennomgående Drammen-Oslo-Rakkestad</Name>
+                    <StartDate>2018-09-06T01:07:00</StartDate>
+                    <EndDate>2018-09-07T01:07:00</EndDate>
+                    <fareContractEntries>
+                        
+                        <SalesTransaction version="1" id="ENT:SalesTransaction:3">
+                            <Name>Enkeltbillett 2 soner</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <Amount>365</Amount>
+                            <Currency>NOK</Currency>
+                            <PaymentMethod>debitCard</PaymentMethod>
+                            <customerPurchasePackages>
+                                <!-- Referanse til customer purchase packages -->
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:Combined2Legs" version="1"/>
+                            </customerPurchasePackages>
+                        </SalesTransaction>
+                    </fareContractEntries>
+                    
+                </FareContract>
+            </fareContracts>
+            
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:Combined2Legs" version="1">
+                    <SalesOfferPackageRef ref="ENT:SalesOfferPackage:Combined2Legs" version="1"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackageElement:Combined2Legs" version="1" order="1">
+                            
+                            
+                            
+                            
+                            <SalesOfferPackageElementRef ref="ENT:SalesOfferPackageElement:Combined2Legs" version="1"/>
+                            
+                            <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:3" version="1" created="2019-01-01T00:00:00">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>activated</MarkedAs>
+                                </CustomerPurchasePackageElementAccess>
+                            </elementAccesses>
+                            
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:3" order="1">
+                            
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:DrammenOslo"/>
+                                    
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        <UsageValidityPeriod id="ENT:UsageValidityPeriod:3" version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-04</EndDate>
+                                            <EndTime>16:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        <UserProfileRef ref="NSB:UserProfile:Barn" version="1"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:DrammenOslo" version="1"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:4" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloRakkestad"/>
+                                    
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        <UsageValidityPeriod id="ENT:UsageValidityPeriod:4" version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-04</EndDate>
+                                            <EndTime>16:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        <UserProfileRef ref="NSB:UserProfile:Barn" version="1"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:OsloRakkestad" version="1"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        
+                    </customerPurchasePackageElements>
+                    <prices>
+                        <CustomerPurchasePackagePrice id="ENT:CustomerPurchasePackagePrice:1">
+                            <Amount>365</Amount>
+                            <Currency>NOK</Currency>
+                        </CustomerPurchasePackagePrice>
+                    </prices>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+            
+            
+        </SalesTransactionFrame>
+
+        <!-- Case 2: Gjennomgående billett NSB - Gjøvikbane
+            Minipris på regiontog
+            Ordinærbillett på lokaltog
+            Voksen
+            Setereservasjon på regiontog
+            Ikke setevalg på lokaltog
+            Refusjon samlet, må reise samlet
+            
+            -->
+        <SalesTransactionFrame id="ENT:SalesTransactionFrame:Case2" version="1">
+            
+            
+            
+            <fareContracts>
+                <FareContract id="ENT:FareContract:4" version="1">
+                    
+                    <Name>Gjennomgående billett NSB - Gjøvikbane</Name>
+                    <StartDate>2018-09-06T01:07:00</StartDate>
+                    <EndDate>2018-09-07T01:07:00</EndDate>
+                    <fareContractEntries>
+                        
+                        <SalesTransaction version="1" id="ENT:SalesTransaction:4">
+                            <Name>Enkeltbillett 2 soner</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <Amount>570</Amount>
+                            <Currency>NOK</Currency>
+                            <PaymentMethod>debitCard</PaymentMethod>
+                            <customerPurchasePackages>
+                                <!-- Referanse til customer purchase packages -->
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:Combined2Legs" version="1"/>
+                            </customerPurchasePackages>
+                        </SalesTransaction>
+                    </fareContractEntries>
+                    
+                </FareContract>
+            </fareContracts>
+            
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:Combined2LegsGJB" version="1">
+                    
+                    <SalesOfferPackageRef ref="ENT:SalesOfferPackage:Combined2Legs" version="1"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackageElement:Combined2LegsGJB" version="1" order="1">
+                            
+                            
+                            
+                            <SalesOfferPackageElementRef ref="ENT:SalesOfferPackageElement:Combined2Legs" version="1"/>
+                            
+                            <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:4" version="1" created="2019-01-01T00:00:00">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>activated</MarkedAs>
+                                </CustomerPurchasePackageElementAccess>
+                            </elementAccesses>
+                            
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:6" order="1">
+                                   
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:StavangerOslo"/>
+                                    
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        <UsageValidityPeriod id="ENT:UsageValidityPeriod:5" version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-04</EndDate>
+                                            <EndTime>16:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        
+                                    </limitations>
+                                    <validityParameters>
+                                        <PassengerSeatRef ref="NSB:PassengerSeat:XYZ3" version="1">3/24</PassengerSeatRef> <!-- NOT DOCUMENTED -->
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:StavangerOslo" version="1"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:7" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:OsloRakkestad"/>
+                                    
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        <UsageValidityPeriod id="ENT:UsageValidityPeriod:6" version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-04</EndDate>
+                                            <EndTime>16:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="GJB:ServiceJourney:OsloNittedal" version="1"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        
+                    </customerPurchasePackageElements>
+                    <prices>
+                        <CustomerPurchasePackagePrice id="ENT:CustomerPurchasePackagePrice:1">
+                            <Amount>570</Amount>
+                            <Currency>NOK</Currency>
+                        </CustomerPurchasePackagePrice>
+                    </prices>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+            
+            
+        </SalesTransactionFrame>
+ 
+        <!-- Eksempel på case nr 6:
+            
+           2 Voksen
+           1 barn
+           1 student
+           
+           Endte opp som 4 enkeltbilletter / CPP
+           
+            -->
+        <SalesTransactionFrame id="ENT:SalesTransactionFrame:Case6" version="1">
+            
+            
+            <fareContracts>
+                <FareContract id="ENT:FareContract:5" version="1">
+                    
+                    <Name>2 voksne, 1 barn, 1 student, enkeltreise</Name>
+                    <StartDate>2018-09-06T01:07:00</StartDate>
+                    <EndDate>2018-09-07T01:07:00</EndDate>
+                    <fareContractEntries>
+                        
+                        <SalesTransaction version="1" id="ENT:SalesTransaction:5">
+                            <Name>2 voksne, 1 barn, 1 student, enkeltreise</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <!-- 100+100+84+60 -->
+                            <Amount>344</Amount>
+                            <Currency>NOK</Currency>
+                            <PaymentMethod>debitCard</PaymentMethod>
+                            <customerPurchasePackages>
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:DobbelVoksen" version="1"/> <!-- For voksen 1 -->
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:DobbelVoksen" version="1"/> <!-- For voksen 2 -->
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:EnkelStudent" version="1"/>
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:EnkelBarn" version="1"/>
+                            </customerPurchasePackages>
+                        </SalesTransaction>
+                    </fareContractEntries>
+                    
+                </FareContract>
+            </fareContracts>
+            
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:DobbelVoksen" version="1">
+                    <SalesOfferPackageRef ref="ENT:SalesOfferPackage:SingleTripBundle" version="1"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackageElement:SingleTripBundleVoksen" version="1" order="1">
+                            <SalesOfferPackageElementRef ref="ENT:SalesOfferPackageElement:SingleTripBundle" version="1"/>
+                            
+                            <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:8" version="1" created="2019-01-01T00:00:00">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>activated</MarkedAs>
+                                </CustomerPurchasePackageElementAccess>
+                            </elementAccesses>
+                            
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:8" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:DrammenOslo"/>
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        <UsageValidityPeriod id="ENT:UsageValidityPeriod:8" version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-04</EndDate>
+                                            <EndTime>16:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        <!-- Voksen kan brukes av alle? -->
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:ArendalOslo" version="1"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                                
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        
+                    </customerPurchasePackageElements>
+                    <prices>
+                        <CustomerPurchasePackagePrice id="ENT:CustomerPurchasePackagePrice:1">
+                            <Amount>100</Amount> <!-- pris pr pakke, i ordre er 2 av denne -->
+                            <Currency>NOK</Currency>
+                        </CustomerPurchasePackagePrice>
+                    </prices>
+                </CustomerPurchasePackage>
+
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:EnkelStudent" version="1">
+                    <SalesOfferPackageRef ref="ENT:SalesOfferPackage:SingleTripBundle" version="1"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackageElement:SingleTripBundleStudent" version="1" order="1">
+                            <SalesOfferPackageElementRef ref="ENT:SalesOfferPackageElement:SingleTripBundle" version="1"/>
+                            
+                            <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:8" version="1" created="2019-01-01T00:00:00">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>activated</MarkedAs>
+                                </CustomerPurchasePackageElementAccess>
+                            </elementAccesses>
+                            
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:9" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:DrammenOslo"/>
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        <UsageValidityPeriod id="ENT:UsageValidityPeriod:9" version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-04</EndDate>
+                                            <EndTime>16:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        <UserProfileRef ref="NSB:UserProfile:Student" version="1"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:ArendalOslo" version="1"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                                
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        
+                    </customerPurchasePackageElements>
+                    <prices>
+                        <CustomerPurchasePackagePrice id="ENT:CustomerPurchasePackagePrice:1">
+                            <Amount>84</Amount> 
+                            <Currency>NOK</Currency>
+                        </CustomerPurchasePackagePrice>
+                    </prices>
+                </CustomerPurchasePackage>
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:EnkelBarn" version="1">
+                    
+                    <SalesOfferPackageRef ref="ENT:SalesOfferPackage:SingleTripBundle" version="1"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackageElement:SingleTripBundleBarn" version="1" order="1">
+                            <SalesOfferPackageElementRef ref="ENT:SalesOfferPackageElement:SingleTripBundle" version="1"/>
+                            
+                            <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:10" version="1" created="2019-01-01T00:00:00">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>activated</MarkedAs>
+                                </CustomerPurchasePackageElementAccess>
+                            </elementAccesses>
+                            
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:10" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:DrammenOslo"/>
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        <UsageValidityPeriod id="ENT:UsageValidityPeriod:10" version="1">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-04</EndDate>
+                                            <EndTime>16:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        <UserProfileRef ref="NSB:UserProfile:Barn" version="1"/>
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:ArendalOslo" version="1"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                                
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        
+                    </customerPurchasePackageElements>
+                    <prices>
+                        <CustomerPurchasePackagePrice id="ENT:CustomerPurchasePackagePrice:1">
+                            <Amount>60</Amount> 
+                            <Currency>NOK</Currency>
+                        </CustomerPurchasePackagePrice>
+                    </prices>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+            
+            
+        </SalesTransactionFrame>
+       
+        <!-- 
+            
+              Ruter sone 1
+              Ikke forhåndsaktivert
+                
+            -->
+        <SalesTransactionFrame id="ENT:SalesTransactionFrame:IkkeAktivertSonebillett" version="1">
+            
+            
+            
+            
+            <fareContracts>
+                <FareContract id="ENT:FareContract:6" version="1">
+                    
+                    <Name>Enkeltbillett 1 sone, BARN, ikke aktivert</Name>
+                    <StartDate>2018-09-06T01:07:00</StartDate>
+                    <EndDate>2019-09-06T01:07:00</EndDate> <!-- Må aktiveres innen ett år -->
+                    <fareContractEntries>
+                        
+                        <SalesTransaction version="1" id="ENT:SalesTransaction:6">
+                            <Name>Enkeltbillett 1 sone barn</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <Amount>17</Amount>
+                            <Currency>NOK</Currency>
+                            <PaymentMethod>creditCard</PaymentMethod>
+                            <customerPurchasePackages>
+                                <!-- Referanse til customer purchase packages -->
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:SingleTripNotActivated" version="1"/>
+                            </customerPurchasePackages>
+                        </SalesTransaction>
+                    </fareContractEntries>
+                    
+                </FareContract>
+            </fareContracts>
+            
+            <customerPurchasePackages>
+                
+                <!-- CUSTOMER PURCHASE PACKAGE BEFORE ACTIVATION (SEE BELOW FOR AFTER ACTIVATION) -->
+                
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:SingleTripNotActivated" version="1">
+                    
+                    <SalesOfferPackageRef ref="ENT:SalesOfferPackage:SingleTrip" version="1"/>
+                    <customerPurchasePackageElements>
+                        
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackageElement:SingleTripNotActivated" version="1" order="1">
+                            
+                            <SalesOfferPackageElementRef ref="ENT:SalesOfferPackageElement:SingleTrip" version="1"/>
+                            
+                            
+                            <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:2" version="1" created="2019-01-01T00:00:00">
+                                    <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>unused</MarkedAs> <!-- markert som UNUSED -->
+                                </CustomerPurchasePackageElementAccess>
+                            </elementAccesses>
+                            
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:11" order="1">
+                                    
+                                    
+                                    <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                                    
+                                    <PreassignedFareProductRef ref="RUT:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        <UserProfileRef ref="RUT:UserProfile:Barn" version="1"/>
+                                        
+                                    </limitations>
+                                    <validityParameters>
+                                        
+                                        <TariffZoneRef ref="RUT:TariffZone:1" version="1"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        
+                    </customerPurchasePackageElements>
+                </CustomerPurchasePackage>
+
+
+                <!-- CUSTOMER PURCHASE PACKAGE AFTER ACTIVATION (SEE ABOVE FOR BEFORE ACTIVATION) -->
+                
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:SingleTripActivated" version="1">
+                    <SalesOfferPackageRef ref="ENT:SalesOfferPackage:SingleTrip" version="1"/>
+                    <customerPurchasePackageElements>
+                        
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackageElement:SingleTripActivated" version="1" order="1">
+                            
+                            <SalesOfferPackageElementRef ref="ENT:SalesOfferPackageElement:SingleTrip" version="1"/>
+                            
+                            
+                            <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:2" version="1" created="2019-01-01T00:00:00">
+                                    <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>unused</MarkedAs> <!-- markert som UNUSED -->
+                                </CustomerPurchasePackageElementAccess>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:2" version="1" created="2019-02-01T00:00:00">
+                                    <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>activated</MarkedAs> <!-- markert som ACTIVATED senere -->
+                                </CustomerPurchasePackageElementAccess>
+                            </elementAccesses>
+                            
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:12" order="1">
+                                    
+                                    
+                                    <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                                    
+                                    <PreassignedFareProductRef ref="RUT:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        
+                                        <UsageValidityPeriod id="ENT:UsageValidityPeriod:12" version="1">
+                                            <StartDate>2019-02-01</StartDate>
+                                            <StartTime>00:00:00</StartTime>
+                                            <EndDate>2019-02-01</EndDate> <!-- 1 hour validity after activation -->
+                                            <EndTime>01:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        <UserProfileRef ref="RUT:UserProfile:Barn" version="1"/>
+                                        
+                                    </limitations>
+                                    <validityParameters>
+                                        
+                                        <TariffZoneRef ref="RUT:TariffZone:1" version="1"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        
+                    </customerPurchasePackageElements>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+            
+            
+        </SalesTransactionFrame>
+        
+        <!-- Personalbillett
+        
+            TODO
+            
+            -->
+        <SalesTransactionFrame id="ENT:SalesTransactionFrame:Personalbillett" version="1">
+            
+            
+        </SalesTransactionFrame>
+        
+        <!-- Klippekort
+        
+            10 enkeltreiser Ruter Sone 1
+            
+            -->
+        <SalesTransactionFrame id="ENT:SalesTransactionFrame:Carnet" version="1">
+            
+            <fareContracts>
+                <FareContract id="ENT:FareContract:10" version="1">
+                    
+                    <Name>Enkeltbillett 2 soner</Name>
+                    <StartDate>2018-09-06T01:07:00</StartDate>
+                    <EndDate>2018-09-07T01:07:00</EndDate>
+                    <fareContractEntries>
+                        
+                        <SalesTransaction version="1" id="ENT:SalesTransaction:10">
+                            <Name>Enkeltbillett 2 soner</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <Amount>57</Amount>
+                            <Currency>NOK</Currency>
+                            <PaymentMethod>debitCard</PaymentMethod>
+                            <customerPurchasePackages>
+                                <!-- Referanse til customer purchase packages -->
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:10Trips" version="1"/>
+                            </customerPurchasePackages>
+                        </SalesTransaction>
+                    </fareContractEntries>
+                    
+                </FareContract>
+            </fareContracts>
+            
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:10Trips" version="1">
+                    <SalesOfferPackageRef ref="ENT:SalesOfferPackage:10Trips" version="1"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackageElement:10Trips" version="1" order="1">
+                           
+                            <SalesOfferPackageElementRef ref="ENT:SalesOfferPackageElement:10Trips" version="1"/>
+                            
+                            
+                            <elementAccesses>
+                                <!-- 3 trips done -->
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:11" version="1" created="2019-01-01T00:00:00">
+                                    <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>activated</MarkedAs>
+                                </CustomerPurchasePackageElementAccess>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:12" version="1" created="2019-01-02T00:00:00">
+                                    <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>activated</MarkedAs>
+                                </CustomerPurchasePackageElementAccess>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:13" version="1" created="2019-01-03T00:00:00">
+                                    <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>activated</MarkedAs>
+                                </CustomerPurchasePackageElementAccess>
+                            </elementAccesses>
+                            <!-- Hvis amount of price unit
+                                then 
+                                   if active exist within time period [last customerpurchasepackageaccess.created + timeinterval] then all good
+                                   else if amountofpriceunit.accessrightsinproduct.accessnumber < count(elementaccesses[state = activated/used]) then create new customerpurchasepackageelementaccess based on now+timeinterval
+                                   else return fail no ticket and cannot activate (if validate function)
+                                   -->
+                                
+                            
+                            <validityParameterAssignments>
+                                
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:13" order="1">
+                                <!--
+                                    
+                                    Which type to use depends on type given in <accessRightInProduct>?
+                                    
+                                    <FareStructureElementInSequenceRef ref=""></FareStructureElementInSequenceRef>
+                                    <AccessRightInProductRef ref=""></AccessRightInProductRef>
+                                    <ValidableElementRef ref="RUT:ValidableElement:SingleTrip" version="1"/>
+                                -->    
+                                    <!-- Will check Amount field of AmountOfPriceUnitProductRef.accessrightsinproduct.accessnumber to see how many UNITS this contains -->
+                                    <!-- Usage validity period must be calculated for each activation event -->
+                                    
+                                    <AmountOfPriceUnitProductRef ref="RUT:AmountOfPriceUnitProduct:10Trips" version="1"/>
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                   <limitations>
+                                      
+                                       <UserProfileRef ref="RUT:UserProfile:Anyone" version="1"/>
+                                    </limitations>
+                                    <validityParameters>
+                                   
+                                        <TariffZoneRef ref="RUT:TariffZone:1" version="1"/>
+                                       
+                                    </validityParameters>
+                                    <TimeIntervalRef ref="RUT:TimeInterval:1Hour" version="1"/>
+                                </CustomerPurchaseParameterAssignment>
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        
+                    </customerPurchasePackageElements>
+                    <prices>
+                        <CustomerPurchasePackagePrice id="ENT:CustomerPurchasePackagePrice:1">
+                            <Amount>57</Amount>
+                            <Currency>NOK</Currency>
+                        </CustomerPurchasePackagePrice>
+                    </prices>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+            
+            
+            
+        </SalesTransactionFrame>
+        
+        
+        <!-- Eksempel på case nr 6:
+            
+           2 Voksen
+           1 barn
+           1 student
+           
+           Endte opp som 4 enkeltbilletter / CPP
+           
+            -->
+        <SalesTransactionFrame id="ENT:SalesTransactionFrame:Oyafestivalen" version="1">
+            
+            
+            <fareContracts>
+                <FareContract id="ENT:FareContract:14" version="1">
+                    
+                    <Name>2 voksne, 1 barn, 1 student, enkeltreise</Name>
+                    <StartDate>2018-09-06T01:07:00</StartDate>
+                    <EndDate>2018-09-07T01:07:00</EndDate>
+                    <fareContractEntries>
+                        
+                        <SalesTransaction version="1" id="ENT:SalesTransaction:15">
+                            <Name>Kollektiv + dagspass lørdag</Name>
+                            <Date>2018-09-06T01:07:00</Date>
+                            <!-- 100+100+84+60 -->
+                            <Amount>799</Amount>
+                            <Currency>NOK</Currency>
+                            <PaymentMethod>debitCard</PaymentMethod>
+                            <customerPurchasePackages>
+                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:Oyafestivalen" version="1"/> <!-- For voksen 1 -->
+                            </customerPurchasePackages>
+                        </SalesTransaction>
+                    </fareContractEntries>
+                    
+                </FareContract>
+            </fareContracts>
+            
+            <customerPurchasePackages>
+                <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:Oyafestivalen" version="1">
+                    <SalesOfferPackageRef ref="ENT:SalesOfferPackage:Oyafestivalen" version="1"/>
+                    <customerPurchasePackageElements>
+                        <CustomerPurchasePackageElement id="ENT:CustomerPurchasePackageElement:Oyafestivalen" version="1" order="1">
+                            <SalesOfferPackageElementRef ref="ENT:SalesOfferPackageElement:Oyafestivalen" version="1"/>
+                            
+                            <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:CustomerPurchasePackageElementAccess:8" version="1" created="2019-01-01T00:00:00">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <MarkedAs>activated</MarkedAs>
+                                </CustomerPurchasePackageElementAccess>
+                            </elementAccesses>
+                            
+                            <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment version="1" id="ENT:CustomerPurchaseParameterAssignment:18" order="1">
+                                    <ValidableElementRef ref="NSB:ValidableElement:SingleTrip" version="1"/>
+                                    <PreassignedFareProductRef ref="NSB:PreassignedFareProduct:SingleTrip" version="1"/>
+                                    <DistanceMatrixElementRef ref="NSB:DistanceMatrixElement:DrammenOslo"/>
+                                    <LimitationGroupingType>AND</LimitationGroupingType>
+                                    <limitations>
+                                        <UsageValidityPeriod id="ENT:UsageValidityPeriod:8" version="12">
+                                            <StartDate>2018-09-04</StartDate>
+                                            <StartTime>12:00:00</StartTime>
+                                            <EndDate>2018-09-04</EndDate>
+                                            <EndTime>16:00:00</EndTime>
+                                        </UsageValidityPeriod>
+                                        <!-- Voksen kan brukes av alle? -->
+                                    </limitations>
+                                    <validityParameters>
+                                        <ServiceJourneyRef ref="NSB:ServiceJourney:ArendalOslo" version="1"/>
+                                    </validityParameters>
+                                </CustomerPurchaseParameterAssignment>
+                                
+                            </validityParameterAssignments>
+                        </CustomerPurchasePackageElement>
+                        
+                    </customerPurchasePackageElements>
+                    <prices>
+                        <CustomerPurchasePackagePrice id="ENT:CustomerPurchasePackagePrice:1">
+                            <Amount>100</Amount> <!-- pris pr pakke, i ordre er 2 av denne -->
+                            <Currency>NOK</Currency>
+                        </CustomerPurchasePackagePrice>
+                    </prices>
+                </CustomerPurchasePackage>
+            </customerPurchasePackages>
+            
+            
+        </SalesTransactionFrame>
+        
+        
+    </dataObjects>
+</PublicationDelivery>
