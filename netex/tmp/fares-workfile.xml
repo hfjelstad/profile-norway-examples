@@ -194,14 +194,30 @@
 							<RefundType>delay</RefundType>
 							<PaymentMethod>cash</PaymentMethod>
 						</Refunding>
-						
-						
-						<Reserving id="res-1" version="1">
+
+
+						<Reserving id="reserving-1" version="1">
 							<ReservingRequirements>noGroupsAllowed noReservationsPossible</ReservingRequirements>
 							<MaximumNumberToReserve>2</MaximumNumberToReserve>
 							<ReservationChargeType>fee</ReservationChargeType>
 							<FeeBasis>perOffer</FeeBasis>
 							<BookingArrangements></BookingArrangements>
+						</Reserving>
+						
+						
+						<Reserving id="ENT:Reserving:1" version="1">
+							<ReservingRequirements>
+								noReservationsPossible 
+								reservationsPossible 
+								reservationsPossibleForCertainClasses 
+								reservationsCompulsory 
+								reservationsCompulsoryForGroups
+								reservationsSupplementCharged
+								<!-- flere alternativer finnes ... -->
+							</ReservingRequirements>
+							<ReservationChargeType>fee</ReservationChargeType>
+							<FeeBasis>perOffer</FeeBasis> <!-- alternative: perPerson -->
+							<SeatAllocationMethod>autoAssigned</SeatAllocationMethod> <!-- alternatives: openSeating, seatMap -->  
 						</Reserving>
 						
 						
@@ -382,7 +398,7 @@
 					</typesOfTravelDocuments>	
 
 
-					<SalesOfferPackages>
+					<salesOfferPackages>
 						<SalesOfferPackage id="sop-1" version="1">
 							<validityParameterAssignments>
 								<GenericParameterAssignment id="gpa-3" version="1" order="1">
@@ -394,35 +410,24 @@
 									<Name>test</Name>
 								</DistributionAssignment>
 							</distributionAssignments>
-							<SalesOfferPackageSubstitutions>
-								<SalesOfferPackageSubstitution>
-									<WithSalesOfferPackageRef ref="sop-2" version="1"/>
-								</SalesOfferPackageSubstitution>								
-							</SalesOfferPackageSubstitutions>
+							<salesOfferPackageSubstitutions>
+								<SalesOfferPackageSubstitution id="sops-1" version="1" order="1">
+									<WithSalesOfferPackageRef ref="wsop-1"/>
+								</SalesOfferPackageSubstitution>
+							</salesOfferPackageSubstitutions>
 						</SalesOfferPackage>
-					</SalesOfferPackages>
-						
-						
-					<SalesOfferPackageElements>
-						<SalesOfferPackageElement id="sope-1" version="1">
+					</salesOfferPackages>
+					
+					
+					<salesOfferPackageElements>
+						<SalesOfferPackageElement id="sope-1" version="1" order="1">
 							<prices>
-								<SalesOfferPackagePriceRef ref=""></SalesOfferPackagePriceRef>
+								<SalesOfferPackagePriceRef ref="ref"/>
 							</prices>
 						</SalesOfferPackageElement>
-					</SalesOfferPackageElements>
+					</salesOfferPackageElements>
 					
 					
-					<!--
-					<SalesOfferPackageSubstitutions>
-						<SalesOfferPackageSubstitution>
-							<SalesOfferPackageRef ref="sop-1" version="1"/>
-							<WithSalesOfferPackageRef ref="sop-2" version="1"></WithSalesOfferPackageRef>
-						</SalesOfferPackageSubstitution>
-					</SalesOfferPackageSubstitutions>
-					-->
-						
-					
-						
 					<groupsOfSalesOfferPackages>
 						<GroupOfSalesOfferPackages id="gsop-1" version="1">
 							<priceGroups>
@@ -439,16 +444,25 @@
 								<StandardFareTableRef ref=""></StandardFareTableRef>
 								<FareTableRef ref=""></FareTableRef>
 							</fareTables>
-							<SalesOfferPackageElements>
-								<SalesOfferPackageElement>
-									
-								</SalesOfferPackageElement>
-							</SalesOfferPackageElements>
+							<salesOfferPackageElements>
+								<SalesOfferPackageElementRef ref="test"/>
+							</salesOfferPackageElements>
 							<members>
 								<SalesOfferPackageRef ref=""></SalesOfferPackageRef>
 							</members>
 						</GroupOfSalesOfferPackages>
 					</groupsOfSalesOfferPackages>
+					
+
+					
+					<!--
+					<SalesOfferPackageSubstitutions>
+						<SalesOfferPackageSubstitution>
+							<SalesOfferPackageRef ref="sop-1" version="1"/>
+							<WithSalesOfferPackageRef ref="sop-2" version="1"></WithSalesOfferPackageRef>
+						</SalesOfferPackageSubstitution>
+					</SalesOfferPackageSubstitutions>
+					-->
 					
 				</FareFrame>
 				
