@@ -24,20 +24,20 @@
   <dataObjects>
 
 
-    <VehicleScheduleFrame created="2019-08-17T00:50:24.905" version="1" id="NSB:VehicleScheduleFrame:4145997"> 
+    <VehicleScheduleFrame created="2019-08-17T00:50:24.905" version="0" id="NSB:VehicleScheduleFrame:4145997"> 
     </VehicleScheduleFrame>
 
 
-    <GeneralFrame created="2019-08-17T00:50:24.905" version="1" id="NSB:GeneralFrame:4145997">
+    <GeneralFrame created="2019-08-17T00:50:24.905" version="0" id="NSB:GeneralFrame:4145997">
     </GeneralFrame>
 
 
-    <ResourceFrame created="2019-08-17T00:50:24.905" version="1" id="NSB:ResourceFrame:4145997"> 
+    <ResourceFrame created="2019-08-17T00:50:24.905" version="0" id="NSB:ResourceFrame:4145997"> 
       <typesOfValue>
-        <TypeOfEquipment version="1" id="NTO:TypeOfEquipment:PremiumSeating">
+        <TypeOfEquipment version="0" id="NTO:TypeOfEquipment:PremiumSeating">
           <PrivateCode>PremiumSeating</PrivateCode>
         </TypeOfEquipment>
-        <TypeOfEquipment version="1" id="NTO:TypeOfEquipment:RegularSeating">
+        <TypeOfEquipment version="0" id="NTO:TypeOfEquipment:RegularSeating">
           <PrivateCode>RegularSeating</PrivateCode>
         </TypeOfEquipment>
       </typesOfValue>
@@ -45,39 +45,39 @@
   
       <equipments>
         <!-- pervertering av firergruppe sete, premium klasse (Komfort?), v.h.a. derivedFromObjectRef -->
-        <SeatingEquipment version="1" id="NTO:SeatingEquipment:Group1">
-          <TypeOfEquipmentRef version="1" ref="NTO:TypeOfEquipment:PremiumSeating"/>
+        <SeatingEquipment version="0" id="NTO:SeatingEquipment:Group1">
+          <TypeOfEquipmentRef version="0" ref="NTO:TypeOfEquipment:PremiumSeating"/>
           <Seats>4</Seats>
         </SeatingEquipment>
         <!-- gruppe -->
-        <SeatingEquipment version="1" id="NTO:SeatingEquipment:1" derivedFromObjectRef="NTO:SeatingEquipment:Group1">
+        <SeatingEquipment version="0" id="NTO:SeatingEquipment:1" derivedFromObjectRef="NTO:SeatingEquipment:Group1">
           <PublicCode>Sete 1</PublicCode>
         </SeatingEquipment>
-        <SeatingEquipment version="1" id="NTO:SeatingEquipment:2" derivedFromObjectRef="NTO:SeatingEquipment:Group1">
+        <SeatingEquipment version="0" id="NTO:SeatingEquipment:2" derivedFromObjectRef="NTO:SeatingEquipment:Group1">
           <PublicCode>Sete 2</PublicCode>
         </SeatingEquipment>
-        <SeatingEquipment version="1" id="NTO:SeatingEquipment:3" derivedFromObjectRef="NTO:SeatingEquipment:Group1">
+        <SeatingEquipment version="0" id="NTO:SeatingEquipment:3" derivedFromObjectRef="NTO:SeatingEquipment:Group1">
           <PublicCode>Sete 3</PublicCode>
         </SeatingEquipment>
-        <SeatingEquipment version="1" id="NTO:SeatingEquipment:4" derivedFromObjectRef="NTO:SeatingEquipment:Group1">
+        <SeatingEquipment version="0" id="NTO:SeatingEquipment:4" derivedFromObjectRef="NTO:SeatingEquipment:Group1">
           <PublicCode>Sete 4</PublicCode>
         </SeatingEquipment>
         
         <!-- ikke firergruppe, standard klasse -->
-        <SeatingEquipment version="1" id="NTO:SeatingEquipment:5">
+        <SeatingEquipment version="0" id="NTO:SeatingEquipment:5">
           <PublicCode>Sete 5</PublicCode>
-          <TypeOfEquipmentRef version="1" ref="NTO:TypeOfEquipment:RegularSeating"/>
+          <TypeOfEquipmentRef version="0" ref="NTO:TypeOfEquipment:RegularSeating"/>
         </SeatingEquipment>
-        <SeatingEquipment version="1" id="NTO:SeatingEquipment:6">
+        <SeatingEquipment version="0" id="NTO:SeatingEquipment:6">
           <PublicCode>Sete 6</PublicCode>
-          <TypeOfEquipmentRef version="1" ref="NTO:TypeOfEquipment:RegularSeating"/>
+          <TypeOfEquipmentRef version="0" ref="NTO:TypeOfEquipment:RegularSeating"/>
         </SeatingEquipment>
       </equipments>
       
       
       <vehicleTypes>
         <!-- Generic VehicleType -->
-        <VehicleType version="1" id="NTO:VehicleType:Buss">
+        <VehicleType version="0" id="NTO:VehicleType:Buss">
           <capacities>
             <PassengerCapacity id="NTO:PassengerCapacity:Premium">
               <FareClass>premiumClass</FareClass>
@@ -91,10 +91,10 @@
         </VehicleType>
 
         <!-- Specific VehicleType: Train -->
-        <Train version="1" id="NTO:Train:Flirt">
+        <Train version="0" id="NTO:Train:Flirt">
           <!-- consolidated capasity -->
           <capacities>
-            <PassengerCapacityRef version="1" ref="NTO:PassengerCapacity:Premium"/>
+            <PassengerCapacityRef version="0" ref="NTO:PassengerCapacity:Premium"/>
             <PassengerCapacity id="NTO:PassengerCapacity:TrainStandard">
               <FareClass>standardClass</FareClass>
               <SeatingCapacity>250</SeatingCapacity>
@@ -102,8 +102,8 @@
           </capacities>
           
           <components>
-            <TrainComponent version="1" id="NTO:TrainComponent:1" order="1">
-              <TrainElementRef version="1" ref="NTO:TrainElement:1"/>
+            <TrainComponent version="0" id="NTO:TrainComponent:1" order="1">
+              <TrainElementRef version="0" ref="NTO:TrainElement:1"/>
             </TrainComponent>
           </components>
         </Train>
@@ -111,7 +111,7 @@
       
       
       <vehicles>
-        <TrainElement version="1" id="NTO:TrainElement:1">
+        <TrainElement version="0" id="NTO:TrainElement:1">
           <FareClasses>premiumClass standardClass</FareClasses>
           <!-- capasity per element-->
           <capacities>
@@ -127,28 +127,28 @@
           
           <equipments>
             <!-- gruppe -->
-            <SeatingEquipmentRef version="1" ref="NTO:SeatingEquipment:Group1"/>
+            <SeatingEquipmentRef version="0" ref="NTO:SeatingEquipment:Group1"/>
             <!-- vanlige seter -->
-            <SeatingEquipmentRef version="1" ref="NTO:SeatingEquipment:5"/>
-            <SeatingEquipmentRef version="1" ref="NTO:SeatingEquipment:6"/>
+            <SeatingEquipmentRef version="0" ref="NTO:SeatingEquipment:5"/>
+            <SeatingEquipmentRef version="0" ref="NTO:SeatingEquipment:6"/>
           </equipments>
           
         </TrainElement>
         
         
-        <Vehicle version="1" id="NTO:Vehicle:Flirt">
+        <Vehicle version="0" id="NTO:Vehicle:Flirt">
           <OperatorRef ref="XXX:Operator:XXX"/>
 
-          <VehicleTypeRef version="1" ref="NTO:VehicleType:Buss"/>
+          <VehicleTypeRef version="0" ref="NTO:VehicleType:Buss"/>
         </Vehicle>
       </vehicles>
       
     </ResourceFrame>
 
 
-    <CompositeFrame created="2019-08-17T00:50:24.905" version="1" id="NSB:CompositeFrame:4145997">
+    <CompositeFrame created="2019-08-17T00:50:24.905" version="0" id="NSB:CompositeFrame:4145997">
       <validityConditions>
-        <AvailabilityCondition version="1" id="NSB:AvailabilityCondition:4144408">
+        <AvailabilityCondition version="0" id="NSB:AvailabilityCondition:4144408">
           <FromDate>2019-08-17T00:00:00</FromDate>
           <ToDate>2020-08-18T00:00:00</ToDate>
         </AvailabilityCondition>
@@ -173,38 +173,65 @@
       
       
       <frames>
-        <SiteFrame version="1" id="ENT:SiteFrame:1">
+        <SiteFrame version="0" id="ENT:SiteFrame:1">
           <stopPlaces>
-            <StopPlace version="1" id="NRI:StopPlace:1">
+            <StopPlace version="0" id="NRI:StopPlace:1">
               <Name>Demo</Name>
               <quays>
-                <Quay version="1" id="NSR:Quay:1"/>
+                <Quay version="0" id="NSR:Quay:1"/>
               </quays>
             </StopPlace>
           </stopPlaces>
         </SiteFrame>
         
         
-        <ServiceFrame version="1" id="NSB:ServiceFrame:4145998">
+        <ServiceCalendarFrame version="0" id="NSB:ServiceCalendarFrame:01">
+          <dayTypes>
+            <DayType version="0" id="NSB:DayType:2020-01-02"/>
+            <DayType version="0" id="NSB:DayType:2020-01-03"/>
+          </dayTypes>  
+          <operatingDays>
+            <OperatingDay id="NSB:OperatingDay:2020-01-02" version="0">
+              <CalendarDate>2020-01-02</CalendarDate>
+            </OperatingDay>
+            <OperatingDay id="NSB:OperatingDay:2020-01-03" version="0">
+              <CalendarDate>2020-01-03</CalendarDate>
+            </OperatingDay>
+          </operatingDays>
+          <dayTypeAssignments>
+            <DayTypeAssignment id="RUT:DayTypeAssignment:2020-01-02" version="0" order="1">
+              <Date>2020-01-02</Date>
+              <DayTypeRef ref="NSB:DayType:2020-01-03" version="0"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="RUT:DayTypeAssignment:2020-01-03" version="0" order="2">
+              <Date>2020-01-03</Date>
+              <DayTypeRef ref="NSB:DayType:2020-01-03" version="0"/>
+              <isAvailable>false</isAvailable>
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
+        
+        
+        <ServiceFrame version="0" id="NSB:ServiceFrame:4145998">
           <routePoints>
-            <RoutePoint version="1" id="ENT:RoutePoint:1">
+            <RoutePoint version="0" id="ENT:RoutePoint:1">
               <projections>
-                <PointProjection version="1" id="ENT:PointProjection:1">
-                  <ProjectToPointRef version="1" ref="ENT:ScheduledStopPoint:1"/>
+                <PointProjection version="0" id="ENT:PointProjection:1">
+                  <ProjectToPointRef version="0" ref="ENT:ScheduledStopPoint:1"/>
                 </PointProjection>
               </projections>
             </RoutePoint>
-            <RoutePoint version="1" id="ENT:RoutePoint:2">
+            <RoutePoint version="0" id="ENT:RoutePoint:2">
               <projections>
-                <PointProjection version="1" id="ENT:PointProjection:2">
-                  <ProjectToPointRef version="1" ref="ENT:ScheduledStopPoint:1"/>
+                <PointProjection version="0" id="ENT:PointProjection:2">
+                  <ProjectToPointRef version="0" ref="ENT:ScheduledStopPoint:1"/>
                 </PointProjection>
               </projections>
             </RoutePoint>
           </routePoints>
           
           <routeLinks>
-            <RouteLink version="1" id="ENT:RouteLink:1">
+            <RouteLink version="0" id="ENT:RouteLink:1">
               <Distance>100</Distance>
               <FromPointRef ref="ENT:RoutePoint:1"/>
               <ToPointRef ref="ENT:RoutePoint:2"/>
@@ -218,40 +245,39 @@
               <ShortName>Oslo S - Drammen stasjon</ShortName>
               <LineRef ref="NSB:Line:41" version="0"/>
               <pointsInSequence>
-                <PointOnRoute order="1" version="1" id="NSB:PointOnRoute:4144409">
+                <PointOnRoute order="1" version="0" id="NSB:PointOnRoute:4144409">
                   <RoutePointRef ref="NSB:RoutePoint:760010003"/>
                 </PointOnRoute>
-                <PointOnRoute order="2" version="1" id="NSB:PointOnRoute:4144410">
+                <PointOnRoute order="2" version="0" id="NSB:PointOnRoute:4144410">
                   <RoutePointRef ref="NSB:RoutePoint:760140801"/>
                 </PointOnRoute>
-                <PointOnRoute order="3" version="1" id="NSB:PointOnRoute:4144411">
+                <PointOnRoute order="3" version="0" id="NSB:PointOnRoute:4144411">
                   <RoutePointRef ref="NSB:RoutePoint:760141301"/>
                 </PointOnRoute>
-                <PointOnRoute order="4" version="1" id="NSB:PointOnRoute:4144412">
+                <PointOnRoute order="4" version="0" id="NSB:PointOnRoute:4144412">
                   <RoutePointRef ref="NSB:RoutePoint:760142105"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
 
-            <Route version="1" id="ENT:Route:Demo">
+            <Route version="0" id="ENT:Route:Demo">
               <Name>Demo</Name>
               <Description>description</Description>
               <PrivateCode>privatecode</PrivateCode>
               <LineRef ref="NSB:Line:41" version="0"/>
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
-                <PointOnRoute version="1" id="ENT:PointOnRoute:1" order="1">
-                  <RoutePointRef version="1" ref="ENT:RoutePoint:1"/>
+                <PointOnRoute version="0" id="ENT:PointOnRoute:1" order="1">
+                  <RoutePointRef version="0" ref="ENT:RoutePoint:1"/>
                 </PointOnRoute>
-                <PointOnRoute version="1" id="ENT:PointOnRoute:2" order="2">
-                  <RoutePointRef version="1" ref="ENT:RoutePoint:2"/>
+                <PointOnRoute version="0" id="ENT:PointOnRoute:2" order="2">
+                  <RoutePointRef version="0" ref="ENT:RoutePoint:2"/>
                 </PointOnRoute>
               </pointsInSequence>
-            </Route>
-            
-            
-            
+            </Route>  
           </routes>
+          
+          
           <lines>
             <Line version="0" id="NSB:Line:41">
               <Name>Bergensbanen</Name>
@@ -266,21 +292,21 @@
           </lines>
           
           <scheduledStopPoints>
-            <ScheduledStopPoint version="1" id="ENT:ScheduledStopPoint:1">
+            <ScheduledStopPoint version="0" id="ENT:ScheduledStopPoint:1">
             </ScheduledStopPoint>
-            <ScheduledStopPoint version="1" id="ENT:ScheduledStopPoint:2"/>
+            <ScheduledStopPoint version="0" id="ENT:ScheduledStopPoint:2"/>
           </scheduledStopPoints>
           
           <stopAssignments>
-            <PassengerStopAssignment version="1" id="ENT:PassengerStopAssignment:1" order="1">
-              <ScheduledStopPointRef version="1" ref="ENT:ScheduledStopPoint:1"/>
-              <StopPlaceRef version="1" ref="NRI:StopPlace:1"/>
-              <QuayRef version="1" ref="NSR:Quay:1"/>
+            <PassengerStopAssignment version="0" id="ENT:PassengerStopAssignment:1" order="1">
+              <ScheduledStopPointRef version="0" ref="ENT:ScheduledStopPoint:1"/>
+              <StopPlaceRef version="0" ref="NRI:StopPlace:1"/>
+              <QuayRef version="0" ref="NSR:Quay:1"/>
             </PassengerStopAssignment>
-            <PassengerStopAssignment version="1" id="ENT:PassengerStopAssignment:2" order="2">
-              <ScheduledStopPointRef version="1" ref="ENT:ScheduledStopPoint:2"/>
-              <StopPlaceRef version="1" ref="NRI:StopPlace:1"/>
-              <QuayRef version="1" ref="NSR:Quay:1"/>
+            <PassengerStopAssignment version="0" id="ENT:PassengerStopAssignment:2" order="2">
+              <ScheduledStopPointRef version="0" ref="ENT:ScheduledStopPoint:2"/>
+              <StopPlaceRef version="0" ref="NRI:StopPlace:1"/>
+              <QuayRef version="0" ref="NSR:Quay:1"/>
             </PassengerStopAssignment>
           </stopAssignments>
           
@@ -323,15 +349,15 @@
                 </StopPointInJourneyPattern>
               </pointsInSequence>
               <linksInSequence>
-                <ServiceLinkInJourneyPattern order="1" version="1"
+                <ServiceLinkInJourneyPattern order="1" version="0"
                   id="NSB:ServiceLinkInJourneyPattern:4144971">
                   <ServiceLinkRef ref="NSB:ServiceLink:b50af5c2-867c-4d3f-a62b-69305d79088c"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern order="2" version="1"
+                <ServiceLinkInJourneyPattern order="2" version="0"
                   id="NSB:ServiceLinkInJourneyPattern:4144973">
                   <ServiceLinkRef ref="NSB:ServiceLink:29e6ec71-da1c-4414-9e7d-b8fde38c552d"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern order="3" version="1"
+                <ServiceLinkInJourneyPattern order="3" version="0"
                   id="NSB:ServiceLinkInJourneyPattern:4144975">
                   <ServiceLinkRef ref="NSB:ServiceLink:07f4d8af-86a3-4f24-935c-cb648e9f1b30"/>
                 </ServiceLinkInJourneyPattern>
@@ -342,9 +368,12 @@
         
         
         
-        <TimetableFrame version="1" id="NSB:TimetableFrame:4145999">
+        <TimetableFrame version="0" id="NSB:TimetableFrame:4145999">
           <vehicleJourneys>
-            <VehicleJourney version="0" id="NSB:VehicleJourney:1-3922-61"> </VehicleJourney>
+            <VehicleJourney version="0" id="NSB:VehicleJourney:1-3922-61">
+              <!-- placeholder -->
+            </VehicleJourney>
+            
             <ServiceJourney version="0" id="NSB:ServiceJourney:1-3922-61">
               <keyList>
                 <KeyValue>
@@ -382,7 +411,7 @@
               <!-- UTGÅR -->
 
               <!-- trainNumbers>
-                <TrainNumberRef ref="VY:TrainNumber:1" version="0"/>
+                <TrainNumberRef ref="NSB:TrainNumber:1" version="0"/>
               </trainNumbers -->
 
               <passingTimes>
@@ -417,49 +446,66 @@
             <!-- === DATED VEHICLE JOURNEY (see Part 2 p. 174-179, "﻿7.3.14.2 DATED JOURNEY") === -->
 
             <!-- Incorrectly implemented in the XSD
-            <DatedServiceJourney version="1" id="ENT:DatedServiceJourney:1" derivedFromObjectRef="test">
+            <DatedServiceJourney version="0" id="ENT:DatedServiceJourney:1" derivedFromObjectRef="test">
             </DatedServiceJourney>
             -->
 
 
-            <!-- 1) dated vehicle journey per operating day of ServiceJourney -->
-            <DatedVehicleJourney>
-              <dayTypes>
-                <DayTypeRef ref="NSB:DayType:all-days"/>
-              </dayTypes>
-              <ServiceJourneyRef ref="NSB:ServiceJourney:1-3922-61"/>
-
+            <!--
+              Alternatives:
+              1) dated vehicle journey per operating day of ServiceJourney
+              2) overridden ServiceJourney due to alternative transport
+            -->
+            <DatedVehicleJourney version="0" id="NSB:DatedVehicleJourney:1-3922-61-2020-01-02">
+              <PrivateCode>1-3922-61</PrivateCode>
+              <ServiceJourneyRef ref="NSB:ServiceJourney:1-3922-61" version="0"/>
               <!-- OperatingDayRef is mandatory -->
-              <OperatingDayRef ref="not-utilized"/>
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-02" version="0"/>
             </DatedVehicleJourney>
 
 
-            <!-- 2) overridden ServiceJourney due to alternative transport -->
-            <DatedVehicleJourney>
-
+            <DatedVehicleJourney version="0" id="NSB:DatedVehicleJourney:1-3922-61-2020-01-02">
+              <PrivateCode>1-3922-61-NOT-RUNNING</PrivateCode>
               <dayTypes>
-                <DayTypeRef ref="NSB:DayType:all-days"/>
+                <DayTypeRef ref="NSB:DayType:2020-01-03" version="0"/>
               </dayTypes>
-
-              <ServiceJourneyRef ref="NSB:ServiceJourney:1-3922-61"/>
-
-
+              <ServiceJourneyRef ref="NSB:ServiceJourney:1-3922-61" version="0"/>
               <!-- OperatingDayRef is mandatory -->
-              <OperatingDayRef ref="not-utilized"/>
-
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-03" version="0"/>
             </DatedVehicleJourney>
-
 
           </vehicleJourneys>
 
-          <!-- Lagt til tognummer -->
-          <!-- UTGÅR -->
-          <!-- trainNumbers>
-            <TrainNumber id="VY:TrainNumber:1" version="0">
-              <ForAdvertisement>61</ForAdvertisement>
-              <ForProduction>61001</ForProduction>
+
+          
+          
+          <groupsOfServices>
+            <GroupOfServices id="NSB:GroupOfServices:1" version="0">
+              <PrivateCode>lalala</PrivateCode>
+              <members>
+                <GroupOfServicesMember id="NSB:GroupOfServicesMember:1" version="0" order="1">
+                  <ServiceJourneyRef ref="NSB:ServiceJourney:1-3922-61" version="0"/>
+                </GroupOfServicesMember>
+                <GroupOfServicesMember id="NSB:GroupOfServicesMember:2" version="0" order="2">
+                  <DatedVehicleJourneyRef ref="NSB:DatedVehicleJourney:1-3922-61-DATED" version="0"/>
+                </GroupOfServicesMember>
+                <!-- IKKE ØNSKELIG MED TrainNumber -->
+                <GroupOfServicesMember id="NSB:GroupOfServicesMember:3" version="0" order="3">
+                  <TrainNumberRef ref="NSB:TrainNumber:1-3922" version="0"/>
+                </GroupOfServicesMember>
+              </members>
+            </GroupOfServices>
+          </groupsOfServices>
+          
+          <!-- Lagt til tognummer som eksempel (UTGÅR, IKKE ØNSKELIG) -->
+          <trainNumbers>
+            <TrainNumber id="NSB:TrainNumber:1-3922" version="0">
+              <ForAdvertisement>3922</ForAdvertisement>
+              <ForProduction>3922XYZ</ForProduction>
             </TrainNumber>
-          </trainNumbers -->
+          </trainNumbers>
+          
+          
         </TimetableFrame>
       </frames>
     </CompositeFrame>
