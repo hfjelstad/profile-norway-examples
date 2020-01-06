@@ -279,7 +279,7 @@
             </JourneyPattern>
             
             <JourneyPattern version="0" id="NSB:JourneyPattern:2">
-              <Name>Oslo S - Asker (replacement)</Name>
+              <Name>Oslo S - Sandvika, partially cancelled (no service from Sandvika to Drammen)</Name>
               <RouteRef ref="NSB:Route:1" version="0"/>
               <pointsInSequence>
                 <StopPointInJourneyPattern order="1" version="0" id="NSB:StopPointInJourneyPattern:2-1">
@@ -288,33 +288,63 @@
                   <DestinationDisplayRef ref="NSB:DestinationDisplay:DrammenST-external"/>
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="2" version="0" id="NSB:StopPointInJourneyPattern:2-2">
-                  <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:3" version="0"/>
+                  <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:2" version="0"/>
                 </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern order="3" version="0" id="NSB:StopPointInJourneyPattern:2-3">
-                  <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:3" version="0"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern order="4" version="0" id="NSB:StopPointInJourneyPattern:2-4">
                   <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:3" version="0"/>
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
             </JourneyPattern>
-            
+
             <JourneyPattern version="0" id="NSB:JourneyPattern:3">
-              <Name>Asker - Drammen st (replacement)</Name>
+              <Name>Sandvika - Asker (replacement)</Name>
               <RouteRef ref="NSB:Route:1" version="0"/>
               <pointsInSequence>
-                <StopPointInJourneyPattern order="1" version="0" id="NSB:StopPointInJourneyPattern:3-1">
-                  <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:1" version="0"/>
+                <StopPointInJourneyPattern order="1" version="0" id="NSB:StopPointInJourneyPattern:3-3">
+                  <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:3" version="0"/>
                   <ForAlighting>false</ForAlighting>
-                  <DestinationDisplayRef ref="NSB:DestinationDisplay:32"/>
+                  <DestinationDisplayRef ref="NSB:DestinationDisplay:DrammenST-external"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern order="2" version="0" id="NSB:StopPointInJourneyPattern:3-2">
+                <StopPointInJourneyPattern order="2" version="0" id="NSB:StopPointInJourneyPattern:3-4">
                   <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:4" version="0"/>
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
             </JourneyPattern>
+
+            <JourneyPattern version="0" id="NSB:JourneyPattern:4">
+              <Name>Asker - Drammen st (replacement)</Name>
+              <RouteRef ref="NSB:Route:1" version="0"/>
+              <pointsInSequence>
+                <StopPointInJourneyPattern order="1" version="0" id="NSB:StopPointInJourneyPattern:4-4">
+                  <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:4" version="0"/>
+                  <ForAlighting>false</ForAlighting>
+                  <DestinationDisplayRef ref="NSB:DestinationDisplay:DrammenST-external"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern order="2" version="0" id="NSB:StopPointInJourneyPattern:4-5">
+                  <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:5" version="0"/>
+                  <ForBoarding>false</ForBoarding>
+                </StopPointInJourneyPattern>
+              </pointsInSequence>
+            </JourneyPattern>
+            
+            <JourneyPattern version="0" id="NSB:JourneyPattern:5">
+              <Name>Sandvika - Drammen st (direct bus replacement)</Name>
+              <RouteRef ref="NSB:Route:1" version="0"/>
+              <pointsInSequence>
+                <StopPointInJourneyPattern order="1" version="0" id="NSB:StopPointInJourneyPattern:5-3">
+                  <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:4" version="0"/>
+                  <ForAlighting>false</ForAlighting>
+                  <DestinationDisplayRef ref="NSB:DestinationDisplay:DrammenST-external"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern order="2" version="0" id="NSB:StopPointInJourneyPattern:5-5">
+                  <ScheduledStopPointRef ref="NSB:ScheduledStopPoint:5" version="0"/>
+                  <ForBoarding>false</ForBoarding>
+                </StopPointInJourneyPattern>
+              </pointsInSequence>
+            </JourneyPattern>
+            
           </journeyPatterns>
         </ServiceFrame>
         
@@ -323,6 +353,12 @@
         <TimetableFrame version="0" id="NSB:TimetableFrame:1">
           <vehicleJourneys>
             <ServiceJourney id="NSB:ServiceJourney:41" version="0">
+              <keyList>
+                <KeyValue>
+                  <Key>OTN</Key>
+                  <Value>HB4596</Value>
+                </KeyValue>
+              </keyList>
               <PrivateCode>41</PrivateCode>
               <TransportMode>rail</TransportMode>
               <TransportSubmode>
@@ -332,82 +368,63 @@
               <passingTimes>
                 <TimetabledPassingTime>
                   <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:1" />
-                  <DepartureTime>07:45:00</DepartureTime>
+                  <DepartureTime>07:48:00</DepartureTime>
                 </TimetabledPassingTime>                
                 <TimetabledPassingTime>
                   <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:2" />
-                  <ArrivalTime>08:55:00</ArrivalTime>
-                  <DepartureTime>09:00:00</DepartureTime>
+                  <DepartureTime>07:50:00</DepartureTime>
                 </TimetabledPassingTime>
                 <TimetabledPassingTime>
                   <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:3" />
-                  <ArrivalTime>10:00:00</ArrivalTime>
+                  <ArrivalTime>08:00:00</ArrivalTime>
+                  <DepartureTime>08:04:00</DepartureTime>
+                </TimetabledPassingTime> 
+                <TimetabledPassingTime>
+                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:4" />
+                  <ArrivalTime>08:12:00</ArrivalTime>
+                  <DepartureTime>08:14:00</DepartureTime>
+                </TimetabledPassingTime>                 
+                <TimetabledPassingTime>
+                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:5" />
+                  <ArrivalTime>08:30:00</ArrivalTime>
                 </TimetabledPassingTime>           
               </passingTimes>
             </ServiceJourney>
             
-            
-            
-            <!-- START Normal service -->
-            <DatedServiceJourney version="0" id="NSB:DatedServiceJourney:41-2020-01-01" derivedFromObjectRef="NSB:ServiceJourney:41" derivedFromVersionRef="0">
-              <PrivateCode>41</PrivateCode>
-              <!-- JourneyPatternRef ref="NSB:JourneyPattern:1" version="0"/ REDUNDANT -->
-              <OperatingDayRef ref="NSB:OperatingDay:2020-01-01" version="0"/>
-            </DatedServiceJourney>
-            <!-- END Normal service -->
-            
-            <!-- START Cancelled service without replacement -->
-            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-2020-01-02" derivedFromObjectRef="NSB:ServiceJourney:41" derivedFromVersionRef="0">
-              <PrivateCode>41</PrivateCode>
-              <ServiceAlteration>cancellation</ServiceAlteration>
-              <!-- JourneyPatternRef ref="NSB:JourneyPattern:1" version="0"/ REDUNDANT -->
-              <OperatingDayRef ref="NSB:OperatingDay:2020-01-02" version="0"/>
-            </DatedServiceJourney>
-            <!-- END Cancelled service without replacement -->
-            
-            
-            
-            <!-- LITT UKLART HVA SOM VAR TANKEN HER, ER MODELLERT MED REPLACEMENT -->
-            
-            
-            <!-- START Partly cancelled service without replacement -->
-            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-2020-01-03" derivedFromObjectRef="NSB:ServiceJourney:41" derivedFromVersionRef="0">
-              <PrivateCode>41</PrivateCode>
-              <ServiceAlteration>replaced</ServiceAlteration>
-              <!-- JourneyPatternRef ref="NSB:JourneyPattern:1" version="0"/ REDUNDANT -->
-              <OperatingDayRef ref="NSB:OperatingDay:2020-01-03" version="0"/>
-            </DatedServiceJourney>
-            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-A-B-2020-01-03" derivedFromObjectRef="NSB:DatedServiceJourney:41-2020-01-03" derivedFromVersionRef="0">
-              <PrivateCode>41</PrivateCode>
-              <ServiceAlteration>extraJourney</ServiceAlteration>
-              <JourneyPatternRef ref="NSB:JourneyPattern:2" version="0"/>
-              <OperatingDayRef ref="NSB:OperatingDay:2020-01-03" version="0"/>
-            </DatedServiceJourney>
-            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-B-C-2020-01-03" derivedFromObjectRef="NSB:DatedServiceJourney:41-2020-01-03" derivedFromVersionRef="0">
-              <PrivateCode>41</PrivateCode>
-              <ServiceAlteration>extraJourney</ServiceAlteration>
-              <JourneyPatternRef ref="NSB:JourneyPattern:3" version="0"/>
-              <OperatingDayRef ref="NSB:OperatingDay:2020-01-03" version="0"/>
-            </DatedServiceJourney>
-            <!-- END partially cancelled without replacement -->
-            
-            
-            
-            <!-- from here NOT completed according to new journey patterns! -->
-            
-            
-            <!-- START Cancelled service with replacement and adjusted passingTimes -->
-            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-2020-01-04" derivedFromObjectRef="NSB:ServiceJourney:41" derivedFromVersionRef="0">
-              <PrivateCode>41</PrivateCode>
-              <ServiceAlteration>replaced</ServiceAlteration>
-              <JourneyPatternRef ref="NSB:JourneyPattern:1" version="0" />
-              <OperatingDayRef ref="NSB:OperatingDay:2020-01-04" version="0"/>
-            </DatedServiceJourney>
-            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-A-C-2020-01-04" derivedFromObjectRef="NSB:DatedServiceJourney:41-2020-01-04" derivedFromVersionRef="0">
+            <ServiceJourney id="NSB:ServiceJourney:41-A" version="0">
               <keyList>
                 <KeyValue>
                   <Key>OTN</Key>
-                  <Value>HB4596</Value>
+                  <Value>HB4596-B</Value>
+                </KeyValue>
+              </keyList>
+              <PrivateCode>41</PrivateCode>
+              <TransportMode>rail</TransportMode>
+              <TransportSubmode>
+                <RailSubmode>regionalRail</RailSubmode>
+              </TransportSubmode>
+              <JourneyPatternRef ref="NSB:JourneyPattern:2" version="0" />
+              <passingTimes>
+                <TimetabledPassingTime>
+                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:1" />
+                  <DepartureTime>07:48:00</DepartureTime>
+                </TimetabledPassingTime>                
+                <TimetabledPassingTime>
+                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:2" />
+                  <DepartureTime>07:50:00</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime>
+                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:3" />
+                  <ArrivalTime>08:00:00</ArrivalTime>
+                </TimetabledPassingTime>               
+              </passingTimes>
+            </ServiceJourney>
+            
+            <ServiceJourney id="NSB:ServiceJourney:41-B" version="0">
+              <keyList>
+                <KeyValue>
+                  <Key>OTN</Key>
+                  <Value>HB4596-B</Value>
                 </KeyValue>
               </keyList>
               <PrivateCode>41</PrivateCode>
@@ -415,82 +432,164 @@
               <TransportSubmode>
                 <BusSubmode>railReplacementBus</BusSubmode>
               </TransportSubmode>
-              <ServiceAlteration>extraJourney</ServiceAlteration>
-              <!-- riktig journeypattern !? -->
-              <JourneyPatternRef ref="NSB:JourneyPattern:1" version="0" />
+              <JourneyPatternRef ref="NSB:JourneyPattern:2" version="0" />
               <passingTimes>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:2" />
-                  <ArrivalTime>07:45:00</ArrivalTime>
-                  <DepartureTime>09:00:00</DepartureTime>
-                </TimetabledPassingTime>
-                <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:2" />
-                  <ArrivalTime>08:55:00</ArrivalTime>
-                  <DepartureTime>09:00:00</DepartureTime>
-                </TimetabledPassingTime>
-                <TimetabledPassingTime>
                   <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:3" />
-                  <ArrivalTime>10:00:00</ArrivalTime>
-                </TimetabledPassingTime>
+                  <DepartureTime>08:14:00</DepartureTime>
+                </TimetabledPassingTime>  
+                <TimetabledPassingTime>
+                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:4" />
+                  <ArrivalTime>08:40:00</ArrivalTime>
+                </TimetabledPassingTime> 
               </passingTimes>
-              <OperatingDayRef ref="NSB:OperatingDay:2020-01-04" version="0"/>
-            </DatedServiceJourney>
-            <!-- END Cancelled service with replacement and adjusted passingTimes -->
+            </ServiceJourney>
             
-            <!-- START Partly cancelled service with replacement -->
-            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-2020-01-05">
-              <PrivateCode>41</PrivateCode>
-              <!--ServiceAlteration>replaced</ServiceAlteration-->
-              <JourneyPatternRef ref="NSB:JourneyPattern:1" version="0" />
-              <OperatingDayRef ref="NSB:OperatingDay:2020-01-05" version="0"/>
-            </DatedServiceJourney>
-            
-            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-A-C-2020-01-05">
+            <ServiceJourney id="NSB:ServiceJourney:41-C" version="0">
+              <keyList>
+                <KeyValue>
+                  <Key>OTN</Key>
+                  <Value>HB4596-C</Value>
+                </KeyValue>
+              </keyList>
               <PrivateCode>41</PrivateCode>
               <TransportMode>bus</TransportMode>
               <TransportSubmode>
                 <BusSubmode>railReplacementBus</BusSubmode>
               </TransportSubmode>
-              <!--ServiceAlteration>replaced</ServiceAlteration-->
-              <JourneyPatternRef ref="NSB:JourneyPattern:3" version="0" />
+              <JourneyPatternRef ref="NSB:JourneyPattern:2" version="0" />
               <passingTimes>
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:2" />
-                  <ArrivalTime>07:45:00</ArrivalTime>
-                  <DepartureTime>09:00:00</DepartureTime>
-                </TimetabledPassingTime>
+                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:4" />
+                  <DepartureTime>08:45:00</DepartureTime>
+                </TimetabledPassingTime>  
                 <TimetabledPassingTime>
-                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:2" />
-                  <ArrivalTime>08:55:00</ArrivalTime>
-                  <DepartureTime>09:00:00</DepartureTime>
-                </TimetabledPassingTime>
+                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:5" />
+                  <ArrivalTime>09:00:00</ArrivalTime>
+                </TimetabledPassingTime> 
+              </passingTimes>
+            </ServiceJourney>
+            
+            <ServiceJourney id="NSB:ServiceJourney:41-D" version="0">
+              <keyList>
+                <KeyValue>
+                  <Key>OTN</Key>
+                  <Value>HB4596-D</Value>
+                </KeyValue>
+              </keyList>
+              <PrivateCode>41</PrivateCode>
+              <TransportMode>bus</TransportMode>
+              <TransportSubmode>
+                <BusSubmode>railReplacementBus</BusSubmode>
+              </TransportSubmode>
+              <JourneyPatternRef ref="NSB:JourneyPattern:2" version="0" />
+              <passingTimes>
                 <TimetabledPassingTime>
                   <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:3" />
-                  <ArrivalTime>10:00:00</ArrivalTime>
-                </TimetabledPassingTime>
+                  <DepartureTime>08:14:00</DepartureTime>
+                </TimetabledPassingTime>  
+                <TimetabledPassingTime>
+                  <StopPointInJourneyPatternRef version="0" ref="NSB:StopPointInJourneyPattern:5" />
+                  <ArrivalTime>08:46:00</ArrivalTime>
+                </TimetabledPassingTime> 
               </passingTimes>
+            </ServiceJourney>
+            
+            
+            <!-- NB: *ExternalVehicleJourneyRef* ONLY USED DUE TO LACK OF ServiceJourneyTemplateRef --> 
+            
+            <!-- Normal service -->
+            <DatedServiceJourney version="0" id="NSB:DatedServiceJourney:41-2020-01-01">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41" />
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-01" version="0"/>
+            </DatedServiceJourney>
+            
+            <!-- Cancelled service without replacement -->
+            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-2020-01-02">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41" />
+              <ServiceAlteration>cancellation</ServiceAlteration>
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-02" version="0"/>
+            </DatedServiceJourney>
+            
+            <!-- Partially cancelled service (i.e. replaced with ServiceJourney with new JourneyPattern where Asker and Drammen is not serviced) -->
+            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-2020-01-03">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41" />
+              <ServiceAlteration>replaced</ServiceAlteration>
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-03" version="0"/>
+            </DatedServiceJourney>
+            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-A-2020-01-03" derivedFromObjectRef="NSB:DatedServiceJourney:41-2020-01-03" derivedFromVersionRef="0">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41-A" />
+              <ServiceAlteration>planned</ServiceAlteration>
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-03" version="0"/>
+            </DatedServiceJourney>
+            
+            <!-- Partially cancelled service including replacement bus, but only for Sandvika to Asker (i.e. Asker to Drammen is not serviced) -->
+            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-2020-01-04">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41" />
+              <ServiceAlteration>replaced</ServiceAlteration>
               <OperatingDayRef ref="NSB:OperatingDay:2020-01-04" version="0"/>
             </DatedServiceJourney>
-            <!-- END Cancelled service with replacement and adjusted passingTimes -->  
+            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-A-2020-01-04" derivedFromObjectRef="NSB:DatedServiceJourney:41-2020-01-04" derivedFromVersionRef="0">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41-A" />
+              <ServiceAlteration>planned</ServiceAlteration>
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-04" version="0"/>
+            </DatedServiceJourney>
+            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-B-2020-01-04" derivedFromObjectRef="NSB:DatedServiceJourney:41-2020-01-04" derivedFromVersionRef="0">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41-B" />
+              <ServiceAlteration>planned</ServiceAlteration>
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-04" version="0"/>
+            </DatedServiceJourney>
             
+            <!-- Partially cancelled service including replacement busses (B: Sandvika-Asker, C: Asker-Drammen, D: Sandvika-Drammen directly) -->
+            <!-- (B and C would normally be a combined JourneyPattern/ServiceJourney, but is split for examplification of combined replacement transport) -->
+            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-2020-01-05">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41" />
+              <ServiceAlteration>replaced</ServiceAlteration>
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-05" version="0"/>
+            </DatedServiceJourney>
+            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-A-2020-01-05" derivedFromObjectRef="NSB:DatedServiceJourney:41-2020-01-05" derivedFromVersionRef="0">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41-A" />
+              <ServiceAlteration>planned</ServiceAlteration>
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-05" version="0"/>
+            </DatedServiceJourney>
+            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-B-2020-01-05" derivedFromObjectRef="NSB:DatedServiceJourney:41-2020-01-05" derivedFromVersionRef="0">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41-B" />
+              <ServiceAlteration>planned</ServiceAlteration>
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-05" version="0"/>
+            </DatedServiceJourney>        
+            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-C-2020-01-05" derivedFromObjectRef="NSB:DatedServiceJourney:41-2020-01-05" derivedFromVersionRef="0">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41-C" />
+              <ServiceAlteration>planned</ServiceAlteration>
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-05" version="0"/>
+            </DatedServiceJourney> 
+            <DatedServiceJourney version="1" id="NSB:DatedServiceJourney:41-D-2020-01-05" derivedFromObjectRef="NSB:DatedServiceJourney:41-2020-01-05" derivedFromVersionRef="0">
+              <ExternalVehicleJourneyRef ref="NSB:ServiceJourney:41-D" />
+              <ServiceAlteration>extraJourney</ServiceAlteration>
+              <OperatingDayRef ref="NSB:OperatingDay:2020-01-05" version="0"/>
+            </DatedServiceJourney> 
           </vehicleJourneys>
-            
-            
             
             
           <!-- ALTERNATIVE: -->
           
           <groupsOfServices>
-            <GroupOfServices id="NSB:GroupOfServices:42" version="0">
-              <PrivateCode>TEST</PrivateCode>
+            <GroupOfServices id="NSB:GroupOfServices:41" version="0">
               <members>
-                <GroupOfServicesMember id="NSB:GroupOfServicesMember:42-ServiceJourney" version="0" order="1">
+                <GroupOfServicesMember id="NSB:GroupOfServicesMember:41" version="0" order="1">
                   <ServiceJourneyRef ref="NSB:ServiceJourney:41" version="0"/>
                 </GroupOfServicesMember>
-                <GroupOfServicesMember id="NSB:GroupOfServicesMember:42-2020-ADD-DATE-HERE" version="0" order="2">
-                  <DatedVehicleJourneyRef ref="NSB:DatedServiceJourney:1-3922-61-DATED" />
+                <GroupOfServicesMember id="NSB:GroupOfServicesMember:41-A" version="0" order="2">
+                  <DatedVehicleJourneyRef ref="NSB:DatedServiceJourney:41-A-2020-01-05" />
                 </GroupOfServicesMember>
+                <GroupOfServicesMember id="NSB:GroupOfServicesMember:41-B" version="0" order="2">
+                  <DatedVehicleJourneyRef ref="NSB:DatedServiceJourney:41-B-2020-01-05" />
+                </GroupOfServicesMember>
+                <GroupOfServicesMember id="NSB:GroupOfServicesMember:41-C" version="0" order="2">
+                  <DatedVehicleJourneyRef ref="NSB:DatedServiceJourney:41-C-2020-01-05" />
+                </GroupOfServicesMember>
+                <GroupOfServicesMember id="NSB:GroupOfServicesMember:41-D" version="0" order="2">
+                  <DatedVehicleJourneyRef ref="NSB:DatedServiceJourney:41-D-2020-01-05" />
+                </GroupOfServicesMember>                
                 <!-- deprecated -->
                 <!--
                 <GroupOfServicesMember id="NSB:GroupOfServicesMember:3" version="0" order="3">
