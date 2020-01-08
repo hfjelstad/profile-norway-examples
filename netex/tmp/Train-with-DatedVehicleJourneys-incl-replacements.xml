@@ -5,6 +5,17 @@
   xmlns:siri="http://www.siri.org.uk/siri"
   version="1.09:NO-NeTEx-networktimetable:1.4">
 
+  <!--
+  Modellert ut fra "Forenklet eksempel for utvidet innsending av tog-informasjon":
+  A.  Codespace, henviser til selskapet
+  B.	Identifikatornavn / Objekt referanse
+  C.	Ruteplan 
+  D.	Linje identifikator
+  E.	Avgangsidentifikator
+  F.	OTN
+  G.	Strekning
+  H.	I-sirknummer 1 / dato 2
+  -->
 
   <PublicationTimestamp>2020-01-03T15:00:00</PublicationTimestamp>
   <ParticipantRef>ENT</ParticipantRef>

@@ -4,19 +4,7 @@
   xmlns:gis="http://www.opengis.net/gml/3.2" 
   xmlns:siri="http://www.siri.org.uk/siri"
   version="1.09:NO-NeTEx-networktimetable:1.3">
-
-  <!--
-  Forenklet eksempel for utvidet innsending av tog-informasjon
-  A.  Codespace, henviser til selskapet
-  B.	Identifikatornavn / Objekt referanse
-  C.	Ruteplan 
-  D.	Linje identifikator
-  E.	Avgangsidentifikator
-  F.	OTN
-  G.	Strekning
-  H.	I-sirknummer 1 / dato 2
-  -->
-
+  
 
   <PublicationTimestamp>2019-08-19T00:31:39.669</PublicationTimestamp>
   <ParticipantRef>RB</ParticipantRef>
@@ -43,7 +31,7 @@
           <PrivateCode>RegularSeating</PrivateCode>
         </TypeOfEquipment>
       </typesOfValue>
-  
+      
   
       <equipments>
         <!-- pervertering av firergruppe sete, premium klasse (Komfort?), v.h.a. derivedFromObjectRef -->
@@ -91,7 +79,8 @@
             </PassengerCapacity>
           </capacities>
         </VehicleType>
-
+        
+        
         <!-- Specific VehicleType: Train -->
         <Train version="0" id="NTO:Train:Flirt">
           <!-- consolidated capasity -->
@@ -109,10 +98,62 @@
             </TrainComponent>
           </components>
         </Train>
+        
+        <Train version="0" id="SJN:Train:Flirt-1">
+          <components>
+            <TrainComponent version="0" id="NTO:TrainComponent:BMb74" order="1">
+              <Label>BMb74</Label>
+              <TrainElementRef version="0" ref="NTO:TrainElement:BMb74"/>
+            </TrainComponent>
+            <TrainComponent version="0" id="NTO:TrainComponent:BPb74" order="2">
+              <Label>BPb74</Label>
+              <TrainElementRef version="0" ref="NTO:TrainElement:BPb74"/>
+            </TrainComponent>
+            <TrainComponent version="0" id="NTO:TrainComponent:BCMU74" order="3">
+              <Label>BCMU74</Label>
+              <TrainElementRef version="0" ref="NTO:TrainElement:BCMU74"/>
+            </TrainComponent>
+            <TrainComponent version="0" id="NTO:TrainComponent:BPa74" order="4">
+              <Label>BPa74</Label>
+              <TrainElementRef version="0" ref="NTO:TrainElement:BPa74"/>
+            </TrainComponent>
+            <TrainComponent version="0" id="NTO:TrainComponent:BMa74" order="5">
+              <Label>BMa74</Label>
+              <TrainElementRef version="0" ref="NTO:TrainElement:BMa74"/>
+            </TrainComponent>
+          </components>
+        </Train>
+        
+        <Train version="0" id="SJN:Train:Flirt-2">
+          <components>
+            <TrainComponent version="0" id="NTO:TrainComponent:BMa74" order="1">
+              <Label>BMa74</Label>
+              <TrainElementRef version="0" ref="NTO:TrainElement:BMa74"/>
+            </TrainComponent>
+            <TrainComponent version="0" id="NTO:TrainComponent:BPa74" order="2">
+              <Label>BPa74</Label>
+              <TrainElementRef version="0" ref="NTO:TrainElement:BPa74"/>
+            </TrainComponent>
+            <TrainComponent version="0" id="NTO:TrainComponent:BCMU74-v2" order="3">
+              <Label>BCMU74</Label>
+              <TrainElementRef version="0" ref="NTO:TrainElement:BCMU74"/>
+            </TrainComponent>
+            <TrainComponent version="0" id="NTO:TrainComponent:BPb74" order="4">
+              <Label>BPb74</Label>
+              <TrainElementRef version="0" ref="NTO:TrainElement:BPb74"/>
+            </TrainComponent>
+            <TrainComponent version="0" id="NTO:TrainComponent:BMb74" order="5">
+              <Label>BMb74</Label>
+              <TrainElementRef version="0" ref="NTO:TrainElement:BMb74"/>
+            </TrainComponent>
+          </components>
+        </Train>
       </vehicleTypes>
       
       
+      
       <vehicles>
+        
         <TrainElement version="0" id="NTO:TrainElement:1">
           <FareClasses>premiumClass standardClass</FareClasses>
           <!-- capasity per element-->
@@ -135,6 +176,24 @@
             <SeatingEquipmentRef version="0" ref="NTO:SeatingEquipment:6"/>
           </equipments>
           
+        </TrainElement>
+        
+        
+        <!-- Dummy TrainElements for references from TrainComponents -->
+        <TrainElement version="0" id="NTO:TrainElement:BPa74">
+          <Name>Flirt</Name>
+        </TrainElement>
+        <TrainElement version="0" id="NTO:TrainElement:BMb74">
+          <Name>Flirt</Name>
+        </TrainElement>
+        <TrainElement version="0" id="NTO:TrainElement:BPb74">
+          <Name>Flirt</Name>
+        </TrainElement>
+        <TrainElement version="0" id="NTO:TrainElement:BCMU74">
+          <Name>Flirt</Name>
+        </TrainElement>
+        <TrainElement version="0" id="NTO:TrainElement:BMa74">
+          <Name>Flirt</Name>
         </TrainElement>
         
         
@@ -410,11 +469,13 @@
               <LineRef ref="NSB:Line:41" version="0"/>
 
               <!-- Referanse til operativt transportnummer -->
-              <!-- UTGÅR -->
+              <!-- SKAL IKKE BRUKES ? -->
 
-              <!-- trainNumbers>
+              <!-- 
+              <trainNumbers>
                 <TrainNumberRef ref="NSB:TrainNumber:1" version="0"/>
-              </trainNumbers -->
+              </trainNumbers>
+              -->
 
               <passingTimes>
                 <TimetabledPassingTime version="0"
@@ -442,69 +503,8 @@
               </passingTimes>
             </ServiceJourney>
 
-
-
-
-            <!-- === DATED VEHICLE JOURNEY (see Part 2 p. 174-179, "﻿7.3.14.2 DATED JOURNEY") === -->
-
-            <!-- Incorrectly implemented in the XSD
-            <DatedServiceJourney version="0" id="ENT:DatedServiceJourney:1" derivedFromObjectRef="test">
-            </DatedServiceJourney>
-            -->
-
-
-            <!--
-              Alternatives:
-              1) dated vehicle journey per operating day of ServiceJourney
-              2) overridden ServiceJourney due to alternative transport
-            -->
-            <DatedVehicleJourney version="0" id="NSB:DatedVehicleJourney:1-3922-61-2020-01-02">
-              <PrivateCode>1-3922-61</PrivateCode>
-              <ServiceJourneyRef ref="NSB:ServiceJourney:1-3922-61" version="0"/>
-              <!-- OperatingDayRef is mandatory -->
-              <OperatingDayRef ref="NSB:OperatingDay:2020-01-02" version="0"/>
-            </DatedVehicleJourney>
-
-
-            <DatedVehicleJourney version="0" id="NSB:DatedVehicleJourney:1-3922-61-2020-01-02">
-              <PrivateCode>1-3922-61-NOT-RUNNING</PrivateCode>
-              <dayTypes>
-                <DayTypeRef ref="NSB:DayType:2020-01-03" version="0"/>
-              </dayTypes>
-              <ServiceJourneyRef ref="NSB:ServiceJourney:1-3922-61" version="0"/>
-              <!-- OperatingDayRef is mandatory -->
-              <OperatingDayRef ref="NSB:OperatingDay:2020-01-03" version="0"/>
-            </DatedVehicleJourney>
-
           </vehicleJourneys>
 
-          
-          
-          <groupsOfServices>
-            <GroupOfServices id="NSB:GroupOfServices:1" version="0">
-              <PrivateCode>lalala</PrivateCode>
-              <members>
-                <GroupOfServicesMember id="NSB:GroupOfServicesMember:1" version="0" order="1">
-                  <ServiceJourneyRef ref="NSB:ServiceJourney:1-3922-61" version="0"/>
-                </GroupOfServicesMember>
-                <GroupOfServicesMember id="NSB:GroupOfServicesMember:2" version="0" order="2">
-                  <DatedVehicleJourneyRef ref="NSB:DatedVehicleJourney:1-3922-61-DATED" version="0"/>
-                </GroupOfServicesMember>
-                <!-- IKKE ØNSKELIG MED TrainNumber -->
-                <GroupOfServicesMember id="NSB:GroupOfServicesMember:3" version="0" order="3">
-                  <TrainNumberRef ref="NSB:TrainNumber:1-3922" version="0"/>
-                </GroupOfServicesMember>
-              </members>
-            </GroupOfServices>
-          </groupsOfServices>
-          
-          <!-- Lagt til tognummer som eksempel (UTGÅR, ER NEPPE ØNSKELIG) -->
-          <trainNumbers>
-            <TrainNumber id="NSB:TrainNumber:1-3922" version="0">
-              <ForAdvertisement>3922</ForAdvertisement>
-              <ForProduction>3922XYZ</ForProduction>
-            </TrainNumber>
-          </trainNumbers>
           
           
         </TimetableFrame>
