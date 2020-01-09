@@ -168,6 +168,12 @@
             </PassengerCapacity>
           </capacities>
           
+          <facilities>
+            <ServiceFacilitySet id="NTO:ServiceFacilityList:1" version="0">
+              <CateringFacilityList>foodVendingMachine beverageVendingMachine</CateringFacilityList>
+            </ServiceFacilitySet>
+          </facilities>
+          
           <equipments>
             <!-- gruppe -->
             <SeatingEquipmentRef version="0" ref="NTO:SeatingEquipment:Group1"/>
