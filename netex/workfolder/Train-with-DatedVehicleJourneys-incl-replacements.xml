@@ -148,7 +148,8 @@
         
         
         <ServiceFrame version="0" id="NSB:ServiceFrame:4145998">
-          <routePoints>
+          
+          <routePoints>         
             <RoutePoint version="0" id="NSB:RoutePoint:1">
               <projections>
                 <PointProjection version="0" id="ENT:PointProjection:1">
@@ -178,27 +179,6 @@
             <Route version="0" id="NSB:Route:1">
               <Name>Oslo S - Drammen stasjon</Name>
               <ShortName>Oslo S - Drammen stasjon</ShortName>
-              <LineRef ref="NSB:Line:41" version="0"/>
-              <pointsInSequence>
-                <PointOnRoute order="1" version="0" id="NSB:PointOnRoute:4144409">
-                  <RoutePointRef ref="NSB:RoutePoint:760010003"/>
-                </PointOnRoute>
-                <PointOnRoute order="2" version="0" id="NSB:PointOnRoute:4144410">
-                  <RoutePointRef ref="NSB:RoutePoint:760140801"/>
-                </PointOnRoute>
-                <PointOnRoute order="3" version="0" id="NSB:PointOnRoute:4144411">
-                  <RoutePointRef ref="NSB:RoutePoint:760141301"/>
-                </PointOnRoute>
-                <PointOnRoute order="4" version="0" id="NSB:PointOnRoute:4144412">
-                  <RoutePointRef ref="NSB:RoutePoint:760142105"/>
-                </PointOnRoute>
-              </pointsInSequence>
-            </Route>
-
-            <Route version="0" id="ENT:Route:Demo">
-              <Name>Demo</Name>
-              <Description>description</Description>
-              <PrivateCode>privatecode</PrivateCode>
               <LineRef ref="NSB:Line:41" version="0"/>
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
