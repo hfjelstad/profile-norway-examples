@@ -59,64 +59,64 @@
       <frames>
         <SiteFrame version="0" id="NSR:SiteFrame:1">
           <stopPlaces>
-            <StopPlace version="0" id="NSR:StopPlace:NSR:Quay:1078stop">
-              <Name>NSR:Quay:1078</Name>
+            <StopPlace version="0" id="NSR:StopPlace:for-quay-1078">
+              <Name>Quay-1078</Name>
               <quays>
-                <Quay version="0" id="NSR:Quay:NSR:Quay:1078"/>
+                <Quay version="0" id="NSR:Quay:1078"/>
               </quays>
             </StopPlace>
-            <StopPlace version="0" id="NSR:StopPlace:NSR:Quay:1079stop">
-              <Name>NSR:Quay:1079</Name>
+            <StopPlace version="0" id="NSR:StopPlace:for-quay-1079">
+              <Name>Quay-1079</Name>
               <quays>
-                <Quay version="0" id="NSR:Quay:NSR:Quay:1079"/>
+                <Quay version="0" id="NSR:Quay:1079"/>
               </quays>
             </StopPlace>
-            <StopPlace version="0" id="NSR:StopPlace:NSR:Quay:1080stop">
-              <Name>NSR:Quay:1080</Name>
+            <StopPlace version="0" id="NSR:StopPlace:for-quay-1080">
+              <Name>Quay-1080</Name>
               <quays>
-                <Quay version="0" id="NSR:Quay:NSR:Quay:1080"/>
+                <Quay version="0" id="NSR:Quay:1080"/>
               </quays>
             </StopPlace>
-            <StopPlace version="0" id="NSR:StopPlace:NSR:Quay:1081stop">
-              <Name>NSR:Quay:1081</Name>
+            <StopPlace version="0" id="NSR:StopPlace:for-quay-1081">
+              <Name>Quay-1081</Name>
               <quays>
-                <Quay version="0" id="NSR:Quay:NSR:Quay:1081"/>
+                <Quay version="0" id="NSR:Quay:1081"/>
               </quays>
             </StopPlace>
-            <StopPlace version="0" id="NSR:StopPlace:NSR:Quay:1082stop">
-              <Name>NSR:Quay:1082</Name>
+            <StopPlace version="0" id="NSR:StopPlace:for-quay-1082">
+              <Name>Quay-1082</Name>
               <quays>
-                <Quay version="0" id="NSR:Quay:NSR:Quay:1082"/>
+                <Quay version="0" id="NSR:Quay:1082"/>
               </quays>
             </StopPlace>
-            <StopPlace version="0" id="NSR:StopPlace:NSR:Quay:1083stop">
-              <Name>NSR:Quay:1083</Name>
+            <StopPlace version="0" id="NSR:StopPlace:for-quay-1083">
+              <Name>Quay-1083</Name>
               <quays>
-                <Quay version="0" id="NSR:Quay:NSR:Quay:1083"/>
+                <Quay version="0" id="NSR:Quay:1083"/>
               </quays>
             </StopPlace>
-            <StopPlace version="0" id="NSR:StopPlace:NSR:Quay:100530stop">
-              <Name>NSR:Quay:100530</Name>
+            <StopPlace version="0" id="NSR:StopPlace:for-quay-100530">
+              <Name>Quay-100530</Name>
               <quays>
-                <Quay version="0" id="NSR:Quay:NSR:Quay:100530"/>
+                <Quay version="0" id="NSR:Quay:100530"/>
               </quays>
             </StopPlace>
-            <StopPlace version="0" id="NSR:StopPlace:NSR:Quay:100531stop">
-              <Name>NSR:Quay:100531</Name>
+            <StopPlace version="0" id="NSR:StopPlace:for-quay-100531">
+              <Name>Quay-100531</Name>
               <quays>
-                <Quay version="0" id="NSR:Quay:NSR:Quay:100531"/>
+                <Quay version="0" id="NSR:Quay:100531"/>
               </quays>
             </StopPlace>
-            <StopPlace version="0" id="NSR:StopPlace:NSR:Quay:100529stop">
-              <Name>NSR:Quay:100529</Name>
+            <StopPlace version="0" id="NSR:StopPlace:for-quay-100529">
+              <Name>Quay-100529</Name>
               <quays>
-                <Quay version="0" id="NSR:Quay:NSR:Quay:100529"/>
+                <Quay version="0" id="NSR:Quay:100529"/>
               </quays>
             </StopPlace>
-            <StopPlace version="0" id="NSR:StopPlace:NSR:Quay:99726stop">
-              <Name>NSR:Quay:99726</Name>
+            <StopPlace version="0" id="NSR:StopPlace:for-quay-99726">
+              <Name>Quay-99726</Name>
               <quays>
-                <Quay version="0" id="NSR:Quay:NSR:Quay:99726"/>
+                <Quay version="0" id="NSR:Quay:99726"/>
               </quays>
             </StopPlace>
           </stopPlaces>
@@ -133,7 +133,6 @@
                   <!-- Spor 1 -->
                   <ProjectedPointRef ref="SJN:ScheduledStopPoint:TND-1" version="0"/>
                   <!-- NSR:Quay:1078 -->
-                  <!-- Quay -->
                 </PointProjection>
                 <PointProjection version="0" id="SJN:PointProjection:TND-2">
                   <!-- Spor 2 -->
@@ -366,17 +365,63 @@
             </Line>
           </lines>
           
-          <!--
-          <scheduledStopPoints>
-            ...
-          </scheduledStopPoints>
-          -->
           
-          <!--
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="SJN:ScheduledStopPoint:TND-1" version="0"/>
+            <ScheduledStopPoint id="SJN:ScheduledStopPoint:TND-2" version="0"/>
+            <ScheduledStopPoint id="SJN:ScheduledStopPoint:TND-3" version="0"/>
+            <ScheduledStopPoint id="SJN:ScheduledStopPoint:TND-4" version="0"/>
+            <ScheduledStopPoint id="SJN:ScheduledStopPoint:TND-5" version="0"/>
+            <ScheduledStopPoint id="SJN:ScheduledStopPoint:TND-6" version="0"/>
+            <ScheduledStopPoint id="SJN:ScheduledStopPoint:TND-21" version="0"/>
+            <ScheduledStopPoint id="SJN:ScheduledStopPoint:TND-22" version="0"/>
+            <ScheduledStopPoint id="SJN:ScheduledStopPoint:TND-23" version="0"/>
+            <ScheduledStopPoint id="SJN:ScheduledStopPoint:TND-30" version="0"/>
+          </scheduledStopPoints>
+          
+
           <stopAssignments>
-            ...
+            <PassengerStopAssignment id="SJN:PassengerStopAssignment:TND-1" version="0" order="1">
+              <ScheduledStopPointRef ref="SJN:ScheduledStopPoint:TND-1" version="0"/>
+              <QuayRef ref="NSR:Quay:1078" version="0"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="SJN:PassengerStopAssignment:TND-2" version="0" order="2">
+              <ScheduledStopPointRef ref="SJN:ScheduledStopPoint:TND-2" version="0"/>
+              <QuayRef ref="NSR:Quay:1079" version="0"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="SJN:PassengerStopAssignment:TND-3" version="0" order="3">
+              <ScheduledStopPointRef ref="SJN:ScheduledStopPoint:TND-3" version="0"/>
+              <QuayRef ref="NSR:Quay:1080" version="0"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="SJN:PassengerStopAssignment:TND-4" version="0" order="4">
+              <ScheduledStopPointRef ref="SJN:ScheduledStopPoint:TND-4" version="0"/>
+              <QuayRef ref="NSR:Quay:1081" version="0"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="SJN:PassengerStopAssignment:TND-5" version="0" order="5">
+              <ScheduledStopPointRef ref="SJN:ScheduledStopPoint:TND-5" version="0"/>
+              <QuayRef ref="NSR:Quay:1082" version="0"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="SJN:PassengerStopAssignment:TND-6" version="0" order="6">
+              <ScheduledStopPointRef ref="SJN:ScheduledStopPoint:TND-6" version="0"/>
+              <QuayRef ref="NSR:Quay:1083" version="0"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="SJN:PassengerStopAssignment:TND-21" version="0" order="21">
+              <ScheduledStopPointRef ref="SJN:ScheduledStopPoint:TND-21" version="0"/>
+              <QuayRef ref="NSR:Quay:100530" version="0"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="SJN:PassengerStopAssignment:TND-22" version="0" order="22">
+              <ScheduledStopPointRef ref="SJN:ScheduledStopPoint:TND-22" version="0"/>
+              <QuayRef ref="NSR:Quay:100531" version="0"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="SJN:PassengerStopAssignment:TND-23" version="0" order="23">
+              <ScheduledStopPointRef ref="SJN:ScheduledStopPoint:TND-23" version="0"/>
+              <QuayRef ref="NSR:Quay:100529" version="0"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="SJN:PassengerStopAssignment:TND-30" version="0" order="30">
+              <ScheduledStopPointRef ref="SJN:ScheduledStopPoint:TND-30" version="0"/>
+              <QuayRef ref="NSR:Quay:99726" version="0"/>
+            </PassengerStopAssignment>
           </stopAssignments>
-          -->
           
           <!--
           <journeyPatterns>
