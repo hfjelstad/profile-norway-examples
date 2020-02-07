@@ -81,26 +81,64 @@
                     </facilities>
 
                     <equipmentPlaces>
-                        <EquipmentPlace id="NSR:EquipmentPlace" version="1">
+                        <EquipmentPlace id="NSR:EquipmentPlace:1" version="1">
                             <Centroid>
                                 <Location>
-                                    <gml:pos>3.14159265358979E0 3.14159265358979E0</gml:pos>
+                                    <gml:pos>59.9110022 10.753395</gml:pos>
                                 </Location>
                             </Centroid>
                             <placeEquipments>
-                                <WaitingEquipmentRef version="1" ref="NSR:WaitingRoomEquipment:1"/>
+                                <TicketingEquipmentRef ref="ENT:TicketingEquipment:101" version="1"/>
+                                <TicketingEquipmentRef ref="ENT:TicketingEquipment:102" version="1"/>
+                                <WaitingEquipmentRef ref="NSR:WaitingRoomEquipment:1" version="1"/>
+                            </placeEquipments>
+                        </EquipmentPlace>
+                        <EquipmentPlace id="RUT:EquipmentPlace:1" version="1">
+                            <Centroid>
+                                <Location>
+                                    <gml:pos>59.911174 10.7532173</gml:pos>
+                                </Location>
+                            </Centroid>
+                            <placeEquipments>
+                                <TicketingEquipmentRef ref="RUT:TicketingEquipment:1" version="1"/>
                             </placeEquipments>
                         </EquipmentPlace>
                     </equipmentPlaces>
 
                     <placeEquipments>
+                        <!-- if modelled generally -->
+                        <TicketingEquipment id="ENT:TicketingEquipment:1" version="1">
+                            <NumberOfMachines>11</NumberOfMachines>
+                            <TicketingFacilityList>ticketOffice ticketMachines</TicketingFacilityList>
+                            <NumberOfTills>1</NumberOfTills>
+                        </TicketingEquipment>
+                        <!-- or if modeled per ticketing machine -->
+                        <TicketingEquipment id="ENT:TicketingEquipment:101" version="1">
+                            <PrivateCode>101</PrivateCode>
+                            <OutOfService>false</OutOfService>
+                            <VehicleModes>rail</VehicleModes>
+                            <TicketingFacilityList>ticketOffice ticketMachines</TicketingFacilityList>
+                            <PaymentMethods>cashAndCard</PaymentMethods>
+                            <TicketTypesAvailable>standard travelCard group</TicketTypesAvailable>
+                            <ScopeOfTicketsAvailable>ticketMachines</ScopeOfTicketsAvailable>
+                            <WheelchairSuitable>true</WheelchairSuitable>
+                        </TicketingEquipment>
+                        <TicketingEquipment id="ENT:TicketingEquipment:102" version="1">
+                            <PrivateCode>102</PrivateCode>
+                            <OutOfService>false</OutOfService>
+                            <VehicleModes>rail</VehicleModes>
+                            <TicketingFacilityList>ticketOffice ticketMachines</TicketingFacilityList>
+                            <PaymentMethods>cashAndCard</PaymentMethods>
+                            <TicketTypesAvailable>standard travelCard group</TicketTypesAvailable>
+                            <ScopeOfTicketsAvailable>ticketMachines</ScopeOfTicketsAvailable>
+                            <WheelchairSuitable>true</WheelchairSuitable>
+                        </TicketingEquipment>
+                        <!-- etc. -->
+                        
                         <TicketingEquipment id="RUT:TicketingEquipment:1" version="1">
+                            <VehicleModes>metro bus rail tram</VehicleModes>
                             <NumberOfMachines>2</NumberOfMachines>
                             <TicketingFacilityList>ticketMachines</TicketingFacilityList>
-                        </TicketingEquipment>
-                        <TicketingEquipment id="ENT:TicketingEquipment:2" version="1">
-                            <VehicleModes>rail</VehicleModes>
-                            <NumberOfMachines>1</NumberOfMachines>
                         </TicketingEquipment>
 
                         <WaitingRoomEquipment id="NSR:WaitingRoomEquipment:1" version="1">
