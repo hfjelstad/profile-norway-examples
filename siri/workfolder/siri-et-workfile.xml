@@ -50,6 +50,10 @@
                     <!-- BlockRef>86</BlockRef -->
                     <VehicleJourneyRef>placeholder</VehicleJourneyRef>
                     <VehicleRef>placeholder</VehicleRef>
+                    <AdditionalVehicleJourneyRef>
+                        <DataFrameRef>placeholder</DataFrameRef>
+                        <DatedVehicleJourneyRef>placeholder</DatedVehicleJourneyRef>
+                    </AdditionalVehicleJourneyRef>
                     
                     <RecordedCalls>
                         <RecordedCall>
