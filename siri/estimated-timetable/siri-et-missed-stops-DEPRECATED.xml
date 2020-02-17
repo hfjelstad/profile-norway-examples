@@ -99,12 +99,10 @@
                             <RequestStop>false</RequestStop>
                             <AimedArrivalTime>2020-02-02T14:59:00</AimedArrivalTime>
                             <ExpectedArrivalTime>2020-02-02T14:59:00</ExpectedArrivalTime>
-                            <ArrivalStatus>cancelled</ArrivalStatus>
                             <ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
                             <AimedDepartureTime>2020-02-02T15:02:00</AimedDepartureTime>
                             <ExpectedDepartureTime>2020-02-02T15:02:00</ExpectedDepartureTime>
-                            <DepartureStatus>cancelled</DepartureStatus>
-                            <DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
+                            <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
                         </EstimatedCall>
                         
                         <!-- etc ... -->
