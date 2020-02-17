@@ -95,7 +95,6 @@
                             <StopPointRef>NSR:Quay:519</StopPointRef>
                             <Order>6</Order>
                             <StopPointName>Oppdal</StopPointName>
-                            <Cancellation>true</Cancellation>
                             <RequestStop>false</RequestStop>
                             <AimedArrivalTime>2020-02-02T14:59:00</AimedArrivalTime>
                             <ExpectedArrivalTime>2020-02-02T14:59:00</ExpectedArrivalTime>
