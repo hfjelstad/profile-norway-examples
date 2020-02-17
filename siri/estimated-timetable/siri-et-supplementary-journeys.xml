@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  Example of scheduled journey being cancelled and replaced by a new journey
+-->
+<Siri 
+    xmlns="http://www.siri.org.uk/siri" 
+    xmlns:acsb="http://www.ifopt.org.uk/acsb" 
+    xmlns:ifopt="http://www.ifopt.org.uk/ifopt" 
+    xmlns:datex2="http://datex2.eu/schema/2_0RC1/2_0"
+    version="2.0">
+    <ServiceDelivery>
+        <ResponseTimestamp>2020-02-20T21:22:33</ResponseTimestamp>
+        <ProducerRef>RUT</ProducerRef>
+        <EstimatedTimetableDelivery version="2.0">
+            <ResponseTimestamp>2020-02-20T21:22:33</ResponseTimestamp>
+            <EstimatedJourneyVersionFrame>
+                <RecordedAtTime>2020-02-20T21:22:11</RecordedAtTime>
+                
+                <!-- Original VehicleJourney -->
+                <EstimatedVehicleJourney>
+                    <LineRef>RUT:Line:21</LineRef>
+                    <DirectionRef>Tjuvholmen</DirectionRef>
+                    <FramedVehicleJourneyRef>
+                        <DataFrameRef>2020-02-20</DataFrameRef>
+                        <DatedVehicleJourneyRef>RUT:ServiceJourney:21-1-1</DatedVehicleJourneyRef>
+                    </FramedVehicleJourneyRef>
+                    <VehicleMode>bus</VehicleMode>
+                    <OriginName>Helsfyr</OriginName>
+                    <OperatorRef>RUT</OperatorRef>
+                    
+                    <AdditionalVehicleJourneyRef>
+                        <DataFrameRef>2020-02-20</DataFrameRef>
+                        <DatedVehicleJourneyRef>RUT:ServiceJourney:21-1-1-extra-1</DatedVehicleJourneyRef>
+                    </AdditionalVehicleJourneyRef>
+                    <AdditionalVehicleJourneyRef>
+                        <DataFrameRef>2020-02-20</DataFrameRef>
+                        <DatedVehicleJourneyRef>RUT:ServiceJourney:21-1-1-extra-2</DatedVehicleJourneyRef>
+                    </AdditionalVehicleJourneyRef>
+                    
+                    <EstimatedCalls>                        
+                        <EstimatedCall>
+                            <StopPointRef>NSR:StopPlace:6074</StopPointRef>
+                            <Order>1</Order>
+                            <StopPointName>Helsfyr</StopPointName>
+                            <RequestStop>false</RequestStop>
+                            <ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
+                            <AimedDepartureTime>2020-02-20T21:25:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2020-02-20T21:25:00</ExpectedDepartureTime>
+                            <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
+                        </EstimatedCall>
+                        <!-- etc ... -->
+                    </EstimatedCalls>
+                    <IsCompleteStopSequence>true</IsCompleteStopSequence>
+                </EstimatedVehicleJourney>
+                
+                
+                <!-- Supplementary VehicleJourneys -->
+                <EstimatedVehicleJourney>
+                    <LineRef>RUT:Line:21</LineRef>
+                    <DirectionRef>CarlBernersPlass</DirectionRef>
+                    <EstimatedVehicleJourneyCode>RUT:ServiceJourney:21-1-1-extra-1</EstimatedVehicleJourneyCode>
+                    
+                    <ExtraJourney>true</ExtraJourney>
+                    
+                    <VehicleMode>bus</VehicleMode>
+                    <OriginName>Helsfyr</OriginName>
+                    <OperatorRef>RUT</OperatorRef>
+                    
+                    <VehicleJourneyRef>RUT:ServiceJourney:21-1-1</VehicleJourneyRef>
+                    
+                    <EstimatedCalls>
+                        <EstimatedCall>
+                            <StopPointRef>NSR:StopPlace:6074</StopPointRef>
+                            <Order>1</Order>
+                            <StopPointName>Helsfyr</StopPointName>
+                            <RequestStop>false</RequestStop>
+                            <ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
+                            <AimedDepartureTime>2020-02-20T21:26:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2020-02-20T21:26:00</ExpectedDepartureTime>
+                            <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
+                        </EstimatedCall>
+                        <!-- etc ... -->
+                        
+                    </EstimatedCalls>
+                    <IsCompleteStopSequence>true</IsCompleteStopSequence>
+                </EstimatedVehicleJourney>
+                
+                
+                <EstimatedVehicleJourney>
+                    <LineRef>RUT:Line:21</LineRef>
+                    <DirectionRef>Bislett</DirectionRef>
+                    <EstimatedVehicleJourneyCode>RUT:ServiceJourney:21-1-1-extra-2</EstimatedVehicleJourneyCode>
+                    
+                    <ExtraJourney>true</ExtraJourney>
+                    
+                    <VehicleMode>bus</VehicleMode>
+                    <OriginName>Helsfyr</OriginName>
+                    <OperatorRef>RUT</OperatorRef>
+                    
+                    <VehicleJourneyRef>RUT:ServiceJourney:21-1-1</VehicleJourneyRef>
+                    
+                    <EstimatedCalls>
+                        <EstimatedCall>
+                            <StopPointRef>NSR:StopPlace:6074</StopPointRef>
+                            <Order>1</Order>
+                            <StopPointName>Helsfyr</StopPointName>
+                            <RequestStop>false</RequestStop>
+                            <ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
+                            <AimedDepartureTime>2020-02-20T21:27:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2020-02-20T21:27:00</ExpectedDepartureTime>
+                            <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
+                        </EstimatedCall>
+                        <!-- etc ... -->
+                        
+                    </EstimatedCalls>
+                    <IsCompleteStopSequence>true</IsCompleteStopSequence>
+                </EstimatedVehicleJourney>
+            </EstimatedJourneyVersionFrame>
+        </EstimatedTimetableDelivery>
+    </ServiceDelivery>
+</Siri>
