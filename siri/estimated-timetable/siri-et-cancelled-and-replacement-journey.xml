@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
   Example of scheduled journey being cancelled and replaced by a new journey
+  (not a full example, but highlighting the prominent aspects)
 -->
 <Siri 
     xmlns="http://www.siri.org.uk/siri" 
@@ -50,7 +51,7 @@
                 <!-- Replacement VehicleJourney -->
                 <EstimatedVehicleJourney>
                     <LineRef>RUT:Line:21</LineRef>
-                    <DirectionRef>Carl Berners Plass</DirectionRef>
+                    <DirectionRef>CarlBernesPlass</DirectionRef>
                     <EstimatedVehicleJourneyCode>RUT:ServiceJourney:21-1-1-extra</EstimatedVehicleJourneyCode>
                     
                     <ExtraJourney>true</ExtraJourney>

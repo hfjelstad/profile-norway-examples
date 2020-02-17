@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-  Example of scheduled journey being cancelled and replaced by a new journey
+  Example of scheduled journey being supplemented by two additional services for (partially) the same service.
+  (not a full example, but highlighting the prominent aspects)
 -->
 <Siri 
     xmlns="http://www.siri.org.uk/siri" 
