@@ -20,7 +20,7 @@
                 <!-- Cancelled VehicleJourney -->
                 <EstimatedVehicleJourney>
                     <LineRef>RUT:Line:21</LineRef>
-                    <DirectionRef>Tjuvholmen</DirectionRef>
+                    <DirectionRef>0</DirectionRef>
                     <FramedVehicleJourneyRef>
                         <DataFrameRef>2020-02-20</DataFrameRef>
                         <DatedVehicleJourneyRef>RUT:ServiceJourney:21-1-1</DatedVehicleJourneyRef>
@@ -30,6 +30,7 @@
                     
                     <VehicleMode>bus</VehicleMode>
                     <OriginName>Helsfyr</OriginName>
+                    <DestinationName>Tjuvholmen</DestinationName>
                     <OperatorRef>RUT</OperatorRef>                                    
                     <EstimatedCalls>                        
                         <EstimatedCall>
@@ -51,13 +52,14 @@
                 <!-- Replacement VehicleJourney -->
                 <EstimatedVehicleJourney>
                     <LineRef>RUT:Line:21</LineRef>
-                    <DirectionRef>CarlBernesPlass</DirectionRef>
+                    <DirectionRef>0</DirectionRef>
                     <EstimatedVehicleJourneyCode>RUT:ServiceJourney:21-1-1-extra</EstimatedVehicleJourneyCode>
                     
                     <ExtraJourney>true</ExtraJourney>
                     
                     <VehicleMode>bus</VehicleMode>
                     <OriginName>Helsfyr</OriginName>
+                    <DestinationName>Carl Berners Plass</DestinationName>
                     <OperatorRef>RUT</OperatorRef>
                     
                     <VehicleJourneyRef>RUT:ServiceJourney:21-1-1</VehicleJourneyRef>

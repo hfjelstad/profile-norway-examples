@@ -20,13 +20,14 @@
                 <!-- Original VehicleJourney -->
                 <EstimatedVehicleJourney>
                     <LineRef>RUT:Line:21</LineRef>
-                    <DirectionRef>Tjuvholmen</DirectionRef>
+                    <DirectionRef>0</DirectionRef>
                     <FramedVehicleJourneyRef>
                         <DataFrameRef>2020-02-20</DataFrameRef>
                         <DatedVehicleJourneyRef>RUT:ServiceJourney:21-1-1</DatedVehicleJourneyRef>
                     </FramedVehicleJourneyRef>
                     <VehicleMode>bus</VehicleMode>
                     <OriginName>Helsfyr</OriginName>
+                    <DestinationName>Tjuvholmen</DestinationName>
                     <OperatorRef>RUT</OperatorRef>
                     
                     <AdditionalVehicleJourneyRef>
@@ -58,13 +59,14 @@
                 <!-- Supplementary VehicleJourneys -->
                 <EstimatedVehicleJourney>
                     <LineRef>RUT:Line:21</LineRef>
-                    <DirectionRef>CarlBernersPlass</DirectionRef>
+                    <DirectionRef>0</DirectionRef>
                     <EstimatedVehicleJourneyCode>RUT:ServiceJourney:21-1-1-extra-1</EstimatedVehicleJourneyCode>
                     
                     <ExtraJourney>true</ExtraJourney>
                     
                     <VehicleMode>bus</VehicleMode>
                     <OriginName>Helsfyr</OriginName>
+                    <DestinationName>Carl Berners Plass</DestinationName>
                     <OperatorRef>RUT</OperatorRef>
                     
                     <VehicleJourneyRef>RUT:ServiceJourney:21-1-1</VehicleJourneyRef>
@@ -89,13 +91,14 @@
                 
                 <EstimatedVehicleJourney>
                     <LineRef>RUT:Line:21</LineRef>
-                    <DirectionRef>Bislett</DirectionRef>
+                    <DirectionRef>0</DirectionRef>
                     <EstimatedVehicleJourneyCode>RUT:ServiceJourney:21-1-1-extra-2</EstimatedVehicleJourneyCode>
                     
                     <ExtraJourney>true</ExtraJourney>
                     
                     <VehicleMode>bus</VehicleMode>
                     <OriginName>Helsfyr</OriginName>
+                    <DestinationName>Bislett</DestinationName>
                     <OperatorRef>RUT</OperatorRef>
                     
                     <VehicleJourneyRef>RUT:ServiceJourney:21-1-1</VehicleJourneyRef>
