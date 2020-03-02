@@ -100,9 +100,13 @@
                     <scheduledStopPoints>
                         <ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:1">
                             <Name>1</Name>
+                            <ForAlighting>false</ForAlighting>
+                            <ForBoarding>false</ForBoarding>
                         </ScheduledStopPoint>
                         <ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:2">
                             <Name>2</Name>
+                            <ForAlighting>true</ForAlighting>
+                            <ForBoarding>false</ForBoarding>
                         </ScheduledStopPoint>
                     </scheduledStopPoints>
 
@@ -115,6 +119,10 @@
                                     <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:1"/>
                                     <ForAlighting>false</ForAlighting>
                                     <DestinationDisplayRef ref="RUT:DestinationDisplay:1"/>
+                                    
+                                    <!-- IKKE i Nordic Profile -->
+                                    <StopUse>interchangeOnly</StopUse>
+                                    
                                 </StopPointInJourneyPattern>
                                 <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:2" order="2">
                                     <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:2"/>
