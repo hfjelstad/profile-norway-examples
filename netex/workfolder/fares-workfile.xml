@@ -82,9 +82,12 @@
 						<DefaultCurrency>NOK</DefaultCurrency>
 					</FrameDefaults>
 					
+					
 					<PricingParameterSet id="pps-1" version="1">
-						
 						<pricingRules>
+							<PricingRule id="pr-0" version="1">
+								<Name>name</Name>
+							</PricingRule>
 							<DiscountingRule id="dr-1" version="1">
 								<Name>discounting rule</Name>
 							</DiscountingRule>
@@ -110,7 +113,7 @@
 								<MinimumPriceAsMultiple>5</MinimumPriceAsMultiple>
 							</LimitingRule>
 						</pricingRules>
-						<RoundingRef ref="test"></RoundingRef>
+						<RoundingRef ref="test"/>
 						<roundings>
 							<Rounding id="tfl:Rounding:TopUpIn5PoundSteps" version="any">
 								<Name>Oyster Top ups must be in in £5 Multiples</Name>
@@ -124,7 +127,17 @@
 					
 					
 					
+					<geographicalStructureFactors>
+						<GeographicalStructureFactor id="ENT:GeographicalStructureFactor:1" version="1">
+							<GeographicalIntervalRef ref="test"></GeographicalIntervalRef>
+							<GeographicalUnitRef ref="test"/>
+						</GeographicalStructureFactor>
+						
+					</geographicalStructureFactors>
+					
+					
 					<fareStructureElements>
+					
 						
 						<FareStructureElement version="any" id="tfl:FareStructureElement:Zone_1or2or2-3_TravelTimes">
 							<TariffBasis>distance</TariffBasis>

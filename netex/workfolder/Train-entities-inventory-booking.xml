@@ -36,6 +36,10 @@
       <equipments>
         <!-- pervertering av firergruppe sete, premium klasse (Komfort?), v.h.a. derivedFromObjectRef -->
         <SeatingEquipment version="0" id="NTO:SeatingEquipment:Group1">
+          
+          <!-- TODO -->
+          <!-- PassengerSeatRef = type ValidityParameter = Setenummer -->
+          
           <TypeOfEquipmentRef version="0" ref="NTO:TypeOfEquipment:PremiumSeating"/>
           <Seats>4</Seats>
         </SeatingEquipment>

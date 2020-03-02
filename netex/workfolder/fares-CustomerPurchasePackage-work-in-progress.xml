@@ -8,8 +8,6 @@
 
         <FareFrame id="ENT:FareFrame:1" version="1">
             
-            
-            
             <geographicalIntervals>
                 <GeographicalInterval id="RUT:GeographicalInterval:1" version="1">
                     <NumberOfUnits>2</NumberOfUnits>
@@ -24,6 +22,17 @@
             <validableElements>
                 <ValidableElement id="NSB:ValidableElement:SingleTrip" version="1" >
                     <Name>Enkelttur NSB</Name>
+                    
+                    
+                    
+                    <!-- TODO - NESTING -->
+                    <fareStructureElements>
+                        <FareStructureElementRef ref="BRUKES-MED-REFERANSE-TIL-UNDERTYPE-VALIDABLE-ELEMENT"/>
+                    </fareStructureElements>
+                    
+                    
+                    
+                    
                 </ValidableElement>
                 <ValidableElement id="NSB:ValidableElement:Seat" version="1">
                     <Name>Setereservasjon</Name>
@@ -239,6 +248,25 @@
         -->
         <SalesTransactionFrame id="ENT:SalesTransactionFrame:Case1" version="1">
             
+            <!-- test placeholder -->
+            <FrameDefaults></FrameDefaults>
+            
+            
+            <customers>
+                <Customer id="ENT:Customer:1" version="1">
+                    <Surname>surname</Surname>
+                    <FirstName>firstname</FirstName>
+                    <IdentityDocumentRef></IdentityDocumentRef>
+                </Customer>
+            </customers>
+            
+            <customerAccounts>
+                <CustomerAccount id="ENT:CustomerAccount:1" version="1">
+                    <CustomerAccountStatusType>active</CustomerAccountStatusType>
+                </CustomerAccount>
+            </customerAccounts>
+            
+            
             <fareContracts>
                 <FareContract id="ENT:FareContract:1" version="1">
                     
@@ -246,22 +274,33 @@
                     <StartDate>2018-09-06T01:07:00</StartDate>
                     <EndDate>2018-09-07T01:07:00</EndDate>
                     <fareContractEntries>
-                        
-                        <SalesTransaction version="1" id="ENT:SalesTransaction:1">
-                            <Name>Kjøp enkeltbillett fra Oslo til Trondheim </Name>
-                            <Date>2018-09-06T01:07:00</Date>
-                            <Amount>699</Amount>
-                            <Currency>NOK</Currency>
-                            <PaymentMethod>debitCard</PaymentMethod>
-                            <customerPurchasePackages>
-                                <!-- Referanse til customer purchase packages -->
-                                <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:SingleTripSpecificJourney" version="1"/>
-                            </customerPurchasePackages>
-                        </SalesTransaction>
+                        <SalesTransactionRef ref="ENT:SalesTransaction:1" version="1"/>
                     </fareContractEntries>
-                    
                 </FareContract>
             </fareContracts>
+            
+            
+            <travelSpecifications>
+                <TravelSpecification id="ENT:TravelSpecification:1" version="1">
+                    <Name>test</Name>
+                </TravelSpecification>
+            </travelSpecifications>
+            
+            
+            <salesTransactions>
+                <SalesTransaction version="1" id="ENT:SalesTransaction:1">
+                    <Name>Kjøp enkeltbillett fra Oslo til Trondheim </Name>
+                    <Date>2018-09-06T01:07:00</Date>
+                    <Amount>699</Amount>
+                    <Currency>NOK</Currency>
+                    <PaymentMethod>debitCard</PaymentMethod>
+                    <customerPurchasePackages>
+                        <!-- Referanse til customer purchase packages -->
+                        <CustomerPurchasePackageRef ref="ENT:CustomerPurchasePackage:SingleTripSpecificJourney" version="1"/>
+                    </customerPurchasePackages>
+                </SalesTransaction>
+            </salesTransactions>
+            
             
             <customerPurchasePackages>
                 <CustomerPurchasePackage id="ENT:CustomerPurchasePackage:SingleTripSpecificJourney" version="1">
@@ -352,6 +391,7 @@
                     </customerPurchasePackageElements>
                     
                     <prices>
+                        <CustomerPurchasePackagePriceRef ref=""></CustomerPurchasePackagePriceRef>
                         <!-- Delbeløp for denne pakken i SalesTransaction -->
                         <CustomerPurchasePackagePrice id="ENT:CustomerPurchasePackagePrice:1">
                             <Amount>699</Amount>
@@ -468,7 +508,7 @@
 
                 2 leg (Drammen - Oslo - Rakkestad)
                 Bestemt avgang
-                1 produkt (NSB Ordinær
+                1 produkt (NSB Ordinaer
                 Samme authority (nsb)
                 Barn
 
@@ -578,7 +618,7 @@
 
         <!-- Case 2: Gjennomgående billett NSB - Gjøvikbane
             Minipris på regiontog
-            Ordinærbillett på lokaltog
+            Ordinaerbillett på lokaltog
             Voksen
             Setereservasjon på regiontog
             Ikke setevalg på lokaltog

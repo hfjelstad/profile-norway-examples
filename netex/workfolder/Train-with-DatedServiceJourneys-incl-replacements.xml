@@ -22,7 +22,6 @@
   <Description>EXAMPLE</Description>
   <dataObjects>
 
-
     <VehicleScheduleFrame created="2020-01-03T15:00:00" version="0" id="NSB:VehicleScheduleFrame:4145997"> 
       <!-- placeholder -->
     </VehicleScheduleFrame>
@@ -30,6 +29,12 @@
 
     <GeneralFrame created="2020-01-03T15:00:00" version="0" id="NSB:GeneralFrame:4145997">
       <!-- placeholder -->
+      <versions>
+        <Version id="ENT:Version:1" version="1">
+          <Status>deprecated</Status>
+          <VersionType>baseline</VersionType>
+        </Version>
+      </versions>
     </GeneralFrame>
 
 
@@ -196,10 +201,6 @@
           <lines>
             <Line version="0" id="NSB:Line:41">
               <Name>Oslo S - Drammen stasjon</Name>
-              <TransportMode>rail</TransportMode>
-              <TransportSubmode>
-                <RailSubmode>regionalRail</RailSubmode>
-              </TransportSubmode>
               <PublicCode>41</PublicCode>
               <OperatorRef ref="NSB:Operator:503"/>
               <RepresentedByGroupRef ref="NSB:Network:1"/>

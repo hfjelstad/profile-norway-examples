@@ -191,7 +191,22 @@
                                 </TimetabledPassingTime>
                             </passingTimes>
                         </ServiceJourney>
+                        
+                        
+                        
+                        <!-- See NeTEx part 2 - ﻿7.4.3.3.2 SpecialService – Model Element (page 59) -->
+                        <!-- 
+                            A work of a vehicle that is not planned in a classical way, i.e. that is generally 
+                            not based on VEHICLE JOURNEYs using JOURNEY PATTERNs. It involves specific 
+                            characteristics (such as specific access rights) and/or may be operated under 
+                            specific circumstances.
+                            -->
+                        <SpecialService version="1" id="ENT:SpecialService:1">
+                            <!-- TODO -->
+                        </SpecialService>
+                        
                     </vehicleJourneys>
+                    
                     
                     
                     <journeyInterchanges>

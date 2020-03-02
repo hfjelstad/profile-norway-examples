@@ -65,6 +65,10 @@
         
         
         <SiteFrame version="1" id="NSR:SiteFrame:1">
+            <stopPlaces>
+                <StopPlace version="1" id="NSR:StopPlace:1"/>
+            </stopPlaces>
+            
             
             <parkings>
                 <!-- VEHICLE SHARING PARKING AREA for CityBike -->
@@ -79,7 +83,7 @@
                     </placeEquipments>
                     <parkingAreas>
                         <ParkingArea id="NSR:VehicleSharingParkingArea:CityBike" version="1">
-                            
+                            <!-- TODO -->
                         </ParkingArea>
                     </parkingAreas>
                     

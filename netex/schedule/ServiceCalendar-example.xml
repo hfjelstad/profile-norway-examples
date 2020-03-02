@@ -83,9 +83,13 @@
 						</OperatingDay>
 					</operatingDays>
 					<operatingPeriods>
-						<OperatingPeriod version="1" id="NSR:op:default">
+						<OperatingPeriod version="1" id="NSR:OperatingPeriod:default">
 							<FromOperatingDayRef ref="NSR:OperatingDay:default:1"/>
 							<ToOperatingDayRef ref="NSR:od:default:2"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="1" id="NSR:OperatingPeriod:additional">
+							<FromDate>2016-07-07T00:15:00</FromDate>
+							<ToDate>2016-07-07T00:15:00</ToDate>
 						</OperatingPeriod>
 					</operatingPeriods>
 					<dayTypeAssignments>
@@ -129,12 +133,20 @@
 				<TimetableFrame version="1" id="NSR:TimetableFrame:1">
 					<vehicleJourneys>
 						<ServiceJourney version="1" id="NSR:ServiceJourney:default">
+							<DepartureTime>02:22:00</DepartureTime>
+							<DepartureDayOffset>1</DepartureDayOffset>
 							<dayTypes>
 								<DayTypeRef ref="NSR:DayType:weekdays"/>
 								<DayTypeRef ref="NSR:DayType:Saturday"/>
 								<DayTypeRef ref="NSR:DayType:Sunday"/>
 							</dayTypes>
 							<JourneyPatternRef ref="NSR:JourneyPattern:default"/>
+							<passingTimes>
+								<TimetabledPassingTime id="test" version="test">
+									<DepartureTime>00:22:33</DepartureTime>
+									<DepartureDayOffset></DepartureDayOffset>
+								</TimetabledPassingTime>
+							</passingTimes>
 							<!-- ...(stops etc)... -->
 						</ServiceJourney>
 					</vehicleJourneys>
