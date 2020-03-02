@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    See  NeTEx part 1 
+    (page 993)﻿8.5.6 Routing Constraints
+    (page 998)﻿8.5.6.4.3 TransferRestriction – Model Element 
+-->
+<PublicationDelivery 
+  version="1.09:NO-NeTEx-networktimetable:1.1"
+  xmlns="http://www.netex.org.uk/netex" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <PublicationTimestamp>2020-03-01T00:00:00</PublicationTimestamp>
+    <ParticipantRef>RUT</ParticipantRef>
+
+    <dataObjects>
+        <!-- =========================================== -->
+        <CompositeFrame version="1" id="RUT:Norway:CompositeFrame:1">
+            <codespaces>
+                <Codespace id="ruter">
+                    <Xmlns>RUT</Xmlns>
+                    <XmlnsUrl>http://www.rutebanken.org/ns/nsr</XmlnsUrl>
+                </Codespace>
+                <Codespace id="nsr">
+                    <Xmlns>NSR</Xmlns>
+                    <XmlnsUrl>http://www.rutebanken.org/ns/rut</XmlnsUrl>
+                </Codespace>
+            </codespaces>
+
+            <FrameDefaults>
+                <DefaultCodespaceRef ref="ruter"/>
+                <DefaultLocale>
+                    <TimeZone>CET</TimeZone>
+                    <SummerTimeZone>CEST</SummerTimeZone>
+                    <DefaultLanguage>nob</DefaultLanguage>
+                </DefaultLocale>
+            </FrameDefaults>
+
+
+            <frames>
+                <ResourceFrame version="1" id="RUT:ResourceFrame:1">
+                    <typesOfValue>
+                        <ValueSet version="0" id="RUT:ValueSet:1">
+                            <Name>Transfer Types</Name>
+                            <values>
+                                <TypeOfTransfer version="1" id="RUT:TypeOfTransfer:1">
+                                    <Name>Transfer allowed</Name>
+                                </TypeOfTransfer>
+                                <TypeOfTransfer version="1" id="RUT:TypeOfTransfer:2">
+                                    <Name>Transfer NOT allowed</Name>
+                                </TypeOfTransfer>
+                            </values>
+                        </ValueSet>
+                    </typesOfValue>
+                </ResourceFrame>
+
+
+                <SiteFrame version="1" id="RUT:SiteFrame:1">
+                    <!-- placeholder -->
+                </SiteFrame>
+
+
+                <ServiceFrame version="1" id="RUT:ServiceFrame:1">
+                    <Network version="1" id="RUT:GroupOfLine:1">
+                        <Name>Ruter#</Name>
+                    </Network>
+
+                    <routePoints>
+                        <RoutePoint version="1" id="RUT:RoutePoint:1" />
+                        <RoutePoint version="1" id="RUT:RoutePoint:2" />
+                    </routePoints>
+
+                    <routes>
+                        <Route version="1" id="RUT:Route:1">
+                            <Name>Route</Name>
+                            <LineRef ref="RUT:Line:1"/>
+                            <pointsInSequence>
+                                <PointOnRoute version="1" id="RUT:PointOnRoute:1" order="1">
+                                    <RoutePointRef version="1" ref="RUT:RoutePoint:1"/>
+                                </PointOnRoute>
+                                <PointOnRoute version="1" id="RUT:PointOnRoute:2" order="2">
+                                    <RoutePointRef version="1" ref="RUT:RoutePoint:2"/>
+                                </PointOnRoute>
+                            </pointsInSequence>
+                        </Route>
+                    </routes>
+
+                    <lines>
+                        <Line version="1" id="RUT:Line:1">
+                            <Name>Line</Name>
+                            <TransportSubmode>
+                                <BusSubmode>localBus</BusSubmode>
+                            </TransportSubmode>
+                            <PublicCode>1</PublicCode>
+                            <routes>
+                                <RouteRef version="1" ref="RUT:Route:1"/>
+                            </routes>
+                        </Line>
+                    </lines>
+
+                    <scheduledStopPoints>
+                        <ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:1">
+                            <Name>1</Name>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:2">
+                            <Name>2</Name>
+                        </ScheduledStopPoint>
+                    </scheduledStopPoints>
+
+
+                    <journeyPatterns>
+                        <JourneyPattern version="1" id="RUT:JourneyPattern:1">
+                            <RouteRef version="1" ref="RUT:Route:1"/>
+                            <pointsInSequence>
+                                <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:1" order="1">
+                                    <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:1"/>
+                                    <ForAlighting>false</ForAlighting>
+                                    <DestinationDisplayRef ref="RUT:DestinationDisplay:1"/>
+                                </StopPointInJourneyPattern>
+                                <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:2" order="2">
+                                    <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:2"/>
+                                </StopPointInJourneyPattern>
+                            </pointsInSequence>
+                        </JourneyPattern>
+                        <JourneyPattern version="1" id="RUT:JourneyPattern:2">
+                            <RouteRef version="1" ref="RUT:Route:1"/>
+                            <pointsInSequence>
+                                <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:3" order="1">
+                                    <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:1"/>
+                                    <ForAlighting>false</ForAlighting>
+                                    <DestinationDisplayRef ref="RUT:DestinationDisplay:1"/>
+                                </StopPointInJourneyPattern>
+                                <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:4" order="2">
+                                    <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:2"/>
+                                </StopPointInJourneyPattern>
+                            </pointsInSequence>
+                        </JourneyPattern>
+                    </journeyPatterns>   
+                    
+                    
+                    <transferRestrictions>
+                        <TransferRestriction version="0" id="RUT:TransferRestriction:1" order="1">
+                            <Name>Can transfer</Name>
+                            <TypeOfTransferRef version="1" ref="RUT:TypeOfTransfer:1"/>
+                            <BothWays>true</BothWays>
+                            <RestrictionType>canTransfer</RestrictionType>
+                            <FromPointRef version="1" ref="RUT:ScheduledStopPoint:1"/>
+                            <ToPointRef version="1" ref="RUT:ScheduledStopPoint:2"/>
+                        </TransferRestriction>
+                        <TransferRestriction version="0" id="RUT:TransferRestriction:2" order="1">
+                            <Name>No transfer</Name>
+                            <TypeOfTransferRef version="1" ref="RUT:TypeOfTransfer:2"/>
+                            <BothWays>false</BothWays>
+                            <RestrictionType>cannotTransfer</RestrictionType>
+                            <FromPointRef version="1" ref="RUT:ScheduledStopPoint:1"/>
+                            <ToPointRef version="1" ref="RUT:ScheduledStopPoint:2"/>
+                        </TransferRestriction>
+                    </transferRestrictions>
+                </ServiceFrame>
+
+
+                <ServiceCalendarFrame version="1" id="RUT:ServiceCalendarFrame:1">
+                    <!-- placeholder -->
+                </ServiceCalendarFrame>
+
+
+                <TimetableFrame version="1" id="RUT:TimetableFrame:1">
+                    <vehicleJourneys>
+                        <ServiceJourney version="1" id="RUT:ServiceJourney:1">
+                            <JourneyPatternRef version="1" ref="RUT:JourneyPattern:1"/>
+                            <passingTimes>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1">
+                                    <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:1" version="1"/>
+                                    <DepartureTime>11:11:11</DepartureTime>
+                                </TimetabledPassingTime>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:2">
+                                    <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:2" version="1"/>
+                                    <ArrivalTime>22:22:22</ArrivalTime>
+                                </TimetabledPassingTime>
+                            </passingTimes>
+                        </ServiceJourney>
+                        <ServiceJourney version="1" id="RUT:ServiceJourney:2">
+                            <JourneyPatternRef version="1" ref="RUT:JourneyPattern:2"/>
+                            <passingTimes>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:3">
+                                    <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:3" version="1"/>
+                                    <DepartureTime>12:34:56</DepartureTime>
+                                </TimetabledPassingTime>
+                                <TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:4">
+                                    <StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:4" version="1"/>
+                                    <ArrivalTime>13:37:00</ArrivalTime>
+                                </TimetabledPassingTime>
+                            </passingTimes>
+                        </ServiceJourney>
+                    </vehicleJourneys>
+                    
+                    
+                    <journeyInterchanges>
+                        <ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:1">
+                            <Description>Interchange</Description>
+                            <Priority>-1</Priority>
+                            <StaySeated>false</StaySeated>
+                            <Guaranteed>false</Guaranteed>
+                            <MaximumWaitTime>PT0M</MaximumWaitTime>
+                            <FromPointRef version="1" ref="RUT:ScheduledStopPoint:1"/>
+                            <ToPointRef version="1" ref="RUT:ScheduledStopPoint:2"/>
+                            <FromJourneyRef version="1" ref="RUT:ServiceJourney:1"/>
+                            <ToJourneyRef version="1" ref="RUT:ServiceJourney:2"/>
+                        </ServiceJourneyInterchange>
+                        <ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:2">
+                            <Description>Interchange</Description>
+                            <Priority>1</Priority>
+                            <StaySeated>false</StaySeated>
+                            <Guaranteed>false</Guaranteed>
+                            <MaximumWaitTime>PT0M</MaximumWaitTime>
+                            <FromPointRef version="1" ref="RUT:ScheduledStopPoint:1"/>
+                            <ToPointRef version="1" ref="RUT:ScheduledStopPoint:2"/>
+                            <FromJourneyRef version="1" ref="RUT:ServiceJourney:1"/>
+                            <ToJourneyRef version="1" ref="RUT:ServiceJourney:2"/>
+                        </ServiceJourneyInterchange>
+                    </journeyInterchanges>
+                    
+                </TimetableFrame>
+            </frames>
+        </CompositeFrame>
+    </dataObjects>
+</PublicationDelivery>
