@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    AirportExpressTrain replaced partially by bus
+    Only passenger on the AirportExpressTrain (i.e. ticket holder of this type) may interchange to/from the bus-for-AirportExpressTrain
+-->
+<PublicationDelivery 
+  version="1.09:NO-NeTEx-networktimetable:1.1"
+  xmlns="http://www.netex.org.uk/netex" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <PublicationTimestamp>2020-03-03T00:00:00</PublicationTimestamp>
+    <ParticipantRef>FLT</ParticipantRef>
+
+    <dataObjects>
+        <!-- =========================================== -->
+        <CompositeFrame version="2020-03-03-133600" id="FLT:Norway:CompositeFrame:1">
+            <codespaces>
+                <Codespace id="ruter">
+                    <Xmlns>FLT</Xmlns>
+                    <XmlnsUrl>http://www.rutebanken.org/ns/flt</XmlnsUrl>
+                </Codespace>
+            </codespaces>
+
+
+            <frames>
+                <ServiceFrame version="2020-03-03-133600" id="FLT:ServiceFrame:1">
+                    <Network version="2020-03-03-133600" id="FLT:GroupOfLine:1">
+                        <Name>AirportExpressTrainet</Name>
+                    </Network>
+                    
+                    
+                    <routePoints>
+                        <RoutePoint version="2020-03-03-133600" id="FLT:RoutePoint:1" />
+                        <RoutePoint version="2020-03-03-133600" id="FLT:RoutePoint:2" />
+                    </routePoints>
+                    
+                    
+                    <routes>
+                        <Route id="FLT:Route:1-10" version="2020-03-03-133600">
+                            <Name>Route</Name>
+                            <LineRef ref="FLT:Line:1"/>
+                            <pointsInSequence>
+                                <PointOnRoute version="2020-03-03-133600" id="FLT:PointOnRoute:1" order="1">
+                                    <RoutePointRef version="2020-03-03-133600" ref="FLT:RoutePoint:1"/>
+                                </PointOnRoute>
+                                <PointOnRoute version="2020-03-03-133600" id="FLT:PointOnRoute:2" order="2">
+                                    <RoutePointRef version="2020-03-03-133600" ref="FLT:RoutePoint:2"/>
+                                </PointOnRoute>
+                            </pointsInSequence>
+                        </Route>
+                        <!-- TODO: Legg to <Route> for AirportExpressTrain to bus-for-AirportExpressTrain -->
+                    </routes>
+                    
+                    
+                    <lines>
+                        <!-- TODO: Korriger linjenummer mv. -->
+                        <Line version="2020-03-03-133600" id="FLT:Line:1">
+                            <Name>AirportExpressTrainet</Name>
+                            <TransportMode>rail</TransportMode>
+                            <TransportSubmode>
+                                <RailSubmode>airportLinkRail</RailSubmode>
+                            </TransportSubmode>
+                            <PublicCode>XX</PublicCode>
+                            <routes>
+                                <RouteRef ref="FLT:Route:1-10" version="2020-03-03-133600"/>
+                            </routes>
+                        </Line>
+                    </lines>
+                    
+
+                    <scheduledStopPoints>
+                        <!-- StopPoints for initial bus-for-AirportExpressTrain and subsequent AirportExpressTrain -->
+                        <ScheduledStopPoint id="FLT:ScheduledStopPoint:760142150" version="2020-03-03-133600">
+                            <Description>bus 2699 start</Description>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="FLT:ScheduledStopPoint:760141350" version="2020-03-03-133600">
+                            <Description>bus 2699 stop</Description>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="FLT:ScheduledStopPoint:760142150-XX" version="2020-03-03-133600">
+                            <Description>Tog 3701 start</Description>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="FLT:ScheduledStopPoint:760141350-XX" version="2020-03-03-133600">
+                            <Description>Tog 3701 stop</Description>
+                        </ScheduledStopPoint>
+                        
+                        <!-- StopPoints for initial AirportExpressTrain and subsequent bus-for-AirportExpressTrain -->
+                        <ScheduledStopPoint id="FLT:ScheduledStopPoint:NN-start" version="2020-03-03-133600">
+                            <Description>Tog NN start</Description>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="FLT:ScheduledStopPoint:NN-stop" version="2020-03-03-133600">
+                            <Description>Tog NN stop</Description>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="FLT:ScheduledStopPoint:MM-start" version="2020-03-03-133600">
+                            <Description>bus MM start</Description>
+                        </ScheduledStopPoint>
+                        <ScheduledStopPoint id="FLT:ScheduledStopPoint:MM-stop" version="2020-03-03-133600">
+                            <Description>bus MM stop</Description>
+                        </ScheduledStopPoint> 
+                    </scheduledStopPoints>
+                    
+                    
+                    <journeyPatterns> 
+                        <!-- bus-for-AirportExpressTrain to AirportExpressTrain -->
+                        <!-- BUS -->
+                        <JourneyPattern id="FLT:JourneyPattern:1-10-bus" version="2020-03-03-133600">
+                            <Description>bus 2699</Description>
+                            <RouteRef ref="FLT:Route:1-10" version="2020-03-03-133600" />
+                            <pointsInSequence>
+                                <StopPointInJourneyPattern id="FLT:StopPointInJourneyPattern:1-10-1" version="2020-03-03-133600" order="1">
+                                    <ScheduledStopPointRef ref="FLT:ScheduledStopPoint:760142150" version="2020-03-03-133600"/>
+                                    <ForAlighting>false</ForAlighting>
+                                    <ForBoarding>true</ForBoarding>
+                                    <DestinationDisplayRef ref="FLT:DestinationDisplay:1" />
+                                </StopPointInJourneyPattern>
+                                <StopPointInJourneyPattern id="FLT:StopPointInJourneyPattern:1-10-2" version="2020-03-03-133600" order="2">
+                                    <ScheduledStopPointRef ref="FLT:ScheduledStopPoint:760141350" version="2020-03-03-133600"/>
+                                    <ForAlighting>true</ForAlighting>
+                                    <ForBoarding>false</ForBoarding>
+                                    <StopUse>interchangeOnly</StopUse>
+                                </StopPointInJourneyPattern>
+                            </pointsInSequence>
+                        </JourneyPattern> 
+                        <!-- TRAIN -->
+                        <JourneyPattern id="FLT:JourneyPattern:1-10-TOG" version="2020-03-03-133600">
+                            <Description>Tog 3701</Description>
+                            <RouteRef ref="FLT:Route:1-10" version="2020-03-03-133600" />
+                            <pointsInSequence>
+                                <StopPointInJourneyPattern id="FLT:StopPointInJourneyPattern:1-10-3" version="2020-03-03-133600" order="1">
+                                    <ScheduledStopPointRef ref="FLT:ScheduledStopPoint:760142150-XX" version="2020-03-03-133600"/>
+                                    <ForAlighting>false</ForAlighting>
+                                    <ForBoarding>true</ForBoarding>
+                                    <DestinationDisplayRef ref="FLT:DestinationDisplay:2" />
+                                </StopPointInJourneyPattern>
+                                <StopPointInJourneyPattern id="FLT:StopPointInJourneyPattern:1-10-4" version="2020-03-03-133600" order="2">
+                                    <ScheduledStopPointRef ref="FLT:ScheduledStopPoint:760141350-XX" version="2020-03-03-133600"/>
+                                    <ForAlighting>true</ForAlighting>
+                                    <ForBoarding>false</ForBoarding>
+                                </StopPointInJourneyPattern>
+                            </pointsInSequence>
+                        </JourneyPattern> 
+                        
+                        
+                        <!-- TODO: legg inn riktige nummer -->
+                        
+                        <!-- AirportExpressTrain to bus-for-AirportExpressTrain -->
+                        <!-- TRAIN -->
+                        <JourneyPattern id="FLT:JourneyPattern:1-20-AirportExpressTrain" version="2020-03-03-133600">
+                            <Description>Tog NN</Description>
+                            <RouteRef ref="FLT:Route:1-10" version="2020-03-03-133600" />
+                            <pointsInSequence>
+                                <StopPointInJourneyPattern id="FLT:StopPointInJourneyPattern:1-20-1" version="2020-03-03-133600" order="1">
+                                    <ScheduledStopPointRef ref="FLT:ScheduledStopPoint:NN-start" version="2020-03-03-133600"/>
+                                    <ForAlighting>false</ForAlighting>
+                                    <ForBoarding>true</ForBoarding>
+                                    <DestinationDisplayRef ref="FLT:DestinationDisplay:3" />
+                                </StopPointInJourneyPattern>
+                                <StopPointInJourneyPattern id="FLT:StopPointInJourneyPattern:1-20-2" version="2020-03-03-133600" order="2">
+                                    <ScheduledStopPointRef ref="FLT:ScheduledStopPoint:760141350" version="2020-03-03-133600"/>
+                                    <ForAlighting>true</ForAlighting>
+                                    <ForBoarding>false</ForBoarding>
+                                    <StopUse>interchangeOnly</StopUse>
+                                </StopPointInJourneyPattern>
+                            </pointsInSequence>
+                        </JourneyPattern>
+                        <!-- BUS -->
+                        <JourneyPattern id="FLT:JourneyPattern:1-20-bus" version="2020-03-03-133600">
+                            <Description>bus MM</Description>
+                            <RouteRef ref="FLT:Route:1-10" version="2020-03-03-133600" />
+                            <pointsInSequence>
+                                <StopPointInJourneyPattern id="FLT:StopPointInJourneyPattern:1-20-3" version="2020-03-03-133600" order="1">
+                                    <ScheduledStopPointRef ref="FLT:ScheduledStopPoint:760142150-XX" version="2020-03-03-133600"/>
+                                    <ForAlighting>false</ForAlighting>
+                                    <ForBoarding>true</ForBoarding>
+                                    <DestinationDisplayRef ref="FLT:DestinationDisplay:4" />
+                                    <StopUse>interchangeOnly</StopUse>
+                                </StopPointInJourneyPattern>
+                                <StopPointInJourneyPattern id="FLT:StopPointInJourneyPattern:1-20-4" version="2020-03-03-133600" order="2">
+                                    <ScheduledStopPointRef ref="FLT:ScheduledStopPoint:760141350-XX" version="2020-03-03-133600"/>
+                                    <ForAlighting>true</ForAlighting>
+                                    <ForBoarding>false</ForBoarding>
+                                </StopPointInJourneyPattern>
+                            </pointsInSequence>
+                        </JourneyPattern>
+                    </journeyPatterns>
+                </ServiceFrame>
+                
+                
+                
+                <ServiceCalendarFrame version="2020-03-03-133600" id="FLT:ServiceCalendarFrame:1">
+                    <!-- placeholder -->
+                </ServiceCalendarFrame>
+                
+                
+                
+                <TimetableFrame id="FLT:TimetableFrame:1" version="2020-03-03-133600">
+                    <vehicleJourneys>
+                        <ServiceJourney id="FLT:ServiceJourney:1-344-3699" version="2020-03-03-133600">
+                            <Description>bus 2699</Description>
+                            <JourneyPatternRef ref="FLT:JourneyPattern:1-10-bus" version="2020-03-03-133600"/>
+                            <passingTimes>
+                                <TimetabledPassingTime id="FLT:TimetabledPassingTime:1" version="2020-03-03-133600">
+                                    <StopPointInJourneyPatternRef ref="FLT:StopPointInJourneyPattern:1" version="2020-03-03-133600"/>
+                                    <!-- TODO -->
+                                    <DepartureTime>11:11:00</DepartureTime>
+                                </TimetabledPassingTime>
+                                <TimetabledPassingTime id="FLT:TimetabledPassingTime:2" version="2020-03-03-133600">
+                                    <StopPointInJourneyPatternRef ref="FLT:StopPointInJourneyPattern:2" version="2020-03-03-133600"/>
+                                    <!-- TODO -->
+                                    <ArrivalTime>11:22:00</ArrivalTime>
+                                </TimetabledPassingTime>
+                            </passingTimes>
+                        </ServiceJourney>
+                        <ServiceJourney id="FLT:ServiceJourney:1-65-3701" version="2020-03-03-133600">
+                            <Description>Tog 3701</Description>
+                            <JourneyPatternRef ref="FLT:JourneyPattern:1-10-TOG" version="2020-03-03-133600"/>
+                            <passingTimes>
+                                <TimetabledPassingTime id="FLT:TimetabledPassingTime:3" version="2020-03-03-133600">
+                                    <StopPointInJourneyPatternRef ref="FLT:StopPointInJourneyPattern:3" version="2020-03-03-133600"/>
+                                    <!-- TODO -->
+                                    <DepartureTime>11:23:00</DepartureTime>
+                                </TimetabledPassingTime>
+                                <TimetabledPassingTime id="FLT:TimetabledPassingTime:4" version="2020-03-03-133600">
+                                    <StopPointInJourneyPatternRef ref="FLT:StopPointInJourneyPattern:4" version="2020-03-03-133600"/>
+                                    <!-- TODO -->
+                                    <ArrivalTime>11:32:00</ArrivalTime>
+                                </TimetabledPassingTime>
+                            </passingTimes>
+                        </ServiceJourney>
+                        
+                        <ServiceJourney id="FLT:ServiceJourney:NN" version="2020-03-03-133600">
+                            <Description>Tog NN</Description>
+                            <JourneyPatternRef ref="FLT:JourneyPattern:1-20-AirportExpressTrain" version="2020-03-03-133600"/>
+                            <passingTimes>
+                                <TimetabledPassingTime id="FLT:TimetabledPassingTime:5" version="2020-03-03-133600">
+                                    <StopPointInJourneyPatternRef ref="FLT:StopPointInJourneyPattern:1" version="2020-03-03-133600"/>
+                                    <!-- TODO -->
+                                    <DepartureTime>21:12:00</DepartureTime>
+                                </TimetabledPassingTime>
+                                <TimetabledPassingTime id="FLT:TimetabledPassingTime:6" version="2020-03-03-133600">
+                                    <StopPointInJourneyPatternRef ref="FLT:StopPointInJourneyPattern:2" version="2020-03-03-133600"/>
+                                    <!-- TODO -->
+                                    <ArrivalTime>21:21:00</ArrivalTime>
+                                </TimetabledPassingTime>
+                            </passingTimes>
+                        </ServiceJourney>
+                        <ServiceJourney id="FLT:ServiceJourney:MM" version="2020-03-03-133600">
+                            <Description>bus MM</Description>
+                            <JourneyPatternRef ref="FLT:JourneyPattern:1-20-bus" version="2020-03-03-133600"/>
+                            <passingTimes>
+                                <TimetabledPassingTime id="FLT:TimetabledPassingTime:7" version="2020-03-03-133600">
+                                    <StopPointInJourneyPatternRef ref="FLT:StopPointInJourneyPattern:3" version="2020-03-03-133600"/>
+                                    <!-- TODO -->
+                                    <DepartureTime>21:23:00</DepartureTime>
+                                </TimetabledPassingTime>
+                                <TimetabledPassingTime id="FLT:TimetabledPassingTime:8" version="2020-03-03-133600">
+                                    <StopPointInJourneyPatternRef ref="FLT:StopPointInJourneyPattern:4" version="2020-03-03-133600"/>
+                                    <!-- TODO -->
+                                    <ArrivalTime>21:31:00</ArrivalTime>
+                                </TimetabledPassingTime>
+                            </passingTimes>
+                        </ServiceJourney>
+                    </vehicleJourneys>
+                    
+                    
+                    <journeyInterchanges> 
+                       <!-- Interchange from bus-for-AirportExpressTrain to AirportExpressTrain -->
+                        <ServiceJourneyInterchange id="FLT:ServiceJourneyInterchange:52" version="2020-03-03-133600">
+                            <Description>bus 2699 to Tog 3701</Description>
+                            <Planned>true</Planned>
+                            <Guaranteed>true</Guaranteed>
+                            <FromPointRef ref="FLT:ScheduledStopPoint:760141350" version="2020-03-03-133600"/>
+                            <ToPointRef ref="FLT:ScheduledStopPoint:760142150-XX" version="2020-03-03-133600"/>
+                            <FromJourneyRef ref="FLT:ServiceJourney:1-344-3699" version="2020-03-03-133600"/>
+                            <ToJourneyRef ref="FLT:ServiceJourney:1-65-3701" version="2020-03-03-133600"/>
+                        </ServiceJourneyInterchange>
+                        
+                        <!-- Interchange from AirportExpressTrain-tog to bus-for-AirportExpressTrain -->
+                        <ServiceJourneyInterchange id="FLT:ServiceJourneyInterchange:123" version="2020-03-03-133600">
+                            <Description>Tog NN to bus MM</Description>
+                            <Planned>true</Planned>
+                            <Guaranteed>true</Guaranteed>
+                            <FromPointRef ref="FLT:ScheduledStopPoint:NN-stop" version="2020-03-03-133600"/>
+                            <ToPointRef ref="FLT:ScheduledStopPoint:MM-start" version="2020-03-03-133600"/>
+                            <FromJourneyRef ref="FLT:ServiceJourney:NN" version="2020-03-03-133600"/>
+                            <ToJourneyRef ref="FLT:ServiceJourney:MM" version="2020-03-03-133600"/>
+                        </ServiceJourneyInterchange>
+                    </journeyInterchanges>
+                    
+                </TimetableFrame>
+            </frames>
+        </CompositeFrame>
+    </dataObjects>
+</PublicationDelivery>
