@@ -152,12 +152,12 @@
                                     <ForAlighting>false</ForAlighting>
                                     <ForBoarding>true</ForBoarding>
                                     <DestinationDisplayRef ref="FLT:DestinationDisplay:3" />
-                                    <StopUse>interchangeOnly</StopUse>
                                 </StopPointInJourneyPattern>
                                 <StopPointInJourneyPattern id="FLT:StopPointInJourneyPattern:1-20-2" version="2020-02-28-133600" order="2">
                                     <ScheduledStopPointRef ref="FLT:ScheduledStopPoint:760141350" version="2020-02-28-133600"/>
                                     <ForAlighting>true</ForAlighting>
                                     <ForBoarding>false</ForBoarding>
+                                    <StopUse>interchangeOnly</StopUse>
                                 </StopPointInJourneyPattern>
                             </pointsInSequence>
                         </JourneyPattern>
