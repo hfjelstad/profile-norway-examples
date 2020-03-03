@@ -87,6 +87,7 @@
                     <lines>
                         <Line version="1" id="RUT:Line:1">
                             <Name>Line</Name>
+                            <TransportMode>bus</TransportMode>
                             <TransportSubmode>
                                 <BusSubmode>localBus</BusSubmode>
                             </TransportSubmode>
