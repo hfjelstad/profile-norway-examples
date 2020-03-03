@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-    Flytog erstattes av buss fra Asker, kun reisende med Flytoget har overgang til bussen
+    Flytog erstattes av buss, kun reisende med Flytoget har overgang til buss-for-Flytog
 -->
 <PublicationDelivery 
   version="1.09:NO-NeTEx-networktimetable:1.1"
