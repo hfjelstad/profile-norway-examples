@@ -100,13 +100,9 @@
                     <scheduledStopPoints>
                         <ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:1">
                             <Name>1</Name>
-                            <ForAlighting>false</ForAlighting>
-                            <ForBoarding>false</ForBoarding>
                         </ScheduledStopPoint>
                         <ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:2">
                             <Name>2</Name>
-                            <ForAlighting>true</ForAlighting>
-                            <ForBoarding>false</ForBoarding>
                         </ScheduledStopPoint>
                     </scheduledStopPoints>
 
@@ -117,12 +113,11 @@
                             <pointsInSequence>
                                 <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:1" order="1">
                                     <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:1"/>
-                                    
-                                    <ForBoarding></ForBoarding>
-                                    
+                                    <ForAlighting>false</ForAlighting>
+                                    <ForBoarding>true</ForBoarding>
                                     <DestinationDisplayRef ref="RUT:DestinationDisplay:1"/>
                                    
-                                    <!-- IKKE i Nordic Profile -->
+                                    <!-- Skal legges inn i Nordic Profile -->
                                     <StopUse>interchangeOnly</StopUse>
                                     
                                 </StopPointInJourneyPattern>
@@ -136,11 +131,15 @@
                             <pointsInSequence>
                                 <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:3" order="1">
                                     <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:1"/>
-                                    <ForAlighting>false</ForAlighting>
                                     <DestinationDisplayRef ref="RUT:DestinationDisplay:1"/>
                                 </StopPointInJourneyPattern>
                                 <StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:4" order="2">
                                     <ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:2"/>
+                                    <ForAlighting>true</ForAlighting>
+                                    <ForBoarding>false</ForBoarding>
+                                    
+                                    <StopUse>interchangeOnly</StopUse>
+                                    
                                 </StopPointInJourneyPattern>
                             </pointsInSequence>
                         </JourneyPattern>
