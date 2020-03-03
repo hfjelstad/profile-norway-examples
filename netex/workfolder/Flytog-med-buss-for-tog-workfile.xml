@@ -110,7 +110,6 @@
                                     <ForAlighting>false</ForAlighting>
                                     <ForBoarding>true</ForBoarding>
                                     <DestinationDisplayRef ref="FLT:DestinationDisplay:1" />
-                                    <StopUse>interchangeOnly</StopUse>
                                 </StopPointInJourneyPattern>
                                 <StopPointInJourneyPattern id="FLT:StopPointInJourneyPattern:1-10-2" version="2020-02-28-133600" order="2">
                                     <ScheduledStopPointRef ref="FLT:ScheduledStopPoint:760141350" version="2020-02-28-133600"/>
