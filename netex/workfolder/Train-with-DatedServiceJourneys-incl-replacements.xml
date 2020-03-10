@@ -171,6 +171,7 @@
             </RoutePoint>
           </routePoints>
           
+          
           <routeLinks>
             <RouteLink version="0" id="ENT:RouteLink:1">
               <Distance>100</Distance>
@@ -207,6 +208,7 @@
             </Line>
           </lines>
           
+          
           <scheduledStopPoints>
             <ScheduledStopPoint version="0" id="NSB:ScheduledStopPoint:1"/> <!-- Oslo S -->
             <ScheduledStopPoint version="0" id="NSB:ScheduledStopPoint:2"/> <!-- Nationaltheatret -->
@@ -214,6 +216,7 @@
             <ScheduledStopPoint version="0" id="NSB:ScheduledStopPoint:4"/> <!-- Asker -->
             <ScheduledStopPoint version="0" id="NSB:ScheduledStopPoint:5"/> <!-- Drammen -->
           </scheduledStopPoints>
+          
           
           <stopAssignments>
             <PassengerStopAssignment version="0" id="ENT:PassengerStopAssignment:1" order="1">
@@ -226,7 +229,9 @@
               <StopPlaceRef version="0" ref="NSR:StopPlace:2"/>
               <QuayRef version="0" ref="NSR:Quay:2"/>
             </PassengerStopAssignment>
+            
             <!-- etc... -->
+            
           </stopAssignments>
           
           
@@ -488,7 +493,7 @@
             </ServiceJourney>
             
             
-            <!-- NB: *ExternalVehicleJourneyRef* ONLY USED DUE TO LACK OF ServiceJourneyTemplateRef --> 
+            <!-- NB: *ExternalVehicleJourneyRef* USED DUE TO LACK OF "(Base)ServiceJourneyRef" (or similar reference back to the "generic" ServiceJourney) --> 
             
             <!-- Normal service -->
             <DatedServiceJourney version="0" id="NSB:DatedServiceJourney:41-2020-01-01">
@@ -562,7 +567,8 @@
           </vehicleJourneys>
             
             
-          <!-- ALTERNATIVE: -->
+          
+          <!-- ALTERNATIVE CONSTRUCTION: -->
           
           <groupsOfServices>
             <GroupOfServices id="NSB:GroupOfServices:41" version="0">
@@ -581,18 +587,12 @@
                 </GroupOfServicesMember>
                 <GroupOfServicesMember id="NSB:GroupOfServicesMember:41-D" version="0" order="2">
                   <DatedVehicleJourneyRef ref="NSB:DatedServiceJourney:41-D-2020-01-05" />
-                </GroupOfServicesMember>                
-                <!-- deprecated -->
-                <!--
-                <GroupOfServicesMember id="NSB:GroupOfServicesMember:3" version="0" order="3">
-                  <TrainNumberRef ref="NSB:TrainNumber:1-3922" version="0"/>
                 </GroupOfServicesMember>
-                -->
               </members>
             </GroupOfServices>
           </groupsOfServices>
           
-          <!-- deprecated -->
+          <!-- (deemed not relevant for this use-case) -->
           <!--
           <trainNumbers>
             <TrainNumber id="NSB:TrainNumber:1-3922" version="0">

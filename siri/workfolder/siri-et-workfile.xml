@@ -118,7 +118,6 @@
                             <SituationRef>
                                 <SituationSimpleRef>placeholder</SituationSimpleRef>
                             </SituationRef>
-                            
                             <AimedArrivalTime>2017-08-15T15:00:00+02:00</AimedArrivalTime>
                             <ExpectedArrivalTime>2017-08-15T15:00:01+02:00</ExpectedArrivalTime>
                             <ArrivalStatus>arrived</ArrivalStatus>
@@ -130,7 +129,6 @@
                             </ArrivalStopAssignment>
                             <ArrivalOperatorRefs>placeholder</ArrivalOperatorRefs>
                             <ArrivalOperatorRefs>placeholder</ArrivalOperatorRefs>
-                            
                             <AimedDepartureTime>2017-08-15T15:00:00+02:00</AimedDepartureTime>
                             <ExpectedDepartureTime>2017-08-15T15:00:00+02:00</ExpectedDepartureTime>
                             <!-- <EarliestExpectedDepartureTime>2017-08-15T15:00:00+02:00</EarliestExpectedDepartureTime> -->

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
     AirportExpressTrain replaced partially by bus
-    Only passenger on the AirportExpressTrain (i.e. ticket holder of this type) may interchange to/from the bus-for-AirportExpressTrain
+    
+    Only passenger on the AirportExpressTrain (i.e. ticket holders to this train) 
+    may interchange to/from the bus-for-AirportExpressTrain
 -->
 <PublicationDelivery 
   version="1.09:NO-NeTEx-networktimetable:1.1"
