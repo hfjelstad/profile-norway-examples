@@ -27,7 +27,7 @@
 		</ResourceFrame>
 		
 		
-		<SiteFrame version="1" id="NSR:SiteFrame:1" >
+		<SiteFrame version="1" id="NSR:SiteFrame:1">
 			<stopPlaces>
 				<!-- Simplified stop place description without quays -->
 				<StopPlace version="1" id="NSR:StopPlace:1">
@@ -70,6 +70,39 @@
 			</stopPlaces>
 			
 			<tariffZones>
+				<TariffZone id="RUT:TariffZone:Viken" version="1">
+					<Name>Ruter# hele Viken</Name>
+				</TariffZone>
+				
+				<TariffZone id="RUT:TariffZone:Oslo-og-omegn" version="1">
+					<Name lang="no">Ruter# tidl. Akershus</Name>
+					<ParentZoneRef ref="RUT:TariffZone:Viken" version="1"/>
+				</TariffZone>
+				
+				<TariffZone id="RUT:TariffZone:Oslo-bykjerne" version="1">
+					<Name lang="no">Ruter# Oslo</Name>
+					<ParentZoneRef ref="RUT:TariffZone:Oslo-og-omegn" version="1"/>
+				</TariffZone>
+				
+				<TariffZone id="RUT:TariffZone:1" version="1">
+					<Name>Ruter# zone 2V</Name>
+					<PrivateCode>2V</PrivateCode>
+					<types>
+						<TypeOfZoneRef ref="NSR:TypeOfZone:Ruter" version="1"/>
+					</types>
+					<gml:Polygon gml:id="Ruter1Oslo" srsName="Ruter#">
+						<gml:exterior>
+							<gml:LinearRing>
+								<gml:pos>60.037738 10.813144</gml:pos>
+								<gml:pos>59.913408 10.640027</gml:pos>
+								<gml:pos>59.823341 10.798219</gml:pos>
+								<gml:pos>59.944553 10.945122</gml:pos>
+							</gml:LinearRing>
+						</gml:exterior>
+					</gml:Polygon>
+					<ParentZoneRef ref="RUT:TariffZone:Oslo-bykjerne" version="1"/>
+				</TariffZone>
+				
 				<TariffZone id="RUT:TariffZone:2V" version="1">
 					<Name>Ruter# zone 2V</Name>
 					<PrivateCode>2V</PrivateCode>
@@ -89,7 +122,9 @@
 							</gml:LinearRing>
 						</gml:exterior>
 					</gml:Polygon>
+					<ParentZoneRef ref="RUT:TariffZone:Oslo-og-omegn" version="1"/>
 				</TariffZone>
+				
 				<TariffZone id="RUT:TariffZone:3V" version="1">
 					<Name>Ruter# zone 3V</Name>
 					<PrivateCode>3V</PrivateCode>
@@ -107,6 +142,7 @@
 							</gml:LinearRing>
 						</gml:exterior>
 					</gml:Polygon>
+					<ParentZoneRef ref="RUT:TariffZone:Oslo-og-omegn" version="1"/>
 				</TariffZone>
 			</tariffZones>		
 		</SiteFrame>
