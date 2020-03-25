@@ -142,7 +142,7 @@
 							</gml:LinearRing>
 						</gml:exterior>
 					</gml:Polygon>
-					<ParentZoneRef ref="RUT:TariffZone:Oslo-og-omegn" version="1"/>
+					<ParentZoneRef ref="RUT:TariffZone:Oslo-og-omegn" version="1"/>	
 				</TariffZone>
 			</tariffZones>		
 		</SiteFrame>
