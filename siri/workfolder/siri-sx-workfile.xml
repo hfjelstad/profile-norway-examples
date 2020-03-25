@@ -10,10 +10,10 @@
         <ProducerRef>CODESPACE</ProducerRef>
         <SituationExchangeDelivery version="2.0">
             <ResponseTimestamp>2020-03-01T01:29:31.173+02:00</ResponseTimestamp>
-            <ValidUntil>2017-08-01T01:29:31.173+02:00</ValidUntil>
+            <ValidUntil>2020-08-01T01:29:31.173+02:00</ValidUntil>
             <Situations>
                 <PtSituationElement>
-                    <CreationTime>2017-06-28T12:32:05.9987717+02:00</CreationTime>
+                    <CreationTime>2020-06-28T12:32:05.9987717+02:00</CreationTime>
                     <ParticipantRef>NSB</ParticipantRef>
                     <SituationNumber>46197</SituationNumber>
                     <Source>
@@ -21,14 +21,14 @@
                         <Phone>99127032</Phone>
                         <Web>http://www.entur.org/test</Web>
                         <AgentReference>unknown</AgentReference>
-                        <TimeOfCommunication>2017-06-30T20:30:01.2475086+02:00</TimeOfCommunication>
+                        <TimeOfCommunication>2020-06-30T20:30:01.2475086+02:00</TimeOfCommunication>
                     </Source>
                     <Verification>verified</Verification>
                     <Progress>open</Progress>
                     <QualityIndex>unconfirmed</QualityIndex>
                     <ValidityPeriod>
                         <StartTime>2020-03-01T02:00:00+02:00</StartTime>
-                        <EndTime>2017-08-16T02:00:00+02:00</EndTime>
+                        <EndTime>2020-08-16T02:00:00+02:00</EndTime>
                     </ValidityPeriod>
                     <ValidityPeriod>
                         <StartTime>2020-03-02T02:00:00+02:00</StartTime>
@@ -38,7 +38,7 @@
                     </Repetitions>
                     <PublicationWindow>
                         <StartTime>2020-03-03T02:00:00+02:00</StartTime>
-                        <EndTime>2017-08-15T23:00:00+02:00</EndTime>
+                        <EndTime>2020-08-15T23:00:00+02:00</EndTime>
                     </PublicationWindow>
                     <UndefinedReason></UndefinedReason>
                     
@@ -94,8 +94,6 @@
                                                 </AffectedStopPoint>
                                             </StopPoints>
                                         </AffectedRoute>
-                                        
-                                        
                                         <AffectedRoute>
                                             <StopPoints>
                                                 <AffectedStopPoint>
@@ -107,8 +105,6 @@
                                                 </AffectedStopPoint>
                                             </StopPoints>
                                         </AffectedRoute>
-                                        
-                                        
                                     </Routes>
                                 </AffectedLine>
                             </AffectedNetwork>
