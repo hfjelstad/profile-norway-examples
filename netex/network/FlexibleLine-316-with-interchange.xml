@@ -15,10 +15,10 @@ Se også NeTEx-eksempel:
 https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 -->
 <PublicationDelivery 
-  version="1.08:NO-NeTEx-networktimetable:1.3"
-  xmlns="http://www.netex.org.uk/netex" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xmlns:gml="http://www.opengis.net/gml/3.2">
+	version="1.08:NO-NeTEx-networktimetable:1.3"
+	xmlns="http://www.netex.org.uk/netex" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:gml="http://www.opengis.net/gml/3.2">
 	
 	<PublicationTimestamp>2016-07-07T16:07:07Z</PublicationTimestamp>
 	<ParticipantRef>RUT</ParticipantRef>
@@ -52,10 +52,14 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<gml:Polygon gml:id="NSR-Polygon-1">
 								<gml:exterior>
 									<gml:LinearRing>
-										<gml:pos srsDimension="2">3.14159265358971 3.14159265358972</gml:pos>
-										<gml:pos srsDimension="2">3.14159265358973 3.14159265358974</gml:pos>
-										<gml:pos srsDimension="2">3.14159265358975 3.14159265358976</gml:pos>
-										<gml:pos srsDimension="2">3.14159265358977 3.14159265358978</gml:pos>
+										<gml:pos srsDimension="2">3.14159265358971
+											3.14159265358972</gml:pos>
+										<gml:pos srsDimension="2">3.14159265358973
+											3.14159265358974</gml:pos>
+										<gml:pos srsDimension="2">3.14159265358975
+											3.14159265358976</gml:pos>
+										<gml:pos srsDimension="2">3.14159265358977
+											3.14159265358978</gml:pos>
 									</gml:LinearRing>
 								</gml:exterior>
 							</gml:Polygon>
@@ -88,10 +92,10 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<Name>Norges Statsbaner</Name>
 							<LegalName>NSB AS</LegalName>
 							<PrivateContactDetails>
-								<Email></Email>
+								<Email/>
 								<Phone>0047 177</Phone>
 								<Url>http://www.ruter.no</Url>
-								<FurtherDetails>Kontaktskjema på websider</FurtherDetails>								
+								<FurtherDetails>Kontaktskjema på websider</FurtherDetails>
 							</PrivateContactDetails>
 							<CustomerServiceContactDetails>
 								<Phone>815 00 888</Phone>
@@ -127,8 +131,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 								<Quay version="1" id="NSR:Quay:ID-HANABORG_ST-QUAY"/>
 							</quays>
 						</StopPlace>
-					</stopPlaces>				
-					
+					</stopPlaces>
+
 					<!-- Angivelse av område hvor fleksibel transport kan bestilles fra/til -->
 					<flexibleStopPlaces>
 						<FlexibleStopPlace version="1" id="NSR:FlexibleStopPlace:ID-HANABORG-NORD">
@@ -140,8 +144,10 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							</Description>
 							<TransportMode>bus</TransportMode>
 							<areas>
-								<FlexibleArea version="1" id="NSR:FlexibleArea:ID-HANABORG-NORD-AREA">
-									<Polygon srsName="wgs84" gml:id="hanaborg" xmlns="http://www.opengis.net/gml/3.2">
+								<FlexibleArea version="1"
+									id="NSR:FlexibleArea:ID-HANABORG-NORD-AREA">
+									<Polygon srsName="wgs84" gml:id="hanaborg"
+										xmlns="http://www.opengis.net/gml/3.2">
 										<exterior>
 											<LinearRing>
 												<pos>59.938831 10.966611</pos>
@@ -165,12 +171,13 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<Name>Ruter# bestillingslinjer</Name>
 						<AuthorityRef version="1" ref="RUT:Authority:Ruter"/>
 					</Network>
-					
+
 					<routePoints>
 						<!-- Flexi-sone Hanaborg Nord -->
 						<RoutePoint version="1" id="RUT:RoutePoint:ID-HANABORG-NORD">
 							<projections>
-								<PointProjection version="1" id="RUT:PointProjection:ID-HANABORG_ST-NORD">
+								<PointProjection version="1"
+									id="RUT:PointProjection:ID-HANABORG_ST-NORD">
 									<ProjectToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD"/>
 								</PointProjection>
 							</projections>
@@ -186,7 +193,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<!-- Lørenskog sentrum -->
 						<RoutePoint version="1" id="RUT:RoutePoint:ID-LORENSKOGSENTRUM">
 							<projections>
-								<PointProjection version="1" id="RUT:PointProjection:ID-LORENSKOGSENTRUM">
+								<PointProjection version="1"
+									id="RUT:PointProjection:ID-LORENSKOGSENTRUM">
 									<ProjectToPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 								</PointProjection>
 							</projections>
@@ -200,44 +208,52 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							</projections>
 						</RoutePoint>
 					</routePoints>
-					
+
 					<routes>
 						<Route version="1" id="RUT:Route:316-TilLorenskog">
 							<Name>316 til Lørenskog sentrum</Name>
 							<FlexibleLineRef ref="RUT:FlexibleLine:316" version="1"/>
 							<DirectionType>inbound</DirectionType>
 							<pointsInSequence>
-								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-HANABORG-NORD-HENTING" order="1">
+								<PointOnRoute version="1"
+									id="RUT:PointOnRoute:ID-HANABORG-NORD-HENTING" order="1">
 									<RoutePointRef version="1" ref="RUT:RoutePoint:ID-HANABORG-NORD"/>
 								</PointOnRoute>
-								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-HANABORG-TIL" order="2">
+								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-HANABORG-TIL"
+									order="2">
 									<RoutePointRef version="1" ref="RUT:RoutePoint:ID-HANABORG"/>
 								</PointOnRoute>
-								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-LORENSKOGSENTRUM-TIL" order="3">
+								<PointOnRoute version="1"
+									id="RUT:PointOnRoute:ID-LORENSKOGSENTRUM-TIL" order="3">
 									<RoutePointRef version="1" ref="RUT:RoutePoint:ID-LORENSKOGSENTRUM"/>
 								</PointOnRoute>
-								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-TRIADEN-TIL" order="4">
+								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-TRIADEN-TIL"
+									order="4">
 									<RoutePointRef version="1" ref="RUT:RoutePoint:ID-TRIADEN"/>
 								</PointOnRoute>
 							</pointsInSequence>
 							<InverseRouteRef ref="RUT:Route:316-FraLorenskog" version="1"/>
 						</Route>
-						
+
 						<Route version="1" id="RUT:Route:316-FraLorenskog">
 							<Name>316 fra Lørenskog sentrum</Name>
 							<FlexibleLineRef ref="RUT:FlexibleLine:316" version="1"/>
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
-								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-TRIADEN-FRA" order="1">
+								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-TRIADEN-FRA"
+									order="1">
 									<RoutePointRef version="1" ref="RUT:RoutePoint:ID-TRIADEN"/>
 								</PointOnRoute>
-								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-LORENSKOGSENTRUM-FRA" order="2">
+								<PointOnRoute version="1"
+									id="RUT:PointOnRoute:ID-LORENSKOGSENTRUM-FRA" order="2">
 									<RoutePointRef version="1" ref="RUT:RoutePoint:ID-LORENSKOGSENTRUM"/>
 								</PointOnRoute>
-								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-HANABORG-FRA" order="3">
+								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-HANABORG-FRA"
+									order="3">
 									<RoutePointRef version="1" ref="RUT:RoutePoint:ID-HANABORG"/>
-								</PointOnRoute>								
-								<PointOnRoute version="1" id="RUT:PointOnRoute:ID-HANABORG-NORD-LEVERING" order="4">
+								</PointOnRoute>
+								<PointOnRoute version="1"
+									id="RUT:PointOnRoute:ID-HANABORG-NORD-LEVERING" order="4">
 									<RoutePointRef version="1" ref="RUT:RoutePoint:ID-HANABORG-NORD"/>
 								</PointOnRoute>
 							</pointsInSequence>
@@ -270,7 +286,7 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							</BookingNote>
 						</FlexibleLine>
 					</lines>
-					
+
 					<destinationDisplays>
 						<DestinationDisplay version="1" id="RUT:DestinationDisplay:Triaden">
 							<FrontText>Triaden</FrontText>
@@ -284,7 +300,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 						<ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:ID-HANABORG_ST">
 							<Name>Hanaborg stasjon</Name>
 						</ScheduledStopPoint>
-						<ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD">
+						<ScheduledStopPoint version="1"
+							id="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD">
 							<Name>Fleksi-sone Hanaborg nord</Name>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint version="1" id="RUT:ScheduledStopPoint:ID-LORENSKOG">
@@ -296,46 +313,58 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					</scheduledStopPoints>
 
 					<stopAssignments>
-						<FlexibleStopAssignment version="1" id="RUT:FlexibleStopAssignment:ID-HANABORG">
+						<FlexibleStopAssignment version="1"
+							id="RUT:FlexibleStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD"/>
 							<FlexibleStopPlaceRef version="1" ref="NSR:FlexibleStopPlace:ID-HANABORG-NORD"/>
 						</FlexibleStopAssignment>
-						<PassengerStopAssignment version="1" order="0" id="RUT:FlexibleStopAssignment:ID-HANABORG">
+						<PassengerStopAssignment version="1" order="0"
+							id="RUT:FlexibleStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<StopPlaceRef version="1" ref="NSR:StopPlace:ID-HANABORG_ST"/>
 							<QuayRef version="1" ref="NSR:Quay:ID-HANABORG_ST-QUAY"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="1" order="0" id="RUT:PassengerStopAssignment:ID-LORENSKOG">
+						<PassengerStopAssignment version="1" order="0"
+							id="RUT:PassengerStopAssignment:ID-LORENSKOG">
 							<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<StopPlaceRef version="1" ref="NSR:StopPlace:ID-LORENSKOGSENTRUM"/>
 							<QuayRef version="1" ref="NSR:Quay:ID-LORENSKOGSENTRUM-QUAY"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="1" order="0" id="RUT:PassengerStopAssignment:ID-TRIADEN">
+						<PassengerStopAssignment version="1" order="0"
+							id="RUT:PassengerStopAssignment:ID-TRIADEN">
 							<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-TRIADEN"/>
 							<StopPlaceRef version="1" ref="NSR:StopPlace:ID-TRIADEN-ENTRANCE"/>
 							<QuayRef version="1" ref="NSR:Quay:ID-TRIADEN-ENTRANCE-QUAY"/>
 						</PassengerStopAssignment>
 					</stopAssignments>
-					
+
 					<journeyPatterns>
 						<JourneyPattern version="1" id="RUT:JourneyPattern:316-TilLorenskog">
 							<Name>316 til Lørenskog</Name>
 							<RouteRef version="1" ref="RUT:Route:316-TilLorenskog"/>
 							<pointsInSequence>
 								<!-- Flexi-sone -->
-								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-tilLorenskog" order="1">
+								<StopPointInJourneyPattern version="1"
+									id="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-tilLorenskog"
+									order="1">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD"/>
 									<ForAlighting>false</ForAlighting>
 									<DestinationDisplayRef version="1" ref="RUT:DestinationDisplay:Triaden"/>
 								</StopPointInJourneyPattern>
 								<!-- (flexi-sone slutt) -->
-								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-tilLorenskog" order="2">
+								<StopPointInJourneyPattern version="1"
+									id="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-tilLorenskog"
+									order="2">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-LORENSKOG-tilLorenskog" order="3">
+								<StopPointInJourneyPattern version="1"
+									id="RUT:StopPointInJourneyPattern:ID-LORENSKOG-tilLorenskog"
+									order="3">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-TRIADEN-tilLorenskog" order="4">
+								<StopPointInJourneyPattern version="1"
+									id="RUT:StopPointInJourneyPattern:ID-TRIADEN-tilLorenskog"
+									order="4">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-TRIADEN"/>
 									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
@@ -345,19 +374,27 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<Name>316 fra Lørenskog</Name>
 							<RouteRef version="1" ref="RUT:Route:316-FraLorenskog"/>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-TRIADEN-fraLorenskog" order="1">
+								<StopPointInJourneyPattern version="1"
+									id="RUT:StopPointInJourneyPattern:ID-TRIADEN-fraLorenskog"
+									order="1">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-TRIADEN"/>
 									<ForAlighting>false</ForAlighting>
 									<DestinationDisplayRef version="1" ref="RUT:DestinationDisplay:HanaborgSt"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-LORENSKOG-fraLorenskog" order="2">
+								<StopPointInJourneyPattern version="1"
+									id="RUT:StopPointInJourneyPattern:ID-LORENSKOG-fraLorenskog"
+									order="2">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-fraLorenskog" order="3">
+								<StopPointInJourneyPattern version="1"
+									id="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-fraLorenskog"
+									order="3">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 								</StopPointInJourneyPattern>
 								<!-- Flexi-sone -->
-								<StopPointInJourneyPattern version="1" id="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-fraLorenskog" order="4">
+								<StopPointInJourneyPattern version="1"
+									id="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-fraLorenskog"
+									order="4">
 									<ScheduledStopPointRef version="1" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD"/>
 									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
@@ -409,11 +446,13 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<NoticedObjectRef version="1" ref="RUT:StopPointInJourneyPattern:ID-TRIADEN-fraLorenskog"/>
 							<!--NoticedObjectRef ref="RUT:FlexibleLine:316"/-->
 						</NoticeAssignment>
-						<NoticeAssignment version="1" id="RUT:NoticeAssignment:316-TilLorenskog" order="0">
+						<NoticeAssignment version="1" id="RUT:NoticeAssignment:316-TilLorenskog"
+							order="0">
 							<NoticeRef version="1" ref="RUT:Notice:316-Henting"/>
 							<NoticedObjectRef version="1" ref="RUT:ServiceJourney:0316-TilLorenskog"/>
 						</NoticeAssignment>
-						<NoticeAssignment version="1" id="RUT:NoticeAssignment:316-FraLorenskog" order="0">
+						<NoticeAssignment version="1" id="RUT:NoticeAssignment:316-FraLorenskog"
+							order="0">
 							<NoticeRef version="1" ref="RUT:Notice:316-Levering"/>
 							<NoticedObjectRef version="1" ref="RUT:ServiceJourney:0316-FraLorenskog"/>
 						</NoticeAssignment>
@@ -427,7 +466,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<Name>Weekdays</Name>
 							<properties>
 								<PropertyOfDay>
-									<DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+									<DaysOfWeek>Monday Tuesday Wednesday Thursday
+										Friday</DaysOfWeek>
 								</PropertyOfDay>
 							</properties>
 						</DayType>
@@ -440,8 +480,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					</operatingPeriods>
 					<dayTypeAssignments>
 						<DayTypeAssignment id="RUT:DayTypeAssignment:1" version="1" order="1">
-							<OperatingPeriodRef  version="1" ref="RUT:OperatingPeriod:2017"/>
-							<DayTypeRef  version="1" ref="RUT:DayType:weekdays"/>
+							<OperatingPeriodRef version="1" ref="RUT:OperatingPeriod:2017"/>
+							<DayTypeRef version="1" ref="RUT:DayType:weekdays"/>
 						</DayTypeAssignment>
 					</dayTypeAssignments>
 				</ServiceCalendarFrame>
@@ -451,7 +491,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					<Name>Rute for 2016</Name>
 					<DefaultMode>bus</DefaultMode>
 					<bookingTimes>
-						<AvailabilityCondition version="1" id="RUT:AvailabilityCondition:bookingTimes">
+						<AvailabilityCondition version="1"
+							id="RUT:AvailabilityCondition:bookingTimes">
 							<Description>Åpningstider for bookingkontor</Description>
 							<FromDate>2013-04-07T00:00:00</FromDate>
 							<IsAvailable>true</IsAvailable>
@@ -467,20 +508,24 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							</dayTypes>
 							<JourneyPatternRef version="1" ref="RUT:JourneyPattern:316-TilLorenskog"/>
 							<passingTimes>
-								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1000">
+								<TimetabledPassingTime version="1"
+									id="RUT:TimetabledPassingTime:1000">
 									<!-- Flexi-sone (sted og tid avtales ved bestilling) -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-tilLorenskog" version="1"/>
 									<EarliestDepartureTime>10:10:00</EarliestDepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1015">
+								<TimetabledPassingTime version="1"
+									id="RUT:TimetabledPassingTime:1015">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-tilLorenskog" version="1"/>
 									<ArrivalTime>10:15:00</ArrivalTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1020">
+								<TimetabledPassingTime version="1"
+									id="RUT:TimetabledPassingTime:1020">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-LORENSKOG-tilLorenskog" version="1"/>
 									<ArrivalTime>10:20:00</ArrivalTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1025">
+								<TimetabledPassingTime version="1"
+									id="RUT:TimetabledPassingTime:1025">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-TRIADEN-tilLorenskog" version="1"/>
 									<ArrivalTime>10:25:00</ArrivalTime>
 								</TimetabledPassingTime>
@@ -492,15 +537,18 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							</dayTypes>
 							<JourneyPatternRef version="1" ref="RUT:JourneyPattern:316-FraLorenskog"/>
 							<passingTimes>
-								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1225">
+								<TimetabledPassingTime version="1"
+									id="RUT:TimetabledPassingTime:1225">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-TRIADEN-fraLorenskog" version="1"/>
 									<DepartureTime>12:25:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1230">
+								<TimetabledPassingTime version="1"
+									id="RUT:TimetabledPassingTime:1230">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-LORENSKOG-fraLorenskog" version="1"/>
 									<DepartureTime>12:30:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="1" id="RUT:TimetabledPassingTime:1235">
+								<TimetabledPassingTime version="1"
+									id="RUT:TimetabledPassingTime:1235">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-fraLorenskog" version="1"/>
 									<DepartureTime>12:35:00</DepartureTime>
 								</TimetabledPassingTime>
@@ -514,16 +562,17 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 					</vehicleJourneys>
 
 					<journeyInterchanges>
-					    <!-- JourneyPatternInterchange pdd. ikke i bruk -->
+						<!-- JourneyPatternInterchange pdd. ikke i bruk -->
 						<!--ServiceJourneyPatternInterchange>
 							<FromPointRef ref=""></FromPointRef>
 							<ToPointRef ref=""></ToPointRef>
 							<FromJourneyPatternRef ref=""></FromJourneyPatternRef>
 							<ToJourneyPatternRef ref=""></ToJourneyPatternRef>
 						</ServiceJourneyPatternInterchange-->
-					    
+
 						<!-- Overganger Tog -->
-						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-316-to-L1-C">
+						<ServiceJourneyInterchange version="1"
+							id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-316-to-L1-C">
 							<Description>2Ø Tog fra Oslo 1219</Description>
 							<Priority>0</Priority>
 							<StaySeated>false</StaySeated>
@@ -534,7 +583,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<FromJourneyRef ref="NSB:ServiceJourney:L1-Lillestrom-2-ExtenalRef"/>
 							<ToJourneyRef version="1" ref="RUT:ServiceJourney:0316-FraLorenskog"/>
 						</ServiceJourneyInterchange>
-						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-316-to-L1-D">
+						<ServiceJourneyInterchange version="1"
+							id="RUT:ServiceJourneyInterchange:ID-HANABORG_ST-316-to-L1-D">
 							<Description>2Ø Tog fra Lillestrøm 1231</Description>
 							<Priority>1</Priority>
 							<StaySeated>false</StaySeated>
@@ -546,7 +596,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<ToJourneyRef version="1" ref="RUT:ServiceJourney:0316-FraLorenskog"/>
 						</ServiceJourneyInterchange>
 						<!-- Overganger Buss -->
-						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-316-to-100-C">
+						<ServiceJourneyInterchange version="1"
+							id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-316-to-100-C">
 							<Description>2Ø Buss 100 fra Oslo 1224</Description>
 							<Priority>1</Priority>
 							<StaySeated>false</StaySeated>
@@ -557,7 +608,8 @@ https://github.com/NeTEx-CEN/NeTEx/blob/master/examples/functions/timetable/Nete
 							<FromJourneyRef ref="RUT:ServiceJourney:100-Lillestrom-1-ExtenalRef"/>
 							<ToJourneyRef version="1" ref="RUT:ServiceJourney:0316-TilLorenskog"/>
 						</ServiceJourneyInterchange>
-						<ServiceJourneyInterchange version="1" id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-316-to-100-D">
+						<ServiceJourneyInterchange version="1"
+							id="RUT:ServiceJourneyInterchange:ID-LORENSKOG-316-to-100-D">
 							<Description>2Ø Buss 100 fra Lillestrøm 1222</Description>
 							<Priority>1</Priority>
 							<StaySeated>false</StaySeated>
