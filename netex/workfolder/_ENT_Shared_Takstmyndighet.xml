@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<PublicationDelivery version="1.11:NO-NeTEx-networktimetable:1.3" xmlns="http://www.netex.org.uk/netex" xmlns:gis="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex file:///C:/NeTEx-nk_may_2019/xsd/NeTEx_publication.xsd">
+  <PublicationTimestamp>2020-09-02T14:35:45.39</PublicationTimestamp>
+  <ParticipantRef>RB</ParticipantRef>
+  <Description>Shared data used across line files</Description>
+  <dataObjects>
+    <CompositeFrame created="2020-09-02T14:34:44.796" version="1" id="ENT:CompositeFrame:177">
+      <validityConditions>
+        <AvailabilityCondition version="1" id="ENT:AvailabilityCondition:173">
+          <FromDate>2020-08-31T00:00:00</FromDate>
+          <ToDate>2025-09-02T00:00:00</ToDate>
+        </AvailabilityCondition>
+      </validityConditions>
+      <FrameDefaults>
+        <DefaultLocale>
+          <TimeZone>Europe/Oslo</TimeZone>
+          <DefaultLanguage>no</DefaultLanguage>
+        </DefaultLocale>
+      </FrameDefaults>
+      <frames>
+        <ServiceFrame version="1" id="ENT:ServiceFrame:1">
+            <commonSections>
+                <CommonSection version="1" id="ENT:CommonSection:VY">
+                    <keyList>
+                        <KeyValue>
+                            <Key>Takstmyndighet</Key>
+                            <Value>NSB:Authority:NSB</Value>
+                        </KeyValue>
+                    </keyList>
+                    <Name>Vy</Name>
+                    <pointsOnSection>
+                        <PointOnSection order="1" version="1" id="ENT:PointOnSection:LHM">
+                            <ScheduledStopPointRef ref="ENT:ScheduledStopPoint:LHM"/>
+                        </PointOnSection>
+                        <PointOnSection order="2" version="1" id="ENT:PointOnSection:OSL">
+                            <ScheduledStopPointRef ref="ENT:ScheduledStopPoint:OSL"/>
+                        </PointOnSection>
+                        <PointOnSection order="3" version="1" id="ENT:PointOnSection:KBG">
+                            <ScheduledStopPointRef ref="ENT:ScheduledStopPoint:KBG"/>
+                        </PointOnSection>
+                    </pointsOnSection>
+                </CommonSection>
+                <CommonSection version="1" id="ENT:CommonSection:SJ">
+                    <keyList>
+                        <KeyValue>
+                            <Key>Takstmyndighet</Key>
+                            <Value>SJN:Authority:SJN</Value>
+                        </KeyValue>
+                    </keyList>
+                    <pointsOnSection>
+                        <PointOnSection order="1" version="1" id="ENT:PointOnSection:DOM">
+                            <ScheduledStopPointRef ref="ENT:ScheduledStopPoint:DOM"/>
+                        </PointOnSection>
+                        <PointOnSection order="2" version="1" id="ENT:PointOnSection:LHM-2">
+                            <ScheduledStopPointRef ref="ENT:ScheduledStopPoint:LHM"/>
+                        </PointOnSection>
+                    </pointsOnSection>
+                </CommonSection>
+            </commonSections>
+          <scheduledStopPoints>
+            <ScheduledStopPoint version="1" id="ENT:ScheduledStopPoint:LHM">
+              <Name>Lillehammer</Name>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1" id="ENT:ScheduledStopPoint:OSL">
+              <Name>Oslo S</Name>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1" id="ENT:ScheduledStopPoint:KBG">
+              <Name>Kongsberg</Name>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1" id="ENT:ScheduledStopPoint:DOM">
+              <Name>Dombås</Name>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+          <stopAssignments>
+            <PassengerStopAssignment order="0" version="1" id="ENT:PassengerStopAssignment:OSL">
+              <ScheduledStopPointRef ref="ENT:ScheduledStopPoint:OSL" version="1"/>
+                <StopPlaceRef ref="NSR:StopPlace:337"/>
+            </PassengerStopAssignment>
+              <PassengerStopAssignment order="0" version="1" id="ENT:PassengerStopAssignment:LHM">
+                  <ScheduledStopPointRef ref="ENT:ScheduledStopPoint:LHM" version="1"/>
+                  <StopPlaceRef ref="NSR:StopPlace:420"/>
+              </PassengerStopAssignment>
+              <PassengerStopAssignment order="0" version="1" id="ENT:PassengerStopAssignment:KBG">
+                  <ScheduledStopPointRef ref="ENT:ScheduledStopPoint:KBG" version="1"/>
+                  <StopPlaceRef ref="NSR:StopPlace:519"/>
+              </PassengerStopAssignment>
+              <PassengerStopAssignment order="0" version="1" id="ENT:PassengerStopAssignment:DOM">
+                  <ScheduledStopPointRef ref="ENT:ScheduledStopPoint:DOM" version="1"/>
+                  <StopPlaceRef ref="NSR:StopPlace:645"/>
+              </PassengerStopAssignment>
+          </stopAssignments>
+        </ServiceFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
